@@ -1,0 +1,398 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              input_type: text
+              antlers: false
+              display: Titel
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              validate:
+                - required
+          -
+            handle: benutzer
+            field:
+              type: text
+          -
+            handle: referenz
+            field:
+              type: text
+          -
+            handle: breitengrad
+            field:
+              type: text
+          -
+            handle: laengengrad
+            field:
+              type: text
+          -
+            handle: kaufpreis
+            field:
+              type: text
+          -
+            handle: lage
+            field:
+              type: text
+          -
+            handle: objekttitel
+            field:
+              type: text
+          -
+            handle: wohnflaeche
+            field:
+              type: text
+          -
+            handle: vermarktungsart
+            field:
+              type: text
+          -
+            handle: strasse
+            field:
+              type: text
+          -
+            handle: hausnummer
+            field:
+              type: text
+          -
+            handle: plz
+            field:
+              type: text
+          -
+            handle: ort
+            field:
+              type: text
+          -
+            handle: objekttyp
+            field:
+              type: text
+          -
+            handle: objektart
+            field:
+              type: text
+          -
+            handle: baujahr
+            field:
+              type: integer
+              validate: required|integer
+          -
+            handle: anzahl_zimmer
+            field:
+              type: integer
+              validate: required|integer
+          -
+            handle: warmmiete
+            field:
+              type: text
+          -
+            handle: objektbeschreibung
+            field:
+              type: text
+          -
+            handle: anzahl_badezimmer
+            field:
+              type: integer
+              validate: required|integer
+          -
+            handle: anzahl_schlafzimmer
+            field:
+              type: integer
+              validate: required|integer
+          -
+            handle: veroeffentlichen
+            field:
+              type: toggle
+          -
+            handle: kaltmiete
+            field:
+              type: text
+          -
+            handle: stammobjekt
+            field:
+              type: toggle
+          -
+            handle: status2
+            field:
+              type: text
+          -
+            handle: etagen_zahl
+            field:
+              type: integer
+              validate: required|integer
+          -
+            handle: ausstatt_beschr
+            field:
+              type: text
+          -
+            handle: gesamtflaeche
+            field:
+              type: text
+          -
+            handle: energieausweistyp
+            field:
+              type: text
+          -
+            handle: energieverbrauchskennwert
+            field:
+              type: text
+          -
+            handle: energieausweis_gueltig_bis
+            field:
+              type: date
+          -
+            handle: energietraeger
+            field:
+              type: text
+          -
+            handle: energyclass
+            field:
+              type: text
+          -
+            handle: energieausweisbaujahr
+            field:
+              type: integer
+              validate: required|integer
+          -
+            handle: endenergiebedarf
+            field:
+              type: text
+          -
+            handle: estate_images
+            field:
+              type: replicator
+              sets:
+                image:
+                  display: Image
+                  fields:
+                    -
+                      handle: url
+                      field:
+                        type: text
+                        validate: required|url
+          -
+            handle: erstellt_am
+            field:
+              mode: single
+              inline: false
+              full_width: false
+              columns: 1
+              rows: 1
+              time_enabled: false
+              time_seconds_enabled: false
+              type: date
+              display: erstellt_am
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+  seo:
+    display: SEO
+    sections:
+      -
+        display: Basic
+        instructions: 'Basic SEO settings.'
+        fields:
+          -
+            handle: seo_title
+            field:
+              input_type: text
+              type: text
+              localizable: true
+              listable: hidden
+              display: 'Page title'
+              character_limit: 70
+              instructions: 'This entries title, defaults to title and site name.'
+          -
+            handle: seo_description
+            field: common.text_plain
+            config:
+              listable: hidden
+              display: 'Meta description'
+              character_limit: '160'
+              instructions: 'This entries meta description. Max 160 characters.'
+      -
+        display: Advanced
+        instructions: 'Advanced SEO settings.'
+        fields:
+          -
+            handle: seo_noindex
+            field:
+              type: toggle
+              instructions: 'Instruct crawlers not to index this entry, also excludes it from the sitemap.xml.'
+              instructions_position: below
+              listable: hidden
+              width: 50
+              display: No-index
+          -
+            handle: seo_nofollow
+            field:
+              type: toggle
+              instructions: 'Instruct crawlers not to follow links on this page.'
+              instructions_position: below
+              listable: hidden
+              width: 50
+              display: No-follow
+          -
+            handle: seo_canonical_type
+            field:
+              options:
+                entry: 'Current entry'
+                current: 'Current domain'
+                external: 'External domain'
+              display: 'Canonical URL'
+              type: button_group
+              default: entry
+              instructions: 'Where should the canonical URL for this entry point to.'
+              listable: hidden
+          -
+            handle: seo_canonical_current
+            field: common.entry
+            config:
+              localizable: true
+              listable: hidden
+              display: 'Canonical URL'
+              width: 66
+              instructions: 'If this is an entry with duplicate content. Enter the original URL for this content.'
+              validate:
+                - 'required_if:seo_canonical_type,current'
+              if:
+                seo_canonical_type: 'equals current'
+          -
+            handle: seo_canonical_external
+            field:
+              input_type: url
+              display: 'Canonical URL'
+              type: text
+              listable: hidden
+              validate:
+                - 'required_if:seo_canonical_type,external'
+              if:
+                seo_canonical_type: 'equals external'
+      -
+        display: 'Open Graph'
+        instructions: 'Open Graph meta tags for social sharing.'
+        fields:
+          -
+            handle: og_title
+            field:
+              input_type: text
+              type: text
+              localizable: true
+              listable: hidden
+              display: 'Social title'
+              instructions: 'This entries OG title, defaults to custom SEO title and title.'
+          -
+            handle: og_description
+            field: common.text_plain
+            config:
+              listable: hidden
+              display: 'Social description'
+              instructions: 'This entries OG description, defaults to meta description.'
+              width: 100
+          -
+            handle: og_image
+            field: common.image
+            config:
+              mode: grid
+              container: social_images
+              listable: true
+              display: 'Social image'
+              instructions_position: below
+              instructions: 'This entries OG image. Defaults to global site OG image. The recommended size is 1200px x 630px. The image will be focal cropped to this dimension.'
+              width: 50
+          -
+            handle: twitter_image
+            field: common.image
+            config:
+              mode: grid
+              container: social_images
+              listable: hidden
+              display: 'Twitter image'
+              instructions_position: below
+              instructions: 'This entries Twitter image. Defaults to global site Twitter image. Images should have an aspect ratio of 2:1 with minimum dimensions of 300x157. This image will be focal cropped to this dimension.'
+              width: 50
+      -
+        display: Sitemap
+        instructions: 'Sitemap configuration.'
+        fields:
+          -
+            handle: sitemap_change_frequency
+            field:
+              options:
+                always: Always
+                hourly: Hourly
+                daily: Daily
+                weekly: Weekly
+                monthly: Monthly
+                yearly: Yearly
+                never: Never
+              clearable: false
+              multiple: false
+              searchable: true
+              taggable: false
+              push_tags: false
+              cast_booleans: false
+              type: select
+              instructions: 'How often to instruct search engines to crawl.'
+              instructions_position: below
+              width: 50
+              default: weekly
+              listable: hidden
+              display: 'Change frequency'
+          -
+            handle: sitemap_priority
+            field:
+              type: text
+              display: Priority
+              default: 0.5
+              instructions: 'Valid values range from 0.0 to 1.0. This value does not affect how your pages are compared to pages on other sites, it only lets the search engines know which pages you deem most important for the crawlers.'
+              instructions_position: below
+              width: 50
+              listable: hidden
+      -
+        display: 'JSON-ld Schema'
+        instructions: 'Custom JSON-ld schema objects.'
+        fields:
+          -
+            handle: schema_jsonld
+            field: common.text_plain
+            config:
+              listable: false
+              display: 'JSON-ld schema'
+              instructions: 'Custom JSON-ld objects. Will be wrapped in the appropriate script tag.'
+              width: 100
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'
+          -
+            handle: id_internal
+            field:
+              type: integer
+              validate: required|integer
+          -
+            handle: objektnr_extern
+            field:
+              type: text
+          -
+            handle: permalink
+            field:
+              type: text
+title: 'Estate entry'

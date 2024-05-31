@@ -1,0 +1,121 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        display: 'Contact Information'
+        fields:
+          -
+            handle: company_name
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'Company Name'
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: company_street
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'Company Street'
+              icon: text
+              width: 25
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: company_house_number
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'Company House Number'
+              icon: text
+              width: 25
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: company_zip
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'Company Zip'
+              icon: text
+              width: 25
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: company_city
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'Company City'
+              icon: text
+              width: 25
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: company_email
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'Company Email'
+              icon: text
+              width: 33
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: company_phone
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'Company Phone'
+              icon: text
+              width: 33
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: company_phone_display
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'Company Phone Display'
+              icon: text
+              width: 33
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: company_description
+            field:
+              antlers: false
+              type: textarea
+              display: company_description
+              icon: textarea
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false

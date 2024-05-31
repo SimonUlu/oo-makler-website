@@ -1,0 +1,45 @@
+<section class="bg-white dark:bg-gray-900">
+    <div class="max-w-screen-xl py-8 mx-auto sm:py-16 lg:py-24">
+        <div class="text-center relative">
+            <!-- Das Video-Element einfügen -->
+            <div class="spinner" style="display: flex">
+                <svg
+                    class="absolute inset-0 w-5 h-5 m-auto animate-spin"
+                    viewBox="0 0 24 24"
+                >
+                    <circle
+                        class="opacity-25"
+                        cx="12"
+                        cy="12"
+                        r="10"
+                        stroke="currentColor"
+                        stroke-width="4"
+                    ></circle>
+                    <path
+                        class="opacity-75"
+                        fill="currentColor"
+                        d="M4 12a8 8 0 008 8V12A4 4 0 004 8"
+                    ></path>
+                </svg>
+            </div>
+            <img
+                class="object-contain w-auto mx-auto h-16 lazy"
+                data-src="/logo_images/logo.png"
+                alt="Firmenlogo"
+                loading="lazy"
+                onload="this.parentElement.querySelector('.spinner').style.display = 'none';"
+            >
+        </div>
+
+        <div class="max-w-5xl mx-auto mt-8 lg:mt-16">
+            <!-- Das Video-Element einfügen -->
+            <video
+                class="lazy w-full rounded-lg shadow-lg"
+                controls
+            >
+                <source src="{{video}}" type="video/mp4">
+                Dein Browser unterstützt keine HTML5-Videos.
+            </video>
+        </div>
+    </div>
+  </section>

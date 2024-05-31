@@ -1,0 +1,27 @@
+<div
+    class="max-w-4xl px-6 mx-auto text-gray-500 lg:max-w-screen-2xl sm:text-lg dark:text-gray-400 md:px-12 mb-8 lg:mb-16"
+>
+    <div class="grid grid-cols-1 lg:grid-cols-2">
+        <div>
+            {{if list_headline_two}}
+            <div
+                class="max-w-4xl mt-12 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
+            >
+                {{list_headline_two}}
+            </div>
+            {{/if}} {{if list_text}}
+            <div class="gap-y-2 mt-4">{{list_text}}</div>
+            {{/if}} {{if list}}
+            <div class="py-8">
+                {{partial:fieldsets/list-style-green-checkmarks}}
+            </div>
+            {{/if}} {{if list_text_two}}
+            <div class="gap-y-2"></div>
+            {{list_text_two}}
+        </div>
+        {{/if}}
+        <div class="pt-24">
+            {{partial:neubauprojekte/slider/neubauprojekte-slider slides_to_show="2"}}
+        </div>
+    </div>
+</div>

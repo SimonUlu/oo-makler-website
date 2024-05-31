@@ -1,0 +1,17 @@
+<div class="flex flex-col sm:flex-row justify-center items-start w-full lg:px-0">
+    <div class="text-left mb-4 sm:mr-4">
+        <h2 class="text-2xl font-semibold mb-2">{{contact_person:contact_header}}</h2>
+        <p class="text-lg">{{contact_person:contact_subheader}}</p>
+    </div>
+    <div class="flex items-center justify-center flex-row items-start sm:items-center sm:justify-between">
+        <div class="mb-4 sm:mb-0 sm:mr-4">
+            <h3 class="text-xl font-semibold mb-2">{{contact_person:contact_person}}</h3>
+            <p class="text-lg italic mb-4">{{contact_person:contact_position}}</p>
+            <a class="block mb-2" href="tel:&nbsp;{{contact_person:contact_number}}">{{contact_person:contact_number}}</a>
+            <a class="block" href="mailto:{{contact_person:contact_email}}">{{contact_person:contact_email}}</a>
+        </div>
+        <div class="w-40 ml-4 lg:ml-0">
+            <img class="w-full" src="{{contact_person:contact_img.0.url}}" alt="{{contact_person:contact_img.0.alt}}">
+        </div>
+    </div>
+</div>

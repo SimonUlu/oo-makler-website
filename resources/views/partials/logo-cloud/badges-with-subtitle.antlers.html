@@ -1,0 +1,21 @@
+<div class="py-8 mx-auto lg:py-16">
+    <h2 class="mb-4 text-4xl font-bold tracking-tight text-gray-900 lg:text-5xl text-center">{{logo_header}}</h2>
+    <div
+        class="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-2 lg:grid-cols-3 sm:gap-4 xl:gap-8 sm:space-y-0 md:mb-8 md:mt-12"
+    >
+        {{logo_cloud}}
+        <a
+            href="{{logo_link}}"
+            class="flex items-center justify-center px-4 py-2 text-center rounded md:max-h-72 md:px-8 md:py-12 bg-gray-50 hover:bg-gray-100 dark:hover:bg-gray-700"
+            target="_blank"
+        >
+            <img
+                data-src="{{logo.0.url}}"
+                alt="{{logo.1.alt}}"
+                class="mx-auto max-w-[55%] lazy"
+                loading="lazy"
+            />
+        </a>
+        {{/logo_cloud}}
+    </div>
+</div>

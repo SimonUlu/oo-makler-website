@@ -1,0 +1,82 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        display: 'Informationen für Google Reviews'
+        fields:
+          -
+            handle: google_api_key
+            field:
+              input_type: password
+              antlers: false
+              type: text
+              display: 'Google API Key'
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: google_places_key
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'Google Places Key'
+              icon: text
+              instructions: |-
+                Get your id from here:
+
+                https://developers.google.com/maps/documentation/javascript/examples/places-placeid-finder
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+      -
+        display: 'Google Analytics'
+        fields:
+          -
+            handle: google_gtag
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'Google GTAG'
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+      -
+        display: 'Immobilien kurz'
+        fields:
+          -
+            handle: rating
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: rating
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: stars
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: stars
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+  neuer_tab:
+    display: 'Neuer Tab'
+    sections:
+      -
+        display: 'Neuer Abschnitt'

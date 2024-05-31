@@ -1,0 +1,153 @@
+<div x-data="{currentStep: 1}">
+    <nav aria-label="Progress" class="max-w-2xl mx-auto flex justify-center">
+        <ol role="list" class="flex items-center justify-center w-full pb-8 lg:pb-16">
+            <li class="relative cursor-pointer" @click="currentStep = 1">
+                <!-- Current Step -->
+                <div class="absolute inset-0 flex items-center" aria-hidden="true">
+                  <div class="h-0.5 w-full mx-auto bg-gray-200"></div>
+                </div>
+                <a  href="#"
+                    class="relative flex h-8 w-8 items-center justify-center rounded-full border-2 hover:border-gray-400"
+                    aria-current="step"
+                    :class="{ 'border-primary bg-white': currentStep === 1, 'border-gray-300 bg-white': currentStep !== 1 }"
+                 >
+                    <span
+                        class="h-2 w-2 rounded-full"
+                        aria-hidden="true"
+                        :class="{ 'bg-primary': currentStep === 1, 'bg-gray-100': currentStep !== 1 }"
+                    >
+                    </span>
+                  <span class="sr-only">Step 1</span>
+                </a>
+                <div class="absolute top-0 left-1/2 transform -translate-x-1/2 pt-8 text-center">
+                    <p>Projektbilder</p>
+                </div>
+            </li>
+
+            <!-- Line between the steps -->
+            <li class="flex items-center relative">
+                <div class="h-0.5 w-24 lg:w-32 bg-gray-200"></div>
+            </li>
+
+            <li class="relative cursor-pointer" @click="currentStep = 2">
+                <!-- Current Step -->
+                <div class="absolute inset-0 flex items-center" aria-hidden="true">
+                  <div class="h-0.5 w-full mx-auto bg-gray-200"></div> <!-- Hier können Sie die Breite oder das Padding variieren -->
+                </div>
+                <a  href="#"
+                    class="relative flex h-8 w-8 items-center justify-center rounded-full border-2 hover:border-gray-400"
+                    aria-current="step"
+                    :class="{ 'border-primary bg-white': currentStep === 2, 'border-gray-300 bg-white': currentStep !== 2 }"
+                 >
+                    <span
+                        class="h-2 w-2 rounded-full"
+                        aria-hidden="true"
+                        :class="{ 'bg-primary': currentStep === 2, 'bg-gray-100': currentStep !== 2 }"
+                    >
+                    </span>
+                  <span class="sr-only">Step 1</span>
+                </a>
+                <div class="absolute top-0 left-1/2 transform -translate-x-1/2 pt-8 text-center">
+                    <p>Grundriss</p>
+                </div>
+            </li>
+        </ol>
+    </nav>
+    <!-- Details section -->
+    <div x-show="currentStep == 1">
+        <section aria-labelledby="details-heading" class="max-w-7xl mx-auto" >
+            <div class="flex flex-col items-center text-center">
+            <h2 id="details-heading" class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Projektvorhaben xy</h2>
+            <p class="mt-3 max-w-3xl text-lg text-gray-600"> Das Projekt hat sich wie folgt verändert. Innerhalb von 9 Monaten haben wir mit unserem Partner der "" folgendes Projekt umgesetzt</p>
+            </div>
+
+            <div class="mt-16 grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:gap-x-8">
+            <div>
+                <div class="aspect-h-2 aspect-w-3 w-full overflow-hidden rounded-lg">
+                <img src="{{images.0.image.0.url}}" alt="Drawstring top with elastic loop closure and textured interior padding." class="h-full w-full object-cover object-center">
+                </div>
+                <p class="mt-8 text-base text-gray-500">
+                    Zu Beginn sah das noch so aus.
+                </p>
+            </div>
+            <div>
+                <div class="aspect-h-2 aspect-w-3 w-full overflow-hidden rounded-lg">
+                <img src="{{images.1.image.0.url}}" alt="Front zipper pouch with included key ring." class="h-full w-full object-cover object-center">
+                </div>
+                <p class="mt-8 text-base text-gray-500">
+                Am Ende sah es so aus.
+                </p>
+            </div>
+            </div>
+        </section>
+
+        <!-- Policies section -->
+        <section aria-labelledby="policy-heading" class="mt-16 lg:mt-24 max-w-7xl mx-auto">
+            <h2 id="policy-heading" class="sr-only">Our policies</h2>
+            <div class="grid grid-cols-1 gap-y-12 sm:grid-cols-2 sm:gap-x-6 lg:grid-cols-4 lg:gap-x-8">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-primary">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z" />
+                    </svg>
+
+                    <h3 class="mt-6 text-base font-medium text-gray-900">Lorem Ipsum</h3>
+                    <p class="mt-3 text-base text-gray-500">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,</p>
+                </div>
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-primary">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z" />
+                    </svg>
+
+                    <h3 class="mt-6 text-base font-medium text-gray-900">Lorem Ipsum</h3>
+                    <p class="mt-3 text-base text-gray-500">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,</p>
+                </div>
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-primary">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z" />
+                    </svg>
+
+                    <h3 class="mt-6 text-base font-medium text-gray-900">Lorem Ipsum</h3>
+                    <p class="mt-3 text-base text-gray-500">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,</p>
+                </div>
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-primary">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z" />
+                    </svg>
+
+                    <h3 class="mt-6 text-base font-medium text-gray-900">Lorem Ipsum</h3>
+                    <p class="mt-3 text-base text-gray-500">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+    <!-- Grundriss Section -->
+    <div x-show="currentStep == 2">
+        <section aria-labelledby="details-heading" class="max-w-7xl mx-auto" >
+            <div class="flex flex-col items-center text-center">
+            <h2 id="details-heading" class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Projektvorhaben xy</h2>
+            <p class="mt-3 max-w-3xl text-lg text-gray-600"> Das Projekt hat sich wie folgt verändert. Innerhalb von 9 Monaten haben wir mit unserem Partner der "" folgendes Projekt umgesetzt</p>
+            </div>
+
+            <div class="mt-16 grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:gap-x-8">
+            <div>
+                <div class="aspect-h-2 aspect-w-3 w-full overflow-hidden rounded-lg">
+                <img src="{{images.0.image.0.url}}" alt="Drawstring top with elastic loop closure and textured interior padding." class="h-full w-full object-cover object-center">
+                </div>
+                <p class="mt-8 text-base text-gray-500">
+                    Zu Beginn sah das noch so aus.
+                </p>
+            </div>
+            <div>
+                <div class="aspect-h-2 aspect-w-3 w-full overflow-hidden rounded-lg">
+                <img src="{{images.1.image.0.url}}" alt="Front zipper pouch with included key ring." class="h-full w-full object-cover object-center">
+                </div>
+                <p class="mt-8 text-base text-gray-500">
+                Am Ende sah es so aus.
+                </p>
+            </div>
+            </div>
+        </section>
+    </div>
+</div>

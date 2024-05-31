@@ -1,0 +1,466 @@
+title: Stadtbericht
+tabs:
+  main:
+    display: Hauptteil
+    sections:
+      - {  }
+  header_tab:
+    display: Header
+    sections:
+      -
+        display: 'Neuer Abschnitt'
+        fields:
+          -
+            handle: header_image
+            field:
+              mode: list
+              container: header_images
+              restrict: false
+              allow_uploads: true
+              show_filename: true
+              show_set_alt: true
+              type: assets
+              display: header_image
+              icon: assets
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: subtitle
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: subtitle
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: company
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: company
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+  intro:
+    display: Intro
+    sections:
+      -
+        display: 'Neuer Abschnitt'
+        fields:
+          -
+            handle: einleitungstext
+            field:
+              antlers: false
+              type: textarea
+              display: einleitungstext
+              icon: textarea
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+          -
+            handle: parent
+            field:
+              type: entries
+              collections:
+                - pages
+              max_items: 1
+              listable: false
+              localizable: true
+  map_section:
+    display: Map
+    sections:
+      -
+        display: 'Neuer Abschnitt'
+        fields:
+          -
+            handle: stadtteile
+            field:
+              collapse: false
+              previews: true
+              fullscreen: true
+              sets:
+                neue_set-gruppe:
+                  display: 'Neue Set-Gruppe'
+                  instructions: null
+                  icon: null
+                  sets:
+                    neues_set:
+                      display: 'Neues Set'
+                      instructions: null
+                      icon: null
+                      fields:
+                        -
+                          handle: polygon_id
+                          field:
+                            input_type: text
+                            antlers: false
+                            type: text
+                            display: polygon_id
+                            icon: text
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            hide_display: false
+                        -
+                          handle: associated_link
+                          field:
+                            input_type: text
+                            antlers: false
+                            type: text
+                            display: associated_link
+                            icon: text
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            hide_display: false
+                        -
+                          handle: fill_color
+                          field:
+                            input_type: text
+                            antlers: false
+                            type: text
+                            display: fill_color
+                            icon: text
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            hide_display: false
+                        -
+                          handle: fill_outline_color
+                          field:
+                            input_type: text
+                            antlers: false
+                            type: text
+                            display: fill_outline_color
+                            icon: text
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            hide_display: false
+                        -
+                          handle: polygoncoordinates
+                          field:
+                            theme: material
+                            mode: htmlmixed
+                            mode_selectable: true
+                            indent_type: tabs
+                            indent_size: 4
+                            key_map: default
+                            line_numbers: true
+                            line_wrapping: true
+                            antlers: false
+                            type: code
+                            display: polygonCoordinates
+                            icon: code
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            hide_display: false
+                        -
+                          handle: description
+                          field:
+                            theme: material
+                            mode: htmlmixed
+                            mode_selectable: true
+                            indent_type: tabs
+                            indent_size: 4
+                            key_map: default
+                            line_numbers: true
+                            line_wrapping: true
+                            antlers: false
+                            type: code
+                            display: description
+                            icon: code
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            hide_display: false
+                        -
+                          handle: plz
+                          field:
+                            input_type: text
+                            antlers: false
+                            type: text
+                            display: plz
+                            icon: text
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            hide_display: false
+                        -
+                          handle: table_field_1
+                          field:
+                            input_type: text
+                            antlers: false
+                            type: text
+                            display: table_field_1
+                            icon: text
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            hide_display: false
+                        -
+                          handle: table_field_2
+                          field:
+                            input_type: text
+                            antlers: false
+                            type: text
+                            display: table_field_2
+                            icon: text
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            hide_display: false
+                        -
+                          handle: table_field_3
+                          field:
+                            input_type: text
+                            antlers: false
+                            type: text
+                            display: table_field_3
+                            icon: text
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            hide_display: false
+                        -
+                          handle: table_field_4
+                          field:
+                            input_type: text
+                            antlers: false
+                            type: text
+                            display: table_field_4
+                            icon: text
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            hide_display: false
+              type: replicator
+              display: stadtteile
+              icon: replicator
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: zoom
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: zoom
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: center_lat
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: center_lat
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: center_lng
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: center_lng
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+  SEO:
+    display: SEO
+    sections:
+      -
+        display: 'Neuer Abschnitt'
+        fields:
+          -
+            import: 'statamic-peak-seo::seo_basic'
+          -
+            import: 'statamic-peak-seo::seo_advanced'
+          -
+            import: 'statamic-peak-seo::seo_sitemap'
+          -
+            import: 'statamic-peak-seo::seo_open_graph'
+          -
+            import: 'statamic-peak-seo::seo_jsonld'
+  table:
+    display: table
+    sections:
+      -
+        display: 'Neuer Abschnitt'
+        fields:
+          -
+            handle: table_field_1
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: table_field_1
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: table_field_2
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: table_field_2
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: table_field_3
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: table_field_3
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: table_field_4
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: table_field_4
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+  'header content':
+    display: content_header
+    sections:
+      -
+        display: 'Neuer Abschnitt'
+        fields:
+          -
+            handle: content_header
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: content_header
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: content_subheader
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: content_subheader
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: content_text
+            field:
+              antlers: false
+              type: textarea
+              display: content_text
+              icon: textarea
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: content_stats
+            field:
+              collapse: false
+              previews: true
+              fullscreen: true
+              sets:
+                neue_set-gruppe:
+                  display: 'Neue Set-Gruppe'
+                  instructions: null
+                  icon: null
+                  sets:
+                    neues_set:
+                      display: 'Neues Set'
+                      instructions: null
+                      icon: null
+                      fields:
+                        -
+                          handle: stat
+                          field:
+                            input_type: text
+                            antlers: false
+                            type: text
+                            display: stat
+                            icon: text
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            hide_display: false
+                        -
+                          handle: number
+                          field:
+                            input_type: text
+                            antlers: false
+                            type: text
+                            display: number
+                            icon: text
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            hide_display: false
+              type: replicator
+              display: content_stats
+              icon: replicator
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false

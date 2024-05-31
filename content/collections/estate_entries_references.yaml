@@ -1,0 +1,10 @@
+title: "Estate Entries References"
+route: "/immobilien/details/{id_internal}"
+revisions: false
+date_behavior:
+  past: public
+  future: private
+preview_targets:
+  - label: Entry
+    url: "{permalink}"
+    refresh: false

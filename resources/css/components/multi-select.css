@@ -1,0 +1,30 @@
+@import "choices.js/public/assets/styles/choices.css";
+
+.choices {
+    @apply mb-0 rounded-md shadow-sm;
+}
+.choices__inner {
+    @apply text-sm bg-white border-gray-300 rounded-md;
+}
+.choices__input {
+    @apply leading-none bg-white border-transparent rounded-md focus:border-transparent focus:ring-0;
+}
+.choices__list--multiple .choices__item {
+    @apply text-sm text-white border-none bg-primary-600;
+}
+
+.choices__list--multiple .choices__item.is-highlighted {
+    @apply px-3 py-1 text-sm text-white bg-gray-400 border-none;
+}
+
+/**
+ * Hide help text for selection on hover
+ */
+.choices__list--dropdown .choices__item--selectable::after,
+.choices__list[aria-expanded] .choices__item--selectable::after {
+    display: none;
+}
+.choices__list--dropdown .choices__item--selectable,
+.choices__list[aria-expanded] .choices__item--selectable {
+    padding-right: 0;
+}

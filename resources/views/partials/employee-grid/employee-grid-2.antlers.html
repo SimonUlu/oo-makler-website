@@ -1,0 +1,123 @@
+<div class="px-6 mx-auto bg-white max-w-7xl lg:px-8">
+    <ul role="list" class="divide-y divide-gray-200 xl:col-span-3">
+        {{collection:team sort="order:asc"}}
+        <div class="container py-12 mx-auto">
+            {{if index % 2 == 0 }}
+            <div
+                class="flex flex-col items-center justify-center h-full text-center sm:flex-row sm:justify-start"
+            >
+                <img
+                    class="flex-shrink-0 object-cover object-center h-auto mb-4 rounded-lg w-72 sm:mb-0 lazy"
+                    data-src="{{image_overview.0.url}}"
+                    alt="{{image_overview.0.alt}}"
+                    loading="lazy"
+                />
+                <div
+                    class="flex-grow max-w-sm space-y-4 text-center md:max-w-none md:text-left sm:pl-8"
+                >
+                    <h2 class="text-2xl font-bold text-gray-900 title-font">
+                        {{if first_name}}{{ first_name }}{{/if}}{{if last_name}}
+                        {{ last_name }}{{/if}}
+                    </h2>
+                    <h3 class="mb-3 text-gray-500">{{function}}</h3>
+                    <p class="mb-4">
+                        {{ partial:typography/prose as="team" class="contents"
+                        }} {{team_description }} {{ partial
+                        src="components/{type}" }} {{ /team_description }} {{
+                        /partial:typography/prose }}
+                    </p>
+                    <span class="inline-flex">
+                        <a
+                            href="mailto:{{email}}"
+                            class="inline-flex items-center px-4 py-2 text-sm font-medium text-white border border-transparent rounded-md shadow-sm hover:bg-primary focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:outline-none bg-primary"
+                            ><svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                class="w-6 h-6"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
+                                />
+                            </svg>
+                            <span class="ml-2">Kontaktieren</span></a
+                        >
+                        <a
+                            href="{{url}}"
+                            class="inline-flex justify-center items-center py-2.5 px-5 text-sm font-medium text-center md:w-auto lg:col-span-12 focus:ring-4 focus:outline-none"
+                            target="_blank"
+                            >Mehr &uuml;ber {{if first_name}}{{ first_name
+                            }}{{/if}}{{if last_name}} {{ last_name }}{{/if}}
+                            erfahren<span aria-hidden="true">&nbsp;→</span></a
+                        >
+                    </span>
+                </div>
+            </div>
+            {{/if}} {{if index % 2 !== 0}}
+            <div
+                class="flex flex-col items-center justify-center h-full text-center sm:flex-row sm:justify-start"
+            >
+                <div
+                    class="flex-grow order-2 max-w-sm text-center md:max-w-none md:text-right sm:pr-8 sm:order-1"
+                >
+                    <h2 class="text-2xl font-bold text-gray-900 title-font">
+                        {{if first_name}}{{ first_name }}{{/if}}{{if last_name}}
+                        {{ last_name }}{{/if}}
+                    </h2>
+                    <div class="space-y-4">
+                        <h3 class="mb-3 text-gray-500">{{function}}</h3>
+                        <p class="mb-4">
+                            {{ partial:typography/prose as="team"
+                            class="contents" }} {{team_description }} {{ partial
+                            src="components/{type}" }} {{ /team_description }}
+                            {{ /partial:typography/prose }}
+                        </p>
+                        <span class="inline-flex">
+                            <a
+                                href="{{ slug }}"
+                                class="inline-flex justify-center items-center py-2.5 px-5 text-sm font-medium text-center md:w-auto lg:col-span-12 focus:ring-4 focus:outline-none"
+                                target="_blank"
+                                >Mehr &uuml;ber {{if first_name}}{{ first_name
+                                }}{{/if}}{{if last_name}} {{ last_name }}{{/if}}
+                                erfahren<span aria-hidden="true"
+                                    >&nbsp;→</span
+                                ></a
+                            >
+                            <a
+                                href="mailto:{{email}}"
+                                class="inline-flex items-center px-4 py-2 text-sm font-medium text-white border border-transparent rounded-md shadow-sm hover:bg-primary focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:outline-none bg-primary"
+                                ><svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                    class="w-6 h-6"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
+                                    />
+                                </svg>
+                                <span class="ml-2">Kontaktieren</span></a
+                            >
+                        </span>
+                    </div>
+                </div>
+                <img
+                    alt="team"
+                    class="flex-shrink-0 order-1 object-cover object-center h-auto mb-4 rounded-lg w-72 sm:mb-0 sm:order-2"
+                    src="{{image_overview.0.url}}"
+                    alt="{{image_overview.0.title}}"
+                />
+            </div>
+            {{/if}}
+        </div>
+        {{/collection:team}}
+    </ul>
+</div>

@@ -1,0 +1,17 @@
+{
+  "resources/css/tailwind.css": {
+    "file": "assets/tailwind-9a0d6f58.css",
+    "isEntry": true,
+    "src": "resources/css/tailwind.css"
+  },
+  "resources/js/site.js": {
+    "file": "assets/site-b38aeb5b.js",
+    "isEntry": true,
+    "src": "resources/js/site.js"
+  },
+  "resources/js/vue_site.js": {
+    "file": "assets/vue_site-fcfb780e.js",
+    "isEntry": true,
+    "src": "resources/js/vue_site.js"
+  }
+}

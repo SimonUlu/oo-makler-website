@@ -1,0 +1,14 @@
+title: Headline-two
+fields:
+  -
+    handle: headline_text
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: 'Headline Text'
+      icon: text
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false

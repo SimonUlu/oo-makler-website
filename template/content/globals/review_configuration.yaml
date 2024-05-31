@@ -1,0 +1,5 @@
+title: 'Review Konfiguration'
+data:
+  google_reviews: false
+  immoscout24_reviews: true
+  immoscout24_provider_string: immoinvest-vertriebs-gmbh

@@ -1,0 +1,10 @@
+title: 'Contact Person'
+data:
+  contact_header: 'Lorem Ipsum'
+  contact_subheader: 'Sie benötigen Unterstützung beim Realisieren Ihres Business Case? Sie haben Fragen zu bestehenden Referenzen? Wir helfen Ihnen dabei Ihre Vision zu verwirklichen. Rufen Sie uns doch gerne an und wir vereinbaren einen unverbindlichen Beratungstermin. Starten Sie jetzt Ihr Projekt.'
+  contact_person: 'Florian Imgrund'
+  contact_position: Geschäfstführer
+  contact_number: '+49 171626281'
+  contact_email: florian.imgrund@inno-brain.de
+  contact_img:
+    - florian_imgrund.jpeg

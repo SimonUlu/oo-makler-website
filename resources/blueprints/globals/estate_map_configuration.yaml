@@ -1,0 +1,53 @@
+tabs:
+  main:
+    display: Hauptteil
+    sections:
+      -
+        fields:
+          -
+            handle: center_lng
+            field:
+              type: float
+              display: center_lng
+              icon: float
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: center_lat
+            field:
+              type: float
+              display: center_lat
+              icon: float
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: zoom
+            field:
+              type: integer
+              display: zoom
+              icon: integer
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: style
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: style
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+  neuer_tab:
+    display: 'Neuer Tab'
+    sections:
+      -
+        display: 'Neuer Abschnitt'

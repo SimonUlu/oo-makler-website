@@ -1,0 +1,25 @@
+<div class="py-8 mx-auto sm:py-16">
+    <div class="mb-8 text-left lg:mb-16 max-w-4xl">
+        <h2 class="mb-4 text-left text-4xl font-bold tracking-tight text-gray-900 mr-8 lg:mr-0">
+            {{services_header_h2}}
+        </h2>
+        <div>{{services_text}}</div>
+    </div>
+    <div
+        class="m-auto space-y-8 text-left sm:py-0 md:grid sm:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0"
+    >
+        {{services_replicator}}
+        <a href="{{link}}" title="Link zu {{link}}">
+            <div class="mt-10 sm:mt-0">
+                <div
+                    class="flex items-center justify-center w-10 h-10 mb-4 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900"
+                >
+                    {{svg}}
+                </div>
+                <h3 class="mb-2 text-xl font-bold">{{header}}</h3>
+                <p class="text-gray-500 dark:text-gray-400">{{text}}</p>
+            </div>
+        </a>
+        {{/services_replicator}}
+    </div>
+</div>

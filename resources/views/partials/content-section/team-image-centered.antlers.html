@@ -1,0 +1,32 @@
+<div class="items-center gap-16 py-8 mx-auto sm:py-16 lg:grid lg:grid-cols-5 lg:py-12">
+    <div class="text-gray-500 sm:text-lg dark:text-gray-400 lg:col-span-2">
+        <h2 class="mb-4 text-4xl font-bold tracking-tight text-gray-900">
+            {{content_second_heading_h2}}
+        </h2>
+        <div class="mb-4 text-gray-500 sm:text-xl dark:text-gray-400 text-balance">
+            {{content_second_text}}
+        </div>
+        <a href="/team"
+            class="inline-flex items-center py-4 font-medium text-primary-600 hover:text-primary-800 dark:text-primary-500 dark:hover:text-primary-700">
+            Mehr erfahren
+            <svg class="w-6 h-6 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                    d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                    clip-rule="evenodd"></path>
+            </svg>
+        </a>
+    </div>
+    <div class="relative lg:col-span-3">
+        <!-- Spinner -->
+        <div class="spinner" style="display: flex">
+            <svg class="absolute inset-0 w-5 h-5 m-auto animate-spin" viewBox="0 0 24 24">
+                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 008 8V12A4 4 0 004 8"></path>
+            </svg>
+        </div>
+        <!-- Image -->
+        <img class="w-full rounded-lg lazy" data-src="{{content_second_image.0.url}}"
+            alt="{{content_second_image.0.alt}}" loading="lazy"
+            onload="this.parentElement.querySelector('.spinner').style.display = 'none';" />
+    </div>
+</div>

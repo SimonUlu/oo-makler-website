@@ -1,0 +1,73 @@
+<section class="bg-gray-50 py-24 xl:py-36 ">
+    <div class="mx-auto max-w-7xl">
+        <div class="mx-auto grid max-w-2xl grid-cols-1 lg:mx-0 lg:divide-x lg:max-w-none lg:grid-cols-2 gap-x-6">
+            {{ collection:referenzen sort="date:desc" limit="2"}}
+            {{if index === 0}}
+                <div class="flex flex-col pb-10 sm:pb-16 lg:pb-0 justify-self-center">
+                    <img
+                        class="h-12 self-start"
+                        src="{{logo_img.0.url}}"
+                        alt="{{logo_img.0.alt}}">
+                    <figure class="mt-10 flex flex-auto flex-col justify-between">
+
+                        <blockquote class="text-lg leading-8 text-gray-900">
+                            <h2 class="font-bold">{{title}}</h2>
+                            <p>
+                            {{description}}
+                            </p>
+                        </blockquote>
+                        <figcaption class="mt-10 flex items-center gap-x-6">
+                        <img
+                            class="h-14 w-14 object-cover rounded-full bg-gray-50"
+                            src="{{person_bild.0.url}}"
+                            alt="{{person_bild.0.alt}}"
+                        >
+                        <div class="text-base">
+                            <div class="font-semibold text-gray-900">{{person}}</div>
+                            <div class="mt-1 text-gray-500">{{position}}</div>
+                        </div>
+                        </figcaption>
+                    </figure>
+                </div>
+            {{else}}
+            <div class="flex flex-col pb-10 sm:pb-16 lg:pb-0 justify-self-center lg:pl-6">
+                <img
+                    class="h-12 self-start"
+                    src="{{logo_img.0.url}}"
+                    alt="{{logo_img.0.alt}}">
+                <figure class="mt-10 flex flex-auto flex-col justify-between">
+
+                    <blockquote class="text-lg leading-8 text-gray-900">
+                        <h2 class="font-bold">{{title}}</h2>
+                        <p>
+                        {{description}}
+                        </p>
+                    </blockquote>
+                    <figcaption class="mt-10 flex items-center gap-x-6">
+                    <img
+                        class="h-14 w-14 object-cover rounded-full bg-gray-50"
+                        src="{{person_bild.0.url}}"
+                        alt="{{person_bild.0.alt}}"
+                    >
+                    <div class="text-base">
+                        <div class="font-semibold text-gray-900">{{person}}</div>
+                        <div class="mt-1 text-gray-500">{{position}}</div>
+                    </div>
+                    </figcaption>
+                </figure>
+            </div>
+            {{/if}}
+
+            {{ /collection:referenzen }}
+        </div>
+    </div>
+ </section>
+
+
+
+
+
+
+
+
+

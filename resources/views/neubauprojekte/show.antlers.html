@@ -1,0 +1,39 @@
+<div class="w-full bg-white">
+    <div class="pt-12 lg:pt-24">
+      {{partial:neubauprojekte/detail/header-new}}
+
+      <!-- Product info -->
+      <div class="mx-auto max-w-2xl px-4 pb-16 pt-10 sm:px-6 lg:grid lg:max-w-full mx-12 lg:mx-24 lg:grid-cols-3 lg:grid-rows-[auto,auto,1fr] lg:gap-x-8 lg:px-8 lg:pb-24 lg:pt-16">
+        <div class="lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-8">
+          <h1 class="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">{{title}}</h1>
+        </div>
+
+        <!-- Options -->
+        <div class="mt-4 lg:row-span-3 lg:mt-0">
+          <h2 class="sr-only">Product information</h2>
+          <p class="text-3xl tracking-tight text-gray-900">{{preise}} €</p>
+          <section aria-labelledby="details-heading" class="mt-12 w-full">
+              {{partial:neubauprojekte/detail/feature-section}}
+          </section>
+
+        </div>
+        {{partial:neubauprojekte/detail/description}}
+      </div>
+    </div>
+    <div class="mx-auto w-full px-4 py-24 sm:px-6 sm:py-32 lg:px-8 bg-gray-100">
+      {{partial:neubauprojekte/detail/visualisation}}
+    </div>
+    <section class="max-w-3xl lg:max-w-4xl  mt-24 lg:mt-36 mx-auto pb-12 lg:pb-24">
+        <div class="px-4 pt-12 sm:px-0">
+            <h2
+                class="max-w-4xl text-3xl font-bold tracking-tight text-center text-gray-900 sm:text-4xl pb-12"
+            >
+                Kontaktieren Sie uns!
+            </h2>
+            <div class="pt-4" {{partial:contact-forms/contact-form-standard formId="2"
+            title="Projekt" defaultMessage="Bitte nehmen Sie zum Thema Verkauf Projektvorhaben zu mir auf."}}
+        </div>
+    </section>
+    {{partial:neubauprojekte/detail/projekte-image-slideshow}}
+  </div>
+

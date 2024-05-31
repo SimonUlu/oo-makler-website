@@ -1,0 +1,187 @@
+
+<section class="bg-gray-50 pb-4" x-data="loadReviewsImmoScout()" x-init="init()">
+    <div class="text-center text-gray-900 py-8 lg:py-12">
+        <h2 class="mx-4 mb-4 text-4xl font-bold tracking-tight text-gray-900 lg:text-5xl ">
+            {{customer_review_heading_h2}}
+        </h2>
+        <p class="text-gray-500 sm:px-8 sm:text-xl dark:text-gray-400">
+            {{customer_review_text}}
+        </p>
+    </div>
+    <div class="max-w-screen-xl px-4 py-2 xl:py-4 mx-auto lg:px-6">
+        <!-- Mobile -->
+        <div class="grid gap-8 lg:hidden lg:grid-cols-3">
+            <template
+                x-for="(review, index) in reviews.slice(0, 3)"
+                :key="index"
+            >
+                <div class="p-6 shadow-sm bg-gray-50 rounded-xl">
+                    <div
+                        x-text="truncateText(review.review_text, 150)"
+                        class="font-medium text-gray-900 text-md"
+                    ></div>
+                    <div
+                        class="flex items-center justify-center my-3 divide-x-2 divide-gray-500 dark:divide-gray-700"
+                    >
+                        <div class="pr-3 font-medium text-gray-900">
+                            <div
+                                class="flex stars"
+                                x-data="{ rating: review.rating }"
+                                x-init="rating = review.rating"
+                            >
+                                <template x-for="i in 5">
+                                    <svg
+                                        class="flex-none w-5 h-5"
+                                        viewBox="0 0 20 20"
+                                        fill="#FDCC0D"
+                                        aria-hidden="true"
+                                    >
+                                        <path
+                                            fill-rule="evenodd"
+                                            d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
+                                            clip-rule="evenodd"
+                                        />
+                                    </svg>
+                                </template>
+                            </div>
+                        </div>
+                        <div
+                            class="pl-3 text-sm font-light text-gray-500 dark:text-gray-400"
+                        >
+                            <div x-text="review.author_name"></div>
+                        </div>
+                    </div>
+                </div>
+            </template>
+            <div
+                class="flex items-center justify-center p-6 shadow-sm rounded-xl bg-gray-50"
+            >
+                <div>
+                    <h3 class="text-lg font-medium text-gray-900">
+                        Sie möchten mehr erfahren oder Ihre Erfahrungen mit uns
+                        teilen?
+                    </h3>
+
+                    <div class="mt-4">
+                        <a
+                            href="https://www.immobilienscout24.de/anbieter/profil/{{review_configuration:immoscout24_provider_string}}"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Schauen Sie sich unser Unternehmensprofil auf
+                            ImmoScout24 an<span aria-hidden="true"
+                                >&nbsp;→</span
+                            >
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Desktop -->
+        <div
+            x-data="{currentGroup: 0}"
+            class="hidden lg:block"
+        >
+            <template
+                x-for="(group, index) in groupedReviews()" :key="index"
+            >
+                <!-- nur das aktuelle Testimonial anzeigen -->
+                <section
+                    x-show="currentGroup == index"
+                    class="gap-x-4 relative isolate overflow-hidden px-6 py-4 sm:py-8 lg:px-8 grid grid-cols-3"
+                >
+                    <template x-for="review in group" :key="review.id">
+                        <div class="mx-auto max-w-xl lg:max-w-2xl bg-white rounded-lg px-4 py-4">
+                            <figure>
+                                <blockquote class="text-center text-sm font-semibold leading-6 text-gray-900 sm:text-base sm:leading-7">
+                                    <p class="italic" x-text="review.description"></p>
+                                </blockquote>
+                                <figcaption>
+                                    <div class="mt-4 flex items-center justify-center space-x-3 text-base">
+                                        <div
+                                            class="text-gray-500"
+                                            x-text="review.person"
+                                        ></div>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </template>
+                </section>
+            </template>
+
+            <div class="flex justify-center items-center space-x-4 mt-4">
+                <button
+                    :class="{'opacity-50 cursor-not-allowed': currentGroup === 0}"
+                    class="p-2"
+                    @click="currentGroup = currentGroup - 1 < 0 ? 0 : currentGroup - 1"
+                    :disabled="currentGroup === 0"
+                >
+                    <span aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 rounded-full text-gray-900" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path>
+                        </svg>
+                    </span>
+                </button>
+                <div
+                    class="text-gray-500"
+                    x-text="`${currentGroup + 1} / ${Math.ceil(reviews.length / 3)}`"
+                >
+                </div>
+                <button
+                    :class="{'opacity-50 cursor-not-allowed': currentGroup === Math.ceil(reviews.length / 3) - 1}"
+                    class="p-2"
+                    @click="currentGroup = currentGroup + 1 >= Math.ceil(reviews.length / 3) ? Math.ceil(reviews.length / 3) - 1 : currentGroup + 1"
+                    :disabled="currentGroup === Math.ceil(reviews.length / 3) - 1"
+                >
+                <span aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 rounded-full text-gray-900" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </span>
+                </button>
+            </div>
+
+            <div class="flex mt-10 text-center justify-center items-center max-w-5xl mx-auto">
+                <a href="https://www.immobilienscout24.de/anbieter/profil/{{review_configuration:immoscout24_provider_string}}" class="text-base font-semibold leading-7 text-primary-200">
+                    Schauen Sie sich unser Unternehmensprofil auf
+                    ImmoScout24 an&nbsp;→
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<script>
+    function loadReviewsImmoScout() {
+        return {
+            reviews: [],
+            init() {
+                this.fetchData();
+            },
+            fetchData() {
+                fetch("/!referenzen")
+                    .then((response) => response.json())
+                    .then((data) => {
+                        this.reviews = data;
+                    });
+            },
+            truncateText(text, maxLength) {
+                if (!text) return ""; // handle missing text attribute
+                return text.length > maxLength ? text.slice(0, maxLength) + "..." : text;
+            },
+            groupedReviews() {
+                let groupSize = 3;
+                return this.reviews.reduce((acc, item, index) => {
+                    const groupIndex = Math.floor(index / groupSize);
+                    if (!acc[groupIndex]) {
+                        acc[groupIndex] = []; // Start a new group
+                    }
+                    acc[groupIndex].push(item); // Add item to group
+                    return acc;
+                }, []);
+            },
+        };
+    }
+</script>

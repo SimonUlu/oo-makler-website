@@ -1,0 +1,139 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        display: 'Kontakt Art'
+        fields:
+          -
+            handle: contact_type
+            field:
+              options:
+                on_office: null
+                standard: null
+              taggable: false
+              push_tags: false
+              multiple: false
+              clearable: false
+              searchable: true
+              cast_booleans: false
+              type: select
+              display: contact_type
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+      -
+        fields:
+          -
+            handle: onoffice_token
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'onOffice Token'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: onoffice_secret
+            field:
+              input_type: password
+              antlers: false
+              type: text
+              display: 'onOffice Secret'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+      -
+        display: 'E-Mail Kontaktformulare'
+        fields:
+          -
+            handle: e-mail_inbox_expose-mails
+            field:
+              input_type: email
+              antlers: false
+              type: text
+              display: 'E-Mail Inbox Expose-Mails'
+              width: 50
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: e-mail_betreff_expose_mails
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'E-Mail Betreff Expose Mails'
+              width: 50
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: e-mail_inbox_formulare
+            field:
+              input_type: email
+              antlers: false
+              type: text
+              display: 'E-Mail Inbox Formulare'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              width: 50
+          -
+            handle: e-mail_formulare_send_from_e-mail
+            field:
+              input_type: email
+              antlers: false
+              type: text
+              display: 'E-Mail Formulare Send From E-Mail'
+              width: 50
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+      -
+        display: 'OnOffice Default Filter Value'
+        fields:
+          -
+            handle: oo_field_name
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: oo_field_name
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: oo_field_value
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: oo_field_value
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: operator
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: operator
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false

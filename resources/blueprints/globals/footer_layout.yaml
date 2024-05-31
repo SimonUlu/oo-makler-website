@@ -1,0 +1,88 @@
+tabs:
+  main:
+    display: Hauptteil
+    sections:
+      -
+        fields:
+          -
+            handle: content_sections
+            field:
+              collapse: false
+              previews: true
+              fullscreen: true
+              sets:
+                neue_set-gruppe:
+                  display: 'Neue Set-Gruppe'
+                  instructions: null
+                  icon: null
+                  sets:
+                    neues_set:
+                      display: 'Neues Set'
+                      instructions: null
+                      icon: null
+                      fields:
+                        -
+                          handle: headline
+                          field:
+                            input_type: text
+                            antlers: false
+                            type: text
+                            display: Headline
+                            icon: text
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            hide_display: false
+                        -
+                          handle: pages
+                          field:
+                            collapse: false
+                            previews: true
+                            fullscreen: true
+                            sets:
+                              neue_set-gruppe:
+                                display: 'Neue Set-Gruppe'
+                                instructions: null
+                                icon: null
+                                sets:
+                                  neues_set:
+                                    display: 'Neues Set'
+                                    instructions: null
+                                    icon: null
+                                    fields:
+                                      -
+                                        handle: url
+                                        field:
+                                          type: link
+                                          display: url
+                                          icon: link
+                                          listable: hidden
+                                          instructions_position: above
+                                          visibility: visible
+                                          hide_display: false
+                                      -
+                                        handle: name
+                                        field:
+                                          input_type: text
+                                          antlers: false
+                                          type: text
+                                          display: name
+                                          icon: text
+                                          listable: hidden
+                                          instructions_position: above
+                                          visibility: visible
+                                          hide_display: false
+                            type: replicator
+                            display: pages
+                            icon: replicator
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            hide_display: false
+              type: replicator
+              display: content_sections
+              icon: replicator
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false

@@ -1,0 +1,60 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        display: 'App Logo'
+        fields:
+          -
+            handle: logo_image
+            field:
+              mode: list
+              restrict: false
+              allow_uploads: true
+              show_filename: true
+              show_set_alt: true
+              type: assets
+              display: 'Logo Image'
+              icon: assets
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: logo_url
+            field:
+              type: link
+              display: 'Logo Url'
+              icon: link
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+      -
+        display: 'Favicon Logo'
+        fields:
+          -
+            handle: favicon_image
+            field:
+              mode: list
+              restrict: false
+              allow_uploads: true
+              show_filename: true
+              show_set_alt: true
+              type: assets
+              display: 'Favicon Image'
+              icon: assets
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: favicon_url
+            field:
+              type: link
+              display: 'Favicon Url'
+              icon: link
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false

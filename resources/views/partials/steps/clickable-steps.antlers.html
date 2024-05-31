@@ -1,0 +1,67 @@
+<div class="my-16 lg:my-32 w-full bg-gray-100 py-24 lg:py-32" x-data="{ step: 1 }">
+    <nav class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" aria-label="Progress">
+        <ol role="list" class="overflow-hidden rounded-md lg:flex lg:rounded-none border-t border-b  lg:border-r lg:border-gray-200">
+            {{ steps }}
+            <li class="relative overflow-hidden lg:flex-1"
+                @click="step = {{ steps_number }}"
+                :class="{ 'border-primary': step === {{ steps_number }} }">
+                <div class="overflow-hidden border border-gray-200 lg:border-0">
+                <a class="cursor-pointer">
+                    <span
+                        :class="{ 'bg-primary': step === {{ steps_number }} }"
+                        class="absolute left-0 top-0 h-full w-1 lg:bottom-0 lg:top-auto lg:h-1 lg:w-full"
+                        aria-hidden="true"
+                    ></span>
+                    <span class="flex items-start px-6 py-5 text-sm font-medium lg:pl-9">
+                    <span class="flex-shrink-0">
+                        <span class="flex h-10 w-10 items-center justify-center rounded-full border-2 border-primary">
+                        <span class="text-primary">{{ steps_number }}</span>
+                        </span>
+                    </span>
+                    <span class="ml-4 mt-0.5 flex min-w-0 flex-col">
+                        <span class="text-sm font-medium text-primary">{{ step_header }}</span>
+                        <span class="text-sm font-medium text-gray-500">{{ step_description }}</span>
+                    </span>
+                    </span>
+                </a>
+                <div class="absolute inset-0 left-0 top-0 hidden w-3 lg:block" aria-hidden="true">
+                    <svg class="h-full w-full text-gray-300" viewBox="0 0 12 82" fill="none" preserveAspectRatio="none">
+                    <path d="M0.5 0V31L10.5 41L0.5 51V82" stroke="currentcolor" vector-effect="non-scaling-stroke" />
+                    </svg>
+                </div>
+                </div>
+            </li>
+            {{ /steps }}
+
+
+        </ol>
+    </nav>
+    {{ steps }}
+    <!-- Wenn gewollt folgendes noch in das div einfügen: -->
+    <!-- x-transition:enter="transition ease-out duration-300"
+    x-transition:enter-start="opacity-0 transform scale-90 translate-x-full"
+    x-transition:enter-end="opacity-100 transform scale-100 translate-x-0"
+    x-transition:leave="transition ease-in duration-300"
+    x-transition:leave-start="opacity-100 transform scale-100 translate-x-0"
+    x-transition:leave-end="opacity-0 transform scale-90 translate-x-full" -->
+    <div
+            class="grid md:grid-cols-2 items-center bg-gray-100 mt-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 items-center justify-center"
+
+            x-show="step == {{ steps_number }}"
+        >
+        <div class="p-10">
+            <h2 class="text-4xl mb-4 font-bold">{{itemheader}}</h2>
+            <p class="text-base">
+              {{itemdescription}}
+            </p>
+        </div>
+        <div class="items-center justify-center py-16 lg:py-32">
+            {{if substep_img}}
+                <img src="{{substep_img.0.url}}" alt="img.0.alt" class="w-1/2 mx-auto object-cover max-h-[500px]">
+            {{else}}
+                <img src="https://images.unsplash.com/photo-1582053433976-25c00369fc93?ixid=MXwxMjA3fDB8MHxwaG90by1wYWgel-fHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=512&q=80" alt="img.0.alt" class="w-1/2 h-1/2 mx-auto object-cover max-h-[300px]">
+            {{/if}}
+        </div>
+    </div>
+    {{/steps}}
+</div>

@@ -1,0 +1,118 @@
+tabs:
+  main:
+    display: Hauptteil
+    sections:
+      -
+        fields:
+          -
+            handle: sort_options
+            field:
+              collapse: false
+              previews: true
+              fullscreen: true
+              sets:
+                neue_set-gruppe:
+                  display: 'Neue Set-Gruppe'
+                  instructions: null
+                  icon: null
+                  sets:
+                    neues_set:
+                      display: 'Neues Set'
+                      instructions: null
+                      icon: null
+                      fields:
+                        -
+                          handle: id
+                          field:
+                            input_type: text
+                            antlers: false
+                            type: text
+                            display: id
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+                        -
+                          handle: option_text
+                          field:
+                            input_type: text
+                            antlers: false
+                            type: text
+                            display: option_text
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            hide_display: false
+                        -
+                          handle: isstandard
+                          field:
+                            default: false
+                            type: toggle
+                            display: isStandard
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            hide_display: false
+                        -
+                          handle: onoffice_fieldname
+                          field:
+                            input_type: text
+                            antlers: false
+                            type: text
+                            display: onOffice_fieldname
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            hide_display: false
+                        -
+                          handle: direction
+                          field:
+                            input_type: text
+                            antlers: false
+                            type: text
+                            display: direction
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            hide_display: false
+                        -
+                          handle: show_kauf
+                          field:
+                            default: false
+                            type: toggle
+                            display: show_kauf
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+                        -
+                          handle: show_miete
+                          field:
+                            default: false
+                            type: toggle
+                            display: show_miete
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+                        -
+                          handle: isstandard
+                          field:
+                            default: false
+                            type: toggle
+                            display: isStandard
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+              type: replicator
+              display: sort_options
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              replicator_preview: true

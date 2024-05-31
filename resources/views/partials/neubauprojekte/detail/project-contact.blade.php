@@ -1,0 +1,1 @@
+<livewire:project-contact-controller :estate="['elements' => ['objekttitel' => $title]]" :title="'Kontaktformular'" :defaultMessage="'Ich bin an dieser Immobilie interessiert. Bitte nehmen Sie Kontakt mit mir auf.'" />

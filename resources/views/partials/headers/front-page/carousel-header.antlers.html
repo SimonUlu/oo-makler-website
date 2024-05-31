@@ -1,0 +1,53 @@
+<div class="relative overflow-hidden max-w-7xl px-4 lg:px-10">
+    <div class="absolute top-0 left-0 z-20 flex items-center justify-between w-full p-6">
+       <h1 class="text-white text-4xl font-bold">Lorem Ipsum</h1>
+       <div class="flex items-center space-x-4">
+         <button @click="prev()" class="text-white">
+           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-6 w-6">
+             <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
+           </svg>
+         </button>
+         <div class="text-white">
+           {{ current + 1 }} / {{ images.length }}
+         </div>
+         <button @click="next()" class="text-white">
+           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-6 w-6">
+             <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+           </svg>
+         </div>
+       </div>
+    </div>
+    <div class="carousel" @mouseover="stop()" @mouseout="start()">
+       <template x-for="(image, index) in images" :key="index">
+         <div x-show="current === index" class="carousel-item bg-cover bg-center" :style="'background-image: url(' + image + ')'"></div>
+       </template>
+    </div>
+</div>
+
+<script>
+document.addEventListener('alpine:init', () => {
+    Alpine.data('carousel', () => ({
+       images: [
+         'https://via.placeholder.com/800',
+         'https://via.placeholder.com/801',
+         'https://via.placeholder.com/802',
+       ],
+       current: 0,
+       interval: null,
+       start() {
+         this.interval = setInterval(() => {
+           this.next();
+         }, 5000);
+       },
+       stop() {
+         clearInterval(this.interval);
+       },
+       next() {
+         this.current = (this.current + 1) % this.images.length;
+       },
+       prev() {
+         this.current = (this.current - 1 + this.images.length) % this.images.length;
+       },
+    }));
+});
+</script>

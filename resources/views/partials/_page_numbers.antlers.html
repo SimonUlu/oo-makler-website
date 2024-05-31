@@ -1,0 +1,8 @@
+{{ if from <= to }}
+<a
+    href="{{current_url}}?page={{from}}"
+    class="px-4 py-2 border-t-2 border-b-2 {{ current_page == from ? 'bg-primary-600 text-white border-primary-900' : 'border-transparent hover:border-primary-700' }}"
+    >{{from}}</a
+>
+{{ partial:_page_numbers current_page="{current_page}"
+current_url="{current_url}" from="{ from | add:1 }" to="{to}" }} {{ /if }}

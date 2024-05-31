@@ -1,0 +1,59 @@
+title: Image-left-text-right
+fields:
+  -
+    handle: image_left_side
+    field:
+      mode: list
+      container: images
+      restrict: false
+      allow_uploads: true
+      show_filename: true
+      show_set_alt: true
+      type: assets
+      display: 'Image left side'
+      icon: assets
+      width: 50
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+  -
+    handle: text_right_side
+    field:
+      theme: material
+      mode: htmlmixed
+      mode_selectable: true
+      indent_type: tabs
+      indent_size: 4
+      key_map: default
+      line_numbers: true
+      line_wrapping: true
+      antlers: false
+      type: code
+      display: 'text right side'
+      icon: code
+      width: 50
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+  -
+    handle: image_class_attributes
+    field:
+      theme: material
+      mode: htmlmixed
+      mode_selectable: true
+      indent_type: tabs
+      indent_size: 4
+      key_map: default
+      line_numbers: true
+      line_wrapping: true
+      antlers: false
+      type: code
+      display: 'Image Class Attributes'
+      icon: code
+      width: 50
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false

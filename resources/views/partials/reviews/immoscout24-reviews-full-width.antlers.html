@@ -1,0 +1,230 @@
+<section class="bg-gray-100" x-data="loadReviewsImmoScout()" x-init="init()">
+    <div class="max-w-screen-xl px-4 py-2 xl:py-4 mx-auto lg:px-6">
+        <!-- Mobile -->
+        <div class="grid gap-8 lg:hidden lg:grid-cols-3">
+            <template
+                x-for="(review, index) in reviews.slice(0, 3)"
+                :key="index"
+            >
+                <div class="p-6 shadow-sm bg-gray-50 rounded-xl">
+                    <div
+                        x-text="truncateText(review.review_text, 150)"
+                        class="font-medium text-gray-900 text-md"
+                    ></div>
+                    <div
+                        class="flex items-center justify-center my-3 divide-x-2 divide-gray-500 dark:divide-gray-700"
+                    >
+                        <div class="pr-3 font-medium text-gray-900">
+                            <div
+                                class="flex stars"
+                                x-data="{ rating: review.rating }"
+                                x-init="rating = review.rating"
+                            >
+                                <template x-for="i in 5">
+                                    <svg
+                                        class="flex-none w-5 h-5"
+                                        viewBox="0 0 20 20"
+                                        fill="#FDCC0D"
+                                        aria-hidden="true"
+                                    >
+                                        <path
+                                            fill-rule="evenodd"
+                                            d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
+                                            clip-rule="evenodd"
+                                        />
+                                    </svg>
+                                </template>
+                            </div>
+                        </div>
+                        <div
+                            class="pl-3 text-sm font-light text-gray-500 dark:text-gray-400"
+                        >
+                            <div x-text="review.author_name"></div>
+                        </div>
+                    </div>
+                </div>
+            </template>
+            <div
+                class="flex items-center justify-center p-6 shadow-sm rounded-xl bg-gray-50"
+            >
+                <div>
+                    <h3 class="text-lg font-medium text-gray-900">
+                        Sie möchten mehr erfahren oder Ihre Erfahrungen mit uns
+                        teilen?
+                    </h3>
+
+                    <div class="mt-4">
+                        <a
+                            href="https://www.immobilienscout24.de/anbieter/profil/{{review_configuration:immoscout24_provider_string}}"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Schauen Sie sich unser Unternehmensprofil auf
+                            ImmoScout24 an<span aria-hidden="true"
+                                >&nbsp;→</span
+                            >
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Desktop -->
+        <div
+            x-data="{currentReview: 0}"
+        >
+            <template
+                x-for="(review, index) in reviews"
+            >
+                <!-- nur das aktuelle Testimonial anzeigen -->
+                <section
+                    x-show="currentReview == index"
+                    class="relative isolate overflow-hidden px-6 py-4 sm:py-8 lg:px-8"
+                >
+                    <div class="mx-auto max-w-xl lg:max-w-2xl">
+                        <figure>
+                            <blockquote class="text-center text-sm font-semibold leading-8 text-gray-900 sm:text-base sm:leading-9">
+                                <p class="italic" x-text="review.review_text"></p>
+                            </blockquote>
+                            <figcaption>
+                                <div class="mt-4 flex items-center justify-center space-x-3 text-base">
+                                    <div
+                                        class="text-gray-500"
+                                        x-text="review.author_name"
+                                    ></div>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </section>
+            </template>
+
+            <!-- Slider Kontrollbuttons -->
+            <div class="flex justify-center items-center space-x-4 mt-4">
+                <button
+                    class="p-2"
+                    @click="currentReview = currentReview - 1 < 0 ? reviews.length - 1 : currentReview - 1, console.log(currentReview)"
+                >
+                    <span aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 rounded-full text-gray-900" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path>
+                        </svg>
+                    </span>
+                </button>
+                <div
+                    class="text-gray-500"
+                    x-text="`${currentReview + 1} / ${reviews.length}`"
+                >
+
+                </div>
+                <button
+                    class="p-2"
+                    @click="currentReview = currentReview + 1 > reviews.length - 1 ? 0 : currentReview + 1, console.log(currentReview)"
+                >
+                <span aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 rounded-full text-gray-900" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </span>
+                </button>
+            </div>
+
+            <div class="flex mt-10 text-center justify-center items-center max-w-5xl mx-auto">
+                <a href="https://www.immobilienscout24.de/anbieter/profil/{{review_configuration:immoscout24_provider_string}}" class="text-base font-semibold leading-7 text-primary-200">
+                    Schauen Sie sich unser Unternehmensprofil auf
+                    ImmoScout24 an&nbsp;→
+                </a>
+            </div>
+        </div>
+        <!-- <div class="hidden gap-8 lg:grid lg:grid-cols-3">
+            <template
+                x-for="(review, index) in reviews.slice(0, 9)"
+                :key="index"
+            >
+                <div class="p-6 shadow-sm bg-gray-50 rounded-xl">
+                    <div
+                        x-text="truncateText(review.review_text, 150)"
+                        class="font-medium text-gray-900 text-md"
+                    ></div>
+                    <div
+                        class="flex items-center justify-center my-3 divide-x-2 divide-gray-500 dark:divide-gray-700"
+                    >
+                        <div class="pr-3 font-medium text-gray-900">
+                            <div
+                                class="flex stars"
+                                x-data="{ rating: review.rating }"
+                                x-init="rating = review.rating"
+                            >
+                                <template x-for="i in 5">
+                                    <svg
+                                        class="flex-none w-5 h-5"
+                                        viewBox="0 0 20 20"
+                                        fill="#FDCC0D"
+                                        aria-hidden="true"
+                                    >
+                                        <path
+                                            fill-rule="evenodd"
+                                            d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
+                                            clip-rule="evenodd"
+                                        />
+                                    </svg>
+                                </template>
+                            </div>
+                        </div>
+                        <div
+                            class="pl-3 text-sm font-light text-gray-500 dark:text-gray-400"
+                        >
+                            <div x-text="review.author_name"></div>
+                        </div>
+                    </div>
+                </div>
+            </template>
+            <div
+                class="flex items-center justify-center p-6 shadow-sm rounded-xl bg-gray-50"
+            >
+                <div>
+                    <h3 class="text-lg font-medium text-gray-900">
+                        Sie möchten mehr erfahren oder Ihre Erfahrungen mit uns
+                        teilen?
+                    </h3>
+
+                    <div class="mt-4">
+                        <a
+                            href="https://www.immobilienscout24.de/anbieter/profil/{{review_configuration:immoscout24_provider_string}}"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Schauen Sie sich unser Unternehmensprofil auf
+                            ImmoScout24 an<span aria-hidden="true"
+                                >&nbsp;→</span
+                            >
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+    </div>
+</section>
+
+<script>
+    function loadReviewsImmoScout() {
+        return {
+            reviews: [],
+            init() {
+                this.fetchData();
+            },
+            fetchData() {
+                fetch("/!bewertungen")
+                    .then((response) => response.json())
+                    .then((data) => {
+                        this.reviews = data;
+                    });
+            },
+            truncateText(text, maxLength) {
+                if (!text) return ""; // handle missing text attribute
+                return Array.from(text).length > maxLength
+                    ? Array.from(text).slice(0, maxLength).join("") + "..."
+                    : text;
+            },
+        };
+    }
+</script>

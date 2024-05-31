@@ -1,0 +1,214 @@
+title: Team
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        display: General
+        fields:
+          -
+            handle: title
+            field:
+              type: hidden
+              required: false
+          -
+            handle: first_name
+            field:
+              type: text
+              input_type: text
+              localizable: true
+              listable: true
+              display: 'First name'
+              width: 50
+              instructions_position: above
+              visibility: visible
+              antlers: false
+              hide_display: false
+          -
+            handle: last_name
+            field:
+              type: text
+              input_type: text
+              localizable: true
+              listable: true
+              display: 'Last name'
+              width: 50
+              instructions_position: above
+              visibility: visible
+              antlers: false
+              hide_display: false
+          -
+            handle: email
+            field:
+              input_type: email
+              antlers: false
+              type: text
+              display: E-Mail
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: function
+            field:
+              type: text
+              input_type: text
+              localizable: true
+              listable: true
+              display: Function
+              validate:
+                - required
+          -
+            handle: social_profiles
+            field:
+              collapse: false
+              previews: true
+              fullscreen: true
+              sets:
+                new_set_group:
+                  display: 'New Set Group'
+                  instructions: null
+                  icon: null
+                  sets:
+                    new_set:
+                      display: 'New Set'
+                      instructions: null
+                      icon: null
+                      fields:
+                        -
+                          handle: social_profile_type
+                          field:
+                            options:
+                              linkedin: LinkedIn
+                              xing: Xing
+                              facebook: Facebook
+                              instagram: Instragram
+                              twitter: Twitter
+                            taggable: false
+                            push_tags: false
+                            multiple: false
+                            clearable: false
+                            searchable: true
+                            cast_booleans: false
+                            type: select
+                            display: 'Social Profile Type'
+                            icon: select
+                            width: 25
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            hide_display: false
+                        -
+                          handle: social_profile_url
+                          field:
+                            input_type: url
+                            antlers: false
+                            type: text
+                            display: 'Social Profile URL'
+                            icon: text
+                            width: 75
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            hide_display: false
+              type: replicator
+              display: 'Social Profiles'
+              icon: replicator
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+      -
+        display: Images
+        fields:
+          -
+            handle: image_portrait
+            field:
+              mode: list
+              container: images
+              restrict: false
+              allow_uploads: true
+              show_filename: true
+              show_set_alt: true
+              type: assets
+              display: 'Bild Portrait'
+              icon: assets
+              width: 33
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: image_overview
+            field:
+              mode: list
+              container: images
+              restrict: false
+              allow_uploads: true
+              show_filename: true
+              show_set_alt: true
+              type: assets
+              display: 'Bild Übersicht'
+              icon: assets
+              width: 33
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: image_landscape
+            field:
+              mode: list
+              container: images
+              restrict: false
+              allow_uploads: true
+              show_filename: true
+              show_set_alt: true
+              type: assets
+              display: 'Bild Landscape'
+              icon: assets
+              width: 33
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+      -
+        display: 'Kurzbeschreibung Übersichtsseite'
+        fields:
+          -
+            import: team_description
+      -
+        display: 'Kurzbeschreibung Detailseite'
+        fields:
+          -
+            import: team_description
+            prefix: short_
+      -
+        display: 'Langbeschreibung Detailseite'
+        fields:
+          -
+            import: team_description
+            prefix: long_
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        display: 'New Section'
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              from: title
+              generate: true
+              show_regenerate: false
+              display: URL
+              icon: slug
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              validate:
+                - required

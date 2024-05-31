@@ -1,0 +1,31 @@
+<!-- Header Single Images Image gallery -->
+<div class="w-full max-h-screen bg-white">
+    <!-- Header -->
+    <div class="relative bg-gray-800/75">
+        <div class="inset-0">
+            <img class='object-cover w-full max-h-screen hover:scale-[1.005] transition-transform duration-1000'
+                src="{{ images.0.image.0.url ?? 'https://upload.wikimedia.org/wikipedia/commons/3/3f/Placeholder_view_vector.svg' }}"
+                alt="Projektbild">
+            <button @click="openImgSlideShow = !openImgSlideShow" data-open="Fotos" aria-label="Fotos"
+                class="absolute right-4 bottom-4 hover:text-gray-900 text-white hover:bg-slate-50 cursor-pointer max-w-[150px] rounded-xl bg-transparent py-1 px-3 font-medium border-solid border-white border-2">
+                <svg class="inline-flex w-4 hover:text-gray-900 " xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M6.827 6.175A2.31 2.31 0 015.186 7.23c-.38.054-.757.112-1.134.175C2.999 7.58 2.25 8.507 2.25 9.574V18a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9.574c0-1.067-.75-1.994-1.802-2.169a47.865 47.865 0 00-1.134-.175 2.31 2.31 0 01-1.64-1.055l-.822-1.316a2.192 2.192 0 00-1.736-1.039 48.774 48.774 0 00-5.232 0 2.192 2.192 0 00-1.736 1.039l-.821 1.316z" />
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M16.5 12.75a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0zM18.75 10.5h-.008v.008h.008V10.5z" />
+                </svg>
+                <span class="text-sm hover:text-gray-900"> Alle Bilder </span>
+            </button>
+            <button @click="shareOpen = !shareOpen" data-open="Fotos" aria-label="Fotos"
+                class="absolute right-36 bottom-4 hover:text-gray-900 text-white hover:bg-slate-50 cursor-pointer max-w-[150px] rounded-xl bg-transparent py-1 px-3 font-medium border-solid border-white border-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"  class="inline-flex w-4 hover:text-gray-900 ">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M7.217 10.907a2.25 2.25 0 100 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186l9.566-5.314m-9.566 7.5l9.566 5.314m0 0a2.25 2.25 0 103.935 2.186 2.25 2.25 0 00-3.935-2.186zm0-12.814a2.25 2.25 0 103.933-2.185 2.25 2.25 0 00-3.933 2.185z" />
+                  </svg>
+                <span class="text-sm hover:text-gray-900"> Teilen</span>
+            </button>
+            <div class="inset-0 max-h-screen bg-gray-800/75 mix-blend-multiply" aria-hidden="true"></div>
+        </div>
+    </div>
+
+</div>

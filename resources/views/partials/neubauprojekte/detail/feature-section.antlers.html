@@ -1,0 +1,178 @@
+<h2 id="details-heading" class="sr-only">Additional details</h2>
+
+<div class="divide-y divide-gray-200 border-t" x-data="{openDetails: true, openPlanning: false}">
+    <div>
+        <h3>
+            <!-- Expand/collapse question button -->
+            <button @click="openDetails = !openDetails" type="button" class="group relative flex w-full items-center justify-between py-6 text-left" aria-controls="disclosure-1" aria-expanded="false">
+            <!-- Open: "text-indigo-600", Closed: "text-gray-900" -->
+            <span class="text-gray-900 text-xl font-bold">Details</span>
+            <span class="flex items-center ml-6">
+                <!-- Open: "hidden", Closed: "block" -->
+                <svg
+                    x-show="!openDetails"
+                    class="block w-6 h-6 text-gray-400 group-hover:text-primary"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M12 4.5v15m7.5-7.5h-15"
+                    />
+                </svg>
+                <!-- Open: "block", Closed: "hidden" -->
+                <svg
+                    x-show="openDetails"
+                    class="w-6 h-6 text-gray-400 group-hover:text-primary"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M19.5 12h-15"
+                    />
+                </svg>
+            </span>
+            </button>
+        </h3>
+        <div class="prose prose-sm pb-6 gap-y-8" id="disclosure-1" x-show="openDetails">
+            <div class="grid grid-cols-2">
+                <div class="flex pt-4">
+                    <span class="font-bold text-md"> Detail 1</span>
+                </div>
+                <div class="flex pt-4">
+                    <span class="font-medium text-sm"> Info zu Detail 1</span>
+                </div>
+            </div>
+            <div class="grid grid-cols-2">
+                <div class="flex pt-4">
+                    <span class="font-bold text-md"> Detail 1</span>
+                </div>
+                <div class="flex pt-2">
+                    <span class="font-medium text-sm"> Info zu Detail 1</span>
+                </div>
+            </div>
+            <div class="grid grid-cols-2">
+                <div class="flex pt-2">
+                    <span class="font-bold text-md"> Detail 1</span>
+                </div>
+                <div class="flex pt-2">
+                    <span class="font-medium text-sm"> Info zu Detail 1</span>
+                </div>
+            </div>
+            <div class="grid grid-cols-2">
+                <div class="flex pt-2">
+                    <span class="font-bold text-md"> Detail 1</span>
+                </div>
+                <div class="flex pt-2">
+                    <span class="font-medium text-sm"> Info zu Detail 1</span>
+                </div>
+            </div>
+            <div class="grid grid-cols-2">
+                <div class="flex pt-2">
+                    <span class="font-bold text-md"> Detail 1</span>
+                </div>
+                <div class="flex pt-2">
+                    <span class="font-medium text-sm"> Info zu Detail 1</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div>
+        <h3>
+            <!-- Expand/collapse question button -->
+            <button @click="openPlanning = !openPlanning" type="button" class="group relative flex w-full items-center justify-between py-6 text-left" aria-controls="disclosure-1" aria-expanded="false">
+            <!-- Open: "text-indigo-600", Closed: "text-gray-900" -->
+            <span class="text-gray-900 text-xl font-bold">Planung</span>
+            <span class="flex items-center ml-6">
+                <!-- Open: "hidden", Closed: "block" -->
+                <svg
+                    x-show="!openPlanning"
+                    class="block w-6 h-6 text-gray-400 group-hover:text-primary"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M12 4.5v15m7.5-7.5h-15"
+                    />
+                </svg>
+                <!-- Open: "block", Closed: "hidden" -->
+                <svg
+                    x-show="openPlanning"
+                    class="w-6 h-6 text-gray-400 group-hover:text-primary"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M19.5 12h-15"
+                    />
+                </svg>
+            </span>
+            </button>
+        </h3>
+        <div class="prose prose-sm pb-6 gap-y-8" id="disclosure-1" x-show="openPlanning">
+            <div class="grid grid-cols-2">
+                <div class="flex pt-4">
+                    <span class="font-bold text-md"> Detail 1</span>
+                </div>
+                <div class="flex pt-4">
+                    <span class="font-medium text-sm"> Info zu Detail 1</span>
+                </div>
+            </div>
+            <div class="grid grid-cols-2">
+                <div class="flex pt-4">
+                    <span class="font-bold text-md"> Detail 1</span>
+                </div>
+                <div class="flex pt-2">
+                    <span class="font-medium text-sm"> Info zu Detail 1</span>
+                </div>
+            </div>
+            <div class="grid grid-cols-2">
+                <div class="flex pt-2">
+                    <span class="font-bold text-md"> Detail 1</span>
+                </div>
+                <div class="flex pt-2">
+                    <span class="font-medium text-sm"> Info zu Detail 1</span>
+                </div>
+            </div>
+            <div class="grid grid-cols-2">
+                <div class="flex pt-2">
+                    <span class="font-bold text-md"> Detail 1</span>
+                </div>
+                <div class="flex pt-2">
+                    <span class="font-medium text-sm"> Info zu Detail 1</span>
+                </div>
+            </div>
+            <div class="grid grid-cols-2">
+                <div class="flex pt-2">
+                    <span class="font-bold text-md"> Detail 1</span>
+                </div>
+                <div class="flex pt-2">
+                    <span class="font-medium text-sm"> Info zu Detail 1</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+<!-- More sections... -->
+</div>

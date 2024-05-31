@@ -1,0 +1,17 @@
+{{paginate}}
+<div class="py-3 mx-auto col-span-full">
+    <nav class="inline-flex w-full" aria-label="Pagination">
+        {{if prev_page}}<a
+            href="{{prev_page}}"
+            class="px-4 py-2 border-t-2 border-b-2 border-transparent hover:border-primary-500"
+            >&laquo; Zur&uuml;ck</a
+        >{{/if}} {{ partial:_page_numbers current_page="{current_page}"
+        current_url="{current_url}" from="1" to="{total_pages}" }} {{if
+        next_page}}<a
+            href="{{next_page}}"
+            class="px-4 py-2 border-t-2 border-b-2 border-transparent hover:border-primary-500"
+            >Weiter &raquo;</a
+        >{{/if}}
+    </nav>
+</div>
+{{/paginate}}

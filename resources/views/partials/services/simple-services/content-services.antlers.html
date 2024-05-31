@@ -1,0 +1,24 @@
+{{if four_grid_text_with_icons}}
+<div class="mx-auto sm:mt-20 lg:mt-24">
+    <dl
+        class="grid max-w-xl grid-cols-1 gap-x-12 gap-y-10 md:max-w-none md:grid-cols-2 lg:gap-y-16"
+    >
+        {{four_grid_text_with_icons}}
+        <div class="relative pl-16">
+            <dt class="text-base font-semibold leading-7 text-gray-900">
+                <div
+                    class="absolute top-0 left-0 flex items-center justify-center w-10 h-10 rounded-lg bg-primary-600"
+                >
+                    {{svg_icon}}
+                </div>
+                {{header}}
+            </dt>
+            <dd class="mt-2 text-base leading-7 text-gray-600">
+                {{description}}
+            </dd>
+        </div>
+        {{/four_grid_text_with_icons}}
+    </dl>
+</div>
+
+{{/if}}

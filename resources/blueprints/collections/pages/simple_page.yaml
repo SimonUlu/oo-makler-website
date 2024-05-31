@@ -1,0 +1,1156 @@
+title: 'Simple Page'
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        display: 'Custom Code'
+        fields:
+          -
+            handle: custom_code_block
+            field:
+              theme: material
+              mode: htmlmixed
+              mode_selectable: true
+              indent_type: tabs
+              indent_size: 4
+              key_map: default
+              line_numbers: true
+              line_wrapping: true
+              antlers: false
+              type: code
+              display: 'Custom Code Block'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+      -
+        display: LogoCloudVariante
+        fields:
+          -
+            handle: logo_variante
+            field:
+              options:
+                variante_1: 'Mit Text zu jedem Betrieb'
+                variante_2: 'Ohne Text zu jedem Betrieb'
+              taggable: false
+              push_tags: false
+              multiple: false
+              clearable: false
+              searchable: true
+              cast_booleans: false
+              type: select
+              display: logo_variante
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+      -
+        display: newsletterstuff
+        instructions: stuuffnewsletter
+        fields:
+          -
+            handle: show_newsletter
+            field:
+              options:
+                'yes': null
+                'no': null
+              taggable: false
+              push_tags: false
+              multiple: false
+              clearable: false
+              searchable: true
+              cast_booleans: false
+              type: select
+              display: show_newsletter
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: template
+            field:
+              hide_partials: true
+              blueprint: false
+              type: template
+              display: template
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: view_model
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: view_model
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+      -
+        display: 'Neuer Abschnitt'
+        fields:
+          -
+            handle: show_reference_estates
+            field:
+              default: false
+              type: toggle
+              display: show_reference_estates
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+  header_section:
+    display: Header
+    sections:
+      -
+        display: Header
+        fields:
+          -
+            handle: headerbild
+            field:
+              mode: list
+              container: images
+              restrict: false
+              allow_uploads: true
+              show_filename: true
+              display: Headerbild
+              type: assets
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              always_save: false
+          -
+            handle: header_variante
+            field:
+              options:
+                variante_1: null
+                variante_2: null
+              multiple: false
+              clearable: false
+              searchable: true
+              taggable: false
+              push_tags: false
+              cast_booleans: false
+              display: header_variante
+              type: select
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: subtitle
+            field:
+              input_type: text
+              antlers: false
+              display: subTitle
+              type: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              always_save: false
+              hide_display: false
+  intro:
+    display: Intro
+    sections:
+      -
+        display: Intro
+        fields:
+          -
+            handle: show_subheader
+            field:
+              options:
+                'yes': null
+                'no': null
+              taggable: false
+              push_tags: false
+              multiple: false
+              clearable: false
+              searchable: true
+              cast_booleans: false
+              type: select
+              display: show_subheader
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: subheaderheadline
+            field:
+              input_type: text
+              antlers: false
+              display: subHeaderHeadline
+              type: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+          -
+            handle: subheaderdescription
+            field:
+              antlers: false
+              display: subHeaderDescription
+              type: textarea
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+          -
+            handle: code_block
+            field:
+              theme: material
+              mode: htmlmixed
+              mode_selectable: true
+              indent_type: tabs
+              indent_size: 4
+              key_map: default
+              line_numbers: true
+              line_wrapping: true
+              antlers: false
+              type: code
+              display: 'Code Block'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+  section_services:
+    display: Services
+    sections:
+      -
+        display: Services
+        fields:
+          -
+            handle: services_variante
+            field:
+              options:
+                variante_1: Standard
+                variante_2: 'Kleiner + Farbe'
+              taggable: false
+              push_tags: false
+              multiple: false
+              clearable: false
+              searchable: true
+              cast_booleans: false
+              type: select
+              display: services_variante
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: services_headline_two
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'Services Headline Two'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: services_text
+            field:
+              buttons:
+                - h2
+                - h3
+                - bold
+                - italic
+                - unorderedlist
+                - orderedlist
+                - removeformat
+                - quote
+                - anchor
+                - image
+                - table
+                - underline
+                - strikethrough
+                - small
+                - superscript
+                - subscript
+                - code
+                - codeblock
+                - horizontalrule
+                - alignleft
+                - aligncenter
+                - alignright
+                - default_text
+                - disc_list
+                - alignjustify
+              smart_typography: false
+              save_html: false
+              inline: false
+              toolbar_mode: fixed
+              reading_time: false
+              fullscreen: true
+              allow_source: true
+              enable_input_rules: true
+              enable_paste_rules: true
+              remove_empty_nodes: false
+              antlers: false
+              link_noopener: false
+              link_noreferrer: false
+              target_blank: false
+              always_show_set_button: false
+              collapse: false
+              previews: true
+              type: bard
+              display: 'Services Text'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            import: four-grid-text-with-icons
+  video_section:
+    display: 'Video Section'
+    sections:
+      -
+        display: 'Neuer Abschnitt'
+        fields:
+          -
+            handle: video
+            field:
+              mode: list
+              container: images
+              restrict: false
+              allow_uploads: true
+              show_filename: true
+              show_set_alt: true
+              type: assets
+              display: video
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: show_video
+            field:
+              options:
+                'yes': null
+                'no': null
+              taggable: false
+              push_tags: false
+              multiple: false
+              clearable: false
+              searchable: true
+              cast_booleans: false
+              type: select
+              display: show_video
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+  image_content:
+    display: 'Image Content'
+    sections:
+      -
+        display: 'Content with Image'
+        fields:
+          -
+            handle: content_with_image_replicator
+            field:
+              collapse: false
+              previews: true
+              fullscreen: true
+              sets:
+                new_set_group:
+                  display: 'New Set Group'
+                  instructions: null
+                  icon: null
+                  sets:
+                    new_set:
+                      display: 'New Set'
+                      instructions: null
+                      icon: null
+                      fields:
+                        -
+                          handle: image
+                          field:
+                            mode: list
+                            container: images
+                            restrict: false
+                            allow_uploads: true
+                            show_filename: true
+                            show_set_alt: true
+                            type: assets
+                            display: Image
+                            icon: assets
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            hide_display: false
+                        -
+                          handle: headline
+                          field:
+                            input_type: text
+                            antlers: false
+                            type: text
+                            display: headline
+                            icon: text
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            hide_display: false
+                        -
+                          handle: text
+                          field:
+                            buttons:
+                              - h2
+                              - h3
+                              - bold
+                              - italic
+                              - unorderedlist
+                              - orderedlist
+                              - removeformat
+                              - quote
+                              - anchor
+                              - image
+                              - table
+                              - underline
+                              - strikethrough
+                              - small
+                              - superscript
+                              - subscript
+                              - code
+                              - codeblock
+                              - horizontalrule
+                              - alignleft
+                              - aligncenter
+                              - alignright
+                              - default_text
+                              - disc_list
+                              - alignjustify
+                            smart_typography: false
+                            save_html: false
+                            inline: false
+                            toolbar_mode: fixed
+                            reading_time: false
+                            fullscreen: true
+                            allow_source: true
+                            enable_input_rules: true
+                            enable_paste_rules: true
+                            remove_empty_nodes: false
+                            antlers: false
+                            link_noopener: false
+                            link_noreferrer: false
+                            target_blank: false
+                            always_show_set_button: false
+                            collapse: false
+                            previews: true
+                            type: bard
+                            display: text
+                            icon: bard
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            hide_display: false
+                        -
+                          handle: image_class_attributes
+                          field:
+                            theme: material
+                            mode: htmlmixed
+                            mode_selectable: true
+                            indent_type: tabs
+                            indent_size: 4
+                            key_map: default
+                            line_numbers: true
+                            line_wrapping: true
+                            antlers: false
+                            type: code
+                            display: 'Image Class attributes'
+                            icon: code
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            hide_display: false
+                        -
+                          handle: code_right_side_bottom
+                          field:
+                            theme: material
+                            mode: htmlmixed
+                            mode_selectable: true
+                            indent_type: tabs
+                            indent_size: 4
+                            key_map: default
+                            line_numbers: true
+                            line_wrapping: true
+                            antlers: false
+                            type: code
+                            display: 'Code Right Side Bottom'
+                            icon: code
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            hide_display: false
+              type: replicator
+              display: 'Content With Image Replicator'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+  '':
+    display: 'Kooperations Logos'
+    sections:
+      -
+        display: 'Neuer Abschnitt'
+        fields:
+          -
+            handle: logo_header
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: logo_header
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: logo_text
+            field:
+              antlers: false
+              type: textarea
+              display: logo_text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: logo_replikator
+            field:
+              collapse: false
+              previews: true
+              fullscreen: true
+              sets:
+                neue_set-gruppe:
+                  display: 'Neue Set-Gruppe'
+                  instructions: null
+                  icon: null
+                  sets:
+                    neues_set:
+                      display: 'Neues Set'
+                      instructions: null
+                      icon: null
+                      fields:
+                        -
+                          handle: img
+                          field:
+                            mode: list
+                            container: images
+                            restrict: false
+                            allow_uploads: true
+                            show_filename: true
+                            show_set_alt: true
+                            type: assets
+                            display: img
+                            icon: assets
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            hide_display: false
+              type: replicator
+              display: logo_replikator
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: logo_button
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: logo_button
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: logo_button_two
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: logo_button_two
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: logo_button_link
+            field:
+              type: link
+              display: logo_button_link
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: logo_two_button_link
+            field:
+              type: link
+              display: logo_two_button_link
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+  cont_section:
+    display: Contact
+    sections:
+      -
+        display: 'Neuer Abschnitt'
+        fields:
+          -
+            handle: contact_variante
+            field:
+              options:
+                variante_1: 'An der Seite'
+                variante_2: 'In der Seite unterhalb anderer Komponenten globale Infos'
+                variante_3: 'In der Seite unterhalb anderer Komponenten infos hier'
+                variante_4: 'Ganz unten'
+              taggable: false
+              push_tags: false
+              multiple: false
+              clearable: false
+              searchable: true
+              cast_booleans: false
+              type: select
+              display: contact_variante
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: contact_person
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: contact_person
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: contact_position
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: contact_position
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: contact_header
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: contact_header
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: contact_subheader
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: contact_subheader
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: contact_number
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: contact_number
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: contact_email
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: contact_email
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: contact_img
+            field:
+              mode: list
+              container: images
+              restrict: false
+              allow_uploads: true
+              show_filename: true
+              show_set_alt: true
+              type: assets
+              display: contact_img
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+  steps_section:
+    display: steps
+    sections:
+      -
+        display: 'Neuer Abschnitt'
+        fields:
+          -
+            handle: steps_variante
+            field:
+              options:
+                variante_1: 'Fancy (immer nur 1 sichtbar)'
+                variante_2: Standard
+                variante_3: 'Do not show'
+              taggable: false
+              push_tags: false
+              multiple: false
+              clearable: false
+              searchable: true
+              cast_booleans: false
+              type: select
+              display: steps_variante
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: stepsheader
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: stepsHeader
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: stepssubheader
+            field:
+              buttons:
+                - h2
+                - h3
+                - bold
+                - italic
+                - unorderedlist
+                - orderedlist
+                - removeformat
+                - quote
+                - anchor
+                - image
+                - table
+                - h4
+                - h5
+                - underline
+                - small
+                - superscript
+                - subscript
+                - code
+                - codeblock
+              smart_typography: false
+              save_html: false
+              inline: false
+              toolbar_mode: fixed
+              reading_time: false
+              word_count: false
+              fullscreen: true
+              allow_source: true
+              enable_input_rules: true
+              enable_paste_rules: true
+              remove_empty_nodes: false
+              antlers: false
+              link_noopener: false
+              link_noreferrer: false
+              target_blank: false
+              always_show_set_button: false
+              collapse: false
+              previews: true
+              type: bard
+              display: stepsSubHeader
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: steps
+            field:
+              collapse: false
+              previews: true
+              fullscreen: true
+              sets:
+                neue_set-gruppe:
+                  display: 'Neue Set-Gruppe'
+                  instructions: null
+                  icon: null
+                  sets:
+                    neues_set:
+                      display: 'Neues Set'
+                      instructions: null
+                      icon: null
+                      fields:
+                        -
+                          handle: svg
+                          field:
+                            theme: material
+                            mode: htmlmixed
+                            mode_selectable: true
+                            indent_type: tabs
+                            indent_size: 4
+                            key_map: default
+                            line_numbers: true
+                            line_wrapping: true
+                            antlers: false
+                            type: code
+                            display: svg
+                            icon: code
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            hide_display: false
+                        -
+                          handle: itemheader
+                          field:
+                            input_type: text
+                            antlers: false
+                            type: text
+                            display: itemHeader
+                            icon: text
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            hide_display: false
+                        -
+                          handle: itemdescription
+                          field:
+                            antlers: false
+                            type: textarea
+                            display: itemDescription
+                            icon: textarea
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            hide_display: false
+                        -
+                          handle: img
+                          field:
+                            mode: list
+                            container: images
+                            restrict: false
+                            allow_uploads: true
+                            show_filename: true
+                            show_set_alt: true
+                            type: assets
+                            display: img
+                            icon: assets
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            hide_display: false
+                        -
+                          handle: steps_number
+                          field:
+                            input_type: text
+                            antlers: false
+                            type: text
+                            display: steps_number
+                            icon: text
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            hide_display: false
+                        -
+                          handle: step_header
+                          field:
+                            input_type: text
+                            antlers: false
+                            type: text
+                            display: step_header
+                            icon: text
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            hide_display: false
+                        -
+                          handle: step_description
+                          field:
+                            input_type: text
+                            antlers: false
+                            type: text
+                            display: step_description
+                            icon: text
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            hide_display: false
+              type: replicator
+              display: steps
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+  list_references:
+    display: 'Referenzen Liste'
+    sections:
+      -
+        display: 'Text with List'
+        fields:
+          -
+            handle: list_headline_two
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'List Headline Two'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: list_text
+            field:
+              buttons:
+                - h2
+                - h3
+                - bold
+                - italic
+                - unorderedlist
+                - orderedlist
+                - removeformat
+                - quote
+                - anchor
+                - image
+                - table
+                - underline
+                - strikethrough
+                - small
+                - superscript
+                - subscript
+                - code
+                - codeblock
+                - horizontalrule
+                - alignleft
+                - aligncenter
+                - alignright
+                - default_text
+                - alignjustify
+              smart_typography: false
+              save_html: false
+              inline: false
+              toolbar_mode: fixed
+              reading_time: false
+              fullscreen: true
+              allow_source: true
+              enable_input_rules: true
+              enable_paste_rules: true
+              remove_empty_nodes: trim
+              antlers: false
+              link_noopener: false
+              link_noreferrer: false
+              target_blank: false
+              always_show_set_button: false
+              collapse: false
+              previews: true
+              type: bard
+              display: 'List Text'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            import: list-style-green-checkmarks
+          -
+            handle: list_text_two
+            field:
+              buttons:
+                - h2
+                - h3
+                - bold
+                - italic
+                - unorderedlist
+                - orderedlist
+                - removeformat
+                - quote
+                - anchor
+                - image
+                - table
+                - underline
+                - strikethrough
+                - small
+                - superscript
+                - subscript
+                - code
+                - codeblock
+                - horizontalrule
+                - alignleft
+                - aligncenter
+                - alignright
+                - default_text
+                - alignjustify
+              smart_typography: false
+              save_html: false
+              inline: false
+              toolbar_mode: fixed
+              reading_time: false
+              fullscreen: true
+              allow_source: true
+              enable_input_rules: true
+              enable_paste_rules: true
+              remove_empty_nodes: false
+              antlers: false
+              link_noopener: false
+              link_noreferrer: false
+              target_blank: false
+              always_show_set_button: false
+              collapse: false
+              previews: true
+              type: bard
+              display: 'List Text Two'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+  neuer_tab:
+    display: ContentSeo
+    sections:
+      -
+        display: 'SEO Content'
+        fields:
+          -
+            handle: seo_headline_two
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'SEO Headline two'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: seo_text
+            field:
+              buttons:
+                - h2
+                - h3
+                - bold
+                - italic
+                - unorderedlist
+                - orderedlist
+                - removeformat
+                - quote
+                - anchor
+                - image
+                - table
+                - underline
+                - strikethrough
+                - small
+                - superscript
+                - subscript
+                - code
+                - codeblock
+                - horizontalrule
+                - alignleft
+                - aligncenter
+                - alignright
+                - default_text
+                - alignjustify
+                - square_list
+                - disc_list
+              smart_typography: false
+              save_html: false
+              inline: false
+              toolbar_mode: fixed
+              reading_time: false
+              fullscreen: true
+              allow_source: true
+              enable_input_rules: true
+              enable_paste_rules: true
+              remove_empty_nodes: false
+              antlers: false
+              link_noopener: false
+              link_noreferrer: false
+              target_blank: false
+              always_show_set_button: false
+              collapse: false
+              previews: true
+              type: bard
+              display: 'SEO Text'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+  seo:
+    display: SEO
+    sections:
+      -
+        display: Basic
+        instructions: 'Basic SEO settings.'
+        fields:
+          -
+            import: 'statamic-peak-seo::seo_basic'
+      -
+        display: Advanced
+        instructions: 'Advanced SEO settings.'
+        fields:
+          -
+            import: 'statamic-peak-seo::seo_advanced'
+      -
+        display: 'Open Graph'
+        instructions: 'Open Graph meta tags for social sharing.'
+        fields:
+          -
+            import: 'statamic-peak-seo::seo_open_graph'
+      -
+        display: Sitemap
+        instructions: 'Sitemap configuration.'
+        fields:
+          -
+            import: 'statamic-peak-seo::seo_sitemap'
+      -
+        display: 'JSON-ld Schema'
+        instructions: 'Custom JSON-ld schema objects.'
+        fields:
+          -
+            import: 'statamic-peak-seo::seo_jsonld'
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'
+          -
+            handle: parent
+            field:
+              type: entries
+              collections:
+                - pages
+              max_items: 1
+              listable: false
+              localizable: true

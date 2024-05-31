@@ -1,0 +1,16 @@
+title: Estates
+template: estates/index
+layout: layout
+mount: 9c5637c1-c734-439c-820b-c30c920e1771
+revisions: false
+route: '/{mount}/{slug}'
+date: true
+sort_dir: asc
+date_behavior:
+  past: public
+  future: private
+preview_targets:
+  -
+    label: Entry
+    url: '{permalink}'
+    refresh: false

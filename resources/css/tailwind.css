@@ -1,0 +1,67 @@
+@import "tailwindcss/base";
+@import "site";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import "components/multi-select";
+
+.highlight-class {
+    @apply text-white bg-primary;
+}
+
+.show-1 > li {
+    min-width: 100%;
+}
+
+.show-2 > li {
+    min-width: calc(100% / 2);
+}
+
+.show-3 > li {
+    min-width: calc(100% / 3);
+}
+
+/* In deiner CSS-Datei oder in einem Stil-Tag im Head deines HTML-Dokuments */
+.custom-pagination .active a {
+/* Hier kannst du die Stile für den aktiven Page-Link anpassen */
+background-color: #007bff;
+color: #ffffff;
+/* Füge hier weitere Stile hinzu, wie z. B. Schriftgröße, Padding, etc. */
+}
+
+.custom-pagination .active a:hover {
+/* Hier kannst du die Stile für den aktiven Page-Link beim Hovern anpassen */
+background-color: #0056b3;
+/* Füge hier weitere Stile hinzu, wenn gewünscht */
+}
+
+.no-aspect {
+    width: auto !important;
+    height: auto !important;
+    top: auto !important;
+    left:auto !important;
+}
+.no-padding-popup .mapboxgl-popup-content {
+    padding: 0 !important;
+}
+
+.no-search {
+    padding: 0 !important;
+}
+
+.choices__input {
+    display: inline-block;
+    vertical-align: baseline;
+    background-color: #f9f9f9;
+    font-size: 0.8rem !important;
+    margin-bottom: 5px;
+    border: 0;
+    border-radius: 0;
+    max-width: 100%;
+    padding: 0px 0 0px 2px !important;
+}
+.choices__input:focus {
+    border-color: transparent !important;
+    --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color) !important;
+    --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(0px + var(--tw-ring-offset-width)) var(--tw-ring-color) !important;
+    box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000) !important;
+}

@@ -1,0 +1,132 @@
+
+    <div class="max-w-xl mx-auto">
+        <!-- Using the 'env' function in your Antlers template -->
+        <div x-data="reviewsSlider" x-init="init()" {{# TODO: get from env
+        GOOGLE_PLACES_ID #}} data-google-places-id="ChIJ8Wn2SqZZpkcR6M9Y_Ol_zoE"
+        >
+        <div class="glide">
+            <div class="glide__track" data-glide-el="track">
+                <ul class="glide__slides">
+                    <template x-for="(review, index) in reviews" :key="index">
+                        <li class="glide__slide">
+                            <!-- Display review details, e.g., author name, rating, etc. -->
+                            <div
+                                x-text="review.text"
+                                class="font-medium text-gray-900 text-md "
+                            ></div>
+                            <div
+                                class="flex items-center justify-center my-3 divide-x-2 divide-gray-500 dark:divide-gray-700"
+                            >
+                                <div
+                                    class="pr-3 font-medium text-gray-900 "
+                                >
+                                    <div
+                                        class="flex stars"
+                                        x-data="{ rating: $props.rating }"
+                                        x-bind:rating="review.rating"
+                                    >
+                                        <template x-for="i in 5">
+                                            <svg
+                                                class="flex-none w-5 h-5"
+                                                viewBox="0 0 20 20"
+                                                fill="#FDCC0D"
+                                                aria-hidden="true"
+                                            >
+                                                <path
+                                                    fill-rule="evenodd"
+                                                    d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
+                                                    clip-rule="evenodd"
+                                                />
+                                            </svg>
+                                        </template>
+                                    </div>
+                                </div>
+                                <div
+                                    class="pl-3 text-sm font-light text-gray-500 dark:text-gray-400"
+                                >
+                                    <div x-text="review.author_name"></div>
+                                </div>
+                            </div>
+                        </li>
+                    </template>
+                </ul>
+            </div>
+            <div class="glide__arrows" data-glide-el="controls">
+                <button
+                    class="glide__arrow glide__arrow--left"
+                    data-glide-dir="<"
+                >
+                    <span
+                        class="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200"
+                    >
+                        <svg
+                            class="w-6 h-6"
+                            fill="currentColor"
+                            viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                fill-rule="evenodd"
+                                d="M7.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l2.293 2.293a1 1 0 010 1.414z"
+                                clip-rule="evenodd"
+                            ></path>
+                        </svg>
+                        <span class="hidden">Previous</span>
+                    </span>
+                </button>
+                <button
+                    class="glide__arrow glide__arrow--right"
+                    data-glide-dir=">"
+                >
+                    <span
+                        class="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200"
+                    >
+                        <svg
+                            class="w-6 h-6"
+                            fill="currentColor"
+                            viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                fill-rule="evenodd"
+                                d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                                clip-rule="evenodd"
+                            ></path>
+                        </svg>
+                        <span class="hidden">Next</span>
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+<script>
+    function reviewsSlider() {
+        return {
+            reviews: [],
+            glide: null,
+            googlePlacesId: "",
+
+            async fetchGoogleReviews() {
+                try {
+                    const response = await fetch(
+                        `/google-reviews?place_id=${this.googlePlacesId}&language=de`
+                    );
+                    const reviews = await response.json();
+                    this.reviews = reviews;
+                    this.glide.update();
+                } catch (error) {
+                    console.error("Error fetching Google Reviews:", error);
+                }
+            },
+
+            init() {
+                this.googlePlacesId = this.$el.getAttribute(
+                    "data-google-places-id"
+                );
+                this.glide = new Glide(".glide").mount();
+                this.fetchGoogleReviews();
+            },
+        };
+    }
+</script>

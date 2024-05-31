@@ -1,0 +1,483 @@
+title: Bewerten
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        display: Header
+        fields:
+          -
+            handle: header_variante
+            field:
+              options:
+                variante_1: null
+                variante_2: null
+              multiple: false
+              clearable: false
+              searchable: true
+              taggable: false
+              push_tags: false
+              cast_booleans: false
+              display: header_variante
+              type: select
+              icon: select
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+          -
+            handle: headerbild
+            field:
+              mode: list
+              container: images
+              restrict: false
+              allow_uploads: true
+              show_filename: true
+              display: Headerbild
+              type: assets
+              icon: assets
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              always_save: false
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: bigtitle
+            field:
+              input_type: text
+              antlers: false
+              display: subTitle
+              type: text
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              always_save: false
+          -
+            handle: subheaderheadline
+            field:
+              input_type: text
+              antlers: false
+              display: subHeaderHeadline
+              type: text
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+          -
+            handle: subheaderdescription
+            field:
+              antlers: false
+              display: subHeaderDescription
+              type: textarea
+              icon: textarea
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+          -
+            handle: imagesectiondescription
+            field:
+              antlers: false
+              display: imagesectiondescription
+              type: textarea
+              icon: textarea
+              instructions: imagesectiondescription
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+      -
+        display: Iframe
+        fields:
+          -
+            handle: code_block
+            field:
+              theme: material
+              mode: htmlmixed
+              mode_selectable: true
+              indent_type: tabs
+              indent_size: 4
+              key_map: default
+              line_numbers: true
+              line_wrapping: true
+              antlers: false
+              type: code
+              display: 'Code Block'
+              icon: code
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+      -
+        display: 'CTA Section'
+        fields:
+          -
+            handle: ctatext1header
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: ctatext1header
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: cta_text
+            field:
+              buttons:
+                - h2
+                - h3
+                - bold
+                - italic
+                - unorderedlist
+                - orderedlist
+                - removeformat
+                - quote
+                - anchor
+                - image
+                - table
+                - underline
+                - strikethrough
+                - small
+                - superscript
+                - subscript
+                - code
+                - codeblock
+                - horizontalrule
+                - alignleft
+                - aligncenter
+                - alignright
+                - default_text
+                - disc_list
+                - alignjustify
+              smart_typography: false
+              save_html: false
+              inline: false
+              toolbar_mode: fixed
+              reading_time: false
+              fullscreen: true
+              allow_source: true
+              enable_input_rules: true
+              enable_paste_rules: true
+              remove_empty_nodes: false
+              antlers: false
+              link_noopener: false
+              link_noreferrer: false
+              target_blank: false
+              always_show_set_button: false
+              collapse: false
+              previews: true
+              type: bard
+              display: 'CTA Text'
+              icon: bard
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: cta_image
+            field:
+              mode: list
+              container: images
+              restrict: false
+              allow_uploads: true
+              show_filename: true
+              display: 'CTA Image'
+              type: assets
+              icon: assets
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              show_set_alt: true
+              hide_display: false
+          -
+            handle: buttontext
+            field:
+              input_type: text
+              antlers: false
+              display: buttonText
+              type: text
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              always_save: false
+      -
+        display: Services
+        fields:
+          -
+            handle: servicesheader
+            field:
+              input_type: text
+              antlers: false
+              display: servicesHeader
+              type: text
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+          -
+            handle: servicessubheader
+            field:
+              antlers: false
+              display: servicesSubHeader
+              type: textarea
+              icon: textarea
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+          -
+            handle: services
+            field:
+              collapse: false
+              previews: true
+              sets:
+                main:
+                  display: Main
+                  instructions: null
+                  icon: null
+                  sets:
+                    s:
+                      display: s
+                      instructions: null
+                      icon: null
+                      fields:
+                        -
+                          handle: svg
+                          field:
+                            theme: material
+                            mode: htmlmixed
+                            mode_selectable: false
+                            indent_type: tabs
+                            indent_size: 4
+                            key_map: default
+                            line_numbers: true
+                            line_wrapping: true
+                            display: svg
+                            type: code
+                            icon: code
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                        -
+                          handle: itemheader
+                          field:
+                            input_type: text
+                            antlers: false
+                            display: itemHeader
+                            type: text
+                            icon: text
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                        -
+                          handle: itemdescription
+                          field:
+                            antlers: false
+                            display: itemDescription
+                            type: textarea
+                            icon: textarea
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                        -
+                          handle: btnurl
+                          field:
+                            type: link
+                            display: btnUrl
+                            icon: link
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            hide_display: false
+              display: services
+              type: replicator
+              icon: replicator
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+      -
+        display: 'Content Section'
+        fields:
+          -
+            handle: imagesectionheader
+            field:
+              input_type: text
+              antlers: false
+              display: imagesectionheader
+              type: text
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+          -
+            handle: content_before_section_list
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'Content before Section List'
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: imagesectionlist
+            field:
+              collapse: false
+              previews: true
+              sets:
+                new_set:
+                  display: 'New Set'
+                  fields:
+                    -
+                      handle: listitem
+                      field:
+                        input_type: text
+                        antlers: false
+                        display: listitem
+                        type: text
+                        icon: text
+                        listable: hidden
+                        instructions_position: above
+                        visibility: visible
+              display: imageSectionList
+              type: replicator
+              icon: replicator
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+          -
+            handle: image_second
+            field:
+              mode: list
+              container: images
+              restrict: false
+              allow_uploads: true
+              show_filename: true
+              display: 'Image Second'
+              type: assets
+              icon: assets
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+          -
+            handle: cta_image_1
+            field:
+              mode: list
+              container: images
+              restrict: false
+              allow_uploads: true
+              show_filename: true
+              display: 'CTA Image 1'
+              type: assets
+              icon: assets
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+      -
+        display: 'SEO Section'
+        fields:
+          -
+            handle: seoheader
+            field:
+              input_type: text
+              antlers: false
+              display: seoHeader
+              type: text
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+          -
+            handle: seosection
+            field:
+              collapse: false
+              previews: true
+              sets:
+                s:
+                  display: s
+                  fields:
+                    -
+                      handle: textitem
+                      field:
+                        theme: material
+                        mode: htmlmixed
+                        mode_selectable: false
+                        indent_type: tabs
+                        indent_size: 4
+                        key_map: default
+                        line_numbers: true
+                        line_wrapping: true
+                        display: textItem
+                        type: code
+                        icon: code
+                        listable: hidden
+                        instructions_position: above
+                        visibility: visible
+              display: seoSection
+              type: replicator
+              icon: replicator
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+  seo:
+    display: SEO
+    sections:
+      -
+        display: Basic
+        instructions: 'Basic SEO settings.'
+        fields:
+          -
+            import: 'statamic-peak-seo::seo_basic'
+      -
+        display: Advanced
+        instructions: 'Advanced SEO settings.'
+        fields:
+          -
+            import: 'statamic-peak-seo::seo_advanced'
+      -
+        display: 'Open Graph'
+        instructions: 'Open Graph meta tags for social sharing.'
+        fields:
+          -
+            import: 'statamic-peak-seo::seo_open_graph'
+      -
+        display: Sitemap
+        instructions: 'Sitemap configuration.'
+        fields:
+          -
+            import: 'statamic-peak-seo::seo_sitemap'
+      -
+        display: 'JSON-ld Schema'
+        instructions: 'Custom JSON-ld schema objects.'
+        fields:
+          -
+            import: 'statamic-peak-seo::seo_jsonld'
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+          -
+            handle: parent
+            field:
+              type: entries
+              collections:
+                - pages
+              max_items: 1
+              listable: false
+              localizable: true

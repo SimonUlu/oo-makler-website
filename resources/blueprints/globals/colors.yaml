@@ -1,0 +1,128 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        display: 'Primary Color'
+        fields:
+          -
+            handle: primary_color
+            field:
+              allow_any: true
+              type: color
+              display: 'Primary Color'
+              icon: color
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: primary_color_600
+            field:
+              allow_any: true
+              type: color
+              display: 'Primary Color 600'
+              icon: color
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              width: 25
+          -
+            handle: primary_color_700
+            field:
+              allow_any: true
+              type: color
+              display: 'Primary Color 700'
+              icon: color
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              width: 25
+          -
+            handle: primary_color_800
+            field:
+              allow_any: true
+              type: color
+              display: 'Primary Color 800'
+              icon: color
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              width: 25
+          -
+            handle: primary_color_900
+            field:
+              allow_any: true
+              type: color
+              display: 'Primary Color 900'
+              icon: color
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              width: 25
+      -
+        display: 'Secondary Color'
+        fields:
+          -
+            handle: secondary_color
+            field:
+              allow_any: true
+              type: color
+              display: 'Secondary Color'
+              icon: color
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: secondary_color_600
+            field:
+              allow_any: true
+              type: color
+              display: 'Secondary Color 600'
+              icon: color
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              width: 25
+          -
+            handle: secondary_color_700
+            field:
+              allow_any: true
+              type: color
+              display: 'Secondary Color 700'
+              icon: color
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              width: 25
+          -
+            handle: secondary_color_800
+            field:
+              allow_any: true
+              type: color
+              display: 'Secondary Color 800'
+              icon: color
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              width: 25
+          -
+            handle: secondary_color_900
+            field:
+              allow_any: true
+              type: color
+              display: 'Secondary Color 900'
+              icon: color
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              width: 25

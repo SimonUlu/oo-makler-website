@@ -1,0 +1,93 @@
+tabs:
+  main:
+    display: Hauptteil
+    sections:
+      -
+        fields:
+          -
+            handle: contact_header
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: contact_header
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: contact_subheader
+            field:
+              antlers: false
+              type: textarea
+              display: contact_subheader
+              icon: textarea
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: contact_person
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: contact_person
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: contact_position
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: contact_position
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: contact_number
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: contact_number
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: contact_email
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: contact_email
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: contact_img
+            field:
+              mode: list
+              container: images
+              restrict: false
+              allow_uploads: true
+              show_filename: true
+              show_set_alt: true
+              type: assets
+              display: contact_img
+              icon: assets
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false

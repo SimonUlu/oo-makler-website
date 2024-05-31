@@ -1,0 +1,157 @@
+{{# @name Main mobile navigation @desc The sites main mobile navigation rendered
+on each page. It's 2 levels deep by default and uses AlpineJS for interactivity.
+#}}
+
+<!-- /navigation/_main_mobile.antlers.html -->
+<nav
+    class="lg:hidden"
+    aria-label="{{ trans:strings.main_navigation }}"
+    x-trap.inert.noscroll="mobileNav"
+    @keyup.escape.stop.prevent="mobileNav = false"
+    x-cloak
+>
+    <!-- Mobile menu, show/hide based on menu open state. -->
+    <div
+        class="lg:hidden"
+        role="dialog"
+        aria-modal="true"
+        x-show="mobileNav"
+        x-cloak
+    >
+        <!-- Background backdrop, show/hide based on slide-over state. -->
+        <div class="fixed inset-0 z-30"></div>
+        <div
+            class="fixed inset-y-0 right-0 z-30 flex flex-col justify-between w-full overflow-y-auto bg-white sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
+        >
+            <div class="p-6">
+                <div class="flex items-center justify-between">
+                    <a href="/" class="p-1.5 -m-1.5">
+                        <img
+                            class="w-auto h-8"
+                            src="/logo_images/logo.png"
+                            alt="Logo"
+                        />
+                    </a>
+                    <button
+                        @click="mobileNav = !mobileNav"
+                        type="button"
+                        class="p-2.5 -m-2.5 text-gray-700 rounded-md"
+                    >
+                        <span class="sr-only">Close menu</span>
+                        <svg
+                            class="w-6 h-6"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            aria-hidden="true"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M6 18L18 6M6 6l12 12"
+                            />
+                        </svg>
+                    </button>
+                </div>
+                <div class="flow-root mt-6">
+                    <div class="-my-6 divide-y divide-gray-500/10">
+                        <!-- Mobile navigation items with subnavigation -->
+                        {{nav:main}} {{if depth == 1}}
+                        <div class="py-6 space-y-2" x-data="{ subnav: false }">
+                            {{ if children }}
+                            <button
+                                @click.stop="subnav = !subnav"
+                                type="button"
+                                class="flex justify-between items-center w-full px-3 py-2 text-base font-semibold leading-7 text-left rounded-lg hover:bg-gray-50"
+                            >
+                                <span>{{ title }}</span>
+                                <svg
+                                    class="w-5 h-5"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                    aria-hidden="true"
+                                    :class="{'rotate-180': subnav}"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        d="M6 9l6 6 6-6"
+                                    />
+                                </svg>
+                            </button>
+                            <div x-show="subnav" class="ml-4">
+                                {{ *recursive children* }}
+                            </div>
+                            {{ else }}
+                            <a
+                                href="{{url}}"
+                                class="block px-3 py-2 ml-[-3] text-base font-semibold leading-7 rounded-lg hover:bg-gray-50"
+                            >
+                                {{ title }}
+                            </a>
+                            {{ /if }}
+                        </div>
+                        {{ elseif depth == 2 }}
+                        <a
+                            href="{{url}}"
+                            class="block px-3 py-2 -mx-3 text-base font-semibold leading-7 rounded-lg hover:bg-gray-50"
+                        >
+                            {{ title }}
+                        </a>
+                        {{/if}} {{ /nav:main }}
+                    </div>
+                </div>
+            </div>
+            <div
+                class="sticky bottom-0 grid grid-cols-2 text-center divide-x bg-gray-50 divide-gray-900/5"
+            >
+                <a
+                    href="/suchauftrag"
+                    class="flex gap-x-2.5 justify-center items-center p-3 text-sm font-semibold leading-6 hover:bg-gray-100 text-gray-900"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="w-6 h-6"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+                        />
+                    </svg>
+                    Suchauftrag
+                </a>
+
+                <a
+                    @click="$dispatch('contact-modal', true); mobileNav = !mobileNav;"
+                    href="#"
+                    class="flex gap-x-2.5 justify-center items-center p-3 text-sm font-semibold leading-6 hover:bg-gray-100 text-gray-900"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="w-6 h-6"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 01-.825-.242m9.345-8.334a2.126 2.126 0 00-.476-.095 48.64 48.64 0 00-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0011.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155"
+                        />
+                    </svg>
+                    Kontakt
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>
+<!-- End: /navigation/_main_mobile.antlers.html -->

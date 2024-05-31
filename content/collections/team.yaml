@@ -1,0 +1,10 @@
+title: Team
+template: pages/team/show
+layout: layout
+revisions: false
+route: '/{mount}/{slug}'
+title_format: '{first_name} {last_name}'
+sort_dir: asc
+structure:
+  root: false
+  max_depth: 1

@@ -1,0 +1,171 @@
+{{if header_variante == 'variante_1'}}
+<div class="w-full bg-white">{{partial:headers/leistungen/verkaufen-header}}</div>
+{{/if}} {{if header_variante == 'variante_2'}}
+<div class="w-full bg-white">
+    {{partial:headers/leistungen/verkaufen-header-full-width}}
+</div>
+{{/if}}
+
+<div
+    class="relative z-20 flex justify-between mb-0 bg-white rounded sm:py-6 max-w-7xl px-4 lg:px-10 -mt-36 xl:-mt-32 xl:p-9 xl:mx-auto xl:mb-0"
+>
+    <div class="w-full bg-white">
+        <div class="py-8 mx-auto lg:py-16">
+            {{if show_subheader =="yes"}}
+            {{partial:eigentuemer/general/subheader}}
+            {{/if}}
+            {{if services_headline_text}}
+            <h2
+                class="max-w-4xl text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
+            >
+                {{services_headline_text}}
+            </h2>
+            {{/if}}
+
+            {{if services_variante == "variante_1"}}
+                {{partial:services/simple-services/content-services}}
+            {{else}}
+                {{partial:services/simple-services/content-services-colored}}
+            {{/if}}
+
+            {{if show_video == "yes"}}
+            <section class="w-full bg-white max-w-7xl px-4 xl:px-10 pb-12">
+                {{partial:video-section/first}}
+            </section>
+            {{/if}}
+
+
+            {{if content_with_image_replicator}}
+            <div class="py-20 bg-white md:py-32">
+                {{content_with_image_replicator}}
+                <div
+                    class="grid grid-cols-1 gap-8 py-6 lg:gap-16 sm:grid-cols-2"
+                >
+                    <div class="flex items-center justify-center">
+                        <img
+                            class="object-cover w-full rounded-lg {{cwi_image_class_attributes}}"
+                            src="{{image.0.url}}"
+                            alt="{{image.0.alt}}"
+                        />
+                    </div>
+                    <div>
+                        <h2
+                            class="pb-2 text-3xl font-extrabold leading-tight text-gray-900 sm:text-4xl"
+                        >
+                            {{headline}}
+                        </h2>
+                        {{text}} {{if code_right_side_bottom}}
+                        <hr
+                            class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"
+                        />
+                        {{code_right_side_bottom}} {{/if}}
+                    </div>
+                </div>
+                {{/content_with_image_replicator}}
+            </div>
+            {{/if}}
+        </div>
+    </div>
+    {{if contact_variante == "variante_1"}}
+    {{partial:eigentuemer/verkaufen/contact-box-sidebar title="Vermieten"
+    defaultMessage="Bitte nehmen Sie zum Thema Vermieten Kontakt zu mir auf."}}
+    {{/if}}
+</div>
+
+{{if contact_variante == "variante_2"}}
+    <section class="border-t border-b mb-20 lg:mb-32 py-6 lg:py-8 max-w-7xl mx-4 lg:mx-10">
+        {{partial:cta-sections/contact/cta-contact}}
+    </section>
+{{/if}}
+
+{{if contact_variante == "variante_3"}}
+    <section class="border-t border-b mb-20 lg:mb-32 py-6 lg:py-8 max-w-7xl mx-4 lg:mx-10">
+        {{partial:cta-sections/contact/cta-contact-current}}
+    </section>
+{{/if}}
+
+{{if steps_variante == "variante_1"}}
+<section class="w-full bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 lg:px-10">
+    {{partial:eigentuemer/vermieten/content-two-rows-four-cards}}
+    </div>
+</section>
+{{/if}}
+{{if steps_variante == "variante_2"}}
+<section class="w-full bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 lg:px-10">
+    {{partial:steps/clickable-steps}}
+    </div>
+</section>
+{{/if}}
+
+
+{{if show_reference_estates}}
+<section class="relative w-full 0 bg-gray-50 py-16">
+    <div class="w-full py-8 mx-auto lg:py-16 max-w-7xl px-4 lg:px-10">
+        <div class="text-center text-gray-900">
+            <h2 class="mb-4 text-4xl font-bold tracking-tight text-gray-900 lg:text-5xl ">UNSERE AKTUELLSTEN REFERENZEN.</h2>
+
+            <p class="text-gray-500 sm:text-xl dark:text-gray-400">
+                Erhalten Sie einen Einblick in unsere realisierten Projekte und unserer Arbeit als Immobilienberater.    
+            </p>
+        </div>
+        <!-- Section Einleitung & Statistics -->
+        
+        {{ partial:pages/estate/estate-columns-3-ref }}
+    </div>
+    <div class="py-4 mt-12 text-center">
+        <a href="/immobilien" class="fade-in-animation items-center px-6 py-3 mx-2 font-bold text-center text-white lg:px-5 focus:ring-4 focus:outline-none bg-primary-700 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 hover:bg-primary-800 focus:ring-primary-900" target="_blank">
+            Alle aktuellen Immobilien ansehen<span aria-hidden="true">&nbsp;→</span>
+        </a>
+    </div>
+</section>
+{{/if}}
+
+{{if contact_variante == "variante_4"}}
+    <section class="py-8 xl:py-12 mx-4 lg:mx-10 max-w-7xl w-full">
+        {{partial:cta-sections/contact/contact-team}}
+    </section>
+{{/if}}
+
+{{if seo_headline_two}}
+<div class="mx-auto max-w-7xl pt-8 lg:pt-12 pb-12 px-4 lg:px-10">
+    <div class="text-base text-gray-700">
+        <h2 class="mb-4 text-2xl lg:text-4xl font-bold tracking-tight text-gray-900 ">
+            {{seo_headline_two}}
+        </h2>
+        <div>
+            <p class="mt-6 text-gray-500 sm:text-xl dark:text-gray-400">
+                {{seo_text}}
+            </p>
+        </div>
+    </div>
+    <dl class="grid grid-cols-2 gap-8 pt-10 mt-10 border-t sm:grid-cols-4 border-gray-900/10">
+    </dl>
+    <div class="flex mt-10">
+        <a href="/team" class="text-base font-semibold leading-7 text-primary-200">Erfahren Sie mehr über uns &nbsp;→
+        </a>
+    </div>
+</div>
+{{/if}}
+
+
+{{ if custom_code_block }}
+<div class="pt-12">
+    {{custom_code_block}}
+</div>
+{{endif}}
+<div class="px-4 py-12 sm:px-0">
+    <h2
+        class="max-w-4xl text-3xl font-bold tracking-tight text-center text-gray-900 sm:text-4xl"
+    >
+        Kontaktieren Sie uns!
+    </h2>
+    <div class="pt-4" {{partial:contact-forms/contact-form-standard formId="2" onofficeNote="{{onoffice_note}}"
+    title="Ankauf" defaultMessage="Bitte nehmen Sie zum Thema Verkauf Kontakt zu
+    mir auf."}}
+</div>
+
+{{if show_newsletter == "yes"}}
+    {{partial:newsletter/newsletter-broad}}
+{{/if}}

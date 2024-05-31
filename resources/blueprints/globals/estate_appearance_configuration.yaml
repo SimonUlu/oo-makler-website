@@ -1,0 +1,84 @@
+tabs:
+  main:
+    display: Hauptteil
+    sections:
+      -
+        display: 'Immobilien Übersicht'
+        fields:
+          -
+            handle: listappearance
+            field:
+              options:
+                list: Liste
+                boxes: Kacheln
+                small_boxes: 'Kleinere Kacheln'
+              taggable: false
+              push_tags: false
+              multiple: false
+              clearable: false
+              searchable: true
+              cast_booleans: false
+              type: select
+              display: 'Darstellung der Liste'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: ansprechpartner
+            field:
+              default: false
+              type: toggle
+              display: Ansprechpartner
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: show_map
+            field:
+              options:
+                'yes': null
+                'no': null
+              taggable: false
+              push_tags: false
+              multiple: false
+              clearable: false
+              searchable: true
+              cast_booleans: false
+              type: select
+              display: show_map
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: pagination
+            field:
+              type: integer
+              display: pagination
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: estate_source
+            field:
+              options:
+                onOffice: null
+                database: null
+              taggable: false
+              push_tags: false
+              multiple: false
+              clearable: false
+              searchable: true
+              cast_booleans: false
+              type: select
+              display: 'Estate Source'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+      -
+        display: 'Immobilien Detail'

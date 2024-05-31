@@ -1,0 +1,185 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        display: 'Estate Design Options'
+        fields:
+          -
+            handle: estate_list_appearance
+            field:
+              options:
+                fullrow: 'Full Width'
+                boxes: Boxes
+              taggable: false
+              push_tags: false
+              multiple: false
+              clearable: false
+              searchable: true
+              cast_booleans: false
+              type: select
+              display: 'Estate List Appearance'
+              icon: select
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+      -
+        display: 'Estate Fields'
+        fields:
+          -
+            handle: estate_field_list
+            field:
+              collapse: false
+              previews: true
+              fullscreen: true
+              sets:
+                new_set_group:
+                  display: 'New Set Group'
+                  instructions: null
+                  icon: null
+                  sets:
+                    new_set:
+                      display: 'New Set'
+                      instructions: null
+                      icon: null
+                      fields:
+                        -
+                          handle: onoffice_label_id
+                          field:
+                            input_type: text
+                            antlers: false
+                            type: text
+                            display: 'OnOffice Label Id'
+                            icon: text
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            hide_display: false
+              type: replicator
+              display: 'Estate Field List'
+              icon: replicator
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+      -
+        display: 'Estate Filter'
+        fields:
+          -
+            handle: filter_options
+            field:
+              collapse: false
+              previews: true
+              fullscreen: true
+              sets:
+                new_set_group:
+                  display: 'New Set Group'
+                  instructions: null
+                  icon: null
+                  sets:
+                    filter_option:
+                      display: 'Filter Option'
+                      instructions: null
+                      icon: null
+                      fields:
+                        -
+                          handle: onoffice_label_id
+                          field:
+                            input_type: text
+                            antlers: false
+                            type: text
+                            display: 'onOffice Label Id'
+                            icon: text
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            hide_display: false
+                        -
+                          handle: filter_option_select
+                          field:
+                            options:
+                              numeric: Numeric
+                            taggable: false
+                            push_tags: false
+                            multiple: false
+                            clearable: false
+                            searchable: true
+                            cast_booleans: false
+                            type: select
+                            display: 'Filter Option Select'
+                            icon: select
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            hide_display: false
+              type: replicator
+              display: 'Filter Options'
+              icon: replicator
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+      -
+        display: 'Estate Filter References'
+        fields:
+          -
+            handle: references_filter_options
+            field:
+              collapse: false
+              previews: true
+              fullscreen: true
+              sets:
+                new_set_group:
+                  display: 'New Set Group'
+                  instructions: null
+                  icon: null
+                  sets:
+                    new_set:
+                      display: 'New Set'
+                      instructions: null
+                      icon: null
+                      fields:
+                        -
+                          handle: onoffice_label_id
+                          field:
+                            input_type: text
+                            antlers: false
+                            type: text
+                            display: 'onOffice Label Id'
+                            icon: text
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            hide_display: false
+                        -
+                          handle: operator
+                          field:
+                            input_type: text
+                            antlers: false
+                            type: text
+                            display: 'References Operator'
+                            icon: text
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            hide_display: false
+                        -
+                          handle: references_value
+                          field:
+                            input_type: text
+                            antlers: false
+                            type: text
+                            display: 'References Value'
+                            icon: text
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            hide_display: false
+              type: replicator
+              display: 'References Filter Options'
+              icon: replicator
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false

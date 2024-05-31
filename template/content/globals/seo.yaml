@@ -1,0 +1,35 @@
+title: SEO
+data:
+  noindex_local: true
+  noindex_staging: true
+  noindex_production: false
+  hreflang_auto: true
+  json_ld_type: none
+  breadcrumbs: false
+  use_social_image_generation: true
+  social_images_collections:
+    - estates
+    - news
+    - pages
+    - neubauprojekte
+    - team
+    - vacancies
+    - events
+    - bewertungen
+    - faq
+  og_image: 'gruppenbild-k&p-firmengruppe-small.jpg'
+  sitemap_collections:
+    - pages
+    - news
+    - neubauprojekte
+    - team
+    - estates
+  trackers_local: false
+  trackers_staging: false
+  trackers_production: false
+  use_google_site_verification: false
+  use_fathom: false
+  use_plausible: false
+  use_cloudflare_web_analytics: false
+  tracker_type: none
+  use_cookie_banner: false

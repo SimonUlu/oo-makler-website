@@ -1,0 +1,38 @@
+<div class="max-w-screen-xl px-4 mx-auto text-center lg:py-4 lg:px-6">
+    <dl
+        class="grid justify-center max-w-screen-md grid-cols-1 gap-8 mx-auto mt-8 text-gray-900 sm:grid-cols-3 lg:mt-6"
+    >
+        {{content_statistics}}
+        <div
+            class="flex flex-col items-center justify-center"
+            x-data="{ count1: 0, finalCount1: {{number}} }"
+            x-init="() => { const observer = new IntersectionObserver((entries) => { if (entries[0].isIntersecting) { animateCountUp(() => count1, finalCount1, (value) => count1 = value); observer.disconnect(); } }, { threshold: 0.5 }); observer.observe($el); }"
+        >
+            <dt
+                class="mb-2 text-4xl font-bold"
+                x-text="count1.toLocaleString()"
+            ></dt>
+            <dd class="text-xl font-normal text-gray-500 dark:text-gray-400">
+                {{description}}
+            </dd>
+        </div>
+        {{/content_statistics}}
+    </dl>
+</div>
+
+<script>
+    function animateCountUp(getValue, finalValue, setValue) {
+        let currentValue = getValue();
+        if (currentValue < finalValue) {
+            const step = Math.floor(finalValue / 100);
+            const interval = setInterval(() => {
+                currentValue += step;
+                if (currentValue >= finalValue) {
+                    currentValue = finalValue;
+                    clearInterval(interval);
+                }
+                setValue(currentValue);
+            }, 10);
+        }
+    }
+</script>

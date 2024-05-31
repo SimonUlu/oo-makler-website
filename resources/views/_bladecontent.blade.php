@@ -1,0 +1,1 @@
+@yield('blade_content')

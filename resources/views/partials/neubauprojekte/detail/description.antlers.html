@@ -1,0 +1,39 @@
+<div class="py-10 lg:col-span-2 lg:col-start-1 lg:border-r lg:border-gray-200 lg:pb-16 lg:pr-8 lg:pt-6">
+    <!-- Description and details -->
+    <div>
+      <h3 class="sr-only">Description</h3>
+
+      <div class="space-y-6">
+        <p class="text-base text-gray-900">
+            {{description}}
+        </p>
+      </div>
+    </div>
+
+    <div class="mt-10">
+        <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
+        <div class="pt-2 border-gray-200 dark:border-gray-800">
+            <ul class="space-y-4">
+                {{list}}
+                <li class="flex items-center gap-2.5">
+                    <div class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-primary-100 text-primary-600 shrink-0 dark:bg-primary-900 dark:text-primary-500">
+                        <svg aria-hidden="true" class="w-3.5 h-3.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                    <span class="text-base font-medium text-gray-900 ">
+                        {{listitem}}
+                    </span>
+                </li>
+                {{/list}}
+            </ul>
+        </div>
+    </div>
+
+    <div class="mt-10">
+
+      <div class="mt-4 space-y-6">
+        <p class="text-sm text-gray-600">{{description_two}}</p>
+      </div>
+    </div>
+  </div>

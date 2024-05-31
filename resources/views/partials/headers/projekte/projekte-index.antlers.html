@@ -1,0 +1,28 @@
+<section class="w-full pb-16 bg-white lg:pb-24">
+    <header
+        class="w-full h-[460px] xl:h-[737px] bg-no-repeat bg-cover bg-center bg-blend-darken relative"
+    >
+        <div
+            class="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50"
+        ></div>
+        <div
+            class="absolute w-full max-w-screen-xl px-4 mx-auto -translate-x-1/2 pt-28 sm:pt-24 top-20 left-1/2 xl:top-1/2 xl:-translate-y-1/2 lg:px-10"
+        >
+            <h1
+                class="max-w-4xl mb-4 text-2xl font-extrabold leading-none text-white sm:text-3xl lg:text-4xl"
+            >
+                {{title}}
+            </h1>
+            <div class="max-w-2xl text-lg font-normal text-white opacity-60">
+                {{subtitle}}
+            </div>
+        </div>
+        <img
+            id="backgroundImage"
+            class="object-cover object-bottom w-full h-full lazy"
+            data-src="{{header_image.0.url}}"
+            alt="{{header_image.0.alt}}"
+            loading="lazy"
+        />
+    </header>
+</section>

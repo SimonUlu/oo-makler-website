@@ -1,0 +1,147 @@
+{{if header_variante == 'variante_1'}}
+<div class="w-full bg-white">{{partial:headers/leistungen/verkaufen-header}}</div>
+{{/if}} {{if header_variante == 'variante_2'}}
+<div class="w-full bg-white">
+    {{partial:headers/leistungen/verkaufen-header-full-width}}
+</div>
+{{/if}}
+{{if header_variante == 'variante_3'}}
+<div class="w-full bg-white">
+    {{partial:headers/leistungen/leistungen-header}}
+</div>
+{{/if}}
+
+
+<div
+    class="relative z-20 flex justify-between mb-0 bg-white rounded sm:p-6 px-4 lg:px-10 max-w-7xl -mt-36 xl:-mt-32 xl:p-9 xl:mx-auto xl:mb-0"
+>
+    <div class="w-full bg-white max-w-7xl mx-auto">
+        <div class="pt-8 mx-auto lg:pt-16">
+            {{partial:eigentuemer/general/subheader}}
+
+            {{if services_variante == "variante_1"}}
+                {{partial:services/simple-services/content-services}}
+            {{else}}
+                {{partial:services/simple-services/content-services-colored}}
+            {{/if}}
+
+            {{if contact_variante == "variante_2"}}
+                <section class="border-t border-b my-12 lg:my-24 py-6 lg:py-12 max-w-7xl">
+                    {{partial:cta-sections/contact/cta-contact}}
+                </section>
+            {{/if}}
+            {{if contact_variante == "variante_3"}}
+                <section class="border-t border-b my-12 lg:my-24 py-6 lg:py-12 max-w-7xl">
+                    {{partial:cta-sections/contact/cta-contact-topic}}
+                </section>
+            {{/if}}
+
+
+            <div class="max-w-screen-md m-auto mb-2 mt-12 lg:mt-24 text-center lg:mb-4">
+                <h2 class="mb-4 text-4xl font-bold tracking-tight text-gray-900">
+                    {{content_with_image_header}}
+                </h2>
+                <div>
+                    {{content_with_image_subheader}}
+                </div>
+            </div>
+
+            {{if content_with_image_replicator}}
+                {{partial:content-section/content-img-swapped-button}}
+            {{/if}}
+        </div>
+    </div>
+    {{if contact_variante == "variante_1"}}
+        {{partial:eigentuemer/verkaufen/contact-box-sidebar title="Verkauf"
+        defaultMessage="Bitte nehmen Sie zum Thema Verkauf Kontakt zu mir auf."}}
+    {{/if}}
+</div>
+
+
+{{if testimonial_type == "type_1"}}
+<section class="w-full bg-gray-50 ">
+    <div class="max-w-7xl mx-auto">
+        <div class="px-4 lg:px-10">
+        {{partial:referenzen/person-references/person-references}}
+        </div>
+    </div>
+</section>
+{{/if}}
+{{if testimonial_type == "type_2"}}
+<section class="w-full bg-gray-50">
+    <div class="max-w-7xl mx-auto">
+        <div class="px-4 lg:px-10">
+            {{partial:referenzen/person-references/person-references}}
+        </div>
+    </div>
+</section>
+{{/if}}
+
+{{if show_reference_estates}}
+<section class="relative w-full 0 bg-gray-50 py-16">
+    <div class="w-full py-8 mx-auto lg:py-16 max-w-7xl px-4 lg:px-10">
+        <div class="text-center text-gray-900">
+            <h2 class="mb-4 text-4xl font-bold tracking-tight text-gray-900 lg:text-5xl ">UNSERE AKTUELLSTEN REFERENZEN.</h2>
+
+            <p class="text-gray-500 sm:text-xl dark:text-gray-400">
+                Erhalten Sie einen Einblick in unsere realisierten Projekte und unserer Arbeit als Immobilienberater.    
+            </p>
+        </div>
+        <!-- Section Einleitung & Statistics -->
+        
+        {{ partial:pages/estate/estate-columns-3-ref }}
+    </div>
+    <div class="py-4 mt-12 text-center">
+        <a href="/immobilien" class="fade-in-animation items-center px-6 py-3 mx-2 font-bold text-center text-white lg:px-5 focus:ring-4 focus:outline-none bg-primary-700 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 hover:bg-primary-800 focus:ring-primary-900" target="_blank">
+            Alle aktuellen Immobilien ansehen<span aria-hidden="true">&nbsp;→</span>
+        </a>
+    </div>
+</section>
+{{/if}}
+
+{{if services_type == "type_1"}}
+<section class="bg-white max-w-7xl">
+    <div class="px-4 lg:px-10" >
+        {{partial:services/services-three-per-column}}
+    </div>
+</section>
+{{/if}}
+{{if services_type == "type_2"}}
+<section class="px-4 lg:px-10 bg-white max-w-7xl ">
+    <div class="px-4 lg:px-10 ">
+    {{partial:services/services-with-image}}
+    </div>
+</section>
+{{/if}}
+
+{{if contact_variante == "variante_4"}}
+    <section class="py-8 xl:py-12 mx-4 lg:mx-10 max-w-7xl w-full">
+        {{partial:cta-sections/contact/contact-team}}
+    </section>
+{{/if}}
+
+{{if seo_headline_text}}
+<div class="pt-16 text-left sm:text-center">
+    <h2
+        class="max-w-4xl mx-8 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
+    >
+        {{seo_headline_text}}
+    </h2>
+</div>
+{{/if}}
+{{ if custom_code_block }}
+<div class="pt-12">
+    {{custom_code_block}}
+</div>
+{{endif}}
+<div class="px-4 pt-12  mb-12 lg:mb-24 sm:px-0">
+    <h2
+        class="max-w-4xl text-3xl font-bold tracking-tight text-center text-gray-900 sm:text-4xl"
+    >
+        Kontaktieren Sie uns!
+    </h2>
+    <div class="pt-4" {{partial:contact-forms/contact-form-standard onofficeNote="{{onoffice_note}}"  formId="2"
+    title="Ankauf" defaultMessage="Bitte nehmen Sie zum Thema Verkauf Kontakt zu
+    mir auf."}}
+</div>
+

@@ -1,0 +1,440 @@
+title: Neubauprojekte
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: type
+            field:
+              options:
+                aktuell: null
+                past: null
+                future: null
+              taggable: false
+              push_tags: false
+              multiple: false
+              clearable: false
+              searchable: true
+              cast_booleans: false
+              type: select
+              display: type
+              icon: select
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+  header:
+    display: Header
+    sections:
+      -
+        display: 'Neuer Abschnitt'
+        fields:
+          -
+            handle: images
+            field:
+              collapse: false
+              previews: true
+              sets:
+                new_set:
+                  display: 'New Set'
+                  fields:
+                    -
+                      handle: image
+                      field:
+                        mode: list
+                        container: images
+                        restrict: false
+                        allow_uploads: true
+                        show_filename: true
+                        display: image
+                        type: assets
+                        icon: assets
+                        listable: hidden
+                        instructions_position: above
+                        visibility: visible
+              display: images
+              type: replicator
+              icon: replicator
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+  projektinfo:
+    display: Projektinfo
+    sections:
+      -
+        display: 'Neuer Abschnitt'
+        fields:
+          -
+            handle: objekttyp
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: objekttyp
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: lagerboxen
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: lagerboxen
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: wohnflaeche
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: wohnflaeche
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: stadtteil
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: stadtteil
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: fertigstellung
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: fertigstellung
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: tiefgaragenstellplatz
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: tiefgaragenstellplatz
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: plz
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: plz
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: ort
+            field:
+              input_type: text
+              antlers: false
+              display: ort
+              type: text
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+          -
+            handle: preise
+            field:
+              input_type: text
+              antlers: false
+              display: preise
+              type: text
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+          -
+            handle: einheiten
+            field:
+              input_type: text
+              antlers: false
+              display: einheiten
+              type: text
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+          -
+            handle: zimmer
+            field:
+              input_type: text
+              antlers: false
+              display: Zimmer
+              type: text
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+  neuer_tabs:
+    display: Projektbeschreibung
+    sections:
+      -
+        display: 'Neuer Abschnitt'
+        fields:
+          -
+            handle: description_two
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: description_two
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: list
+            field:
+              collapse: false
+              previews: true
+              fullscreen: true
+              sets:
+                neue_set-gruppe:
+                  display: 'Neue Set-Gruppe'
+                  instructions: null
+                  icon: null
+                  sets:
+                    neues_set:
+                      display: 'Neues Set'
+                      instructions: null
+                      icon: null
+                      fields:
+                        -
+                          handle: listitem
+                          field:
+                            input_type: text
+                            antlers: false
+                            type: text
+                            display: listitem
+                            icon: text
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            hide_display: false
+              type: replicator
+              display: list
+              icon: replicator
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: description
+            field:
+              antlers: false
+              display: description
+              type: textarea
+              icon: textarea
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+  grundriss:
+    display: Projektbilder
+    sections:
+      -
+        display: 'Neuer Abschnitt'
+        fields:
+          -
+            handle: projekt_bilder_header
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: projekt_bilder_header
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: projekt_bilder_text
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: projekt_bilder_text
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: project_images
+            field:
+              collapse: false
+              previews: true
+              fullscreen: true
+              sets:
+                neue_set-gruppe:
+                  display: 'Neue Set-Gruppe'
+                  instructions: null
+                  icon: null
+                  sets:
+                    neues_set:
+                      display: 'Neues Set'
+                      instructions: null
+                      icon: null
+                      fields:
+                        -
+                          handle: image
+                          field:
+                            mode: list
+                            container: images
+                            restrict: false
+                            allow_uploads: true
+                            show_filename: true
+                            show_set_alt: true
+                            type: assets
+                            display: image
+                            icon: assets
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            hide_display: false
+                        -
+                          handle: beschreibung
+                          field:
+                            input_type: text
+                            antlers: false
+                            type: text
+                            display: beschreibung
+                            icon: text
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            hide_display: false
+              type: replicator
+              display: project_images
+              icon: replicator
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+  neuer_tab:
+    display: Grundriss
+    sections:
+      -
+        display: 'Neuer Abschnitt'
+        fields:
+          -
+            handle: grundriss_header
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: grundriss_header
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: grundriss_text
+            field:
+              antlers: false
+              type: textarea
+              display: grundriss_text
+              icon: textarea
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: grundriss_images
+            field:
+              collapse: false
+              previews: true
+              fullscreen: true
+              sets:
+                neue_set-gruppe:
+                  display: 'Neue Set-Gruppe'
+                  instructions: null
+                  icon: null
+                  sets:
+                    neues_set:
+                      display: 'Neues Set'
+                      instructions: null
+                      icon: null
+                      fields:
+                        -
+                          handle: img
+                          field:
+                            mode: list
+                            container: images
+                            restrict: false
+                            allow_uploads: true
+                            show_filename: true
+                            show_set_alt: true
+                            type: assets
+                            display: img
+                            icon: assets
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            hide_display: false
+                        -
+                          handle: beschreibung
+                          field:
+                            input_type: text
+                            antlers: false
+                            type: text
+                            display: beschreibung
+                            icon: text
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            hide_display: false
+              type: replicator
+              display: grundriss_images
+              icon: replicator
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true

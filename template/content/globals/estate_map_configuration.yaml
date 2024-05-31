@@ -1,0 +1,6 @@
+title: 'Estate Map Configuration'
+data:
+  center_lng: 49.783333
+  center_lat: 9.933333
+  zoom: 10
+  style: 'mapbox://styles/mapbox/outdoors-v11'

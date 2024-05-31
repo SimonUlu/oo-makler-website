@@ -1,0 +1,12 @@
+title: Farben
+data:
+  primary_color: '#2A426E'
+  primary_color_600: '#3B5481'
+  primary_color_700: '#2D4571'
+  primary_color_800: '#1E3763'
+  primary_color_900: '#15284A'
+  secondary_color: '#f60'
+  secondary_color_600: '#454B52'
+  secondary_color_700: '#434B56'
+  secondary_color_800: '#2A323C'
+  secondary_color_900: '#1D242C'

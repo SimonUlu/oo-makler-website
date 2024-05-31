@@ -1,0 +1,51 @@
+title: 'Footer Layout'
+data:
+  content_sections:
+    -
+      id: lnbriwo5
+      headline: Leistungen
+      pages:
+        -
+          id: lnbrj21o
+          url: verkaufen
+          name: Verkaufen
+          type: neues_set
+          enabled: true
+        -
+          id: lnbrjblt
+          url: vermieten
+          name: Vermieten
+          type: neues_set
+          enabled: true
+        -
+          id: lnbrjilt
+          url: bewerten
+          name: Bewerten
+          type: neues_set
+          enabled: true
+        -
+          id: lnbrjzjw
+          url: ankauf
+          name: Ankauf
+          type: neues_set
+          enabled: true
+      type: neues_set
+      enabled: true
+    -
+      id: lnbrk4uy
+      headline: Immobilien
+      pages:
+        -
+          id: lnbrk9t6
+          url: '/immobilien?filter[ort]=&filter[objektart]=&filter[kaufpreis]=&filter[anzahl_zimmer]=&filter[warmmiete]=&filter[vermarktungsart][0]=Kauf'
+          name: 'Immobilien kaufen'
+          type: neues_set
+          enabled: true
+        -
+          id: lnbrkydx
+          url: '/immobilien?filter[ort]=&filter[objektart]=&filter[kaufpreis]=&filter[anzahl_zimmer]=&filter[warmmiete]=&filter[vermarktungsart][0]=Miete'
+          name: 'Immobilien mieten'
+          type: neues_set
+          enabled: true
+      type: neues_set
+      enabled: true

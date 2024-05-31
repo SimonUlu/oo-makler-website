@@ -1,0 +1,143 @@
+<section class="bg-gray-100">
+    <div class="flex flex-row items-center justify-center space-x-4">
+        <!-- Wrapper -->
+        <button
+            class="z-20 p-4 cursor-pointer"
+            @click="prevSlide()"
+        >
+            &#10094;
+        </button>
+        <div class="flex flex-col items-center space-y-4">
+            <!-- Reviews Carousel -->
+            <div class="space-y-4 lg:overflow-hidden">
+                <template x-for="(review, index) in reviews" :key="index">
+                    <div
+                        class="slide p-6 shadow-sm bg-gray-50 rounded-xl"
+                        x-show="index === activeSlide"
+                        style="display: none;"
+                    >
+                        <!-- Review Content -->
+                        <div
+                            x-text="truncateText(review.text, 150)"
+                            class="font-medium text-gray-900 text-md"
+                        ></div>
+                        <!-- Rating and Author -->
+                        <div class="flex items-center justify-center my-3">
+                            <div class="pr-3 font-medium text-gray-900">
+                                <div
+                                    class="flex stars"
+                                    x-data="{ rating: review.rating }"
+                                    x-init="rating = review.rating"
+                                >
+                                    <template x-for="i in 5">
+                                        <svg
+                                            class="w-5 h-5"
+                                            viewBox="0 0 20 20"
+                                            fill="#FDCC0D"
+                                            x-show="i <= rating"
+                                            aria-hidden="true"
+                                        >
+                                            <path
+                                                fill-rule="evenodd"
+                                                d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
+                                                clip-rule="evenodd"
+                                            />
+                                        </svg>
+                                    </template>
+                                </div>
+                            </div>
+                            <div
+                                class="pl-3 text-sm font-light text-gray-500 dark:text-gray-400"
+                            >
+                                <div x-text="review.author_name"></div>
+                            </div>
+                        </div>
+                    </div>
+                </template>
+            </div>
+            <!-- Buttons -->
+        </div>
+        <button
+                class="z-20 p-4 cursor-pointer"
+                @click="nextSlide()"
+            >
+                &#10095;
+            </button>
+        <!-- Call to action -->
+
+    </div>
+    <div
+            class="flex items-center justify-center px-6 py-4 shadow-sm rounded-xl bg-gray-50 mx-auto mt-4"
+            style="width: calc(100% - 3rem); max-width: 32rem;"
+        >
+            <div>
+                <h3 class="text-lg font-medium text-gray-900">
+                    Sie möchten mehr erfahren oder Ihre Erfahrungen mit uns teilen?
+                </h3>
+
+                <div class="mt-4">
+                    <a
+                        x-bind:href="'https://www.google.com/maps/place/?q=place_id:' + googlePlacesId"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="text-secondary transition duration-300 ease-in-out"
+                    >
+                        Schauen Sie sich unser Unternehmensprofil auf Google an<span aria-hidden="true"> →</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+</section>
+
+<script>
+    function reviewsSlider() {
+        return {
+            reviews: [],
+            googlePlacesId: "",
+            apiKey: "",
+            activeSlide: 0,
+            displayPerSlide: 1,
+
+
+
+            async fetchGoogleReviews() {
+                const url = `/api/google-places-reviews?place_id=${this.googlePlacesId}`;
+                try {
+                  const response = await fetch(url);
+                  const data = await response.json();
+                  this.reviews = data.result.reviews;
+                } catch (error) {
+                  console.error("Error fetching Google Reviews:", error);
+                }
+            },
+
+            init() {
+                this.googlePlacesId = this.$el.getAttribute(
+                    "data-google-places-id"
+                );
+                this.apiKey = this.$el.getAttribute("data-google-api-key");
+                this.fetchGoogleReviews();
+            },
+
+
+            // Methode 'nextSlide()' Anpassung, um die Verschiebung um nur 1 Slide zu ermöglichen
+            nextSlide() {
+                this.activeSlide = (this.activeSlide + 1) % this.reviews.length;
+            },
+
+            // Methode 'prevSlide()' Anpassung, um die Verschiebung um nur 1 Slide zu ermöglichen
+            prevSlide() {
+                this.activeSlide =
+                    this.activeSlide - 1 < 0
+                        ? this.reviews.length - 1
+                        : this.activeSlide - 1;
+            },
+
+            truncateText(text, maxLength) {
+                return Array.from(text).length > maxLength
+                    ? Array.from(text).slice(0, maxLength).join("") + "..."
+                    : text;
+            },
+        };
+    }
+</script>

@@ -1,0 +1,45 @@
+tabs:
+  main:
+    display: Hauptteil
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: content
+            field:
+              type: markdown
+              localizable: true
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+  seo:
+    display: SEO
+    sections:
+      -
+        display: 'Neuer Abschnitt'
+        fields:
+          -
+            import: 'statamic-peak-seo::seo_basic'
+          -
+            import: 'statamic-peak-seo::seo_advanced'
+          -
+            import: 'statamic-peak-seo::seo_sitemap'
+          -
+            import: 'statamic-peak-seo::seo_jsonld'
+          -
+            import: 'statamic-peak-seo::seo_open_graph'
+title: 'Estate Landing Page'

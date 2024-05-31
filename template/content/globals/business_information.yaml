@@ -1,0 +1,10 @@
+title: 'Business Information'
+data:
+  company_name: 'ImmoInvest Vertriebs GmbH'
+  company_street: Olbrichtstraße
+  company_house_number: 1a
+  company_zip: '04157'
+  company_city: Leipzig
+  company_email: info@immoinvest-vertrieb.de
+  company_phone: '+49 341 989 842 98'
+  company_phone_display: '+49 341 989 842 98'

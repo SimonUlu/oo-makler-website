@@ -1,0 +1,68 @@
+{{if header_variante == 'variante_1'}}
+<div class="w-full bg-white">{{partial:headers/leistungen/verkaufen-header}}</div>
+{{/if}} {{if header_variante == 'variante_2'}}
+<div class="w-full bg-white">
+    {{partial:headers/leistungen/verkaufen-header-full-width}}
+</div>
+{{/if}}
+
+<div
+    class="relative z-20 flex justify-between sm:p-6 mb-0 bg-white rounded sm:mx-4 max-w-screen-2xl -mt-36 xl:-mt-32 xl:p-9 xl:mx-auto xl:mb-0"
+>
+    <div class="w-full bg-white">
+        <div class="max-w-screen-xl px-4 py-8 mx-auto lg:py-16 lg:px-6">
+            {{partial:eigentuemer/general/subheader}} {{if
+            services_headline_text}}
+            <h2
+                class="max-w-4xl text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
+            >
+                {{services_headline_text}}
+            </h2>
+            {{/if}} {{if services_text}}
+            <div
+                class="max-w-4xl mx-auto text-gray-500 lg:max-w-screen-2xl sm:text-lg dark:text-gray-400"
+            >
+                <div>{{services_text}}</div>
+            </div>
+            {{/if}}
+
+
+            {{if content_with_image_replicator}}
+
+                {{if logo_variante == "variante_2"}}
+                    {{partial:logo-cloud/simple-logo-cloud}}
+                {{/if}}
+            {{/if}}
+        </div>
+    </div>
+    {{partial:eigentuemer/verkaufen/contact-box-sidebar title="Mitgliedschaften
+    / Kooperationen" defaultMessage="Bitte nehmen Sie zum Thema Mitgliedschaften
+    / Kooperationen Kontakt zu mir auf."}}
+</div>
+
+
+
+{{if seo_headline_text}}
+<div class="pt-16 text-center">
+    {{partial:fieldsets/headline-two headline_text=seo_headline_text}}
+</div>
+{{/if}}{{if seo_paragraph_replicator}}
+<div
+    class="max-w-4xl mx-auto text-gray-500 lg:max-w-screen-2xl sm:text-lg dark:text-gray-400"
+>
+    <div>
+        {{seo_paragraph_replicator}}
+        <div
+            class="py-2 text-base font-normal text-gray-500 dark:text-gray-400 sm:text-xl"
+        >
+            {{paragraph_text}}
+        </div>
+        {{/seo_paragraph_replicator}}
+    </div>
+</div>
+{{/if}}
+
+
+{{if show_newsletter == "yes"}}
+    {{partial:newsletter/newsletter-broad}}
+{{/if}}

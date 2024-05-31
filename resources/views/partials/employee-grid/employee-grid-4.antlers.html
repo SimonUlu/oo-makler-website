@@ -1,0 +1,39 @@
+<ul role="list" class="mx-auto mt-20 grid max-w-2xl lg:px-0 grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-4">
+    {{collection:team sort="order:asc"}}
+    <li>
+        <div class="group relative flex flex-col overflow-hidden border border-gray-200 bg-white">
+            <div class="aspect-h-4 aspect-w-3 bg-gray-200 sm:aspect-none group-hover:opacity-75 md:h-96">
+                <img
+                    src="{{image_overview.0.url}}"
+                    alt="{{image_overview.0.alt}}"
+                    class="h-full w-full object-cover object-center sm:h-full sm:w-full"
+                >
+            </div>
+            <div class="flex flex-wrap py-6 px-6">
+                <div class="flex flex-1 flex-col space-y-2">
+                    <h3 class="text-base font-medium text-gray-900">
+                        <a href="#">
+                        <span aria-hidden="true" class="absolute inset-0"></span>
+                        {{first_name}} {{last_name}}
+                        </a>
+                    </h3>
+                    <div class="flex flex-1 flex-col justify-end">
+                        <p class="text-sm italic text-gray-500">{{function}}</p>
+                    </div>
+                </div>
+                <div>
+                    <p class="w-text usg_text_1 icon_atleft">
+                        <a href="mailto:{{email}}" target="_blank" rel="noopener nofollow" aria-label="fab|linkedin" class="w-text-h">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 9v.906a2.25 2.25 0 01-1.183 1.981l-6.478 3.488M2.25 9v.906a2.25 2.25 0 001.183 1.981l6.478 3.488m8.839 2.51l-4.66-2.51m0 0l-1.023-.55a2.25 2.25 0 00-2.134 0l-1.022.55m0 0l-4.661 2.51m16.5 1.615a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V8.844a2.25 2.25 0 011.183-1.98l7.5-4.04a2.25 2.25 0 012.134 0l7.5 4.04a2.25 2.25 0 011.183 1.98V19.5z" />
+                            </svg>
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </li>
+    {{/collection:team sort="order:asc"}}
+
+    <!-- More people... -->
+</ul>

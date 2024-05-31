@@ -1,0 +1,5 @@
+title: 'Immobilien Darstellung Konfiguration'
+data:
+  listappearance: small_boxes
+  ansprechpartner: true
+  show_map: 'yes'

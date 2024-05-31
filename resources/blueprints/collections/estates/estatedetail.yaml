@@ -1,0 +1,80 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        display: Header
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: header_image_appearance
+            field:
+              options:
+                type_1: 'Header Image Full Width'
+                type_2: 'Multiple Header Images'
+              taggable: false
+              push_tags: false
+              multiple: false
+              clearable: false
+              searchable: true
+              cast_booleans: false
+              type: select
+              display: 'Header Image Appearance'
+              icon: select
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+          -
+            handle: date
+            field:
+              type: date
+              required: true
+              default: now
+              validate:
+                - required
+  seo:
+    display: SEO
+    sections:
+      -
+        display: 'Neuer Abschnitt'
+        fields:
+          -
+            import: 'statamic-peak-seo::seo_basic'
+      -
+        display: adv
+        fields:
+          -
+            import: 'statamic-peak-seo::seo_advanced'
+      -
+        display: graph
+        fields:
+          -
+            import: 'statamic-peak-seo::seo_open_graph'
+      -
+        display: sitemap
+        fields:
+          -
+            import: 'statamic-peak-seo::seo_sitemap'
+      -
+        display: 'Json Schema'
+        fields:
+          -
+            import: 'statamic-peak-seo::seo_jsonld'
+title: EstateDetail

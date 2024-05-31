@@ -1,0 +1,15 @@
+title: Projekte
+template: neubauprojekte/show
+layout: layout
+mount: de870975-4f76-40c6-98af-01cf6cedebd8
+revisions: false
+route: '/projekte/{slug}'
+sort_dir: asc
+date_behavior:
+  past: public
+  future: private
+preview_targets:
+  -
+    label: Entry
+    url: '{permalink}'
+    refresh: true

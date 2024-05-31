@@ -1,0 +1,113 @@
+<div class="py-4 bg-white md:py-8">
+    {{content_with_image_replicator}}
+        <div class="pt-2 lg:pt-4 grid grid-cols-1 gap-8 lg:gap-16 mb-12 lg:mb-24 lg:flex {{ index % 2 == 0 ? 'lg:flex-row-reverse' : 'lg:flex-row' }}">
+            <div class="items-center justify-center flex lg:flex-1 relative">
+                <div class="spinner" style="display: flex">
+                    <svg
+                        class="absolute inset-0 w-5 h-5 m-auto animate-spin"
+                        viewBox="0 0 24 24"
+                    >
+                        <circle
+                            class="opacity-25"
+                            cx="12"
+                            cy="12"
+                            r="10"
+                            stroke="currentColor"
+                            stroke-width="4"
+                        ></circle>
+                        <path
+                            class="opacity-75"
+                            fill="currentColor"
+                            d="M4 12a8 8 0 008 8V12A4 4 0 004 8"
+                        ></path>
+                    </svg>
+                </div>
+                <img
+                    class="object-cover w-full rounded-lg lazy"
+                    data-src="{{image.0.url}}"
+                    alt="{{image.0.alt}}"
+                    loading="lazy"
+                    onload="this.parentElement.querySelector('.spinner').style.display = 'none';"
+                />
+            </div>
+            <div class="space-y-4 sm:space-y-6 lg:space-y-8 lg:flex-1">
+                <div>
+                    <h2
+                        class="text-3xl font-extrabold leading-tight text-gray-900 sm:text-4xl"
+                    >
+                        {{headline}}
+                    </h2>
+
+                </div>
+                {{text}}
+                {{if image_section_list}}
+                <hr
+                    class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"
+                />
+                <div
+                    class="pb-4 border-b border-gray-200 sm:pb-6 lg:pb-8 dark:border-gray-800"
+                >
+
+                    <ul class="space-y-4">
+                        {{image_section_list}}
+                        <li class="flex items-center gap-2.5">
+                            <div
+                                class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-primary-100 text-primary-600 shrink-0 dark:bg-primary-900 dark:text-primary-500"
+                            >
+                                <svg
+                                    aria-hidden="true"
+                                    class="w-3.5 h-3.5"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 20 20"
+                                    fill="currentColor"
+                                >
+                                    <path
+                                        fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"
+                                    />
+                                </svg>
+                            </div>
+                            <span class="text-base font-medium text-gray-900">
+                                {{listitem}}
+                            </span>
+                        </li>
+                        {{/image_section_list}}
+                    </ul>
+                </div>
+                {{/if}}
+
+
+                {{if button_link}}
+                <div class="flex items-center justify-center md:justify-start gap-4">
+                    <a
+                        href="{{button_link}}"
+                        title=""
+                        class="text-white bg-primary-700 justify-center hover:bg-primary-800 inline-flex items-center focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+                        role="button"
+                    >
+                        Mehr erfahren
+                        <svg
+                            aria-hidden="true"
+                            class="w-5 h-5 ml-2 -mr-1"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                        >
+                            <path
+                                fill-rule="evenodd"
+                                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                                clip-rule="evenodd"
+                            />
+                        </svg>
+                    </a>
+                </div>
+                {{/if}}
+            </div>
+        </div>
+    {{/content_with_image_replicator}}
+
+
+</div>
+
+

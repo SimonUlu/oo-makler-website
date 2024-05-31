@@ -1,0 +1,77 @@
+<section class="w-full">
+    <header
+        class="w-full h-[460px] xl:h-[737px] bg-no-repeat bg-cover bg-center bg-blend-darken relative"
+    >
+        <div
+            class="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50"
+        ></div>
+        <div
+            class="absolute w-full max-w-screen-xl px-4 mx-auto -translate-x-1/2 pt-28 sm:pt-24 top-20 left-1/2 xl:top-1/2 xl:-translate-y-1/2 lg:px-10"
+        >
+            <h1
+                class="max-w-4xl mb-4 text-2xl font-extrabold leading-none text-white sm:text-4xl lg:text-5xl"
+            >
+                {{title}}
+            </h1>
+            <div class="text-gray-50">
+            <p class="max-w-2xl text-lg font-normal ">
+                {{subtitle}}
+            </p>
+            </div>
+        </div>
+        <img
+            id="backgroundImage"
+            class="object-cover object-bottom w-full h-full lazy"
+            data-src="{{header_image.0.url}}"
+            alt="{{header_image.0.alt}}"
+            loading="lazy"
+        />
+    </header>
+</section>
+
+<div class="w-full bg-gray-100">
+    <div class="max-w-7xl px-4 lg:px-10 py-8 mx-auto lg:py-16">
+        {{partial:eigentuemer/general/content-img-left-gray}}
+    </div>
+</div>
+
+<section class="w-full px-4 lg:px-10  mx-auto max-w-7xl">
+    {{partial:services/simple-services/content-services-two}}
+</section>
+
+
+{{if teamsection == 'variante_1'}}
+<div class="w-full px-4 lg:px-10  mx-auto max-w-7xl">
+        {{partial:employee-grid/employee-grid}}
+</div>
+{{/if}}
+
+{{if teamsection == 'variante_2'}}
+<div class="w-full px-4 lg:px-10 mx-auto max-w-7xl">
+        {{partial:employee-grid/employee-grid-2}}
+</div>
+{{/if}}
+
+{{if teamsection == 'variante_3'}}
+<div class="w-full max-w-7xl mb-12 lg:mb-24 px-4 lg:px-10 ">
+        {{partial:employee-grid/employee-grid-3}}
+</div>
+{{/if}}
+
+{{if teamsection == 'variante_4'}}
+<div class="w-full max-w-7xl mb-12 lg:mb-24 px-4 lg:px-10 ">
+        {{partial:employee-grid/employee-grid-4}}
+</div>
+{{/if}}
+
+
+<section class="w-full bg-white max-w-7xl mx-auto px-4 lg:px-10 ">
+    {{partial:cta-sections/suchauftrag/suchauftrag-cta}}
+</section>
+
+
+
+<section class="py-8 xl:py-12 mx-4 lg:mx-10 max-w-7xl w-full px-4 lg:px-10 ">
+    {{partial:cta-sections/contact/contact-team}}
+</section>
+

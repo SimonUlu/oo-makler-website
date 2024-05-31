@@ -1,0 +1,45 @@
+<div class="bg-white text-center pt-16 lg:pt-24">
+    <h2 class="text-lg font-semibold text-primary">{{cta_sub_header}}</h2>
+    <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">{{cta_headline}}</p>
+    <p class="mx-auto mt-5 max-w-prose text-xl text-gray-500">{{cta_description}}</p>
+    <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+      <div class="mt-8 grid grid-cols-1 gap-y-12 sm:grid-cols-2 sm:gap-x-6 lg:grid-cols-3 xl:gap-x-8 ">
+        {{estate_pages}}
+        <a href="{{cta_estate_link}}" class="cursor-pointer">
+            <div class="transform hover:scale-105 transition-all duration-500">
+                <!-- <div class="relative">
+                    <div class="relative h-80 min-w-[340px] w-full overflow-hidden rounded-lg">
+                    <img src="https://images.unsplash.com/photo-1582053433976-25c00369fc93?ixid=MXwxMjA3fDB8MHxwaG90by1wYWgel-fHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=512&q=80" alt="Front of zip tote bag with white canvas, black canvas straps and handle, and black zipper pulls." class="h-full w-full object-cover object-center">
+                    </div>
+                    <div class="absolute inset-x-0 top-0 flex flex-col h-80 items-start justify-end overflow-hidden rounded-lg p-4">
+                        <div aria-hidden="true" class="absolute inset-x-0 bottom-0 h-36 bg-primary opacity-90  bg-gradient-to-b from-white via-white "></div>
+                        <p class="relative text-xl font-semibold text-white">{{headline}}</p>
+                        <p class="relative text-white text-md">
+                            {{button_text}} <span aria-hidden="true">&nbsp;→</span>
+                        </p>
+                    </div>
+                </div> -->
+                <div class="relative">
+                    <div class="relative h-96 min-w-[340px] w-full overflow-hidden rounded-lg">
+                    {{if estate_page_img}}
+                        <img src="{{estate_page_img.0.url}}" alt="{{estate_page_img.0.alt}}" class="w-full h-full">
+                    {{else}}
+                        <img src="https://images.unsplash.com/photo-1582053433976-25c00369fc93?ixid=MXwxMjA3fDB8MHxwaG90by1wYWgel-fHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=512&amp;q=80" alt="Front of zip tote bag with white canvas, black canvas straps and handle, and black zipper pulls." class="h-full w-full object-cover object-center">
+                    {{/endif}}
+                    </div>
+                    <div class="absolute inset-x-0 top-0 flex flex-col h-96 items-start justify-end overflow-hidden rounded-lg p-4">
+                        <div aria-hidden="true" class="absolute inset-x-0 bottom-0 h-36 bg-gradient-to-t from-black opacity-50"></div>
+                        <p class="relative text-xl font-semibold text-white">{{headline}}</p>
+                        <p class="relative text-white text-md">
+                            {{button_text}} <span aria-hidden="true">&nbsp;→</span>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </a>
+        {{/estate_pages}}
+      </div>
+    </div>
+  </div>
+

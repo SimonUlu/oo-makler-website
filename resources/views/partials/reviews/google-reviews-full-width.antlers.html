@@ -1,0 +1,150 @@
+<section class="bg-gray-100">
+    <div class="max-w-screen-xl px-4 py-8 mx-auto lg:py-16 lg:px-6">
+        <!-- Wrapper -->
+        <div x-data="reviewsSlider()" x-init="init()" class="flex flex-col items-center space-y-4 lg:space-y-0 lg:space-x-4 lg:flex-row lg:justify-center">
+            <!-- Reviews Carousel -->
+            <div class="flex flex-col items-center space-y-4 lg:flex-row lg:space-x-4 lg:overflow-hidden">
+                <template x-for="(review, index) in reviews" :key="index">
+                    <div
+                        class="slide p-6 shadow-sm bg-gray-50 rounded-xl lg:w-1/3 min-h-[220px]"
+                        x-show="index >= activeSlide && index < activeSlide + 3"
+                        style="display: none;"
+                    >
+                        <div
+                            x-text="truncateText(review.text, 150)"
+                            class="font-medium text-gray-900 text-md"
+                        ></div>
+                        <div
+                            class="flex items-center justify-center my-3 divide-x-2 divide-gray-500"
+                        >
+                            <div class="pr-3 font-medium text-gray-900">
+                                <div
+                                    class="flex stars"
+                                    x-data="{ rating: review.rating }"
+                                    x-init="rating = review.rating"
+                                >
+                                    <template x-for="i in 5">
+                                        <svg
+                                            class="flex-none w-5 h-5"
+                                            viewBox="0 0 20 20"
+                                            fill="#FDCC0D"
+                                            x-show="i <= rating"
+                                            aria-hidden="true"
+                                        >
+                                            <path
+                                                fill-rule="evenodd"
+                                                d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
+                                                clip-rule="evenodd"
+                                            />
+                                        </svg>
+                                    </template>
+                                </div>
+                            </div>
+                            <div
+                                class="pl-3 text-sm font-light text-gray-500 dark:text-gray-400"
+                            >
+                                <div x-text="review.author_name"></div>
+                            </div>
+                        </div>
+                    </div>
+                </template>
+            </div>
+            <!-- Buttons -->
+            <button
+                class="lg:absolute lg:left-6 z-20 p-4 cursor-pointer"
+                @click="prevSlide()"
+            >
+                &#10094;
+            </button>
+            <button
+                class="lg:absolute lg:right-10 z-20 p-4 cursor-pointer"
+                @click="nextSlide()"
+            >
+                &#10095;
+            </button>
+        </div>
+
+        <!-- Call to action -->
+        <div
+            class="flex items-center justify-center px-6 py-4 shadow-sm rounded-xl bg-gray-50 mx-auto mt-4"
+            style="width: calc(100% - 3rem); max-width: 32rem;"
+        >
+            <div>
+                <h3 class="text-lg font-medium text-gray-900">
+                    Sie möchten mehr erfahren oder Ihre Erfahrungen mit uns teilen?
+                </h3>
+
+                <div class="mt-4">
+                    <a
+                        x-bind:href="'https://www.google.com/maps/place/?q=place_id:' + googlePlacesId"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="text-secondary transition duration-300 ease-in-out"
+                    >
+                        Schauen Sie sich unser Unternehmensprofil auf Google an<span aria-hidden="true"> →</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    function reviewsSlider() {
+        return {
+            reviews: [],
+            googlePlacesId: "",
+            apiKey: "",
+            activeSlide: 0,
+            displayPerSlide: 3,
+
+            async fetchGoogleReviews() {
+                const url = `/api/google-places-reviews?place_id=${this.googlePlacesId}`;
+                try {
+                  const response = await fetch(url);
+                  const data = await response.json();
+                  this.reviews = data.result.reviews;
+                } catch (error) {
+                  console.error("Error fetching Google Reviews:", error);
+                }
+            },
+
+            init() {
+                this.googlePlacesId = this.$el.getAttribute(
+                    "data-google-places-id"
+                );
+                this.apiKey = this.$el.getAttribute("data-google-api-key");
+                this.fetchGoogleReviews();
+            },
+
+
+            nextSlide() {
+                const rest = this.reviews.length - (this.activeSlide + this.displayPerSlide);
+                console.log(rest);
+                if (rest == 0) {
+                    this.activeSlide = 0;
+                }
+                else if (rest < this.displayPerSlide) {
+                    this.activeSlide += rest;
+                } else {
+                    this.activeSlide += this.displayPerSlide;
+                }
+            },
+
+            prevSlide() {
+                // Bewege dich zum vorhergehenden Slide, wenn möglich
+                if (this.activeSlide - this.displayPerSlide >= 0) {
+                    this.activeSlide -= this.displayPerSlide;
+                } else {
+                    this.activeSlide = this.reviews.length - (this.displayPerSlide + this.activeSlide);
+                }
+            },
+
+            truncateText(text, maxLength) {
+                return Array.from(text).length > maxLength
+                    ? Array.from(text).slice(0, maxLength).join("") + "..."
+                    : text;
+            },
+        };
+    }
+</script>

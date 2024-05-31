@@ -1,0 +1,124 @@
+<section class="bg-white ">
+    <div class="max-w-screen-xl px-4 py-8 mx-auto lg:py-16 lg:px-6">
+        <div class="grid gap-6 mt-12 lg:mt-14 lg:gap-12 md:grid-cols-3">
+            {{neubauten}}
+            <div class="flex mb-2 md:flex-col md:mb-0">
+                <div
+                    class="overflow-hidden bg-gray-200 rounded-lg h-80 group-hover:opacity-75 aspect-w-1 aspect-h-1"
+                >
+                    <img
+                        src="{{immobild.0.url}}"
+                        alt="{{immobild.0.alt}}"
+                        class="object-cover object-center w-full h-full"
+                    />
+                </div>
+                <div class="px-8 md:px-0">
+                    <h3
+                        class="text-xl font-bold md:mt-4 mb-2.5 text-gray-900 "
+                    >
+                        {{title}}
+                    </h3>
+                    <div class="grid grid-cols-1">
+                        <table class="min-w-full ml-4 divide-y divide-gray-300">
+                            <tbody class="bg-white divide-y divide-gray-200">
+                                {{stats}}
+                                <tr class="divide-x divide-gray-200">
+                                    <td
+                                        class="py-4 pl-6 pr-4 text-sm font-medium text-gray-900 whitespace-nowrap sm:pl-0"
+                                    >
+                                        <div
+                                            class="flex items-center justify-start"
+                                        >
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                fill="none"
+                                                viewBox="0 0 24 24"
+                                                stroke-width="1.5"
+                                                stroke="currentColor"
+                                                class="w-6 h-6"
+                                            >
+                                                <path
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                    d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
+                                                />
+                                            </svg>
+                                            <span class="ml-2">Einheiten</span>
+                                        </div>
+                                    </td>
+                                    <td
+                                        class="p-4 text-sm text-gray-500 whitespace-nowrap"
+                                    >
+                                        {{einheiten}}
+                                    </td>
+                                </tr>
+                                <tr class="divide-x divide-gray-200">
+                                    <td
+                                        class="py-4 pl-6 pr-4 text-sm font-medium text-gray-900 whitespace-nowrap sm:pl-0"
+                                    >
+                                        <div
+                                            class="flex items-center justify-start"
+                                        >
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                fill="none"
+                                                viewBox="0 0 24 24"
+                                                stroke-width="1.5"
+                                                stroke="currentColor"
+                                                class="w-6 h-6"
+                                            >
+                                                <path
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                    d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15"
+                                                />
+                                            </svg>
+                                            <span class="ml-2">Zimmer</span>
+                                        </div>
+                                    </td>
+                                    <td
+                                        class="p-4 text-sm text-gray-500 whitespace-nowrap"
+                                    >
+                                        {{zimmeranzahl}}
+                                    </td>
+                                </tr>
+                                <tr class="divide-x divide-gray-200">
+                                    <td
+                                        class="py-4 pl-6 pr-4 text-sm font-medium text-gray-900 whitespace-nowrap sm:pl-0"
+                                    >
+                                        <div
+                                            class="flex items-center justify-start"
+                                        >
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                fill="none"
+                                                viewBox="0 0 24 24"
+                                                stroke-width="1.5"
+                                                stroke="currentColor"
+                                                class="w-6 h-6"
+                                            >
+                                                <path
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                    d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15"
+                                                />
+                                            </svg>
+                                            <span class="ml-2">Fläche</span>
+                                        </div>
+                                    </td>
+                                    <td
+                                        class="p-4 text-sm text-gray-500 whitespace-nowrap"
+                                    >
+                                        {{flaeche}} m2
+                                    </td>
+                                </tr>
+                                {{/stats}}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            {{/neubauten}}
+        </div>
+    </div>
+</section>

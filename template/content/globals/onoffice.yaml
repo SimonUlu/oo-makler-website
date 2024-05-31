@@ -1,0 +1,9 @@
+title: 'Contact Forms'
+data:
+  contact_type: standard
+  onoffice_token: 9185111dfb67cbf6721872a36862b84b
+  onoffice_secret: E9W8tfSDeAqA3c3mqvh8NBXuTKq8smLN
+  e-mail_inbox_expose-mails: florian.imgrund@inno-brain.de
+  e-mail_betreff_expose_mails: 'Neue Exposé-Anfrage von Ihrer Website'
+  e-mail_inbox_formulare: florian.imgrund@inno-brain.de
+  e-mail_formulare_send_from_e-mail: noreply@inno-brain.de

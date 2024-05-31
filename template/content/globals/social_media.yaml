@@ -1,0 +1,27 @@
+title: 'Social media'
+data:
+  social_media:
+    -
+      id: ljsoifal
+      handle: info@immoinvest-vertrieb.de
+      prefix: 'mailto:'
+      type: email
+      enabled: true
+    -
+      id: ljsoioi7
+      handle: ImmoInvest/
+      prefix: 'https://www.facebook.com/'
+      type: facebook
+      enabled: true
+    -
+      id: ljsojl4t
+      handle: immo_invest_vertrieb
+      prefix: 'https://www.instagram.com/'
+      type: instagram
+      enabled: true
+    -
+      id: ljsom372
+      handle: company/immoinvest-vertrieb
+      prefix: 'https://www.linkedin.com/'
+      type: linkedin
+      enabled: true

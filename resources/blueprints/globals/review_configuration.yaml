@@ -1,0 +1,43 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        display: Rezensionen
+        fields:
+          -
+            handle: google_reviews
+            field:
+              default: false
+              type: toggle
+              display: 'Google Reviews'
+              icon: toggle
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: immoscout24_reviews
+            field:
+              default: false
+              type: toggle
+              display: 'ImmoScout24 Reviews'
+              icon: toggle
+              width: 50
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: immoscout24_provider_string
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'ImmoScout24 Provider String'
+              icon: text
+              width: 50
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false

@@ -1,0 +1,107 @@
+title: 'Immobilien Filter Konfiguration'
+data:
+  estate_field_list:
+    -
+      id: ljbl4bam
+      estate_field_label_id: objekttitel
+      type: new_set
+      enabled: true
+      onoffice_label_id: objekttitel
+      onoffice_label_id_is_active: true
+    -
+      id: ljjuko69
+      onoffice_label_id: heizungsart
+      onoffice_label_id_is_active: true
+      type: new_set
+      enabled: true
+    -
+      id: ljjx1a23
+      onoffice_label_id: stellplatzart
+      onoffice_label_id_is_active: true
+      type: new_set
+      enabled: true
+  filter_options:
+    -
+      id: ljgtsfh2
+      onoffice_label_id: ort
+      filter_enabled: true
+      type: new_set
+      enabled: true
+      filter_enabled_buy_case: true
+      filter_enabled_rent_case: true
+      label_filter: Ort
+    -
+      id: ljldoh55
+      onoffice_label_id: vermarktungsart
+      filter_enabled: true
+      type: new_set
+      enabled: true
+      filter_enabled_buy_case: true
+      filter_enabled_rent_case: true
+      values_included:
+        - Kauf
+        - Miete
+      label_filter: Vermarktungsart
+    -
+      id: lmqlrtn8
+      onoffice_label_id: objektart
+      filter_enabled_buy_case: true
+      filter_enabled_rent_case: true
+      label_filter: Objektart
+      type: new_set
+      enabled: true
+      values_excluded:
+        - Grundstück
+        - Land/Forstwirtschaft
+        - Zimmer
+        - 'Freizeitimmobilie (gewerblich)'
+        - Laden/Einzelhandel
+        - Gastgewerbe
+    -
+      id: ljgtssgc
+      onoffice_label_id: kaufpreis
+      filter_enabled: true
+      type: new_set
+      enabled: true
+      filter_enabled_buy_case: true
+      filter_enabled_rent_case: false
+      label_filter: Kaufpreis
+    -
+      id: ljgtsvza
+      onoffice_label_id: anzahl_zimmer
+      filter_enabled: true
+      type: new_set
+      enabled: true
+      filter_enabled_buy_case: true
+      filter_enabled_rent_case: true
+      label_filter: 'Anzahl Zimmer'
+    -
+      id: lklmjw8l
+      onoffice_label_id: warmmiete
+      filter_enabled_buy_case: false
+      filter_enabled_rent_case: true
+      label_filter: Mietpreis
+      type: new_set
+      enabled: true
+  references_filter_options:
+    -
+      id: ljfvalx4
+      onoffice_label_id: veroeffentlichen
+      operator: '='
+      value: 'true'
+      type: new_set
+      enabled: true
+      references_value_is_active: true
+      references_range_is_active: false
+      references_in_is_active: false
+    -
+      id: ljfvb9t8
+      onoffice_label_id: referenz
+      operator: '='
+      value: 'true'
+      type: new_set
+      enabled: true
+      references_value_is_active: true
+      references_range_is_active: false
+      references_in_is_active: false
+

@@ -1,0 +1,4 @@
+defaultFieldsStatistics:
+  - date_last_sync: date
+  - title: string
+  - statistic_value: string

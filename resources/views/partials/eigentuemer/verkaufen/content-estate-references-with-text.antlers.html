@@ -1,0 +1,122 @@
+<div class="py-16 overflow-hidden bg-white">
+    <div
+        class="relative w-screen max-w-4xl px-12 text-gray-500 -translate-x-1/2 md:max-w-screen-2xl sm:text-lg dark:text-gray-400 left-1/2"
+    >
+        <div
+            class="grid max-w-4xl grid-cols-1 mx-auto gap-x-12 gap-y-16 lg:mx-0 lg:min-w-full lg:max-w-none lg:flex-none lg:gap-y-8"
+        >
+            <h2
+                class="max-w-4xl text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
+            >
+            </h2>
+            <div class="max-w-4xl lg:col-end-1 lg:w-full lg:max-w-3xl lg:pb-8">
+                <p
+                    class="mt-4 text-base font-normal text-gray-500 dark:text-gray-400 sm:text-xl"
+                >
+                    Unsere Immobilienmakler in Leipzig haben bereits vielen
+                    zufriedenen Kunden geholfen, ihre Immobilien effizient und
+                    gewinnbringend zu verkaufen. Einige Beispiele unserer
+                    erfolgreich verkauften Objekte umfassen charmante
+                    Einfamilienhäuser, moderne Stadtwohnungen und attraktive
+                    Gewerbeimmobilien.
+                </p>
+                <p
+                    class="mt-4 text-base font-normal text-gray-500 dark:text-gray-400 sm:text-xl"
+                >
+                    <span class="font-semibold text-gray-900 "
+                        >Referenzobjekte - ein Beweis unserer Kompetenz.</span
+                    >
+                    Die Vielfalt unserer erfolgreich verkauften Immobilien
+                    spiegelt unsere Expertise und Marktkenntnis wider. Durch
+                    gezielte Verkaufsstrategien und individuelle Betreuung
+                    konnten wir den passenden Käufer für jede Immobilie finden
+                    und den Verkaufsprozess reibungslos gestalten.
+                </p>
+                <div class="flex mt-10">
+                    <div
+                        class="flex items-center justify-center space-x-4 sm:flex"
+                    >
+                        <button
+                            type="submit"
+                            class="text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+                        >
+                            Kontakt aufnehmen
+                        </button>
+                        <a
+                            href="{{business_information:company_phone}}"
+                            title=""
+                            class="inline-flex items-center justify-center px-5 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg focus:outline-none hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+                            role="button"
+                        >
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                class="w-6 h-6 mr-2"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M20.25 3.75v4.5m0-4.5h-4.5m4.5 0l-6 6m3 12c-8.284 0-15-6.716-15-15V4.5A2.25 2.25 0 014.5 2.25h1.372c.516 0 .966.351 1.091.852l1.106 4.423c.11.44-.054.902-.417 1.173l-1.293.97a1.062 1.062 0 00-.38 1.21 12.035 12.035 0 007.143 7.143c.441.162.928-.004 1.21-.38l.97-1.293a1.125 1.125 0 011.173-.417l4.423 1.106c.5.125.852.575.852 1.091V19.5a2.25 2.25 0 01-2.25 2.25h-2.25z"
+                                />
+                            </svg>
+                            Direkt anrufen
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="flex flex-wrap items-start justify-end w-screen gap-6 sm:gap-8 lg:contents"
+            >
+                {{if estate_references.0.titleImage}}
+                <div
+                    class="flex-auto w-0 lg:ml-auto lg:w-auto lg:flex-none lg:self-end"
+                >
+                    <img
+                        src="{{estate_references.0.titleImage.0.url}}"
+                        alt="{{estate_references.0.titleImage.0.alt}}"
+                        class="aspect-[7/5] w-[37rem] max-w-none rounded-2xl bg-gray-50 object-cover"
+                    />
+                </div>
+                {{/if}}
+                <div
+                    class="contents lg:col-span-2 lg:col-end-2 lg:ml-auto lg:flex lg:items-start lg:justify-end lg:gap-x-8"
+                >
+                    {{if estate_references.1.titleImage}}
+                    <div
+                        class="flex self-end justify-end flex-none order-first w-64 lg:w-auto"
+                    >
+                        <img
+                            src="{{estate_references.1.titleImage.0.url}}"
+                            alt="{{estate_references.1.titleImage.0.alt}}"
+                            class="aspect-[4/3] w-[24rem] max-w-none flex-none rounded-2xl bg-gray-50 object-cover"
+                        />
+                    </div>
+                    {{/if}} {{if estate_references.2.titleImage}}
+                    <div
+                        class="flex justify-end flex-auto w-96 lg:w-auto lg:flex-none"
+                    >
+                        <img
+                            src="{{estate_references.2.titleImage.0.url}}"
+                            alt="{{estate_references.2.titleImage.0.alt}}"
+                            class="aspect-[7/5] w-[37rem] max-w-none flex-none rounded-2xl bg-gray-50 object-cover"
+                        />
+                    </div>
+                    {{/if}} {{if estate_references.3.titleImage}}
+                    <div
+                        class="hidden sm:block sm:w-0 sm:flex-auto lg:w-auto lg:flex-none"
+                    >
+                        <img
+                            src="{{estate_references.3.titleImage.0.url}}"
+                            alt="{{estate_references.3.titleImage.0.alt}}"
+                            class="aspect-[4/3] w-[24rem] max-w-none rounded-2xl bg-gray-50 object-cover"
+                        />
+                    </div>
+                    {{/if}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

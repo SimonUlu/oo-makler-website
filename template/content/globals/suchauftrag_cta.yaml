@@ -1,0 +1,27 @@
+title: 'Suchauftrag CTA'
+data:
+  header: 'Ihr exklusiver Zugang zu unseren neusten Immobilien'
+  intro: 'Melden Sie sich jetzt unverbindlich und kostenfrei zu unserem Suchauftrag an'
+  info:
+    -
+      id: lnncp45l
+      item: 'Stetig über neue Immobilien informiert'
+      type: neues_set
+      enabled: true
+    -
+      id: lnncp5ec
+      item: 'Stetig über neue Immobilien informiert'
+      type: neues_set
+      enabled: true
+    -
+      id: lnncp6pu
+      item: 'Stetig über neue Immobilien informiert'
+      type: neues_set
+      enabled: true
+    -
+      id: lnncp86p
+      item: 'Stetig über neue Immobilien informiert'
+      type: neues_set
+      enabled: true
+  suchautrag_img:
+    - adobestock_510241168.jpeg

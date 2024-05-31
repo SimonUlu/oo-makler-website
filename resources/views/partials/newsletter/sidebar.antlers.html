@@ -1,0 +1,68 @@
+<aside class="hidden xl:block" aria-labelledby="sidebar-label">
+    <div class="xl:w-[336px] sticky top-24">
+        <h3 id="sidebar-label" class="sr-only">Sidebar</h3>
+        {{if show_newsletter}}
+        <div class="mb-8">
+            <h4 class="mb-2 text-sm font-bold text-gray-900 uppercase">
+                Verpassen Sie keine wichtigen Nachrichten mehr
+            </h4>
+            <p class="mb-4 text-sm font-light text-gray-500 dark:text-gray-400">
+                Mit unserem Newsletter bleiben Sie stets auf dem Laufenden.
+                Jetzt gleich anmelden.
+            </p>
+            <button
+                type="button"
+                data-modal-toggle="newsletter-modal"
+                class="text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800 text-center w-full"
+            >
+                Newsletter abonnieren
+            </button>
+        </div>
+        {{/if}}
+        <div class="mb-12">
+            <h4 class="mb-4 text-sm font-bold text-gray-900 uppercase">
+                Aktuelle Artikel
+            </h4>
+            {{collection:news limit="3" sort="random"}} {{if page:url != url}}
+            <!-- ensure blog is not current article -->
+            <div class="flex items-center mb-6">
+                <a href="{{url}}" class="shrink-0">
+                    <img
+                        src="{{image}}"
+                        class="object-cover w-24 h-24 max-w-full mr-4 rounded-lg"
+                        alt="{{title}}"
+                    />
+                </a>
+                <div>
+                    <h5
+                        class="mb-2 text-lg font-bold leading-tight text-gray-900"
+                    >
+                        {{title|truncate:50:...}}
+                    </h5>
+                    <p class="mb-2 font-light text-gray-500 dark:text-gray-400">
+                        {{subtitle|truncate:80:...}}
+                    </p>
+                    <a
+                        href="{{url}}"
+                        class="inline-flex items-center justify-end w-full font-medium text-primary-600 hover:underline dark:text-primary-500"
+                    >
+                        Mehr erfahren
+                        <svg
+                            class="w-4 h-4 ml-2"
+                            fill="currentColor"
+                            viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                fill-rule="evenodd"
+                                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                                clip-rule="evenodd"
+                            ></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            {{/if}} {{/collection:news}}
+        </div>
+    </div>
+</aside>

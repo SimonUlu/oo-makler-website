@@ -1,0 +1,17 @@
+<!-- Image gallery -->
+<div class="mx-auto mt-6 sm:px-6 lg:grid lg:grid-cols-3 lg:gap-x-8 lg:px-8">
+    <div class="cursor-pointer aspect-h-4 aspect-w-3 hidden overflow-hidden rounded-lg lg:block" @click="openImgSlideShow = !openImgSlideShow">
+        <img src="{{images.0.image.0.url}}" alt="{{images.0.image.0.alt}}" class="h-full w-full object-cover object-center">
+    </div>
+    <div class="cursor-pointer hidden lg:grid lg:grid-cols-1 lg:gap-y-8">
+        <div @click="openImgSlideShow = !openImgSlideShow" class="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg">
+            <img src="{{images.1.image.0.url}}" alt="{{images.1.image.0.alt}}" class="h-full w-full object-cover object-center">
+        </div>
+        <div @click="openImgSlideShow = !openImgSlideShow" class="cursor-pointer aspect-h-2 aspect-w-3 overflow-hidden rounded-lg">
+            <img src="{{images.2.image.0.url}}" alt="{{images.2.image.0.alt}}" class="h-full w-full object-cover object-center">
+        </div>
+    </div>
+    <div @click="openImgSlideShow = !openImgSlideShow" class="cursor-pointer aspect-h-5 aspect-w-4 lg:aspect-h-4 lg:aspect-w-3 sm:overflow-hidden sm:rounded-lg">
+        <img src="{{images.3.image.0.url}}" alt="{{images.3.image.0.alt}}" class="h-full w-full object-cover object-center">
+    </div>
+</div>

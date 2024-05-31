@@ -1,0 +1,8 @@
+title: Stadtteile
+template: pages/stadtteile/show
+layout: layout
+route: '/stadtteile/{slug}'
+revisions: false
+date_behavior:
+  past: public
+  future: private

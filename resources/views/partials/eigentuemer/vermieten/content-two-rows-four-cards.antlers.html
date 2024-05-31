@@ -1,0 +1,33 @@
+<section class="w-full bg-gray-50 max-w-7xl mx-auto">
+    <div class="py-8 sm:py-16">
+        <div class="max-w-screen-md mx-auto mb-8 text-center lg:mb-16">
+            <h2
+                class="mb-4 text-4xl font-extrabold tracking-tight text-gray-900 "
+            >
+                {{stepsheader}}
+            </h2>
+            <p class="font-light text-gray-500 dark:text-gray-400 sm:text-xl">
+                {{stepssubheader}}
+            </p>
+        </div>
+        <div
+            class="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 md:gap-8 xl:gap-8 md:space-y-0"
+        >
+            {{steps}}
+            <div class="p-6 bg-white rounded shadow ">
+                <div
+                    class="flex items-center justify-center w-10 h-10 mb-4 rounded bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900"
+                >
+                    {{svg}}
+                </div>
+                <h3 class="mb-2 text-xl font-bold ">
+                    {{itemheader}}
+                </h3>
+                <p class="font-light text-gray-500 dark:text-gray-400">
+                    {{itemdescription}}
+                </p>
+            </div>
+            {{/steps}}
+        </div>
+    </div>
+</section>

@@ -1,0 +1,7 @@
+{
+    "laravel-pint.preset": "laravel",
+    "laravel-pint.enable": true,
+    "[php]": {
+        "editor.defaultFormatter": "open-southeners.laravel-pint"
+    }
+}

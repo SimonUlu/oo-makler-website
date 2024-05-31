@@ -1,0 +1,64 @@
+{{ if errors }}
+<div class="alert alert-danger">
+    {{ errors }}
+    <div>Field {{ key }}: {{ value }}</div>
+    {{ /errors }}
+</div>
+{{ /if }}
+
+<section class="w-full bg-white">
+    <div class="px-4 py-4 mx-auto max-w-screen-2xl lg:py-16 lg:px-6">
+        <div class="max-w-screen-md mx-auto sm:text-center">
+            <p
+                class="max-w-2xl mx-auto font-light text-gray-500 sm:text-xl dark:text-gray-400"
+            >
+                Sie haben keine passende Immobilie gefunden? Wir informieren Sie
+                gerne über unsere neuen Angebote.
+            </p>
+            <h2
+                class="mb-8 text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl"
+            >
+                Jetzt zum Suchauftrag anmelden!
+            </h2>
+            {{ form:create in="newsletter" }}
+            <div class="flex gap-x-4">
+                <label for="email-address" class="sr-only"
+                    >E-Mail Adresse</label
+                >
+                <input
+                    id="email-address"
+                    name="email"
+                    type="email"
+                    autocomplete="email"
+                    required
+                    class="min-w-0 flex-auto rounded-md border-0 bg-gray-100 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6"
+                    placeholder="Geben Sie Ihre E-Mail-Adresse ein"
+                />
+                <button
+                    type="submit"
+                    class="flex-none rounded-md bg-primary px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-primar-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                >
+                    Anmelden
+                </button>
+            </div>
+            {{ /form:create }}
+
+            <div>
+                <p class="mt-4 text-sm leading-6 text-gray-900">
+                    Wir legen Wert auf den Schutz Ihrer Daten.
+                    <a
+                        href="/datenschutz"
+                        class="font-medium text-gray-500 hover:underline dark:text-primary-500"
+                        >Lesen Sie unsere Datenschutzerklärung</a
+                    >.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{ if { session:has key="newsletter.success" } }}
+<script>
+    window.location = "{{ route:newsletter.success }}";
+</script>
+{{ /if }}

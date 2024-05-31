@@ -1,0 +1,58 @@
+# STAGE 1: Building ###
+FROM composer:2.0 as builder
+
+# Configure the main working directory inside the docker image. 
+# This will be the base directory for running commands like artisan, composer.
+WORKDIR /var/www/html
+
+# Copy local composer files to container's workspace.
+COPY composer.json composer.lock ./
+
+# Install dependencies for the application.
+RUN composer install --prefer-dist --no-scripts --no-dev --no-autoloader && rm -rf /root/.composer
+
+# Copy code for the application.
+COPY . .
+
+# Generate optimized autoload files.
+RUN composer dump-autoload --optimize
+
+# Stage 2
+FROM php:8.1-fpm-alpine
+
+RUN apk --no-cache add \
+    postgresql-dev \
+    freetype-dev \
+    libjpeg-turbo-dev \
+    libpng-dev \
+    libzip-dev \
+    zip \
+    unzip \
+    curl \
+    vim \
+    nano \
+    oniguruma-dev
+
+RUN docker-php-ext-configure gd --with-freetype=/usr/include/ --with-jpeg=/usr/include/
+RUN docker-php-ext-install pdo pdo_pgsql mbstring zip exif pcntl bcmath gd
+
+# Configure the main working directory. 
+WORKDIR /var/www/html
+
+# Install opcache extension for PHP
+RUN docker-php-ext-install opcache
+# Configure OpCache for production
+COPY ./docker-config/opcache.ini $PHP_INI_DIR/conf.d/
+
+# Copy built (composer dependencies) files from stage 1
+COPY --from=builder /var/www/html .
+
+# Ensure Laravel's storage and bootstrap cache directories are writable
+RUN chown -R www-data:www-data \
+    storage \
+    bootstrap/cache
+
+CMD ["php-fpm"]
+
+# Expose port 9000 and start php-fpm server
+EXPOSE 9000

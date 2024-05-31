@@ -1,0 +1,158 @@
+<div class="py-8 text-blac">
+    <div
+        class="container flex flex-col items-start mx-auto my-12 md:flex-row md:my-24"
+    >
+        <div
+            class="sticky flex flex-col w-full px-8 mt-2 md:top-36 md:mt-12 lg:w-1/3"
+        >
+            <p class="font-bold uppercase text-primary-700 tracking-loose">
+                {{processesgeneralsubheader}}
+            </p>
+            <p
+                class="mb-2 text-3xl leading-normal md:text-4xl md:leading-relaxed"
+            >
+                {{processesgeneralheader}}
+            </p>
+            <p class="mb-4 text-sm text-gray-900 md:text-base">
+                {{processesgeneraltext}}
+            </p>
+            <a
+                href="#"
+                class="px-4 py-2 mr-auto bg-transparent border rounded shadow border-primary-300 text-primary-700 hover:text-white hover:bg-yellow-300 hover:border-transparent hover:shadow-lg"
+            >
+                Jetzt anfragen</a
+            >
+        </div>
+        <div class="sticky ml-0 md:ml-12 lg:w-2/3">
+            <div class="container w-full h-full mx-auto">
+                <div class="relative h-full p-10 overflow-hidden wrap">
+                    <div
+                        class="absolute h-full border border-2-2 border-primary-555"
+                        style="
+                            right: 50%;
+                            border: 2px solid #000000;
+                            border-radius: 1%;
+                        "
+                    ></div>
+                    <div
+                        class="absolute h-full border border-2-2 border-primary-555"
+                        style="
+                            left: 50%;
+                            border: 2px solid #000000;
+                            border-radius: 1%;
+                        "
+                    ></div>
+                    {{ process }}
+                    <div
+                        class="flex items-center justify-between w-full mb-8 {{ index % 2 == 0 ? 'right-timeline flex-row-reverse' : 'left-timeline' }}"
+                    >
+                        <div class="order-1 w-5/12"></div>
+                        <div
+                            class="order-1 w-5/12 px-1 py-4 {{ index % 2 == 0 ? 'text-right' : 'text-left' }}"
+                        >
+                            <p
+                                class="mb-3 text-base font-bold text-primary-700"
+                            >
+                                {{ processsubheader }}
+                            </p>
+                            <h4 class="mb-3 text-lg font-bold md:text-2xl">
+                                {{ processheader }}
+                            </h4>
+                            <p
+                                class="text-sm leading-snug text-gray-500 text-opacity-100 md:text-base"
+                            >
+                                {{ processtext }}
+                            </p>
+                        </div>
+                    </div>
+                    {{ /process }}
+
+                    <!-- <div
+                        class="flex items-center justify-between w-full mb-8 right-timeline"
+                    >
+                        <div class="order-1 w-5/12"></div>
+                        <div class="order-1 w-5/12 px-1 py-4 text-left">
+                            <p
+                                class="mb-3 text-base font-bold text-primary-700"
+                            >
+                                Schritt 2
+                            </p>
+                            <h4 class="mb-3 text-lg font-bold md:text-2xl">
+                                Werbung und Vermarktung
+                            </h4>
+                            <p
+                                class="text-sm leading-snug text-gray-500 text-opacity-100 md:text-base"
+                            >
+                                Um möglichst viele potenzielle Käufer zu
+                                erreichen, setzen wir verschiedene
+                                Marketingmaßnahmen ein. Dazu gehören
+                                beispielsweise Online-Inserate, Print-Anzeigen
+                                und Social-Media-Kampagnen. Wir präsentieren die
+                                Immobilie bestmöglich und zeigen Interessenten
+                                alle Vorteile auf.
+                            </p>
+                        </div>
+                    </div>
+                    <div
+                        class="flex flex-row-reverse items-center justify-between w-full mb-8 left-timeline"
+                    >
+                        <div class="order-1 w-5/12"></div>
+                        <div class="order-1 w-5/12 px-1 py-4 text-right">
+                            <p
+                                class="mb-3 text-base font-bold text-primary-700"
+                            >
+                                Schritt 3
+                            </p>
+                            <h4 class="mb-3 text-lg font-bold md:text-2xl">
+                                Besichtigungen und Verhandlungen
+                            </h4>
+                            <p
+                                class="text-sm leading-snug text-gray-500 text-opacity-100 md:text-base"
+                            >
+                                Sobald sich Interessenten melden, organisieren
+                                wir Besichtigungen und stehen bei Fragen und
+                                Unklarheiten zur Verfügung. Wenn ein Käufer
+                                gefunden wurde, übernehmen wir auch die
+                                Verhandlungen und sorgen dafür, dass ein fairer
+                                Verkaufspreis erzielt wird.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="flex items-center justify-between w-full mb-8 right-timeline"
+                    >
+                        <div class="order-1 w-5/12"></div>
+
+                        <div class="order-1 w-5/12 px-1 py-4">
+                            <p
+                                class="mb-3 text-base font-bold text-primary-700"
+                            >
+                                Schritt 4
+                            </p>
+                            <h4
+                                class="mb-3 text-lg font-bold text-left md:text-2xl"
+                            >
+                                Abschluss des Verkaufs
+                            </h4>
+                            <p
+                                class="text-sm leading-snug text-gray-500 text-opacity-100 md:text-base"
+                            >
+                                Wenn alle Formalitäten erledigt sind und der
+                                Kaufvertrag unterzeichnet ist, begleiten wir den
+                                Kunden bis zum Abschluss des Verkaufs. Wir
+                                sorgen dafür, dass alle Zahlungen und Übergaben
+                                reibungslos ablaufen und der Kunde zufrieden
+                                ist.
+                            </p>
+                        </div>
+                    </div> -->
+                </div>
+                <img
+                    class="mx-auto -mt-36 md:-mt-36"
+                    src="https://user-images.githubusercontent.com/54521023/116968861-ef21a000-acd2-11eb-95ac-a34b5b490265.png"
+                />
+            </div>
+        </div>
+    </div>
+</div>

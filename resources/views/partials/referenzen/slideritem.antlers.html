@@ -1,0 +1,24 @@
+<div
+    class="grid max-w-lg grid-cols-1 md:flex-col md:mb-0 md:space-x-0 md:max-w-none"
+>
+    <div class="relative w-full">
+        <!-- Carousel wrapper -->
+        <div class="relative w-auto overflow-hidden h-80 min-w-64">
+            <!-- Item 1 -->
+            {{elements.images}} {{if url}} {{url += '@500x250'}} {{else}} {{url =
+            https://upload.wikimedia.org/wikipedia/commons/3/3f/Placeholder_view_vector.svg}}
+            {{/if}}
+            <img
+                src="{{ url }}"
+                class="object-cover w-full h-80"
+                alt="{{ title }}"
+            />
+            {{/elements.images}}
+        </div>
+    </div>
+    <div class="my-4 text-gray-500 text-md">
+        <span class="capitalize"> {{ elements.objektart }} </span>
+        <span> in </span>
+        <span class="capitalize"> {{ elements.ort }} </span>
+    </div>
+</div>

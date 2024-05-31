@@ -1,0 +1,253 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              input_type: text
+              antlers: false
+              display: Titel
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              validate:
+                - required
+          -
+            handle: benutzer
+            field:
+              type: text
+          -
+            handle: referenz
+            field:
+              type: text
+          -
+            handle: breitengrad
+            field:
+              type: text
+          -
+            handle: laengengrad
+            field:
+              type: text
+          -
+            handle: kaufpreis
+            field:
+              type: text
+          -
+            handle: lage
+            field:
+              type: text
+          -
+            handle: objekttitel
+            field:
+              type: text
+          -
+            handle: wohnflaeche
+            field:
+              type: text
+          -
+            handle: vermarktungsart
+            field:
+              type: text
+          -
+            handle: strasse
+            field:
+              type: text
+          -
+            handle: hausnummer
+            field:
+              type: text
+          -
+            handle: plz
+            field:
+              type: text
+          -
+            handle: ort
+            field:
+              type: text
+          -
+            handle: objekttyp
+            field:
+              type: text
+          -
+            handle: objektart
+            field:
+              type: text
+          -
+            handle: baujahr
+            field:
+              type: integer
+              validate: required|integer
+          -
+            handle: anzahl_zimmer
+            field:
+              type: integer
+              validate: required|integer
+          -
+            handle: warmmiete
+            field:
+              type: text
+          -
+            handle: objektbeschreibung
+            field:
+              type: text
+          -
+            handle: anzahl_badezimmer
+            field:
+              type: integer
+              validate: required|integer
+          -
+            handle: anzahl_schlafzimmer
+            field:
+              type: integer
+              validate: required|integer
+          -
+            handle: veroeffentlichen
+            field:
+              type: toggle
+          -
+            handle: kaltmiete
+            field:
+              type: text
+          -
+            handle: stammobjekt
+            field:
+              type: toggle
+          -
+            handle: status2
+            field:
+              type: text
+          -
+            handle: etagen_zahl
+            field:
+              type: integer
+              validate: required|integer
+          -
+            handle: ausstatt_beschr
+            field:
+              type: text
+          -
+            handle: gesamtflaeche
+            field:
+              type: text
+          -
+            handle: energieausweistyp
+            field:
+              type: text
+          -
+            handle: energieverbrauchskennwert
+            field:
+              type: text
+          -
+            handle: energieausweis_gueltig_bis
+            field:
+              type: date
+          -
+            handle: energietraeger
+            field:
+              type: text
+          -
+            handle: energyclass
+            field:
+              type: text
+          -
+            handle: energieausweisbaujahr
+            field:
+              type: integer
+              validate: required|integer
+          -
+            handle: endenergiebedarf
+            field:
+              type: text
+          -
+            handle: estate_images
+            field:
+              type: replicator
+              sets:
+                image:
+                  display: Image
+                  fields:
+                    -
+                      handle: url
+                      field:
+                        type: text
+                        validate: required|url
+          -
+            handle: erstellt_am
+            field:
+              mode: single
+              inline: false
+              full_width: false
+              columns: 1
+              rows: 1
+              time_enabled: false
+              time_seconds_enabled: false
+              type: date
+              display: erstellt_am
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+  seo:
+    display: SEO
+    sections:
+      -
+        display: Basic
+        instructions: 'Basic SEO settings.'
+        fields:
+          -
+            import: 'statamic-peak-seo::seo_basic'
+      -
+        display: Advanced
+        instructions: 'Advanced SEO settings.'
+        fields:
+          -
+            import: 'statamic-peak-seo::seo_advanced'
+      -
+        display: 'Open Graph'
+        instructions: 'Open Graph meta tags for social sharing.'
+        fields:
+          -
+            import: 'statamic-peak-seo::seo_open_graph'
+      -
+        display: Sitemap
+        instructions: 'Sitemap configuration.'
+        fields:
+          -
+            import: 'statamic-peak-seo::seo_sitemap'
+      -
+        display: 'JSON-ld Schema'
+        instructions: 'Custom JSON-ld schema objects.'
+        fields:
+          -
+            import: 'statamic-peak-seo::seo_jsonld'
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'
+          -
+            handle: id_internal
+            field:
+              type: integer
+              localizable: true
+              validate: required|integer
+          -
+            handle: objektnr_extern
+            field:
+              localizable: true
+              type: text
+title: 'Estate entry'

@@ -1,0 +1,98 @@
+version: "3.8"
+services:
+  laravel_fpm:
+    build:
+      context: .
+      target: fpm_server
+    image: innobrain-makler-immoinvest/fpm_server
+    networks:
+      - innobrain-makler-immoinvest
+    depends_on:
+      - mysql
+    volumes:
+      - ./xmls:/var/www/html/storage/xmls
+    env_file:
+      - .env
+    environment:
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+
+  laravel_web:
+    restart: always
+    build:
+      context: .
+      target: web_server
+    image: innobrain-makler-immoinvest/web_server
+    environment:
+      - FPM_HOST=laravel_fpm:9000
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    networks:
+      - innobrain-makler-immoinvest
+    depends_on:
+      - laravel_fpm
+    volumes:
+      - ./xmls:/var/www/html/storage/xmls
+    env_file:
+      - .env
+    # ...
+
+  mysql:
+    image: "mysql:8.0"
+    environment:
+      MYSQL_ROOT_PASSWORD: "${DB_PASSWORD}"
+      MYSQL_DATABASE: "${DB_DATABASE}"
+      MYSQL_USER: "${DB_USERNAME}"
+      MYSQL_PASSWORD: "${DB_PASSWORD}"
+    volumes:
+      - "innobrain-makler-immoinvest-mysql:/var/lib/mysql"
+    networks:
+      - innobrain-makler-immoinvest
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-p${DB_PASSWORD}"]
+      retries: 3
+      timeout: 5s
+    env_file:
+      - .env
+
+  laravel_queue:
+    build:
+      context: .
+      target: cli
+    image: innobrain-makler-immoinvest/cli
+    networks:
+      - innobrain-makler-immoinvest
+    command: php artisan queue:listen
+    depends_on:
+      - mysql
+    env_file:
+      - .env
+    environment:
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+
+  laravel_cron:
+    build:
+      context: .
+      target: cron
+    image: innobrain-makler-immoinvest/cron
+    networks:
+      - innobrain-makler-immoinvest
+    env_file:
+      - .env
+    environment:
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+
+  libpostal:
+    image: "libpostal"
+    command: gunicorn --bind 0.0.0.0:80 manage:app
+    networks:
+      - innobrain-makler-immoinvest
+
+networks:
+  innobrain-makler-immoinvest:
+
+volumes:
+  innobrain-makler-immoinvest-mysql:
+  xmls:
