@@ -2,7 +2,7 @@
 id: 3fec85a5-9915-4400-8de6-890c979dd7ef
 blueprint: landing_page
 template: pages/home
-title: 'IHR IMMOBILIENPARTNER<br>IN STUTTGART UND FELLBACH'
+title: 'Lorem Ipsum'
 view_model: App\ViewModels\HomeViewModel
 subtitle: 'Wir freuen uns – Auf gute Partnerschaft!'
 header_seller_content: true
@@ -12,9 +12,9 @@ seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1716895161
+updated_at: 1717165235
 header_type: type_6
-content_heading_h2: 'INDIVIDUELL. ZUVERLÄSSIG. SICHER.'
+content_heading_h2: 'Lorem Ipsum'
 content_text:
   -
     type: paragraph
@@ -66,71 +66,51 @@ content_second_text:
 logo_cloud:
   -
     id: lk897ptz
-    logo:
-      - siegel/immoscout.png
     type: new_set
     enabled: true
     logo_link: 'https://www.immobilienscout24.de/'
   -
     id: lk8980f6
-    logo:
-      - siegel/immoscout24-siegel_experte-digital.svg
     type: new_set
     enabled: true
     logo_link: 'https://www.immobilienscout24.de/'
   -
     id: lk8987mp
-    logo:
-      - siegel/sprengnetter.png
     type: new_set
     enabled: true
     logo_link: 'https://www.sprengnetter.de/'
   -
     id: lw65qum9
-    logo:
-      - siegel/logo_ivd.jpg
     logo_link: 'https://ivd.net/'
     type: new_set
     enabled: true
   -
     id: lw65r8jz
-    logo:
-      - siegel/2024_-_siegel_partner-marktforschung_ivd_schmal.jpg
     logo_link: 'https://ivd.net/'
     type: new_set
     enabled: true
   -
     id: lw65s7ia
-    logo:
-      - siegel/2023_-_siegel_partner-marktforschung_ivd_72dpi_rgb.jpeg
     logo_link: 'https://ivd.net/'
     type: new_set
     enabled: true
   -
     id: lw65sjjx
-    logo:
-      - siegel/01_kleiner_2022_-_siegel_partner-marktforschung_rgb.jpg
     logo_link: 'https://ivd.net/'
     type: new_set
     enabled: true
   -
     id: lw65sy4k
-    logo:
-      - siegel/qualitaetsmakler-volksbankamwuerttemberg-ihrimmobilienpartnergmbh_co.kg.png
     logo_link: 'https://de.onoffice.com/'
     type: new_set
     enabled: true
   -
     id: lw65t92g
-    logo:
-      - siegel/jacasa-siegel-top-bewertet.svg
     logo_link: 'https://www.jacasa.de/'
     type: new_set
     enabled: true
   -
     id: lw65tmwv
-    logo:
-      - siegel/231206_immobilie1-siegel.jpg
     logo_link: 'https://www.immobilie1.de/'
     type: new_set
     enabled: true
@@ -371,8 +351,6 @@ posts_header: 'MEHR ZUM THEMA IMMOBILIEN.'
 cta_sub_header: 'Wonach suchen Sie?'
 posts_btn: 'Zu den News'
 posts_link: /aktuelles
-content_second_image:
-  - csm_voba_am_wu__rttemberg_p7a6289_43e34e140b.jpg
 content_with_image_replicator:
   -
     id: lw4qylfk
@@ -495,6 +473,4 @@ steps:
     enabled: true
 logo_cols: '10'
 show_newsletter: 'yes'
-header_day:
-  - header_startseite.jpg
 ---
