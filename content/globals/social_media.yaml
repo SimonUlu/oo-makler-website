@@ -1,0 +1,15 @@
+title: 'Social media'
+data:
+  social_media:
+    -
+      id: ljsojl4t
+      handle: voba_immobilienpartner
+      prefix: 'https://www.instagram.com/'
+      type: instagram
+      enabled: true
+    -
+      id: ljsom372
+      handle: company/vobaaw/
+      prefix: 'https://www.linkedin.com/'
+      type: linkedin
+      enabled: true

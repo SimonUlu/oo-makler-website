@@ -1,0 +1,10 @@
+title: 'Contact Person'
+data:
+  contact_header: 'IHRE PERSÖNLICHEN<br>IMMOBILIENEXPERTEN.'
+  contact_subheader: 'Jede Immobilienreise ist einzigartig – genau wie die Begleitung, die sie verdient. Lernen Sie unser Team kennen, das mit Fachwissen, Engagement und einem offenen Ohr für Ihre Wünsche und Bedürfnisse da ist.'
+  contact_person: 'Roland Kessel'
+  contact_position: Geschäftsführer
+  contact_number: '+49 (0)711 / 30501-1211'
+  contact_email: roland.kessel@voba-immobilienpartner.de
+  contact_img:
+    - team/roland_kessel.jpg

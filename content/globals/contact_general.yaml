@@ -1,0 +1,9 @@
+title: 'Kontakt Allgemein'
+data:
+  header: 'Wir sind für Sie da!'
+  text: 'Wir sind Montag bis Freitag von 08:30 - 17:00 gerne telefonisch für Sie erreichbar.'
+  text_two: 'Ebenfalls können Sie uns jeder Zeit per Mail erreichen.'
+  btn: 'Jetzt Termin vereinbaren'
+  btn_link: /kontakt
+  img:
+    - csm_voba_am_wu__rttemberg_p7a6289_43e34e140b.jpg

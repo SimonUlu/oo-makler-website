@@ -1,0 +1,27 @@
+title: 'Suchauftrag CTA'
+data:
+  header: 'Der Suchauftrag ist einer der wichtigsten Funktionen einer Immobilienmakler-Website.'
+  intro: 'Motivieren Sie Ihre Kunden mit den richtigen Argumenten und mit dem richtigen Design einen Suchauftrag anzulegen.'
+  info:
+    -
+      id: lnncp45l
+      item: 'Ein abgeschlossener Suchauftrag'
+      type: neues_set
+      enabled: true
+    -
+      id: lnncp5ec
+      item: 'ist in Bezug auf'
+      type: neues_set
+      enabled: true
+    -
+      id: lnncp6pu
+      item: 'nächsten Immobilienkauf'
+      type: neues_set
+      enabled: true
+    -
+      id: lnncp86p
+      item: 'schon die halbe Miete'
+      type: neues_set
+      enabled: true
+  suchautrag_img:
+    - search_for_estate.jpeg

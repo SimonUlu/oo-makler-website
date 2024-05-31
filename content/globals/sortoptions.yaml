@@ -1,0 +1,53 @@
+title: SortOptions
+data:
+  sort_options:
+    -
+      id: '1'
+      option_text: 'Preis (niedrigster zuerst)'
+      type: neues_set
+      enabled: true
+      isstandard: false
+      onoffice_fieldname: kaufpreis
+      direction: asc
+      show_kauf: true
+      show_miete: false
+    -
+      id: '2'
+      option_text: 'Neueste zuerst'
+      type: neues_set
+      enabled: true
+      isstandard: true
+      onoffice_fieldname: erstellt_am
+      direction: desc
+      show_kauf: true
+      show_miete: true
+    -
+      id: '3'
+      option_text: 'Preis (höchster zuerst)'
+      type: neues_set
+      enabled: true
+      isstandard: false
+      onoffice_fieldname: kaufpreis
+      direction: desc
+      show_kauf: true
+      show_miete: false
+    -
+      id: '4'
+      option_text: 'Größte zuerst'
+      type: neues_set
+      enabled: true
+      isstandard: false
+      onoffice_fieldname: wohnflaeche
+      direction: desc
+      show_kauf: true
+      show_miete: true
+    -
+      id: '5'
+      option_text: 'Kleinste zuerst'
+      type: neues_set
+      enabled: true
+      isstandard: false
+      onoffice_fieldname: wohnflaeche
+      direction: asc
+      show_kauf: true
+      show_miete: true

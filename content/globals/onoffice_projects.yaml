@@ -1,0 +1,47 @@
+title: 'onOffice Projects'
+data:
+  image_second:
+    - search_for_estate.jpeg
+  imagesectionheader: 'Lorem Ipsum'
+  imagesectiondescription: 'In diesem Abschnitt haben Sie die Möglichkeit, Informationen bereitzustellen, die indirekt mit dem Service verbunden sind. Betonen Sie beispielsweise die Professionalität Ihres Teams und die umfangreiche Erfahrung in der Durchführung von Neubauprojekten. Nutzen Sie diesen Bereich auch, um auf bevorstehende Veranstaltungen hinzuweisen, die mit dem Service in Verbindung stehen. Egal, was Sie bewerben möchten, hier haben Sie ausreichend Platz und Designmöglichkeiten, um Ihre Informationen auf ansprechende und stilvolle Weise zu präsentieren und an Kunden zu vermitteln.'
+  imagesectionlist:
+    -
+      id: loww05n5
+      listitem: 'Lorem Ipsum'
+      type: neues_set
+      enabled: true
+  header_image:
+    - 1004_63743_realistic_photography_of_a_beautiful_white_house_sur_2dd38038-ee86-45c6-87d1-eaa723491226.png
+  estate_pages:
+    -
+      id: lowvyeyb
+      text: 'Lorem Ipsum'
+      headline: 'Aktuelle Projekte'
+      button_text: 'Aktuelle Projekte ansehen'
+      estate_page_img:
+        - praxen.jpg
+      type: neues_set
+      enabled: true
+      cta_estate_link: '#current-projects'
+    -
+      id: lowvzgo7
+      text: 'Lorem Ipsum'
+      headline: 'Vergangene Projekte'
+      button_text: 'Aktuelle Projekte ansehen'
+      estate_page_img:
+        - wohnungen.jpg
+      type: neues_set
+      enabled: true
+      cta_estate_link: '#past-projects'
+    -
+      id: lowvzfez
+      text: 'Lorem Ipsum'
+      headline: 'Zukünftige Projekte'
+      button_text: 'Aktuelle Projekte ansehen'
+      estate_page_img:
+        - hauser.jpg
+      type: neues_set
+      enabled: true
+      cta_estate_link: '#future-projects'
+  cta_headline: 'Kompetenz trifft Innovation'
+  cta_sub_header: 'Lernen Sie unsere Neubauprojekte kennen.'

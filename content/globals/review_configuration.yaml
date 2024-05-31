@@ -1,0 +1,4 @@
+title: 'Review Konfiguration'
+data:
+  google_reviews: true
+  immoscout24_reviews: false

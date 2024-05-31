@@ -1,0 +1,7 @@
+title: 'Immobilien Darstellung Konfiguration'
+data:
+  listappearance: boxes
+  ansprechpartner: true
+  show_map: 'yes'
+  pagination: 10
+  estate_source: database

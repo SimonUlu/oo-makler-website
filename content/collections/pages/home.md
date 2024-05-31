@@ -1,0 +1,500 @@
+---
+id: 3fec85a5-9915-4400-8de6-890c979dd7ef
+blueprint: landing_page
+template: pages/home
+title: 'IHR IMMOBILIENPARTNER<br>IN STUTTGART UND FELLBACH'
+view_model: App\ViewModels\HomeViewModel
+subtitle: 'Wir freuen uns – Auf gute Partnerschaft!'
+header_seller_content: true
+seo_noindex: false
+seo_nofollow: false
+seo_canonical_type: entry
+sitemap_change_frequency: weekly
+sitemap_priority: 0.5
+updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
+updated_at: 1716895161
+header_type: type_6
+content_heading_h2: 'INDIVIDUELL. ZUVERLÄSSIG. SICHER.'
+content_text:
+  -
+    type: paragraph
+    attrs:
+      textAlign: left
+      class: null
+    content:
+      -
+        type: text
+        text: 'Ihre Immobilie liegt Ihnen sehr am Herzen – uns mindestens genauso. Wir wissen, dass der Immobilienkauf- und verkauf eine Lebensentscheidung und Vertrauenssache ist. Er muss wohl überlegt und gut durchdacht werden, braucht zudem viel Erfahrung, Know-How und Zeit in der Durchführung.'
+content_statistics:
+  -
+    id: lk880tmf
+    type: new_set
+    enabled: true
+    number: '100'
+    description: '<b>Wohnungen</b>'
+  -
+    id: lk88obzy
+    number: '100'
+    description: '<b>Häuser</b>'
+    type: new_set
+    enabled: true
+  -
+    id: lk88ok4p
+    number: '100'
+    description: '<b>Spezialimmobilien</b>'
+    type: new_set
+    enabled: true
+content_second_heading_h2: 'UNSER TEAM.'
+content_second_text:
+  -
+    type: paragraph
+    attrs:
+      textAlign: left
+      class: null
+    content:
+      -
+        type: text
+        text: 'Wir sind Ihre Experten für Kauf, Verkauf und Vermietung von Immobilien in Oberbayern. Mit unserer langjährigen Erfahrung und starken Partnern stehen wir Ihnen gerne zur Seite und unterstützen Sie bei jeder Art von Immobiliengeschäft.'
+  -
+    type: paragraph
+    attrs:
+      textAlign: left
+      class: null
+    content:
+      -
+        type: hardBreak
+logo_cloud:
+  -
+    id: lk897ptz
+    logo:
+      - siegel/immoscout.png
+    type: new_set
+    enabled: true
+    logo_link: 'https://www.immobilienscout24.de/'
+  -
+    id: lk8980f6
+    logo:
+      - siegel/immoscout24-siegel_experte-digital.svg
+    type: new_set
+    enabled: true
+    logo_link: 'https://www.immobilienscout24.de/'
+  -
+    id: lk8987mp
+    logo:
+      - siegel/sprengnetter.png
+    type: new_set
+    enabled: true
+    logo_link: 'https://www.sprengnetter.de/'
+  -
+    id: lw65qum9
+    logo:
+      - siegel/logo_ivd.jpg
+    logo_link: 'https://ivd.net/'
+    type: new_set
+    enabled: true
+  -
+    id: lw65r8jz
+    logo:
+      - siegel/2024_-_siegel_partner-marktforschung_ivd_schmal.jpg
+    logo_link: 'https://ivd.net/'
+    type: new_set
+    enabled: true
+  -
+    id: lw65s7ia
+    logo:
+      - siegel/2023_-_siegel_partner-marktforschung_ivd_72dpi_rgb.jpeg
+    logo_link: 'https://ivd.net/'
+    type: new_set
+    enabled: true
+  -
+    id: lw65sjjx
+    logo:
+      - siegel/01_kleiner_2022_-_siegel_partner-marktforschung_rgb.jpg
+    logo_link: 'https://ivd.net/'
+    type: new_set
+    enabled: true
+  -
+    id: lw65sy4k
+    logo:
+      - siegel/qualitaetsmakler-volksbankamwuerttemberg-ihrimmobilienpartnergmbh_co.kg.png
+    logo_link: 'https://de.onoffice.com/'
+    type: new_set
+    enabled: true
+  -
+    id: lw65t92g
+    logo:
+      - siegel/jacasa-siegel-top-bewertet.svg
+    logo_link: 'https://www.jacasa.de/'
+    type: new_set
+    enabled: true
+  -
+    id: lw65tmwv
+    logo:
+      - siegel/231206_immobilie1-siegel.jpg
+    logo_link: 'https://www.immobilie1.de/'
+    type: new_set
+    enabled: true
+references_header_h2: 'Zeigen Sie wie gut Sie sind!'
+references_text:
+  -
+    type: paragraph
+    attrs:
+      textAlign: left
+      class: null
+    content:
+      -
+        type: text
+        text: 'Was überzeugt Kunden mehr als Beweise für erfolgreich erledigte Arbeit? Integrieren Sie eine Referenzsektion auf Ihrer Website und überzeugen Sie Kunden von Ihrer Professionalität.'
+references_type: type_2
+references_slider_type: references_type_2
+services_header_h2: 'Ein Immobilienmakler wird definiert, durch die Leistungen die erbringt.'
+services_text:
+  -
+    type: paragraph
+    attrs:
+      textAlign: left
+      class: null
+    content:
+      -
+        type: text
+        text: 'In dieser Sektion können Sie jede Dienstleistung, die Ihr Unternehmen anbietet, visuell ansprechend beschreiben. Egal, ob Sie 3, 6 oder 8 Services anbieten, mit unserem Template wird jede Darstellung smooth wirken.'
+services_replicator:
+  -
+    id: lk89a4xo
+    svg:
+      code: |-
+        <svg xmlns="https://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-primary-600 dark:text-primary-300">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 5.25a3 3 0 013 3m3 0a6 6 0 01-7.029 5.912c-.563-.097-1.159.026-1.563.43L10.5 17.25H8.25v2.25H6v2.25H2.25v-2.818c0-.597.237-1.17.659-1.591l6.499-6.499c.404-.404.527-1 .43-1.563A6 6 0 1121.75 8.25z"></path>
+                        </svg>
+      mode: htmlmixed
+    header:
+      -
+        type: paragraph
+        attrs:
+          class: null
+        content:
+          -
+            type: text
+            marks:
+              -
+                type: bold
+            text: 'Beschreiben Sie'
+    text:
+      -
+        type: paragraph
+        attrs:
+          class: null
+        content:
+          -
+            type: text
+            text: 'Profitieren Sie von unserem anpassbarem Template und beschreiben Sie Ihren Service, so wie Sie es für richtig halten.'
+    type: new_set
+    enabled: true
+  -
+    id: lk89atba
+    svg:
+      code: |-
+        <svg xmlns="https://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-primary-600 dark:text-primary-300">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 5.25a3 3 0 013 3m3 0a6 6 0 01-7.029 5.912c-.563-.097-1.159.026-1.563.43L10.5 17.25H8.25v2.25H6v2.25H2.25v-2.818c0-.597.237-1.17.659-1.591l6.499-6.499c.404-.404.527-1 .43-1.563A6 6 0 1121.75 8.25z"></path>
+                        </svg>
+      mode: htmlmixed
+    header:
+      -
+        type: paragraph
+        attrs:
+          class: null
+        content:
+          -
+            type: text
+            marks:
+              -
+                type: bold
+            text: 'jede Leistung'
+    text:
+      -
+        type: paragraph
+        attrs:
+          class: null
+        content:
+          -
+            type: text
+            text: 'Profitieren Sie von unserem anpassbarem Template und beschreiben Sie Ihren Service, so wie Sie es für richtig halten.'
+    type: new_set
+    enabled: true
+  -
+    id: lk89avjb
+    svg:
+      code: |-
+        <svg xmlns="https://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-primary-600 dark:text-primary-300">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 5.25a3 3 0 013 3m3 0a6 6 0 01-7.029 5.912c-.563-.097-1.159.026-1.563.43L10.5 17.25H8.25v2.25H6v2.25H2.25v-2.818c0-.597.237-1.17.659-1.591l6.499-6.499c.404-.404.527-1 .43-1.563A6 6 0 1121.75 8.25z"></path>
+                        </svg>
+      mode: htmlmixed
+    header:
+      -
+        type: paragraph
+        attrs:
+          class: null
+        content:
+          -
+            type: text
+            marks:
+              -
+                type: bold
+            text: 'ganz individuell'
+    text:
+      -
+        type: paragraph
+        attrs:
+          class: null
+        content:
+          -
+            type: text
+            text: 'Profitieren Sie von unserem anpassbarem Template und beschreiben Sie Ihren Service, so wie Sie es für richtig halten.'
+    type: new_set
+    enabled: true
+seo_content_type: type_1
+seo_before_heading_h2:
+  -
+    type: paragraph
+    attrs:
+      textAlign: left
+      class: null
+    content:
+      -
+        type: text
+        marks:
+          -
+            type: italic
+        text: 'Sie suchen Kompetenz und Erfahrung in Stuttgart und Fellbach?'
+seo_heading_h2: 'Wir sind Ihre Immobilienexperten für Stuttgart und Fellbach'
+seo_after_heading_h2:
+  -
+    type: paragraph
+    attrs:
+      textAlign: left
+      class: null
+    content:
+      -
+        type: text
+        text: 'Vertrauen Sie auf unsere lokale Expertise und langjährige Erfahrung im Immobiliensektor. Ob kaufen, verkaufen oder mieten – wir bieten Ihnen maßgeschneiderte Lösungen und persönliche Beratung für Ihre Immobilienanliegen. Entdecken Sie mit uns die attraktivsten Objekte in diesen dynamischen Regionen. Kontaktieren Sie uns für eine individuelle Beratung und profitieren Sie von unserem umfassenden Service, der Sie zielsicher zu Ihrer Wunschimmobilie führt.'
+cta_headline: 'Spielen Sie hier die Lieblingskategorien oder Ortschaften Ihrer Kunden aus'
+cta_description: 'Sie können ganz nach Ihren Wünschen kategorisieren – sei es in Wohnungen, Büros & Praxen, Häusern, Grundstücken oder was am besten zu Ihnen passt.'
+show_cta: 'yes'
+estate_pages:
+  -
+    id: lmqfp1nv
+    headline: 'Büros & Praxen'
+    button_text: 'Büros ansehen'
+    cta_estate_link: /immobilien
+    type: neues_set
+    enabled: true
+    description:
+      -
+        type: paragraph
+        attrs:
+          textAlign: left
+          class: null
+        content:
+          -
+            type: text
+            text: 'Kategorie 1 – Beschreiben Sie hier in wenigen Sätzen oder Worten Ihre erste Immobilienkategorie oder auch den wichtigsten Ort Ihres Geschäftsgebiets. Nach Klick auf den Button, werden Kunden mit dem entsprechend gesetzten Filter auf die Immobiliendarstellung weitergeleitet.'
+    alpine_key: '1'
+    h2_headline: 'Büros auf unserer Webseite finden'
+    estate_page_img:
+      - architecture-gef0672c68_1920.jpg
+  -
+    id: lmqfpisy
+    headline: Wohnungen
+    button_text: 'Wohnungen ansehen'
+    cta_estate_link: /immobilien
+    type: neues_set
+    enabled: true
+    description:
+      -
+        type: paragraph
+        attrs:
+          textAlign: left
+          class: null
+        content:
+          -
+            type: text
+            text: 'Ortschaft 1 - Ein bezaubernder Immobilienmarkt in Deutschland. Die Stadt verbindet historischen Charme mit modernem Wohnraum inmitten einer malerischen Landschaft. Hier erwartet Sie eine lebendige Immobilienlandschaft und eine hohe Lebensqualität.'
+    alpine_key: '2'
+    h2_headline: 'Wohnungen auf unserer Webseite finden'
+    estate_page_img:
+      - architecture-gef0672c68_1920.jpg
+  -
+    id: lmqfpl1g
+    headline: Häuser
+    button_text: 'Häuser ansehen'
+    cta_estate_link: /immobilien
+    type: neues_set
+    enabled: true
+    description:
+      -
+        type: paragraph
+        attrs:
+          textAlign: left
+          class: null
+        content:
+          -
+            type: text
+            text: 'Kategorie 2 – Beschreiben Sie hier in wenigen Sätzen oder Worten Ihre erste Immobilienkategorie oder auch Ihren wichtigsten Ort. Nach klick wird man mit den entsprechenden Filtern auf die Immobiliendarstellung weitergeleitet.'
+    alpine_key: '3'
+    h2_headline: 'Häuser auf unserer Webseite finden'
+    estate_page_img:
+      - architecture-gef0672c68_1920.jpg
+statistic_type: type_1
+services_type: type_3
+content_two_type: type_1
+cta_variante: type_3
+show_contact: 'no'
+show_referenzen: 'no'
+contact_variante: variante_1
+show_logos: 'yes'
+show_suchauftrag: 'no'
+slider_headline: 'Ausgewählte Immobilien aus unserem Portfolio.'
+review_type: type_1
+logo_header: 'UNSER SERVICE IST AUSGEZEICHNET'
+customer_review_text:
+  -
+    type: paragraph
+    attrs:
+      textAlign: left
+      class: null
+    content:
+      -
+        type: text
+        text: fbdgfbgfnghfmntzd
+show_posts: 'yes'
+posts_header: 'MEHR ZUM THEMA IMMOBILIEN.'
+cta_sub_header: 'Wonach suchen Sie?'
+posts_btn: 'Zu den News'
+posts_link: /aktuelles
+content_second_image:
+  - csm_voba_am_wu__rttemberg_p7a6289_43e34e140b.jpg
+content_with_image_replicator:
+  -
+    id: lw4qylfk
+    image:
+      - csm_voba_am_wu__rttemberg_p7a6289_43e34e140b.jpg
+    headline: 'UNSER TEAM.'
+    text:
+      -
+        type: paragraph
+        attrs:
+          class: null
+        content:
+          -
+            type: text
+            text: 'Wir sind der Immobilienpartner in Ihrer Nachbarschaft – immer für Sie da, kompetent und sozial engagiert in der Region. Wir nehmen uns Zeit für Sie und Ihre Wünsche, ganz gleich in welcher Lebenssituation Sie sich gerade befinden und welchen Bedarf Sie an professioneller Beratung haben.'
+    button_link: /team
+    type: neues_set
+    enabled: true
+  -
+    id: lw4qz80z
+    image:
+      - 02_1_beratung_610_x_370_72dpi.jpg
+    headline: 'UNSER SERVICE FÜR SIE.'
+    text:
+      -
+        type: paragraph
+        attrs:
+          class: null
+        content:
+          -
+            type: text
+            text: 'Gemeinsam mit Ihnen finden wir die optimale, ganz individuelle Lösung und bei Bedarf auch eine marktgerechte Finanzierung. Stetiger Austausch und partnerschaftliche Zusammenarbeit sind uns eine Herzensangelegenheit. Unser kompetentes Team und unsere Spezialisten vor Ort sind stets an Ihrer Seite und gehen für Sie immer einen Schritt weiter als andere.'
+    type: neues_set
+    enabled: true
+steps:
+  -
+    id: lw4rblic
+    number: '1'
+    headline: 'Individuelle Beratung'
+    description:
+      -
+        type: paragraph
+        attrs:
+          class: null
+        content:
+          -
+            type: text
+            text: 'Ob Kauf oder Verkauf – Wir beraten Sie ganzheitlich, nachhaltig und individuell zugeschnitten auf Ihre Lebenssituation.'
+    image:
+      - 01_grafik_schritte_erfolg.png
+    type: neues_set
+    enabled: true
+  -
+    id: lw4rcsuq
+    number: '2'
+    headline: Marktwertermittlung
+    description:
+      -
+        type: paragraph
+        attrs:
+          class: null
+        content:
+          -
+            type: text
+            text: 'Wir berechnen den Marktwert Ihrer Immobilie nach den allgemein gültigen Wertermittlungs-verfahren.'
+    image:
+      - 02_grafik_schritte_erfolg.png
+    type: neues_set
+    enabled: true
+  -
+    id: lw4rcrlq
+    number: '3'
+    headline: 'Begleitung und Transparenz'
+    description:
+      -
+        type: paragraph
+        attrs:
+          class: null
+        content:
+          -
+            type: text
+            text: 'Wir geben Ihnen Zugang zu unserem Kundentool vobaimmocount, übermitteln Ihnen alle wichtigen Dokumente und begleiten Sie in allen Phasen des Projekts. Zudem beschaffen wir für Sie bei Ämtern und Behörden alle notwendigen Unterlagen.'
+    image:
+      - 03_grafik_schritte_erfolg.png
+    type: neues_set
+    enabled: true
+  -
+    id: lw4rcpqu
+    number: '4'
+    headline: Vermarktung
+    description:
+      -
+        type: paragraph
+        attrs:
+          class: null
+        content:
+          -
+            type: text
+            text: 'Wir erstellen ein aussagekräftiges Exposé mit durchdachter Objekt- und Lagebeschreibung, Grundrissen und professionellen Objektfotos. Auf dieser Grundlage präsentieren wir Ihre Immobilie auf allen wichtigen Vertriebswegen.'
+    image:
+      - 04_grafik_schritte_erfolg.png
+    type: neues_set
+    enabled: true
+  -
+    id: lw4rcyo2
+    number: '5'
+    headline: Notartermin
+    description:
+      -
+        type: paragraph
+        attrs:
+          class: null
+        content:
+          -
+            type: text
+            text: 'Wir veranlassen die Vorbereitung und Durchführung des notariellen Kaufvertrages, stimmen Termine mit allen Beteiligten ab und begleiten Sie beim Notar und darüber hinaus.'
+    image:
+      - 05_grafik_schritte_erfolg.png
+    type: neues_set
+    enabled: true
+logo_cols: '10'
+show_newsletter: 'yes'
+header_day:
+  - header_startseite.jpg
+---

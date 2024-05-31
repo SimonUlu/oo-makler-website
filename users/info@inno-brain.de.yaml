@@ -1,0 +1,8 @@
+name: 'Florian Imgrund'
+super: true
+id: 95e99389-87ef-46dc-89fe-516fc22e966e
+password_hash: $2y$10$LUAzuEn2iGfe1bn0C2xfsuxM8sOP3.C2z43WkL/Rz4vYXfVof0gES
+preferences:
+  collections:
+    pages:
+      after_save: continue_editing
