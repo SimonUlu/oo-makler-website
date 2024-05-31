@@ -18,14 +18,14 @@ class EntryFilterEstates
     {
         foreach ($this->filter as $key => $conditions) {
             foreach ($conditions as $condition) {
-                if(!is_array($condition)) {
-                    $condition = 
+                if (! is_array($condition)) {
+                    $condition =
                         [
                             'op' => '=', // Standardoperator
                             'val' => $condition, // Der einfache Wert
                         ];
-                    $key = 0; 
-                } 
+                    $key = 0;
+                }
                 $op = strtolower($condition['op']);
                 $val = $condition['val'];
 
