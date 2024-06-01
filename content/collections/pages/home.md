@@ -12,7 +12,7 @@ seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1717247338
+updated_at: 1717247935
 header_type: type_6
 content_heading_h2: 'Berliner Volksbank Immobilien'
 content_text:
@@ -242,14 +242,7 @@ seo_before_heading_h2:
     attrs:
       textAlign: left
       class: null
-    content:
-      -
-        type: text
-        marks:
-          -
-            type: italic
-        text: 'Sie suchen Kompetenz und Erfahrung in Stuttgart und Fellbach?'
-seo_heading_h2: 'Wir sind Ihre Immobilienexperten für Stuttgart und Fellbach'
+seo_heading_h2: 'An Ihrer Seite im Immobiliengeschäft'
 seo_after_heading_h2:
   -
     type: paragraph
@@ -259,7 +252,7 @@ seo_after_heading_h2:
     content:
       -
         type: text
-        text: 'Vertrauen Sie auf unsere lokale Expertise und langjährige Erfahrung im Immobiliensektor. Ob kaufen, verkaufen oder mieten – wir bieten Ihnen maßgeschneiderte Lösungen und persönliche Beratung für Ihre Immobilienanliegen. Entdecken Sie mit uns die attraktivsten Objekte in diesen dynamischen Regionen. Kontaktieren Sie uns für eine individuelle Beratung und profitieren Sie von unserem umfassenden Service, der Sie zielsicher zu Ihrer Wunschimmobilie führt.'
+        text: "Wir vermitteln Immobilien in Berlin & Brandenburg. Als 100%ige Tochter der Berliner Volksbank eG und damit im VR-Banken-Verbund greifen wir dabei auf ein riesiges Netzwerk zum Thema Immobilien und deren Finanzierung und Versicherung zurück. Neben dem klassischen Verkauf von Wohnimmobilien und Grundstücken betreuen wir auch Bauträger und deren Neubauprojekte, Investoren sowie Zwangsversteigerungs- und Bieterverfahren. Der Verkauf oder Kauf einer Immobilie ist für die meisten Menschen eine der wichtigsten Entscheidungen im Leben. Wer dabei Zeit, Ärger und Geld sparen will, beauftragt einen professionellen Immobilienvermittler. Gleichzeitig ist das Zuhause immer Privatsphäre, ob für Eigennutzer oder für Mieter bei Kapitalanlagen. Wir begegnen dieser Verantwortung mit großem Respekt.\_\LGern unterstützen wir auch Sie dabei. Rufen Sie uns einfach an, wir kommen vorbei. Wir kennen nicht nur Ihren Kiez, wir sind auch dort.\LNach Vereinbarung finden Sie uns an diesen Filialstandorten der Berliner Volksbank:\LBerlin: Tegel, Weißensee, Rudow, Zehlendorf und Spandau\LBrandenburg: Königs Wusterhausen, Bernau, Strausberg, Potsdam und Gransee\LUnser Büro in der Bundesallee hilft Ihnen gerne weiter und nennt Ihnen die passenden Ansprechpartner.\_"
 cta_headline: 'Spielen Sie hier die Lieblingskategorien oder Ortschaften Ihrer Kunden aus'
 cta_description: 'Sie können ganz nach Ihren Wünschen kategorisieren – sei es in Wohnungen, Büros & Praxen, Häusern, Grundstücken oder was am besten zu Ihnen passt.'
 show_cta: 'yes'
@@ -526,7 +519,7 @@ steps:
     type: neues_set
     enabled: true
 logo_cols: '10'
-show_newsletter: 'yes'
+show_newsletter: 'no'
 header_day:
   - header_placeholder.jpeg
 slider_subheader: 'Lorem Ipsum'

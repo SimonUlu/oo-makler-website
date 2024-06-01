@@ -1,7 +1,7 @@
 {{# @name Footer @desc The sites footer rendered on each page. #}}
 
 <!-- /layout/_footer.antlers.html -->
-<footer class="p-4 bg-slate-50 sm:p-6">
+<footer class="p-4 custom-gradient-darker sm:p-6">
     <div class="max-w-screen-xl mx-auto">
         <div class="grid gap-8 mt-16 grid-cols-2 md:grid-cols-4 xl:grid-cols-6 xl:mt-0">
             <div class="md:grid md:grid-cols-2 md:gap-8 xl:col-span-2">
@@ -17,7 +17,7 @@
                         <li>
                             <a
                                 href="#"
-                                class="text-sm leading-6 text-gray-600 hover:text-gray-900"
+                                class="text-sm leading-6 text-white hover:text-gray-900"
                                 >{{business_information:company_name}}</a
                             >
                         </li>
@@ -25,7 +25,7 @@
                         <li>
                             <a
                                 href="#"
-                                class="text-sm leading-6 text-gray-600 hover:text-gray-900"
+                                class="text-sm leading-6 text-white hover:text-gray-900"
                                 >{{business_information:company_street}}
                                 {{business_information:company_house_number}}</a
                             >
@@ -34,7 +34,7 @@
                         <li>
                             <a
                                 href="#"
-                                class="text-sm leading-6 text-gray-600 hover:text-gray-900"
+                                class="text-sm leading-6 text-white hover:text-gray-900"
                                 >{{business_information:company_zip}}
                                 {{business_information:company_city}}</a
                             >
@@ -42,7 +42,7 @@
                         <li>
                             <a
                                 href="tel:{{business_information:company_phone}}"
-                                class="text-sm leading-6 text-gray-600 hover:text-gray-900"
+                                class="text-sm leading-6 text-white hover:text-gray-900"
                                 >Telefon:
                                 {{business_information:company_phone_display}}
                             </a>
@@ -50,7 +50,7 @@
                         <li>
                             <a
                                 href="mailto:{{business_information:company_email}}"
-                                class="text-sm leading-6 text-gray-600 hover:text-gray-900"
+                                class="text-sm leading-6 text-white hover:text-gray-900"
                                 >{{business_information:company_email}}
                             </a>
                         </li>
@@ -60,7 +60,7 @@
             {{footer_layout:content_sections}}
             <div class="grid md:gap-8">
                 <div>
-                    <h3 class="text-sm font-semibold leading-6 text-gray-900">
+                    <h3 class="text-sm font-semibold leading-6 text-gray-200">
                         {{headline}}
                     </h3>
                     <ul role="list" class="mt-6 space-y-2">
@@ -68,7 +68,7 @@
                         <li>
                             <a
                                 href="/{{url}}"
-                                class="text-sm leading-6 text-gray-600 hover:text-gray-900"
+                                class="text-sm leading-6 text-white hover:text-gray-900"
                                 >{{name}}</a
                             >
                         </li>
@@ -78,14 +78,14 @@
             </div>
             {{/footer_layout:content_sections}}
             <div class="md:mt-0">
-                <h3 class="text-sm font-semibold leading-6 text-gray-900">
+                <h3 class="text-sm font-semibold leading-6 text-gray-200">
                     Rechtliches
                 </h3>
                 <ul role="list" class="mt-6 space-y-4">
                     <li>
                         <a
                             href="/impressum"
-                            class="text-sm leading-6 text-gray-600 hover:text-gray-900"
+                            class="text-sm leading-6 text-white hover:text-gray-900"
                             >Impressum</a
                         >
                     </li>
@@ -93,13 +93,13 @@
                     <li>
                         <a
                             href="/datenschutz"
-                            class="text-sm leading-6 text-gray-600 hover:text-gray-900"
+                            class="text-sm leading-6 text-white hover:text-gray-900"
                             >Datenschutz</a
                         >
                     </li>
 
                     <li
-                        class="text-sm leading-6 text-gray-600 hover:text-gray-900"
+                        class="text-sm leading-6 text-white hover:text-gray-900"
                     >
                         <a
                             href="javascript:void(0)"
@@ -116,12 +116,12 @@
         </div>
     </div>
     <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-    <div class="grid grid-cols-12 space-y-4 sm:space-y-0">
+    <div class="grid grid-cols-12 space-y-4 sm:space-y-0 max-w-7xl mx-auto">
         <div
             class="text-center col-span-full sm:col-span-9 sm:flex sm:items-center sm:justify-between"
         >
             <span
-                class="text-sm text-gray-500 sm:text-center dark:text-gray-400"
+                class="text-sm text-gray-200 sm:text-center dark:text-gray-400"
             >
                 &copy; {{ configuration:copyright_since }} {{ unless (now |
                 format('Y')) == configuration:copyright_since }} - {{ now |
@@ -136,7 +136,7 @@
             <div class="flex items-center space-x-2">
                 {{ social_media:social_media }}
                 <a
-                    class="p-1 px-3 -m-1 text-neutral hover:text-primary focus:outline-none focus-visible:ring-2 ring-primary"
+                    class="p-1 px-3 -m-1 text-white hover:text-primary focus:outline-none focus-visible:ring-2 ring-primary"
                     href="{{ prefix }}{{ handle }}"
                     rel="noopener{{ type == 'mastodon' ?= ' me' }}"
                     aria-label="{{ config:app:name }} {{ trans:strings.on }} {{ type | title }}"
