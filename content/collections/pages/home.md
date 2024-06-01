@@ -12,7 +12,7 @@ seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1717165235
+updated_at: 1717243970
 header_type: type_6
 content_heading_h2: 'Lorem Ipsum'
 content_text:
@@ -473,4 +473,6 @@ steps:
     enabled: true
 logo_cols: '10'
 show_newsletter: 'yes'
+header_day:
+  - header_placeholder.jpeg
 ---

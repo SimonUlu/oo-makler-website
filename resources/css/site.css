@@ -32,3 +32,13 @@
 .fullscreen-on-open::-webkit-scrollbar {
     display: none; /* Chrome, Safari and other Webkit browsers */
 }
+
+.custom-gradient {
+    /* Definiert zwei lineare Gradienten */
+    background-image: 
+        linear-gradient(to bottom right, #003064, transparent 50%),
+        linear-gradient(to top left, #EB690B , transparent 50%);
+    
+    /* Stellt sicher, dass beide Gradienten das gesamte Element bedecken */
+    background-size: cover;
+}

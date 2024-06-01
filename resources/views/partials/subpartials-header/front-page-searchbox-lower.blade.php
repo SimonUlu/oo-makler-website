@@ -72,35 +72,6 @@
             Suchen
         </button>
     </form>
-    <div class="hidden gap-x-8 justify-center items-center p-4 lg:flex">
-        <p class="text-base italic text-gray-400">Sie möchten Ihre Immobilie verkaufen? </p>
-        <x-custom-button 
-            href-tag="/verkaufen" 
-            text="Meine Immobilie verkaufen" 
-            color="primary" 
-            has-arrow="false" 
-            bold="false" 
-            text-size="text-sm"
-            >
-        </x-custom-button>
-        <x-custom-button 
-            href-tag="/vermieten" 
-            text="Meine Immobilie vermieten" 
-            color="primary" 
-            has-arrow="false" 
-            bold="false" 
-            text-size="text-sm"
-            >
-        </x-custom-button>
-        <x-custom-button 
-            href-tag="/bewerten" 
-            text="Meine Immobilie bewerten" 
-            color="primary" 
-            has-arrow="false" 
-            bold="false" 
-            text-size="text-sm"
-            >
-        </x-custom-button>
-    </div>
+    
 
 </div>
