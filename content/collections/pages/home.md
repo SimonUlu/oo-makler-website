@@ -12,9 +12,9 @@ seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1717243970
+updated_at: 1717247338
 header_type: type_6
-content_heading_h2: 'Lorem Ipsum'
+content_heading_h2: 'Berliner Volksbank Immobilien'
 content_text:
   -
     type: paragraph
@@ -24,7 +24,7 @@ content_text:
     content:
       -
         type: text
-        text: 'Ihre Immobilie liegt Ihnen sehr am Herzen – uns mindestens genauso. Wir wissen, dass der Immobilienkauf- und verkauf eine Lebensentscheidung und Vertrauenssache ist. Er muss wohl überlegt und gut durchdacht werden, braucht zudem viel Erfahrung, Know-How und Zeit in der Durchführung.'
+        text: 'Ganz egal, ob Sie vom Eigenheim träumen, mit dem Verkauf Ihrer Immobilie etwas auf die hohe Kante legen wollen oder sich für eine Immobilie als Kapitalanlage entscheiden: Wir unterstützen Sie tatkräftig bei der Umsetzung.'
 content_statistics:
   -
     id: lk880tmf
@@ -44,7 +44,7 @@ content_statistics:
     description: '<b>Spezialimmobilien</b>'
     type: new_set
     enabled: true
-content_second_heading_h2: 'UNSER TEAM.'
+content_second_heading_h2: 'Für Käufer'
 content_second_text:
   -
     type: paragraph
@@ -127,7 +127,7 @@ references_text:
         text: 'Was überzeugt Kunden mehr als Beweise für erfolgreich erledigte Arbeit? Integrieren Sie eine Referenzsektion auf Ihrer Website und überzeugen Sie Kunden von Ihrer Professionalität.'
 references_type: type_2
 references_slider_type: references_type_2
-services_header_h2: 'Ein Immobilienmakler wird definiert, durch die Leistungen die erbringt.'
+services_header_h2: 'Berliner Volksbank Immobilien'
 services_text:
   -
     type: paragraph
@@ -137,7 +137,7 @@ services_text:
     content:
       -
         type: text
-        text: 'In dieser Sektion können Sie jede Dienstleistung, die Ihr Unternehmen anbietet, visuell ansprechend beschreiben. Egal, ob Sie 3, 6 oder 8 Services anbieten, mit unserem Template wird jede Darstellung smooth wirken.'
+        text: 'Alles unter einem Dach'
 services_replicator:
   -
     id: lk89a4xo
@@ -158,7 +158,7 @@ services_replicator:
             marks:
               -
                 type: bold
-            text: 'Beschreiben Sie'
+            text: Immobilien
     text:
       -
         type: paragraph
@@ -167,9 +167,10 @@ services_replicator:
         content:
           -
             type: text
-            text: 'Profitieren Sie von unserem anpassbarem Template und beschreiben Sie Ihren Service, so wie Sie es für richtig halten.'
+            text: 'Wir bieten eine umfassende Palette an Immobiliendienstleistungen, von der Suche und Vermittlung bis hin zum Verkauf von Wohn- und Gewerbeimmobilien, maßgeschneidert für Ihre individuellen Bedürfnisse.'
     type: new_set
     enabled: true
+    link: /immobilien
   -
     id: lk89atba
     svg:
@@ -189,7 +190,7 @@ services_replicator:
             marks:
               -
                 type: bold
-            text: 'jede Leistung'
+            text: Finanzierung
     text:
       -
         type: paragraph
@@ -198,9 +199,10 @@ services_replicator:
         content:
           -
             type: text
-            text: 'Profitieren Sie von unserem anpassbarem Template und beschreiben Sie Ihren Service, so wie Sie es für richtig halten.'
+            text: 'Unsere Finanzierungsexperten unterstützen Sie mit maßgeschneiderten Lösungen bei der Realisierung Ihres Traumhauses, von der Erstberatung bis zur finalen Kreditvergabe.'
     type: new_set
     enabled: true
+    link: /finanzierung
   -
     id: lk89avjb
     svg:
@@ -220,7 +222,7 @@ services_replicator:
             marks:
               -
                 type: bold
-            text: 'ganz individuell'
+            text: Versicherung
     text:
       -
         type: paragraph
@@ -229,9 +231,10 @@ services_replicator:
         content:
           -
             type: text
-            text: 'Profitieren Sie von unserem anpassbarem Template und beschreiben Sie Ihren Service, so wie Sie es für richtig halten.'
+            text: 'Schützen Sie Ihr Zuhause und Ihre Investitionen mit unseren individuell angepassten Versicherungslösungen, die speziell auf die Bedürfnisse von Immobilieneigentümern und Bauherren zugeschnitten sind.'
     type: new_set
     enabled: true
+    link: /versicherung
 seo_content_type: type_1
 seo_before_heading_h2:
   -
@@ -325,7 +328,7 @@ estate_pages:
     estate_page_img:
       - architecture-gef0672c68_1920.jpg
 statistic_type: type_1
-services_type: type_3
+services_type: type_1
 content_two_type: type_1
 cta_variante: type_3
 show_contact: 'no'
@@ -355,7 +358,7 @@ content_with_image_replicator:
   -
     id: lw4qylfk
     image:
-      - csm_voba_am_wu__rttemberg_p7a6289_43e34e140b.jpg
+      - architecture-gef0672c68_1920.jpg
     headline: 'UNSER TEAM.'
     text:
       -
@@ -369,11 +372,22 @@ content_with_image_replicator:
     button_link: /team
     type: neues_set
     enabled: true
+    image_section_list:
+      -
+        id: lww4c920
+        listitem: 'Lorem Ipsum'
+        type: neues_set
+        enabled: true
+      -
+        id: lww4ccnj
+        listitem: 'Lorem Ipsum'
+        type: neues_set
+        enabled: true
   -
     id: lw4qz80z
     image:
-      - 02_1_beratung_610_x_370_72dpi.jpg
-    headline: 'UNSER SERVICE FÜR SIE.'
+      - architecture-gef0672c68_1920.jpg
+    headline: 'Für Eigentümer'
     text:
       -
         type: paragraph
@@ -385,6 +399,46 @@ content_with_image_replicator:
             text: 'Gemeinsam mit Ihnen finden wir die optimale, ganz individuelle Lösung und bei Bedarf auch eine marktgerechte Finanzierung. Stetiger Austausch und partnerschaftliche Zusammenarbeit sind uns eine Herzensangelegenheit. Unser kompetentes Team und unsere Spezialisten vor Ort sind stets an Ihrer Seite und gehen für Sie immer einen Schritt weiter als andere.'
     type: neues_set
     enabled: true
+    button_link: /verkaufen
+    image_section_list:
+      -
+        id: lww4cepy
+        listitem: 'Lorem Ipsum'
+        type: neues_set
+        enabled: true
+      -
+        id: lww4cfz3
+        listitem: 'Lorem Ipsum'
+        type: neues_set
+        enabled: true
+  -
+    id: lww4dcz1
+    image:
+      - architecture-gef0672c68_1920.jpg
+    headline: 'Für Bauträger'
+    text:
+      -
+        type: paragraph
+        attrs:
+          class: null
+        content:
+          -
+            type: text
+            text: 'Gemeinsam mit Ihnen finden wir die optimale, ganz individuelle Lösung und bei Bedarf auch eine marktgerechte Finanzierung. Stetiger Austausch und partnerschaftliche Zusammenarbeit sind uns eine Herzensangelegenheit. Unser kompetentes Team und unsere Spezialisten vor Ort sind stets an Ihrer Seite und gehen für Sie immer einen Schritt weiter als andere.'
+    type: neues_set
+    enabled: true
+    button_link: /verkaufen
+    image_section_list:
+      -
+        id: lww4cepy
+        listitem: 'Lorem Ipsum'
+        type: neues_set
+        enabled: true
+      -
+        id: lww4cfz3
+        listitem: 'Lorem Ipsum'
+        type: neues_set
+        enabled: true
 steps:
   -
     id: lw4rblic
@@ -475,4 +529,6 @@ logo_cols: '10'
 show_newsletter: 'yes'
 header_day:
   - header_placeholder.jpeg
+slider_subheader: 'Lorem Ipsum'
+slider_button_text: 'Zu unseren Immobilien'
 ---

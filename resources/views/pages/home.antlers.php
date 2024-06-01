@@ -24,10 +24,31 @@
 </div>
 {{/if}}
 
-<section class="relative w-full px-4 lg:px-10 bg-white max-w-7xl mt-8 lg:mt-16">
+{{ if statistic_type != 'type_3' }}
+<section class="w-full text-center bg-white">
+    <div class="relative max-w-5xl pt-16 mx-auto md:px-20 sm:pt-24 sm:pb-4 lg:px-10  max-w-screen-3xl">
+        <h2 class="mb-4 text-4xl font-bold tracking-tight text-gray-900 lg:text-5xl ">{{content_heading_h2}}</h2>
+        <div class="text-gray-500 sm:px-10 sm:text-xl dark:text-gray-400">{{content_text}}</div>
+    </div>
+{{ if statistic_type == 'type_1' }}
+    <div class="w-full custom-gradient-darker">
+        <div>
+            {{ partial:statistics/visits-searches-estates }}
+        </div> 
+    </div>
+{{ /if }}
+{{ if statistic_type == 'type_2' }}
+    <div class="w-full custom-gradient pb-20 mx-auto">
+        {{ partial:statistics/statistics-2 }}
+    </div>
+    {{ /if }}
+</section>
+{{/if}}
+
+<section class="relative w-full px-4 lg:px-10 bg-white max-w-7xl">
     <div class="w-full py-8 mx-auto lg:py-16">
         <div class="text-center text-gray-900">
-            <h3 class="mb-12 text-base text-balance font-bold tracking-tight text-gray-500 max-w-4xl mx-auto">
+            <h3 class="mb-2 text-base text-balance font-bold tracking-tight text-gray-500 max-w-4xl mx-auto">
                     {{slider_subheader}}
             </h3>
             <h2 class="mb-4 text-4xl font-bold tracking-tight text-gray-900 lg:text-5xl ">{{slider_headline}}</h2>
@@ -47,88 +68,35 @@
     </div>
 </section>
 
-{{if show_cta == "yes"}}
-    {{if cta_variante == "type_1"}}
-        <section class="px-4 lg:px-10 max-w-7xl mx-auto">
-            {{partial:cta-sections/cta-estates/cta-estate-section}}
-        </section>
-    {{/if}}
-    {{if cta_variante == "type_2"}}
-    <div class="w-full bg-primary">
-        <section class="w-full px-4 lg:px-10  max-w-7xl mx-auto">
-            {{partial:cta-sections/cta-estates/cta-estate-section-text}}
-        </section>
-    </div>
-    {{/if}}
-    {{if cta_variante == "type_3"}}
-    <section class="w-full md:px-10 mx-auto max-w-7xl mt-8 xl:mt-16 mb-8 xl:mb-16">
-        {{partial:cta-sections/cta-estates/cta-estate-section-bgfull}}
-    </section>
-    {{/if}}
-{{/if}}
-
-
-
-<!-- Section Einleitung & Statistics -->
-{{ if statistic_type != 'type_3' }}
-<section class="w-full px-10 text-center bg-white max-w-screen-3xl">
-    <div class="relative max-w-4xl pt-8 mx-auto md:px-20 sm:pt-16 sm:pb-4 lg:px-10">
-        <h2 class="mb-4 text-4xl font-bold tracking-tight text-gray-900 lg:text-5xl ">{{content_heading_h2}}</h2>
-        <div class="text-gray-500 sm:px-10 sm:text-xl dark:text-gray-400">{{content_text}}</div>
-    </div>
-    {{ if statistic_type == 'type_1' }}
-    <div class="max-w-3xl pb-20 mx-auto">
-        {{ partial:statistics/visits-searches-estates }}
-    </div>
-    {{ /if }}
-    {{ if statistic_type == 'type_2' }}
-    <div class="max-w-3xl pb-20 mx-auto">
-        {{ partial:statistics/statistics-2 }}
-    </div>
-    {{ /if }}
-</section>
-{{/if}}
-
-
 
 {{if content_two_type === "type_1"}}
-<section class="w-full max-w-7xl px-4 lg:px-10  mt-8 bg-white sm:mt-32">
-    {{partial:content-section/team-image-centered}}
-</section>
-{{elseif content_two_type == "type_2"}}
-<section class="w-full max-w-7xl px-4 lg:px-10 mt-8 bg-white sm:mt-32">
-    {{partial:content-section/content-team-section}}
-</section>
-{{/if}}
-
-{{if show_logos == "yes"}}
-<section class="w-full px-4 sm:px-10 bg-white max-w-7xl">
-    {{partial:logo-cloud/badges-with-subtitle}}
-</section>
-{{/if}}
-
-
-{{if show_contact == "yes"}}
-    {{if contact_variante == "variante_2"}}
-    <section class="my-12 px-4 lg:px-10  lg:my-24  w-full max-w-7xl ">
-        <div class="border-t border-b lg:py-16 py-8">
-            {{partial:cta-sections/contact/cta-contact-simple}}
-        </div>
+    <section class="w-full max-w-7xl px-4 lg:px-10  mt-8 bg-white sm:mt-32">
+        {{partial:content-section/content-img-swapped-button}}
     </section>
-    {{else}}
-    <section class="px-4 lg:px-10 lg:my-24 max-w-7xl">
-        <div class="border-t border-b  py-8 lg:py-16">
-            {{partial:cta-sections/contact/cta-contact}}
-        </div>
+    {{elseif content_two_type == "type_2"}}
+    <section class="w-full max-w-7xl px-4 lg:px-10 mt-8 bg-white sm:mt-32">
+        {{partial:content-section/content-img-swapped-button}}
     </section>
-    {{/if}}
 {{/if}}
+
+<section class="bg-gray-100 w-full">
+{{if services_type == "type_1"}}
+<section class="px-4 lg:px-10 mx-auto  max-w-7xl">
+    {{partial:services/services-three-per-column}}
+</section>
+{{else}}
+<section class="px-4 lg:px-10 mx-auto max-w-7xl">
+    {{partial:services/services-with-image}}
+</section>
+{{/if}}
+</section>
+
 
 {{if review_type == "type_1"}}
-<section class="w-full px-4 lg:px-10 bg-gray-100 mb-12 lg:mb-24">
+<section class="w-full px-4 lg:px-10 custom-gradient-darker mb-12 lg:mb-24">
     <div class="max-w-screen-xl px-4 py-8 mx-auto text-left md:text-center lg:py-16 lg:px-6">
         <div class="max-w-screen-sm mx-auto mb-8 lg:mb-16">
-            <h2 class="mb-4 text-4xl font-bold tracking-tight text-gray-900">
+            <h2 class="mb-4 text-4xl font-bold tracking-tight text-white">
                 Was unsere Kunden sagen
             </h2>
         </div>
@@ -197,15 +165,7 @@
 
 
 
-{{if services_type == "type_1"}}
-<section class="px-4 lg:px-10  bg-white max-w-7xl">
-    {{partial:services/services-three-per-column}}
-</section>
-{{else}}
-<section class="px-4 lg:px-10  bg-white max-w-7xl">
-    {{partial:services/services-with-image}}
-</section>
-{{/if}}
+
 
 
 
