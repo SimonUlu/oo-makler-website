@@ -3,7 +3,7 @@ id: 1914c0f1-52bf-4914-aab7-0adbea602f23
 blueprint: leistungen
 view_model: App\ViewModels\VerkaufenViewModel
 template: pages/leistungen/cta-page
-title: 'IHR PARTNER<br>FÜR DEN IMMOBILIENVERKAUF IN STUTTGART UND FELLBACH'
+title: Verkaufen
 subtitle: 'Mit uns zügig und erfolgreich verkaufen'
 description: 'IHRE VORTEILE – UNSERE BESONDEREN LEISTUNGEN SPEZIELL FÜR SIE:'
 subheaderheadline: 'IHRE VORTEILE AUF EINEN BLICK.'
@@ -142,7 +142,7 @@ seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1716910633
+updated_at: 1717251772
 headerbild:
   - architecture-gef0672c68_1920.jpg
 stepsheader: 'UNSER VORGEHEN.'
@@ -155,78 +155,27 @@ show_subheader: 'yes'
 show_services: 'yes'
 services:
   -
-    id: lnlo8het
-    svg: |-
-      <svg class="w-5 h-5 text-white lg:w-6 lg:h-6 dark:text-primary-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"></path>
-                          </svg>
-    itemheader: 'Service 1'
-    itemdescription: 'Hier wird beschrieben, um was es sich bei "Service 1" handelt.'
-    type: new_set
+    id: lww5zh3y
+    header: 'Lorem Ipsum'
+    image:
+      - architecture-gef0672c68_1920.jpg
+    description: 'Ermitteln Sie den Wert Ihrer Immobilie bequem von zu Hause aus – schnell, einfach und kostenfrei.'
+    button_link: /
+    type: neues_set
     enabled: true
+    button_text: 'Jetzt online bewerten'
   -
-    id: lnlo9d4y
-    svg: |-
-      <svg class="w-5 h-5 text-white lg:w-6 lg:h-6 dark:text-primary-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"></path>
-                          </svg>
-    itemheader: 'Service 2'
-    itemdescription: 'Hier wird beschrieben, um was es sich bei "Service 2" handelt.'
-    type: new_set
+    id: lww61izr
+    header: 'Lorem Ipsum'
+    image:
+      - architecture-gef0672c68_1920.jpg
+    description: 'Ermitteln Sie den Wert Ihrer Immobilie bequem von zu Hause aus – schnell, einfach und kostenfrei.'
+    button_link: /
+    type: neues_set
     enabled: true
-  -
-    id: lnlo9bys
-    svg: |-
-      <svg class="w-5 h-5 text-white lg:w-6 lg:h-6 dark:text-primary-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"></path>
-                          </svg>
-    itemheader: 'Service 3'
-    itemdescription: 'Hier wird beschrieben, um was es sich bei "Service 3" handelt.'
-    type: new_set
-    enabled: true
-  -
-    id: lnlo9aqg
-    svg: |-
-      <svg class="w-5 h-5 text-white lg:w-6 lg:h-6 dark:text-primary-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"></path>
-                          </svg>
-    itemheader: 'Service 4'
-    itemdescription: 'Hier wird beschrieben, um was es sich bei "Service 4" handelt.'
-    type: new_set
-    enabled: true
-services_variante: variante_1
+    button_text: 'Termin vereinbaren'
+services_variante: variante_2
 four_grid_text_with_icons:
-  -
-    id: lolmc2sv
-    svg_icon:
-      code: |-
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-white">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M19 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zM4 19.235v-.11a6.375 6.375 0 0112.75 0v.109A12.318 12.318 0 0110.374 21c-2.331 0-4.512-.645-6.374-1.766z"></path>
-        </svg>
-      mode: htmlmixed
-    header:
-      -
-        type: paragraph
-        attrs:
-          class: null
-        content:
-          -
-            type: text
-            marks:
-              -
-                type: bold
-            text: 'Individuelle und qualifizierte Immobilienbewertung'
-    description:
-      -
-        type: paragraph
-        attrs:
-          class: null
-        content:
-          -
-            type: text
-            text: 'Wir legen großen Wert darauf, zu Beginn unserer Zusammenarbeit den Wert Ihrer Immobilie präzise zu ermitteln, da diese Bewertung entscheidend für die Festlegung des realistischen Verkaufspreises ist. Durch eine fundierte Marktwertermittlung, basierend auf den Eigenschaften Ihres Objekts und der Analyse vergleichbarer Angebote in Ihrer Umgebung, gewährleisten wir, dass Ihr Verkaufspreis den aktuellen Marktkonditionen entspricht und optimieren somit die Verkaufschancen Ihrer Immobilie.'
-    type: new_set
-    enabled: true
   -
     id: lolmcuwp
     svg_icon:
@@ -503,8 +452,6 @@ content_with_image_replicator:
         enabled: false
     type: neues_set
     enabled: true
-    image:
-      - verkaufen.jpg
 seo_text:
   -
     type: paragraph
@@ -556,6 +503,147 @@ content_with_image_replicator_two:
         type: neues_set
         enabled: true
     button_link: '#'
+    type: neues_set
+    enabled: true
+advantages:
+  -
+    id: lww6joov
+    header: 'Immobilienbewertung online'
+    image:
+      - architecture-gef0672c68_1920.jpg
+    description: 'Unsere Experten bewerten Ihre Immobilie vor Ort mit höchster Genauigkeit für eine maßgeschneiderte Einschätzung.'
+    button_link: /
+    button_text: 'Jetzt online bewerten'
+    type: neues_set
+    enabled: true
+  -
+    id: lww6kp2c
+    header: 'Immobilienbewertung online'
+    image:
+      - architecture-gef0672c68_1920.jpg
+    description: 'Unsere Experten bewerten Ihre Immobilie vor Ort mit höchster Genauigkeit für eine maßgeschneiderte Einschätzung.'
+    button_link: /
+    button_text: 'Jetzt online bewerten'
+    type: neues_set
+    enabled: true
+services_header_h2: 'Unsere Leistungen'
+services_text: 'Maßgeschneiderte Bewertungslösungen für jeden Bedarf.'
+services_replicator:
+  -
+    id: lww6l3kn
+    svg: |-
+      <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 117.27 73.15" width="4rem" heigth="4rem">
+        <defs>
+          <style>
+            .cls-1 {
+              fill: #0067b1;
+              stroke-width: 0px;
+            }
+          </style>
+        </defs>
+        <path class="cls-1" d="M58.64,43.95c4.96,0,9-4.04,9-9v-3.3c0-4.96-4.04-9-9-9s-9,4.04-9,9v3.3c0,4.96,4.04,9,9,9ZM51.82,31.66c0-3.76,3.06-6.82,6.82-6.82s6.82,3.06,6.82,6.82v3.3c0,3.76-3.06,6.82-6.82,6.82s-6.82-3.06-6.82-6.82v-3.3Z"></path>
+        <path class="cls-1" d="M48.03,58.81c-.6,0-1.09.49-1.09,1.09v6.95c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-6.95c0-.6-.49-1.09-1.09-1.09Z"></path>
+        <path class="cls-1" d="M69.24,58.81c-.6,0-1.09.49-1.09,1.09v6.95c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-6.95c0-.6-.49-1.09-1.09-1.09Z"></path>
+        <path class="cls-1" d="M22.75,16.98c3.98,0,7.21-3.24,7.21-7.21v-2.55c0-3.98-3.24-7.21-7.21-7.21s-7.21,3.24-7.21,7.21v2.55c0,3.98,3.24,7.21,7.21,7.21ZM17.72,7.21c0-2.77,2.26-5.03,5.03-5.03s5.03,2.26,5.03,5.03v2.55c0,2.77-2.26,5.03-5.03,5.03s-5.03-2.26-5.03-5.03v-2.55Z"></path>
+        <path class="cls-1" d="M14.54,27.98c-.6,0-1.09.49-1.09,1.09v5.38c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-5.38c0-.6-.49-1.09-1.09-1.09Z"></path>
+        <path class="cls-1" d="M30.95,35.55c.6,0,1.09-.49,1.09-1.09v-5.38c0-.6-.49-1.09-1.09-1.09s-1.09.49-1.09,1.09v5.38c0,.6.49,1.09,1.09,1.09Z"></path>
+        <path class="cls-1" d="M94.53,16.98c3.98,0,7.21-3.24,7.21-7.21v-2.55c0-3.98-3.24-7.21-7.21-7.21s-7.21,3.24-7.21,7.21v2.55c0,3.98,3.24,7.21,7.21,7.21ZM89.5,7.21c0-2.77,2.26-5.03,5.03-5.03s5.03,2.26,5.03,5.03v2.55c0,2.77-2.26,5.03-5.03,5.03s-5.03-2.26-5.03-5.03v-2.55Z"></path>
+        <path class="cls-1" d="M86.32,27.98c-.6,0-1.09.49-1.09,1.09v5.38c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-5.38c0-.6-.49-1.09-1.09-1.09Z"></path>
+        <path class="cls-1" d="M102.74,35.55c.6,0,1.09-.49,1.09-1.09v-5.38c0-.6-.49-1.09-1.09-1.09s-1.09.49-1.09,1.09v5.38c0,.6.49,1.09,1.09,1.09Z"></path>
+        <path class="cls-1" d="M117.27,32.99c0-2.22-2.72-3.95-8.07-5.16v-.15c0-5.56-4.52-10.07-10.07-10.07h-9.2c-5.56,0-10.07,4.52-10.07,10.07v.15c-5.36,1.21-8.07,2.94-8.07,5.16,0,4.29,10.58,6.36,21.01,6.57l-11.51,20.08c-1.29-.43-2.67-.79-4-1.09v-.45c0-7-5.7-12.7-12.7-12.7h-11.89c-7,0-12.7,5.7-12.7,12.7v.45c-1.33.3-2.7.65-3.99,1.08l-11.27-20.08c10.35-.23,20.76-2.31,20.76-6.56,0-2.22-2.72-3.95-8.07-5.16v-.15c0-5.56-4.52-10.07-10.07-10.07h-9.2c-5.56,0-10.07,4.52-10.07,10.07v.15c-5.36,1.21-8.07,2.94-8.07,5.16,0,4.45,11.43,6.52,22.24,6.58l11.7,20.85c-2.52,1.11-4.37,2.59-4.37,4.54,0,5.38,14.62,8.19,29.07,8.19s29.07-2.81,29.07-8.19c0-1.94-1.85-3.42-4.36-4.53l11.95-20.86c10.73-.09,21.98-2.16,21.98-6.58ZM2.18,32.99c0-.61,1.63-1.88,5.89-2.92v4.38c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-5.74h0v-1.04c0-4.35,3.54-7.89,7.89-7.89h9.2c4.35,0,7.89,3.54,7.89,7.89v1.04h0v5.74c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-4.38c4.26,1.03,5.89,2.3,5.89,2.92,0,1.49-7.26,4.4-20.56,4.4s-20.56-2.91-20.56-4.4ZM85.52,64.96c0,2.45-10.47,6-26.88,6s-26.88-3.56-26.88-6c0-1.12,2.59-2.85,8.24-4.17v6.06c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-7.41h0v-1.34c0-5.8,4.72-10.51,10.51-10.51h11.89c5.8,0,10.51,4.72,10.51,10.51v1.34h0v7.42c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-6.06c5.65,1.32,8.24,3.05,8.24,4.17ZM73.96,32.99c0-.61,1.63-1.88,5.89-2.92v4.38c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-5.74h0v-1.04c0-4.35,3.54-7.89,7.89-7.89h9.2c4.35,0,7.89,3.54,7.89,7.89v1.04h0v5.74c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-4.38c4.26,1.03,5.89,2.3,5.89,2.92,0,1.49-7.26,4.4-20.56,4.4s-20.56-2.91-20.56-4.4Z"></path>
+      </svg>
+    header: 'Leistung 1'
+    text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.'
+    link: /
+    type: new_set
+    enabled: true
+  -
+    id: lww6ma8r
+    svg: |-
+      <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 117.27 73.15" width="4rem" heigth="4rem">
+        <defs>
+          <style>
+            .cls-1 {
+              fill: #0067b1;
+              stroke-width: 0px;
+            }
+          </style>
+        </defs>
+        <path class="cls-1" d="M58.64,43.95c4.96,0,9-4.04,9-9v-3.3c0-4.96-4.04-9-9-9s-9,4.04-9,9v3.3c0,4.96,4.04,9,9,9ZM51.82,31.66c0-3.76,3.06-6.82,6.82-6.82s6.82,3.06,6.82,6.82v3.3c0,3.76-3.06,6.82-6.82,6.82s-6.82-3.06-6.82-6.82v-3.3Z"></path>
+        <path class="cls-1" d="M48.03,58.81c-.6,0-1.09.49-1.09,1.09v6.95c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-6.95c0-.6-.49-1.09-1.09-1.09Z"></path>
+        <path class="cls-1" d="M69.24,58.81c-.6,0-1.09.49-1.09,1.09v6.95c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-6.95c0-.6-.49-1.09-1.09-1.09Z"></path>
+        <path class="cls-1" d="M22.75,16.98c3.98,0,7.21-3.24,7.21-7.21v-2.55c0-3.98-3.24-7.21-7.21-7.21s-7.21,3.24-7.21,7.21v2.55c0,3.98,3.24,7.21,7.21,7.21ZM17.72,7.21c0-2.77,2.26-5.03,5.03-5.03s5.03,2.26,5.03,5.03v2.55c0,2.77-2.26,5.03-5.03,5.03s-5.03-2.26-5.03-5.03v-2.55Z"></path>
+        <path class="cls-1" d="M14.54,27.98c-.6,0-1.09.49-1.09,1.09v5.38c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-5.38c0-.6-.49-1.09-1.09-1.09Z"></path>
+        <path class="cls-1" d="M30.95,35.55c.6,0,1.09-.49,1.09-1.09v-5.38c0-.6-.49-1.09-1.09-1.09s-1.09.49-1.09,1.09v5.38c0,.6.49,1.09,1.09,1.09Z"></path>
+        <path class="cls-1" d="M94.53,16.98c3.98,0,7.21-3.24,7.21-7.21v-2.55c0-3.98-3.24-7.21-7.21-7.21s-7.21,3.24-7.21,7.21v2.55c0,3.98,3.24,7.21,7.21,7.21ZM89.5,7.21c0-2.77,2.26-5.03,5.03-5.03s5.03,2.26,5.03,5.03v2.55c0,2.77-2.26,5.03-5.03,5.03s-5.03-2.26-5.03-5.03v-2.55Z"></path>
+        <path class="cls-1" d="M86.32,27.98c-.6,0-1.09.49-1.09,1.09v5.38c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-5.38c0-.6-.49-1.09-1.09-1.09Z"></path>
+        <path class="cls-1" d="M102.74,35.55c.6,0,1.09-.49,1.09-1.09v-5.38c0-.6-.49-1.09-1.09-1.09s-1.09.49-1.09,1.09v5.38c0,.6.49,1.09,1.09,1.09Z"></path>
+        <path class="cls-1" d="M117.27,32.99c0-2.22-2.72-3.95-8.07-5.16v-.15c0-5.56-4.52-10.07-10.07-10.07h-9.2c-5.56,0-10.07,4.52-10.07,10.07v.15c-5.36,1.21-8.07,2.94-8.07,5.16,0,4.29,10.58,6.36,21.01,6.57l-11.51,20.08c-1.29-.43-2.67-.79-4-1.09v-.45c0-7-5.7-12.7-12.7-12.7h-11.89c-7,0-12.7,5.7-12.7,12.7v.45c-1.33.3-2.7.65-3.99,1.08l-11.27-20.08c10.35-.23,20.76-2.31,20.76-6.56,0-2.22-2.72-3.95-8.07-5.16v-.15c0-5.56-4.52-10.07-10.07-10.07h-9.2c-5.56,0-10.07,4.52-10.07,10.07v.15c-5.36,1.21-8.07,2.94-8.07,5.16,0,4.45,11.43,6.52,22.24,6.58l11.7,20.85c-2.52,1.11-4.37,2.59-4.37,4.54,0,5.38,14.62,8.19,29.07,8.19s29.07-2.81,29.07-8.19c0-1.94-1.85-3.42-4.36-4.53l11.95-20.86c10.73-.09,21.98-2.16,21.98-6.58ZM2.18,32.99c0-.61,1.63-1.88,5.89-2.92v4.38c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-5.74h0v-1.04c0-4.35,3.54-7.89,7.89-7.89h9.2c4.35,0,7.89,3.54,7.89,7.89v1.04h0v5.74c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-4.38c4.26,1.03,5.89,2.3,5.89,2.92,0,1.49-7.26,4.4-20.56,4.4s-20.56-2.91-20.56-4.4ZM85.52,64.96c0,2.45-10.47,6-26.88,6s-26.88-3.56-26.88-6c0-1.12,2.59-2.85,8.24-4.17v6.06c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-7.41h0v-1.34c0-5.8,4.72-10.51,10.51-10.51h11.89c5.8,0,10.51,4.72,10.51,10.51v1.34h0v7.42c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-6.06c5.65,1.32,8.24,3.05,8.24,4.17ZM73.96,32.99c0-.61,1.63-1.88,5.89-2.92v4.38c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-5.74h0v-1.04c0-4.35,3.54-7.89,7.89-7.89h9.2c4.35,0,7.89,3.54,7.89,7.89v1.04h0v5.74c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-4.38c4.26,1.03,5.89,2.3,5.89,2.92,0,1.49-7.26,4.4-20.56,4.4s-20.56-2.91-20.56-4.4Z"></path>
+      </svg>
+    header: 'Leistung 1'
+    text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.'
+    link: /
+    type: new_set
+    enabled: true
+  -
+    id: lww6m8kl
+    svg: |-
+      <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 117.27 73.15" width="4rem" heigth="4rem">
+        <defs>
+          <style>
+            .cls-1 {
+              fill: #0067b1;
+              stroke-width: 0px;
+            }
+          </style>
+        </defs>
+        <path class="cls-1" d="M58.64,43.95c4.96,0,9-4.04,9-9v-3.3c0-4.96-4.04-9-9-9s-9,4.04-9,9v3.3c0,4.96,4.04,9,9,9ZM51.82,31.66c0-3.76,3.06-6.82,6.82-6.82s6.82,3.06,6.82,6.82v3.3c0,3.76-3.06,6.82-6.82,6.82s-6.82-3.06-6.82-6.82v-3.3Z"></path>
+        <path class="cls-1" d="M48.03,58.81c-.6,0-1.09.49-1.09,1.09v6.95c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-6.95c0-.6-.49-1.09-1.09-1.09Z"></path>
+        <path class="cls-1" d="M69.24,58.81c-.6,0-1.09.49-1.09,1.09v6.95c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-6.95c0-.6-.49-1.09-1.09-1.09Z"></path>
+        <path class="cls-1" d="M22.75,16.98c3.98,0,7.21-3.24,7.21-7.21v-2.55c0-3.98-3.24-7.21-7.21-7.21s-7.21,3.24-7.21,7.21v2.55c0,3.98,3.24,7.21,7.21,7.21ZM17.72,7.21c0-2.77,2.26-5.03,5.03-5.03s5.03,2.26,5.03,5.03v2.55c0,2.77-2.26,5.03-5.03,5.03s-5.03-2.26-5.03-5.03v-2.55Z"></path>
+        <path class="cls-1" d="M14.54,27.98c-.6,0-1.09.49-1.09,1.09v5.38c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-5.38c0-.6-.49-1.09-1.09-1.09Z"></path>
+        <path class="cls-1" d="M30.95,35.55c.6,0,1.09-.49,1.09-1.09v-5.38c0-.6-.49-1.09-1.09-1.09s-1.09.49-1.09,1.09v5.38c0,.6.49,1.09,1.09,1.09Z"></path>
+        <path class="cls-1" d="M94.53,16.98c3.98,0,7.21-3.24,7.21-7.21v-2.55c0-3.98-3.24-7.21-7.21-7.21s-7.21,3.24-7.21,7.21v2.55c0,3.98,3.24,7.21,7.21,7.21ZM89.5,7.21c0-2.77,2.26-5.03,5.03-5.03s5.03,2.26,5.03,5.03v2.55c0,2.77-2.26,5.03-5.03,5.03s-5.03-2.26-5.03-5.03v-2.55Z"></path>
+        <path class="cls-1" d="M86.32,27.98c-.6,0-1.09.49-1.09,1.09v5.38c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-5.38c0-.6-.49-1.09-1.09-1.09Z"></path>
+        <path class="cls-1" d="M102.74,35.55c.6,0,1.09-.49,1.09-1.09v-5.38c0-.6-.49-1.09-1.09-1.09s-1.09.49-1.09,1.09v5.38c0,.6.49,1.09,1.09,1.09Z"></path>
+        <path class="cls-1" d="M117.27,32.99c0-2.22-2.72-3.95-8.07-5.16v-.15c0-5.56-4.52-10.07-10.07-10.07h-9.2c-5.56,0-10.07,4.52-10.07,10.07v.15c-5.36,1.21-8.07,2.94-8.07,5.16,0,4.29,10.58,6.36,21.01,6.57l-11.51,20.08c-1.29-.43-2.67-.79-4-1.09v-.45c0-7-5.7-12.7-12.7-12.7h-11.89c-7,0-12.7,5.7-12.7,12.7v.45c-1.33.3-2.7.65-3.99,1.08l-11.27-20.08c10.35-.23,20.76-2.31,20.76-6.56,0-2.22-2.72-3.95-8.07-5.16v-.15c0-5.56-4.52-10.07-10.07-10.07h-9.2c-5.56,0-10.07,4.52-10.07,10.07v.15c-5.36,1.21-8.07,2.94-8.07,5.16,0,4.45,11.43,6.52,22.24,6.58l11.7,20.85c-2.52,1.11-4.37,2.59-4.37,4.54,0,5.38,14.62,8.19,29.07,8.19s29.07-2.81,29.07-8.19c0-1.94-1.85-3.42-4.36-4.53l11.95-20.86c10.73-.09,21.98-2.16,21.98-6.58ZM2.18,32.99c0-.61,1.63-1.88,5.89-2.92v4.38c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-5.74h0v-1.04c0-4.35,3.54-7.89,7.89-7.89h9.2c4.35,0,7.89,3.54,7.89,7.89v1.04h0v5.74c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-4.38c4.26,1.03,5.89,2.3,5.89,2.92,0,1.49-7.26,4.4-20.56,4.4s-20.56-2.91-20.56-4.4ZM85.52,64.96c0,2.45-10.47,6-26.88,6s-26.88-3.56-26.88-6c0-1.12,2.59-2.85,8.24-4.17v6.06c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-7.41h0v-1.34c0-5.8,4.72-10.51,10.51-10.51h11.89c5.8,0,10.51,4.72,10.51,10.51v1.34h0v7.42c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-6.06c5.65,1.32,8.24,3.05,8.24,4.17ZM73.96,32.99c0-.61,1.63-1.88,5.89-2.92v4.38c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-5.74h0v-1.04c0-4.35,3.54-7.89,7.89-7.89h9.2c4.35,0,7.89,3.54,7.89,7.89v1.04h0v5.74c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-4.38c4.26,1.03,5.89,2.3,5.89,2.92,0,1.49-7.26,4.4-20.56,4.4s-20.56-2.91-20.56-4.4Z"></path>
+      </svg>
+    header: 'Leistung 1'
+    text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.'
+    link: /
+    type: new_set
+    enabled: true
+logo_header: 'Unsere Partner'
+columns: '5'
+logo_replikator:
+  -
+    id: lww6zqcr
+    img:
+      - gfl-logo-07-2019-final.jpg
+    type: neues_set
+    enabled: true
+  -
+    id: lww6zpg2
+    img:
+      - gfl-logo-07-2019-final.jpg
+    type: neues_set
+    enabled: true
+  -
+    id: lww6zoii
+    img:
+      - gfl-logo-07-2019-final.jpg
+    type: neues_set
+    enabled: true
+  -
+    id: lww6zngk
+    img:
+      - gfl-logo-07-2019-final.jpg
+    type: neues_set
+    enabled: true
+  -
+    id: lww6zt3p
+    img:
+      - gfl-logo-07-2019-final.jpg
     type: neues_set
     enabled: true
 ---

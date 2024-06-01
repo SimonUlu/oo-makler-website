@@ -13,10 +13,10 @@
 
 
 <div
-    class="relative z-20 flex justify-between mb-0 bg-white rounded sm:p-6 px-4 lg:px-10 max-w-7xl -mt-36 xl:-mt-32 xl:p-9 xl:mx-auto xl:mb-0"
+    class="relative z-20 flex justify-between mb-0 bg-white rounded  px-4 lg:px-10 max-w-7xl xl:mx-auto"
 >
     <div class="w-full bg-white max-w-7xl mx-auto">
-        <div class="pt-8 mx-auto lg:pt-16">
+        <div class="mx-auto">
             {{partial:eigentuemer/general/subheader}}
 
             {{if services_variante == "variante_1"}}
@@ -57,25 +57,46 @@
     {{/if}}
 </div>
 
+<section class="bg-gray-100 w-full">
+    <section class="px-4 lg:px-10 mx-auto  max-w-7xl">
+        {{partial:services/services-three-per-column}}
+    </section>
+</section>
 
-{{if testimonial_type == "type_1"}}
-<section class="w-full bg-gray-50 ">
-    <div class="max-w-7xl mx-auto">
-        <div class="px-4 lg:px-10">
-        {{partial:referenzen/person-references/person-references}}
+
+<section class="w-full px-4 lg:px-10 custom-gradient-darker mb-12 lg:mb-24">
+    <div class="max-w-screen-xl px-4 py-8 mx-auto text-left md:text-center lg:py-16 lg:px-6">
+        <div class="max-w-screen-sm mx-auto mb-8 lg:mb-16">
+            <h2 class="mb-4 text-4xl font-bold tracking-tight text-white">
+                Was unsere Kunden sagen
+            </h2>
+        </div>
+        <div
+            data-google-api-key="{{ $googleApiKey }}"
+            x-data="reviewsSlider()"
+            x-init="init()"
+            data-google-places-id="{{ $googlePlaceId }}"
+            class="hidden lg:block"
+        >
+            {{partial:reviews/google-reviews-full-width}}
+        </div>
+
+        <div
+            data-google-api-key="{{ $googleApiKey }}"
+            x-data="reviewsSlider()"
+            x-init="init()"
+            data-google-places-id="{{ $googlePlaceId }}"
+            class="block lg:hidden"
+        >
+            {{partial:reviews/google-reviews-mobile}}
         </div>
     </div>
 </section>
-{{/if}}
-{{if testimonial_type == "type_2"}}
-<section class="w-full bg-gray-50">
-    <div class="max-w-7xl mx-auto">
-        <div class="px-4 lg:px-10">
-            {{partial:referenzen/person-references/person-references}}
-        </div>
-    </div>
+
+<section class="w-full max-w-7xl px-4 lg:px-10 mx-auto">
+    {{partial:logo-cloud/simple-logo-cloud}}
 </section>
-{{/if}}
+
 
 {{if show_reference_estates}}
 <section class="relative w-full 0 bg-gray-50 py-16">
@@ -99,49 +120,45 @@
 </section>
 {{/if}}
 
-{{if services_type == "type_1"}}
-<section class="bg-white max-w-7xl">
-    <div class="px-4 lg:px-10" >
-        {{partial:services/services-three-per-column}}
+<section>
+    <div class="py-8 bg-white sm:py-16">
+        <div class="mx-auto max-w-7xl">
+            <div>
+                <div class="text-base text-gray-700">
+                    <p class="text-base font-semibold leading-9 text-primary-200">
+                        {{seo_headline_twp}}
+                    </p>
+                    <h2
+                        class="mb-4 text-2xl lg:text-4xl font-bold tracking-tight text-gray-900 "
+                    >
+                    {{seo_headline_two}}
+                    </h2>
+                    <div>
+                        <p class="mt-6 text-gray-500 sm:text-xl dark:text-gray-400">
+                            {{seo_text}}
+                        </p>
+                    </div>
+                </div>
+                <div class="flex mt-10">
+                    <a
+                        href="/team"
+                        class="text-base font-semibold leading-7 text-primary-200"
+                        >Erfahren Sie mehr über uns &nbsp;→
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
-{{/if}}
-{{if services_type == "type_2"}}
-<section class="px-4 lg:px-10 bg-white max-w-7xl ">
-    <div class="px-4 lg:px-10 ">
-    {{partial:services/services-with-image}}
-    </div>
-</section>
-{{/if}}
+
 
 {{if contact_variante == "variante_4"}}
-    <section class="py-8 xl:py-12 mx-4 lg:mx-10 max-w-7xl w-full">
+<div class="w-full bg-gray-100">
+    <section class="py-8 xl:py-12 mx-auto max-w-7xl w-full">
         {{partial:cta-sections/contact/contact-team}}
     </section>
+</div>
 {{/if}}
 
-{{if seo_headline_text}}
-<div class="pt-16 text-left sm:text-center">
-    <h2
-        class="max-w-4xl mx-8 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
-    >
-        {{seo_headline_text}}
-    </h2>
-</div>
-{{/if}}
-{{ if custom_code_block }}
-<div class="pt-12">
-    {{custom_code_block}}
-</div>
-{{endif}}
-<div class="px-4 pt-12  mb-12 lg:mb-24 sm:px-0">
-    <h2
-        class="max-w-4xl text-3xl font-bold tracking-tight text-center text-gray-900 sm:text-4xl"
-    >
-        Kontaktieren Sie uns!
-    </h2>
-    <div class="pt-4" {{partial:contact-forms/contact-form-standard onofficeNote="{{onoffice_note}}"  formId="2"
-    title="Ankauf" defaultMessage="Bitte nehmen Sie zum Thema Verkauf Kontakt zu
-    mir auf."}}
-</div>
+
 

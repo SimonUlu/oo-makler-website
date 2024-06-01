@@ -1,8 +1,8 @@
-<section class="py-20 bg-white sm:py-24">
+<section class="py-20  sm:py-24">
     <div class="grid grid-cols-1 gap-8 lg:gap-16 lg:grid-cols-2">
         <div class="items-center justify-center hidden sm:flex">
             <img
-                class="object-cover w-full rounded-lg h-full"
+                class="object-cover w-full h-full"
                 src="{{contact_general:img.0.url}}"
                 alt="{{contact_general:img.0.alt}}"
             />
@@ -15,16 +15,17 @@
                 >
                     {{contact_general:header}}
                 </h2>
-                <p
-                    class="mt-4 text-xl font-normal text-secondary sm:text-2xl"
-                >
-                    {{business_information:company_phone}}
-                </p>
+                
                 <p class="mt-4 text-base font-normal text-gray-500 sm:text-xl pr-4 xl:pr-8">
                     {{contact_general:text}}
                 </p>
                 <p
-                    class="mt-4 text-xl font-normal text-secondary sm:text-2xl"
+                    class="mt-4 text-lg font-normal text-secondary sm:text-2xl"
+                >
+                    {{business_information:company_phone}}
+                </p>
+                <p
+                    class="mt-4 text-lg font-normal text-secondary sm:text-2xl"
                 >
                     {{business_information:company_email}}
                 </p>
@@ -37,7 +38,7 @@
                 <a
                     href="{{contact_general:btn_link}}"
                     title=""
-                    class="text-white bg-secondary  justify-center hover:bg-primary-800 inline-flex items-center focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+                    class="text-white bg-primary  justify-center hover:bg-primary-800 inline-flex items-center focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
                     role="button"
                 >
                 {{contact_general:btn}}

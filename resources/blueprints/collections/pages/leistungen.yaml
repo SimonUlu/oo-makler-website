@@ -190,7 +190,7 @@ tabs:
               instructions_position: above
               visibility: visible
   services_tab:
-    display: Services
+    display: Advantages
     sections:
       -
         fields:
@@ -225,7 +225,192 @@ tabs:
               visibility: visible
               always_save: false
           -
-            import: four-grid-text-with-icons
+            handle: advantages
+            field:
+              collapse: false
+              previews: true
+              fullscreen: true
+              sets:
+                neue_set-gruppe:
+                  display: 'Neue Set-Gruppe'
+                  instructions: null
+                  icon: null
+                  sets:
+                    neues_set:
+                      display: 'Neues Set'
+                      instructions: null
+                      icon: null
+                      fields:
+                        -
+                          handle: header
+                          field:
+                            input_type: text
+                            antlers: false
+                            type: text
+                            display: header
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+                        -
+                          handle: image
+                          field:
+                            mode: list
+                            container: images
+                            restrict: false
+                            allow_uploads: true
+                            show_filename: true
+                            show_set_alt: true
+                            type: assets
+                            display: image
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+                        -
+                          handle: description
+                          field:
+                            antlers: false
+                            type: textarea
+                            display: description
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+                        -
+                          handle: button_link
+                          field:
+                            type: link
+                            display: button_link
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+                        -
+                          handle: button_text
+                          field:
+                            input_type: text
+                            antlers: false
+                            type: text
+                            display: button_text
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+              type: replicator
+              display: advantages
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+  steps_section:
+    display: Services
+    sections:
+      -
+        display: Steps
+        fields:
+          -
+            handle: services_header_h2
+            field:
+              input_type: text
+              antlers: false
+              display: services_header_h2
+              type: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: services_text
+            field:
+              antlers: false
+              display: services_text
+              type: textarea
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: services_replicator
+            field:
+              collapse: false
+              previews: true
+              sets:
+                main:
+                  display: Hauptteil
+                  instructions: null
+                  icon: null
+                  sets:
+                    new_set:
+                      display: 'New Set'
+                      instructions: null
+                      icon: null
+                      fields:
+                        -
+                          handle: svg
+                          field:
+                            theme: material
+                            mode: htmlmixed
+                            mode_selectable: false
+                            indent_type: tabs
+                            indent_size: 4
+                            key_map: default
+                            line_numbers: true
+                            line_wrapping: true
+                            display: svg
+                            type: code
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                        -
+                          handle: header
+                          field:
+                            input_type: text
+                            antlers: false
+                            type: text
+                            display: header
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+                        -
+                          handle: text
+                          field:
+                            antlers: false
+                            type: textarea
+                            display: text
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+                        -
+                          handle: link
+                          field:
+                            type: link
+                            display: link
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+              display: services_replicator
+              type: replicator
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              fullscreen: true
+              hide_display: false
+              replicator_preview: true
   video:
     display: 'Video Section'
     sections:
@@ -514,163 +699,6 @@ tabs:
               instructions_position: above
               visibility: visible
               hide_display: false
-  steps_section:
-    display: steps
-    sections:
-      -
-        display: Steps
-        fields:
-          -
-            handle: steps_variante
-            field:
-              options:
-                variante_1: Standard
-                variante_2: Fancy
-                variante_3: 'Nicht anzeigen'
-              taggable: false
-              push_tags: false
-              multiple: false
-              clearable: false
-              searchable: true
-              cast_booleans: false
-              type: select
-              display: steps_variante
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              hide_display: false
-          -
-            handle: stepssubheader
-            field:
-              antlers: false
-              display: stepsSubHeader
-              type: textarea
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-          -
-            handle: stepsheader
-            field:
-              input_type: text
-              antlers: false
-              display: stepsHeader
-              type: text
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-          -
-            handle: steps
-            field:
-              collapse: false
-              previews: true
-              sets:
-                main:
-                  display: Hauptteil
-                  instructions: null
-                  icon: null
-                  sets:
-                    new_set:
-                      display: 'New Set'
-                      instructions: null
-                      icon: null
-                      fields:
-                        -
-                          handle: svg
-                          field:
-                            theme: material
-                            mode: htmlmixed
-                            mode_selectable: false
-                            indent_type: tabs
-                            indent_size: 4
-                            key_map: default
-                            line_numbers: true
-                            line_wrapping: true
-                            display: svg
-                            type: code
-                            icon: code
-                            listable: hidden
-                            instructions_position: above
-                            visibility: visible
-                        -
-                          handle: itemheader
-                          field:
-                            input_type: text
-                            antlers: false
-                            display: itemHeader
-                            type: text
-                            icon: text
-                            listable: hidden
-                            instructions_position: above
-                            visibility: visible
-                        -
-                          handle: itemdescription
-                          field:
-                            antlers: false
-                            display: itemDescription
-                            type: textarea
-                            icon: textarea
-                            listable: hidden
-                            instructions_position: above
-                            visibility: visible
-                        -
-                          handle: img
-                          field:
-                            mode: list
-                            container: images
-                            restrict: false
-                            allow_uploads: true
-                            show_filename: true
-                            show_set_alt: true
-                            type: assets
-                            display: img
-                            icon: assets
-                            listable: hidden
-                            instructions_position: above
-                            visibility: visible
-                            hide_display: false
-                        -
-                          handle: steps_number
-                          field:
-                            input_type: text
-                            antlers: false
-                            type: text
-                            display: steps_number
-                            icon: text
-                            listable: hidden
-                            instructions_position: above
-                            visibility: visible
-                            hide_display: false
-                        -
-                          handle: step_header
-                          field:
-                            input_type: text
-                            antlers: false
-                            type: text
-                            display: step_header
-                            icon: text
-                            listable: hidden
-                            instructions_position: above
-                            visibility: visible
-                            hide_display: false
-                        -
-                          handle: step_description
-                          field:
-                            input_type: text
-                            antlers: false
-                            type: text
-                            display: step_description
-                            icon: text
-                            listable: hidden
-                            instructions_position: above
-                            visibility: visible
-                            hide_display: false
-              display: steps
-              type: replicator
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              fullscreen: true
-              hide_display: false
   seo_content_section:
     display: 'Content SEO'
     sections:
@@ -780,3 +808,95 @@ tabs:
               max_items: 1
               listable: false
               localizable: true
+  logos:
+    display: 'Logo Cloud'
+    sections:
+      -
+        display: 'Neuer Abschnitt'
+        fields:
+          -
+            handle: logo_header
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: logo_header
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: logo_text
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: logo_text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: columns
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: columns
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: logo_replikator
+            field:
+              collapse: false
+              previews: true
+              fullscreen: true
+              sets:
+                neue_set-gruppe:
+                  display: 'Neue Set-Gruppe'
+                  instructions: null
+                  icon: null
+                  sets:
+                    neues_set:
+                      display: 'Neues Set'
+                      instructions: null
+                      icon: null
+                      fields:
+                        -
+                          handle: img
+                          field:
+                            mode: list
+                            container: logo_images
+                            restrict: false
+                            allow_uploads: true
+                            show_filename: true
+                            show_set_alt: true
+                            type: assets
+                            display: img
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+                        -
+                          handle: link
+                          field:
+                            type: link
+                            display: link
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+              type: replicator
+              display: logo_replikator
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
