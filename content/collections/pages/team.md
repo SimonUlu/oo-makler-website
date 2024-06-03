@@ -18,7 +18,7 @@ seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1715692516
+updated_at: 1717413919
 imagesectionheader: 'ÜBER UNS.'
 imagesectiondescription: 'Volksbank am Württemberg – Ihr Immobilienpartner in Stuttgart und Fellbach. Individuell, zuverlässig, sicher: Ihre Immobilie liegt uns am Herzen. Mit Erfahrung, Know-How und Leidenschaft begleiten wir Sie bei jedem Schritt.'
 ctatext1header: 'Unsere Vision'
@@ -165,4 +165,53 @@ image_second:
   - csm_voba_am_wu__rttemberg_p7a6289_43e34e140b.jpg
 header_image:
   - architecture-gef0672c68_1920.jpg
+content_with_image_replicator:
+  -
+    id: lwyvm3ps
+    image:
+      - architecture-gef0672c68_1920.jpg
+    headline: 'Gemeinsam stark'
+    text:
+      -
+        type: paragraph
+        attrs:
+          class: null
+        content:
+          -
+            type: text
+            text: "100%iges Tochterunternehmen der Berliner Volksbank eG, seit 2008 eigenständig: Die BVBI wurde gegründet, um die Kunden der Berliner Volksbank, aber auch alle anderen Marktteilnehmer beim Immobilienkauf oder -verkauf kompetent zu betreuen. Dabei sind die genossenschaftliche Werte unserer Muttergesellschaft Teil unserer DNA: Verlässlichkeit, Zusammenhalt, Tatkraft. Unsere Nähe zur Bank, der ständige Austausch mit den dortigen Beratern und Beraterinnen, gibt uns den unschlagbaren Vorteil, die finanziellen Möglichkeiten der Kunden und die aktuellen Bedingungen der Baufinanzierung zu kennen.\_ Damit können wir Kaufpreise realistisch einzuschätzen und digitale Berechnungstools optimal ergänzen."
+    type: neues_set
+    enabled: true
+  -
+    id: lwyvmtmy
+    image:
+      - architecture-gef0672c68_1920.jpg
+    headline: 'Bestens vernetzt'
+    text:
+      -
+        type: paragraph
+        attrs:
+          class: null
+        content:
+          -
+            type: text
+            text: "Wir informieren die Beraterinnen und Berater der Berliner Volksbank laufend über unsere Immobilienangebote. Damit erreichen wir auf kurzem Weg über 545.000\_ Kunden der Bank. Im Verbund der Volks- und Raiffeisenbanken sind wir auch über unsere Heimatregion Berlin und Brandenburg hinaus bestens vernetzt. Damit haben wir - neben der klassischen Vermarktung über die üblichen Immobilienportale – einen wertvollen Vertriebsweg, über den wir gezielt finanzierungsgeprüfte und solvente Kaufinteressenten erreichen. Von diesem Vorteil profitieren alle unsere Kunden, egal, mit welcher Bank sie arbeiten."
+    type: neues_set
+    enabled: true
+  -
+    id: lwyvorus
+    image:
+      - architecture-gef0672c68_1920.jpg
+    headline: 'Lokal verwurzelt'
+    text:
+      -
+        type: paragraph
+        attrs:
+          class: null
+        content:
+          -
+            type: text
+            text: 'Echte Berliner, Brandenburger und Menschen, denen die Hauptstadtregion zum Lebensmittelpunkt geworden ist: Die Leidenschaft für Immobilien und die Liebe zur Region verbindet unser Team. Unsere besondere Stärke ist unsere Präsenz: unser Maklerteam ist über die gesamte Region verteilt. Die Beraterinnen und Berater vor Ort sind immer auch Kiezkenner und bestens mit dem Markt vertraut. Sie begleiten unsere Kunden persönlich beim Verkauf oder Kauf. Dabei werden sie von unserem gesamten Team aus gut ausbildeten Experten unterstützt.'
+    type: neues_set
+    enabled: true
 ---

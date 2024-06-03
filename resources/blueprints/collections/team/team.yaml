@@ -7,6 +7,25 @@ tabs:
         display: General
         fields:
           -
+            handle: team
+            field:
+              options:
+                makler: null
+                office: null
+              taggable: false
+              push_tags: false
+              multiple: false
+              clearable: false
+              searchable: true
+              cast_booleans: false
+              type: select
+              display: team
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
             handle: title
             field:
               type: hidden
@@ -44,7 +63,6 @@ tabs:
               antlers: false
               type: text
               display: E-Mail
-              icon: text
               listable: hidden
               instructions_position: above
               visibility: visible
@@ -114,10 +132,21 @@ tabs:
                             hide_display: false
               type: replicator
               display: 'Social Profiles'
-              icon: replicator
               listable: hidden
               instructions_position: above
               visibility: visible
+              hide_display: false
+          -
+            handle: phone
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: phone
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
               hide_display: false
       -
         display: Images
@@ -133,7 +162,6 @@ tabs:
               show_set_alt: true
               type: assets
               display: 'Bild Portrait'
-              icon: assets
               width: 33
               listable: hidden
               instructions_position: above
@@ -150,7 +178,6 @@ tabs:
               show_set_alt: true
               type: assets
               display: 'Bild Übersicht'
-              icon: assets
               width: 33
               listable: hidden
               instructions_position: above
@@ -167,7 +194,6 @@ tabs:
               show_set_alt: true
               type: assets
               display: 'Bild Landscape'
-              icon: assets
               width: 33
               listable: hidden
               instructions_position: above
@@ -201,14 +227,13 @@ tabs:
             field:
               type: slug
               localizable: true
+              validate:
+                - required
               from: title
               generate: true
               show_regenerate: false
               display: URL
-              icon: slug
               listable: hidden
               instructions_position: above
               visibility: visible
               hide_display: false
-              validate:
-                - required

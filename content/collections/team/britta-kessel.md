@@ -4,7 +4,7 @@ blueprint: team
 title: 'Britta Kessel'
 first_name: Britta
 last_name: Kessel
-email: britta.kessel@voba-immobilienpartner.de
+email: britta.kessel@bvbi.de
 function: Immobilienassistenz
 team_description:
   -
@@ -34,11 +34,8 @@ long_team_description:
         type: text
         text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1716300640
-image_portrait:
-  - team/britta_kessel.jpg
-image_overview:
-  - team/britta_kessel.jpg
+updated_at: 1717414560
 phone: '+49 (0)711 / 30501-1210'
 mobilnummer: '+49 (0)160/ 803 91 93'
+team: office
 ---

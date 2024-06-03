@@ -1,4 +1,4 @@
-<div class="py-4 bg-white md:py-8">
+<div class="py-4 md:py-8">
     {{content_with_image_replicator}}
         <div class="pt-2 lg:pt-4 grid grid-cols-1 gap-8 lg:gap-16 mb-12 lg:mb-24 lg:flex {{ index % 2 == 0 ? 'lg:flex-row-reverse' : 'lg:flex-row' }}">
             <div class="items-center justify-center flex lg:flex-1 relative">
@@ -33,13 +33,15 @@
             <div class="space-y-4 sm:space-y-6 lg:space-y-8 lg:flex-1">
                 <div>
                     <h2
-                        class="text-3xl font-extrabold leading-tight text-gray-900 sm:text-4xl"
+                        class="text-3xl font-extrabold leading-tight text-primary sm:text-4xl underline"
                     >
                         {{headline}}
                     </h2>
 
                 </div>
-                {{text}}
+                <div class="leading-8">
+                    {{text}}
+                </div>
                 {{if image_section_list}}
                 <hr
                     class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"

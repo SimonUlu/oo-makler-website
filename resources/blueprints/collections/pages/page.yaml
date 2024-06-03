@@ -22,7 +22,6 @@ tabs:
               cast_booleans: false
               type: select
               display: teamsection
-              icon: select
               listable: hidden
               instructions_position: above
               visibility: visible
@@ -45,7 +44,6 @@ tabs:
               cast_booleans: false
               type: select
               display: contact_type
-              icon: select
               listable: hidden
               instructions_position: above
               visibility: visible
@@ -68,7 +66,6 @@ tabs:
               cast_booleans: false
               type: select
               display: references_variante
-              icon: select
               listable: hidden
               instructions_position: above
               visibility: visible
@@ -80,7 +77,6 @@ tabs:
               blueprint: false
               type: template
               display: template
-              icon: template
               listable: hidden
               instructions_position: above
               visibility: visible
@@ -105,7 +101,6 @@ tabs:
               cast_booleans: false
               type: select
               display: header_type
-              icon: select
               listable: hidden
               instructions_position: above
               visibility: visible
@@ -144,7 +139,6 @@ tabs:
               previews: true
               type: bard
               display: subtitle
-              icon: bard
               listable: hidden
               instructions_position: above
               visibility: visible
@@ -160,7 +154,6 @@ tabs:
               show_set_alt: true
               type: assets
               display: 'Header Image'
-              icon: assets
               listable: hidden
               instructions_position: above
               visibility: visible
@@ -183,7 +176,6 @@ tabs:
               antlers: false
               type: text
               display: company
-              icon: text
               listable: hidden
               instructions_position: above
               visibility: visible
@@ -208,7 +200,6 @@ tabs:
               cast_booleans: false
               type: select
               display: show_cta
-              icon: select
               listable: hidden
               instructions_position: above
               visibility: visible
@@ -228,7 +219,6 @@ tabs:
               cast_booleans: false
               type: select
               display: cta_variante
-              icon: select
               listable: hidden
               instructions_position: above
               visibility: visible
@@ -240,7 +230,6 @@ tabs:
               antlers: false
               type: text
               display: cta_headline
-              icon: text
               listable: hidden
               instructions_position: above
               visibility: visible
@@ -251,7 +240,6 @@ tabs:
               antlers: false
               type: textarea
               display: cta_description
-              icon: textarea
               listable: hidden
               instructions_position: above
               visibility: visible
@@ -349,7 +337,6 @@ tabs:
                             hide_display: false
               type: replicator
               display: estate_pages
-              icon: replicator
               listable: hidden
               instructions_position: above
               visibility: visible
@@ -361,46 +348,7 @@ tabs:
         display: 'Image Section Left'
         fields:
           -
-            handle: image_second
-            field:
-              mode: list
-              container: images
-              restrict: false
-              allow_uploads: true
-              show_filename: true
-              show_set_alt: true
-              type: assets
-              display: image_second
-              icon: assets
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              hide_display: false
-          -
-            handle: imagesectionheader
-            field:
-              input_type: text
-              antlers: false
-              type: text
-              display: imageSectionHeader
-              icon: text
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              hide_display: false
-          -
-            handle: imagesectiondescription
-            field:
-              antlers: false
-              type: textarea
-              display: imageSectionDescription
-              icon: textarea
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              hide_display: false
-          -
-            handle: imagesectionlist
+            handle: content_with_image_replicator
             field:
               collapse: false
               previews: true
@@ -417,23 +365,125 @@ tabs:
                       icon: null
                       fields:
                         -
-                          handle: listitem
+                          handle: image
+                          field:
+                            mode: list
+                            container: images
+                            restrict: false
+                            allow_uploads: true
+                            show_filename: true
+                            show_set_alt: true
+                            type: assets
+                            display: image
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+                        -
+                          handle: headline
                           field:
                             input_type: text
                             antlers: false
                             type: text
-                            display: listitem
-                            icon: text
+                            display: headline
                             listable: hidden
                             instructions_position: above
                             visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+                        -
+                          handle: text
+                          field:
+                            buttons:
+                              - h2
+                              - h3
+                              - bold
+                              - italic
+                              - unorderedlist
+                              - orderedlist
+                              - removeformat
+                              - quote
+                              - anchor
+                              - image
+                              - table
+                            smart_typography: false
+                            save_html: false
+                            inline: false
+                            toolbar_mode: fixed
+                            reading_time: false
+                            word_count: false
+                            fullscreen: true
+                            allow_source: true
+                            enable_input_rules: true
+                            enable_paste_rules: true
+                            remove_empty_nodes: false
+                            antlers: false
+                            link_noopener: false
+                            link_noreferrer: false
+                            target_blank: false
+                            always_show_set_button: false
+                            collapse: false
+                            previews: true
+                            type: bard
+                            display: text
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+                        -
+                          handle: image_section_list
+                          field:
+                            collapse: false
+                            previews: true
+                            fullscreen: true
+                            sets:
+                              neue_set-gruppe:
+                                display: 'Neue Set-Gruppe'
+                                instructions: null
+                                icon: null
+                                sets:
+                                  neues_set:
+                                    display: 'Neues Set'
+                                    instructions: null
+                                    icon: null
+                                    fields:
+                                      -
+                                        handle: listitem
+                                        field:
+                                          input_type: text
+                                          antlers: false
+                                          type: text
+                                          display: listitem
+                                          listable: hidden
+                                          instructions_position: above
+                                          visibility: visible
+                                          replicator_preview: true
+                                          hide_display: false
+                            type: replicator
+                            display: image_section_list
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+                        -
+                          handle: button_link
+                          field:
+                            type: link
+                            display: button_link
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
                             hide_display: false
               type: replicator
-              display: imageSectionList
-              icon: replicator
+              display: content_with_image_replicator
               listable: hidden
               instructions_position: above
               visibility: visible
+              replicator_preview: true
               hide_display: false
   services_team:
     display: 'Team Services'
@@ -448,7 +498,6 @@ tabs:
               antlers: false
               type: text
               display: description
-              icon: text
               listable: hidden
               instructions_position: above
               visibility: visible
@@ -536,7 +585,6 @@ tabs:
                             hide_display: false
               type: replicator
               display: services
-              icon: replicator
               listable: hidden
               instructions_position: above
               visibility: visible
@@ -554,7 +602,6 @@ tabs:
               antlers: false
               type: text
               display: stepsHeader
-              icon: text
               listable: hidden
               instructions_position: above
               visibility: visible
@@ -565,7 +612,6 @@ tabs:
               antlers: false
               type: textarea
               display: stepsSubHeader
-              icon: textarea
               listable: hidden
               instructions_position: above
               visibility: visible
@@ -631,7 +677,6 @@ tabs:
                             hide_display: false
               type: replicator
               display: steps
-              icon: replicator
               listable: hidden
               instructions_position: above
               visibility: visible
@@ -656,7 +701,6 @@ tabs:
               cast_booleans: false
               type: select
               display: presentation_type
-              icon: select
               listable: hidden
               instructions_position: above
               visibility: visible
@@ -681,7 +725,6 @@ tabs:
               cast_booleans: false
               type: select
               display: presentation_type_past
-              icon: select
               listable: hidden
               instructions_position: above
               visibility: visible
@@ -706,7 +749,6 @@ tabs:
               cast_booleans: false
               type: select
               display: presentation_type_future
-              icon: select
               listable: hidden
               instructions_position: above
               visibility: visible
@@ -755,11 +797,11 @@ tabs:
             field:
               type: slug
               localizable: true
+              validate:
+                - required
               generate: true
               listable: hidden
               display: Slug
-              validate:
-                - required
           -
             handle: parent
             field:
@@ -822,7 +864,6 @@ tabs:
                             hide_display: false
               type: replicator
               display: location_replikator
-              icon: replicator
               listable: hidden
               instructions_position: above
               visibility: visible

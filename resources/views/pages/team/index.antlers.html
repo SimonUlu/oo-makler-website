@@ -3,7 +3,7 @@
         class="w-full h-[460px] xl:h-[737px] bg-no-repeat bg-cover bg-center bg-blend-darken relative"
     >
         <div
-            class="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50"
+            class="absolute top-0 left-0 w-full h-full custom-gradient"
         ></div>
         <div
             class="absolute w-full max-w-screen-xl px-4 mx-auto -translate-x-1/2 pt-28 sm:pt-24 top-20 left-1/2 xl:top-1/2 xl:-translate-y-1/2 lg:px-10"
@@ -31,13 +31,9 @@
 
 <div class="w-full bg-gray-100">
     <div class="max-w-7xl px-4 lg:px-10 py-8 mx-auto lg:py-16">
-        {{partial:eigentuemer/general/content-img-left-gray}}
+        {{partial:content-section/content-img-swapped-button}}
     </div>
 </div>
-
-<section class="w-full px-4 lg:px-10  mx-auto max-w-7xl">
-    {{partial:services/simple-services/content-services-two}}
-</section>
 
 
 {{if teamsection == 'variante_1'}}
@@ -59,16 +55,24 @@
 {{/if}}
 
 {{if teamsection == 'variante_4'}}
-<div class="w-full max-w-7xl mb-12 lg:mb-24 px-4 lg:px-10 ">
-        {{partial:employee-grid/employee-grid-4}}
-</div>
-{{/if}}
-
-
-<section class="w-full bg-white max-w-7xl mx-auto px-4 lg:px-10 ">
-    {{partial:cta-sections/suchauftrag/suchauftrag-cta}}
+<section class="py-16 lg:py-24 w-full bg-gray-100">
+    <h2 class="mb-4 text-4xl font-bold tracking-tight text-primary mr-8 lg:mr-0 text-center">
+        Unser Team - für Sie am Bundesplatz
+    </h2>
+    <div class="w-full max-w-7xl px-4 lg:px-10 mx-auto">
+            {{partial:employee-grid/employee-grid-4}}
+    </div>
 </section>
 
+<section class="py-16 lg:py-24 w-full">
+    <h2 class="mb-4 text-4xl font-bold tracking-tight text-primary mr-8 lg:mr-0 text-center">
+        Unser Maklerteam - für Sie unterwegs
+    </h2>
+    <div class="w-full max-w-7xl px-4 lg:px-10 mx-auto">
+            {{partial:employee-grid/employee-grid-makler}}
+    </div>
+</section>
+{{/if}}
 
 
 <section class="py-8 xl:py-12 mx-4 lg:mx-10 max-w-7xl w-full px-4 lg:px-10 ">

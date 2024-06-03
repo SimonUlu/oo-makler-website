@@ -1,20 +1,20 @@
 ---
-id: 00840db0-fc71-40f9-9e66-b38a2c2452c6
+id: 5b5e4af2-bca0-40df-98f0-61cb9c8ff61a
 blueprint: team
-title: 'Silvia Dietrich'
-first_name: Silvia
-last_name: Dietrich
-email: silvia.dietrich@voba-immobilienpartner.de
-function: Immobilienberaterin
+title: 'Roland Kessel'
+first_name: Roland
+last_name: Kessel
+email: roland.kessel@voba-immobilienpartner.de
+function: Geschäftsführer
 team_description:
   -
     type: paragraph
     attrs:
-      class: null
+      textAlign: left
     content:
       -
         type: text
-        text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.'
+        text: 'Lorem Ipsum dolor sit amet'
 short_team_description:
   -
     type: paragraph
@@ -34,8 +34,18 @@ long_team_description:
         type: text
         text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. '
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1717414010
-phone: '+49 (0)711 / 30501-1212'
-mobilnummer: '+49 (0)151/ 5101 56 81'
+updated_at: 1717414057
+duplicated_from: 8b2e43f1-181d-4bf8-8293-76a5995bb74f
+phone: '+49 (0)711 / 30501-1211'
+social_profiles:
+  -
+    id: lw6dt40l
+    type: new_set
+    enabled: true
+  -
+    id: lw6dt6pz
+    type: new_set
+    enabled: true
+mobilnummer: '+49 171718101'
 team: makler
 ---

@@ -6,8 +6,6 @@ first_name: Mirsad
 last_name: Numanovic
 email: mirsad.numanovic@voba-immobilienpartner.de
 function: Immobilienberater
-image_portrait:
-  - team/mirsad_numanovic.jpg
 team_description:
   -
     type: paragraph
@@ -36,10 +34,9 @@ long_team_description:
         type: text
         text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. '
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1716300673
-image_overview:
-  - team/mirsad_numanovic.jpg
+updated_at: 1717414017
 duplicated_from: 00840db0-fc71-40f9-9e66-b38a2c2452c6
 phone: '+49 (0)711 / 30501-1214'
 mobilnummer: '+49 (0)151 / 74 46 49 66'
+team: makler
 ---
