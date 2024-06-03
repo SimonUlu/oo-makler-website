@@ -450,6 +450,82 @@ tabs:
               instructions_position: above
               visibility: visible
               hide_display: false
+  faq:
+    display: FAQ
+    sections:
+      -
+        display: 'Neuer Abschnitt'
+        fields:
+          -
+            handle: accordeon_header
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: accordeon_header
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: accordeon_subheader
+            field:
+              antlers: false
+              type: textarea
+              display: accordeon_subheader
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: accordeon_list
+            field:
+              collapse: false
+              previews: true
+              fullscreen: true
+              sets:
+                neue_set-gruppe:
+                  display: 'Neue Set-Gruppe'
+                  instructions: null
+                  icon: null
+                  sets:
+                    neues_set:
+                      display: 'Neues Set'
+                      instructions: null
+                      icon: null
+                      fields:
+                        -
+                          handle: header
+                          field:
+                            input_type: text
+                            antlers: false
+                            type: text
+                            display: header
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+                        -
+                          handle: description
+                          field:
+                            antlers: false
+                            type: textarea
+                            display: description
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+              type: replicator
+              display: accordeon_list
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
   content_image:
     display: 'Content Image'
     sections:

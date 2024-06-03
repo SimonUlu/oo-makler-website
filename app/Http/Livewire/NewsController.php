@@ -9,9 +9,11 @@ class NewsController extends Component
 {
     protected $posts;
 
-    public $selectedCategory = ''; // Hier wird die ausgewählte Kategorie gespeichert.
+    public $selectedCategory = '';
 
-    public $categories = []; //
+    public $categories = [];
+
+    public $searchString = '';
 
     public function mount()
     {
@@ -36,12 +38,21 @@ class NewsController extends Component
             ->where('collection', 'news')
             ->where('published', true);
 
+        $this->filterPosts($query);
+
+        return view('livewire.news-controller', ['posts' => $this->posts]);
+    }
+
+    private function filterPosts($query)
+    {
         if (! empty($this->selectedCategory)) {
             $query->where('category', $this->selectedCategory);
         }
 
-        $this->posts = $query->limit(5)->get();
+        if (! empty($this->searchString)) {
+            $query->where('title', 'like', '%'.$this->searchString.'%'); // Sucht nach Posts, deren Titel den Suchbegriff enthalten
+        }
 
-        return view('livewire.news-controller', ['posts' => $this->posts]);
+        $this->posts = $query->limit(10)->get();
     }
 }

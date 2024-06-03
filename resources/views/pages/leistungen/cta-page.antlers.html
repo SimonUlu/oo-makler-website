@@ -13,7 +13,7 @@
 
 
 <div
-    class="relative z-20 flex justify-between mb-0 bg-white rounded  px-4 lg:px-10 max-w-7xl xl:mx-auto"
+    class="relative z-20 flex justify-between mb-0 bg-white rounded  px-4 lg:px-10 max-w-7xl xl:mx-auto pb-16 lg:pb-24"
 >
     <div class="w-full bg-white max-w-7xl mx-auto">
         <div class="mx-auto">
@@ -36,19 +36,6 @@
                 </section>
             {{/if}}
 
-
-            <div class="max-w-screen-md m-auto mb-2 mt-12 lg:mt-24 text-center lg:mb-4">
-                <h2 class="mb-4 text-4xl font-bold tracking-tight text-gray-900">
-                    {{content_with_image_header}}
-                </h2>
-                <div>
-                    {{content_with_image_subheader}}
-                </div>
-            </div>
-
-            {{if content_with_image_replicator}}
-                {{partial:content-section/content-img-swapped-button}}
-            {{/if}}
         </div>
     </div>
     {{if contact_variante == "variante_1"}}
@@ -64,7 +51,7 @@
 </section>
 
 
-<section class="w-full px-4 lg:px-10 custom-gradient-darker mb-12 lg:mb-24">
+<section class="w-full px-4 lg:px-10 custom-gradient-darker">
     <div class="max-w-screen-xl px-4 py-8 mx-auto text-left md:text-center lg:py-16 lg:px-6">
         <div class="max-w-screen-sm mx-auto mb-8 lg:mb-16">
             <h2 class="mb-4 text-4xl font-bold tracking-tight text-white">
@@ -91,6 +78,13 @@
             {{partial:reviews/google-reviews-mobile}}
         </div>
     </div>
+</section>
+
+<section class="w-full bg-gray-100">
+    <div class="max-w-7xl mx-auto px-4 lg:px-10">
+        {{partial:accordeon/general}}
+    </div>
+
 </section>
 
 <section class="w-full max-w-7xl px-4 lg:px-10 mx-auto">

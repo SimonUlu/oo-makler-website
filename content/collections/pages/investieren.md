@@ -1,9 +1,9 @@
 ---
-id: 1914c0f1-52bf-4914-aab7-0adbea602f23
+id: 029e42ef-e916-4f19-9a69-4cc641216a7c
 blueprint: leistungen
 view_model: App\ViewModels\VerkaufenViewModel
 template: pages/leistungen/cta-page
-title: Verkaufen
+title: Investieren
 subtitle: 'Mit uns zügig und erfolgreich verkaufen'
 description: 'IHRE VORTEILE – UNSERE BESONDEREN LEISTUNGEN SPEZIELL FÜR SIE:'
 subheaderheadline: 'IHRE VORTEILE AUF EINEN BLICK.'
@@ -142,7 +142,7 @@ seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1717412249
+updated_at: 1717412458
 headerbild:
   - architecture-gef0672c68_1920.jpg
 stepsheader: 'UNSER VORGEHEN.'
@@ -462,7 +462,7 @@ seo_text:
         type: text
         text: 'Helfen Sie den Suchmaschinen dieser Welt zu verstehen, für welche Kunden diese Website gebaut ist! In dem SEO-Bereich Ihrer neuen Website können Sie Ihr Unternehmen nochmals in wenigen Zeilen zusammenfassen und damit auch Suchmaschinen wie Google helfen, Ihre Website besser zu verstehen. Eine bessere Sichtbarkeit führt zu mehr Kunden und somit zu höheren Gewinnen! Worauf warten Sie noch? Holen Sie sich das Website-Template von InnoBrain und bringen Sie Ihre Online-Präsenz auf das nächste Level.'
 seo_headline_two: 'Erhöhen Sie Ihre Online-Sichtbarkeit durch Suchmaschinenoptimierung'
-duplicated_from: c04f550e-7e42-4c6f-9100-8a46c4e11163
+duplicated_from: 1914c0f1-52bf-4914-aab7-0adbea602f23
 show_reference_estates: true
 content_with_image_replicator_two:
   -

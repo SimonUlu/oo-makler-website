@@ -1,12 +1,27 @@
 <div class="">
     <div class="relative z-10 max-w-screen-xl px-4 py-8 mx-auto lg:py-16 lg:px-6">
-        <label for="category" class="block text-gray-700">Kategorie wählen</label>
-        <select wire:model="selectedCategory" id="category" name="category" class="mt-1 p-2 min-w-[200px] border border-gray-300 rounded">
-            <option value="">Alle Kategorien</option>
-            @foreach($categories as $category)
-                <option value="{{ $category["value"] }}">{{ $category["value"] }}</option>
-            @endforeach
-        </select>
+        <div class="flex w-full justify-between lg:space-x-8">
+            <div class="mb-4 w-full max-w-[50%]">
+                <label for="search" class="block text-gray-700">Suche</label>
+                <input 
+                    wire:model.debounce.300ms="searchString" 
+                    id="search" 
+                    name="search" 
+                    type="text" 
+                    placeholder="Nach News suchen..." 
+                    class="mt-1 p-2 w-full border border-gray-300 rounded"
+                >
+            </div>
+            <div>
+                <label for="category" class="block text-gray-700">Kategorie wählen</label>
+                <select wire:model="selectedCategory" id="category" name="category" class="mt-1 p-2 min-w-[200px] border border-gray-300 rounded">
+                    <option value="">Alle Kategorien</option>
+                    @foreach($categories as $category)
+                        <option value="{{ $category["value"] }}">{{ $category["value"] }}</option>
+                    @endforeach
+                </select>
+            </div>
+        </div>
     </div>
     <section class="relative bg-white">
         <div class="relative z-10 max-w-screen-xl px-4 py-8 mx-auto lg:py-16 lg:px-6">

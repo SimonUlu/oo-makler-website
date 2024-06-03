@@ -28,21 +28,25 @@ tree:
         title: Verkaufen
         url: /verkaufen
       -
-        id: c5b95545-ee0e-4c41-833a-48e091747604
-        title: Beraten
-        url: /beraten
-      -
         id: 9ea4bdb1-aef8-4379-9ce9-c9f9061d98a0
         title: Bewerten
         url: /bewerten
       -
         id: c1ccfb34-2876-4837-b6a9-b110bf6afbe0
-        title: Finanzieren
-        url: /finanzieren
+        title: Investieren
+        url: /investieren
+  -
+    id: 8f42d1f8-9e44-4c0b-af89-38fc4ae6e9ec
+    title: Informieren
+    children:
       -
-        id: e98c7beb-3c00-403b-963d-cce7c64c12ea
-        title: Projektentwicklung
-        url: /projektentwicklung
+        id: 115dc6aa-e2b8-4079-8401-77e07c11aa85
+        title: Lexikon
+        url: /faq
+      -
+        id: afa8ba16-1bf9-47c6-ada4-4d7840a0487e
+        title: Blog
+        url: /aktuelles
   -
     id: e96921c7-c5fa-40df-98a9-4fa58c4fad31
     title: 'Über uns'
