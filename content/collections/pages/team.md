@@ -18,7 +18,7 @@ seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1717413919
+updated_at: 1717498843
 imagesectionheader: 'ÜBER UNS.'
 imagesectiondescription: 'Volksbank am Württemberg – Ihr Immobilienpartner in Stuttgart und Fellbach. Individuell, zuverlässig, sicher: Ihre Immobilie liegt uns am Herzen. Mit Erfahrung, Know-How und Leidenschaft begleiten wir Sie bei jedem Schritt.'
 ctatext1header: 'Unsere Vision'
@@ -212,6 +212,61 @@ content_with_image_replicator:
           -
             type: text
             text: 'Echte Berliner, Brandenburger und Menschen, denen die Hauptstadtregion zum Lebensmittelpunkt geworden ist: Die Leidenschaft für Immobilien und die Liebe zur Region verbindet unser Team. Unsere besondere Stärke ist unsere Präsenz: unser Maklerteam ist über die gesamte Region verteilt. Die Beraterinnen und Berater vor Ort sind immer auch Kiezkenner und bestens mit dem Markt vertraut. Sie begleiten unsere Kunden persönlich beim Verkauf oder Kauf. Dabei werden sie von unserem gesamten Team aus gut ausbildeten Experten unterstützt.'
+    type: neues_set
+    enabled: true
+member_header: Mitgliedschaften
+member_subheader: 'Zusammen stark: Unsere Mitgliedschaften in führenden Branchenverbänden.'
+memberships:
+  -
+    id: lx09sgko
+    image:
+      - ihk-mitgliedschaft.png
+    text: 'Der Verein VR-Nord – VR Immobilien Norddeutschland – wurde 1995 ins Leben gerufen. Die Mitglieder sind ausschließlich die Immobilienabteilungen von Volks- und Raiffeisenbanken und deren Tochtergesellschaften, die Immobilienservice- und Dienstleistungsgesellschaften. Der Verein deckt den Bereich zwischen Niebüll und Baunatal sowie Leer bis Berlin ab.'
+    type: neues_set
+    enabled: true
+  -
+    id: lx09t90h
+    image:
+      - ihk-mitgliedschaft.png
+    text: 'Der Verein VR-Nord – VR Immobilien Norddeutschland – wurde 1995 ins Leben gerufen. Die Mitglieder sind ausschließlich die Immobilienabteilungen von Volks- und Raiffeisenbanken und deren Tochtergesellschaften, die Immobilienservice- und Dienstleistungsgesellschaften. Der Verein deckt den Bereich zwischen Niebüll und Baunatal sowie Leer bis Berlin ab.'
+    type: neues_set
+    enabled: true
+  -
+    id: lx09t7o1
+    image:
+      - ihk-mitgliedschaft.png
+    text: 'Der Verein VR-Nord – VR Immobilien Norddeutschland – wurde 1995 ins Leben gerufen. Die Mitglieder sind ausschließlich die Immobilienabteilungen von Volks- und Raiffeisenbanken und deren Tochtergesellschaften, die Immobilienservice- und Dienstleistungsgesellschaften. Der Verein deckt den Bereich zwischen Niebüll und Baunatal sowie Leer bis Berlin ab.'
+    type: neues_set
+    enabled: true
+kooperations_header: Kooperationen
+kooperations_text: 'Starke Partnerschaften für erstklassige Ergebnisse.'
+kooperationen:
+  -
+    id: lx0a8kbn
+    image:
+      - logo_kinderhospize_leipzig_2019.jpg
+    text: "Die\_Berliner Volksbank eG\_ist als unsere Muttergesellschaft unser wichtigster Partner. Als Finanzierer für Bauprojekte und für Immobilienkäufer ist sie eine wesentliche Säule unseres Erfolgs. Einen großen Teil der Verkaufsaufträge erhalten wir von der Kundschaft der Bank. Mit diesem Vertriebskanal ist die BVBI an über 120 Bank-Standorten überall in Berlin und Brandenburg vor Ort."
+    type: neues_set
+    enabled: true
+  -
+    id: lx0a96rv
+    image:
+      - ihk-mitgliedschaft.png
+    text: "Die\_Berliner Volksbank eG\_ist als unsere Muttergesellschaft unser wichtigster Partner. Als Finanzierer für Bauprojekte und für Immobilienkäufer ist sie eine wesentliche Säule unseres Erfolgs. Einen großen Teil der Verkaufsaufträge erhalten wir von der Kundschaft der Bank. Mit diesem Vertriebskanal ist die BVBI an über 120 Bank-Standorten überall in Berlin und Brandenburg vor Ort."
+    type: neues_set
+    enabled: true
+  -
+    id: lx0a94k5
+    image:
+      - ihk-mitgliedschaft.png
+    text: "Die\_Berliner Volksbank eG\_ist als unsere Muttergesellschaft unser wichtigster Partner. Als Finanzierer für Bauprojekte und für Immobilienkäufer ist sie eine wesentliche Säule unseres Erfolgs. Einen großen Teil der Verkaufsaufträge erhalten wir von der Kundschaft der Bank. Mit diesem Vertriebskanal ist die BVBI an über 120 Bank-Standorten überall in Berlin und Brandenburg vor Ort."
+    type: neues_set
+    enabled: true
+  -
+    id: lx0a93gr
+    image:
+      - ihk-mitgliedschaft.png
+    text: "Die\_Berliner Volksbank eG\_ist als unsere Muttergesellschaft unser wichtigster Partner. Als Finanzierer für Bauprojekte und für Immobilienkäufer ist sie eine wesentliche Säule unseres Erfolgs. Einen großen Teil der Verkaufsaufträge erhalten wir von der Kundschaft der Bank. Mit diesem Vertriebskanal ist die BVBI an über 120 Bank-Standorten überall in Berlin und Brandenburg vor Ort."
     type: neues_set
     enabled: true
 ---

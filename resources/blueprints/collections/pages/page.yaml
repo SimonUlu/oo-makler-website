@@ -485,6 +485,166 @@ tabs:
               visibility: visible
               replicator_preview: true
               hide_display: false
+  memberships:
+    display: Mitgliedschaften
+    sections:
+      -
+        display: 'Neuer Abschnitt'
+        fields:
+          -
+            handle: member_header
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: member_header
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: member_subheader
+            field:
+              antlers: false
+              type: textarea
+              display: member_subheader
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: memberships
+            field:
+              collapse: false
+              previews: true
+              fullscreen: true
+              sets:
+                neue_set-gruppe:
+                  display: 'Neue Set-Gruppe'
+                  instructions: null
+                  icon: null
+                  sets:
+                    neues_set:
+                      display: 'Neues Set'
+                      instructions: null
+                      icon: null
+                      fields:
+                        -
+                          handle: image
+                          field:
+                            mode: list
+                            container: logo_images
+                            restrict: false
+                            allow_uploads: true
+                            show_filename: true
+                            show_set_alt: true
+                            type: assets
+                            display: image
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+                        -
+                          handle: text
+                          field:
+                            antlers: false
+                            type: textarea
+                            display: text
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+              type: replicator
+              display: memberships
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+  cooperations:
+    display: Kooperationen
+    sections:
+      -
+        display: 'Neuer Abschnitt'
+        fields:
+          -
+            handle: kooperations_header
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: kooperations_header
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: kooperations_text
+            field:
+              antlers: false
+              type: textarea
+              display: kooperations_text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: kooperationen
+            field:
+              collapse: false
+              previews: true
+              fullscreen: true
+              sets:
+                neue_set-gruppe:
+                  display: 'Neue Set-Gruppe'
+                  instructions: null
+                  icon: null
+                  sets:
+                    neues_set:
+                      display: 'Neues Set'
+                      instructions: null
+                      icon: null
+                      fields:
+                        -
+                          handle: image
+                          field:
+                            mode: list
+                            container: logo_images
+                            restrict: false
+                            allow_uploads: true
+                            show_filename: true
+                            show_set_alt: true
+                            type: assets
+                            display: image
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+                        -
+                          handle: text
+                          field:
+                            antlers: false
+                            type: textarea
+                            display: text
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+              type: replicator
+              display: kooperationen
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
   services_team:
     display: 'Team Services'
     sections:

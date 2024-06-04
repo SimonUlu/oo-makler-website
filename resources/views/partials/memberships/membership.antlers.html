@@ -1,0 +1,25 @@
+<div class="relative bg-white">
+    <h2 class="mb-4 text-4xl font-bold tracking-tight text-primary mr-8 lg:mr-0 text-center">
+        Mitgliedschaften 
+    </h2>
+    <div class="text-gray-500 text-lg lg:text-xl font-bold text-center">
+        Zusammen stark: Unsere Mitgliedschaften in führenden Branchenverbänden.
+    </div>
+    <div class="relative z-10 max-w-screen-xl py-8 mx-auto lg:py-16">
+        <div class="relative grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            {{memberships}}
+            <article class="relative p-4 bg-gray-100 border border-gray-200 -lg shadow-md dark:border-gray-700">
+                <div class="mt-4 justify-center flex flex-col">
+                    <div class="items-center justify-center flex">
+                        <img src="{{image.0.url}}" alt="{{image.0.alt}}" />
+                    </div>
+                      
+                    <p class="mb-4 font-light text-gray-500 dark:text-gray-400">
+                        {{ text }} <!-- Rufe den Teaser auf -->
+                    </p>
+                </div>
+            </article>
+            {{/memberships}}
+        </div>
+    </div>
+</div>
