@@ -8,7 +8,12 @@
         <div class="flex lg:flex-1">
             <a href="/" class="p-1.5 -m-1.5">
                 <span class="sr-only">Your Company</span>
-                {{ partial:components/logo width="120" }}
+                <template x-if="!scrolled && !isSpecialPage">
+                    {{ partial:components/logo_white width="120" }}
+                </template>
+                <template x-if="scrolled || isSpecialPage">
+                    {{ partial:components/logo width="120" }}
+                </template>
             </a>
         </div>
         <div class="flex lg:hidden">

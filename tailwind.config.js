@@ -77,10 +77,10 @@ module.exports = {
             xl: "1.25rem",
             "2xl": "1.563rem",
             "3xl": "1.953rem",
-            "4xl": "2.441rem",
-            "5xl": "3.052rem",
+            "4xl": "36px",
+            "5xl": "36px",
             "6xl": "3.752rem",
-            "7xl": "4.452rem",
+            "7xl": "50px",
         },
         screens: {
             sm: "640px",
