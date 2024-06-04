@@ -1,8 +1,8 @@
 title: FAQ
-template: default
+template: pages/lexikon/show
 layout: layout
 revisions: false
-slugs: false
+route: '/faq/{{slug}}'
 sort_dir: asc
 date_behavior:
   past: public
@@ -11,3 +11,4 @@ preview_targets:
   -
     label: Entry
     url: '{permalink}'
+    refresh: true

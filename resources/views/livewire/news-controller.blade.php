@@ -9,12 +9,12 @@
                     name="search" 
                     type="text" 
                     placeholder="Nach News suchen..." 
-                    class="mt-1 p-2 w-full border border-gray-300 rounded"
+                    class="mt-1 p-2 w-full border border-gray-300 "
                 >
             </div>
             <div>
                 <label for="category" class="block text-gray-700">Kategorie wählen</label>
-                <select wire:model="selectedCategory" id="category" name="category" class="mt-1 p-2 min-w-[200px] border border-gray-300 rounded">
+                <select wire:model="selectedCategory" id="category" name="category" class="mt-1 p-2 min-w-[200px] border border-gray-300 ">
                     <option value="">Alle Kategorien</option>
                     @foreach($categories as $category)
                         <option value="{{ $category["value"] }}">{{ $category["value"] }}</option>
@@ -27,10 +27,10 @@
         <div class="relative z-10 max-w-screen-xl px-4 py-8 mx-auto lg:py-16 lg:px-6">
             <div class="relative grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
                 @foreach($posts as $post)
-                <article class="relative p-4 mt-16 bg-white border border-gray-200 rounded-lg shadow-md dark:border-gray-700">
+                <article class="relative p-4 mt-16 bg-white border border-gray-200 -lg shadow-md dark:border-gray-700">
                     <div class="relative -mt-16 h-60">
                         <a href="{{ $post->url() }}"> <!-- Rufe die URL des Eintrags auf -->
-                            <img class="object-cover object-center w-full mb-5 rounded-lg h-60" src="/images/{{ $post->get('image') }}" alt="{{ $post->get('title') }}" /> <!-- Rufe das Bild und den Titel auf -->
+                            <img class="object-cover object-center w-full mb-5 -lg h-60" src="/images/{{ $post->get('image') }}" alt="{{ $post->get('title') }}" /> <!-- Rufe das Bild und den Titel auf -->
                         </a>
                     </div>
                     <div class="mt-12">
