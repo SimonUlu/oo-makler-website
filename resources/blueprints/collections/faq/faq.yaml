@@ -36,3 +36,22 @@ tabs:
               display: Text
               validate:
                 - required
+          -
+            handle: category
+            field:
+              options:
+                investieren: null
+                verkaufen: null
+              taggable: false
+              push_tags: false
+              multiple: true
+              clearable: false
+              searchable: true
+              cast_booleans: false
+              type: select
+              display: category
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
