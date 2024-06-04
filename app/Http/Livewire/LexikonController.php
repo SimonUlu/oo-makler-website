@@ -42,7 +42,7 @@ class LexikonController extends Component
 
         $this->filterPosts($query);
 
-        return view('livewire.lexikon-controller', 
+        return view('livewire.lexikon-controller',
             [
                 'posts' => $this->posts,
                 'categories' => $this->categories,
@@ -59,13 +59,13 @@ class LexikonController extends Component
 
         $this->posts = $query->limit(10)->get();
 
-        if (!empty($this->selectedCategory)) {
+        if (! empty($this->selectedCategory)) {
             $this->posts = $this->posts->filter(function ($entry) {
                 // Zugriff auf die Kategorie-Daten des Eintrags
                 $categories = $entry->get('category', []);
 
                 dd($categories);
-        
+
                 // Prüfen, ob die ausgewählte Kategorie in den Kategorien des Eintrags enthalten ist
                 return in_array($this->selectedCategory, $categories);
             });
