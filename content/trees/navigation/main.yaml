@@ -1,9 +1,5 @@
 tree:
   -
-    id: 5c726e8f-e7d2-4e7f-8789-d094305e6735
-    title: Startseite
-    url: '/#'
-  -
     id: 525383c3-39b3-4632-8462-bcfc68ac17f0
     title: Immobilienangebote
     children:

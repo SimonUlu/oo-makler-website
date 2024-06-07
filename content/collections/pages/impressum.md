@@ -5,637 +5,491 @@ title: Impressum
 template: pages/static-page/static_page
 article:
   -
+    type: heading
+    attrs:
+      textAlign: left
+      level: 4
+    content:
+      -
+        type: text
+        text: Registeradresse
+  -
     type: paragraph
     attrs:
       textAlign: left
       class: null
+  -
+    type: paragraph
+    attrs:
+      textAlign: justify
+      class: null
     content:
       -
         type: text
-        text: IMPRESSUM
+        text: 'Berliner Volksbank Immobilien GmbH'
+      -
+        type: hardBreak
+      -
+        type: text
+        text: 'Bundesallee 206'
+      -
+        type: hardBreak
+      -
+        type: text
+        text: '10717 Berlin'
+  -
+    type: paragraph
+    attrs:
+      textAlign: left
+      class: null
   -
     type: heading
     attrs:
-      textAlign: center
-      level: 2
+      textAlign: left
+      level: 4
     content:
       -
         type: text
-        text: "ANGABEN GEMÄSS DSGVO\_&\_TTDSG"
+        text: Postadresse
   -
     type: paragraph
     attrs:
       textAlign: left
       class: null
-    content:
-      -
-        type: text
-        text: 'Volksbank am Württemberg – Ihr Immobilienpartner GmbH & Co. KG'
-      -
-        type: hardBreak
-      -
-        type: text
-        text: "Bahnhofstraße 123\_"
-      -
-        type: hardBreak
-      -
-        type: text
-        text: '70736 Fellbach'
   -
     type: paragraph
     attrs:
-      textAlign: left
+      textAlign: justify
       class: null
     content:
       -
         type: text
-        text: 'Handelsregister:'
+        text: 'Berliner Volksbank Immobilien GmbH'
       -
         type: hardBreak
       -
         type: text
-        text: 'Registergericht: Amtsgericht Stuttgart'
+        text: 'Bundesallee 61'
       -
         type: hardBreak
       -
         type: text
-        text: 'Registernummer: HRA737252'
-  -
-    type: paragraph
-    attrs:
-      textAlign: left
-      class: null
-    content:
-      -
-        type: text
-        marks:
-          -
-            type: bold
-        text: 'Vertreten durch:'
+        text: '12161 Berlin'
       -
         type: hardBreak
       -
         type: text
-        text: "Volksbank am Württemberg - Ihr Immobilienpartner Verwaltungs\_GmbH"
-      -
-        type: hardBreak
-      -
-        type: text
-        text: 'Berliner Platz 1'
-      -
-        type: hardBreak
-      -
-        type: text
-        text: '70734 Fellbach'
-  -
-    type: paragraph
-    attrs:
-      textAlign: left
-      class: null
-    content:
-      -
-        type: text
-        text: 'Geschäftsführer:'
-      -
-        type: hardBreak
-      -
-        type: text
-        text: 'Roland Kessel, Sascha Becker'
-  -
-    type: paragraph
-    attrs:
-      textAlign: left
-      class: null
-    content:
-      -
-        type: text
-        text: 'Handelsregister: HRB 776031'
-      -
-        type: hardBreak
-      -
-        type: text
-        text: 'Registergericht: Amtsgericht Stuttgart'
-  -
-    type: heading
-    attrs:
-      textAlign: center
-      level: 2
-    content:
-      -
-        type: text
-        text: KONTAKT
-  -
-    type: paragraph
-    attrs:
-      textAlign: left
-      class: null
-    content:
-      -
-        type: text
-        text: 'Telefon: 0711 30501-1210'
-      -
-        type: hardBreak
-      -
-        type: text
-        text: 'Telefax: 0711 30501-1219'
-      -
-        type: hardBreak
-      -
-        type: text
-        text: 'E-Mail: info@voba-immobilienpartner.de'
-  -
-    type: heading
-    attrs:
-      textAlign: center
-      level: 2
-    content:
-      -
-        type: text
-        text: UMSATZSTEUER-ID
-  -
-    type: paragraph
-    attrs:
-      textAlign: left
-      class: null
-    content:
-      -
-        type: text
-        text: 'Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:'
-      -
-        type: hardBreak
-      -
-        type: text
-        text: DE335946764
-  -
-    type: heading
-    attrs:
-      textAlign: center
-      level: 2
-    content:
-      -
-        type: text
-        text: AUFSICHTSBEHÖRDE
-  -
-    type: paragraph
-    attrs:
-      textAlign: left
-      class: null
-    content:
-      -
-        type: text
-        text: 'Industrie- und Handelskammer Region Stuttgart'
-      -
-        type: hardBreak
-      -
-        type: text
-        text: 'Jägerstraße 30'
-      -
-        type: hardBreak
-      -
-        type: text
-        text: '70174 Stuttgart'
-      -
-        type: hardBreak
-      -
-        type: text
-        text: 'E- Mail: info@stuttgart.ihk.de'
-      -
-        type: hardBreak
-      -
-        type: text
-        text: 'Tel. : 089 5116 - 0'
-  -
-    type: paragraph
-    attrs:
-      textAlign: left
-      class: null
-    content:
+        text: 'Telefon '
       -
         type: text
         marks:
           -
             type: link
             attrs:
-              href: 'http://www.ihk-stuttgart'
+              href: 'tel:+493056555550'
               rel: null
               target: null
               title: null
-        text: 'http://www.ihk-stuttgart'
+        text: '+49 (30) 56 55555 0'
+      -
+        type: hardBreak
+      -
+        type: text
+        text: 'Telefax '
       -
         type: text
         marks:
           -
             type: link
             attrs:
-              href: 'http://www.ihk-stuttgart/'
-              rel: 'noreferrer noopener'
-              target: _blank
-              title: null
-        text: ' de/'
-  -
-    type: heading
-    attrs:
-      textAlign: center
-      level: 2
-    content:
-      -
-        type: text
-        text: 'BERUFSBEZEICHNUNG UND BERUFSRECHTLICHE REGELUNGEN'
-  -
-    type: paragraph
-    attrs:
-      textAlign: left
-      class: null
-    content:
-      -
-        type: text
-        text: "Berufsbezeichnung: Immobilienmakler\_gemäß § 34c Abs. 1 GewO"
-      -
-        type: hardBreak
-      -
-        type: hardBreak
-      -
-        type: text
-        text: 'Zuständige Kammer für die Tätigkeit als Immobilienmakler/in gemäß § 34c Abs. 1 GewO:'
-      -
-        type: hardBreak
-      -
-        type: text
-        text: 'Industrie- und Handelskammer Region Stuttgart'
-      -
-        type: hardBreak
-      -
-        type: text
-        text: 'Jägerstraße 30'
-      -
-        type: hardBreak
-      -
-        type: text
-        text: '70174 Stuttgart'
-      -
-        type: hardBreak
-      -
-        type: text
-        text: 'E-Mail: info@stuttgart.ihk.de'
-      -
-        type: hardBreak
-      -
-        type: text
-        text: 'Tel.: 089 5116-0'
-  -
-    type: paragraph
-    attrs:
-      textAlign: left
-      class: null
-    content:
-      -
-        type: text
-        text: "Website:\_"
-      -
-        type: text
-        marks:
-          -
-            type: link
-            attrs:
-              href: 'http://www.ihk-stuttgart.de/'
-              rel: noreferrer
-              target: _blank
-              title: null
-        text: www.ihk-stuttgart.de
-  -
-    type: paragraph
-    attrs:
-      textAlign: left
-      class: null
-    content:
-      -
-        type: hardBreak
-      -
-        type: text
-        text: 'Verliehen in: Deutschland'
-      -
-        type: hardBreak
-      -
-        type: text
-        text: "\_"
-  -
-    type: paragraph
-    attrs:
-      textAlign: left
-      class: null
-    content:
-      -
-        type: text
-        text: "Es gelten folgende berufsrechtliche Regelungen: • Makler- und Bauträgerverordnung (MaBV):\_"
-      -
-        type: text
-        marks:
-          -
-            type: link
-            attrs:
-              href: 'https://www.gesetze-im-internet.de/gewo_34cdv/'
-              rel: noreferrer
-              target: _blank
-              title: null
-        text: www.gesetze-im-internet.de/gewo_34cdv/
-      -
-        type: text
-        text: "\_• § 34c Gewerbeordnung (GewO)"
-  -
-    type: paragraph
-    attrs:
-      textAlign: left
-      class: null
-    content:
-      -
-        type: hardBreak
-      -
-        type: text
-        text: "Regelungen einsehbar unter:\_"
-      -
-        type: text
-        marks:
-          -
-            type: link
-            attrs:
-              href: 'https://www.gesetze-im-internet.de/gewo/__34c.html'
+              href: 'tel:+4930565555555'
               rel: null
               target: null
               title: null
-        text: 'https://www.gesetze-im-internet.de/gewo/__34c.html'
-  -
-    type: paragraph
-    attrs:
-      textAlign: left
-      class: null
-    content:
-      -
-        type: text
-        text: "\_"
-  -
-    type: heading
-    attrs:
-      textAlign: center
-      level: 2
-    content:
-      -
-        type: text
-        text: 'ANGABEN ZUR BERUFSHAFTPFLICHTVERSICHERUNG'
-  -
-    type: paragraph
-    attrs:
-      textAlign: left
-      class: null
-    content:
-      -
-        type: text
-        marks:
-          -
-            type: bold
-        text: 'Name und Sitz des Versicherers:'
-  -
-    type: paragraph
-    attrs:
-      textAlign: left
-      class: null
-    content:
-      -
-        type: text
-        text: 'R+V Allgemeine Versicherung AG'
+        text: '+49 (30) 56 55555 55'
       -
         type: hardBreak
       -
         type: text
-        text: 'Raiffeisenplatz 1'
-      -
-        type: hardBreak
-      -
-        type: text
-        text: '65189 Wiesbaden'
-      -
-        type: hardBreak
-      -
-        type: text
-        text: Deutschland
-      -
-        type: hardBreak
-      -
-        type: hardBreak
-      -
-        type: text
-        text: 'VSNR: 230 43 461738273'
-      -
-        type: hardBreak
-      -
-        type: hardBreak
-      -
-        type: text
-        text: 'Räumlicher Geltungsbereich: Deutschland'
-  -
-    type: heading
-    attrs:
-      textAlign: center
-      level: 2
-    content:
-      -
-        type: text
-        text: 'VERANTWORTLICH FÜR DEN INHALT NACH § 55 ABS. 2 RSTV'
-  -
-    type: paragraph
-    attrs:
-      textAlign: left
-      class: null
-    content:
-      -
-        type: text
-        text: 'Volksbank am Württemberg – Ihr Immobilienpartner GmbH & Co. KG'
-      -
-        type: hardBreak
-      -
-        type: text
-        text: 'Roland Kessel'
-      -
-        type: hardBreak
-      -
-        type: text
-        text: 'Bahnhofstraße 123'
-      -
-        type: hardBreak
-      -
-        type: text
-        text: '70736 Fellbach'
-  -
-    type: heading
-    attrs:
-      textAlign: center
-      level: 2
-    content:
-      -
-        type: text
-        text: EU-STREITSCHLICHTUNG
-  -
-    type: paragraph
-    attrs:
-      textAlign: left
-      class: null
-    content:
-      -
-        type: text
-        text: "Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:\_"
+        text: 'Email '
       -
         type: text
         marks:
           -
             type: link
             attrs:
-              href: 'https://ec.europa.eu/consumers/odr.'
+              href: 'mailto:info@bvbi.de'
               rel: null
               target: null
               title: null
-        text: 'https://ec.europa.eu/consumers/odr.'
+        text: info@bvbi.de
       -
         type: hardBreak
       -
         type: text
-        text: 'Unsere E-Mail-Adresse finden Sie oben im Impressum.'
-  -
-    type: heading
-    attrs:
-      textAlign: center
-      level: 2
-    content:
-      -
-        type: text
-        text: VERBRAUCHER­STREIT­BEILEGUNG/UNIVERSAL­SCHLICHTUNGS­STELLE
-  -
-    type: paragraph
-    attrs:
-      textAlign: left
-      class: null
-    content:
-      -
-        type: text
-        text: 'Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.'
-  -
-    type: heading
-    attrs:
-      textAlign: left
-      level: 3
-    content:
-      -
-        type: text
-        text: 'HAFTUNG FÜR INHALTE'
-  -
-    type: paragraph
-    attrs:
-      textAlign: left
-      class: null
-    content:
-      -
-        type: text
-        text: 'Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.'
-  -
-    type: paragraph
-    attrs:
-      textAlign: left
-      class: null
-    content:
-      -
-        type: text
-        text: 'Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.'
-  -
-    type: heading
-    attrs:
-      textAlign: left
-      level: 3
-    content:
-      -
-        type: text
-        text: 'HAFTUNG FÜR LINKS'
-  -
-    type: paragraph
-    attrs:
-      textAlign: left
-      class: null
-    content:
-      -
-        type: text
-        text: 'Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar.'
-  -
-    type: paragraph
-    attrs:
-      textAlign: left
-      class: null
-    content:
-      -
-        type: text
-        text: 'Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.'
-  -
-    type: heading
-    attrs:
-      textAlign: left
-      level: 3
-    content:
-      -
-        type: text
-        text: URHEBERRECHT
-  -
-    type: paragraph
-    attrs:
-      textAlign: left
-      class: null
-    content:
-      -
-        type: text
-        text: 'Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet.'
-  -
-    type: paragraph
-    attrs:
-      textAlign: left
-      class: null
-    content:
-      -
-        type: text
-        text: 'Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.'
-  -
-    type: paragraph
-    attrs:
-      textAlign: left
-      class: null
-    content:
-      -
-        type: text
-        marks:
-          -
-            type: bold
-        text: Quelle
-      -
-        type: text
-        text: ":\_"
+        text: 'Internet '
       -
         type: text
         marks:
           -
             type: link
             attrs:
-              href: 'http://e-recht24.de/'
-              rel: noreferrer
-              target: _blank
+              href: 'http://bvbi.de/imprint/www.bvbi.de'
+              rel: null
+              target: null
               title: null
-        text: e-recht24.de
-      -
-        type: text
-        text: '© '
+        text: www.bvbi.de
       -
         type: hardBreak
       -
         type: text
-        text: 'Kontakt: ©'
+        text: 'oder '
+      -
+        type: text
+        marks:
+          -
+            type: link
+            attrs:
+              href: 'http://bvbi.de/'
+              rel: null
+              target: null
+              title: null
+        text: www.berliner-volksbank-immobilien.de
+  -
+    type: paragraph
+    attrs:
+      textAlign: left
+      class: null
+  -
+    type: heading
+    attrs:
+      textAlign: left
+      level: 4
+    content:
+      -
+        type: text
+        text: Datenschutzbeauftragte
+  -
+    type: paragraph
+    attrs:
+      textAlign: left
+      class: null
+  -
+    type: paragraph
+    attrs:
+      textAlign: justify
+      class: null
+    content:
+      -
+        type: text
+        text: 'Martina Böhmer'
+      -
+        type: hardBreak
+      -
+        type: text
+        text: ' '
+      -
+        type: text
+        marks:
+          -
+            type: link
+            attrs:
+              href: 'mailto:datenschutz@bvbi.de'
+              rel: 'noopener noreferrer'
+              target: _blank
+              title: null
+        text: datenschutz@bvbi.de
+      -
+        type: hardBreak
+      -
+        type: text
+        marks:
+          -
+            type: link
+            attrs:
+              href: 'https://mb-datenschutz.de/'
+              rel: 'noopener noreferrer'
+              target: _blank
+              title: null
+        text: www.mb-datenschutz.de
+  -
+    type: paragraph
+    attrs:
+      textAlign: left
+      class: null
+  -
+    type: heading
+    attrs:
+      textAlign: left
+      level: 4
+    content:
+      -
+        type: text
+        text: Geschäftsführer
+  -
+    type: paragraph
+    attrs:
+      textAlign: left
+      class: null
+  -
+    type: paragraph
+    attrs:
+      textAlign: justify
+      class: null
+    content:
+      -
+        type: text
+        text: 'Thorsten Conrad'
+  -
+    type: paragraph
+    attrs:
+      textAlign: left
+      class: null
+  -
+    type: heading
+    attrs:
+      textAlign: left
+      level: 4
+    content:
+      -
+        type: text
+        text: Register
+  -
+    type: paragraph
+    attrs:
+      textAlign: left
+      class: null
+  -
+    type: paragraph
+    attrs:
+      textAlign: justify
+      class: null
+    content:
+      -
+        type: text
+        text: 'Amtsgericht Charlottenburg'
+      -
+        type: hardBreak
+      -
+        type: text
+        text: 'Handelsregister HRB 116212'
+      -
+        type: hardBreak
+      -
+        type: text
+        text: 'Aufsichtsbehörde/§ 34c GewO'
+      -
+        type: hardBreak
+      -
+        type: text
+        text: 'Bezirksamt Mitte von Berlin'
+      -
+        type: hardBreak
+      -
+        type: text
+        text: 'Karl-Marx-Allee 31'
+      -
+        type: hardBreak
+      -
+        type: text
+        text: '10178 Berlin'
+  -
+    type: paragraph
+    attrs:
+      textAlign: left
+      class: null
+  -
+    type: heading
+    attrs:
+      textAlign: left
+      level: 4
+    content:
+      -
+        type: text
+        text: Steuernummern
+  -
+    type: paragraph
+    attrs:
+      textAlign: left
+      class: null
+  -
+    type: paragraph
+    attrs:
+      textAlign: justify
+      class: null
+    content:
+      -
+        type: text
+        text: 'Umsatzsteueridentifikationsnummer DE262529423'
+      -
+        type: hardBreak
+      -
+        type: text
+        text: 'Steuer-Nummer 27/002/031146'
+  -
+    type: paragraph
+    attrs:
+      textAlign: left
+      class: null
+  -
+    type: heading
+    attrs:
+      textAlign: left
+      level: 4
+    content:
+      -
+        type: text
+        text: 'Inhaltliche Verantwortung'
+  -
+    type: paragraph
+    attrs:
+      textAlign: left
+      class: null
+  -
+    type: paragraph
+    attrs:
+      textAlign: justify
+      class: null
+    content:
+      -
+        type: text
+        text: 'Thorsten Conrad für'
+      -
+        type: hardBreak
+      -
+        type: text
+        text: 'Berliner Volksbank Immobilien GmbH'
+      -
+        type: hardBreak
+      -
+        type: text
+        text: 'Bundesallee 61'
+      -
+        type: hardBreak
+      -
+        type: text
+        text: '12161 Berlin'
+  -
+    type: paragraph
+    attrs:
+      textAlign: left
+      class: null
+  -
+    type: heading
+    attrs:
+      textAlign: left
+      level: 4
+    content:
+      -
+        type: text
+        text: Schlichtungsstelle
+  -
+    type: paragraph
+    attrs:
+      textAlign: left
+      class: null
+  -
+    type: paragraph
+    attrs:
+      textAlign: justify
+      class: null
+    content:
+      -
+        type: text
+        text: 'Verbraucherinformation zur Online-Streitbeilegung gem. Art. 14 Abs. 1 ODR-VO: Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit, die Sie hier finden: '
+      -
+        type: text
+        marks:
+          -
+            type: link
+            attrs:
+              href: 'http://ec.europa.eu/consumers/odr'
+              rel: 'noopener noreferrer'
+              target: _blank
+              title: null
+        text: ec.europa.eu/consumers/odr
+      -
+        type: text
+        text: .
+  -
+    type: paragraph
+    attrs:
+      textAlign: justify
+      class: null
+    content:
+      -
+        type: text
+        text: 'Die BVBI ist nicht verpflichtet, an einem Streitbeilegungsverfahren teilzunehmen und nimmt daran auch nicht teil.'
+  -
+    type: paragraph
+    attrs:
+      textAlign: left
+      class: null
+  -
+    type: heading
+    attrs:
+      textAlign: left
+      level: 4
+    content:
+      -
+        type: text
+        text: Copyright/Bildrechte
+  -
+    type: paragraph
+    attrs:
+      textAlign: left
+      class: null
+  -
+    type: paragraph
+    attrs:
+      textAlign: justify
+      class: null
+    content:
+      -
+        type: text
+        text: "Sämtliche Texte, Fotos, Grafiken und andere Informationen innerhalb des Internetangebotes unterliegen – wenn nicht anders gekennzeichnet – dem\_ "
+      -
+        type: text
+        marks:
+          -
+            type: link
+            attrs:
+              href: 'http://bvbi.de/haftungsausschluss'
+              rel: 'noopener noreferrer'
+              target: _blank
+              title: null
+        text: Copyright
+      -
+        type: text
+        text: ' der Berliner Volksbank Immobiliern GmbH (BVBI) und sind z.T. in Ausübung einer Lizenz verwandt worden. Die Bildrechte liegen u.a. bei Fotolia; Alexander Kostomlatsky; Cosima Paulitschek, Jarek Raczek, Lars Pillau, Thomas Rafalzyk, Laura Thiele.'
+  -
+    type: paragraph
+    attrs:
+      textAlign: justify
+      class: null
+    content:
+      -
+        type: text
+        text: "Wenn Sie an der Verwendung einzelner Inhalte interessiert sind, spechen Sie uns bitte unter Angabe des beabsichtigten Verwendungszwecks an\_ "
+      -
+        type: text
+        marks:
+          -
+            type: link
+            attrs:
+              href: 'http://bvbi.de/kontakt/'
+              rel: 'noopener noreferrer'
+              target: _blank
+              title: null
+        text: Kontakt
+      -
+        type: text
+        text: .
 seo_noindex: false
 seo_nofollow: false
 seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1715601747
+updated_at: 1717499819
 ---

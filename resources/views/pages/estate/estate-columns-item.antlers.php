@@ -88,7 +88,7 @@
                 {{ /if }}
             </h3>
             <div class="space-y-2 text-md my-4">
-                <div class="flex space-x-2 text-gray-700 dark:text-gray-400">
+                <div class="flex space-x-2 text-gray-700 dark:text-gray-400 text-sm">
                     {{if elements.wohnflaeche}}<span><strong>ca. {{ elements.wohnflaeche| round }}</strong> m&sup2;</span>{{/if}}
                     {{if elements.anzahl_zimmer}}<span class="ml-2"> · <strong>{{ elements.anzahl_zimmer | round }}</strong> Zimmer </span>{{/if}}
                     {{if elements.ort}}<span class="ml-2 hidden lg:block"> · <strong>{{ elements.plz}}</strong> {{ elements.ort}}</span>{{/if}}

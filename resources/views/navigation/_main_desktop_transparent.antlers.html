@@ -1,6 +1,6 @@
 <nav class="transition-colors duration-300 border-b border-transparent" aria-label="Global" x-data="{
         scrolled: false,
-        isSpecialPage: window.location.pathname.startsWith('/immobilien') || window.location.pathname.startsWith('/suchauftrag') || window.location.pathname.startsWith('/kontakt') || window.location.pathname.startsWith('/stadtteile'),
+        isSpecialPage: window.location.pathname.startsWith('/immobilien') || window.location.pathname.startsWith('/impressum') || window.location.pathname.startsWith('/datenschutz') || window.location.pathname.startsWith('/suchauftrag') || window.location.pathname.startsWith('/kontakt') || window.location.pathname.startsWith('/stadtteile'),
     }" @scroll.window="scrolled = (window.pageYOffset > 0)"
     :class="{ 'border-gray-300 bg-opacity- bg-white': scrolled , 'bg-transparent border-transparent': !scrolled  }"
     x-init="scrolled = (window.pageYOffset > 0)" @click.away="mobileNav = false">
@@ -28,7 +28,7 @@
                 </svg>
             </button>
         </div>
-        <div class="hidden lg:flex lg:gap-x-12 lg:mr-16">
+        <div class="hidden lg:flex lg:gap-x-12 lg:mr-16 items-center">
             {{nav:main}} {{if depth == 1}}
             <!-- if has no children -->
             {{ if children == false}}
@@ -97,6 +97,9 @@
                 </div>
             </div>
             {{/if}} {{ /nav:main }}
+            <a href="/kontakt" title="" class="inline-flex items-center justify-center px-8 py-2 text-base font-medium text-white bg-secondary" role="button">
+                Kontakt
+            </a>
         </div>
     </div>
 </nav>

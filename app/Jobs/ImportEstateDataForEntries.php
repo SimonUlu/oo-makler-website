@@ -91,6 +91,7 @@ class ImportEstateDataForEntries implements ShouldQueue
 
         $onOfficeService = new OnOfficeService();
         $estates = $onOfficeService->getEstatesWithImagesExtended($filters, 0, 500);
+
         $fields = Yaml::parseFile(public_path('estate_fields/estate_fields.yaml'))['defaultFieldsEstate'];
 
         // Keep track of processed slugs
