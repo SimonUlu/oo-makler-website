@@ -1,6 +1,6 @@
 <section>
     <div class="max-w-screen-xl px-4 mx-auto lg:px-6">
-        <div class="inline-flex text-gray-200 text-xl">
+        <div class="flex flex-col md:flex-row text-gray-200 text-xl justify-center">
             <!-- Stars -->
             <div class="flex space-x-1 justify-center items-center">
                 <!-- Volle Sterne -->
@@ -16,19 +16,20 @@
             </div>
 
             <!-- Rest -->
-            <span class="mx-2"> · </span>
-            (<span x-text="rating"></span>/5)
-            <span class="mx-2"> ·  </span>
-            <span class="mr-2" x-text="num_user_ratings"></span> Bewertungen
+            <span class="flex items-center justify-center">
+                <span class="mx-2 "> · ( </span>
+                <span class="flex items-center justify-center" x-text="rating"></span> <span class="mx-2 flex items-center justify-center"> /5) ·  </span>
+            </span>
+            <span class="flex items-center justify-center"><span class="mr-2 flex items-center justify-center" x-text="num_user_ratings"></span> Bewertungen </span>
         </div>
         <!-- Wrapper -->
-        <div class="flex flex-col items-center space-y-4 lg:space-y-0 lg:space-x-4 lg:flex-row lg:justify-center py-4 lg:py-8"  x-data="reviewsSlider()" x-init="init()">
+        <div class="relative flex flex-col items-center space-y-4 lg:space-y-0 lg:space-x-4 lg:flex-row lg:justify-center py-4 lg:py-8"  x-data="reviewsSlider()" x-init="init()">
             <!-- Reviews Carousel -->
-            <div class="flex flex-col items-center space-y-4 lg:flex-row lg:space-x-4 lg:overflow-hidden">
+            <div class="flex flex-col items-center space-y-4 lg:flex-row lg:space-x-4 lg:overflow-hidden mx-12">
                 <template x-for="(review, index) in reviews" :key="index">
                     <div
-                        class="slide p-6 shadow-sm bg-gray-50 lg:w-1/3 min-h-[220px]"
-                        x-show="index >= activeSlide && index < activeSlide + 3"
+                        class="slide p-6 shadow-sm bg-gray-50 lg:w-1/3 min-h-[220px] max-w-[32rem]"
+                        x-show="index >= activeSlide && index < activeSlide + displayPerSlide"
                         style="display: none;"
                     >
                         <div
@@ -72,13 +73,13 @@
             </div>
             <!-- Buttons -->
             <button
-                class="lg:absolute lg:left-6 z-20 p-4 cursor-pointer text-white text-xl"
+                class="absolute left-0 lg:left-0 z-20 p-4 cursor-pointer text-white text-xl top-1/3 md:inset-y-0"
                 @click="prevSlide()"
             >
                 &#10094;
             </button>
             <button
-                class="lg:absolute lg:right-10 z-20 p-4 cursor-pointer text-white text-xl"
+                class="absolute right-0 lg:right-0 z-20 p-4 cursor-pointer text-white text-xl top-1/3 md:inset-y-0"
                 @click="nextSlide()"
             >
                 &#10095;
@@ -112,78 +113,62 @@
 
 <script>
     function reviewsSlider() {
-        return {
-            reviews: [],
-            rating: 0,
-            num_user_ratings: 0,
-            googlePlacesId: "",
-            apiKey: "",
-            activeSlide: 0,
-            displayPerSlide: 3,
-            fullStars: 0,
-            hasHalfStar: false,
+    return {
+        reviews: [],
+        rating: 0,
+        num_user_ratings: 0,
+        googlePlacesId: "",
+        apiKey: "",
+        activeSlide: 0,
+        displayPerSlide: 3, // Standardwert für größere Bildschirme
+        fullStars: 0,
+        hasHalfStar: false,
 
+        async fetchGoogleReviews() {
+            const url = `/google-reviews`;
+            try {
+              const response = await fetch(url);
+              const data = await response.json();
+              this.reviews = data.reviews;
+              this.rating = data.average_rating;
+              this.num_user_ratings = data.num_ratings;
+            } catch (error) {
+              console.error("Error fetching Google Reviews:", error);
+            }
+            this.calculateStars();
+        },
 
+        init() {
+            this.googlePlacesId = this.$el.getAttribute("data-google-places-id");
+            this.apiKey = this.$el.getAttribute("data-google-api-key");
+            this.fetchGoogleReviews();
+            this.adjustSlidesToShow();
+            window.addEventListener('resize', this.adjustSlidesToShow); // EventListener für Änderungen der Bildschirmgröße
+        },
 
-            async fetchGoogleReviews() {
-                const url = `/google-reviews`;
-                try {
-                  const response = await fetch(url);
-                  const data = await response.json();
-                  this.reviews = data.reviews;
-                  this.rating = data.average_rating;
-                  this.num_user_ratings = data.num_ratings;
+        calculateStars() {
+            this.fullStars = Math.floor(this.rating);
+            this.hasHalfStar = this.rating % 1 !== 0;
+        },
 
+        adjustSlidesToShow() {
+            // Anpassung der Anzahl der angezeigten Bewertungen basierend auf der Bildschirmgröße
+            this.displayPerSlide = window.innerWidth < 768 ? 1 : 3;
+        },
 
-                } catch (error) {
-                  console.error("Error fetching Google Reviews:", error);
-                }
-                this.calculateStars();
-            },
+        nextSlide() {
+            const maxIndex = Math.ceil(this.reviews.length / this.displayPerSlide) - 1;
+            this.activeSlide = this.activeSlide >= maxIndex ? 0 : this.activeSlide + 1;
+        },
 
-            init() {
-                this.googlePlacesId = this.$el.getAttribute(
-                    "data-google-places-id"
-                );
-                console.log("Hallo");
-                this.apiKey = this.$el.getAttribute("data-google-api-key");
-                this.fetchGoogleReviews();
-                
-            },
+        prevSlide() {
+            const maxIndex = Math.ceil(this.reviews.length / this.displayPerSlide) - 1;
+            this.activeSlide = this.activeSlide <= 0 ? maxIndex : this.activeSlide - 1;
+        },
 
-            calculateStars() {
-                this.fullStars = Math.floor(this.rating);
-                this.hasHalfStar = this.rating % 1 !== 0;
-            },
-
-
-            nextSlide() {
-                const rest = this.reviews.length - (this.activeSlide + this.displayPerSlide);
-                console.log(rest);
-                if (rest == 0) {
-                    this.activeSlide = 0;
-                }
-                else if (rest < this.displayPerSlide) {
-                    this.activeSlide += rest;
-                } else {
-                    this.activeSlide += this.displayPerSlide;
-                }
-            },
-
-            prevSlide() {
-                // Bewege dich zum vorhergehenden Slide, wenn möglich
-                if (this.activeSlide - this.displayPerSlide >= 0) {
-                    this.activeSlide -= this.displayPerSlide;
-                } else {
-                    this.activeSlide = this.reviews.length - (this.displayPerSlide + this.activeSlide);
-                }
-            },
-
-            truncateText(text, maxLength) {
-                return Array.from(text).length > maxLength
-                    ? Array.from(text).slice(0, maxLength).join("") + "..."
-                    : text;
-            },
-        };
-    }
+        truncateText(text, maxLength) {
+            return text.length > maxLength ? text.slice(0, maxLength) + "..." : text;
+        },
+    };
+}
 </script>

@@ -104,7 +104,7 @@
             x-data="reviewsSlider()"
             x-init="init()"
             data-google-places-id="{{ $googlePlaceId }}"
-            class="hidden lg:block"
+            class="block"
         >
             {{partial:reviews/google-reviews-full-width}}
         </div>
