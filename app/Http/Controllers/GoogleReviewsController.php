@@ -7,20 +7,28 @@ use Illuminate\Http\Request;
 
 class GoogleReviewsController extends Controller
 {
-    private $googleReviewsService;
-
-    public function __construct(GoogleReviewsService $googleReviewsService)
-    {
-        $this->googleReviewsService = $googleReviewsService;
-    }
-
     public function index(Request $request)
     {
-        $placeId = $request->input('place_id');
-        $language = $request->input('language');
-        $reviews = $this->googleReviewsService->getReviews($placeId, config('api.google.maps.key'), $language);
-        // return four random reviews
+        $language = $request->input('language', 'en'); // Default-Wert als 'en'
+        $placeId = env('GOOGLE_PLACE_ID');
+        $apiKey = env('GOOGLE_API_KEY');
 
-        return response()->json($reviews);
+        // Erstelle eine neue Instanz von GoogleReviewsService mit den erforderlichen Parametern
+        $googleReviewsService = new GoogleReviewsService($placeId, $apiKey, $language);
+
+        // Hole die Bewertungen
+        $reviews = $googleReviewsService->getReviews();
+        $num_ratings = $googleReviewsService->getUserRatings();
+        $average_rating = $googleReviewsService->getRating();
+
+        $response = [
+            'reviews' => $reviews,
+            'num_ratings' => $num_ratings,
+            'average_rating' => $average_rating,
+        ];
+
+
+        // Gib die zusammengestellten Informationen als JSON zurück
+        return response()->json($response);
     }
 }

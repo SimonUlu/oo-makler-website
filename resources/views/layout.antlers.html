@@ -68,8 +68,9 @@
             partial:statamic-peak-tools::components/toolbar }} {{ yield:seo_body
             }} {{ partial:layout/header }}
             <div
-                class="flex flex-col items-center justify-top -mt-[90px]"
+                class="flex flex-col items-center justify-top -mt-[100px]"
             >
+                <div class="hidden lg:flex">{{partial:sidebar/sidebar}}</div>
                 {{ partial:bladecontent }} {{ template_content }}
             </div>
 

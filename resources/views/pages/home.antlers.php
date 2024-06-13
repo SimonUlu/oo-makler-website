@@ -26,8 +26,9 @@
 
 {{ if statistic_type != 'type_3' }}
 <section class="w-full text-center bg-white">
-    <div class="relative max-w-5xl pt-16 mx-auto md:px-20 sm:pt-24 sm:pb-4 lg:px-10  max-w-screen-3xl">
-        <h2 class="mb-4 text-4xl font-bold tracking-tight text-gray-900 lg:text-5xl ">{{content_heading_h2}}</h2>
+    <div class="relative max-w-5xl py-16 mx-auto md:px-20 sm:py-24 lg:px-10  max-w-screen-3xl">
+        <h2 class="text-4xl font-bold tracking-tight text-primary lg:text-5xl ">{{content_heading_h2}}</h2>
+        <div class="text-secondary text-xl lg:text-2xl font-bold pb-4 pt-2"><p>Alles unter einem Dach</p></div>
         <div class="text-gray-500 sm:px-10 sm:text-xl dark:text-gray-400">{{content_text}}</div>
     </div>
 {{ if statistic_type == 'type_1' }}
@@ -48,10 +49,7 @@
 <section class="relative w-full px-4 lg:px-10 bg-white max-w-7xl">
     <div class="w-full py-8 mx-auto lg:py-16">
         <div class="text-center text-gray-900">
-            <h3 class="mb-2 text-base text-balance font-bold tracking-tight text-gray-500 max-w-4xl mx-auto">
-                    {{slider_subheader}}
-            </h3>
-            <h2 class="mb-4 text-4xl font-bold tracking-tight text-gray-900 lg:text-5xl ">{{slider_headline}}</h2>
+            <h2 class="mb-4 text-4xl font-bold tracking-tight text-primary lg:text-5xl ">{{slider_headline}}</h2>
             <a href="/immobilien" class="inline-flex items-center text-lg font-bold text-primary-600 dark:text-primary-500 dark:hover:text-primary-700 hover:text-primary-800">
                 {{slider_button_text}}
                 <svg class="w-6 h-6 ml-1 translate-y-[1px]" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -61,7 +59,7 @@
         </div>
         {{ partial:pages/estate/estate-columns-3 }}
         <div class="py-4 mt-12 text-center">
-            <a href="/immobilien" class="fade-in-animation items-center px-6 lg:px-12 py-3 mx-2 font-bold text-center text-white rounded-lg lg:px-5 focus:ring-4 focus:outline-none bg-primary-700 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 hover:bg-primary-800 focus:ring-primary-900" target="_blank">
+            <a href="/immobilien" class="fade-in-animation items-center px-6 py-3 mx-2 font-bold text-center text-white lg:px-5 focus:ring-4 focus:outline-none bg-primary-700 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 hover:bg-primary-800 focus:ring-primary-900" target="_blank">
                 Alle Immobilien ansehen<span aria-hidden="true">&nbsp;→</span>
             </a>
         </div>
@@ -93,7 +91,7 @@
 
 
 {{if review_type == "type_1"}}
-<section class="w-full px-4 lg:px-10 custom-gradient-darker mb-12 lg:mb-24">
+<section class="w-full px-4 lg:px-10 custom-gradient-darker">
     <div class="max-w-screen-xl px-4 py-8 mx-auto text-left md:text-center lg:py-16 lg:px-6">
         <div class="max-w-screen-sm mx-auto mb-8 lg:mb-16">
             <h2 class="mb-4 text-4xl font-bold tracking-tight text-white">
@@ -111,15 +109,6 @@
             {{partial:reviews/google-reviews-full-width}}
         </div>
 
-        <div
-            data-google-api-key="{{ $googleApiKey }}"
-            x-data="reviewsSlider()"
-            x-init="init()"
-            data-google-places-id="{{ $googlePlaceId }}"
-            class="block lg:hidden"
-        >
-            {{partial:reviews/google-reviews-mobile}}
-        </div>
         {{/if }}
         {{if review_configuration:immoscout24_reviews}}
         {{partial:reviews/immoscout24-reviews-full-width}}
@@ -163,15 +152,33 @@
 {{/if}}
 
 
+<section class="relative w-full 0 bg-gray-50 py-16">
+    <div class="w-full py-8 mx-auto lg:py-16 max-w-7xl px-4 lg:px-10">
+        <div class="text-center text-gray-900">
+            <h2 class="mb-4 text-4xl font-bold tracking-tight text-primary lg:text-5xl ">Unsere aktuellsten Referenzen</h2>
 
+            <p class="text-gray-500 sm:text-xl dark:text-gray-400">
+                Erhalten Sie einen Einblick in unsere realisierten Projekte und unserer Arbeit als Immobilienberater.    
+            </p>
+        </div>
+        <!-- Section Einleitung & Statistics -->
+        
+        {{ partial:pages/estate/estate-columns-3-ref }}
+    </div>
+    <div class="py-4 mt-12 text-center">
+        <a href="/immobilien" class="fade-in-animation items-center px-6 py-3 mx-2 font-bold text-center text-white lg:px-5 focus:ring-4 focus:outline-none bg-primary-700 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 hover:bg-primary-800 focus:ring-primary-900" target="_blank">
+            Alle aktuellen Immobilien ansehen<span aria-hidden="true">&nbsp;→</span>
+        </a>
+    </div>
+</section>
 
 
 
 
 
 {{if show_posts == "yes"}}
-    <section class="w-full max-w-7xl md:px-10 lg:pt-10">
-        <h2 class="mb-4 text-4xl font-bold tracking-tight text-left text-gray-900 lg:text-5xl "> Unsere Neuigkeiten </h2>
+    <section class="w-full max-w-7xl md:px-10 pt-10 lg:pt-20">
+        <h2 class="mb-4 text-4xl font-bold tracking-tight text-left text-primary lg:text-5xl "> Unsere Neuigkeiten </h2>
         <div class="max-w-2xl mt-3 text-xl text-gray-500 sm:mt-2">{{posts_text}}</div>
         {{partial:posts/new-list}}
     </section>

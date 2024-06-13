@@ -65,12 +65,17 @@
 
         <!-- Neue Section -->
         <div class="relative px-5 pt-2 pb-2 border  md:pt-0">
-            <h3 class="flex justify-between mb-2.5 text-lg font-bold text-gray-900 md:mt-4 ">
-                <span class="capitalize mb-2">
+            {{if elements.ort}}
+                <div class="absolute top-0 left-0 bg-primary text-white p-1 text-sm">
+                    <strong>{{ elements.plz}}</strong> {{ elements.ort}}</span>
+                </div>
+            {{/if}}
+            <h3 class="flex justify-between text-lg font-bold text-gray-900 mt-8">
+                <span class="capitalize mb-2 text-primary">
                     {{elements.objektart}}
                 </span>
                 {{ if elements.vermarktungsart == "miete" }}
-                <span class="capitalize inline-flex items-center  bg-primary-900 px-2.5 py-0.5 text-sm font-bold text-white">
+                <span class="inline-flex items-center  bg-white px-2.5 py-0.5 text-sm font-bold text-primary">
                     {{if elements.warmmiete > 0}}
                         {{ elements.warmmiete | format_number:0:',':'.' }} €
                     {{else}}
@@ -78,27 +83,28 @@
                     {{/if}}
                 </span>
                 {{ else }}
-                <span class="capitalize inline-flex items-center  border border-primary text-primary px-2.5 py-0.5 text-sm font-bold">
+                <span class="items-center  text-primary px-2.5 py-0.5 text-base font-bold">
                     {{if elements.kaufpreis > 0}}
                         {{ elements.kaufpreis | format_number:0:',':'.' }} €
+                        <br>
+                        <p class="font-normal text-sm">zzgl. Provision</p>
                     {{else}}
                         Preis auf Anfrage
                     {{/if}}
                 </span>
                 {{ /if }}
             </h3>
-            <div class="space-y-2 text-md my-4">
-                <div class="flex space-x-2 text-gray-700 dark:text-gray-400 text-sm">
-                    {{if elements.wohnflaeche}}<span><strong>ca. {{ elements.wohnflaeche| round }}</strong> m&sup2;</span>{{/if}}
+            <div class="space-y-2 text-md mb-4">
+                <div class="flex space-x-2 text-primary text-sm">
+                    {{if elements.wohnflaeche}}<span><strong>ca. {{ elements.wohnflaeche| round }}</strong> m&sup2; Wohnflaeche </span>{{/if}}
                     {{if elements.anzahl_zimmer}}<span class="ml-2"> · <strong>{{ elements.anzahl_zimmer | round }}</strong> Zimmer </span>{{/if}}
-                    {{if elements.ort}}<span class="ml-2 hidden lg:block"> · <strong>{{ elements.plz}}</strong> {{ elements.ort}}</span>{{/if}}
                 </div>
             </div>
             <div class="my-2 border-t border-gray-300"></div>
             <div class="flex flex-col items-center justify-center" x-data="{ logoUrl: '{{ $logoUrl }}' }">
                 <div class="flex items-center justify-between w-full"> <!-- Add 'items-center' class here -->
                     <img loading="lazy" class="max-w-[100px]" src="/logo_images/logo.png" alt="Ihr Kontakt">
-                    <a href="/immobilien/details/{{id}}" class="inline-flex justify-center items-center py-2.5 px-5 text-md font-medium text-center md:w-auto lg:col-span-12 focus:ring-4 focus:outline-none" target="_blank">Ansehen<span aria-hidden="true">&nbsp;→</span></a>
+                    <a href="/immobilien/details/{{id}}" class="inline-flex justify-center bg-secondary items-center py-2.5 px-5 text-md font-medium text-center md:w-auto lg:col-span-12 focus:ring-4 focus:outline-none text-white" target="_blank">Ansehen</a>
                 </div>
             </div>
         </div>

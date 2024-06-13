@@ -94,6 +94,8 @@
         return {
             reviews: [],
             googlePlacesId: "",
+            rating: 0,
+            num_user_ratings: 0,
             apiKey: "",
             activeSlide: 0,
             displayPerSlide: 1,
@@ -101,11 +103,13 @@
 
 
             async fetchGoogleReviews() {
-                const url = `/api/google-places-reviews?place_id=${this.googlePlacesId}`;
+                const url = `/google-reviews`;
                 try {
                   const response = await fetch(url);
                   const data = await response.json();
-                  this.reviews = data.result.reviews;
+                  this.reviews = data.reviews;
+                  this.rating = data.average_rating;
+                  this.num_user_ratings = data.num_rating;
                 } catch (error) {
                   console.error("Error fetching Google Reviews:", error);
                 }

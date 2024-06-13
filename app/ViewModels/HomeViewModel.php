@@ -28,6 +28,14 @@ class HomeViewModel extends ViewModel
 
         $estates = $estateEntryService->getEstatesUnpaginated($filters, 3, 'kaufpreis', 'desc');
 
+        $estateReferences = $estateEntryService->getEstatesUnpaginated(
+            [],
+            9,
+            'erstellt_am',
+            'desc',
+            'estate_entries_references'
+        );
+
         // $estateReferences = EstateHelper::getEstatesWithImages(request(), $onOfficeService, EstateHelper::prepareFilterForOnOfficeApi(request(), $onOfficeService, $filterEstateReferencesRaw), 0, 500, 'estateReferences', 'estateReferenceImages');
         // get estateLocations
         // $estateLocations = EstateHelper::getLocations('ort', $estates);
@@ -39,6 +47,7 @@ class HomeViewModel extends ViewModel
             'estateLocations' => json_encode($estateLocations),
             // 'estateReferences' => $estateReferences,
             'listAppearance' => $estateListAppearance ?? 'list',
+            'estateReferences' => $estateReferences,
         ];
     }
 }

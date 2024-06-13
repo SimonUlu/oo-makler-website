@@ -57,7 +57,7 @@
 <script>
 function slider() {
     return {
-        estates: @json($estates),
+        estates: @json($estateReferences),
         activeSlides: [0, 1, 2], // Start mit den ersten drei Slides als aktiv        
         next() {
             console.log(this.estates)

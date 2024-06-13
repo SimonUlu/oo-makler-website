@@ -28,7 +28,7 @@ class VerkaufenViewModel extends ViewModel
         );
 
         return [
-            'estates' => $estateReferences,
+            'estateReferences' => $estateReferences,
         ];
     }
 }

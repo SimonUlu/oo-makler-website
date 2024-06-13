@@ -8,7 +8,7 @@
         @csrf
         {{-- <input type="hidden" name="vermarktungsart" value="kauf"> --}}
 
-        <div class="lg:col-span-3" x-data="{ openLocations: false, query: '' }">
+        <div class="lg:col-span-4" x-data="{ openLocations: false, query: '' }">
             <label for="location-form" class="sr-only">Location</label>
             <div class="relative" x-data="{
                 locations: {{ $estateLocations }},
@@ -24,10 +24,10 @@
                 <input name="filter[ort]" @click.outside="openLocations  = false"
                     x-on:input="openLocations = true; query = $event.target.value" type="text" id="location-form"
                     x-bind:value="query"
-                    class="block p-2.5 pl-10 w-full text-sm text-gray-900 rounded-lg border border-gray-300 dark:placeholder-gray-400 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-500 dark:focus:border-primary-500 focus:ring-primary-500 focus:border-primary-500"
+                    class="block p-2.5 pl-10 w-full text-sm text-gray-900 -lg border border-gray-300 dark:placeholder-gray-400 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-500 dark:focus:border-primary-500 focus:ring-primary-500 focus:border-primary-500"
                     placeholder="Ort">
                 <ul x-show="openLocations && query.length > 0"
-                    class="overflow-auto absolute z-10 py-1 mt-1 w-full max-h-60 text-base bg-white rounded-md ring-1 ring-black ring-opacity-5 shadow-lg sm:text-sm focus:outline-none"
+                    class="overflow-auto absolute z-10 py-1 mt-1 w-full max-h-60 text-base bg-white -md ring-1 ring-black ring-opacity-5 shadow-lg sm:text-sm focus:outline-none"
                     tabindex="-1" role="listbox" aria-labelledby="listbox-label"
                     aria-activedescendant="listbox-option-3">
                     <template x-for="(location, index) in locations" :key="index">
@@ -43,27 +43,27 @@
                 </ul>
             </div>
         </div>
-        <div class="lg:col-span-3">
+        <div class="lg:col-span-4">
             <label for="objektart" class="sr-only">Object Type</label>
             {{-- Comment it out when you want to use objektart --}}
             <select name="filter[objektart]" id="objektart"
-                class="block p-2.5 w-full text-sm text-gray-900 rounded-lg border border-gray-300 dark:placeholder-gray-400 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-500 dark:focus:border-primary-500 focus:ring-primary-500 focus:border-primary-500">
+                class="block p-2.5 w-full text-sm text-gray-900 -lg border border-gray-300 dark:placeholder-gray-400 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-500 dark:focus:border-primary-500 focus:ring-primary-500 focus:border-primary-500">
                 <option disabled selected>Objektart</option>
                 <option>Haus</option>
                 <option>Wohnung</option>
             </select>
         </div>
-        <div class="lg:col-span-3">
+        {{-- <div class="lg:col-span-3">
             <label for="vermarktungsart" class="sr-only">Kauf / Miete</label>
             <select name="filter[vermarktungsart]" id="vermarktungsart"
-                class="block p-2.5 w-full text-sm text-gray-900 rounded-lg border border-gray-300 dark:placeholder-gray-400 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-500 dark:focus:border-primary-500 focus:ring-primary-500 focus:border-primary-500">
+                class="block p-2.5 w-full text-sm text-gray-900 -lg border border-gray-300 dark:placeholder-gray-400 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-500 dark:focus:border-primary-500 focus:ring-primary-500 focus:border-primary-500">
                 <option disabled selected>Vermarktungsart</option>
                 <option>Kauf</option>
                 <option>Miete</option>
             </select>
-        </div>
+        </div> --}}
         <button type="submit" id="submitEstateForm"
-            class="inline-flex justify-center items-center py-2.5 px-5 w-full text-sm font-medium text-center text-white rounded-lg md:w-auto lg:col-span-3 lg:col-span-12 focus:ring-4 focus:outline-none bg-secondary dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 hover:bg-primary-800 focus:ring-primary-300">
+            class="inline-flex justify-center items-center py-2.5 px-5 w-full text-sm font-medium text-center text-white -lg md:w-auto lg:col-span-4 focus:ring-4 focus:outline-none bg-secondary dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 hover:bg-primary-800 focus:ring-primary-300">
             <svg class="mr-2 -ml-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd"
                     d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"

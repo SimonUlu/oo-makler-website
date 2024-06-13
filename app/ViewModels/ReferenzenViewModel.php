@@ -21,7 +21,7 @@ class ReferenzenViewModel extends ViewModel
         );
 
         return [
-            'estates' => $estateReferences,
+            'estateReferences' => $estateReferences,
         ];
     }
 }
