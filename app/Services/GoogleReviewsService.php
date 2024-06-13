@@ -7,8 +7,11 @@ use GuzzleHttp\Client;
 class GoogleReviewsService
 {
     private $client;
+
     private $placeId;
+
     private $apiKey;
+
     private $language;
 
     public function __construct($placeId, $apiKey, $language = 'en')

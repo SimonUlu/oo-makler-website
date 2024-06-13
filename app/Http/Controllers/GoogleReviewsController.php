@@ -27,7 +27,6 @@ class GoogleReviewsController extends Controller
             'average_rating' => $average_rating,
         ];
 
-
         // Gib die zusammengestellten Informationen als JSON zurück
         return response()->json($response);
     }
