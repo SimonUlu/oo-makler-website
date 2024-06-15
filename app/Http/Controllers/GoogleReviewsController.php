@@ -10,8 +10,8 @@ class GoogleReviewsController extends Controller
     public function index(Request $request)
     {
         $language = $request->input('language', 'en'); // Default-Wert als 'en'
-        $placeId = env('GOOGLE_PLACE_ID');
-        $apiKey = env('GOOGLE_API_KEY');
+        $placeId = config('services.google.place_id');
+        $apiKey = config('services.google.api_key');
 
         // Erstelle eine neue Instanz von GoogleReviewsService mit den erforderlichen Parametern
         $googleReviewsService = new GoogleReviewsService($placeId, $apiKey, $language);

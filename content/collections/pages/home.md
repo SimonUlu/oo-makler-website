@@ -12,7 +12,7 @@ seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1717247935
+updated_at: 1718369137
 header_type: type_6
 content_heading_h2: 'Berliner Volksbank Immobilien'
 content_text:
@@ -524,4 +524,5 @@ header_day:
   - header_placeholder.jpeg
 slider_subheader: 'Lorem Ipsum'
 slider_button_text: 'Zu unseren Immobilien'
+posts_text: 'Lorem Ipsum'
 ---

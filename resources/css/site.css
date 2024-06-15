@@ -52,3 +52,9 @@
     /* Stellt sicher, dass beide Gradienten das gesamte Element bedecken */
     background-size: cover;
 }
+
+.decoration-custom {
+    text-decoration-color: #003064; /* Ersetzen Sie #IhreFarbe mit der gewünschten Farbe */
+    text-decoration-thickness: 2px;
+    text-underline-offset: 16px;
+}
