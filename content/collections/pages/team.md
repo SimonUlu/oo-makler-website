@@ -171,8 +171,6 @@ services:
 teamsection: variante_4
 image_second:
   - csm_voba_am_wu__rttemberg_p7a6289_43e34e140b.jpg
-header_image:
-  - header_ueberuns.jpg
 content_with_image_replicator:
   -
     id: lwyvm3ps
