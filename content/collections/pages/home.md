@@ -12,7 +12,7 @@ seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1718616975
+updated_at: 1718617769
 header_type: type_6
 content_heading_h2: 'Berliner Volksbank Immobilien'
 content_text:
@@ -351,7 +351,7 @@ content_with_image_replicator:
   -
     id: lw4qylfk
     image:
-      - architecture-gef0672c68_1920.jpg
+      - content_kaufverkauf.jpeg
     headline: 'Für Käufer'
     text:
       -
@@ -384,7 +384,7 @@ content_with_image_replicator:
   -
     id: lw4qz80z
     image:
-      - architecture-gef0672c68_1920.jpg
+      - content_eigentuemer.jpg
     headline: 'Für Eigentümer'
     text:
       -
@@ -417,7 +417,7 @@ content_with_image_replicator:
   -
     id: lww4dcz1
     image:
-      - architecture-gef0672c68_1920.jpg
+      - content_bautraeger.jpg
     headline: 'Für Bauträger'
     text:
       -
