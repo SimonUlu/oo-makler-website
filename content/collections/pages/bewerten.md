@@ -141,7 +141,7 @@ seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1718619377
+updated_at: 1718619480
 headerbild:
   - header_bewerten.jpg
 stepsheader: 'UNSER VORGEHEN.'
@@ -607,7 +607,7 @@ accordeon_list:
   -
     id: lwyus2cl
     header: 'Was kostet mich die Bewertung meiner Immobilie?'
-    description: 'Die Kosten für die Bewertung Ihrer Immobilie können je nach Umfang und ARt der Bewertung variieren.'
+    description: 'Die Kosten für die Bewertung Ihrer Immobilie können je nach Umfang und Art der Bewertung variieren.'
     type: neues_set
     enabled: true
 ---
