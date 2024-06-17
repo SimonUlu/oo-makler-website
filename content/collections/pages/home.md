@@ -12,7 +12,7 @@ seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1718616530
+updated_at: 1718616725
 header_type: type_6
 content_heading_h2: 'Berliner Volksbank Immobilien'
 content_text:
@@ -352,7 +352,7 @@ content_with_image_replicator:
     id: lw4qylfk
     image:
       - architecture-gef0672c68_1920.jpg
-    headline: 'UNSER TEAM.'
+    headline: 'Für Käufer'
     text:
       -
         type: paragraph
@@ -361,19 +361,24 @@ content_with_image_replicator:
         content:
           -
             type: text
-            text: 'Wir sind der Immobilienpartner in Ihrer Nachbarschaft – immer für Sie da, kompetent und sozial engagiert in der Region. Wir nehmen uns Zeit für Sie und Ihre Wünsche, ganz gleich in welcher Lebenssituation Sie sich gerade befinden und welchen Bedarf Sie an professioneller Beratung haben.'
-    button_link: /team
+            text: 'Alles, was Sie für den Kauf Ihrer Traumimmobilie benötigen – von der ersten Suche bis zur finalen Finanzierung.'
+    button_link: /kaufen
     type: neues_set
     enabled: true
     image_section_list:
       -
         id: lww4c920
-        listitem: 'Lorem Ipsum'
+        listitem: 'Suchprofil anlegen'
         type: neues_set
         enabled: true
       -
         id: lww4ccnj
-        listitem: 'Lorem Ipsum'
+        listitem: Baufinanzierungs-Rechner
+        type: neues_set
+        enabled: true
+      -
+        id: lxis0k2i
+        listitem: Finanzierungs-Tipps
         type: neues_set
         enabled: true
   -
