@@ -141,7 +141,7 @@ seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1718620392
+updated_at: 1718620412
 headerbild:
   - header_bewerten.jpg
 stepsheader: 'UNSER VORGEHEN.'
@@ -564,7 +564,7 @@ services_replicator:
     link: /
     type: new_set
     enabled: true
-columns: '5'
+columns: '7'
 logo_replikator:
   -
     id: lww6zqcr
