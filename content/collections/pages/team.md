@@ -11,14 +11,22 @@ subtitle:
     content:
       -
         type: text
-        text: 'Entdecken Sie, wer wir sind: Ihre Experten für<br>Immobilien mit Leidenschaft und Erfahrung.'
+        text: 'Entdecken Sie, wer wir sind: Ihre Experten für'
+  -
+    type: paragraph
+    attrs:
+      class: null
+    content:
+      -
+        type: text
+        text: 'Immobilien mit Leidenschaft und Erfahrung.'
 seo_noindex: false
 seo_nofollow: false
 seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1718620877
+updated_at: 1718620888
 imagesectionheader: 'ÜBER UNS.'
 imagesectiondescription: 'Volksbank am Württemberg – Ihr Immobilienpartner in Stuttgart und Fellbach. Individuell, zuverlässig, sicher: Ihre Immobilie liegt uns am Herzen. Mit Erfahrung, Know-How und Leidenschaft begleiten wir Sie bei jedem Schritt.'
 ctatext1header: 'Unsere Vision'
