@@ -12,7 +12,7 @@ seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1718616725
+updated_at: 1718616975
 header_type: type_6
 content_heading_h2: 'Berliner Volksbank Immobilien'
 content_text:
@@ -362,7 +362,7 @@ content_with_image_replicator:
           -
             type: text
             text: 'Alles, was Sie für den Kauf Ihrer Traumimmobilie benötigen – von der ersten Suche bis zur finalen Finanzierung.'
-    button_link: /kaufen
+    button_link: /
     type: neues_set
     enabled: true
     image_section_list:
@@ -394,19 +394,24 @@ content_with_image_replicator:
         content:
           -
             type: text
-            text: 'Gemeinsam mit Ihnen finden wir die optimale, ganz individuelle Lösung und bei Bedarf auch eine marktgerechte Finanzierung. Stetiger Austausch und partnerschaftliche Zusammenarbeit sind uns eine Herzensangelegenheit. Unser kompetentes Team und unsere Spezialisten vor Ort sind stets an Ihrer Seite und gehen für Sie immer einen Schritt weiter als andere.'
+            text: 'Optimieren Sie den Wert und Schutz Ihrer Immobilie mit unseren Bewertungs-, Verkaufs- und Versicherungsdiensten.'
     type: neues_set
     enabled: true
-    button_link: /verkaufen
+    button_link: /
     image_section_list:
       -
         id: lww4cepy
-        listitem: 'Lorem Ipsum'
+        listitem: 'Immobilie online bewerten'
         type: neues_set
         enabled: true
       -
         id: lww4cfz3
-        listitem: 'Lorem Ipsum'
+        listitem: 'Immobilie verkaufen'
+        type: neues_set
+        enabled: true
+      -
+        id: lxis5cb8
+        listitem: 'Versicherungsschutz rund um die Immobilie'
         type: neues_set
         enabled: true
   -
@@ -422,19 +427,29 @@ content_with_image_replicator:
         content:
           -
             type: text
-            text: 'Gemeinsam mit Ihnen finden wir die optimale, ganz individuelle Lösung und bei Bedarf auch eine marktgerechte Finanzierung. Stetiger Austausch und partnerschaftliche Zusammenarbeit sind uns eine Herzensangelegenheit. Unser kompetentes Team und unsere Spezialisten vor Ort sind stets an Ihrer Seite und gehen für Sie immer einen Schritt weiter als andere.'
+            text: 'Unterstützung von der Projektidee bis zur erfolgreichen Vermarktung – '
+          -
+            type: hardBreak
+          -
+            type: text
+            text: 'Ihr Erfolg ist unser Ziel.'
     type: neues_set
     enabled: true
-    button_link: /verkaufen
+    button_link: /
     image_section_list:
       -
         id: lww4cepy
-        listitem: 'Lorem Ipsum'
+        listitem: Vermarktungsstrategie
         type: neues_set
         enabled: true
       -
         id: lww4cfz3
-        listitem: 'Lorem Ipsum'
+        listitem: 'Referenzprojekte ansehen'
+        type: neues_set
+        enabled: true
+      -
+        id: lxis5zmv
+        listitem: Projektentwicklung
         type: neues_set
         enabled: true
 steps:
