@@ -26,7 +26,7 @@ seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1718622346
+updated_at: 1718622472
 imagesectionheader: 'ÜBER UNS.'
 imagesectiondescription: 'Volksbank am Württemberg – Ihr Immobilienpartner in Stuttgart und Fellbach. Individuell, zuverlässig, sicher: Ihre Immobilie liegt uns am Herzen. Mit Erfahrung, Know-How und Leidenschaft begleiten wir Sie bei jedem Schritt.'
 ctatext1header: 'Unsere Vision'
@@ -289,8 +289,15 @@ kooperationen:
   -
     id: lxivcdd5
     image:
-      - kooperationen/erblotse.png
+      - kooperationen/heinzvonheiden.png
     text: "<b><a href=\"https://www.heinzvonheiden.de/\"target=\"_blank\">Heinz von Heiden</a></b>\_ist einer der erfolgreichsten Massivhaus-Anbieter Deutschlands und ist spezialisiert auf den Bau von massiven Doppel-, Reihen- und Einfamilienhäusern."
+    type: neues_set
+    enabled: true
+  -
+    id: lxivdsj3
+    image:
+      - kooperationen/vobahome.png
+    text: 'Mit über 150 Jahren Erfahrung in der Finanz- und Immobilienbranche gehört die <b><a href="https://www.volksbank-teilverkauf.de/"target="_blank">Volksbank Immobilien GmbH</a></b> in Heidelberg bundesweit zu den erfahrensten Unternehmen im Bereich Immobilien-Teilverkauf.'
     type: neues_set
     enabled: true
 show_cta: 'no'
