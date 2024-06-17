@@ -26,7 +26,7 @@ seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1718622127
+updated_at: 1718622262
 imagesectionheader: 'ÜBER UNS.'
 imagesectiondescription: 'Volksbank am Württemberg – Ihr Immobilienpartner in Stuttgart und Fellbach. Individuell, zuverlässig, sicher: Ihre Immobilie liegt uns am Herzen. Mit Erfahrung, Know-How und Leidenschaft begleiten wir Sie bei jedem Schritt.'
 ctatext1header: 'Unsere Vision'
@@ -277,6 +277,13 @@ kooperationen:
     image:
       - kooperationen/r-v.png
     text: "Mit der\_<b><a href=\"https://www.ruv.de/bauen-wohnen\"target=\"_blank\">R+V Versicherung</a></b>\_steht im genossenschaftlichen Finanzverbund ein großer Partner für Versicherungen zur Verfügung. Die Wohngebäude- und Hausratversicherung ist für Immobilienkäufer das wichtigste Produkt. Die R+V kann aber auch finanzieren. Viele Bauträger nutzen bereits die guten Kontakte und lassen den Bau von Beginn an über die R+V absichern. Auch nach Fertigstellung steht die R+V mit individuellen Versicherungslösungen bereit."
+    type: neues_set
+    enabled: true
+  -
+    id: lxiv9l59
+    image:
+      - kooperationen/erblotse.png
+    text: "Einen Erbfall zu regeln ist umfangreich, zeitaufwändig und teuer. Die Experten von\_<b><a href=\"https://www.erblotse.de/partner/bvbi\"target=\"_blank\">Erblotse</a></b>\_helfen Ihnen Schritt für Schritt durch Ihren individuellen Erbfall. Auch zum Thema „Immobilien im Nachlass“ bieten sie Hilfestellungen für Erben und Testamentsvollstrecker."
     type: neues_set
     enabled: true
 show_cta: 'no'
