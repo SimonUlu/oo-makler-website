@@ -26,7 +26,7 @@ seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1718622734
+updated_at: 1718622940
 imagesectionheader: 'ÜBER UNS.'
 imagesectiondescription: 'Volksbank am Württemberg – Ihr Immobilienpartner in Stuttgart und Fellbach. Individuell, zuverlässig, sicher: Ihre Immobilie liegt uns am Herzen. Mit Erfahrung, Know-How und Leidenschaft begleiten wir Sie bei jedem Schritt.'
 ctatext1header: 'Unsere Vision'
@@ -226,7 +226,7 @@ memberships:
   -
     id: lx09sgko
     image:
-      - ivd.png
+      - mitgliedschaften/ivd.png
     text: 'Der Immobilienverband Deutschland IVD Bundesverband der Immobilienberater, Makler, Verwalter und Sachverständigen e. V. ist ein deutscher Verband für Unternehmen der Wohnungs- und Immobilienwirtschaft.'
     type: neues_set
     enabled: true
@@ -241,7 +241,7 @@ memberships:
     id: lx09t7o1
     image:
       - ihk-mitgliedschaft.png
-    text: 'Der Verein VR-Nord – VR Immobilien Norddeutschland – wurde 1995 ins Leben gerufen. Die Mitglieder sind ausschließlich die Immobilienabteilungen von Volks- und Raiffeisenbanken und deren Tochtergesellschaften, die Immobilienservice- und Dienstleistungsgesellschaften. Der Verein deckt den Bereich zwischen Niebüll und Baunatal sowie Leer bis Berlin ab.'
+    text: 'Der <b><a href="https://www.rdm-bb.de/"target="_blank">RDM</a></b> Ring Deutscher Makler Landesverband Berlin Brandenburg e.V. ist der älteste Berufsverband für Immobilienmakler und Hausverwalter in der Region.'
     type: neues_set
     enabled: true
 kooperations_header: Kooperationen
