@@ -520,8 +520,6 @@ steps:
     enabled: true
 logo_cols: '10'
 show_newsletter: 'no'
-header_day:
-  - header_placeholder.jpeg
 slider_subheader: 'Lorem Ipsum'
 slider_button_text: 'Zu unseren Immobilien'
 posts_text: 'Lorem Ipsum'
