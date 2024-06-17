@@ -523,6 +523,4 @@ show_newsletter: 'no'
 slider_subheader: 'Lorem Ipsum'
 slider_button_text: 'Zu unseren Immobilien'
 posts_text: 'Lorem Ipsum'
-header_day:
-  - header_berlin.jpg
 ---
