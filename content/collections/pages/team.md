@@ -26,7 +26,7 @@ seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1718621990
+updated_at: 1718622127
 imagesectionheader: 'ÜBER UNS.'
 imagesectiondescription: 'Volksbank am Württemberg – Ihr Immobilienpartner in Stuttgart und Fellbach. Individuell, zuverlässig, sicher: Ihre Immobilie liegt uns am Herzen. Mit Erfahrung, Know-How und Leidenschaft begleiten wir Sie bei jedem Schritt.'
 ctatext1header: 'Unsere Vision'
@@ -269,16 +269,14 @@ kooperationen:
     id: lx0a94k5
     image:
       - kooperationen/ebacus.png
-    text: |-
-      Jedes Unternehmen, das sein Angebot vorrangig über das Internet verbreitet, ist auf eine verlässliche IT-Technik angewiesen. Mit der <b><a href="https://ebacus.de/de/start/"
-      target="_blank">ebacus GmbH</a></b> haben wir einen solchen Partner. Vom Notebook bis zum Server betreut das ebacus-Team neben der Hardware auch die gesamte IT-Architektur bis hin zu Softwareanwendungen und Datensicherheit.
+    text: 'Jedes Unternehmen, das sein Angebot vorrangig über das Internet verbreitet, ist auf eine verlässliche IT-Technik angewiesen. Mit der <b><a href="https://ebacus.de/de/start/"target="_blank">ebacus GmbH</a></b> haben wir einen solchen Partner. Vom Notebook bis zum Server betreut das ebacus-Team neben der Hardware auch die gesamte IT-Architektur bis hin zu Softwareanwendungen und Datensicherheit.'
     type: neues_set
     enabled: true
   -
     id: lx0a93gr
     image:
-      - ihk-mitgliedschaft.png
-    text: "Die\_Berliner Volksbank eG\_ist als unsere Muttergesellschaft unser wichtigster Partner. Als Finanzierer für Bauprojekte und für Immobilienkäufer ist sie eine wesentliche Säule unseres Erfolgs. Einen großen Teil der Verkaufsaufträge erhalten wir von der Kundschaft der Bank. Mit diesem Vertriebskanal ist die BVBI an über 120 Bank-Standorten überall in Berlin und Brandenburg vor Ort."
+      - kooperationen/r-v.png
+    text: "Mit der\_<b><a href=\"https://www.ruv.de/bauen-wohnen\"target=\"_blank\">R+V Versicherung</a></b>\_steht im genossenschaftlichen Finanzverbund ein großer Partner für Versicherungen zur Verfügung. Die Wohngebäude- und Hausratversicherung ist für Immobilienkäufer das wichtigste Produkt. Die R+V kann aber auch finanzieren. Viele Bauträger nutzen bereits die guten Kontakte und lassen den Bau von Beginn an über die R+V absichern. Auch nach Fertigstellung steht die R+V mit individuellen Versicherungslösungen bereit."
     type: neues_set
     enabled: true
 show_cta: 'no'
