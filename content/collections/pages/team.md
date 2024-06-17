@@ -26,7 +26,7 @@ seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1718622472
+updated_at: 1718622734
 imagesectionheader: 'ÜBER UNS.'
 imagesectiondescription: 'Volksbank am Württemberg – Ihr Immobilienpartner in Stuttgart und Fellbach. Individuell, zuverlässig, sicher: Ihre Immobilie liegt uns am Herzen. Mit Erfahrung, Know-How und Leidenschaft begleiten wir Sie bei jedem Schritt.'
 ctatext1header: 'Unsere Vision'
@@ -226,15 +226,15 @@ memberships:
   -
     id: lx09sgko
     image:
-      - ihk-mitgliedschaft.png
-    text: 'Der Verein VR-Nord – VR Immobilien Norddeutschland – wurde 1995 ins Leben gerufen. Die Mitglieder sind ausschließlich die Immobilienabteilungen von Volks- und Raiffeisenbanken und deren Tochtergesellschaften, die Immobilienservice- und Dienstleistungsgesellschaften. Der Verein deckt den Bereich zwischen Niebüll und Baunatal sowie Leer bis Berlin ab.'
+      - ivd.png
+    text: 'Der Immobilienverband Deutschland IVD Bundesverband der Immobilienberater, Makler, Verwalter und Sachverständigen e. V. ist ein deutscher Verband für Unternehmen der Wohnungs- und Immobilienwirtschaft.'
     type: neues_set
     enabled: true
   -
     id: lx09t90h
     image:
-      - ihk-mitgliedschaft.png
-    text: 'Der Verein VR-Nord – VR Immobilien Norddeutschland – wurde 1995 ins Leben gerufen. Die Mitglieder sind ausschließlich die Immobilienabteilungen von Volks- und Raiffeisenbanken und deren Tochtergesellschaften, die Immobilienservice- und Dienstleistungsgesellschaften. Der Verein deckt den Bereich zwischen Niebüll und Baunatal sowie Leer bis Berlin ab.'
+      - mitgliedschaften/vrimmobilien_norddeutschland.png
+    text: 'Der Verein <b><a href="https://vr-nord.de/"target="_blank">VR-Nord</a></b> – VR Immobilien Norddeutschland – wurde 1995 ins Leben gerufen. Die Mitglieder sind ausschließlich die Immobilienabteilungen von Volks- und Raiffeisenbanken und deren Tochtergesellschaften, die Immobilienservice- und Dienstleistungsgesellschaften. Der Verein deckt den Bereich zwischen Niebüll und Baunatal sowie Leer bis Berlin ab.'
     type: neues_set
     enabled: true
   -
