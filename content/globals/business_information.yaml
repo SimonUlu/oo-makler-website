@@ -1,10 +1,10 @@
 title: 'Business Information'
 data:
-  company_name: 'Volksbank am Württemberg'
-  company_street: Maria-Merian-Straße
-  company_house_number: '9'
-  company_zip: '70736'
-  company_city: Fellbach
-  company_email: info@voba-immobilienpartner.de
-  company_phone: '0711 305011210'
-  company_phone_display: '0711 305011210'
+  company_name: 'Berliner Volksbank Immobilien GmbH'
+  company_street: Bundesallee
+  company_house_number: '61'
+  company_zip: '12161'
+  company_city: Berlin-Friedenau
+  company_email: info@bvbi.de
+  company_phone: '+49 (30) 56 55555 0'
+  company_phone_display: '+49 (30) 56 55555 0'
