@@ -5,7 +5,6 @@ view_model: App\ViewModels\VerkaufenViewModel
 template: pages/leistungen/cta-page
 title: Bewerten
 subtitle: 'Finden Sie den wahren Wert Ihrer Immobilie<br>– präzise, professionell, persönlich.'
-description: 'IHRE VORTEILE – UNSERE BESONDEREN LEISTUNGEN SPEZIELL FÜR SIE:'
 subheaderheadline: 'Entdecken Sie den Wert Ihrer Immobilie'
 subheaderdescription: 'Ob online oder vor Ort – unsere Experten bieten Ihnen eine schnelle, fundierte und transparente<br>Bewertung, um den optimalen Wert Ihrer Immobilie zu bestimmen.'
 content_image_1:
@@ -142,7 +141,7 @@ seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1718618979
+updated_at: 1718619110
 headerbild:
   - header_bewerten.jpg
 stepsheader: 'UNSER VORGEHEN.'
