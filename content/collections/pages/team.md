@@ -2,7 +2,7 @@
 id: b008121d-1d60-4584-9ad1-a1d40f3f031e
 blueprint: page
 template: pages/team/index
-title: 'Ihr vertrauensvoller Partner im Immobiliengeschäft'
+title: 'Über uns'
 subtitle:
   -
     type: paragraph
@@ -11,14 +11,14 @@ subtitle:
     content:
       -
         type: text
-        text: 'Lernen Sie unser Team kennen und erfahren Sie, was uns antreibt, für Sie den Unterschied zu machen.'
+        text: 'Entdecken Sie, wer wir sind: Ihre Experten für<br>Immobilien mit Leidenschaft und Erfahrung.'
 seo_noindex: false
 seo_nofollow: false
 seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1717498843
+updated_at: 1718620877
 imagesectionheader: 'ÜBER UNS.'
 imagesectiondescription: 'Volksbank am Württemberg – Ihr Immobilienpartner in Stuttgart und Fellbach. Individuell, zuverlässig, sicher: Ihre Immobilie liegt uns am Herzen. Mit Erfahrung, Know-How und Leidenschaft begleiten wir Sie bei jedem Schritt.'
 ctatext1header: 'Unsere Vision'
