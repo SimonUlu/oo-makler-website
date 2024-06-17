@@ -26,7 +26,7 @@ seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1718621592
+updated_at: 1718621704
 imagesectionheader: 'ÜBER UNS.'
 imagesectiondescription: 'Volksbank am Württemberg – Ihr Immobilienpartner in Stuttgart und Fellbach. Individuell, zuverlässig, sicher: Ihre Immobilie liegt uns am Herzen. Mit Erfahrung, Know-How und Leidenschaft begleiten wir Sie bei jedem Schritt.'
 ctatext1header: 'Unsere Vision'
@@ -250,7 +250,7 @@ kooperationen:
   -
     id: lx0a8kbn
     image:
-      - logo_kinderhospize_leipzig_2019.jpg
+      - kooperationen/berlinervolksbank.png
     text: |-
       Die <b><a href="https://www.berliner-volksbank.de/privatkunden/kredite-und-baufinanzierung.html"
       target="_blank">Berliner Volksbank eG</a></b> ist als unsere Muttergesellschaft unser wichtigster Partner. Als Finanzierer für Bauprojekte und für Immobilienkäufer ist sie eine wesentliche Säule unseres Erfolgs. Einen großen Teil der Verkaufsaufträge erhalten wir von der Kundschaft der Bank. Mit diesem Vertriebskanal ist die BVBI an über 120 Bank-Standorten überall in Berlin und Brandenburg vor Ort.
