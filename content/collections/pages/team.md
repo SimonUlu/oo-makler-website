@@ -26,7 +26,7 @@ seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1718621704
+updated_at: 1718621990
 imagesectionheader: 'ÜBER UNS.'
 imagesectiondescription: 'Volksbank am Württemberg – Ihr Immobilienpartner in Stuttgart und Fellbach. Individuell, zuverlässig, sicher: Ihre Immobilie liegt uns am Herzen. Mit Erfahrung, Know-How und Leidenschaft begleiten wir Sie bei jedem Schritt.'
 ctatext1header: 'Unsere Vision'
@@ -259,15 +259,19 @@ kooperationen:
   -
     id: lx0a96rv
     image:
-      - ihk-mitgliedschaft.png
-    text: "Die\_Berliner Volksbank eG\_ist als unsere Muttergesellschaft unser wichtigster Partner. Als Finanzierer für Bauprojekte und für Immobilienkäufer ist sie eine wesentliche Säule unseres Erfolgs. Einen großen Teil der Verkaufsaufträge erhalten wir von der Kundschaft der Bank. Mit diesem Vertriebskanal ist die BVBI an über 120 Bank-Standorten überall in Berlin und Brandenburg vor Ort."
+      - kooperationen/schwaebischhall.png
+    text: |-
+      Die Bausparkasse <b><a href="https://www.schwaebisch-hall.de/"
+      target="_blank">Schwäbisch Hall</a></b> ist neben der Muttergesellschaft Berliner Volksbank eG ein professioneller Partner beim Thema Bausparen, Baufinanzierung und Immobilienfinanzierung. Mittlerweile zählt die Schwäbisch Hall zu den größten Bausparkassen Deutschlands. Als Bausparkasse und Dienstleister für das private Baufinanzierungsgeschäft der rund 1.000 Genossenschaftsbanken in Deutschland ist Schwäbisch Hall seit der Unternehmensgründung fest im genossenschaftlichen Bankensektor verankert.
     type: neues_set
     enabled: true
   -
     id: lx0a94k5
     image:
-      - ihk-mitgliedschaft.png
-    text: "Die\_Berliner Volksbank eG\_ist als unsere Muttergesellschaft unser wichtigster Partner. Als Finanzierer für Bauprojekte und für Immobilienkäufer ist sie eine wesentliche Säule unseres Erfolgs. Einen großen Teil der Verkaufsaufträge erhalten wir von der Kundschaft der Bank. Mit diesem Vertriebskanal ist die BVBI an über 120 Bank-Standorten überall in Berlin und Brandenburg vor Ort."
+      - kooperationen/ebacus.png
+    text: |-
+      Jedes Unternehmen, das sein Angebot vorrangig über das Internet verbreitet, ist auf eine verlässliche IT-Technik angewiesen. Mit der <b><a href="https://ebacus.de/de/start/"
+      target="_blank">ebacus GmbH</a></b> haben wir einen solchen Partner. Vom Notebook bis zum Server betreut das ebacus-Team neben der Hardware auch die gesamte IT-Architektur bis hin zu Softwareanwendungen und Datensicherheit.
     type: neues_set
     enabled: true
   -
