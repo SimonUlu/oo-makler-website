@@ -12,7 +12,7 @@ seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1718616210
+updated_at: 1718616530
 header_type: type_6
 content_heading_h2: 'Berliner Volksbank Immobilien'
 content_text:
@@ -329,7 +329,7 @@ show_referenzen: 'no'
 contact_variante: variante_1
 show_logos: 'yes'
 show_suchauftrag: 'no'
-slider_headline: 'Ausgewählte Immobilien aus unserem Portfolio.'
+slider_headline: 'Jetzt neu in der Vermarktung'
 review_type: type_1
 logo_header: 'UNSER SERVICE IST AUSGEZEICHNET'
 customer_review_text:
@@ -521,7 +521,7 @@ steps:
 logo_cols: '10'
 show_newsletter: 'no'
 slider_subheader: 'Lorem Ipsum'
-slider_button_text: 'Zu unseren Immobilien'
+slider_button_text: 'Alle Immobilien ansehen'
 posts_text: 'Lorem Ipsum'
 header_day:
   - header_berlin.jpg
