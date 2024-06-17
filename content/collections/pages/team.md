@@ -26,7 +26,7 @@ seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1718622940
+updated_at: 1718622957
 imagesectionheader: 'ÜBER UNS.'
 imagesectiondescription: 'Volksbank am Württemberg – Ihr Immobilienpartner in Stuttgart und Fellbach. Individuell, zuverlässig, sicher: Ihre Immobilie liegt uns am Herzen. Mit Erfahrung, Know-How und Leidenschaft begleiten wir Sie bei jedem Schritt.'
 ctatext1header: 'Unsere Vision'
@@ -240,7 +240,7 @@ memberships:
   -
     id: lx09t7o1
     image:
-      - ihk-mitgliedschaft.png
+      - mitgliedschaften/rdm.png
     text: 'Der <b><a href="https://www.rdm-bb.de/"target="_blank">RDM</a></b> Ring Deutscher Makler Landesverband Berlin Brandenburg e.V. ist der älteste Berufsverband für Immobilienmakler und Hausverwalter in der Region.'
     type: neues_set
     enabled: true
