@@ -2,9 +2,9 @@
 id: 3fec85a5-9915-4400-8de6-890c979dd7ef
 blueprint: landing_page
 template: pages/home
-title: 'Lorem Ipsum'
+title: 'Ihr Immobilienmakler<br>in Berlin & Brandenburg'
 view_model: App\ViewModels\HomeViewModel
-subtitle: 'Wir freuen uns – Auf gute Partnerschaft!'
+subtitle: 'Jetzt erfolgreich vermieten, kaufen oder verkaufen!'
 header_seller_content: true
 seo_noindex: false
 seo_nofollow: false
@@ -12,7 +12,7 @@ seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1718369137
+updated_at: 1718615968
 header_type: type_6
 content_heading_h2: 'Berliner Volksbank Immobilien'
 content_text:
