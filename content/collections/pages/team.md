@@ -26,7 +26,7 @@ seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1718621187
+updated_at: 1718621245
 imagesectionheader: 'ÜBER UNS.'
 imagesectiondescription: 'Volksbank am Württemberg – Ihr Immobilienpartner in Stuttgart und Fellbach. Individuell, zuverlässig, sicher: Ihre Immobilie liegt uns am Herzen. Mit Erfahrung, Know-How und Leidenschaft begleiten wir Sie bei jedem Schritt.'
 ctatext1header: 'Unsere Vision'
@@ -282,4 +282,6 @@ cta_description: |-
   Kapitalanlage und Vermögensumschichtung, Jobwechsel, Familiennachwuchs, Ruhestand, Scheidung, Erbschaft. 
   Weil das auch eine finanzielle Herausforderung ist, sind die Kundenberater und -beraterinnen der eigenen Bank oft die erste Anlaufstelle. Gesetzesänderungen und wechselnde Anforderungen im Immobilienmarkt erfordern aber fundiertes Fachwissen. Hier kommen wir ins Spiel.
 cta_variante: type_3
+header_image:
+  - header_ueberuns.jpg
 ---
