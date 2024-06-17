@@ -141,7 +141,7 @@ seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1718619480
+updated_at: 1718620392
 headerbild:
   - header_bewerten.jpg
 stepsheader: 'UNSER VORGEHEN.'
@@ -569,31 +569,43 @@ logo_replikator:
   -
     id: lww6zqcr
     img:
-      - gfl-logo-07-2019-final.jpg
+      - sprengnetter.png
     type: neues_set
     enabled: true
   -
     id: lww6zpg2
     img:
-      - gfl-logo-07-2019-final.jpg
+      - ivd.png
     type: neues_set
     enabled: true
   -
     id: lww6zoii
     img:
-      - gfl-logo-07-2019-final.jpg
+      - ivd2023.png
     type: neues_set
     enabled: true
   -
     id: lww6zngk
     img:
-      - gfl-logo-07-2019-final.jpg
+      - ivd2024.png
     type: neues_set
     enabled: true
   -
     id: lww6zt3p
     img:
-      - gfl-logo-07-2019-final.jpg
+      - onofficequalitaetsmakler.png
+    type: neues_set
+    enabled: true
+  -
+    id: lxiu6qk2
+    img:
+      - jacasa.png
+    type: neues_set
+    enabled: true
+  -
+    id: lxiu705i
+    img:
+      - immobilie1.png
     type: neues_set
     enabled: true
 accordeon_header: 'Häufig gestellte Fragen'
