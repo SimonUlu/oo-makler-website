@@ -26,7 +26,7 @@ seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1718620888
+updated_at: 1718621077
 imagesectionheader: 'ÜBER UNS.'
 imagesectiondescription: 'Volksbank am Württemberg – Ihr Immobilienpartner in Stuttgart und Fellbach. Individuell, zuverlässig, sicher: Ihre Immobilie liegt uns am Herzen. Mit Erfahrung, Know-How und Leidenschaft begleiten wir Sie bei jedem Schritt.'
 ctatext1header: 'Unsere Vision'
@@ -277,4 +277,10 @@ kooperationen:
     text: "Die\_Berliner Volksbank eG\_ist als unsere Muttergesellschaft unser wichtigster Partner. Als Finanzierer für Bauprojekte und für Immobilienkäufer ist sie eine wesentliche Säule unseres Erfolgs. Einen großen Teil der Verkaufsaufträge erhalten wir von der Kundschaft der Bank. Mit diesem Vertriebskanal ist die BVBI an über 120 Bank-Standorten überall in Berlin und Brandenburg vor Ort."
     type: neues_set
     enabled: true
+show_cta: 'yes'
+cta_headline: 'Menschen brauchen Immobilien. Aber brauchen sie auch Makler?'
+cta_description: |-
+  Unsere Lebensumstände ändern sich ständig. Es gibt immer Gründe, eine Immobilie zu kaufen oder zu verkaufen: 
+  Kapitalanlage und Vermögensumschichtung, Jobwechsel, Familiennachwuchs, Ruhestand, Scheidung, Erbschaft. 
+  Weil das auch eine finanzielle Herausforderung ist, sind die Kundenberater und -beraterinnen der eigenen Bank oft die erste Anlaufstelle. Gesetzesänderungen und wechselnde Anforderungen im Immobilienmarkt erfordern aber fundiertes Fachwissen. Hier kommen wir ins Spiel.
 ---
