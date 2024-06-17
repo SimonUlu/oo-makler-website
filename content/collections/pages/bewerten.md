@@ -4,7 +4,7 @@ blueprint: leistungen
 view_model: App\ViewModels\VerkaufenViewModel
 template: pages/leistungen/cta-page
 title: Bewerten
-subtitle: 'Mit uns zügig und erfolgreich verkaufen'
+subtitle: 'Finden Sie den wahren Wert Ihrer Immobilie<br>– präzise, professionell, persönlich.'
 description: 'IHRE VORTEILE – UNSERE BESONDEREN LEISTUNGEN SPEZIELL FÜR SIE:'
 subheaderheadline: 'IHRE VORTEILE AUF EINEN BLICK.'
 subheaderdescription: 'Unsere Besonderen Leistungen speziell für Sie:'
@@ -142,9 +142,9 @@ seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1718446000
+updated_at: 1718618920
 headerbild:
-  - architecture-gef0672c68_1920.jpg
+  - header_bewerten.jpg
 stepsheader: 'UNSER VORGEHEN.'
 stepssubheader: 'Wir unterstützen und begleiten Sie im gesamten Verkaufsprozess und bieten Ihnen:'
 image_second:
