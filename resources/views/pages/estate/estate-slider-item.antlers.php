@@ -76,7 +76,7 @@
                 <div class="my-4 border-t border-gray-300"></div>
                 <div class="flex flex-col items-center justify-center hidden sm:flex sm:col-span-2" x-data="{ logoUrl: '{{ $logoUrl }}' }">
                     <div class="flex items-center justify-between w-full"> <!-- Add 'items-center' class here -->
-                        <img class="max-w-[100px]" src="/logo_images/logo.png" alt="Ihr Kontakt">
+                        <img class="max-w-[50px]" src="/logo_images/badge-blue.png" alt="Ihr Kontakt">
                         {{# <a href="/immobilien/details/{{Id}}" class="inline-flex justify-center items-center py-2.5 px-5 text-sm font-medium text-center text-white md:w-auto lg:col-span-12 focus:ring-4 focus:outline-none bg-primary-700 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 hover:bg-primary-800 focus:ring-primary-300">Ansehen<span aria-hidden="true">&nbsp;→</span></a> #}}
                         <a href="/immobilien/details/{{Id}}" class="inline-flex justify-center items-center py-2.5 px-5 text-sm font-medium text-center md:w-auto lg:col-span-12 focus:ring-4 focus:outline-none" target="_blank">Ansehen<span aria-hidden="true">&nbsp;→</span></a>
                     </div>

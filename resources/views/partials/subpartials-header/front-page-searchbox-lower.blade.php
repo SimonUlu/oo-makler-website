@@ -45,7 +45,6 @@
         </div>
         <div class="lg:col-span-4">
             <label for="objektart" class="sr-only">Object Type</label>
-            {{-- Comment it out when you want to use objektart --}}
             <select name="filter[objektart]" id="objektart"
                 class="block p-2.5 w-full text-sm text-gray-900 -lg border border-gray-300 dark:placeholder-gray-400 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-500 dark:focus:border-primary-500 focus:ring-primary-500 focus:border-primary-500">
                 <option disabled selected>Objektart</option>

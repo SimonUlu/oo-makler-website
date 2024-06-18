@@ -99,7 +99,7 @@
                             <div class="flex flex-col items-center justify-center">
                                 <div class="flex items-center justify-between w-full">
                                     <!-- Add 'items-center' class here -->
-                                    <img class="max-w-[100px]" src="/logo_images/logo.png" alt="Ihr Kontakt">
+                                    <img class="max-w-[40px]" src="/logo_images/badge-blue.png" alt="Ihr Kontakt">
                                     <a href="/immobilien/details/{{ $estate['id'] }}"
                                         class="inline-flex justify-center items-center py-2.5 px-5 text-sm font-medium text-center md:w-auto lg:col-span-12 focus:ring-4 focus:outline-none"
                                         target="_blank">Ansehen<span aria-hidden="true">&nbsp;→</span></a>

@@ -49,7 +49,10 @@
 <section class="relative w-full px-4 lg:px-10 bg-white max-w-7xl">
     <div class="w-full py-8 mx-auto lg:py-16">
         <div class="text-center text-gray-900">
-            <h2 class="mb-16 mt-8 text-4xl font-bold tracking-tight text-primary lg:text-5xl ">{{slider_headline}}</h2>
+            <h2 class="mb-4 mt-8 text-4xl font-bold tracking-tight text-primary lg:text-5xl ">{{slider_headline}}</h2>
+            <p class="text-gray-500 sm:text-xl dark:text-gray-400 mb-12">
+                {{slider_subheader}}    
+            </p>
         </div>
         {{ partial:pages/estate/estate-columns-3 }}
         <div class="py-4 mt-12 text-center">
@@ -85,10 +88,11 @@
 
 
 {{if review_type == "type_1"}}
-<section class="w-full px-4 lg:px-10 custom-gradient-darker">
+<section class="w-full px-4 lg:px-10 custom-gradient-darker bg-[url('/images/wall.jpg')] relative">
+    <div class="absolute top-0 left-0 w-full h-full custom-gradient"></div>
     <div class="max-w-screen-xl px-4 py-8 mx-auto text-left md:text-center lg:py-16 lg:px-6">
         <div class="max-w-screen-sm mx-auto mb-8 lg:mb-16">
-            <h2 class="mb-4 text-4xl font-bold tracking-tight text-white">
+            <h2 class="mb-4 text-4xl font-bold tracking-tight text-white relative">
                 Was unsere Kunden sagen
             </h2>
         </div>
@@ -161,7 +165,7 @@
     </div>
     <div class="py-4 mt-12 text-center">
         <a href="/immobilien" class="fade-in-animation items-center px-6 py-3 mx-2 text-center text-white lg:px-5 focus:ring-4 focus:outline-none bg-secondary">
-            Zu unseren Immobillien
+            Alle Immobilien ansehen
         </a>
     </div>
 </section>
