@@ -18,9 +18,7 @@ class Api
     /**
      * Api constructor.
      */
-    public function __construct(private readonly string $token, private readonly string $secret)
-    {
-    }
+    public function __construct(private readonly string $token, private readonly string $secret) {}
 
     /**
      * @param  AbstractRequest|AbstractRequest[]  $requests

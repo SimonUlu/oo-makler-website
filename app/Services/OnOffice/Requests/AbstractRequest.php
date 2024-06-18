@@ -24,8 +24,7 @@ abstract class AbstractRequest
         private readonly string $resourceType,
         protected array $parameters = [],
         private ?string $resourceId = null
-    ) {
-    }
+    ) {}
 
     public function build(string $token, string $secret): array
     {

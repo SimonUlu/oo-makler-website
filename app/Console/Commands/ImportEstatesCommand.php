@@ -2,8 +2,8 @@
 
 namespace App\Console\Commands;
 
-use Illuminate\Console\Command;
 use App\Jobs\ImportEstates;
+use Illuminate\Console\Command;
 
 class ImportEstatesCommand extends Command
 {
@@ -23,8 +23,6 @@ class ImportEstatesCommand extends Command
 
     /**
      * Execute the console command.
-     *
-     * @return int
      */
     public function handle(): int
     {
