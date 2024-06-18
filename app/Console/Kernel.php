@@ -4,6 +4,7 @@ namespace App\Console;
 
 use App\Console\Commands\ImportGeoJsonDataFile;
 use App\Jobs\ImportEstateDataForEntries;
+use App\Jobs\ImportEstates;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 
@@ -27,8 +28,9 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        // $schedule->job(new ImportEstateData())->everyMinute();
-        $schedule->job(new ImportEstateDataForEntries(true, true))->everyMinute();
+        $schedule->job(new ImportEstates('estates_full'), 'sync')->everyFifteenMinutes();
+        $schedule->job(new ImportEstates('estates_on_market'), 'sync')->everyFifteenMinutes();
+        $schedule->job(new ImportEstates('estates_references'), 'sync')->everyFifteenMinutes();
         // $schedule->command('cache:clear')->daily();
         // $schedule->command('config:cache')->daily();
         // $schedule->command('route:cache')->daily();

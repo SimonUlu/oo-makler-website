@@ -83,12 +83,12 @@ tabs:
             handle: baujahr
             field:
               type: integer
-              validate: required|integer
+              validate: integer
           -
             handle: anzahl_zimmer
             field:
               type: integer
-              validate: required|integer
+              validate: integer
           -
             handle: warmmiete
             field:
@@ -101,14 +101,46 @@ tabs:
             handle: anzahl_badezimmer
             field:
               type: integer
-              validate: required|integer
+              validate: integer
           -
             handle: anzahl_schlafzimmer
             field:
               type: integer
-              validate: required|integer
+              validate: integer
           -
             handle: veroeffentlichen
+            field:
+              type: toggle
+          -
+            handle: reserviert
+            field:
+              type: toggle
+          -
+            handle: verkauft
+            field:
+              type: toggle
+          -
+            handle: exclusive
+            field:
+              type: toggle
+          -
+            handle: neu
+            field:
+              type: toggle
+          -
+            handle: top_angebot
+            field:
+              type: toggle
+          -
+            handle: preisreduktion
+            field:
+              type: toggle
+          -
+            handle: courtage_frei
+            field:
+              type: toggle
+          -
+            handle: objekt_des_tages
             field:
               type: toggle
           -
@@ -121,6 +153,10 @@ tabs:
               type: toggle
           -
             handle: status2
+            field:
+              type: text
+          -
+            handle: status
             field:
               type: text
           -
@@ -160,7 +196,7 @@ tabs:
             handle: energieausweisbaujahr
             field:
               type: integer
-              validate: required|integer
+              validate: integer
           -
             handle: endenergiebedarf
             field:
@@ -170,16 +206,98 @@ tabs:
             field:
               type: replicator
               sets:
-                image:
-                  display: Image
-                  fields:
-                    -
-                      handle: url
-                      field:
-                        type: text
-                        validate: required|url
-          -
-            handle: erstellt_am
+                main:
+                  display: Hauptteil
+                  instructions: null
+                  icon: null
+                  sets:
+                    image:
+                      display: Image
+                      instructions: null
+                      icon: null
+                      fields:
+                        - handle: title
+                          field:
+                            input_type: text
+                            antlers: false
+                            type: text
+                            display: Titel
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+                        - handle: url
+                          field:
+                            type: text
+                            validate: required|url
+                            display: URL
+                            instructions_position: above
+                            listable: hidden
+                            visibility: visible
+                            replicator_preview: true
+                            input_type: text
+                            antlers: false
+                            hide_display: false
+                        - handle: type
+                          field:
+                            input_type: text
+                            antlers: false
+                            type: text
+                            display: Typ
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+                        - handle: originalname
+                          field:
+                            input_type: text
+                            antlers: false
+                            type: text
+                            display: Originalname
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+                        - handle: modified
+                          field:
+                            mode: single
+                            inline: false
+                            full_width: false
+                            columns: 1
+                            rows: 1
+                            time_enabled: false
+                            time_seconds_enabled: false
+                            type: date
+                            display: modified
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+                        - handle: text
+                          field:
+                            input_type: text
+                            antlers: false
+                            type: text
+                            display: Text
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+              display: 'Immobilien Bilder'
+              instructions_position: above
+              listable: hidden
+              visibility: visible
+              replicator_preview: true
+              collapse: false
+              previews: true
+              fullscreen: true
+              hide_display: false
+          - handle: erstellt_am
             field:
               mode: single
               inline: false

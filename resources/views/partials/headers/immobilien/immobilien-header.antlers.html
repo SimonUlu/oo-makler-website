@@ -1,11 +1,13 @@
 <div
     style="
-        background-image: url('/images/{{header_image}}');
+        {{ if header_image }}
+        background-image: url('/images/{{ header_image }}');
+        {{ /if }}
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center bottom;
         background-blend-mode: darken;
-    "
+        "
     class="w-full h-[460px] xl:h-[537px] bg-no-repeat bg-cover bg-center bg-blend-darken relative"
 >
     <div

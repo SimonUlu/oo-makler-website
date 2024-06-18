@@ -1,6 +1,6 @@
 <div class="card p-3">
-    <h2>Refresh Estates</h2>
-    <button id="refresh-collection-button" class="btn">Refresh Collection</button>
+    <h2>Immobilien in Vermarktung aktualisieren</h2>
+    <button id="refresh-collection-button" class="btn">Update</button>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {

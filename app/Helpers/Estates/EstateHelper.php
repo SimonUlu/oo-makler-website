@@ -38,37 +38,6 @@ class EstateHelper
         ];
     }
 
-    public static function getFilterFromRequest(Request $request)
-    {
-        // $filterInfo = SessionController::getFilterOptionFields();
-
-        $request_filterinfo = $request->input('filter');
-
-        // // each key from filterInfo is a filter. Thus get each key from request
-        // foreach ($filterInfo as $key => $value) {
-        //     // if key is not in request or value is not in filterInfo, continue
-        //     if (! $request->has($key)) {
-        //         continue;
-        //     }
-        //     // $filters[$key] = $value;;
-
-        //     // if value is in filterInfo, add it to filters
-        //     $filters[$key] = $request->query($key);
-        // }
-        if ($request_filterinfo) {
-            foreach ($request_filterinfo as $key => $value) {
-                if ($key == 'referenz') {
-                    $filters[$key] = null;
-                } else {
-                    $filters[$key] = $value;
-                }
-
-            }
-        }
-
-        return $filters ?? [];
-    }
-
     public static function prepareFilterFromCp(Request $request, OnOfficeService $onOfficeService, array $filters)
     {
         // get all estateFields from Session
@@ -99,45 +68,39 @@ class EstateHelper
         return $filters;
     }
 
-    public static function getEstateFields(Request $request, OnOfficeService $onOfficeService)
-    {
-        // get all estateFields from Session
-        if ($request->session()->has('estateFieldsFull') && ! empty($request->session()->get('estateFieldsFull'))) {
-            $estateFields = $request->session()->get('estateFieldsFull');
-        } else {
-            SessionController::getAllEstateFields($request, $onOfficeService);
-            $estateFields = $request->session()->get('estateFieldsFull');
-        }
-
-        return $estateFields;
-    }
-
-    public static function prepareFilterForOnOfficeApi(Request $request, OnOfficeService $onOfficeService, array $filters)
+    public static function prepareFilterForOnOfficeApi(Request $request, OnOfficeService $onOfficeService, array $filters): ?array
     {
         // filter from cp
         if (isset($filters[0]['onoffice_label_id']) && isset($filters[0]['operator']) && isset($filters[0]['value'])) {
             return self::prepareFilterFromCp($request, $onOfficeService, $filters);
         }
 
+        // prepare filter for onOffice API
+        return self::convertFilter($request, $filters);
+    }
+
+    public static function convertFilter($request, $filters): array
+    {
         $filterValidated = [];
         // get all estateFields from Session
-        if ($request->session()->has('estateFieldsFull')) {
-            $estateFields = $request->session()->get('estateFieldsFull');
-        } else {
-            SessionController::getAllEstateFields($request, $onOfficeService);
-            $estateFields = $request->session()->get('estateFieldsFull');
+        if (! $request->session()->has('estateFieldsFull')) {
+            SessionController::getAllEstateFields();
         }
 
-        // dd($filters);
-        // prepare filter for onOffice API
+        $estateFields = $request->session()->get('estateFieldsFull');
+
         foreach ($filters as $key => $value) {
             // if value is empty, continue
             if (empty($value)) {
                 continue;
             }
 
+            if (isset($value[0]['op']) && $value[0]['val']) {
+                continue;
+            }
+
             // if value has __ in it (e.g. __from or __to), explode and get first value and second value in variables
-            if (is_string($key) && strpos($key, '__') !== false) {
+            if (is_string($key) && str_contains($key, '__')) {
                 $keyExploded = explode('__', $key);
                 $key = $keyExploded[0];
                 $operator = $keyExploded[1];
@@ -156,14 +119,25 @@ class EstateHelper
                         ],
                     ];
 
-                    // [$filterKey, $filterValue] = self::addFilterSpecialCase($key);
-
                     if (isset($filterKey) && isset($filterValue)) {
                         $filterValidated[strtolower($filterKey)] = $filterValue;
                     }
 
                     continue;
                 }
+            }
+
+            if ($key == 'radiusZipCode' && ! empty($filters['radiusZipCode'])) {
+                $originZip = $filters['radiusZipCode'];
+                $filterValidated['plz'] = [
+                    0 => [
+                        'op' => '>=',
+                        'origin' => $originZip,
+                        'val' => ! empty($filters['radius']) ? $filters['radius'] : 50,
+                    ],
+                ];
+
+                continue;
             }
 
             // validate if key is in estateFields
@@ -212,9 +186,9 @@ class EstateHelper
             if (isset($filterKey) && isset($filterValue)) {
                 $filterValidated[strtolower($filterKey)] = $filterValue;
             }
+
         }
 
-        // dd($filterValidated);
         return $filterValidated;
     }
 
@@ -223,7 +197,7 @@ class EstateHelper
         return GlobalSet::find('estate_filter_configuration')->in('default')->get('references_filter_options') ?? [];
     }
 
-    public static function getLocations(string $locationSpecifier, array $estates)
+    public static function getLocations(string $locationSpecifier, array $estates): array
     {
         // check if $estates is a collection. if not make it one
         if (! is_a($estates, 'Illuminate\Support\Collection')) {
@@ -294,6 +268,15 @@ class EstateHelper
         // dd($request->session()->get($sessionNameEstates));
         // dd($estates);
         return $estates ?? [];
+    }
+
+    public static function getEstateFields()
+    {
+        if (! request()->session()->has('estateFieldsFull')) {
+            SessionController::getAllEstateFields(request(), new OnOfficeService());
+        }
+
+        return request()->session()->get('estateFieldsFull');
     }
 
     public static function getFilterInfo($filters, $filterOptions, $filterKey = null, $recursive = false)

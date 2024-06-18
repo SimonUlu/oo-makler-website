@@ -27,10 +27,8 @@ Route::prefix('immobilien')->name('immobilien.')->group(function () {
         ->whereIn('vermarktungsart', ['kauf', 'miete'])
         ->name('index');
     Route::get('/details/{id}', [EstateController::class, 'show'])
-        ->middleware('track_visits') // Hier fügen Sie die Middleware hinzu
+        ->middleware('track_visits')
         ->name('show');
-    Route::post('filter', [EstateController::class, 'filter'])
-        ->name('filter');
 });
 
 // The route to the RSS feed.

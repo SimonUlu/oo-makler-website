@@ -7,7 +7,7 @@ use Illuminate\Support\ServiceProvider;
 
 class OnOfficeServiceProvider extends ServiceProvider
 {
-    public function register()
+    public function register(): void
     {
         $this->app->singleton(OnOfficeService::class, function ($app) {
             return new OnOfficeService();

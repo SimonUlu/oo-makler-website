@@ -89,17 +89,6 @@ class OnOfficeService
         return new GetHandler($this->api);
     }
 
-    public function getEstates($filters = [], $page = 1, $perPage = 15)
-    {
-        // define default filter
-        // TODO: make this configurable
-        return $this->read()->get(
-            data: $this->estateFields,
-            module: 'estate',
-            filters: array_merge($filters, $this->defaultFilter)
-        )['data']['records'] ?? [];
-    }
-
     public function getStatistics($statisticIdentifier): ?array
     {
         $getCntAbsolute = false;
@@ -121,6 +110,54 @@ class OnOfficeService
         }
 
         $filters = $this->transformFilterArray($statisticData);
+
+        if (! empty($statisticData['added_time_filter']) && ! empty($statisticData['field_for_added_time_filter'])) {
+            // Initialize variables
+            $timeSpan = null;
+            $operator = null;
+
+            // Determine the time filter and operator
+            switch ($statisticData['added_time_filter']) {
+                case 'year_over_year':
+                    $timeSpan = date('Y-m-d H:i:s', \Safe\strtotime('-1 year'));
+                    $operator = '>=';
+                    break;
+
+                case 'year_to_date':
+                    $timeSpan = date('Y-01-01 00:00:00');
+                    $operator = '>=';
+                    break;
+
+                case 'past_year':
+                    $timeSpan = date('Y-m-d H:i:s', \Safe\strtotime('-1 year'));
+                    $operator = '<=';
+                    break;
+
+                case 'future':
+                    $timeSpan = date('Y-m-d H:i:s', \Safe\strtotime('+1 year'));
+                    $operator = '>';
+                    break;
+
+                default:
+                    // Handle unexpected filter types if needed
+                    break;
+            }
+
+            // Add the filter if timeSpan and operator are set
+            if ($timeSpan !== null && $operator !== null) {
+                $filters = array_merge(
+                    $filters,
+                    [
+                        $statisticData['field_for_added_time_filter'] => [
+                            ['op' => $operator, 'val' => $timeSpan],
+                        ],
+                    ]
+                );
+            }
+        }
+
+        // get added filter
+
         $aggregationFunction = $statisticData['aggregation_function'] ?? 'count';
         $fieldForAggregation = $statisticData['field_for_aggregation_function'] ?? 'Id';
 
@@ -129,27 +166,30 @@ class OnOfficeService
             $getCntAbsolute = true;
         }
 
-        $result = $this->read()->get(
+        $results = $this->read()->get(
             data: [$fieldForAggregation],
             module: $statisticData['statistic_module'],
             filters: $filters,
             getCntAbsolute: $getCntAbsolute
         );
 
-        if (empty($result)) {
+        if (empty($results)) {
             return null;
         }
 
         if ($getCntAbsolute) {
             return [
-                'statistic_value' => $result['data']['meta']['cntabsolute'],
+                'statistic_value' => $results['data']['meta']['cntabsolute'],
                 'title' => $statisticIdentifier,
                 'date_last_sync' => now()->setTimezone('Europe/Berlin')->format('Y-m-d H:i:s'),
             ];
         }
 
-        // get the values for the statistics
-        $values = array_column(collect($result)->pluck('data.records.elements')->toArray(), $fieldForAggregation);
+        $values = array_map(function ($result) use ($fieldForAggregation) {
+            return $result['elements'][$fieldForAggregation] ?? null;
+        }, $results['data']['records']);
+
+        $values = array_filter($values);
 
         // get the statistic based on the aggregation function
         $statistic = match ($aggregationFunction) {
@@ -167,7 +207,7 @@ class OnOfficeService
         ];
     }
 
-    public function transformFilterArray($array): array
+    public static function transformFilterArray($array): array
     {
         $filters = [];
 
@@ -179,6 +219,9 @@ class OnOfficeService
                     $value = $filter['array_filter']['value'] ?? null;
 
                     if ($labelId && $operator && $value !== null) {
+                        if (in_array(strtolower($operator), ['in', 'not in'])) {
+                            $value = explode(',', $value);
+                        }
                         $filters[$labelId] = [
                             ['op' => $operator, 'val' => $value],
                         ];
@@ -190,35 +233,15 @@ class OnOfficeService
         return $filters;
     }
 
-    public function getEstatesForList($filters = [], $page = 1, $perPage = 15)
-    {
-        // define default filter
-        // TODO: make this configurable
-        return $this->read()->get(
-            data: $this->performanceFieldEstates,
-            module: 'estate',
-            filters: array_merge($filters, $this->defaultFilter)
-        )['data']['records'] ?? [];
-    }
-
-    public function getEstateLocations($filters = [])
-    {
-        return $this->read()->get(
-            data: ['ort'],
-            module: 'estate',
-            filters: array_merge($filters, $this->defaultFilter)
-        )['data']['records'] ?? [];
-    }
-
     // added specific users
     public function getEstatesWithImages($filters = [], $page = 0, $perPage = 15)
     {
         $result = $this->read()->get(
             data: $this->performanceFieldEstates,
-            offset: $page * $perPage,
-            limit: $perPage,
             module: 'estate',
-            filters: array_merge($filters, $this->defaultFilter)
+            filters: array_merge($filters, $this->defaultFilter),
+            offset: $page * $perPage,
+            limit: $perPage
         )['data']['records'] ?? [];
 
         if (! empty($result)) {
@@ -238,10 +261,10 @@ class OnOfficeService
     {
         $result = $this->read()->get(
             data: $this->performanceFieldEstates,
-            offset: $page * $perPage,
-            limit: $perPage,
             module: 'estate',
-            filters: array_merge($filters, $this->defaultFilter)
+            filters: array_merge($filters, $this->defaultFilter),
+            offset: $page * $perPage,
+            limit: $perPage
         )['data']['records'] ?? [];
         if (! empty($result)) {
             $estateIds = array_map(function ($item) {
@@ -261,25 +284,16 @@ class OnOfficeService
         $result = $this->read()->get(
             data: $this->estateFields,
             module: 'estate',
-            resourceId: $estateId,
-            filters: $this->defaultFilter
+            filters: $this->defaultFilter,
+            resourceId: $estateId
         )['data']['records'][0] ?? [];
 
         if (! empty($result)) {
-            $images = self::getEstateImagesByIds([$result['id']], ['Titelbild', 'Foto', 'Foto_gross', 'Panorama', 'Grundriss', 'Lageplan', 'Epass_Skala']);
+            $images = self::getEstateImagesByIds([$result['id']], ['Titelbild', 'Foto', 'Foto_gross', 'Panorama', 'Grundriss', 'Lageplan', 'Epass_Skala', 'Energiepass-Skala']);
             $result['elements']['images'] = $images[0]['elements'] ?? [];
         }
 
         return $result ?? [];
-    }
-
-    public function getEstateReferences($filters = [], $page = 1, $perPage = 15)
-    {
-        return $this->read()->get(
-            data: $this->estateFields,
-            module: 'estate',
-            filters: array_merge($filters, $this->defaultFilter)
-        )['data']['records'] ?? [];
     }
 
     public function getAllEstateFields()
@@ -297,9 +311,8 @@ class OnOfficeService
         return $result ?? [];
     }
 
-    public function getEstateImagesByIds(array $estateIds, ?array $categories, $language = 'DEU')
+    public function getEstateImagesByIds(array $estateIds, ?array $categories, $language = 'DEU'): array
     {
-
         // if estateCategories are not set, get all images
         if (! $categories) {
             $categories = ['Titelbild', 'Foto', 'Foto_gross', 'Panorama', 'Grundriss', 'Energiepass-Skala'];
@@ -334,25 +347,23 @@ class OnOfficeService
         return $elements;
     }
 
-    public function getSubEstates($estateIds)
+    public function getSubEstates($estateIds): array
     {
 
-        $results = $this->get()->relations(
+        return $this->get()->relations(
             'urn:onoffice-de-ns:smart:2.5:relationTypes:estate:estateUnit',
             $estateIds,
         );
-
-        return $results;
     }
 
     public function getEstatesWithImagesExtended($filters = [], $page = 0, $perPage = 15)
     {
         $result = $this->read()->get(
             data: $this->defaultFieldsEstate,
-            offset: $page * $perPage,
-            limit: $perPage,
             module: 'estate',
-            filters: array_merge($filters, $this->defaultFilter)
+            filters: array_merge($filters, $this->defaultFilter),
+            offset: $page * $perPage,
+            limit: $perPage
         )['data']['records'] ?? [];
 
         if (! empty($result)) {
@@ -382,7 +393,7 @@ class OnOfficeService
         return $result ?? [];
     }
 
-    public function getOnOfficeUserById(int $userId)
+    public function getOnOfficeUserById(int $userId): UserDetails
     {
         $user = $this->read()->userById(
             data: $this->defaultFieldsUser,
@@ -405,24 +416,8 @@ class OnOfficeService
 
             return new UserDetails($vorname, $nachname, $email, $picUrl, $phoneNumber);
         } else {
-            return new UserDetails(); // Gibt ein leeres UserDetails Objekt zurück
+            return new UserDetails();
         }
-    }
-
-    public function getEstateUsersById($userIds = null)
-    {
-        $users = [];
-        foreach ($userIds as $userId) {
-            if ($userId != 0 && $userId != null) {
-                // dd("Hallo");
-                $user = self::getOnOfficeUserById($userId);
-                $photo = self::getUserPhotoById($userId);
-                $user['elements']['photo'] = $photo;
-                $users[] = $user;
-            }
-        }
-
-        return $users;
     }
 
     public function getUserPhotoById($userId = null)
@@ -436,5 +431,23 @@ class OnOfficeService
         return $this->read()->userPhoto(
             filter: $filter,
         )['data']['records'][0] ?? [];
+    }
+
+    public static function removeFieldsFromEstate($estates)
+    {
+        return $estates->map(function ($estate) {
+            // Get the necessary fields directly from the data collection
+            $filteredData = $estate->data()->only(app('estateListFieldEstate'));
+
+            // Add the 'id_internal' field to the filtered data
+            $filteredData['id_internal'] = $estate->get('id_internal');
+
+            // If 'estate_images' field exists, get only the first three values
+            if (isset($filteredData['estate_images']) && is_array($filteredData['estate_images'])) {
+                $filteredData['estate_images'] = array_slice($filteredData['estate_images'], 0, 3);
+            }
+
+            return $filteredData;
+        });
     }
 }

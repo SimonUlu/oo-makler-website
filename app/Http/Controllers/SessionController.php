@@ -9,21 +9,6 @@ use Statamic\Facades\GlobalSet;
 
 class SessionController extends Controller
 {
-    // public static function updateEstateFields(Request $request, OnOfficeService $onOfficeService)
-    // {
-    //     // get all required estate fields that are used throughout the application
-    //     // get fields from filter options
-    //     $fieldsFilter = self::getFilterOptionFields();
-    //     // get fieldsFilterOptions
-    //     $fieldsFilterOptions = self::getFilterOptionFields($request, $onOfficeService, $fieldsFilter);
-    //     // get all required estate fields that are defined in cp
-    //     $fieldsListFromCp = self::getFieldListFromCp();
-    //     // get all unique fields
-    //     $allFields = array_unique(array_merge(array_keys($fieldsFilterOptions), $fieldsListFromCp));
-    //     // put fields in session
-    //     $request->session()->put('estateFieldsRequiredFromCP', $allFields);
-    // }
-
     // Get All estate locations
     public static function getAllLocations(Request $request)
     {
@@ -42,17 +27,12 @@ class SessionController extends Controller
     {
         // get estates from session
         $all_estates = $request->session()->get('estatesForLocations');
-
         $filters = EstateHelper::prepareFilterForOnOfficeApi($request, $onOfficeService, $filters);
         $filters = self::prepareLocationFilter($filters);
-
         $saved_filters = $request->session()->get('filters');
         // on initial call
-
-        // dd($all_estates);
         if ($all_estates == null) {
             $request->session()->forget('estatesForLocations');
-            dd('Sri');
             $all_estates = self::updateEstateLocations($request, $onOfficeService, $filters);
             $all_locations = EstateHelper::getLocations('ort', $all_estates) ?? null;
         } else {
@@ -93,9 +73,6 @@ class SessionController extends Controller
             $filters = array_merge($filters, [
                 'referenz' => [
                     ['op' => '=', 'val' => 0],
-                ],
-                'stammobjekt' => [
-                    ['op' => '!=', 'val' => '1'],
                 ],
             ]);
         }
@@ -208,14 +185,16 @@ class SessionController extends Controller
         return $filterOptions;
     }
 
-    public static function fillFilterOptions(Request $request, OnOfficeService $onOfficeService, array $filterOptions)
+    public static function fillFilterOptions(array $filterOptions)
     {
 
-        $estateFields = $onOfficeService->getAllEstateFields();
         // put full list in session if not set
-        if (! $request->session()->has('estateFieldsFull')) {
-            $request->session()->put('estateFieldsFull', $estateFields);
+        if (! request()->session()->has('estateFieldsFull')) {
+            $estateFields = (new OnOfficeService())->getAllEstateFields();
+            request()->session()->put('estateFieldsFull', $estateFields);
 
+        } else {
+            $estateFields = request()->session()->get('estateFieldsFull');
         }
         foreach ($filterOptions as $key => $filterOption) {
 
@@ -242,11 +221,11 @@ class SessionController extends Controller
         return $filterOptions;
     }
 
-    public static function getAllEstateFields(Request $request, OnOfficeService $onOfficeService)
+    public static function getAllEstateFields()
     {
         // get all estate fields from onOffice API
-        $estateFields = $onOfficeService->getAllEstateFields();
+        $estateFields = (new OnOfficeService())->getAllEstateFields();
         // put estate fields in session
-        $request->session()->put('estateFieldsFull', $estateFields);
+        request()->session()->put('estateFieldsFull', $estateFields);
     }
 }

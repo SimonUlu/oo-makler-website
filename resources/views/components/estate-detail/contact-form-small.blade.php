@@ -8,35 +8,35 @@
         <div class="border-t border-white/5 py-6 px-4 sm:px-6 lg:px-8 sm:border-l text-center">
             <p class="mt-2 flex items-baseline gap-x-2">
               <span class="text-3xl font-semibold tracking-tight text-gray-900 xl:text-5xl">
-                @if ($estate['elements']['vermarktungsart'] == 'miete')
-                    @if($estate['elements']['warmmiete'] > 0.0)
-                        <p class="text-base font-medium leading-6 text-gray-400"> Warmmiete </p>
-                        <p class="text-3xl font-bold xl:text-4xl">
-                            {{ number_format($estate['elements']['warmmiete'], 0, ',', '.') }}
+                @if ($estate['vermarktungsart'] == 'miete')
+                      @if($estate['warmmiete'] > 0.0)
+                          <p class="text-base font-medium leading-6 text-gray-400"> Warmmiete </p>
+                          <p class="text-3xl font-bold xl:text-4xl">
+                            {{ number_format($estate['warmmiete'], 0, ',', '.') }}
                             €
                         </p>
-                    @elseif ($estate['elements']['kaltmiete'] > 0.0)
-                        <p class="text-base font-medium leading-6 text-gray-400"> Kaltmiete </p>
-                        <p class="text-3xl font-bold xl:text-4xl">
-                            {{ number_format($estate['elements']['kaltmiete'], 0, ',', '.') }}
+                      @elseif ($estate['kaltmiete'] > 0.0)
+                          <p class="text-base font-medium leading-6 text-gray-400"> Kaltmiete </p>
+                          <p class="text-3xl font-bold xl:text-4xl">
+                            {{ number_format($estate['kaltmiete'], 0, ',', '.') }}
                             €
                         </p>
-                    @else
-                        <p class="text-base font-medium leading-6 text-gray-400"> Miete </p>
-                        <p class="text-3xl font-bold xl:text-4xl">
+                      @else
+                          <p class="text-base font-medium leading-6 text-gray-400"> Miete </p>
+                          <p class="text-3xl font-bold xl:text-4xl">
                             Preis auf Anfrage
                         </p>
-                    @endif
-                @else
-                    <p class="text-base font-medium leading-6 text-gray-400"> Kaufpreis </p>
-                    <p class="text-3xl font-bold xl:text-4xl">
-                        {{ number_format($estate['elements']['kaufpreis'], 0, ',', '.') }}
+                      @endif
+                  @else
+                      <p class="text-base font-medium leading-6 text-gray-400"> Kaufpreis </p>
+                      <p class="text-3xl font-bold xl:text-4xl">
+                        {{ number_format($estate['kaufpreis'], 0, ',', '.') }}
                         €
                     </p>
-                @endif
+                  @endif
               </span>
             </p>
-          </div>
+        </div>
     </div>
 
 

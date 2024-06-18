@@ -5,29 +5,26 @@ namespace App\Http\Livewire;
 use App\Helpers\Estates\EstateHelper;
 use App\Helpers\Filters\SortOption;
 use App\Http\Controllers\SessionController;
-use App\Services\EstateFilterService;
+use App\Services\EstateHandlers\EstateEntryService;
 use App\Services\OnOfficeService;
 use Illuminate\Pagination\LengthAwarePaginator;
-use Illuminate\Pagination\Paginator;
+use Illuminate\Pipeline\Pipeline;
 use Livewire\Component;
 use Livewire\WithPagination;
+use Statamic\Facades\Collection;
 use Statamic\Facades\GlobalSet;
 
 class FilterComponentVar extends Component
 {
-    protected $queryString = ['filter'];
+    use WithPagination;
 
     public $openModal;
-
-    public $disableLazyLoad = false;
 
     public $params = [];
 
     public $sortOptions = [];
 
-    public $all_estates = [];
-
-    public $map_estates = [];
+    public $allEstates;
 
     public $showContactModal;
 
@@ -37,13 +34,7 @@ class FilterComponentVar extends Component
 
     public $filters = [];
 
-    protected $estates = [];
-
     public $estateFields = [];
-
-    protected $estateReferences = [];
-
-    protected $listeners = ['loadEstateUser'];
 
     public $listAppearance;
 
@@ -65,40 +56,56 @@ class FilterComponentVar extends Component
 
     public $currentSortText = 'Preis (niedrigster zuerst)';
 
-    protected $estateFilterService;
-
-    protected $onOfficeService;
-
-    use WithPagination;
-
     public $page = 1;
 
-    // required for view
     public $sort = '';
 
-    public function mount($params, $listAppearance)
+    public $collectionName;
+
+    private $filter_hidden;
+
+    public $isRadiusFilterActive = false;
+
+    public $radiusZipCode;
+
+    public $sliderValue;
+
+    public $estates;
+
+    public $isLoading = false;
+
+    protected $queryString = ['filter'];
+
+    protected $listeners = ['loadEstateUser'];
+
+    public function mount($collectionName): void
     {
+        $this->collectionName = $collectionName;
+        $this->listAppearance = GlobalSet::find('estate_appearance_configuration')->in('default')->get('listappearance') ?? 'list';
+        $this->estateLocations = EstateEntryService::getLocationsOfAllEstates();
+        $this->allEstates = OnOfficeService::removeFieldsFromEstate(Collection::find($this->collectionName)->queryEntries()->get());
 
-        $this->onOfficeService = new onOfficeService();
-        $this->params = $params;
-        $this->listAppearance = $listAppearance;
+        $this->initializeEstateFields();
+        $this->initializeSortOptions();
+        $this->initializeFilterOptions();
+        $this->initFilterOnMount();
 
-        // retrieve standard sort option when mounting
+        // Initial update on mount
+        $this->updateEstates();
+    }
 
+    private function initializeSortOptions(): void
+    {
         $cpSortOptions = GlobalSet::find('sortoptions')->in('default')->get('sort_options');
-
-        $this->sortOptions = [];
-
-        foreach ($cpSortOptions as $cpSortOption) {
+        $this->sortOptions = collect($cpSortOptions)->map(function ($cpSortOption) {
             $sortOption = new SortOption(
                 $cpSortOption['direction'],
                 $cpSortOption['onoffice_fieldname'],
                 $cpSortOption['isstandard'],
                 $cpSortOption['option_text'],
-                $cpSortOption['id'],
+                $cpSortOption['id']
             );
 
-            // Setzen des Typs basierend auf den Werten show_kauf und show_miete
             if ($cpSortOption['show_kauf'] && $cpSortOption['show_miete']) {
                 $sortOption->setType('All');
             } elseif ($cpSortOption['show_kauf']) {
@@ -107,405 +114,278 @@ class FilterComponentVar extends Component
                 $sortOption->setType('Miete');
             }
 
-            // Hinzufügen der Option, wenn sie angezeigt werden sollte
-            if ($sortOption->shouldDisplay($this->filter)) {
-                $this->sortOptions[] = $sortOption;
-            }
-        }
+            return $sortOption->shouldDisplay($this->filter) ? $sortOption : null;
+        })->filter()->values()->all();
 
-        $standardSortOption = collect($this->sortOptions)
-            ->first(function ($option) {
-                return $option->isStandardOption === true;
-            }) ?? collect($this->sortOptions)->first();
+        $standardSortOption = collect($this->sortOptions)->firstWhere('isStandardOption', true) ?? $this->sortOptions[0] ?? null;
 
         if ($standardSortOption) {
             $this->currentSortDirection = $standardSortOption->direction;
             $this->currentSortText = $standardSortOption->optionText;
             $this->currentSortField = $standardSortOption->onOfficeField;
         }
-
-        if (request()->session()->has('estateFieldsFull')) {
-            $this->estateFields = request()->session()->get('estateFieldsFull');
-        } else {
-            SessionController::getAllEstateFields(request(), $this->onOfficeService);
-            $this->estateFields = request()->session()->get('estateFieldsFull');
-        }
-
-        $this->estateLocationOptions = array_map(function ($item) {
-            return [
-                'value' => $item,
-                'label' => $item,
-            ];
-        }, $this->estateLocations ?? []);
-
-        $this->initFilterOnMount($params);
     }
 
-    public function setSortOption($sortOptionText, $pageSetBack)
+    private function initializeEstateFields(): void
     {
-        if ($pageSetBack === true) {
+        if (! request()->session()->has('estateFieldsFull')) {
+            SessionController::getAllEstateFields();
+        }
+        $this->estateFields = request()->session()->get('estateFieldsFull');
+    }
+
+    private function initializeFilterOptions(): void
+    {
+        $this->estateLocationOptions = array_map(function ($item) {
+            return ['value' => $item, 'label' => $item];
+        }, $this->estateLocations ?? []);
+    }
+
+    public function setSortOption($sortOptionText, $pageSetBack): void
+    {
+        if ($pageSetBack) {
             $this->page = 1;
         }
         $this->currentSortText = $sortOptionText;
 
-        $direction = '';
+        $sortOption = collect($this->sortOptions)->firstWhere('optionText', $sortOptionText);
 
-        $onofficeFieldname = '';
-
-        // Lade die Sortieroptionen
-        $cpSortOptions = GlobalSet::find('sortoptions')->in('default')->get('sort_options');
-
-        $this->sortOptions = [];
-
-        foreach ($cpSortOptions as $cpSortOption) {
-            $sortOption = new SortOption(
-                $cpSortOption['direction'],
-                $cpSortOption['onoffice_fieldname'],
-                $cpSortOption['isstandard'],
-                $cpSortOption['option_text'],
-                $cpSortOption['id'],
-            );
-
-            // Setzen des Typs basierend auf den Werten show_kauf und show_miete
-            if ($cpSortOption['show_kauf'] && $cpSortOption['show_miete']) {
-                $sortOption->setType('All');
-            } elseif ($cpSortOption['show_kauf']) {
-                $sortOption->setType('Kauf');
-            } elseif ($cpSortOption['show_miete']) {
-                $sortOption->setType('Miete');
-            }
-
-            // Hinzufügen der Option, wenn sie angezeigt werden sollte
-            if ($sortOption->shouldDisplay($this->filter)) {
-                $this->sortOptions[] = $sortOption;
-            }
+        if ($sortOption) {
+            $this->currentSortField = $sortOption['onOfficeField'];
+            $this->currentSortDirection = $sortOption['direction'];
         }
 
-        // Finde die entsprechenden Werte für 'onoffice_fieldname' und 'direction'
-        foreach ($this->sortOptions as $option) {
-            if ($option->optionText === $this->currentSortText) {
-                // Setze die benötigten Werte
-                $onofficeFieldname = $option->onOfficeField;
-                $direction = $option->direction;
-                break; // Stoppe die Schleife, wenn die Übereinstimmung gefunden wurde
-            }
-        }
-
-        // // Set sort vars to those retrieved from cp
-        $this->currentSortField = $onofficeFieldname;
-        $this->currentSortDirection = $direction;
-
-        // rerender component
-        $this->render();
+        $this->updateEstates();
     }
 
-    public function openModal($estateId)
+    public function openModal($estateId): void
     {
         $this->openModal = $estateId;
         $this->showContactModal = true;
 
-        $estate_source = GlobalSet::find('estate_appearance_configuration')->in('default')->get('estate_source');
+        $this->updateEstates();
 
-        $this->estates = self::updateEstates($this->filter);
-
-        if ($estate_source == 'database') {
-            $estates = $this->estates->items();
-            $this->estateContactModal = collect($estates)->where('id', $estateId)->first();
-        } else {
-            $estates = request()->session()->get('estates');
-            $this->estateContactModal = collect($estates)->where('id', $estateId)->first();
-        }
-
-        // dd($this->estateContactModal);
-
-        // $this->dispatchBrowserEvent('dataUpdated');
+        $estates = request()->session()->get('estates');
+        $this->estateContactModal = collect($estates)->firstWhere('id', $estateId);
     }
 
-    public function render()
+    public function render(): \Illuminate\View\View
     {
+        // Ensure estatesPaginator is not null
+        $estatesPaginator = new LengthAwarePaginator(
+            $this->estates->forPage($this->page, $this->perPage),
+            $this->estates->count(),
+            $this->perPage,
+            $this->page,
+            ['path' => \Illuminate\Pagination\Paginator::resolveCurrentPath()]
+        );
 
-        $this->onOfficeService = new onOfficeService();
+        $this->estateLocations = EstateEntryService::getLocationsOfAllEstates();
 
-        $this->estateFilterService = new EstateFilterService();
-
-        // important leave this before functin call updateEstates otherwise map will be one step behind
-        $this->map_estates = $this->estateFilterService->getEstatesForMap($this->filter, 'entry');
-
-        // dd($this->filter);
-        $this->estates = self::updateEstates($this->filter);
-
-        // Falls empty nimm reference estates
-        if ($this->estates->isEmpty()) {
-            $this->estateReferences = self::loadOnOfficeEstates([], 0, 3);
-        }
-
-        // dd($this->filter);
-        $this->estateLocations = $this->estateFilterService->updateEstateLocations($this->estates, 'entry');
         $globalSet = GlobalSet::find('estate_appearance_configuration');
+        $showMap = $globalSet?->inCurrentSite()->get('show_map');
+        $estate_type = $this->filter['objektart'] ?? 'Immobilien';
 
-        if ($globalSet) {
-            $showMap = $globalSet->inCurrentSite()->get('show_map');
-        }
-        $estate_type = 'Immobilien';
-
-        if (isset($this->filter['objektart'])) {
-            $estate_type = $this->filter['objektart'];
+        if ($estatesPaginator->isEmpty()) {
+            $estateRecommendation = $this->getRecommendationEstates($this->filter, 0, 3);
         }
 
         $this->loadedFilter = ! $this->loadedFilter;
 
-        // dd($this->map_estates);
+        $this->isLoading = false;
 
-        return view('livewire.filter-component-var', [
+        return view('livewire.filter-component-var', data: [
             'filterOptions' => $this->filterOptions,
             'estateLocationOptions' => $this->estateLocationOptions,
-            'filterInfo' => $this->filterInfo,
+            'filterInfo' => EstateHelper::getFilterInfo($this->filters, $this->filterOptions),
             'estates' => $this->estates,
-            'estateReferences' => $this->estateReferences,
+            'estatesPaginator' => $estatesPaginator,
+            'estateRecommendation' => $estateRecommendation ?? [],
             'filter' => $this->filter,
+            'radiusZipCode' => $this->radiusZipCode,
+            'sliderValue' => $this->sliderValue,
             'estateLocations' => $this->estateLocations,
+            'estateFields' => $this->estateFields,
             'estateTypes' => $estate_type,
-            'showMap' => $showMap,
-            'allEstates' => $this->map_estates,
+            'showMap' => $showMap ?? false,
+            'allEstates' => $this->allEstates,
+            'sortOptions' => $this->sortOptions,
         ]);
     }
 
-    public function updating($name, $value)
+    public function updating($name, $value): void
     {
-        // Überprüfen, ob die Aktualisierung sich auf den Filter bezieht
-        if (strpos($name, 'filter') === 0) {
-            // Setzen Sie die Seite auf 1, wenn sich der Filter ändert
+        if (str_starts_with($name, 'filter')) {
             $this->page = 1;
         }
     }
 
-    public function updateEstates($filter = [])
+    public function updateMap($estates): void
     {
-
-        // Erstellen Sie eine Instanz Ihres EstateService (oder injizieren Sie diese über den Konstruktor)
-        $estateService = app()->make(EstateFilterService::class);
-
-        // Rufen Sie die Methode aus Ihrer Service-Klasse auf
-        $estates = $estateService->updateEstatesWithFilters($this->filter, $this->perPage, $this->currentSortField, $this->currentSortDirection, 'entries', $this->page);
-
-        // Emit und Dispatch wie zuvor
-        $this->emit('updateEstateMap', $this->map_estates);
-        if ($estates->previousPageUrl() != $estates->currentPage()) {
-            $this->dispatchBrowserEvent('dataUpdated');
-            $this->filter = $this->addRequestFilters();
-        }
-
-        return $estates;
+        $this->emit('updateEstateMap', $estates);
     }
 
-    // function to add request filters of f.e. home-search-form to filter component
-    public function addRequestFilters()
+    public function updateEstates(): void
     {
+        $filter = EstateHelper::convertFilter(request(), $this->filter);
 
-        // always set page where pagination is to 1 if filter gets updated
+        $this->estates = self::getCurrentEstates($filter);
+
+        // Emit the event with the updated estates data
+        $this->updateMap($this->estates);
+    }
+
+    public function getCurrentEstates($filter)
+    {
+        return app(Pipeline::class)
+            ->send($this->allEstates)
+            ->through([
+                new \App\Pipes\EntryFormatFields(),
+                new \App\Pipes\EntryFilterEstates($filter),
+                new \App\Pipes\EntrySortEstates($this->currentSortField, $this->currentSortDirection),
+            ])
+            ->thenReturn();
+    }
+
+    public function addRequestFilters(): array
+    {
         $this->page = 1;
-
         $newFilter = request()->input('filter', []);
-        $filter = array_merge(
-            array_diff_key($this->filter, $newFilter),
-            $newFilter
-        );
 
-        return $filter;
-    }
-
-    public function updateFilterOptionsByEstateType($estates)
-    {
-        $estateTypes = array_map(function ($item) {
-            return $item['elements']['vermarktungsart'];
-        }, $estates);
-
-        $estateTypes = array_unique($estateTypes);
-
-        // if estateTypes has only 'kauf',  $filterOptionFields may not include options that are only active for miete
-        // if estateTypes has only 'miete', $filterOptionFields may not include options that are only active for kauf
-        // if estateTypes has both, $filterOptionFields may include both options
-        $filterBuyCase = collect(GlobalSet::find('estate_filter_configuration')->in('default')->get('filter_options'))->where('filter_enabled_buy_case')->pluck('onoffice_label_id')->toArray();
-        $filterRentCase = collect(GlobalSet::find('estate_filter_configuration')->in('default')->get('filter_options'))->where('filter_enabled_rent_case')->pluck('onoffice_label_id')->toArray();
-        $kauf = in_array('kauf', $estateTypes);
-        $miete = in_array('miete', $estateTypes);
-
-        if ($kauf && ! $miete) {
-            return $filterBuyCase;
+        if (! isset($this->filter)) {
+            return $newFilter;
         }
 
-        if (! $kauf && $miete) {
-            return $filterRentCase;
-        }
-
-        return array_unique(array_merge($filterBuyCase, $filterRentCase));
+        return array_merge(array_diff_key($this->filter, $newFilter), $newFilter);
     }
 
-    // function to see if pages got rerendered
-    // public function has_been_paginated
-
-    public function updatedFilter($value, $key)
+    public function updatedFilter($value, $key): void
     {
+        $this->isLoading = true;
 
-        // always set page where pagination is to 1 if filter gets updated
         $this->page = 1;
 
-        // update filter
-        $this->filter = request()->input('serverMemo.data.filter');
-        // if key is ort, add to merge request and updated filter as query param is only updated after this view has rendered
-        $found = false;
-        if ($key == 'ort' && isset($value['value']) && isset($this->filter['ort']) && is_array($this->filter['ort'])) {
-            if (! in_array($value['value'], $this->filter['ort'])) {
-                $this->filter['ort'][] = $value['value'];
-                $found = true;
-            }
-            if ($found == false && in_array($value['value'], $this->filter['ort'])) {
-                $this->filter['ort'] = array_filter($this->filter['ort'], function ($item) use ($value) {
-                    return $item != $value['value'];
-                });
-                $found = true;
-            }
-            if (! $found) {
-                $this->filter['ort'] = $value;
-            }
+        // Check if the filter key is one that requires conversion
+        if (str_ends_with($key, '__von') || str_ends_with($key, '__bis')) {
+            $this->filter[$key] = $this->convertToFloat($value);
         } else {
-            $this->filter[$key] = $value;
+            if ($key == 'ort' && isset($value['value']) && isset($this->filter['ort']) && is_array($this->filter['ort'])) {
+                if (! in_array($value['value'], $this->filter['ort'])) {
+                    $this->filter['ort'][] = $value['value'];
+                } else {
+                    $this->filter['ort'] = array_filter($this->filter['ort'], fn ($item) => $item != $value['value']);
+                }
+            } else {
+                $this->filter[$key] = $value;
+            }
         }
 
         $this->filterInfo = EstateHelper::getFilterInfo($this->filter ?? [], $this->filterOptions);
-
-        // update estates
-        $this->estates = self::updateEstates($this->filter);
-
-        // if estates is empty, provide alternative estates
-        if (empty($this->estates)) {
-            $this->estateReferences = self::updateEstates();
-        }
-        $this->dispatchBrowserEvent('dataUpdated');
-    }
-
-    public function resetFilters()
-    {
-        $this->filter = [
-            'vermarktungsart' => [],
-        ];
-
-        $this->estates = self::updateEstates($this->filter);
-        // if estates is empty, provide alternative estates
-        if (empty($this->estates)) {
-            $this->estateReferences = self::updateEstates();
-        }
-
-        $this->filterInfo = [];
+        $this->updateEstates();
 
         $this->dispatchBrowserEvent('dataUpdated');
     }
 
-    public function removeFilter($filterItem)
+    public function resetFilter(): void
     {
+        $this->filter = ['vermarktungsart' => []];
+        $this->updateEstates();
 
+        $this->dispatchBrowserEvent('dataUpdated');
+    }
+
+    public function removeFilter($filterKey): void
+    {
         $this->page = 1;
-
-        // unset filter key
-        unset($this->filter[$filterItem['key']]);
-        // get filter info
-        $this->filterInfo = array_filter($this->filterInfo, function ($item) use ($filterItem) {
-            return $item['key_raw'] != $filterItem['key'];
-        });
-        // get estates
-        $this->estates = self::updateEstates($this->filter);
-        // if estates is empty, provide alternative estates
-        if (empty($this->estates)) {
-            $this->estateReferences = self::loadOnOfficeEstates([], 0, 3);
-        }
+        unset($this->filter[$filterKey]);
+        $this->filterInfo = array_filter($this->filterInfo, fn ($item) => $item['key_raw'] != $filterKey);
+        $this->updateEstates();
 
         $this->dispatchBrowserEvent('dataUpdated');
     }
 
-    public function loadOnOfficeEstates($filter = [], $offset = 0, $limit = 500, $sort = false)
+    public function convertToFloat($value): float
     {
-        // get onOffice api service
-        $onOfficeService = new OnOfficeService();
-        // prepare filter
-        $filterValidated = EstateHelper::prepareFilterForOnOfficeApi(request(), $onOfficeService, $filter);
-        // get result
+        // Remove the Euro symbol and spaces
+        $value = str_replace(['€', ' '], '', $value);
 
-        // Manuell paginieren des Ergebnisarrays
-        $all_estates = EstateHelper::getEstatesWithImages(request(), $onOfficeService, $filterValidated, 0, $limit, 'DEU', 'estates', 'estateImages'); // $offset, $perPage);
+        // Replace comma with dot for decimal separation
+        $value = str_replace(',', '.', $value);
 
-        $currentPage = $this->page ?: 1;
-        $offset = ($currentPage - 1) * $this->perPage;
+        // Remove any dots used as thousand separators
+        $value = str_replace('.', '', substr($value, 0, -3)).substr($value, -3);
 
-        $items = array_slice($all_estates, $offset, $this->perPage);
-        $estates = new LengthAwarePaginator($items, count($all_estates), $this->perPage, $currentPage, [
-            'path' => Paginator::resolveCurrentPath(), // URL für die Pagination-Links
-        ]);
-
-        // Überprüfe ob Page changed
-        if ($estates->previousPageUrl() != $estates->currentPage()) {
-            // Wenn die Seite gewechselt wurde, wird das Browser-Event ausgelöst
-            $this->dispatchBrowserEvent('dataUpdated');
-            $this->filter = $this->addRequestFilters();
-        }
-
-        // dd(SessionController::getAllLocations(request()));
-        return $estates;
+        // Convert to float
+        return (float) $value;
     }
 
-    public function getSelectOptionsFromLabelId($labelId)
+    public function getRecommendationEstates($filter = [], $offset = 0, $limit = 3, $sort = false): LengthAwarePaginator
+    {
+        // get vermarktungsart from filter if is set
+        $filterForRecommendations['vermarktungsart'] = $filter['vermarktungsart'] ?? [];
+
+        return EstateEntryService::getFilteredEstates($this->collectionName, $filterForRecommendations, $limit, 'kaufpreis', 'desc', 1);
+    }
+
+    public function clearFilter($filterKey): void
+    {
+        // Clear the filter value
+        unset($this->filter[$filterKey]);
+
+        // Optionally, clear the hidden filter value if you have one
+        unset($this->filter_hidden[$filterKey]);
+
+        // Update estates and reload the page
+        $this->updateEstates();
+    }
+
+    public function getSelectOptionsFromLabelId($labelId): array
     {
         $options = [];
-        $cpValuesIncluded = [];
-        $cpValuesExcluded = [];
-
-        $cpValues = collect(GlobalSet::find('estate_filter_configuration')->in('default')->get('filter_options'))->where('onoffice_label_id', $labelId)->first() ?? [];
-
-        if (! empty($cpValues)) {
-            $cpValuesIncluded = $cpValues['values_included'] ?? [];
-            $cpValuesExcluded = $cpValues['values_excluded'] ?? [];
-        }
+        $cpValues = collect(GlobalSet::find('estate_filter_configuration')->in('default')->get('filter_options'))->firstWhere('onoffice_label_id', $labelId) ?? [];
+        $cpValuesIncluded = $cpValues['values_included'] ?? [];
+        $cpValuesExcluded = $cpValues['values_excluded'] ?? [];
 
         if (array_key_exists($labelId, $this->estateFields)) {
-            array_map(function ($item) use (&$options, $cpValuesIncluded, $cpValuesExcluded) {
-                // include values
-                if (! empty($cpValuesIncluded) && ! in_array($item, $cpValuesIncluded)) {
-                    return;
+            foreach ($this->estateFields[$labelId]['permittedvalues'] as $item) {
+                if ((! empty($cpValuesIncluded) && ! in_array($item, $cpValuesIncluded)) ||
+                    (! empty($cpValuesExcluded) && in_array($item, $cpValuesExcluded))) {
+                    continue;
                 }
-                // exclude values
-                if (! empty($cpValuesExcluded) && in_array($item, $cpValuesExcluded)) {
-                    return;
-                }
-                // add to option
-                $options[] = [
-                    'value' => $item,
-                    'label' => $item,
-                ];
-            }, $this->estateFields[$labelId]['permittedvalues']);
+                $options[] = ['value' => $item, 'label' => $item];
+            }
         }
 
         return $options;
     }
 
-    private function initFilterOnMount($params)
+    private function initFilterOnMount(): void
     {
-
-        $filterOptionFields = SessionController::getFilterOptionFields();
-
-        $this->filterOptions = SessionController::fillFilterOptions(request(), $this->onOfficeService, $filterOptionFields);
-
-        $this->filterInfo = EstateHelper::getFilterInfo($this->filter, $this->filterOptions);
-        foreach ($this->filterOptions as $key => $value) {
-            if (! isset($this->filter[$key])) {
-                $this->filter[$key] = '';
-            }
+        if (! isset($this->filter['radius'])) {
+            $this->filter['radius'] = '';
+        } else {
+            $this->sliderValue = $this->filter['radius'];
         }
 
-        // give filter request params
-        if (isset($params['filter']) && is_array($params['filter'])) {
-            foreach ($params['filter'] as $key => $value) {
-                // Überprüfe, ob der Schlüssel im $this->filter existiert
+        if (! isset($this->filter['radiusZipCode'])) {
+            $this->filter['radiusZipCode'] = '';
+        } else {
+            $this->radiusZipCode = $this->filter['radiusZipCode'];
+        }
+
+        $filterOptionFields = SessionController::getFilterOptionFields();
+        $this->filterOptions = SessionController::fillFilterOptions($filterOptionFields);
+        $this->filterInfo = EstateHelper::getFilterInfo($this->filter, $this->filterOptions);
+
+        $this->isRadiusFilterActive = GlobalSet::find('estate_filter_configuration')->in('default')->get('estate_search_by_radius') == 'yes' ?? false;
+
+        foreach ($this->filterOptions as $key => $value) {
+            $this->filter[$key] = $this->filter[$key] ?? '';
+        }
+
+        if (isset($this->filter) && is_array($this->filter)) {
+            foreach ($this->filter as $key => $value) {
                 if (array_key_exists($key, $this->filter)) {
-                    // Weise den Wert direkt zu, ohne Konvertierung
                     $this->filter[$key] = $value;
                 }
             }
