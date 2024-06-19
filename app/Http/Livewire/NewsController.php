@@ -15,10 +15,7 @@ class NewsController extends Component
 
     public $searchString = '';
 
-    public function mount()
-    {
-
-    }
+    public function mount() {}
 
     public function render()
     {

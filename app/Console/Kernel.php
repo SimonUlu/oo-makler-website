@@ -3,7 +3,6 @@
 namespace App\Console;
 
 use App\Console\Commands\ImportGeoJsonDataFile;
-use App\Jobs\ImportEstateDataForEntries;
 use App\Jobs\ImportEstates;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;

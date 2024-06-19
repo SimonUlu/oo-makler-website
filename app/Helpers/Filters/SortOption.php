@@ -74,8 +74,5 @@ class SortOption
         return false;
     }
 
-    public function setStandardOption($standardOption)
-    {
-
-    }
+    public function setStandardOption($standardOption) {}
 }
