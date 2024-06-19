@@ -1,10 +1,16 @@
 @import "choices.js/public/assets/styles/choices.css";
 
 .choices {
-    @apply mb-0 rounded-md shadow-sm;
+    @apply mb-0 rounded-md shadow-none;
+}
+.choices-outer {
+    @apply m-0 p-0;
 }
 .choices__inner {
     @apply text-sm bg-white border-gray-300 rounded-md;
+    /* add min height 50 px */
+    @apply min-h-12 items-center;
+    @apply border-none;
 }
 .choices__input {
     @apply leading-none bg-white border-transparent rounded-md focus:border-transparent focus:ring-0;
