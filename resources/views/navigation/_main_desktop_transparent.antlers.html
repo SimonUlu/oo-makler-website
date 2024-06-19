@@ -23,12 +23,11 @@
         class="flex items-center justify-between w-full px-4 py-5 mx-auto max-w-7xl lg:px-12"
     >
         <div
-            class="absolute flex items-center h-full p-4 lg:flex-1 schraeg-unten"
-            :class="{ 'schraeg-unten bg-white': !scrolled && !isSpecialPage , '': scrolled  }"
+            class="absolute flex items-center h-full p-4 lg:flex-1"
         >
             <a href="/" class="p-1.5 -m-1.5">
                 <span class="sr-only">Your Company</span>
-                {{ partial:components/logo width="120" }}
+                {{ partial:components/logo_white width="120" }}
             </a>
         </div>
         <div></div>
@@ -181,7 +180,7 @@
                 <a
                     href="/kontakt"
                     title=""
-                    class="inline-flex items-center justify-center px-8 py-2 text-base font-medium text-white bg-primary hover:bg-primary-700"
+                    class="inline-flex items-center justify-center px-8 py-2 text-base font-medium text-primary bg-white hover:bg-gray-50"
                     role="button"
                 >
                     Kontakt

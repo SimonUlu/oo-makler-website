@@ -28,7 +28,7 @@
 <section class="w-full text-center bg-white">
     <div class="relative max-w-5xl py-16 mx-auto md:px-20 sm:py-24 lg:px-10  max-w-screen-3xl">
         <h2 class="text-4xl font-bold tracking-tight text-primary lg:text-5xl ">{{content_heading_h2}}</h2>
-        <div class="text-secondary text-xl lg:text-2xl font-medium pb-4 pt-2"><p>Alles unter einem Dach</p></div>
+        <div class="text-secondary text-xl lg:text-2xl font-medium pb-4"><p>Alles unter einem Dach</p></div>
         <div class="text-gray-700 sm:px-10 sm:text-xl dark:text-gray-400">{{content_text}}</div>
     </div>
 {{ if statistic_type == 'type_1' }}
