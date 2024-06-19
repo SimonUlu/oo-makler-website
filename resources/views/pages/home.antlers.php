@@ -35,7 +35,7 @@
     <div class="w-full custom-gradient-darker">
         <div>
             {{ partial:statistics/visits-searches-estates }}
-        </div> 
+        </div>
     </div>
 {{ /if }}
 {{ if statistic_type == 'type_2' }}
@@ -51,10 +51,11 @@
         <div class="text-center text-gray-900">
             <h2 class="mb-4 mt-8 text-4xl font-bold tracking-tight text-primary lg:text-5xl ">{{slider_headline}}</h2>
             <p class="text-gray-500 sm:text-xl dark:text-gray-400 mb-12">
-                {{slider_subheader}}    
+                {{slider_subheader}}
             </p>
         </div>
         {{ partial:pages/estate/estate-columns-3 }}
+        {{ partial:pages/estate/estate-columns-3-slider :estates="estates" :estateFields="estateFields" }}
         <div class="py-4 mt-12 text-center">
             <a href="/immobilien" class="fade-in-animation items-center px-6 py-3 mx-2 text-center text-white lg:px-5 focus:ring-4 focus:outline-none bg-secondary">
                 Zu unseren Immobillien
@@ -156,12 +157,12 @@
             <h2 class="mb-4 text-4xl font-bold tracking-tight text-primary lg:text-5xl ">Unsere aktuellsten Referenzen</h2>
 
             <p class="text-gray-500 sm:text-xl dark:text-gray-400">
-                Erhalten Sie einen Einblick in unsere realisierten Projekte und unserer Arbeit als Immobilienberater.    
+                Erhalten Sie einen Einblick in unsere realisierten Projekte und unserer Arbeit als Immobilienberater.
             </p>
         </div>
         <!-- Section Einleitung & Statistics -->
-        
-        {{ partial:pages/estate/estate-columns-3-ref }}
+
+        {{ partial:pages/estate/estate-columns-3-ref :estates="estates" :estateFields="estateFields" }}
     </div>
     <div class="py-4 mt-12 text-center">
         <a href="/immobilien" class="fade-in-animation items-center px-6 py-3 mx-2 text-center text-white lg:px-5 focus:ring-4 focus:outline-none bg-secondary">
