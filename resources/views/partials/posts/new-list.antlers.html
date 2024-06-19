@@ -26,18 +26,21 @@
                                 <p
                                     class="hidden max-w-3xl text-lg leading-4 text-white sm:block"
                                 >
-                                    {{date}}
+                                    {{ date format="d.m.Y" }}
                                 </p>
                                 <h2
-                                    class="mt-8 text-3xl font-bold tracking-tight text-white sm:text-4xl"
+                                    class="mt-8 text-3xl font-bold tracking-tight text-white sm:text-3xl"
                                 >
                                     {{title}}
                                 </h2>
                                 <p
-                                    class="hidden max-w-3xl text-sm text-white sm:block"
+                                    class="hidden max-w-3xl text-base text-white sm:block mb-8"
                                 >
                                     {{teaser}}
                                 </p>
+                                <a href="{{slug}}" target="_blank"class="font-bold mt-8 text-secondary transition duration-300 ease-in-out">
+                                    Jetzt weiterlesen
+                                </a>
                             </div>
                         </div>
                     </div>

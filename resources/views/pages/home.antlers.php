@@ -28,7 +28,7 @@
 <section class="w-full text-center bg-white">
     <div class="relative max-w-5xl py-16 mx-auto md:px-20 sm:py-24 lg:px-10  max-w-screen-3xl">
         <h2 class="text-4xl font-bold tracking-tight text-primary lg:text-5xl ">{{content_heading_h2}}</h2>
-        <div class="text-secondary text-xl lg:text-2xl font-medium pb-4"><p>Alles unter einem Dach</p></div>
+        <div class="text-secondary text-xl lg:text-2xl font-medium pb-8"><p>Alles unter einem Dach</p></div>
         <div class="text-gray-700 sm:px-10 sm:text-xl dark:text-gray-400">{{content_text}}</div>
     </div>
 {{ if statistic_type == 'type_1' }}
@@ -66,7 +66,7 @@
 
 {{if content_two_type === "type_1"}}
     <section class="w-full max-w-7xl px-4 lg:px-10  mt-8 bg-white sm:mt-32">
-        {{partial:content-section/content-img-swapped-button}}
+        {{partial:content-section/content-img-swapped-home}}
     </section>
     {{elseif content_two_type == "type_2"}}
     <section class="w-full max-w-7xl px-4 lg:px-10 mt-8 bg-white sm:mt-32">
@@ -164,7 +164,7 @@
         {{ partial:pages/estate/estate-columns-3-ref :estates="estateReferences" :estateFields="estateFields" }}
     </div>
     <div class="py-4 mt-12 text-center">
-        <a href="/immobilien" class="fade-in-animation items-center px-6 py-3 mx-2 text-center text-white lg:px-5 focus:ring-4 focus:outline-none bg-secondary">
+        <a href="/immobilien" class="fade-in-animation items-center px-6 py-3 mx-2 text-center text-white lg:px-5 focus:ring-4 focus:outline-none bg-primary">
             Alle Immobilien ansehen
         </a>
     </div>
