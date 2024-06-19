@@ -17,8 +17,9 @@ yarn-error.log
 
 /content/collections/estate_entries/
 /content/collections/estate_entries_full/
-/content/collections/estate_entries_references/
 /content/collections/statistic_entries/
+/content/collections/estate_entries_references/
+
 
 public/build
 

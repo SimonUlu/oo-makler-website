@@ -101,4 +101,32 @@ class EstateEntryService implements EstateServiceInterface
         // Apply the limit after filtering and sorting
         return $filteredEntries->take($limit);
     }
+
+    /**
+     * Get the first filtered entry with enabled filters by the specified filter name.
+     */
+    public static function getFilteredEntry(array $filters, string $filterName): ?array
+    {
+        // Filter the collection to find the item with the matching filterName
+        $filteredCollection = collect($filters)->filter(function ($item) use ($filterName) {
+            return $item['home_view_model_filter_name'] === $filterName;
+        });
+
+        // Get the first item from the filtered collection
+        $filter = $filteredCollection->first();
+
+        // If no filter is found or replicator_field_filter is empty, return null
+        if (empty($filter) || empty($filter['replicator_field_filter'])) {
+            return null;
+        }
+
+        // Remove filters that are not enabled
+        $filter['replicator_field_filter'] = array_filter($filter['replicator_field_filter'], function ($replicatorFilter) {
+            return $replicatorFilter['enabled'];
+        });
+
+        $filter['replicator_field_filter'] = array_values($filter['replicator_field_filter']);
+
+        return $filter;
+    }
 }

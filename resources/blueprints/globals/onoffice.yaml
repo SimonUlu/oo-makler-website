@@ -213,6 +213,7 @@ tabs:
                               home: Startseite
                               verkaufen: Verkaufen
                               kaufen: Kaufen
+                              referenzen: 'Referenzen'
                               standort_gesamt: 'Standort Gesamt'
                               standort_einzel: 'Standort Einzel'
                               ueber_uns: 'Über uns'

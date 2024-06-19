@@ -16,26 +16,24 @@ class HomeViewModel extends ViewModel
         // check if there is a filter active
         $homeViewModelFilters = GlobalSet::find('onoffice')->in('default')->get('home_view_model_filter');
         // Filter the collection to find the entry with the specific "home_view_model_filter_name"
-        $filteredEntryBuy = collect($homeViewModelFilters)->first(function ($item) {
-            return $item['home_view_model_filter_name'] === 'home';
-        });
+        $filteredEntryBuy = EstateEntryService::getFilteredEntry($homeViewModelFilters, 'home');
+
         // get filters
         $filtersBuy = OnOfficeService::transformFilterArray($filteredEntryBuy);
-        $estatesBuy = EstateEntryService::getEstatesUnpaginated($filtersBuy, 3, 'kaufpreis', 'desc', $collectionName);
+        $estatesBuy = EstateEntryService::getEstatesUnpaginated($filtersBuy, 3, 'erstellt_am', 'desc', $collectionName);
 
-        $filteredEntrySell = collect($homeViewModelFilters)->first(function ($item) {
-            return $item['home_view_model_filter_name'] === 'verkaufen';
-        });
-        $filtersSell = OnOfficeService::transformFilterArray($filteredEntrySell);
-        $estatesSell = EstateEntryService::getEstatesUnpaginated($filtersSell, 3, 'kaufpreis', 'desc', 'estate_entries_full', 30);
-        $estatesSell = OnOfficeService::removeFieldsFromEstate($estatesSell);
+        $filteredEntryReference = EstateEntryService::getFilteredEntry($homeViewModelFilters, 'referenzen');
+
+        $filtersReference = OnOfficeService::transformFilterArray($filteredEntryReference);
+        $estatesReference = EstateEntryService::getEstatesUnpaginated($filtersReference, 3, 'kaufpreis', 'desc', 'estate_entries_full', 30);
+        $estatesReference = OnOfficeService::removeFieldsFromEstate($estatesReference);
 
         $estateLocations = EstateEntryService::getLocationsOfAllEstates();
         $estateListAppearance = GlobalSet::find('estate_appearance_configuration')->in('default')->get('listappearance');
 
         return [
             'estates' => $estatesBuy,
-            'estateReferences' => $estatesSell,
+            'estateReferences' => $estatesReference,
             'estateFields' => EstateHelper::getEstateFields(),
             'collectionName' => $collectionName,
             'estateLocations' => json_encode($estateLocations),

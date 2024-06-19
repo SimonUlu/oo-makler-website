@@ -78,8 +78,8 @@
                     <!-- Neue Section -->
                     <div class="relative px-5 pt-2 pb-2 border md:pt-0">
                         <h3 class="flex justify-between mb-2.5 text-lg font-bold text-gray-900 md:mt-4 ">
-{{--                            <span x-text="estate.objekttitel.length > 30 ? estate.objekttitel.substring(0, 30) + '...' : estate.objekttitel"></span>--}}
-                            <span x-text="estate.objekttitel"></span>
+                            <span x-text="estate.objekttitel.length > 55 ? estate.objekttitel.substring(0, 52) + '...' : estate.objekttitel"></span>
+{{--                            <span x-text="estate.objekttitel"></span>--}}
                             <template x-if="estate.vermarktungsart === 'miete'">
                                 <span class="capitalize inline-flex items-center bg-primary-900 px-2.5 py-0.5 text-sm font-bold text-white">
                                     <span x-text="estate.vermarktungsart"></span>
