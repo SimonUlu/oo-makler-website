@@ -57,7 +57,7 @@
     </head>
     <body
         class="min-h-screen font-sans leading-normal text-gray-800"
-        x-data="{ mobileNav: false, openImgSlideShow: false, modalOpen: false }"
+        x-data="{ mobileNav: false, openImgSlideShow: false, modalOpen: false, showNavigation: true }"
         :class="{
             'overflow-hidden': mobileNav || openImgSlideShow || modalOpen
         }"
@@ -68,7 +68,7 @@
             partial:statamic-peak-tools::components/toolbar }} {{ yield:seo_body
             }} {{ partial:layout/header }}
             <div
-                class="flex flex-col items-center justify-top -mt-[100px]"
+                class="flex flex-col items-center justify-top -mt-[120px]"
             >
                 <div class="hidden lg:flex">{{partial:sidebar/sidebar}}</div>
                 {{ partial:bladecontent }} {{ template_content }}
