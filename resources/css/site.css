@@ -59,6 +59,12 @@
     text-underline-offset: 16px;
 }
 
+.decoration-custom-white {
+    @apply underline; /* Ersetzen Sie #IhreFarbe mit der gewünschten Farbe */
+    text-decoration-thickness: 2px;
+    text-underline-offset: 16px;
+}
+
 #radius-zip-code-input:hover, #radius-zip-code-input-slide-over:hover {
     border: none;
 }
