@@ -3,12 +3,12 @@
 namespace App\Pipes;
 
 use Closure;
+use Illuminate\Support\Carbon;
 
 class EntrySortEstates
 {
-    protected $sortField;
-
-    protected $sortDirection;
+    protected mixed $sortField;
+    protected mixed $sortDirection;
 
     public function __construct($sortField = 'kaufpreis', $sortDirection = 'asc')
     {
@@ -18,24 +18,28 @@ class EntrySortEstates
 
     public function handle($estates, Closure $next)
     {
-        // Separate estates with the sortField value of 0
+        if (empty($estates)) {
+            return $next($estates);
+        }
+
+        // Separate estates with the sortField value of 0 or null
         $zeroEstates = $estates->filter(function ($estate) {
-            return ($estate[$this->sortField] ?? null) == 0;
+            return $this->isZeroOrNull($estate[$this->sortField] ?? null);
         });
 
-        // Filter out estates with the sortField value of 0
+        // Filter out estates with the sortField value of 0 or null
         $nonZeroEstates = $estates->reject(function ($estate) {
-            return ($estate[$this->sortField] ?? null) == 0;
+            return $this->isZeroOrNull($estate[$this->sortField] ?? null);
         });
 
         // Sort the non-zero estates
         if ($this->sortDirection === 'asc') {
             $sortedEstates = $nonZeroEstates->sortBy(function ($estate) {
-                return $estate[$this->sortField] ?? null;
+                return $this->normalizeValue($estate[$this->sortField] ?? null);
             });
         } else {
             $sortedEstates = $nonZeroEstates->sortByDesc(function ($estate) {
-                return $estate[$this->sortField] ?? null;
+                return $this->normalizeValue($estate[$this->sortField] ?? null);
             });
         }
 
@@ -43,5 +47,27 @@ class EntrySortEstates
         $estates = $sortedEstates->merge($zeroEstates);
 
         return $next($estates);
+    }
+
+    protected function isZeroOrNull($value): bool
+    {
+        if (is_null($value)) {
+            return true;
+        }
+
+        if (is_numeric($value)) {
+            return $value == 0;
+        }
+
+        return false;
+    }
+
+    protected function normalizeValue($value)
+    {
+        if ($value instanceof Carbon) {
+            return $value->timestamp;
+        }
+
+        return $value;
     }
 }
