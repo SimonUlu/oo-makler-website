@@ -8,6 +8,7 @@ use Illuminate\Support\Carbon;
 class EntrySortEstates
 {
     protected mixed $sortField;
+
     protected mixed $sortDirection;
 
     public function __construct($sortField = 'kaufpreis', $sortDirection = 'asc')
