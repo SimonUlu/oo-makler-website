@@ -99,39 +99,361 @@ tabs:
               visibility: visible
               hide_display: false
       -
-        display: 'OnOffice Default Filter Value'
+        display: 'onOffice Default Filter'
+        instructions: onoffice_default_filter
         fields:
           -
-            handle: oo_field_name
+            handle: onoffice_default_filter
             field:
-              input_type: text
-              antlers: false
-              type: text
-              display: oo_field_name
+              collapse: false
+              previews: true
+              fullscreen: true
+              sets:
+                neue_set-gruppe:
+                  display: 'Neue Set-Gruppe'
+                  instructions: null
+                  icon: null
+                  sets:
+                    neues_set:
+                      display: 'Neues Set'
+                      instructions: null
+                      icon: null
+                      fields:
+                        -
+                          handle: onoffice_filter_name
+                          field:
+                            options:
+                              estates_full: 'Alle Immobilien'
+                              estates_on_market: 'Immobilien in Vermarktung'
+                              estates_references: 'Immobilien als Referenz'
+                            taggable: false
+                            push_tags: false
+                            multiple: false
+                            clearable: false
+                            searchable: true
+                            cast_booleans: false
+                            type: select
+                            display: 'Filter Name'
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+                        -
+                          handle: replicator_field_filter
+                          field:
+                            collapse: false
+                            previews: true
+                            fullscreen: true
+                            sets:
+                              neue_set-gruppe:
+                                display: 'Neue Set-Gruppe'
+                                instructions: null
+                                icon: null
+                                sets:
+                                  neues_set:
+                                    display: 'Neues Set'
+                                    instructions: null
+                                    icon: null
+                                    fields:
+                                      -
+                                        handle: array_filter
+                                        field:
+                                          mode: keyed
+                                          keys:
+                                            label_id: 'label_id des zu filternden Feldes'
+                                            operator: 'Operator, der verwendet werden soll (=, !=, etc.)'
+                                            value: 'Wert, der im Filter verglichen werden soll'
+                                          type: array
+                                          display: 'onOffice Filter-Aufbau'
+                                          listable: hidden
+                                          instructions_position: above
+                                          visibility: visible
+                                          replicator_preview: true
+                                          hide_display: false
+                            type: replicator
+                            display: 'onOffice Filter'
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+              type: replicator
+              display: 'onOffice Default Filter'
               listable: hidden
               instructions_position: above
               visibility: visible
               replicator_preview: true
               hide_display: false
+      -
+        display: 'onOffice Filter pro ViewModel'
+        instructions: 'Hier können Filter für ein ViewModel eingegeben werden. Ein ViewModel ist das Model, das pro Immobilien-Seite die Immobilien ausspielt.'
+        fields:
           -
-            handle: oo_field_value
+            handle: home_view_model_filter
             field:
-              input_type: text
-              antlers: false
-              type: text
-              display: oo_field_value
+              collapse: false
+              previews: true
+              fullscreen: true
+              sets:
+                neue_set-gruppe:
+                  display: 'Neue Set-Gruppe'
+                  instructions: null
+                  icon: null
+                  sets:
+                    neues_set:
+                      display: 'Neues Set'
+                      instructions: null
+                      icon: null
+                      fields:
+                        -
+                          handle: home_view_model_filter_name
+                          field:
+                            options:
+                              home: Startseite
+                              verkaufen: Verkaufen
+                              kaufen: Kaufen
+                              standort_gesamt: 'Standort Gesamt'
+                              standort_einzel: 'Standort Einzel'
+                              ueber_uns: 'Über uns'
+                            taggable: false
+                            push_tags: false
+                            multiple: false
+                            clearable: false
+                            searchable: true
+                            cast_booleans: false
+                            type: select
+                            display: 'HomeViewModel Filter Name'
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+                        -
+                          handle: replicator_field_filter
+                          field:
+                            collapse: false
+                            previews: true
+                            fullscreen: true
+                            sets:
+                              neue_set-gruppe:
+                                display: 'Neue Set-Gruppe'
+                                instructions: null
+                                icon: null
+                                sets:
+                                  neues_set:
+                                    display: 'Neues Set'
+                                    instructions: null
+                                    icon: null
+                                    fields:
+                                      -
+                                        handle: array_filter
+                                        field:
+                                          mode: keyed
+                                          keys:
+                                            label_id: 'label_id des zu filternden Feldes'
+                                            operator: 'Operator, der verwendet werden soll (=, !=, etc.)'
+                                            value: 'Wert, der im Filter verglichen werden soll'
+                                          type: array
+                                          display: 'HomeViewModel Filter-Aufbau'
+                                          listable: hidden
+                                          instructions_position: above
+                                          visibility: visible
+                                          replicator_preview: true
+                                          hide_display: false
+                            type: replicator
+                            display: 'Replikator Feld HomeViewModel Filter'
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+              type: replicator
+              display: HomeViewModel-Filter
               listable: hidden
               instructions_position: above
               visibility: visible
               replicator_preview: true
               hide_display: false
+      -
+        display: 'onOffice Statistics'
+        instructions: 'Hier definieren Sie die Abfragen für die Statistiken. Die Statistiken können z.B. auf der Startseite eingebunden werden.'
+        fields:
           -
-            handle: operator
+            handle: statistics_replicator
             field:
-              input_type: text
-              antlers: false
-              type: text
-              display: operator
+              collapse: false
+              previews: true
+              fullscreen: true
+              sets:
+                neue_set-gruppe:
+                  display: 'Neue Set-Gruppe'
+                  instructions: null
+                  icon: null
+                  sets:
+                    neues_set:
+                      display: 'Neues Set'
+                      instructions: null
+                      icon: null
+                      fields:
+                        -
+                          handle: statistic_identifier
+                          field:
+                            input_type: text
+                            antlers: false
+                            type: text
+                            display: 'Statistik Name'
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+                        -
+                          handle: statistic_module
+                          field:
+                            options:
+                              estate: Immobilien
+                              address: Adressen
+                              agentslog: Maklerbuch
+                            taggable: false
+                            push_tags: false
+                            multiple: false
+                            clearable: false
+                            searchable: true
+                            cast_booleans: false
+                            type: select
+                            display: 'Statistik Modul'
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+                        -
+                          handle: formatting_statistics
+                          field:
+                            options:
+                              number: Zahl
+                              currency_euro: Euro
+                              percentage: Prozentzahl
+                            taggable: false
+                            push_tags: false
+                            multiple: false
+                            clearable: false
+                            searchable: true
+                            cast_booleans: false
+                            type: select
+                            display: 'Formatierung Statistiken'
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+                        -
+                          handle: replicator_field_filter
+                          field:
+                            collapse: false
+                            previews: true
+                            fullscreen: true
+                            sets:
+                              neue_set-gruppe:
+                                display: 'Neue Set-Gruppe'
+                                instructions: null
+                                icon: null
+                                sets:
+                                  neues_set:
+                                    display: 'Neues Set'
+                                    instructions: null
+                                    icon: null
+                                    fields:
+                                      -
+                                        handle: array_filter
+                                        field:
+                                          mode: keyed
+                                          keys:
+                                            label_id: 'label_id des zu filternden Feldes'
+                                            operator: 'Operator, der verwendet werden soll (=, !=, etc.)'
+                                            value: 'Wert, der im Filter verglichen werden soll'
+                                          type: array
+                                          display: Filter-Aufbau
+                                          listable: hidden
+                                          instructions_position: above
+                                          visibility: visible
+                                          replicator_preview: true
+                                          hide_display: false
+                            type: replicator
+                            display: 'Replikator Feld Filter'
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+                        -
+                          handle: added_time_filter
+                          field:
+                            options:
+                              none: Keine
+                              year_over_year: 'letzte 12 Monate'
+                              year_to_date: 'seit Jahrebeginn'
+                              future: 'ab heute in der Zukunft'
+                            taggable: false
+                            push_tags: false
+                            multiple: false
+                            clearable: false
+                            searchable: true
+                            cast_booleans: false
+                            type: select
+                            display: 'zusätzliche Filteroption'
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+                        -
+                          handle: field_for_added_time_filter
+                          field:
+                            input_type: text
+                            antlers: false
+                            type: text
+                            display: 'Field für zusätzlichen Zeitfilter'
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+                        -
+                          handle: aggregation_function
+                          field:
+                            options:
+                              count: Anzahl
+                              sum: Summe
+                              avg: Durchschnitt
+                            taggable: false
+                            push_tags: false
+                            multiple: false
+                            clearable: false
+                            searchable: true
+                            cast_booleans: false
+                            type: select
+                            display: Aggregationsfunktion
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+                        -
+                          handle: field_for_aggregation_function
+                          field:
+                            input_type: text
+                            antlers: false
+                            type: text
+                            display: 'Feld für Aggregationsfunktion'
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+              type: replicator
+              display: Statistiken
               listable: hidden
               instructions_position: above
               visibility: visible

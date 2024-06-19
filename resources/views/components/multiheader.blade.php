@@ -1,6 +1,6 @@
-@if(count($estate['elements']['images']) > 3)
+@if(!empty($estate['elements']['images']) && count($estate['elements']['images']) > 3)
 <div class="relative w-full h-full -mt-[60px]">
-    
+
         <!-- Header Multi Images Image gallery -->
         <div class="px-2 pt-10 mx-auto sm:px-4 sm:pt-0 lg:grid lg:grid-cols-3 lg:gap-x-4 mt-[40px] md:mt-[80px]">
             <div class="hidden overflow-hidden rounded-lg lg:block aspect-w-3 aspect-h-4">
@@ -56,7 +56,7 @@
         <div class="relative px-2 pt-10 mx-auto sm:px-6 max-h-[480px] lg:max-h-[600px] overflow-hidden">
             <div class="relative inset-0 rounded-lg max-h-screen">
                 <div class="absolute inset-0 bg-black bg-opacity-20 rounded-lg"></div>
-                <img 
+                <img
                     class='max-h-screen rounded-lg object-cover w-full hover:scale-[1.005] transition-transform duration-1000'
                     src="{{ $titelbild ?? asset('img/300x200.png')}}"
                     alt="Hero Bild der Immobilie"
@@ -86,4 +86,6 @@
     </div>
 @endif
 <!-- Add script to handle the slideshow state -->
-<x-estates.image-slideshow :estateImgs="$estate['elements']['images']" />
+@if(!empty($estate['elements']['images']))
+    <x-estates.image-slideshow :estateImgs="$estate['elements']['images']" />
+@endif

@@ -18,15 +18,29 @@ class EntrySortEstates
 
     public function handle($estates, Closure $next)
     {
+        // Separate estates with the sortField value of 0
+        $zeroEstates = $estates->filter(function ($estate) {
+            return ($estate[$this->sortField] ?? null) == 0;
+        });
+
+        // Filter out estates with the sortField value of 0
+        $nonZeroEstates = $estates->reject(function ($estate) {
+            return ($estate[$this->sortField] ?? null) == 0;
+        });
+
+        // Sort the non-zero estates
         if ($this->sortDirection === 'asc') {
-            $estates = $estates->sortBy(function ($estate) {
-                return $estate['elements'][$this->sortField] ?? null;
+            $sortedEstates = $nonZeroEstates->sortBy(function ($estate) {
+                return $estate[$this->sortField] ?? null;
             });
         } else {
-            $estates = $estates->sortByDesc(function ($estate) {
-                return $estate['elements'][$this->sortField] ?? null;
+            $sortedEstates = $nonZeroEstates->sortByDesc(function ($estate) {
+                return $estate[$this->sortField] ?? null;
             });
         }
+
+        // Merge the sorted non-zero estates with the zero estates at the end
+        $estates = $sortedEstates->merge($zeroEstates);
 
         return $next($estates);
     }

@@ -44,14 +44,15 @@
 
             mapboxgl.accessToken = '{{ config('api.mapbox.key') }}';
 
-            var lng = '{{ $estate['elements']['laengengrad'] }}';
-            var lat = '{{ $estate['elements']['breitengrad'] }}';
+            var lng = '{{ $estate['laengengrad'] }}';
+            var lat = '{{ $estate['breitengrad'] }}';
 
             var map = new mapboxgl.Map({
                 container: 'map',
                 style: 'mapbox://styles/mapbox/light-v10',
                 center: [lng, lat],
                 zoom: 12,
+                maxZoom: 14,
                 cooperativeGestures: true
             });
 

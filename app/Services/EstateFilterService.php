@@ -10,10 +10,7 @@ class EstateFilterService
 {
     protected $service;
 
-    public function __construct()
-    {
-
-    }
+    public function __construct() {}
 
     protected function getService($type)
     {

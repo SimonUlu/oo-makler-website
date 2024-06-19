@@ -20,15 +20,33 @@
                             <div class="grid grid-cols-1 space-x-4 md:grid-cols-4">
                                 <div class="col-span-3 md:col-span-4 lg:col-span-3">
 
-                                    <div class="hidden top-28 items-center mt-4 mr-4 mb-12 bg-white md:grid md:grid-cols-4">
+                                    @php
+                                        $boxes = [
+                                            !empty($estate->get('ort')) || !empty($estate->get('strasse')),
+                                            !empty($estate->get('anzahl_zimmer')) && $estate->get('anzahl_zimmer') != 0,
+                                            !empty($estate->get('wohnflaeche')) && $estate->get('wohnflaeche') != 0.00,
+                                            !empty($estate->get('vermarktungsart')) && ($estate->get('warmmiete') > 0.0 || $estate->get('kaltmiete') > 0.0 || $estate->get('kaufpreis') > 0.0)
+                                        ];
+                                    $boxesCount = count(array_filter($boxes));
+                                    @endphp
+
+                                    @if($boxesCount > 0)
+
+                                        <div class="hidden top-28 items-center mt-4 mr-4 mb-12 bg-white md:grid md:grid-cols-{{$boxesCount}}">
+
+
                                         <x-estate-detail.subheader :estate="$estate" />
                                     </div>
 
+                                    @endif
+
                                     <h2
                                         class="py-8 mb-4 w-full text-3xl font-extrabold tracking-tight md:text-4xl xl:text-5xl">
-                                        {{ $estate['elements']['objekttitel'] }}</h2>
+                                        {{ $estate->get('objekttitel') }}</h2>
                                     <div class="my-8 sm:mr-7">
-                                        <x-estate-detail.contact-person :estate="$estate" :estateId="$estate['id']" />
+                                        <!-- Details -->
+                                        <x-estate-detail.details :estate="$estate" />
+                                        <x-estate-detail.contact-person :estate="$estate" :estateId="$estate->get('id_internal')" />
                                     </div>
                                     <div>
                                         <!-- Description -->
@@ -41,7 +59,7 @@
                                                         Lagebeschreibung
                                                     </h2>
                                                     <div class="col-span-full text-sm bg-gray-50 rounded-2xl md:text-md">
-                                                        {{ $estate['elements']['lage'] }}
+                                                        {{ $estate->get('lage') }}
                                                     </div>
                                                 </div>
 
@@ -52,7 +70,7 @@
                                                     @php
                                                         $sentences = preg_split(
                                                             '/(?<=[.!?])\s+(?=[a-zA-Z])/i',
-                                                            $estate['elements']['objektbeschreibung'],
+                                                            $estate->get('objektbeschreibung'),
                                                         );
                                                         $randomSentence = $sentences[array_rand($sentences)];
                                                     @endphp
@@ -60,25 +78,25 @@
                                                         {{ '„' . $randomSentence . '“' }}
                                                     </p>
                                                     <div class="col-span-full text-sm bg-gray-50 rounded-2xl md:text-md">
-                                                        {{ $estate['elements']['objektbeschreibung'] }}
+                                                        {{ $estate->get('objektbeschreibung') }}
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- Details -->
-                                        <x-estate-detail.details :estate="$estate" />
 
+
+                                        @if(isset($estate->get('energiebedarf')['url']))
                                         <x-estate-detail.energy :estate="$estate" />
 
-                                        <x-estate-detail.energy-svg :estate="$estate" :pfeilposition="$pfeilposition" />
-                                    
+                                            <x-estate-detail.energy-svg :estate="$estate" :pfeilposition="$pfeilposition" />
+                                        @endif
                                     </div>
                                 </div>
 
                                 <aside class="mt-4">
                                     <div class="hidden sticky top-28 lg:block">
                                         <aside aria-labelledby="reactions-label" class="mb-2">
-                                            <x-estate-detail.contact-form-small :estate="$estate" :estateId="$estate['id']" />
+                                            <x-estate-detail.contact-form-small :estate="$estate" :estateId="$estate->get('id_internal')" />
                                         </aside>
                                     </div>
                                 </aside>
@@ -90,22 +108,22 @@
                         <div class="px-4 pt-4 pb-20 mx-auto w-full sm:px-6 lg:gap-x-4 lg:px-12">
 
                             <h2 class="pl-2 text-3xl font-bold tracking-tight text-gray-900">
-                                @if ($estate['elements']['wohnflaeche'] !== null)
-                                    Wohlfühlen auf {{ round($estate['elements']['wohnflaeche']) }} m² und
+                                @if ($estate->get('wohnflaeche') !== null && $estate->get('wohnflaeche') > 0 && (int) $anzahlZimmerWort > 0)
+                                    Wohlfühlen auf {{ round($estate->get('wohnflaeche')) }} m² und
                                     {{ $anzahlZimmerWort }} Zimmern
-                                @else
+                                @elseif($estate->get('objektart') != 'grundstueck')
                                     Einziehen und wohlfühlen
                                 @endif
                             </h2>
 
                             @php
-                                $numImages = sizeof($estate['elements']['images']) - 4;
+                                $numImages = sizeof($estate->get('estate_images')) - 4;
                                 $columns = max(min((int) ($numImages / 2), 12), 4);
                             @endphp
                             <div
                                 class="grid max-w-2xl grid-cols-3 mx-auto mt-16 gap-x-2 gap-y-8 lg:mx-0 lg:max-w-none lg:grid-cols-{{ $columns }}">
 
-                                @foreach (array_slice($estate['elements']['images'] ?? [], 4) as $key => $image)
+                                @foreach (array_slice($estate->get('estate_images') ?? [], 4) as $key => $image)
                                     <div class="flex flex-col justify-between items-start">
                                         <div class="relative w-full rounded-lg">
                                             <img @click="showSlide({{ $key + 4 }}); openImgSlideShow = !openImgSlideShow"
@@ -125,7 +143,7 @@
                             <div class="grid grid-cols-2 py-12 md:space-x-4">
                                 <div class="col-span-2 md:col-span-1 min-h-[300px]">
                                     <!-- Location -->
-                                    <x-estate-detail.location-mapbox :estate="$estate" :estateId="$estate['id']" />
+                                    <x-estate-detail.location-mapbox :estate="$estate" :estateId="$estate->get('id_internal')" />
                                 </div>
                                 <div class="block col-span-2 mt-4 ml-0 md:col-span-1 md:mt-0">
                                     <livewire:estate-contact-controller :estate="$estate" :estateId="$estateId"
@@ -151,8 +169,9 @@
                                     class="pt-5 mt-6 border-t border-gray-200 lg:pt-8 lg:mt-10">
                                     <h2 class="text-3xl font-bold tracking-tight text-gray-900">Das könnte Ihnen
                                         auch gefallen</h2>
-                                    @include('pages.estate.estate-columns-3', [
+                                    @include('pages.estate.estate-columns-3-slider', [
                                         'estates' => $estateRecommendations,
+                                        'estateFields' => $estateFields,
                                     ])
                                 </section>
                             </div>

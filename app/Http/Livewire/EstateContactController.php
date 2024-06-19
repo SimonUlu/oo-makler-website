@@ -2,17 +2,16 @@
 
 namespace App\Http\Livewire;
 
-use App\Helpers\Contacts\AddressHelper;
-use App\Helpers\Contacts\ContactHelper;
 use App\Http\Livewire\ContactBase\FormComponent;
-use App\Services\OnOfficeApiHelpers\AgentslogHelper;
-use App\Services\OnOfficeApiHelpers\UpdateOrCreateAddressHelper;
+use App\Mail\EstateContactMailable;
 use App\Services\StringParseService\LibPostal;
 use App\Services\StringParseService\NameParser;
+use Illuminate\Support\Facades\Mail;
+use Statamic\Facades\GlobalSet;
 
 class EstateContactController extends FormComponent
 {
-    public $estate;
+    private $estate;
 
     public $estateId;
 
@@ -60,37 +59,23 @@ class EstateContactController extends FormComponent
             $estateData['estate_objekttitel'] = $this->estate['elements']['objekttitel'] ?? null;
             $estateData['estate_plz'] = $this->estate['elements']['plz'] ?? null;
             $estateData['estate_ort'] = $this->estate['elements']['ort'] ?? null;
-            if (isset($this->estate['elements']['strasse'])) {
-                $estateData['estate_strasse'] = $this->estate['elements']['strasse'].' '.$this->estate['elements']['hausnummer'];
-            }
+            $estateData['estate_strasse'] = $this->estate['elements']['strasse'].' '.$this->estate['elements']['hausnummer'];
         } else {
             $estateData = [];
         }
 
-        // create instance of helper class
-        $updateOrCreateAddressHelper = new UpdateOrCreateAddressHelper();
-
-        // create new instance of address helper class and create Id
-        $addressHelper = new AddressHelper($updateOrCreateAddressHelper);
-        $addressId = $addressHelper->createOrUpdateAddress($formData);
-
-        // write activity in onOffice
-        $activityHandler = new AgentslogHelper();
-
-        $activityHandler->createAgentslogEntry(
-            addressIds: [$addressId],
-            estateId: $this->estate['id'],
-            actionKind: 'System',
-            actionType: 'Kontakt zugeführt',
-            note: 'Anfrage Website '.($this->onofficeNote ?? '').($this->form['message'] ?? ''),
+        $data = array_merge($addressData, $estateData);
+        Mail::to(GlobalSet::find('onoffice')->in('default')->get('e-mail_inbox_expose-mails'))->queue(
+            new EstateContactMailable([
+                // 'xmlString' => $xmlString,
+                'formData' => $data,
+                'estateData' => $estateData,
+                'addressData' => $addressData,
+            ])
         );
 
-        // get addressId
-        $addressData['addressId'] = $addressId;
-
-        ContactHelper::sendEstateMail($addressData, $estateData);
-
         $this->reset();
+        session()->flash('success', 'Sie erhalten in Kürze weitere Informationen per E-Mail!');
     }
 
     public function render()

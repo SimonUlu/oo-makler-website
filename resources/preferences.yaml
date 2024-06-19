@@ -1,0 +1,12 @@
+nav:
+  reorder: true
+  sections:
+    top_level: '@inherit'
+    content: '@inherit'
+    immobilien:
+      action: '@create'
+      display: Immobilien
+      items:
+        'content::collections::alle_immobilien': '@move'
+        'content::collections::immobilien_in_vermarktung': '@move'
+        'content::collections::immobilien_als_referenz': '@move'
