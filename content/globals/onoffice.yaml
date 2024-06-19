@@ -18,6 +18,14 @@ data:
             operator: '='
             value: '1'
           type: neues_set
+          enabled: false
+        -
+          id: lxlhqb3c
+          array_filter:
+            label_id: status2
+            operator: '='
+            value: status2obj_aktiv
+          type: neues_set
           enabled: true
       type: neues_set
       enabled: true
@@ -32,13 +40,13 @@ data:
             operator: '='
             value: '1'
           type: neues_set
-          enabled: true
+          enabled: false
         -
           id: lwpg7rwc
           array_filter:
-            label_id: status
+            label_id: status2
             operator: '='
-            value: '1'
+            value: status2obj_aktiv
           type: neues_set
           enabled: true
       type: neues_set
@@ -62,7 +70,7 @@ data:
             operator: '='
             value: '1'
           type: neues_set
-          enabled: true
+          enabled: false
         -
           id: lwpgbdvw
           array_filter:
@@ -70,7 +78,7 @@ data:
             operator: '='
             value: kauf
           type: neues_set
-          enabled: true
+          enabled: false
         -
           id: lwph85m1
           array_filter:
@@ -78,7 +86,7 @@ data:
             operator: '='
             value: '1'
           type: neues_set
-          enabled: true
+          enabled: false
       type: neues_set
       enabled: true
   home_view_model_filter:
