@@ -1,5 +1,5 @@
 ---
-id: e67ae113-05f1-456f-86ea-778374533452
+id: deee05f4-ec3e-4296-a14b-e13acff12285
 blueprint: estate_entry
 Id: 11799
 objektnr_extern: '3753'
@@ -46,36 +46,73 @@ top_angebot: false
 preisreduktion: false
 courtage_frei: false
 objekt_des_tages: false
-estate_images:
-  -
-    type: image
-    url: 'https://image.onoffice.de/smart20/Objekte/BVBI/11799/2c355d6f-1c8e-4984-9d6c-6566c4be84b3.jpg'
-  -
-    type: image
-    url: 'https://image.onoffice.de/smart20/Objekte/BVBI/11799/aa6a5c8f-30c6-4e4a-9470-ed7ded43161e.jpg'
-  -
-    type: image
-    url: 'https://image.onoffice.de/smart20/Objekte/BVBI/11799/377a6785-49a7-4a6d-a404-ab018a74e3ed.jpg'
-  -
-    type: image
-    url: 'https://image.onoffice.de/smart20/Objekte/BVBI/11799/7db0bd27-d2b5-4d05-8a66-ee1ec2e3c137.jpg'
-  -
-    type: image
-    url: 'https://image.onoffice.de/smart20/Objekte/BVBI/11799/6f9b9190-2d81-4e1d-a0ca-c06381ce47aa.jpg'
-  -
-    type: image
-    url: 'https://image.onoffice.de/smart20/Objekte/BVBI/11799/1420ff70-bb52-41b4-b6b6-52046f0f7aea.jpg'
-  -
-    type: image
-    url: 'https://image.onoffice.de/smart20/Objekte/BVBI/11799/5e1f6349-87bd-4cb9-8a8b-8c607fad1d46.jpg'
-  -
-    type: image
-    url: 'https://image.onoffice.de/smart20/Objekte/BVBI/11799/08056886-7ee5-47e9-bace-8d31da1e70a1.jpg'
-  -
-    type: image
-    url: 'https://image.onoffice.de/smart20/Objekte/BVBI/11799/dcb0ecff-a47e-4bd7-a5d4-d1d574a25fb3.jpg'
-id_internal: 11799
+id_internal: '11799'
 title: 'Vermietete Eigentumswohnung in zentraler Citylage!'
 seo_title: 'Vermietete Eigentumswohnung in zentraler Citylage!'
 seo_description: 'Zum Verkauf steht eine vermietete Eigentumswohnung mit Balkon im ersten Obergeschoss. Das Gebäude wurde 1958 in einer monolithischen Bauweise errichtet. Zwisch'
+estate_images:
+  -
+    title: 'Straßenseitige Objektansicht'
+    type: Foto
+    url: 'https://image.onoffice.de/smart20/Objekte/BVBI/11799/2c355d6f-1c8e-4984-9d6c-6566c4be84b3.jpg'
+    originalname: IMG_2641.JPG
+    modified: '2024-03-21'
+    text: ''
+  -
+    title: 'Gepflegtes Mietshaus..'
+    type: Foto
+    url: 'https://image.onoffice.de/smart20/Objekte/BVBI/11799/aa6a5c8f-30c6-4e4a-9470-ed7ded43161e.jpg'
+    originalname: IMG_2651.JPG
+    modified: '2024-03-21'
+    text: ''
+  -
+    title: '.. mit außenliegenden Personenaufzügen'
+    type: Foto
+    url: 'https://image.onoffice.de/smart20/Objekte/BVBI/11799/377a6785-49a7-4a6d-a404-ab018a74e3ed.jpg'
+    originalname: IMG_2635.JPG
+    modified: '2024-03-21'
+    text: ''
+  -
+    title: 'Friedenstraße Richtung U-Bhf. Weberwiese'
+    type: Foto
+    url: 'https://image.onoffice.de/smart20/Objekte/BVBI/11799/7db0bd27-d2b5-4d05-8a66-ee1ec2e3c137.jpg'
+    originalname: IMG_2639.JPG
+    modified: '2024-03-21'
+    text: ''
+  -
+    title: 'Friedenstraße Richtung Volkspark Friedrichshain'
+    type: Foto
+    url: 'https://image.onoffice.de/smart20/Objekte/BVBI/11799/6f9b9190-2d81-4e1d-a0ca-c06381ce47aa.jpg'
+    originalname: IMG_2637.JPG
+    modified: '2024-03-21'
+    text: ''
+  -
+    title: 'Blick in die Pufendorfstraße'
+    type: Foto
+    url: 'https://image.onoffice.de/smart20/Objekte/BVBI/11799/1420ff70-bb52-41b4-b6b6-52046f0f7aea.jpg'
+    originalname: IMG_2640.JPG
+    modified: '2024-03-21'
+    text: ''
+  -
+    title: 'Parktaschen und Fußgängerüberweg'
+    type: Foto
+    url: 'https://image.onoffice.de/smart20/Objekte/BVBI/11799/5e1f6349-87bd-4cb9-8a8b-8c607fad1d46.jpg'
+    originalname: IMG_2643.JPG
+    modified: '2024-03-21'
+    text: ''
+  -
+    title: 'Rückseitige Objektansicht..'
+    type: Titelbild
+    url: 'https://image.onoffice.de/smart20/Objekte/BVBI/11799/08056886-7ee5-47e9-bace-8d31da1e70a1.jpg'
+    originalname: IMG_2653.JPG
+    modified: '2024-03-21'
+    text: ''
+  -
+    title: '.. mit Blick in den Hof'
+    type: Foto
+    url: 'https://image.onoffice.de/smart20/Objekte/BVBI/11799/dcb0ecff-a47e-4bd7-a5d4-d1d574a25fb3.jpg'
+    originalname: IMG_2657.JPG
+    modified: '2024-03-21'
+    text: ''
+slug: vermietete-eigentumswohnung-in-zentraler-citylage-3753
 ---
