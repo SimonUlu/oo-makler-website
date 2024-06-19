@@ -1,35 +1,34 @@
-<div 
-    class="grid w-full max-w-lg grid-cols-1 mx-auto md:flex-col md:mb-0 md:space-x-0 md:max-w-none" 
-    x-data="{ 
+<div
+    class="grid w-full max-w-lg grid-cols-1 mx-auto md:flex-col md:mb-0 md:space-x-0 md:max-w-none"
+    x-data="{
         activeSlide: 0,
         nextSlide(){
-            console.log('Halo');
             if (this.activeSlide < 2) {
                 this.activeSlide++;
             } else {
-                this.activeSlide = 0; // Gehe zum ersten Slide, wenn das Ende erreicht ist
+                this.activeSlide = 0;
             }
         },
         prevSlide(){
             if (this.activeSlide > 0) {
                 this.activeSlide--;
             } else {
-                this.activeSlide = 3 - 1; // Gehe zum letzten Slide, wenn der Anfang erreicht ist
+                this.activeSlide = 3 - 1;
             }
         },
     }"
 >
-    {{if elements.images | count > 0}}
+    {{if estate_images | count > 0}}
     <div id="indicators-carousel-estate-columns" class="relative w-full" data-carousel="static">
         <!-- Carousel wrapper -->
         <div class="relative w-auto overflow-hidden  h-72 min-w-64">
             <!-- Item 1 -->
-            {{ elements.images | limit:3 }}
+            {{ estate_images | limit:3 }}
             {{if url}} {{url += '@600x400'}} {{/if}}
             <div x-data="{ loading: true,}">
                 <div class="hidden" data-carousel-item="{{ item == 1 ? 'active' : '' }}">
                     <!-- Image -->
-                    <img x-ref="img" class="absolute inset-0 object-cover w-full h-full  lazy object-fit-cover" loading="lazy" data-src="{{ url ?: 'https://upload.wikimedia.org/wikipedia/commons/3/3f/Placeholder_view_vector.svg' }}" alt="{{ elements.objekttitel }}" />
+                    <img x-ref="img" class="absolute inset-0 object-cover w-full h-full  lazy object-fit-cover" loading="lazy" data-src="{{ url ?: 'https://upload.wikimedia.org/wikipedia/commons/3/3f/Placeholder_view_vector.svg' }}" alt="{{ objekttitel }}" />
                 </div>
 
                 <!-- Spinner -->
@@ -42,22 +41,22 @@
                     </div>
                 </div>
             </div>
-            {{ /elements.images }}
+            {{ /estate_images }}
         </div>
 
 
         <!-- Slider indicators -->
         <div class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2" >
-            {{elements.images limit="3"}}
-            <button type="button" 
-                    class="w-3 h-3 rounded-full" 
-                    :class="{'bg-white': activeSlide === {{index}}, 'bg-white/50': activeSlide !== {{index}} }" 
-                    aria-current="true" 
-                    :aria-label="'Slide ' + {{index}}" 
-                    @click="carouselSlideTo({{index - 1}}); activeSlide = {{index}}" 
+            {{estate_images limit="3"}}
+            <button type="button"
+                    class="w-3 h-3 rounded-full"
+                    :class="{'bg-white': activeSlide === {{index}}, 'bg-white/50': activeSlide !== {{index}} }"
+                    aria-current="true"
+                    :aria-label="'Slide ' + {{index}}"
+                    @click="carouselSlideTo({{index - 1}}); activeSlide = {{index}}"
                     x-on:carousel-change.window="activeSlide = $event.detail.currentSlide">
             </button>
-            {{/elements.images}}
+            {{/estate_images}}
         </div>
         <!-- Slider controls -->
         <button @click="prevSlide()" type="button" class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer focus:outline-none group" data-carousel-prev>
@@ -92,27 +91,27 @@
 
         <!-- Neue Section -->
         <div class="relative px-5 pt-2 pb-2 border  md:pt-0">
-            {{if elements.ort}}
+            {{if ort}}
                 <div class="absolute top-0 left-0 bg-primary text-white p-1 text-sm">
-                    <strong>{{ elements.plz}}</strong> {{ elements.ort}}</span>
+                    <strong>{{ plz}}</strong> {{ ort}}</span>
                 </div>
             {{/if}}
             <h3 class="flex justify-between text-lg font-bold text-gray-900 mt-8">
                 <span class="capitalize mb-2 text-primary">
-                    {{elements.objektart}}
+                    {{objektart}}
                 </span>
-                {{ if elements.vermarktungsart == "miete" }}
+                {{ if vermarktungsart == "miete" }}
                 <span class="inline-flex items-center  bg-white px-2.5 py-0.5 text-sm font-bold text-primary">
-                    {{if elements.warmmiete > 0}}
-                        {{ elements.warmmiete | format_number:0:',':'.' }} €
+                    {{if warmmiete > 0}}
+                        {{ warmmiete | format_number:0:',':'.' }} €
                     {{else}}
                         Preis auf Anfrage
                     {{/if}}
                 </span>
                 {{ else }}
                 <span class="items-center  text-primary px-2.5 py-0.5 text-base font-bold">
-                    {{if elements.kaufpreis > 0}}
-                        {{ elements.kaufpreis | format_number:0:',':'.' }} €
+                    {{if kaufpreis > 0}}
+                        {{ kaufpreis | format_number:0:',':'.' }} €
                         <br>
                         <p class="font-normal text-sm">zzgl. Provision</p>
                     {{else}}
@@ -123,15 +122,15 @@
             </h3>
             <div class="space-y-2 text-md mb-4">
                 <div class="flex space-x-2 text-primary text-sm">
-                    {{if elements.wohnflaeche}}<span><strong>ca. {{ elements.wohnflaeche| round }}</strong> m&sup2; Wohnflaeche </span>{{/if}}
-                    {{if elements.anzahl_zimmer}}<span class="ml-2"> · <strong>{{ elements.anzahl_zimmer | round }}</strong> Zimmer </span>{{/if}}
+                    {{if wohnflaeche}}<span><strong>ca. {{ wohnflaeche| round }}</strong> m&sup2; Wohnflaeche </span>{{/if}}
+                    {{if anzahl_zimmer}}<span class="ml-2"> · <strong>{{ anzahl_zimmer | round }}</strong> Zimmer </span>{{/if}}
                 </div>
             </div>
             <div class="my-2 border-t border-gray-300"></div>
             <div class="flex flex-col items-center justify-center" x-data="{ logoUrl: '{{ $logoUrl }}' }">
                 <div class="flex items-center justify-between w-full"> <!-- Add 'items-center' class here -->
                     <img loading="lazy" class="max-w-[40px]" src="/logo_images/badge-blue.png" alt="Ihr Kontakt">
-                    <a href="/immobilien/details/{{id}}" class="inline-flex justify-center bg-secondary items-center py-2.5 px-5 text-md font-medium text-center md:w-auto lg:col-span-12 focus:ring-4 focus:outline-none text-white" target="_blank">Ansehen</a>
+                    <a href="/immobilien/details/{{id_internal}}" class="inline-flex justify-center bg-secondary items-center py-2.5 px-5 text-md font-medium text-center md:w-auto lg:col-span-12 focus:ring-4 focus:outline-none text-white" target="_blank">Ansehen</a>
                 </div>
             </div>
         </div>

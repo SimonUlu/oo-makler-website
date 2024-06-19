@@ -54,6 +54,7 @@
                 {{slider_subheader}}
             </p>
         </div>
+
         {{ partial:pages/estate/estate-columns-3-slider :estates="estates" :estateFields="estateFields" }}
         <div class="py-4 mt-12 text-center">
             <a href="/immobilien" class="fade-in-animation items-center px-6 py-3 mx-2 text-center text-white lg:px-5 focus:ring-4 focus:outline-none bg-secondary">

@@ -32,7 +32,7 @@
 
 
             if (getCookie("__cookie_consent") === "true") {
-                this.map = initMap(@json($estates));
+                this.map = initMap(@json($estates), @json($centerLng), @json($centerLat));
             } else {
                 loadContentBtn.classList.remove('hidden');
                 loadContentBtn.addEventListener('click', function() {
@@ -44,8 +44,6 @@
             window.addEventListener('filterUpdated', function(event) {
                 if (getCookie("__cookie_consent") === "true") {
                     const estatesData = event.detail;
-                    console.log('filter updated here');
-                    console.log(estatesData);
                     const estates = estatesData.estates; // Access the estates array
                     if (!Array.isArray(estates)) {
                         console.error('Expected estates to be an array, but got:', typeof estates);
@@ -73,7 +71,8 @@
                 return null;
             }
 
-            function initMap(estates) {
+            function initMap(estates, longitude, latitude) {
+                console.log('Initializing map...')
                 mapContainer.style.display = 'block';
                 mapPlaceholder.style.display = 'none';
                 loadContentBtn.style.display = 'none';
@@ -84,7 +83,7 @@
                 map = new mapboxgl.Map({
                     container: 'map',
                     style: 'mapbox://styles/mapbox/outdoors-v11',
-                    center: [12.1280, 47.8561],
+                    center: [latitude, longitude],
                     zoom: 10,
                     minZoom: 6,
                     maxZoom: 10,
