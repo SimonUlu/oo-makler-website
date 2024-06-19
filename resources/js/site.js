@@ -26,6 +26,8 @@ Alpine.start();
 
 window.axios = axios;
 window.Choices = Choices;
+// add lazyloadImages to the window object so it can be called from the DOM.
+window.lazyloadImages = lazyloadImages;
 
 document.addEventListener('click', function(event) {
     if (event.target.matches('.pagination button')) {

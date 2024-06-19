@@ -14,6 +14,7 @@ export default defineConfig({
             input: [
                 "resources/css/tailwind.css",
                  "resources/js/site.js",
+                "resources/js/lazyload.js",
                  'resources/js/vue_site.js',
             ],
             refresh: true,

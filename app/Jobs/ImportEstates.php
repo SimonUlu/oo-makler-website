@@ -57,6 +57,11 @@ class ImportEstates implements ShouldQueue
             return;
         }
 
+        // Remove filters that are not enabled
+        $filter['replicator_field_filter'] = array_filter($filter['replicator_field_filter'], function ($replicatorFilter) {
+            return $replicatorFilter['enabled'];
+        });
+
         $filter = OnOfficeService::transformFilterArray($filter);
 
         $entries = self::getOnOfficeData($apiConnection, $filter);
@@ -87,7 +92,7 @@ class ImportEstates implements ShouldQueue
 
         // check which entries require deletion
         $entriesToDelete = collect($existingEntries)->filter(function ($entry) use ($entries) {
-            return ! in_array($entry->get('id_internal'), array_column($entries['records'], 'id'));
+            return !in_array($entry->get('id_internal'), array_column($entries['records'], 'id'));
         });
 
         $fields = Yaml::parseFile(public_path('estate_fields/estate_fields.yaml'))['defaultFieldsEstate'];

@@ -52,7 +52,7 @@
 </head>
 
 <body   class="min-h-screen font-sans leading-normal text-gray-800"
-        x-data="{ mobileNav: false, openImgSlideShow: false, modalOpen: false }"
+        x-data="{ mobileNav: false, openImgSlideShow: false, modalOpen: false, showNavigation: true }"
         :class="{
             'overflow-hidden': mobileNav || openImgSlideShow || modalOpen
         }"

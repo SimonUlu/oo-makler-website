@@ -7,9 +7,9 @@ use Livewire\Component;
 
 class EstateMapComponent extends Component
 {
-    public $estates;
-
     protected $listeners = ['updateEstateMap' => 'updateEstates'];
+
+    protected $estates;
 
     public $zoom;
 
@@ -21,7 +21,7 @@ class EstateMapComponent extends Component
 
     public $style;
 
-    public function mount($estates)
+    public function mount($estates): void
     {
         $this->estates = $estates;
         $this->mapboxToken = config('api.mapbox.key');
@@ -30,7 +30,7 @@ class EstateMapComponent extends Component
 
     public function render()
     {
-        return view('livewire.estate-map', [
+        return view('livewire.estate-map-component', [
             'estates' => $this->estates,
             'zoom' => $this->zoom,
             'centerLng' => $this->center_lng,
@@ -40,7 +40,7 @@ class EstateMapComponent extends Component
         ]);
     }
 
-    protected function setInitialConfig()
+    protected function setInitialConfig(): void
     {
         $config = new MapConfiguration();
         $this->zoom = $config->zoom;
@@ -49,7 +49,7 @@ class EstateMapComponent extends Component
         $this->style = $config->style;
     }
 
-    public function updateEstates($estates)
+    public function updateEstates($estates): void
     {
         $this->estates = $estates;
         $this->dispatchBrowserEvent('filterUpdated', ['estates' => $this->estates]);
