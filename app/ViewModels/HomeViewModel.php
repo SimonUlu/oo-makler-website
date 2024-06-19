@@ -12,42 +12,32 @@ class HomeViewModel extends ViewModel
 {
     public function data(): array
     {
-        $onOfficeService = new OnOfficeService();
+        $collectionName = 'estate_entries';
         // check if there is a filter active
         $homeViewModelFilters = GlobalSet::find('onoffice')->in('default')->get('home_view_model_filter');
-
         // Filter the collection to find the entry with the specific "home_view_model_filter_name"
-        $filteredEntry = collect($homeViewModelFilters)->first(function ($item) {
-            return $item['home_view_model_filter_name'] === 'home';
-        });
-        $filters = $onOfficeService->transformFilterArray($filteredEntry);
-        // get immoglobals from cp globals
-        // $filterEstateReferencesRaw = EstateHelper::getFilterEstateReferences();
-        // get estateReferences
-        $estateEntryService = new EstateEntryService();
+        $filteredEntryBuy = EstateEntryService::getFilteredEntry($homeViewModelFilters, 'home');
 
-        $estates = $estateEntryService->getEstatesUnpaginated($filters, 3, 'kaufpreis', 'desc');
+        // get filters
+        $filtersBuy = OnOfficeService::transformFilterArray($filteredEntryBuy);
+        $estatesBuy = EstateEntryService::getEstatesUnpaginated($filtersBuy, 3, 'erstellt_am', 'desc', $collectionName);
 
-        $estateReferences = $estateEntryService->getEstatesUnpaginated(
-            [],
-            9,
-            'erstellt_am',
-            'desc',
-            'estate_entries_references'
-        );
+        $filteredEntryReference = EstateEntryService::getFilteredEntry($homeViewModelFilters, 'referenzen');
 
-        // $estateReferences = EstateHelper::getEstatesWithImages(request(), $onOfficeService, EstateHelper::prepareFilterForOnOfficeApi(request(), $onOfficeService, $filterEstateReferencesRaw), 0, 500, 'estateReferences', 'estateReferenceImages');
-        // get estateLocations
-        // $estateLocations = EstateHelper::getLocations('ort', $estates);
+        $filtersReference = OnOfficeService::transformFilterArray($filteredEntryReference);
+        $estatesReference = EstateEntryService::getEstatesUnpaginated($filtersReference, 3, 'kaufpreis', 'desc', 'estate_entries_full', 30);
+        $estatesReference = OnOfficeService::removeFieldsFromEstate($estatesReference);
+
         $estateLocations = EstateEntryService::getLocationsOfAllEstates();
         $estateListAppearance = GlobalSet::find('estate_appearance_configuration')->in('default')->get('listappearance');
 
         return [
-            'estates' => $estates,
+            'estates' => $estatesBuy,
+            'estateReferences' => $estatesReference,
+            'estateFields' => EstateHelper::getEstateFields(),
+            'collectionName' => $collectionName,
             'estateLocations' => json_encode($estateLocations),
-            // 'estateReferences' => $estateReferences,
             'listAppearance' => $estateListAppearance ?? 'list',
-            'estateReferences' => $estateReferences,
         ];
     }
 }

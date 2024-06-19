@@ -49,7 +49,7 @@ class EstateController extends Controller
             }
         }
 
-        if (empty($estate) || $estate->get('veroeffentlichen') == '0' || $estate->get('referenz') == '1') {
+        if (empty($estate)) {
             // return page not found view
             return self::estateNotFound();
         }

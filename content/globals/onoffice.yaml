@@ -58,9 +58,9 @@ data:
         -
           id: lwpg8b6q
           array_filter:
-            label_id: status2
-            operator: IN
-            value: 'status2obj_archiviert,ind_Schl_3019'
+            label_id: referenz
+            operator: '='
+            value: '1'
           type: neues_set
           enabled: true
         -
@@ -101,7 +101,7 @@ data:
             operator: '='
             value: '1'
           type: neues_set
-          enabled: true
+          enabled: false
         -
           id: lwmer9jb
           array_filter:
@@ -117,17 +117,17 @@ data:
             operator: '='
             value: '1'
           type: neues_set
-          enabled: true
+          enabled: false
       type: neues_set
       enabled: true
     -
       id: lwmi8ow0
-      home_view_model_filter_name: kaufen
+      home_view_model_filter_name: referenzen
       replicator_field_filter:
         -
           id: lwme7via
           array_filter:
-            label_id: veroeffentlichen
+            label_id: referenz
             operator: '='
             value: '1'
           type: neues_set
@@ -139,7 +139,7 @@ data:
             operator: '='
             value: status2obj_aktiv
           type: neues_set
-          enabled: true
+          enabled: false
       type: neues_set
       enabled: true
     -
