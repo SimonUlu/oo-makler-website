@@ -1,48 +1,16 @@
 tree:
   -
-    id: 525383c3-39b3-4632-8462-bcfc68ac17f0
-    title: Immobilienangebote
-    children:
-      -
-        id: eab438ae-e3b9-492e-9278-2a27212b0ade
-        title: Kaufen
-        url: '/immobilien?filter[vermarktungsart][0]=Kauf'
-      -
-        id: 9116673c-d19e-409e-adcb-39beb27f5f99
-        title: Mieten
-        url: '/immobilien?filter[vermarktungsart][0]=Miete'
-      -
-        id: 29d55f00-31bb-420e-8ebb-9b9255cd9c30
-        title: Suchauftrag
-        url: suchauftrag
+    id: eab438ae-e3b9-492e-9278-2a27212b0ade
+    title: Kaufen
+    url: '/immobilien?filter[vermarktungsart][0]=Kauf'
   -
-    id: 29ef1781-e5b4-4e5e-822a-02d44b2a1f9a
-    title: Services
-    children:
-      -
-        id: 3eba7819-a5a9-4caa-84c7-2a82a6ef44c4
-        title: Verkaufen
-        url: /verkaufen
-      -
-        id: 9ea4bdb1-aef8-4379-9ce9-c9f9061d98a0
-        title: Bewerten
-        url: /bewerten
-      -
-        id: c1ccfb34-2876-4837-b6a9-b110bf6afbe0
-        title: Investieren
-        url: /investieren
+    id: 3eba7819-a5a9-4caa-84c7-2a82a6ef44c4
+    title: Verkaufen
+    url: /verkaufen
   -
-    id: 8f42d1f8-9e44-4c0b-af89-38fc4ae6e9ec
-    title: Informieren
-    children:
-      -
-        id: 115dc6aa-e2b8-4079-8401-77e07c11aa85
-        title: Lexikon
-        url: /lexikon
-      -
-        id: afa8ba16-1bf9-47c6-ada4-4d7840a0487e
-        title: Blog
-        url: /aktuelles
+    id: 9ea4bdb1-aef8-4379-9ce9-c9f9061d98a0
+    title: Bauträger
+    url: /bewerten
   -
     id: e96921c7-c5fa-40df-98a9-4fa58c4fad31
     title: 'Über uns'
@@ -55,4 +23,16 @@ tree:
       -
         id: 45dc2c76-22ae-4528-a520-bf241295c01f
         title: Aktuelles
+        url: /aktuelles
+  -
+    id: 8f42d1f8-9e44-4c0b-af89-38fc4ae6e9ec
+    title: Informieren
+    children:
+      -
+        id: 115dc6aa-e2b8-4079-8401-77e07c11aa85
+        title: Lexikon
+        url: /lexikon
+      -
+        id: afa8ba16-1bf9-47c6-ada4-4d7840a0487e
+        title: Blog
         url: /aktuelles

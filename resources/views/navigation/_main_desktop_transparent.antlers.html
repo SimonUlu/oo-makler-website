@@ -4,6 +4,7 @@
     x-data="{
         scrolled: false,
         showNavigation: true,
+        currentPage: window.location.pathname,
         isSpecialPage: window.location.pathname.startsWith('/immobilien') || window.location.pathname.startsWith('/suchauftrag') || window.location.pathname.startsWith('/kontakt') || window.location.pathname == '/standorte' || window.location.pathname.startsWith('/datenschutz') || window.location.pathname.startsWith('/impressum'),
         isImmobilienPage: window.location.pathname.startsWith('/immobilien'),
     }"
@@ -20,23 +21,26 @@
     @click.away="mobileNav = false"
 >
     <div
-        class="flex items-center justify-between w-full px-4 py-5 mx-auto max-w-7xl lg:px-12"
+        class="flex items-center justify-between w-full px-4 py-5 mx-auto xl:px-6"
     >
         <div
-            class="absolute flex items-center h-full p-4 lg:flex-1 schraeg-unten"
-            :class="{ 'schraeg-unten bg-white': !scrolled && !isSpecialPage , '': scrolled  }"
+            class="absolute flex items-center h-full p-4 lg:flex-1"
         >
             <a href="/" class="p-1.5 -m-1.5">
                 <span class="sr-only">Your Company</span>
-                {{ partial:components/logo width="120" }}
+                {{ partial:components/logo_white width="120" }}
             </a>
         </div>
         <div></div>
-        <div class="flex lg:hidden">
+        <div class="flex xl:hidden">
             <button
                 type="button"
                 class="inline-flex justify-center items-center p-2.5 -m-2.5 text-gray-700 rounded-md"
-                :class="{ 'text-gray-700': scrolled || isSpecialPage , 'text-white': !scrolled && !isSpecialPage }"
+                :class="{ 
+                    'text-gray-700': scrolled || isSpecialPage , 
+                    'text-white': !scrolled && !isSpecialPage,
+                    'decoration-custom-white': scrolled  && currentPage.startsWith('{{url}}'),
+                 }"
                 @click="mobileNav = !mobileNav"
             >
                 <span class="sr-only">Open main menu</span>
@@ -57,17 +61,33 @@
             </button>
         </div>
 
-        <div class="flex-col hidden space-y-4 lg:flex">
+        <div class="flex-col hidden space-y-4 xl:flex">
             <div
-                class="items-center justify-end hidden lg:flex lg:gap-x-12 lg:mr-16"
+                class="items-center justify-end hidden xl:flex lg:gap-x-12 lg:mr-4"
             >
+                <a
+                    href="/"
+                    class="font-bold leading-6 text-white text-lg"
+                    :class="{
+                        'text-primary': scrolled || isSpecialPage,
+                        'decoration-custom-white': currentPage == '/',
+                        'text-white': !scrolled && !isSpecialPage,
+
+                    }"
+                >
+                    Startseite
+                </a>
                 {{nav:main}} {{if depth == 1}}
                     <!-- if has no children -->
                     {{ if children == false}}
                         <a
                             href="{{url}}"
                             class="font-bold leading-6 text-white text-md"
-                            :class="{ 'text-gray-700': scrolled || isSpecialPage, 'text-white': !scrolled && !isSpecialPage  }"
+                            :class="{ 
+                                'text-gray-700': scrolled || isSpecialPage, 
+                                'text-white': !scrolled && !isSpecialPage,
+                                'decoration-custom-white': currentPage.startsWith('{{url}}'),
+                            }"
                         >
                             {{title}}
                         </a>
@@ -79,18 +99,18 @@
                             type="button"
                             class="flex items-center text-lg font-bold leading-6 gap-x-1"
                             :class="{
-            'text-gray-700': scrolled || isSpecialPage,
-            'text-white': !scrolled && !isSpecialPage
-        }"
+                                'text-gray-700': scrolled || isSpecialPage,
+                                'text-white': !scrolled && !isSpecialPage
+                            }"
                             :aria-expanded="subnav.toString()"
                         >
                             {{ title }}
                             <svg
                                 :class="{
-                'transform rotate-180': subnav,
-                'text-gray-400': scrolled || isSpecialPage,
-                'text-white': !scrolled && !isSpecialPage
-            }"
+                                    'transform rotate-180': subnav,
+                                    'text-gray-400': scrolled || isSpecialPage,
+                                    'text-white': !scrolled && !isSpecialPage
+                                }"
                                 class="flex-none w-5 h-5 transition-transform duration-200"
                                 xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 20 20"
@@ -181,7 +201,7 @@
                 <a
                     href="/kontakt"
                     title=""
-                    class="inline-flex items-center justify-center px-8 py-2 text-base font-medium text-white bg-primary hover:bg-primary-700"
+                    class="inline-flex items-center justify-center px-8 py-2 text-base font-medium text-primary bg-white hover:bg-gray-50"
                     role="button"
                 >
                     Kontakt
