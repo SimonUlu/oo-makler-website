@@ -9,7 +9,7 @@ class GoogleReviewsController extends Controller
 {
     public function index(Request $request)
     {
-        $language = $request->input('language', 'en'); // Default-Wert als 'en'
+        $language = $request->input('language', 'de'); // Default-Wert als 'en'
         $placeId = config('services.google.place_id');
         $apiKey = config('services.google.api_key');
 
