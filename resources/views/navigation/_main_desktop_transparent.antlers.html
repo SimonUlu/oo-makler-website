@@ -100,7 +100,8 @@
                             class="flex items-center text-lg font-bold leading-6 gap-x-1"
                             :class="{
                                 'text-gray-700': scrolled || isSpecialPage,
-                                'text-white': !scrolled && !isSpecialPage
+                                'text-white': !scrolled && !isSpecialPage,
+                                'decoration-custom-white': currentPage.startsWith('{{url}}'),
                             }"
                             :aria-expanded="subnav.toString()"
                         >

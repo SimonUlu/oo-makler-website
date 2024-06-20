@@ -12,27 +12,19 @@ tree:
     title: Bauträger
     url: /bewerten
   -
-    id: e96921c7-c5fa-40df-98a9-4fa58c4fad31
-    title: 'Über uns'
+    id: fd362109-c80b-4424-a78c-38d780d296f4
+    title: 'Ueber uns'
     url: /team
-    children:
-      -
-        id: fd362109-c80b-4424-a78c-38d780d296f4
-        title: Team
-        url: /team
-      -
-        id: 45dc2c76-22ae-4528-a520-bf241295c01f
-        title: Aktuelles
-        url: /aktuelles
   -
     id: 8f42d1f8-9e44-4c0b-af89-38fc4ae6e9ec
     title: Informieren
+    url: /informieren
     children:
       -
         id: 115dc6aa-e2b8-4079-8401-77e07c11aa85
         title: Lexikon
-        url: /lexikon
+        url: /informieren-lexikon
       -
         id: afa8ba16-1bf9-47c6-ada4-4d7840a0487e
         title: Blog
-        url: /aktuelles
+        url: /informieren-aktuelles
