@@ -8,7 +8,7 @@ subtitle: 'Mit uns zügig und erfolgreich verkaufen.'
 description: 'Immobilie verkaufen'
 subheaderheadline: 'Erst der Mensch, dann die Immobilie:'
 subheaderdescription: |-
-  Erst der Mensch, dann die Immobilie: Bevor wir uns mit dem Wert Ihrer Immobilie befassen, interessiert uns vor allem der Grund, warum Sie verkaufen möchten. Ist die Wohnung zu klein oder zu groß geworden? Das Haus nicht barrierefrei und die Gartenarbeit mittlerweile anstrengend? Steht eine Modernisierung an? Ziehen Sie aus beruflichen Gründen in eine andere Stadt? Möchten Sie gerne in Ihrem Haus bleiben, denken aber über eine Leibrente oder einen Teilverkauf nach? Haben Sie die Immobilie geerbt oder leben in Trennung und die Miteigentümer streiten über die richtige Strategie? 
+  Bevor wir uns mit dem Wert Ihrer Immobilie befassen, interessiert uns vor allem der Grund, warum Sie verkaufen möchten. Ist die Wohnung zu klein oder zu groß geworden? Das Haus nicht barrierefrei und die Gartenarbeit mittlerweile anstrengend? Steht eine Modernisierung an? Ziehen Sie aus beruflichen Gründen in eine andere Stadt? Möchten Sie gerne in Ihrem Haus bleiben, denken aber über eine Leibrente oder einen Teilverkauf nach? Haben Sie die Immobilie geerbt oder leben in Trennung und die Miteigentümer streiten über die richtige Strategie? 
 
   Schon in dieser frühen Phase, wenn Sie noch gar nicht sicher sind, ob und wie Sie die Immobilie verkaufen möchten, unterstützen wir Sie und finden gemeinsam mit Ihnen die beste Lösung: Klassischer Immobilienverkauf, Bieterverfahren oder die Rente aus Stein, damit Sie finanziell frei in Ihrem vertrauten Zuhause bleiben können. In allen Fällen profitieren Sie von unserer langjährigen Erfahrung und - neben der Vermarktung über die gängigen Immobilienportale -  von unserem wertvollen und direkten Kontakt zur Berliner Volksbank mit zahlreichen finanzierungsgeprüften und solventen Kaufinteressenten.
 content_image_1:
@@ -145,7 +145,7 @@ seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1719235609
+updated_at: 1719235614
 headerbild:
   - architecture-gef0672c68_1920.jpg
 stepsheader: 'UNSER VORGEHEN.'
