@@ -12,7 +12,7 @@ seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1719232367
+updated_at: 1719233319
 header_type: type_6
 content_heading_h2: '<span style="color: #EB690B;">B</span><span style="color: #EB690B;">V</span><span style="color: #EB690B;">B</span><span style="color: #EB690B;">I</span> – <span style="color: #EB690B;">B</span>erlin-<span style="color: #EB690B;">V</span>ersteher und <span style="color: # – <span style="color: #EB690B;">B</span>erlin-<span style="color: #EB690B;">V</span>ersteher und <span style="color: #EB690B;">B</span>randenburg-<span style="color: #EB690B;">I</span>nsider'
 content_text:
@@ -248,14 +248,103 @@ seo_before_heading_h2:
 seo_heading_h2: 'An Ihrer Seite im Immobiliengeschäft'
 seo_after_heading_h2:
   -
-    type: paragraph
-    attrs:
-      textAlign: left
-      class: null
+    type: table
     content:
       -
-        type: text
-        text: "Wir vermitteln Immobilien in Berlin & Brandenburg. Als 100%ige Tochter der Berliner Volksbank eG und damit im VR-Banken-Verbund greifen wir dabei auf ein riesiges Netzwerk zum Thema Immobilien und deren Finanzierung und Versicherung zurück. Neben dem klassischen Verkauf von Wohnimmobilien und Grundstücken betreuen wir auch Bauträger und deren Neubauprojekte, Investoren sowie Zwangsversteigerungs- und Bieterverfahren. Der Verkauf oder Kauf einer Immobilie ist für die meisten Menschen eine der wichtigsten Entscheidungen im Leben. Wer dabei Zeit, Ärger und Geld sparen will, beauftragt einen professionellen Immobilienvermittler. Gleichzeitig ist das Zuhause immer Privatsphäre, ob für Eigennutzer oder für Mieter bei Kapitalanlagen. Wir begegnen dieser Verantwortung mit großem Respekt.\_\LGern unterstützen wir auch Sie dabei. Rufen Sie uns einfach an, wir kommen vorbei. Wir kennen nicht nur Ihren Kiez, wir sind auch dort.\LNach Vereinbarung finden Sie uns an diesen Filialstandorten der Berliner Volksbank:\LBerlin: Tegel, Weißensee, Rudow, Zehlendorf und Spandau\LBrandenburg: Königs Wusterhausen, Bernau, Strausberg, Potsdam und Gransee\LUnser Büro in der Bundesallee hilft Ihnen gerne weiter und nennt Ihnen die passenden Ansprechpartner.\_"
+        type: tableRow
+        content:
+          -
+            type: tableCell
+            attrs:
+              colspan: 1
+              rowspan: 1
+              colwidth: null
+            content:
+              -
+                type: paragraph
+                attrs:
+                  textAlign: left
+                  class: null
+                content:
+                  -
+                    type: text
+                    text: 'Alles unter einem Dach                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           '
+              -
+                type: paragraph
+                attrs:
+                  textAlign: left
+                  class: null
+                content:
+                  -
+                    type: text
+                    text: 'Wir vermitteln Immobilien in Berlin & Brandenburg. Als 100%ige Tochter der Berliner Volksbank eG und damit im VR-Banken-Verbund greifen wir dabei auf ein riesiges Netzwerk zum Thema Immobilien und deren Finanzierung und Versicherung zurück. Neben dem klassischen Verkauf von Wohnimmobilien und Grundstücken betreuen wir auch Bauträger und deren Neubauprojekte, Investoren sowie Zwangsversteigerungs- und Bieterverfahren. Der Verkauf oder Kauf einer Immobilie ist für die meisten Menschen eine der wichtigsten Entscheidungen im Leben. Wer dabei Zeit, Ärger und Geld sparen will, beauftragt einen professionellen Immobilienvermittler. Gleichzeitig ist das Zuhause immer Privatsphäre, ob für Eigennutzer oder für Mieter bei Kapitalanlagen. Wir begegnen dieser Verantwortung mit großem Respekt. '
+              -
+                type: paragraph
+                attrs:
+                  textAlign: left
+                  class: null
+                content:
+                  -
+                    type: text
+                    text: 'Gern unterstützen wir auch Sie dabei. Rufen Sie uns einfach an, wir kommen vorbei. Wir kennen nicht nur Ihren Kiez, wir sind auch dort.'
+              -
+                type: paragraph
+                attrs:
+                  textAlign: left
+                  class: null
+                content:
+                  -
+                    type: text
+                    text: 'Nach Vereinbarung finden Sie uns auch an diesen Filialstandorten der Berliner Volksbank:'
+              -
+                type: paragraph
+                attrs:
+                  textAlign: left
+                  class: null
+                content:
+                  -
+                    type: text
+                    text: 'Berlin: Tegel, Weißensee, Rudow, Zehlendorf und Spandau'
+              -
+                type: paragraph
+                attrs:
+                  textAlign: left
+                  class: null
+                content:
+                  -
+                    type: text
+                    text: 'Brandenburg: Königs Wusterhausen, Bernau, Strausberg, Potsdam und Gransee'
+              -
+                type: paragraph
+                attrs:
+                  textAlign: left
+                  class: null
+                content:
+                  -
+                    type: text
+                    text: 'Unser Büro in der Bundesallee hilft Ihnen gerne weiter und nennt Ihnen die passenden Ansprechpartner.'
+              -
+                type: paragraph
+                attrs:
+                  textAlign: left
+                  class: null
+              -
+                type: paragraph
+                attrs:
+                  textAlign: left
+                  class: null
+                content:
+                  -
+                    type: text
+                    marks:
+                      -
+                        type: link
+                        attrs:
+                          href: 'https://vb-berlin.inno-brain.de/kontakt'
+                          rel: null
+                          target: _blank
+                          title: null
+                    text: 'Jetzt kontaktieren'
 cta_headline: 'Spielen Sie hier die Lieblingskategorien oder Ortschaften Ihrer Kunden aus'
 cta_description: 'Sie können ganz nach Ihren Wünschen kategorisieren – sei es in Wohnungen, Büros & Praxen, Häusern, Grundstücken oder was am besten zu Ihnen passt.'
 show_cta: 'yes'
