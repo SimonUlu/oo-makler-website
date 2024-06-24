@@ -12,9 +12,9 @@ seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1719231436
+updated_at: 1719231546
 header_type: type_6
-content_heading_h2: 'BVBI – <span style="color: #EB690B;">B</span>erlin-<span style="color: #EB690B;">V</span>ersteher und <span style="color: #EB690B;">B</span>randenburg-<span style="color: #EB690B;">I</span>nsider'
+content_heading_h2: '<span style="color: #EB690B;">B</span><span style="color: #EB690B;">V</span><span style="color: #EB690B;">B</span><span style="color: #EB690B;">I</span> – <span style="color: #EB690B;">B</span>erlin-<span style="color: #EB690B;">V</span>ersteher und <span style="color: # – <span style="color: #EB690B;">B</span>erlin-<span style="color: #EB690B;">V</span>ersteher und <span style="color: #EB690B;">B</span>randenburg-<span style="color: #EB690B;">I</span>nsider'
 content_text:
   -
     type: paragraph
