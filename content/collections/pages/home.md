@@ -12,7 +12,7 @@ seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1719231822
+updated_at: 1719232200
 header_type: type_6
 content_heading_h2: '<span style="color: #EB690B;">B</span><span style="color: #EB690B;">V</span><span style="color: #EB690B;">B</span><span style="color: #EB690B;">I</span> – <span style="color: #EB690B;">B</span>erlin-<span style="color: #EB690B;">V</span>ersteher und <span style="color: # – <span style="color: #EB690B;">B</span>erlin-<span style="color: #EB690B;">V</span>ersteher und <span style="color: #EB690B;">B</span>randenburg-<span style="color: #EB690B;">I</span>nsider'
 content_text:
@@ -364,7 +364,7 @@ content_with_image_replicator:
         content:
           -
             type: text
-            text: 'Alles, was Sie für den Kauf Ihrer Traumimmobilie benötigen – von der ersten Suche bis zur finalen Finanzierung.'
+            text: 'Alles, was Sie auf dem Weg zur Traumimmobilie brauchen - von der der ersten Suche bis zur finalen Finanzierung.'
     button_link: /
     type: neues_set
     enabled: true
@@ -376,12 +376,12 @@ content_with_image_replicator:
         enabled: true
       -
         id: lww4ccnj
-        listitem: Baufinanzierungs-Rechner
+        listitem: Baufinanzierungsrechner
         type: neues_set
         enabled: true
       -
         id: lxis0k2i
-        listitem: Finanzierungs-Tipps
+        listitem: 'Unser Service für Sie'
         type: neues_set
         enabled: true
   -
@@ -397,7 +397,7 @@ content_with_image_replicator:
         content:
           -
             type: text
-            text: 'Optimieren Sie den Wert und Schutz Ihrer Immobilie mit unseren Bewertungs-, Verkaufs- und Versicherungsdiensten.'
+            text: 'Sanieren, verkaufen oder doch wohnen bleiben? Finden Sie mit uns die beste Lösung'
     type: neues_set
     enabled: true
     button_link: /
@@ -414,25 +414,20 @@ content_with_image_replicator:
         enabled: true
       -
         id: lxis5cb8
-        listitem: 'Versicherungsschutz rund um die Immobilie'
+        listitem: 'Unser Service für Sie'
         type: neues_set
         enabled: true
   -
     id: lww4dcz1
     image:
       - content_bautraeger.jpg
-    headline: 'Für Bauträger'
+    headline: 'Für Investoren'
     text:
       -
         type: paragraph
         attrs:
           class: null
         content:
-          -
-            type: text
-            text: 'Unterstützung von der Projektidee bis zur erfolgreichen Vermarktung – '
-          -
-            type: hardBreak
           -
             type: text
             text: 'Ihr Erfolg ist unser Ziel.'
@@ -442,17 +437,17 @@ content_with_image_replicator:
     image_section_list:
       -
         id: lww4cepy
-        listitem: Vermarktungsstrategie
+        listitem: Bauträger
         type: neues_set
         enabled: true
       -
         id: lww4cfz3
-        listitem: 'Referenzprojekte ansehen'
+        listitem: Gewerbeimmobilien
         type: neues_set
         enabled: true
       -
         id: lxis5zmv
-        listitem: Projektentwicklung
+        listitem: Zinshäuser
         type: neues_set
         enabled: true
 steps:
