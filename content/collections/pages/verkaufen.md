@@ -145,7 +145,7 @@ seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1719236148
+updated_at: 1719238180
 headerbild:
   - architecture-gef0672c68_1920.jpg
 stepsheader: 'UNSER VORGEHEN.'
@@ -515,7 +515,7 @@ advantages:
     image:
       - content_onlinebewertung.jpg
     description: 'Ermitteln Sie den Wert Ihrer Immobilie bequem von zu Hause aus – schnell, einfach und kostenfrei.'
-    button_link: /
+    button_link: 'https://bvbi.immodesignservice.de/immobilienbewertung/'
     button_text: 'Jetzt online bewerten'
     type: neues_set
     enabled: true
