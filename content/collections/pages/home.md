@@ -12,9 +12,9 @@ seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1718618038
+updated_at: 1719231304
 header_type: type_6
-content_heading_h2: 'Berliner Volksbank Immobilien'
+content_heading_h2: 'BVBI – <strong>B</strong>erlin-<strong>V</strong>ersteher und <strong>B</strong>randenburg-<strong>I</strong>nsider'
 content_text:
   -
     type: paragraph
@@ -24,7 +24,7 @@ content_text:
     content:
       -
         type: text
-        text: 'Ganz egal, ob Sie vom Eigenheim träumen, mit dem Verkauf Ihrer Immobilie etwas auf die hohe Kante legen wollen oder sich für eine Immobilie als Kapitalanlage entscheiden: Wir unterstützen Sie tatkräftig bei der Umsetzung.'
+        text: 'Ob Bestandsimmobilie oder Neubau, privat oder gewerblich, zur Eigennutzung oder als Kapitalanlage: Nutzen Sie unser starkes Netzwerk in der Metropolregion für den Verkauf oder Kauf Ihrer Immobilie.'
 content_statistics:
   -
     id: lk880tmf
