@@ -145,7 +145,7 @@ seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1719235823
+updated_at: 1719236095
 headerbild:
   - architecture-gef0672c68_1920.jpg
 stepsheader: 'UNSER VORGEHEN.'
@@ -513,7 +513,7 @@ advantages:
     id: lww6joov
     header: 'Immobilienbewertung online'
     image:
-      - architecture-gef0672c68_1920.jpg
+      - content_onlinebewertung.jpg
     description: 'Ermitteln Sie den Wert Ihrer Immobilie bequem von zu Hause aus – schnell, einfach und kostenfrei.'
     button_link: /
     button_text: 'Jetzt online bewerten'
@@ -523,7 +523,7 @@ advantages:
     id: lww6kp2c
     header: 'Immobilienbewertung vor Ort'
     image:
-      - architecture-gef0672c68_1920.jpg
+      - content_bewertungvorort.jpg
     description: 'Unsere Experten bewerten Ihre Immobilie vor Ort mit höchster Genauigkeit für eine maßgeschneiderte Einschätzung.'
     button_link: /
     button_text: 'Termin vereinbaren'
