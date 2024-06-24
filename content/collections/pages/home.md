@@ -12,7 +12,7 @@ seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1719232200
+updated_at: 1719232367
 header_type: type_6
 content_heading_h2: '<span style="color: #EB690B;">B</span><span style="color: #EB690B;">V</span><span style="color: #EB690B;">B</span><span style="color: #EB690B;">I</span> – <span style="color: #EB690B;">B</span>erlin-<span style="color: #EB690B;">V</span>ersteher und <span style="color: # – <span style="color: #EB690B;">B</span>erlin-<span style="color: #EB690B;">V</span>ersteher und <span style="color: #EB690B;">B</span>randenburg-<span style="color: #EB690B;">I</span>nsider'
 content_text:
@@ -159,7 +159,7 @@ services_replicator:
             marks:
               -
                 type: bold
-            text: Immobilien
+            text: Immobilienverkauf
     text:
       -
         type: paragraph
@@ -168,7 +168,7 @@ services_replicator:
         content:
           -
             type: text
-            text: 'Wir bieten eine umfassende Palette an Immobiliendienstleistungen, von der Suche und Vermittlung bis hin zum Verkauf von Wohn- und Gewerbeimmobilien, maßgeschneidert für Ihre individuellen Bedürfnisse.'
+            text: 'Als Volksbanktochter unterstützen wir Sie partnerschaftlich und transparent beim Verkauf Ihrer Immobilie in Berlin und Brandenburg.'
     type: new_set
     enabled: true
     link: /immobilien
@@ -192,7 +192,7 @@ services_replicator:
             marks:
               -
                 type: bold
-            text: Finanzierung
+            text: Immobilienkauf
     text:
       -
         type: paragraph
@@ -201,7 +201,7 @@ services_replicator:
         content:
           -
             type: text
-            text: 'Unsere Finanzierungsexperten unterstützen Sie mit maßgeschneiderten Lösungen bei der Realisierung Ihres Traumhauses, von der Erstberatung bis zur finalen Kreditvergabe.'
+            text: 'Wir begleiten Sie von der Suche bis zum Einzug in Ihre Traumimmobilie.'
     type: new_set
     enabled: true
     link: /finanzierung
@@ -225,7 +225,7 @@ services_replicator:
             marks:
               -
                 type: bold
-            text: Versicherung
+            text: 'Gemeinsam stark'
     text:
       -
         type: paragraph
@@ -234,7 +234,7 @@ services_replicator:
         content:
           -
             type: text
-            text: 'Schützen Sie Ihr Zuhause und Ihre Investitionen mit unseren individuell angepassten Versicherungslösungen, die speziell auf die Bedürfnisse von Immobilieneigentümern und Bauherren zugeschnitten sind.'
+            text: 'Profitieren Sie vom Service unserer Kooperationspartner: Finanzierung, Teilverkauf, Sanierungsfahrplan, Versicherung und vieles mehr.'
     type: new_set
     enabled: true
     link: /versicherung
