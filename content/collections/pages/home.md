@@ -12,7 +12,7 @@ seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1719233319
+updated_at: 1719233521
 header_type: type_6
 content_heading_h2: '<span style="color: #EB690B;">B</span><span style="color: #EB690B;">V</span><span style="color: #EB690B;">B</span><span style="color: #EB690B;">I</span> – <span style="color: #EB690B;">B</span>erlin-<span style="color: #EB690B;">V</span>ersteher und <span style="color: # – <span style="color: #EB690B;">B</span>erlin-<span style="color: #EB690B;">V</span>ersteher und <span style="color: #EB690B;">B</span>randenburg-<span style="color: #EB690B;">I</span>nsider'
 content_text:
@@ -245,7 +245,7 @@ seo_before_heading_h2:
     attrs:
       textAlign: left
       class: null
-seo_heading_h2: 'An Ihrer Seite im Immobiliengeschäft'
+seo_heading_h2: 'Alles unter einem Dach'
 seo_after_heading_h2:
   -
     type: table
@@ -260,15 +260,6 @@ seo_after_heading_h2:
               rowspan: 1
               colwidth: null
             content:
-              -
-                type: paragraph
-                attrs:
-                  textAlign: left
-                  class: null
-                content:
-                  -
-                    type: text
-                    text: 'Alles unter einem Dach                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           '
               -
                 type: paragraph
                 attrs:
@@ -304,16 +295,24 @@ seo_after_heading_h2:
                 content:
                   -
                     type: text
-                    text: 'Berlin: Tegel, Weißensee, Rudow, Zehlendorf und Spandau'
-              -
-                type: paragraph
-                attrs:
-                  textAlign: left
-                  class: null
-                content:
+                    marks:
+                      -
+                        type: bold
+                    text: 'Berlin:'
                   -
                     type: text
-                    text: 'Brandenburg: Königs Wusterhausen, Bernau, Strausberg, Potsdam und Gransee'
+                    text: ' Tegel, Weißensee, Rudow, Zehlendorf und Spandau'
+                  -
+                    type: hardBreak
+                  -
+                    type: text
+                    marks:
+                      -
+                        type: bold
+                    text: 'Brandenburg: '
+                  -
+                    type: text
+                    text: 'Königs Wusterhausen, Bernau, Strausberg, Potsdam und Gransee'
               -
                 type: paragraph
                 attrs:
@@ -323,6 +322,14 @@ seo_after_heading_h2:
                   -
                     type: text
                     text: 'Unser Büro in der Bundesallee hilft Ihnen gerne weiter und nennt Ihnen die passenden Ansprechpartner.'
+                  -
+                    type: hardBreak
+                  -
+                    type: text
+                    marks:
+                      -
+                        type: subscript
+                    text: '<br>'
               -
                 type: paragraph
                 attrs:
