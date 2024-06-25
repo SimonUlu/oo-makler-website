@@ -145,7 +145,7 @@ seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1719317634
+updated_at: 1719317689
 headerbild:
   - architecture-gef0672c68_1920.jpg
 stepsheader: 'UNSER VORGEHEN.'
@@ -561,7 +561,6 @@ services_replicator:
       </svg>
     header: '1. Kennenlernen'
     text: 'In einem persönlichen Gespräch ermitteln wir das Potenzial Ihrer Immobilie. Sie erhalten eine erste Preiseinschätzung.'
-    link: /
     type: new_set
     enabled: true
   -
@@ -589,7 +588,6 @@ services_replicator:
       </svg>
     header: '2. Vorbereitung'
     text: 'Wir erstellen einen individuellen Ablaufplan und bereiten die notwendigen Unterlagen auf. Was Sie nicht finden, finden wir.'
-    link: /
     type: new_set
     enabled: true
   -
@@ -617,7 +615,6 @@ services_replicator:
       </svg>
     header: '3. Fotos'
     text: 'Für den Termin mit dem Fotografen richten Sie Ihre Immobilie so her, wie es Ihnen am besten möglich ist. Den Rest machen wir.'
-    link: /
     type: new_set
     enabled: true
   -
