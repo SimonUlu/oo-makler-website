@@ -17,7 +17,7 @@ tree:
     url: /investieren
   -
     id: fd362109-c80b-4424-a78c-38d780d296f4
-    title: 'Ueber uns'
+    title: 'Über uns'
     url: /ueber-uns
     children:
       -
