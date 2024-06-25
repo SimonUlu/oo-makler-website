@@ -96,7 +96,7 @@ stadtteile:
     table_field_3: 'Lorem Ipsum'
     table_field_4: 'Lorem Ipsum'
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1719327561
+updated_at: 1719327616
 center_lng: '9.933333'
 center_lat: '49.783333'
 zoom: '11'
@@ -151,10 +151,10 @@ offices:
     enabled: true
   -
     id: lxug5t5h
-    title: Charlottenburg
+    title: 'Büro Nord'
     description: 'Lorem Ipsum'
-    longitude: '13.3018919'
-    latitude: '52.4353975'
+    longitude: '13.284518201319507'
+    latitude: '52.58923205345923'
     type: neues_set
     enabled: true
 ---
