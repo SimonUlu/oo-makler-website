@@ -96,7 +96,7 @@ stadtteile:
     table_field_3: 'Lorem Ipsum'
     table_field_4: 'Lorem Ipsum'
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1719328852
+updated_at: 1719329188
 center_lng: '9.933333'
 center_lat: '49.783333'
 zoom: '11'
@@ -253,4 +253,32 @@ offices:
     ansprechpartner_function: Immobilienmakler
     phone: '+49 (30) 56 55555 31'
     mail: frank.weber@bvbi.de
+  -
+    id: lxuk3710
+    title: 'Büro Strausberg'
+    description: 'Lorem Ipsum'
+    longitude: '13.881434828324657'
+    latitude: '52.57774394148633'
+    type: neues_set
+    enabled: true
+    street: 'Große Str. 7'
+    ort: '15344 Strausberg'
+    ansprechpartner: 'Frank Weber'
+    ansprechpartner_function: Immobilienmakler
+    phone: '+49 (30) 56 55555 31'
+    mail: frank.weber@bvbi.de
+  -
+    id: lxuk4boe
+    title: 'Büro Potsdam'
+    description: 'Lorem Ipsum'
+    longitude: '13.05786446566432'
+    latitude: '52.397577492391044'
+    type: neues_set
+    enabled: true
+    street: 'Friedrich-Ebert-Straße 115'
+    ort: '14467 Potsdam'
+    ansprechpartner: 'Gülay Peter/ Sandra Raschke'
+    ansprechpartner_function: Immobilienmaklerin
+    phone: '+49 (30) 56 55555-36/ -25'
+    mail: 'guelay.peter@bvbi.de; sandra.raschke@bvbi.de'
 ---
