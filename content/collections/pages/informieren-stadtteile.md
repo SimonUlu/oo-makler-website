@@ -96,7 +96,7 @@ stadtteile:
     table_field_3: 'Lorem Ipsum'
     table_field_4: 'Lorem Ipsum'
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1719328134
+updated_at: 1719328213
 center_lng: '9.933333'
 center_lat: '49.783333'
 zoom: '11'
@@ -163,6 +163,12 @@ offices:
     latitude: '52.58923205345923'
     type: neues_set
     enabled: true
+    street: 'Berliner Straße 98'
+    ort: '13507 Berlin'
+    ansprechpartner: 'Ilona Frankfurth'
+    ansprechpartner_function: Immobilienmaklerin
+    phone: '+49 (30) 56 55555 24'
+    mail: ilona.frankfurth@bvbi.de
   -
     id: lxuja2o8
     title: 'Büro Ost (Berlin-Weißensee)'
