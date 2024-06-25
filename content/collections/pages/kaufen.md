@@ -4,8 +4,8 @@ published: false
 blueprint: leistungen
 view_model: App\ViewModels\VerkaufenViewModel
 template: pages/leistungen/cta-page
-title: 'Verkaufen (Dupliziert)'
-subtitle: 'Mit uns zügig und erfolgreich verkaufen.'
+title: Kaufen
+subtitle: 'Immobilienkauf mit uns ganz leicht.'
 description: 'Immobilie verkaufen'
 subheaderheadline: 'Erst der Mensch, dann die Immobilie'
 subheaderdescription: |-
@@ -146,7 +146,7 @@ seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1719317938
+updated_at: 1719318059
 headerbild:
   - architecture-gef0672c68_1920.jpg
 stepsheader: 'UNSER VORGEHEN.'
