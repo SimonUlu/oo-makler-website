@@ -1,11 +1,11 @@
 ---
 id: 8b2e43f1-181d-4bf8-8293-76a5995bb74f
 blueprint: team
-title: 'Roland Kessel'
-first_name: Roland
-last_name: Kessel
-email: roland.kessel@bvbi.de
-function: Geschäftsführer
+title: 'Thorsten Conrad'
+first_name: Thorsten
+last_name: Conrad
+email: thorsten.conrad@bvbi.de
+function: Geschäftsführung
 team_description:
   -
     type: paragraph
@@ -34,9 +34,9 @@ long_team_description:
         type: text
         text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. '
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1717414393
+updated_at: 1719305578
 duplicated_from: 00840db0-fc71-40f9-9e66-b38a2c2452c6
-phone: '+49 (0)711 / 30501-1211'
+phone: '+49 (30) 56 55555 10'
 social_profiles:
   -
     id: lw6dt40l
@@ -48,4 +48,8 @@ social_profiles:
     enabled: true
 mobilnummer: '+49 171718101'
 team: makler
+image_portrait:
+  - team/800x800px-thorsten-conrad.jpg
+image_overview:
+  - team/800x800px-thorsten-conrad.jpg
 ---
