@@ -96,7 +96,11 @@ stadtteile:
     table_field_3: 'Lorem Ipsum'
     table_field_4: 'Lorem Ipsum'
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
+<<<<<<< HEAD
 updated_at: 1719327838
+=======
+updated_at: 1719327264
+>>>>>>> aed0dad194a4a007a8470539f372324a44b81d8c
 center_lng: '9.933333'
 center_lat: '49.783333'
 zoom: '11'
@@ -149,7 +153,14 @@ offices:
     latitude: '52.47680379353718'
     type: neues_set
     enabled: true
+    street: 'Bundesallee 61'
+    ort: '12161 Berlin'
+    ansprechpartner: 'Sabine Baer'
+    ansprechpartner_function: Büroleitung
+    phone: '+49 (30) 56 55555 19'
+    mail: sabine.baer@bvbi.de
   -
+<<<<<<< HEAD
     id: lxug5t5h
     title: 'Büro Nord (Berlin-Tegel)'
     description: 'Lorem Ipsum'
@@ -179,6 +190,19 @@ offices:
     description: 'Lorem Ipsum'
     longitude: '13.259618269873721'
     latitude: '52.431620542105314'
+=======
+    id: lxuj21l5
+    title: Charlottenburg
+    description: 'Lorem Ipsum'
+    longitude: '13.3018919'
+    latitude: '52.4253975'
+>>>>>>> aed0dad194a4a007a8470539f372324a44b81d8c
     type: neues_set
     enabled: true
+    street: 'Bundesallee 61'
+    ort: '12161 Berlin'
+    ansprechpartner: 'Sabine Baer'
+    ansprechpartner_function: Büroleitung
+    phone: '+49 (30) 56 55555 19'
+    mail: sabine.baer@bvbi.de
 ---
