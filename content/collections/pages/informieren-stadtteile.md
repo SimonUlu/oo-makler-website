@@ -96,7 +96,7 @@ stadtteile:
     table_field_3: 'Lorem Ipsum'
     table_field_4: 'Lorem Ipsum'
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1719327787
+updated_at: 1719327838
 center_lng: '9.933333'
 center_lat: '49.783333'
 zoom: '11'
@@ -171,6 +171,14 @@ offices:
     description: 'Lorem Ipsum'
     longitude: '13.497200609441908'
     latitude: '52.41670666205342'
+    type: neues_set
+    enabled: true
+  -
+    id: lxujdoqg
+    title: 'Büro Süd-West (Berlin-Zehlendorf)'
+    description: 'Lorem Ipsum'
+    longitude: '13.259618269873721'
+    latitude: '52.431620542105314'
     type: neues_set
     enabled: true
 ---
