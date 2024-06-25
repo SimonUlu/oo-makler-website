@@ -96,7 +96,7 @@ stadtteile:
     table_field_3: 'Lorem Ipsum'
     table_field_4: 'Lorem Ipsum'
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1719322479
+updated_at: 1719327264
 center_lng: '9.933333'
 center_lat: '49.783333'
 zoom: '11'
@@ -149,12 +149,24 @@ offices:
     latitude: '52.4753975'
     type: neues_set
     enabled: true
+    street: 'Bundesallee 61'
+    ort: '12161 Berlin'
+    ansprechpartner: 'Sabine Baer'
+    ansprechpartner_function: Büroleitung
+    phone: '+49 (30) 56 55555 19'
+    mail: sabine.baer@bvbi.de
   -
-    id: lxug5t5h
+    id: lxuj21l5
     title: Charlottenburg
     description: 'Lorem Ipsum'
     longitude: '13.3018919'
-    latitude: '52.4353975'
+    latitude: '52.4253975'
     type: neues_set
     enabled: true
+    street: 'Bundesallee 61'
+    ort: '12161 Berlin'
+    ansprechpartner: 'Sabine Baer'
+    ansprechpartner_function: Büroleitung
+    phone: '+49 (30) 56 55555 19'
+    mail: sabine.baer@bvbi.de
 ---

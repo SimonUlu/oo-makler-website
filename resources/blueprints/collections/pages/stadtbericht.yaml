@@ -69,6 +69,78 @@ tabs:
                             visibility: visible
                             replicator_preview: true
                             hide_display: false
+                        -
+                          handle: street
+                          field:
+                            input_type: text
+                            antlers: false
+                            type: text
+                            display: street
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+                        -
+                          handle: ort
+                          field:
+                            input_type: text
+                            antlers: false
+                            type: text
+                            display: ort
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+                        -
+                          handle: ansprechpartner
+                          field:
+                            input_type: text
+                            antlers: false
+                            type: text
+                            display: ansprechpartner
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+                        -
+                          handle: ansprechpartner_function
+                          field:
+                            input_type: text
+                            antlers: false
+                            type: text
+                            display: ansprechpartner_function
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+                        -
+                          handle: phone
+                          field:
+                            input_type: text
+                            antlers: false
+                            type: text
+                            display: phone
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+                        -
+                          handle: mail
+                          field:
+                            input_type: text
+                            antlers: false
+                            type: text
+                            display: mail
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
               type: replicator
               display: bueros
               listable: hidden

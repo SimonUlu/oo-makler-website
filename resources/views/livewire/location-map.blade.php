@@ -69,10 +69,31 @@
 
                         // Aktualisiere den Inhalt des Modals
                         modalDescription.innerHTML = `
-                            <h3 class="text-xl text-primary-600 font-medium">${location.title}</h3>
-                            <p class="text-sm my-2">${location.description}</p>
+                            <h3 class="text-base text-gray-900 font-medium">${location.title}</h3>
+                            <p class="text-sm">${location.street}</p>
+                            <p class="text-sm">${location.ort}</p>
 
-                            <a href="/stadtteile/sanderau" class="inline-flex justify-center items-center py-2.5 px-5 text-sm font-medium text-center text-white rounded-lg md:w-auto lg:col-span-12 focus:ring-4 focus:outline-none bg-primary-700 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 hover:bg-primary-800 focus:ring-primary-300">Mehr erfahren<span aria-hidden="true">&nbsp;→</span></a>
+                            <h3 class="text-base text-gray-900 font-medium pt-4">Ansprechpartner/in</h3>
+                            <p class="text-sm text-primary font-bold">${location.ansprechpartner}</p>
+                            <p class="text-sm text-secondary font-bold">${location.ansprechpartner_function}</p>
+
+                            <div class="flex pt-4">
+                                <span class="text-sm text-gray-800 flex">
+                                    <svg class="w-4 h-4 mr-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 9v.906a2.25 2.25 0 01-1.183 1.981l-6.478 3.488M2.25 9v.906a2.25 2.25 0 001.183 1.981l6.478 3.488m8.839 2.51l-4.66-2.51m0 0l-1.023-.55a2.25 2.25 0 00-2.134 0l-1.022.55m0 0l-4.661 2.51m16.5 1.615a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V8.844a2.25 2.25 0 011.183-1.98l7.5-4.04a2.25 2.25 0 012.134 0l7.5 4.04a2.25 2.25 0 011.183 1.98V19.5z"></path>
+                                    </svg>
+                                    ${location.mail}
+                                </span>
+                            </div>
+
+                            <div class="flex pb-4">
+                                <span class="text-sm text-gray-800 flex">
+                                    <svg class="w-4 h-4 mr-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"></path>
+                                    </svg>
+                                    ${location.phone}
+                                </span>
+                            </div>
                         `;
 
                         // Anpassen des Modals für verschiedene Bildschirmgrößen
