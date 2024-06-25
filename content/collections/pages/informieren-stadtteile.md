@@ -96,7 +96,7 @@ stadtteile:
     table_field_3: 'Lorem Ipsum'
     table_field_4: 'Lorem Ipsum'
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1719328113
+updated_at: 1719328134
 center_lng: '9.933333'
 center_lat: '49.783333'
 zoom: '11'
@@ -152,7 +152,7 @@ offices:
     street: 'Bundesallee 61'
     ort: '12161 Berlin'
     ansprechpartner: 'Sabine Baer'
-    ansprechpartner_function: (Büroleitung)
+    ansprechpartner_function: Büroleitung
     phone: '+49 (30) 56 55555 0'
     mail: info@bvbi.de
   -
