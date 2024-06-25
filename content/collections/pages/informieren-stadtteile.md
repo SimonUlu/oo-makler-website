@@ -96,7 +96,7 @@ stadtteile:
     table_field_3: 'Lorem Ipsum'
     table_field_4: 'Lorem Ipsum'
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1719328053
+updated_at: 1719328097
 center_lng: '9.933333'
 center_lat: '49.783333'
 zoom: '11'
