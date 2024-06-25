@@ -96,7 +96,7 @@ stadtteile:
     table_field_3: 'Lorem Ipsum'
     table_field_4: 'Lorem Ipsum'
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1719328686
+updated_at: 1719328852
 center_lng: '9.933333'
 center_lat: '49.783333'
 zoom: '11'
@@ -239,4 +239,18 @@ offices:
     ansprechpartner_function: Immobilienmakler
     phone: '+49 (30) 56 55555 30'
     mail: peter.schlueter@bvbi.de
+  -
+    id: lxujy2db
+    title: 'Büro Bernau (Bernau)'
+    description: 'Lorem Ipsum'
+    longitude: '13.595410505921791'
+    latitude: '52.676490499808345'
+    type: neues_set
+    enabled: true
+    street: 'Börnicker Chaussee 1'
+    ort: '16321 Bernau'
+    ansprechpartner: 'Frank Weber'
+    ansprechpartner_function: Immobilienmakler
+    phone: '+49 (30) 56 55555 31'
+    mail: frank.weber@bvbi.de
 ---
