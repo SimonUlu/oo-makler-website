@@ -6,12 +6,9 @@ view_model: App\ViewModels\VerkaufenViewModel
 template: pages/leistungen/cta-page
 title: Kaufen
 subtitle: 'Immobilienkauf mit uns ganz leicht.'
-description: 'Immobilie verkaufen'
-subheaderheadline: 'Erst der Mensch, dann die Immobilie'
-subheaderdescription: |-
-  Bevor wir uns mit dem Wert Ihrer Immobilie befassen, interessiert uns vor allem der Grund, warum Sie verkaufen möchten. Ist die Wohnung zu klein oder zu groß geworden? Das Haus nicht barrierefrei und die Gartenarbeit mittlerweile anstrengend? Steht eine Modernisierung an? Ziehen Sie aus beruflichen Gründen in eine andere Stadt? Möchten Sie gerne in Ihrem Haus bleiben, denken aber über eine Leibrente oder einen Teilverkauf nach? Haben Sie die Immobilie geerbt oder leben in Trennung und die Miteigentümer streiten über die richtige Strategie? 
-
-  Schon in dieser frühen Phase, wenn Sie noch gar nicht sicher sind, ob und wie Sie die Immobilie verkaufen möchten, unterstützen wir Sie und finden gemeinsam mit Ihnen die beste Lösung: Klassischer Immobilienverkauf, Bieterverfahren oder die Rente aus Stein, damit Sie finanziell frei in Ihrem vertrauten Zuhause bleiben können. In allen Fällen profitieren Sie von unserer langjährigen Erfahrung und - neben der Vermarktung über die gängigen Immobilienportale -  von unserem wertvollen und direkten Kontakt zur Berliner Volksbank mit zahlreichen finanzierungsgeprüften und solventen Kaufinteressenten.
+description: 'Suchprofil anlegen'
+subheaderheadline: 'Immobilienkauf mit der BVBI'
+subheaderdescription: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'
 content_image_1:
   - architecture-gef0672c68_1920.jpg
 imagesectionheader: 'Lorem Ipsum'
@@ -146,7 +143,7 @@ seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1719318059
+updated_at: 1719318670
 headerbild:
   - architecture-gef0672c68_1920.jpg
 stepsheader: 'UNSER VORGEHEN.'
@@ -516,15 +513,15 @@ advantages:
     image:
       - content_onlinebewertung.jpg
     description: 'Ermitteln Sie den Wert Ihrer Immobilie bequem von zu Hause aus – schnell, einfach und kostenfrei.'
-    button_link: 'https://bvbi.immodesignservice.de/immobilienbewertung/'
-    button_text: 'Jetzt online bewerten'
+    button_link: 'https://vb-berlin.inno-brain.de/suchauftrag'
+    button_text: 'https://vb-berlin.inno-brain.de/suchauftrag'
     type: neues_set
     enabled: true
-    header_outside: 'Immobilienbewertung online'
-    description_outside: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'
+    header_outside: 'Suchprofil anlegen'
+    description_outside: 'Wenn Sie regelmäßig Internetbörsen auf der Suche nach Ihrer Wunschimmobilie durchstöbern, filtern Sie vielleicht auch nach Wohnung oder Haus, wählen bestimmte Ortsteile aus und sortieren die Ergebnisliste nach Kaufpreis oder Aktualität. Schneller geht es, wenn Sie sich bei einem Immobilienportal einen Suchagenten einrichten. Am besten bei verschiedenen Anbietern, denn gerade private Immobilienverkäufer bevorzugen die Kleinanzeigenportale oder nur jeweils eine der großen Immobilienbörsen. Mit einem Suchagenten bekommen Sie automatisch eine E-Mail, sobald ein passendes Objekt veröffentlicht wurde. Aber nicht nur Sie, sondern unzählige andere Kaufinteressenten eben auch. Bevor wir eine neue Immobilie in den Internetportalen veröffentlichen, versenden wir das Angebot vorab per E-Mail an alle vorgemerkten Suchkunden, zu deren Wünschen die Immobilie passt. Erfahren auch Sie frühzeitig von neuen Immobilienangeboten, bevor sie veröffentlicht werden. Erstellen Sie dafür ein Suchprofil bei der BVBI. Sie können Ihre Suchkriterien ganz bequem selbst online eingeben oder mit uns besprechen. Wir nehmen uns hierfür persönlich Zeit, nur der Versand der Angebote passiert anschließend automatisch. Damit Sie die Immobilie finden, die perfekt zu Ihnen passt.'
   -
     id: lww6kp2c
-    header: 'Immobilienbewertung vor Ort'
+    header: Baufinanzierungsrechner
     image:
       - content_bewertungvorort.jpg
     description: 'Unsere Experten bewerten Ihre Immobilie vor Ort mit höchster Genauigkeit für eine maßgeschneiderte Einschätzung.'
@@ -532,8 +529,22 @@ advantages:
     button_text: 'Termin vereinbaren'
     type: neues_set
     enabled: true
-    header_outside: 'Immobilienbewertung vor Ort'
+    header_outside: Baufinanzierungsrechner
     description_outside: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'
+  -
+    id: lxudx8x6
+    header: 'Unser Service für Sie'
+    image:
+      - content_bewertungvorort.jpg
+    description: 'Unsere Experten bewerten Ihre Immobilie vor Ort mit höchster Genauigkeit für eine maßgeschneiderte Einschätzung.'
+    button_link: /
+    button_text: 'Termin vereinbaren'
+    type: neues_set
+    enabled: true
+    header_outside: 'Unser Service für Sie'
+    description_outside: |-
+      Der Immobilienkauf ist für viele Menschen eine weitreichende finanzielle Entscheidung. Nehmen Sie sich daher ausreichend Zeit. Wir unterstützen Sie von der Suche bis zum Einzug in Ihre Wunschimmobilie. Ob Sie nun Ihr Traumhaus oder eine Immobilie als Kapitalanlage kaufen möchten: zunächst ist wichtig, das Budget festzulegen.
+      Gerade besonders attraktive Immobilienangebote erfordern schnelles Handeln, wenn es mehrere Interessenten gibt. Hier haben alle Kunden einen Vorteil, die bereits vorab mit ihrer Bank den finanziellen Handlungspielraum geklärt haben. Wenn Sie eine passende Immobilie gefunden haben, lassen Sie sich alle relevanten Unterlagen wie z. B. Grundbuch, WEG-Protokolle oder Teilungserklärungen zeigen. Spätestens seit der Novelle zum Gebäudeenergiegesetz ist für Immobilienkäufer auch die Energieeffizienz eines Gebäudes in den Fokus gerückt. Informieren Sie sich gründlich, welche Auflagen Sie als Immobilienkäufer übernehmen müssen.
 services_header_h2: 'Schritt für Schritt'
 services_text: 'mit der BVBI'
 services_replicator:
