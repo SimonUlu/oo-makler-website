@@ -142,7 +142,7 @@ seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1719324431
+updated_at: 1719324626
 headerbild:
   - architecture-gef0672c68_1920.jpg
 stepsheader: 'UNSER VORGEHEN.'
@@ -574,6 +574,7 @@ services_replicator:
     text: 'Als Volksbanktochter unterstützen wir Sie partnerschaftlich und transparent beim Verkauf Ihrer Immobilie in Berlin und Brandenburg.'
     type: new_set
     enabled: true
+    link: /verkauf
   -
     id: lww6ma8r
     svg: |-
@@ -601,6 +602,7 @@ services_replicator:
     text: 'Wir begleiten Sie von der Suche bis zum Einzug in Ihre Traumimmobilie.'
     type: new_set
     enabled: true
+    link: /kaufen
   -
     id: lww6m8kl
     svg: |-
@@ -628,6 +630,7 @@ services_replicator:
     text: 'Profitieren Sie vom Service unserer Kooperationspartner: Finanzierung, Teilverkauf, Sanierungsfahrplan, Versicherung und vieles mehr.'
     type: new_set
     enabled: true
+    link: /ueber-uns-team
 logo_header: 'Unsere Partner'
 columns: '5'
 logo_replikator:
