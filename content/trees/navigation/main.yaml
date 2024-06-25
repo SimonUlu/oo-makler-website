@@ -1,8 +1,12 @@
 tree:
   -
     id: eab438ae-e3b9-492e-9278-2a27212b0ade
-    title: Kaufen
+    title: Immobilienportfolio
     url: '/immobilien?filter[vermarktungsart][0]=Kauf'
+  -
+    id: 57c0b37f-ed4e-46d0-ae09-a4ddb921a654
+    title: Kaufen
+    url: /kaufen
   -
     id: 3eba7819-a5a9-4caa-84c7-2a82a6ef44c4
     title: Verkaufen
@@ -13,8 +17,17 @@ tree:
     url: /investieren
   -
     id: fd362109-c80b-4424-a78c-38d780d296f4
-    title: Team
-    url: /team
+    title: 'Über uns'
+    url: /ueber-uns
+    children:
+      -
+        id: 5a2a3d46-e238-481a-b66a-5793e554b2e9
+        title: Team
+        url: ueber-uns-team
+      -
+        id: 47773695-06d0-4c17-a252-f048ed636599
+        title: Standorte
+        url: ueber-uns-stadtteile
   -
     id: 8f42d1f8-9e44-4c0b-af89-38fc4ae6e9ec
     title: Informieren

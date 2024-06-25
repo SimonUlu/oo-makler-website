@@ -1,11 +1,11 @@
 ---
-id: de389149-18ad-4b95-b571-3b5cb2d8a34f
+id: 73b2ff94-0728-4f71-9b1c-4f02b9203ecf
 blueprint: team
-title: 'Natascha Kolloff'
-first_name: Natascha
-last_name: Kolloff
-email: natascha.kolloff@bvbi.de
-function: Vertriebsassistenz
+title: 'Winfried Schultz'
+first_name: Winfried
+last_name: Schultz
+email: winfried.schultz@bvbi.de
+function: Immobilienmakler
 team_description:
   -
     type: paragraph
@@ -34,13 +34,13 @@ long_team_description:
         type: text
         text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. '
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1719310377
-duplicated_from: 05fbb994-8498-4d70-a230-60568f930634
-phone: '+49 (30) 56 55555 29'
-mobilnummer: '+49 (0)171 / 213 26 97'
-team: office
+updated_at: 1719315072
+duplicated_from: 18d1f133-1a6c-471b-a8a4-e63fdd4f6608
+phone: '+49 (30) 56 55555 43'
+mobilnummer: '+49 (0)151 / 74 46 49 66'
+team: makler
 image_portrait:
-  - team/800x800-nataschakolloff-01.jpg
+  - team/winfried_schulz_bvbi_close.jpg
 image_overview:
-  - team/800x800-nataschakolloff-01.jpg
+  - team/winfried_schulz_bvbi_close.jpg
 ---

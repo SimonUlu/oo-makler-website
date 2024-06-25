@@ -1,11 +1,11 @@
 ---
-id: de389149-18ad-4b95-b571-3b5cb2d8a34f
+id: 28e6ae7a-ebfe-4aa9-913c-e34f5d71d5cc
 blueprint: team
-title: 'Natascha Kolloff'
-first_name: Natascha
-last_name: Kolloff
-email: natascha.kolloff@bvbi.de
-function: Vertriebsassistenz
+title: 'Birgit Marlen Raths'
+first_name: 'Birgit Marlen'
+last_name: Raths
+email: birgitmarlen.raths@bvbi.de
+function: Immobilienmaklerin
 team_description:
   -
     type: paragraph
@@ -34,13 +34,13 @@ long_team_description:
         type: text
         text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. '
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1719310377
-duplicated_from: 05fbb994-8498-4d70-a230-60568f930634
-phone: '+49 (30) 56 55555 29'
-mobilnummer: '+49 (0)171 / 213 26 97'
-team: office
+updated_at: 1719314832
+duplicated_from: 81998843-dd58-418a-9836-b161e7ac85af
+phone: '+49 (30) 56 55555 46'
+mobilnummer: '+49 (0)151 / 74 46 49 66'
+team: makler
 image_portrait:
-  - team/800x800-nataschakolloff-01.jpg
+  - team/800x800-birgitmarlen-raths.jpg
 image_overview:
-  - team/800x800-nataschakolloff-01.jpg
+  - team/800x800-birgitmarlen-raths.jpg
 ---

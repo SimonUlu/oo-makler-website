@@ -1,16 +1,13 @@
 ---
-id: 1914c0f1-52bf-4914-aab7-0adbea602f23
+id: b1c67f09-ca7b-4f67-a0ae-f7a22c44559c
 blueprint: leistungen
 view_model: App\ViewModels\VerkaufenViewModel
 template: pages/leistungen/cta-page
-title: Verkaufen
-subtitle: 'Mit uns zügig und erfolgreich verkaufen.'
-description: 'Immobilie verkaufen'
-subheaderheadline: 'Erst der Mensch, dann die Immobilie'
-subheaderdescription: |-
-  Bevor wir uns mit dem Wert Ihrer Immobilie befassen, interessiert uns vor allem der Grund, warum Sie verkaufen möchten. Ist die Wohnung zu klein oder zu groß geworden? Das Haus nicht barrierefrei und die Gartenarbeit mittlerweile anstrengend? Steht eine Modernisierung an? Ziehen Sie aus beruflichen Gründen in eine andere Stadt? Möchten Sie gerne in Ihrem Haus bleiben, denken aber über eine Leibrente oder einen Teilverkauf nach? Haben Sie die Immobilie geerbt oder leben in Trennung und die Miteigentümer streiten über die richtige Strategie? 
-
-  Schon in dieser frühen Phase, wenn Sie noch gar nicht sicher sind, ob und wie Sie die Immobilie verkaufen möchten, unterstützen wir Sie und finden gemeinsam mit Ihnen die beste Lösung: Klassischer Immobilienverkauf, Bieterverfahren oder die Rente aus Stein, damit Sie finanziell frei in Ihrem vertrauten Zuhause bleiben können. In allen Fällen profitieren Sie von unserer langjährigen Erfahrung und - neben der Vermarktung über die gängigen Immobilienportale -  von unserem wertvollen und direkten Kontakt zur Berliner Volksbank mit zahlreichen finanzierungsgeprüften und solventen Kaufinteressenten.
+title: Kaufen
+subtitle: 'Immobilienkauf mit uns ganz leicht.'
+description: 'Suchprofil anlegen'
+subheaderheadline: 'Immobilienkauf mit der BVBI'
+subheaderdescription: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'
 content_image_1:
   - architecture-gef0672c68_1920.jpg
 imagesectionheader: 'Lorem Ipsum'
@@ -145,7 +142,7 @@ seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1719317938
+updated_at: 1719324626
 headerbild:
   - architecture-gef0672c68_1920.jpg
 stepsheader: 'UNSER VORGEHEN.'
@@ -465,7 +462,7 @@ seo_text:
         type: text
         text: 'Helfen Sie den Suchmaschinen dieser Welt zu verstehen, für welche Kunden diese Website gebaut ist! In dem SEO-Bereich Ihrer neuen Website können Sie Ihr Unternehmen nochmals in wenigen Zeilen zusammenfassen und damit auch Suchmaschinen wie Google helfen, Ihre Website besser zu verstehen. Eine bessere Sichtbarkeit führt zu mehr Kunden und somit zu höheren Gewinnen! Worauf warten Sie noch? Holen Sie sich das Website-Template von InnoBrain und bringen Sie Ihre Online-Präsenz auf das nächste Level.'
 seo_headline_two: 'Erhöhen Sie Ihre Online-Sichtbarkeit durch Suchmaschinenoptimierung'
-duplicated_from: c04f550e-7e42-4c6f-9100-8a46c4e11163
+duplicated_from: 1914c0f1-52bf-4914-aab7-0adbea602f23
 show_reference_estates: true
 content_with_image_replicator_two:
   -
@@ -511,19 +508,19 @@ content_with_image_replicator_two:
 advantages:
   -
     id: lww6joov
-    header: 'Immobilienbewertung online'
+    header: 'Suchauftrag anlegen'
     image:
       - content_onlinebewertung.jpg
     description: 'Ermitteln Sie den Wert Ihrer Immobilie bequem von zu Hause aus – schnell, einfach und kostenfrei.'
-    button_link: 'https://bvbi.immodesignservice.de/immobilienbewertung/'
-    button_text: 'Jetzt online bewerten'
+    button_link: 'https://vb-berlin.inno-brain.de/suchauftrag'
+    button_text: 'Suchauftrag anlegen'
     type: neues_set
     enabled: true
-    header_outside: 'Immobilienbewertung online'
-    description_outside: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'
+    header_outside: 'Suchprofil anlegen'
+    description_outside: 'Wenn Sie regelmäßig Internetbörsen auf der Suche nach Ihrer Wunschimmobilie durchstöbern, filtern Sie vielleicht auch nach Wohnung oder Haus, wählen bestimmte Ortsteile aus und sortieren die Ergebnisliste nach Kaufpreis oder Aktualität. Schneller geht es, wenn Sie sich bei einem Immobilienportal einen Suchagenten einrichten. Am besten bei verschiedenen Anbietern, denn gerade private Immobilienverkäufer bevorzugen die Kleinanzeigenportale oder nur jeweils eine der großen Immobilienbörsen. Mit einem Suchagenten bekommen Sie automatisch eine E-Mail, sobald ein passendes Objekt veröffentlicht wurde. Aber nicht nur Sie, sondern unzählige andere Kaufinteressenten eben auch. Bevor wir eine neue Immobilie in den Internetportalen veröffentlichen, versenden wir das Angebot vorab per E-Mail an alle vorgemerkten Suchkunden, zu deren Wünschen die Immobilie passt. Erfahren auch Sie frühzeitig von neuen Immobilienangeboten, bevor sie veröffentlicht werden. Erstellen Sie dafür ein Suchprofil bei der BVBI. Sie können Ihre Suchkriterien ganz bequem selbst online eingeben oder mit uns besprechen. Wir nehmen uns hierfür persönlich Zeit, nur der Versand der Angebote passiert anschließend automatisch. Damit Sie die Immobilie finden, die perfekt zu Ihnen passt.'
   -
     id: lww6kp2c
-    header: 'Immobilienbewertung vor Ort'
+    header: Baufinanzierungsrechner
     image:
       - content_bewertungvorort.jpg
     description: 'Unsere Experten bewerten Ihre Immobilie vor Ort mit höchster Genauigkeit für eine maßgeschneiderte Einschätzung.'
@@ -531,10 +528,24 @@ advantages:
     button_text: 'Termin vereinbaren'
     type: neues_set
     enabled: true
-    header_outside: 'Immobilienbewertung vor Ort'
+    header_outside: Baufinanzierungsrechner
     description_outside: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'
-services_header_h2: 'Schritt für Schritt'
-services_text: 'mit der BVBI'
+  -
+    id: lxudx8x6
+    header: 'Unser Service für Sie'
+    image:
+      - content_bewertungvorort.jpg
+    description: 'Unsere Experten bewerten Ihre Immobilie vor Ort mit höchster Genauigkeit für eine maßgeschneiderte Einschätzung.'
+    button_link: /
+    button_text: 'Termin vereinbaren'
+    type: neues_set
+    enabled: true
+    header_outside: 'Unser Service für Sie'
+    description_outside: |-
+      Der Immobilienkauf ist für viele Menschen eine weitreichende finanzielle Entscheidung. Nehmen Sie sich daher ausreichend Zeit. Wir unterstützen Sie von der Suche bis zum Einzug in Ihre Wunschimmobilie. Ob Sie nun Ihr Traumhaus oder eine Immobilie als Kapitalanlage kaufen möchten: zunächst ist wichtig, das Budget festzulegen.
+      Gerade besonders attraktive Immobilienangebote erfordern schnelles Handeln, wenn es mehrere Interessenten gibt. Hier haben alle Kunden einen Vorteil, die bereits vorab mit ihrer Bank den finanziellen Handlungspielraum geklärt haben. Wenn Sie eine passende Immobilie gefunden haben, lassen Sie sich alle relevanten Unterlagen wie z. B. Grundbuch, WEG-Protokolle oder Teilungserklärungen zeigen. Spätestens seit der Novelle zum Gebäudeenergiegesetz ist für Immobilienkäufer auch die Energieeffizienz eines Gebäudes in den Fokus gerückt. Informieren Sie sich gründlich, welche Auflagen Sie als Immobilienkäufer übernehmen müssen.
+services_header_h2: 'Berliner Volksbank Immobilien'
+services_text: 'Alles unter einem Dach'
 services_replicator:
   -
     id: lww6l3kn
@@ -559,10 +570,11 @@ services_replicator:
         <path class="cls-1" d="M102.74,35.55c.6,0,1.09-.49,1.09-1.09v-5.38c0-.6-.49-1.09-1.09-1.09s-1.09.49-1.09,1.09v5.38c0,.6.49,1.09,1.09,1.09Z"></path>
         <path class="cls-1" d="M117.27,32.99c0-2.22-2.72-3.95-8.07-5.16v-.15c0-5.56-4.52-10.07-10.07-10.07h-9.2c-5.56,0-10.07,4.52-10.07,10.07v.15c-5.36,1.21-8.07,2.94-8.07,5.16,0,4.29,10.58,6.36,21.01,6.57l-11.51,20.08c-1.29-.43-2.67-.79-4-1.09v-.45c0-7-5.7-12.7-12.7-12.7h-11.89c-7,0-12.7,5.7-12.7,12.7v.45c-1.33.3-2.7.65-3.99,1.08l-11.27-20.08c10.35-.23,20.76-2.31,20.76-6.56,0-2.22-2.72-3.95-8.07-5.16v-.15c0-5.56-4.52-10.07-10.07-10.07h-9.2c-5.56,0-10.07,4.52-10.07,10.07v.15c-5.36,1.21-8.07,2.94-8.07,5.16,0,4.45,11.43,6.52,22.24,6.58l11.7,20.85c-2.52,1.11-4.37,2.59-4.37,4.54,0,5.38,14.62,8.19,29.07,8.19s29.07-2.81,29.07-8.19c0-1.94-1.85-3.42-4.36-4.53l11.95-20.86c10.73-.09,21.98-2.16,21.98-6.58ZM2.18,32.99c0-.61,1.63-1.88,5.89-2.92v4.38c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-5.74h0v-1.04c0-4.35,3.54-7.89,7.89-7.89h9.2c4.35,0,7.89,3.54,7.89,7.89v1.04h0v5.74c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-4.38c4.26,1.03,5.89,2.3,5.89,2.92,0,1.49-7.26,4.4-20.56,4.4s-20.56-2.91-20.56-4.4ZM85.52,64.96c0,2.45-10.47,6-26.88,6s-26.88-3.56-26.88-6c0-1.12,2.59-2.85,8.24-4.17v6.06c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-7.41h0v-1.34c0-5.8,4.72-10.51,10.51-10.51h11.89c5.8,0,10.51,4.72,10.51,10.51v1.34h0v7.42c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-6.06c5.65,1.32,8.24,3.05,8.24,4.17ZM73.96,32.99c0-.61,1.63-1.88,5.89-2.92v4.38c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-5.74h0v-1.04c0-4.35,3.54-7.89,7.89-7.89h9.2c4.35,0,7.89,3.54,7.89,7.89v1.04h0v5.74c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-4.38c4.26,1.03,5.89,2.3,5.89,2.92,0,1.49-7.26,4.4-20.56,4.4s-20.56-2.91-20.56-4.4Z"></path>
       </svg>
-    header: '1. Kennenlernen'
-    text: 'In einem persönlichen Gespräch ermitteln wir das Potenzial Ihrer Immobilie. Sie erhalten eine erste Preiseinschätzung.'
+    header: Immobilienverkauf
+    text: 'Als Volksbanktochter unterstützen wir Sie partnerschaftlich und transparent beim Verkauf Ihrer Immobilie in Berlin und Brandenburg.'
     type: new_set
     enabled: true
+    link: /verkauf
   -
     id: lww6ma8r
     svg: |-
@@ -586,10 +598,11 @@ services_replicator:
         <path class="cls-1" d="M102.74,35.55c.6,0,1.09-.49,1.09-1.09v-5.38c0-.6-.49-1.09-1.09-1.09s-1.09.49-1.09,1.09v5.38c0,.6.49,1.09,1.09,1.09Z"></path>
         <path class="cls-1" d="M117.27,32.99c0-2.22-2.72-3.95-8.07-5.16v-.15c0-5.56-4.52-10.07-10.07-10.07h-9.2c-5.56,0-10.07,4.52-10.07,10.07v.15c-5.36,1.21-8.07,2.94-8.07,5.16,0,4.29,10.58,6.36,21.01,6.57l-11.51,20.08c-1.29-.43-2.67-.79-4-1.09v-.45c0-7-5.7-12.7-12.7-12.7h-11.89c-7,0-12.7,5.7-12.7,12.7v.45c-1.33.3-2.7.65-3.99,1.08l-11.27-20.08c10.35-.23,20.76-2.31,20.76-6.56,0-2.22-2.72-3.95-8.07-5.16v-.15c0-5.56-4.52-10.07-10.07-10.07h-9.2c-5.56,0-10.07,4.52-10.07,10.07v.15c-5.36,1.21-8.07,2.94-8.07,5.16,0,4.45,11.43,6.52,22.24,6.58l11.7,20.85c-2.52,1.11-4.37,2.59-4.37,4.54,0,5.38,14.62,8.19,29.07,8.19s29.07-2.81,29.07-8.19c0-1.94-1.85-3.42-4.36-4.53l11.95-20.86c10.73-.09,21.98-2.16,21.98-6.58ZM2.18,32.99c0-.61,1.63-1.88,5.89-2.92v4.38c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-5.74h0v-1.04c0-4.35,3.54-7.89,7.89-7.89h9.2c4.35,0,7.89,3.54,7.89,7.89v1.04h0v5.74c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-4.38c4.26,1.03,5.89,2.3,5.89,2.92,0,1.49-7.26,4.4-20.56,4.4s-20.56-2.91-20.56-4.4ZM85.52,64.96c0,2.45-10.47,6-26.88,6s-26.88-3.56-26.88-6c0-1.12,2.59-2.85,8.24-4.17v6.06c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-7.41h0v-1.34c0-5.8,4.72-10.51,10.51-10.51h11.89c5.8,0,10.51,4.72,10.51,10.51v1.34h0v7.42c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-6.06c5.65,1.32,8.24,3.05,8.24,4.17ZM73.96,32.99c0-.61,1.63-1.88,5.89-2.92v4.38c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-5.74h0v-1.04c0-4.35,3.54-7.89,7.89-7.89h9.2c4.35,0,7.89,3.54,7.89,7.89v1.04h0v5.74c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-4.38c4.26,1.03,5.89,2.3,5.89,2.92,0,1.49-7.26,4.4-20.56,4.4s-20.56-2.91-20.56-4.4Z"></path>
       </svg>
-    header: '2. Vorbereitung'
-    text: 'Wir erstellen einen individuellen Ablaufplan und bereiten die notwendigen Unterlagen auf. Was Sie nicht finden, finden wir.'
+    header: Immobilienkauf
+    text: 'Wir begleiten Sie von der Suche bis zum Einzug in Ihre Traumimmobilie.'
     type: new_set
     enabled: true
+    link: /kaufen
   -
     id: lww6m8kl
     svg: |-
@@ -613,199 +626,11 @@ services_replicator:
         <path class="cls-1" d="M102.74,35.55c.6,0,1.09-.49,1.09-1.09v-5.38c0-.6-.49-1.09-1.09-1.09s-1.09.49-1.09,1.09v5.38c0,.6.49,1.09,1.09,1.09Z"></path>
         <path class="cls-1" d="M117.27,32.99c0-2.22-2.72-3.95-8.07-5.16v-.15c0-5.56-4.52-10.07-10.07-10.07h-9.2c-5.56,0-10.07,4.52-10.07,10.07v.15c-5.36,1.21-8.07,2.94-8.07,5.16,0,4.29,10.58,6.36,21.01,6.57l-11.51,20.08c-1.29-.43-2.67-.79-4-1.09v-.45c0-7-5.7-12.7-12.7-12.7h-11.89c-7,0-12.7,5.7-12.7,12.7v.45c-1.33.3-2.7.65-3.99,1.08l-11.27-20.08c10.35-.23,20.76-2.31,20.76-6.56,0-2.22-2.72-3.95-8.07-5.16v-.15c0-5.56-4.52-10.07-10.07-10.07h-9.2c-5.56,0-10.07,4.52-10.07,10.07v.15c-5.36,1.21-8.07,2.94-8.07,5.16,0,4.45,11.43,6.52,22.24,6.58l11.7,20.85c-2.52,1.11-4.37,2.59-4.37,4.54,0,5.38,14.62,8.19,29.07,8.19s29.07-2.81,29.07-8.19c0-1.94-1.85-3.42-4.36-4.53l11.95-20.86c10.73-.09,21.98-2.16,21.98-6.58ZM2.18,32.99c0-.61,1.63-1.88,5.89-2.92v4.38c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-5.74h0v-1.04c0-4.35,3.54-7.89,7.89-7.89h9.2c4.35,0,7.89,3.54,7.89,7.89v1.04h0v5.74c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-4.38c4.26,1.03,5.89,2.3,5.89,2.92,0,1.49-7.26,4.4-20.56,4.4s-20.56-2.91-20.56-4.4ZM85.52,64.96c0,2.45-10.47,6-26.88,6s-26.88-3.56-26.88-6c0-1.12,2.59-2.85,8.24-4.17v6.06c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-7.41h0v-1.34c0-5.8,4.72-10.51,10.51-10.51h11.89c5.8,0,10.51,4.72,10.51,10.51v1.34h0v7.42c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-6.06c5.65,1.32,8.24,3.05,8.24,4.17ZM73.96,32.99c0-.61,1.63-1.88,5.89-2.92v4.38c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-5.74h0v-1.04c0-4.35,3.54-7.89,7.89-7.89h9.2c4.35,0,7.89,3.54,7.89,7.89v1.04h0v5.74c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-4.38c4.26,1.03,5.89,2.3,5.89,2.92,0,1.49-7.26,4.4-20.56,4.4s-20.56-2.91-20.56-4.4Z"></path>
       </svg>
-    header: '3. Fotos'
-    text: 'Für den Termin mit dem Fotografen richten Sie Ihre Immobilie so her, wie es Ihnen am besten möglich ist. Den Rest machen wir.'
+    header: 'Gemeinsam stark'
+    text: 'Profitieren Sie vom Service unserer Kooperationspartner: Finanzierung, Teilverkauf, Sanierungsfahrplan, Versicherung und vieles mehr.'
     type: new_set
     enabled: true
-  -
-    id: lxud89he
-    svg: |-
-      <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 117.27 73.15" width="4rem" heigth="4rem">
-        <defs>
-          <style>
-            .cls-1 {
-              fill: #0067b1;
-              stroke-width: 0px;
-            }
-          </style>
-        </defs>
-        <path class="cls-1" d="M58.64,43.95c4.96,0,9-4.04,9-9v-3.3c0-4.96-4.04-9-9-9s-9,4.04-9,9v3.3c0,4.96,4.04,9,9,9ZM51.82,31.66c0-3.76,3.06-6.82,6.82-6.82s6.82,3.06,6.82,6.82v3.3c0,3.76-3.06,6.82-6.82,6.82s-6.82-3.06-6.82-6.82v-3.3Z"></path>
-        <path class="cls-1" d="M48.03,58.81c-.6,0-1.09.49-1.09,1.09v6.95c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-6.95c0-.6-.49-1.09-1.09-1.09Z"></path>
-        <path class="cls-1" d="M69.24,58.81c-.6,0-1.09.49-1.09,1.09v6.95c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-6.95c0-.6-.49-1.09-1.09-1.09Z"></path>
-        <path class="cls-1" d="M22.75,16.98c3.98,0,7.21-3.24,7.21-7.21v-2.55c0-3.98-3.24-7.21-7.21-7.21s-7.21,3.24-7.21,7.21v2.55c0,3.98,3.24,7.21,7.21,7.21ZM17.72,7.21c0-2.77,2.26-5.03,5.03-5.03s5.03,2.26,5.03,5.03v2.55c0,2.77-2.26,5.03-5.03,5.03s-5.03-2.26-5.03-5.03v-2.55Z"></path>
-        <path class="cls-1" d="M14.54,27.98c-.6,0-1.09.49-1.09,1.09v5.38c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-5.38c0-.6-.49-1.09-1.09-1.09Z"></path>
-        <path class="cls-1" d="M30.95,35.55c.6,0,1.09-.49,1.09-1.09v-5.38c0-.6-.49-1.09-1.09-1.09s-1.09.49-1.09,1.09v5.38c0,.6.49,1.09,1.09,1.09Z"></path>
-        <path class="cls-1" d="M94.53,16.98c3.98,0,7.21-3.24,7.21-7.21v-2.55c0-3.98-3.24-7.21-7.21-7.21s-7.21,3.24-7.21,7.21v2.55c0,3.98,3.24,7.21,7.21,7.21ZM89.5,7.21c0-2.77,2.26-5.03,5.03-5.03s5.03,2.26,5.03,5.03v2.55c0,2.77-2.26,5.03-5.03,5.03s-5.03-2.26-5.03-5.03v-2.55Z"></path>
-        <path class="cls-1" d="M86.32,27.98c-.6,0-1.09.49-1.09,1.09v5.38c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-5.38c0-.6-.49-1.09-1.09-1.09Z"></path>
-        <path class="cls-1" d="M102.74,35.55c.6,0,1.09-.49,1.09-1.09v-5.38c0-.6-.49-1.09-1.09-1.09s-1.09.49-1.09,1.09v5.38c0,.6.49,1.09,1.09,1.09Z"></path>
-        <path class="cls-1" d="M117.27,32.99c0-2.22-2.72-3.95-8.07-5.16v-.15c0-5.56-4.52-10.07-10.07-10.07h-9.2c-5.56,0-10.07,4.52-10.07,10.07v.15c-5.36,1.21-8.07,2.94-8.07,5.16,0,4.29,10.58,6.36,21.01,6.57l-11.51,20.08c-1.29-.43-2.67-.79-4-1.09v-.45c0-7-5.7-12.7-12.7-12.7h-11.89c-7,0-12.7,5.7-12.7,12.7v.45c-1.33.3-2.7.65-3.99,1.08l-11.27-20.08c10.35-.23,20.76-2.31,20.76-6.56,0-2.22-2.72-3.95-8.07-5.16v-.15c0-5.56-4.52-10.07-10.07-10.07h-9.2c-5.56,0-10.07,4.52-10.07,10.07v.15c-5.36,1.21-8.07,2.94-8.07,5.16,0,4.45,11.43,6.52,22.24,6.58l11.7,20.85c-2.52,1.11-4.37,2.59-4.37,4.54,0,5.38,14.62,8.19,29.07,8.19s29.07-2.81,29.07-8.19c0-1.94-1.85-3.42-4.36-4.53l11.95-20.86c10.73-.09,21.98-2.16,21.98-6.58ZM2.18,32.99c0-.61,1.63-1.88,5.89-2.92v4.38c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-5.74h0v-1.04c0-4.35,3.54-7.89,7.89-7.89h9.2c4.35,0,7.89,3.54,7.89,7.89v1.04h0v5.74c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-4.38c4.26,1.03,5.89,2.3,5.89,2.92,0,1.49-7.26,4.4-20.56,4.4s-20.56-2.91-20.56-4.4ZM85.52,64.96c0,2.45-10.47,6-26.88,6s-26.88-3.56-26.88-6c0-1.12,2.59-2.85,8.24-4.17v6.06c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-7.41h0v-1.34c0-5.8,4.72-10.51,10.51-10.51h11.89c5.8,0,10.51,4.72,10.51,10.51v1.34h0v7.42c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-6.06c5.65,1.32,8.24,3.05,8.24,4.17ZM73.96,32.99c0-.61,1.63-1.88,5.89-2.92v4.38c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-5.74h0v-1.04c0-4.35,3.54-7.89,7.89-7.89h9.2c4.35,0,7.89,3.54,7.89,7.89v1.04h0v5.74c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-4.38c4.26,1.03,5.89,2.3,5.89,2.92,0,1.49-7.26,4.4-20.56,4.4s-20.56-2.91-20.56-4.4Z"></path>
-      </svg>
-    header: '4. Exposé'
-    text: 'Sie erhalten ein ansprechendes Exposé Ihrer Immobilie. Wenn Sie mit allem zufrieden sind, kann es los gehen.'
-    type: new_set
-    enabled: true
-  -
-    id: lxud8ort
-    svg: |-
-      <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 117.27 73.15" width="4rem" heigth="4rem">
-        <defs>
-          <style>
-            .cls-1 {
-              fill: #0067b1;
-              stroke-width: 0px;
-            }
-          </style>
-        </defs>
-        <path class="cls-1" d="M58.64,43.95c4.96,0,9-4.04,9-9v-3.3c0-4.96-4.04-9-9-9s-9,4.04-9,9v3.3c0,4.96,4.04,9,9,9ZM51.82,31.66c0-3.76,3.06-6.82,6.82-6.82s6.82,3.06,6.82,6.82v3.3c0,3.76-3.06,6.82-6.82,6.82s-6.82-3.06-6.82-6.82v-3.3Z"></path>
-        <path class="cls-1" d="M48.03,58.81c-.6,0-1.09.49-1.09,1.09v6.95c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-6.95c0-.6-.49-1.09-1.09-1.09Z"></path>
-        <path class="cls-1" d="M69.24,58.81c-.6,0-1.09.49-1.09,1.09v6.95c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-6.95c0-.6-.49-1.09-1.09-1.09Z"></path>
-        <path class="cls-1" d="M22.75,16.98c3.98,0,7.21-3.24,7.21-7.21v-2.55c0-3.98-3.24-7.21-7.21-7.21s-7.21,3.24-7.21,7.21v2.55c0,3.98,3.24,7.21,7.21,7.21ZM17.72,7.21c0-2.77,2.26-5.03,5.03-5.03s5.03,2.26,5.03,5.03v2.55c0,2.77-2.26,5.03-5.03,5.03s-5.03-2.26-5.03-5.03v-2.55Z"></path>
-        <path class="cls-1" d="M14.54,27.98c-.6,0-1.09.49-1.09,1.09v5.38c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-5.38c0-.6-.49-1.09-1.09-1.09Z"></path>
-        <path class="cls-1" d="M30.95,35.55c.6,0,1.09-.49,1.09-1.09v-5.38c0-.6-.49-1.09-1.09-1.09s-1.09.49-1.09,1.09v5.38c0,.6.49,1.09,1.09,1.09Z"></path>
-        <path class="cls-1" d="M94.53,16.98c3.98,0,7.21-3.24,7.21-7.21v-2.55c0-3.98-3.24-7.21-7.21-7.21s-7.21,3.24-7.21,7.21v2.55c0,3.98,3.24,7.21,7.21,7.21ZM89.5,7.21c0-2.77,2.26-5.03,5.03-5.03s5.03,2.26,5.03,5.03v2.55c0,2.77-2.26,5.03-5.03,5.03s-5.03-2.26-5.03-5.03v-2.55Z"></path>
-        <path class="cls-1" d="M86.32,27.98c-.6,0-1.09.49-1.09,1.09v5.38c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-5.38c0-.6-.49-1.09-1.09-1.09Z"></path>
-        <path class="cls-1" d="M102.74,35.55c.6,0,1.09-.49,1.09-1.09v-5.38c0-.6-.49-1.09-1.09-1.09s-1.09.49-1.09,1.09v5.38c0,.6.49,1.09,1.09,1.09Z"></path>
-        <path class="cls-1" d="M117.27,32.99c0-2.22-2.72-3.95-8.07-5.16v-.15c0-5.56-4.52-10.07-10.07-10.07h-9.2c-5.56,0-10.07,4.52-10.07,10.07v.15c-5.36,1.21-8.07,2.94-8.07,5.16,0,4.29,10.58,6.36,21.01,6.57l-11.51,20.08c-1.29-.43-2.67-.79-4-1.09v-.45c0-7-5.7-12.7-12.7-12.7h-11.89c-7,0-12.7,5.7-12.7,12.7v.45c-1.33.3-2.7.65-3.99,1.08l-11.27-20.08c10.35-.23,20.76-2.31,20.76-6.56,0-2.22-2.72-3.95-8.07-5.16v-.15c0-5.56-4.52-10.07-10.07-10.07h-9.2c-5.56,0-10.07,4.52-10.07,10.07v.15c-5.36,1.21-8.07,2.94-8.07,5.16,0,4.45,11.43,6.52,22.24,6.58l11.7,20.85c-2.52,1.11-4.37,2.59-4.37,4.54,0,5.38,14.62,8.19,29.07,8.19s29.07-2.81,29.07-8.19c0-1.94-1.85-3.42-4.36-4.53l11.95-20.86c10.73-.09,21.98-2.16,21.98-6.58ZM2.18,32.99c0-.61,1.63-1.88,5.89-2.92v4.38c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-5.74h0v-1.04c0-4.35,3.54-7.89,7.89-7.89h9.2c4.35,0,7.89,3.54,7.89,7.89v1.04h0v5.74c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-4.38c4.26,1.03,5.89,2.3,5.89,2.92,0,1.49-7.26,4.4-20.56,4.4s-20.56-2.91-20.56-4.4ZM85.52,64.96c0,2.45-10.47,6-26.88,6s-26.88-3.56-26.88-6c0-1.12,2.59-2.85,8.24-4.17v6.06c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-7.41h0v-1.34c0-5.8,4.72-10.51,10.51-10.51h11.89c5.8,0,10.51,4.72,10.51,10.51v1.34h0v7.42c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-6.06c5.65,1.32,8.24,3.05,8.24,4.17ZM73.96,32.99c0-.61,1.63-1.88,5.89-2.92v4.38c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-5.74h0v-1.04c0-4.35,3.54-7.89,7.89-7.89h9.2c4.35,0,7.89,3.54,7.89,7.89v1.04h0v5.74c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-4.38c4.26,1.03,5.89,2.3,5.89,2.92,0,1.49-7.26,4.4-20.56,4.4s-20.56-2.91-20.56-4.4Z"></path>
-      </svg>
-    header: '5. Verkaufsstart'
-    text: 'Wir übernehmen die Präsentation Ihrer Immobilie. Ab jetzt können Sie sich zurücklehnen.'
-    type: new_set
-    enabled: true
-  -
-    id: lxud92tc
-    svg: |-
-      <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 117.27 73.15" width="4rem" heigth="4rem">
-        <defs>
-          <style>
-            .cls-1 {
-              fill: #0067b1;
-              stroke-width: 0px;
-            }
-          </style>
-        </defs>
-        <path class="cls-1" d="M58.64,43.95c4.96,0,9-4.04,9-9v-3.3c0-4.96-4.04-9-9-9s-9,4.04-9,9v3.3c0,4.96,4.04,9,9,9ZM51.82,31.66c0-3.76,3.06-6.82,6.82-6.82s6.82,3.06,6.82,6.82v3.3c0,3.76-3.06,6.82-6.82,6.82s-6.82-3.06-6.82-6.82v-3.3Z"></path>
-        <path class="cls-1" d="M48.03,58.81c-.6,0-1.09.49-1.09,1.09v6.95c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-6.95c0-.6-.49-1.09-1.09-1.09Z"></path>
-        <path class="cls-1" d="M69.24,58.81c-.6,0-1.09.49-1.09,1.09v6.95c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-6.95c0-.6-.49-1.09-1.09-1.09Z"></path>
-        <path class="cls-1" d="M22.75,16.98c3.98,0,7.21-3.24,7.21-7.21v-2.55c0-3.98-3.24-7.21-7.21-7.21s-7.21,3.24-7.21,7.21v2.55c0,3.98,3.24,7.21,7.21,7.21ZM17.72,7.21c0-2.77,2.26-5.03,5.03-5.03s5.03,2.26,5.03,5.03v2.55c0,2.77-2.26,5.03-5.03,5.03s-5.03-2.26-5.03-5.03v-2.55Z"></path>
-        <path class="cls-1" d="M14.54,27.98c-.6,0-1.09.49-1.09,1.09v5.38c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-5.38c0-.6-.49-1.09-1.09-1.09Z"></path>
-        <path class="cls-1" d="M30.95,35.55c.6,0,1.09-.49,1.09-1.09v-5.38c0-.6-.49-1.09-1.09-1.09s-1.09.49-1.09,1.09v5.38c0,.6.49,1.09,1.09,1.09Z"></path>
-        <path class="cls-1" d="M94.53,16.98c3.98,0,7.21-3.24,7.21-7.21v-2.55c0-3.98-3.24-7.21-7.21-7.21s-7.21,3.24-7.21,7.21v2.55c0,3.98,3.24,7.21,7.21,7.21ZM89.5,7.21c0-2.77,2.26-5.03,5.03-5.03s5.03,2.26,5.03,5.03v2.55c0,2.77-2.26,5.03-5.03,5.03s-5.03-2.26-5.03-5.03v-2.55Z"></path>
-        <path class="cls-1" d="M86.32,27.98c-.6,0-1.09.49-1.09,1.09v5.38c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-5.38c0-.6-.49-1.09-1.09-1.09Z"></path>
-        <path class="cls-1" d="M102.74,35.55c.6,0,1.09-.49,1.09-1.09v-5.38c0-.6-.49-1.09-1.09-1.09s-1.09.49-1.09,1.09v5.38c0,.6.49,1.09,1.09,1.09Z"></path>
-        <path class="cls-1" d="M117.27,32.99c0-2.22-2.72-3.95-8.07-5.16v-.15c0-5.56-4.52-10.07-10.07-10.07h-9.2c-5.56,0-10.07,4.52-10.07,10.07v.15c-5.36,1.21-8.07,2.94-8.07,5.16,0,4.29,10.58,6.36,21.01,6.57l-11.51,20.08c-1.29-.43-2.67-.79-4-1.09v-.45c0-7-5.7-12.7-12.7-12.7h-11.89c-7,0-12.7,5.7-12.7,12.7v.45c-1.33.3-2.7.65-3.99,1.08l-11.27-20.08c10.35-.23,20.76-2.31,20.76-6.56,0-2.22-2.72-3.95-8.07-5.16v-.15c0-5.56-4.52-10.07-10.07-10.07h-9.2c-5.56,0-10.07,4.52-10.07,10.07v.15c-5.36,1.21-8.07,2.94-8.07,5.16,0,4.45,11.43,6.52,22.24,6.58l11.7,20.85c-2.52,1.11-4.37,2.59-4.37,4.54,0,5.38,14.62,8.19,29.07,8.19s29.07-2.81,29.07-8.19c0-1.94-1.85-3.42-4.36-4.53l11.95-20.86c10.73-.09,21.98-2.16,21.98-6.58ZM2.18,32.99c0-.61,1.63-1.88,5.89-2.92v4.38c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-5.74h0v-1.04c0-4.35,3.54-7.89,7.89-7.89h9.2c4.35,0,7.89,3.54,7.89,7.89v1.04h0v5.74c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-4.38c4.26,1.03,5.89,2.3,5.89,2.92,0,1.49-7.26,4.4-20.56,4.4s-20.56-2.91-20.56-4.4ZM85.52,64.96c0,2.45-10.47,6-26.88,6s-26.88-3.56-26.88-6c0-1.12,2.59-2.85,8.24-4.17v6.06c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-7.41h0v-1.34c0-5.8,4.72-10.51,10.51-10.51h11.89c5.8,0,10.51,4.72,10.51,10.51v1.34h0v7.42c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-6.06c5.65,1.32,8.24,3.05,8.24,4.17ZM73.96,32.99c0-.61,1.63-1.88,5.89-2.92v4.38c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-5.74h0v-1.04c0-4.35,3.54-7.89,7.89-7.89h9.2c4.35,0,7.89,3.54,7.89,7.89v1.04h0v5.74c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-4.38c4.26,1.03,5.89,2.3,5.89,2.92,0,1.49-7.26,4.4-20.56,4.4s-20.56-2.91-20.56-4.4Z"></path>
-      </svg>
-    header: '6. Besichtigungen'
-    text: 'Wir koordinieren die Termine mit den Interessenten. Sie können dabei sein oder frei nehmen — Sie entscheiden selbst.'
-    type: new_set
-    enabled: true
-  -
-    id: lxud96tu
-    svg: |-
-      <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 117.27 73.15" width="4rem" heigth="4rem">
-        <defs>
-          <style>
-            .cls-1 {
-              fill: #0067b1;
-              stroke-width: 0px;
-            }
-          </style>
-        </defs>
-        <path class="cls-1" d="M58.64,43.95c4.96,0,9-4.04,9-9v-3.3c0-4.96-4.04-9-9-9s-9,4.04-9,9v3.3c0,4.96,4.04,9,9,9ZM51.82,31.66c0-3.76,3.06-6.82,6.82-6.82s6.82,3.06,6.82,6.82v3.3c0,3.76-3.06,6.82-6.82,6.82s-6.82-3.06-6.82-6.82v-3.3Z"></path>
-        <path class="cls-1" d="M48.03,58.81c-.6,0-1.09.49-1.09,1.09v6.95c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-6.95c0-.6-.49-1.09-1.09-1.09Z"></path>
-        <path class="cls-1" d="M69.24,58.81c-.6,0-1.09.49-1.09,1.09v6.95c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-6.95c0-.6-.49-1.09-1.09-1.09Z"></path>
-        <path class="cls-1" d="M22.75,16.98c3.98,0,7.21-3.24,7.21-7.21v-2.55c0-3.98-3.24-7.21-7.21-7.21s-7.21,3.24-7.21,7.21v2.55c0,3.98,3.24,7.21,7.21,7.21ZM17.72,7.21c0-2.77,2.26-5.03,5.03-5.03s5.03,2.26,5.03,5.03v2.55c0,2.77-2.26,5.03-5.03,5.03s-5.03-2.26-5.03-5.03v-2.55Z"></path>
-        <path class="cls-1" d="M14.54,27.98c-.6,0-1.09.49-1.09,1.09v5.38c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-5.38c0-.6-.49-1.09-1.09-1.09Z"></path>
-        <path class="cls-1" d="M30.95,35.55c.6,0,1.09-.49,1.09-1.09v-5.38c0-.6-.49-1.09-1.09-1.09s-1.09.49-1.09,1.09v5.38c0,.6.49,1.09,1.09,1.09Z"></path>
-        <path class="cls-1" d="M94.53,16.98c3.98,0,7.21-3.24,7.21-7.21v-2.55c0-3.98-3.24-7.21-7.21-7.21s-7.21,3.24-7.21,7.21v2.55c0,3.98,3.24,7.21,7.21,7.21ZM89.5,7.21c0-2.77,2.26-5.03,5.03-5.03s5.03,2.26,5.03,5.03v2.55c0,2.77-2.26,5.03-5.03,5.03s-5.03-2.26-5.03-5.03v-2.55Z"></path>
-        <path class="cls-1" d="M86.32,27.98c-.6,0-1.09.49-1.09,1.09v5.38c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-5.38c0-.6-.49-1.09-1.09-1.09Z"></path>
-        <path class="cls-1" d="M102.74,35.55c.6,0,1.09-.49,1.09-1.09v-5.38c0-.6-.49-1.09-1.09-1.09s-1.09.49-1.09,1.09v5.38c0,.6.49,1.09,1.09,1.09Z"></path>
-        <path class="cls-1" d="M117.27,32.99c0-2.22-2.72-3.95-8.07-5.16v-.15c0-5.56-4.52-10.07-10.07-10.07h-9.2c-5.56,0-10.07,4.52-10.07,10.07v.15c-5.36,1.21-8.07,2.94-8.07,5.16,0,4.29,10.58,6.36,21.01,6.57l-11.51,20.08c-1.29-.43-2.67-.79-4-1.09v-.45c0-7-5.7-12.7-12.7-12.7h-11.89c-7,0-12.7,5.7-12.7,12.7v.45c-1.33.3-2.7.65-3.99,1.08l-11.27-20.08c10.35-.23,20.76-2.31,20.76-6.56,0-2.22-2.72-3.95-8.07-5.16v-.15c0-5.56-4.52-10.07-10.07-10.07h-9.2c-5.56,0-10.07,4.52-10.07,10.07v.15c-5.36,1.21-8.07,2.94-8.07,5.16,0,4.45,11.43,6.52,22.24,6.58l11.7,20.85c-2.52,1.11-4.37,2.59-4.37,4.54,0,5.38,14.62,8.19,29.07,8.19s29.07-2.81,29.07-8.19c0-1.94-1.85-3.42-4.36-4.53l11.95-20.86c10.73-.09,21.98-2.16,21.98-6.58ZM2.18,32.99c0-.61,1.63-1.88,5.89-2.92v4.38c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-5.74h0v-1.04c0-4.35,3.54-7.89,7.89-7.89h9.2c4.35,0,7.89,3.54,7.89,7.89v1.04h0v5.74c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-4.38c4.26,1.03,5.89,2.3,5.89,2.92,0,1.49-7.26,4.4-20.56,4.4s-20.56-2.91-20.56-4.4ZM85.52,64.96c0,2.45-10.47,6-26.88,6s-26.88-3.56-26.88-6c0-1.12,2.59-2.85,8.24-4.17v6.06c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-7.41h0v-1.34c0-5.8,4.72-10.51,10.51-10.51h11.89c5.8,0,10.51,4.72,10.51,10.51v1.34h0v7.42c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-6.06c5.65,1.32,8.24,3.05,8.24,4.17ZM73.96,32.99c0-.61,1.63-1.88,5.89-2.92v4.38c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-5.74h0v-1.04c0-4.35,3.54-7.89,7.89-7.89h9.2c4.35,0,7.89,3.54,7.89,7.89v1.04h0v5.74c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-4.38c4.26,1.03,5.89,2.3,5.89,2.92,0,1.49-7.26,4.4-20.56,4.4s-20.56-2.91-20.56-4.4Z"></path>
-      </svg>
-    header: '7. Kaufangebote'
-    text: 'Wir überreichen Ihnen die geprüften Kaufangebote. Sie entscheiden, wer Ihre Immobilie kauft.'
-    type: new_set
-    enabled: true
-  -
-    id: lxud9a06
-    svg: |-
-      <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 117.27 73.15" width="4rem" heigth="4rem">
-        <defs>
-          <style>
-            .cls-1 {
-              fill: #0067b1;
-              stroke-width: 0px;
-            }
-          </style>
-        </defs>
-        <path class="cls-1" d="M58.64,43.95c4.96,0,9-4.04,9-9v-3.3c0-4.96-4.04-9-9-9s-9,4.04-9,9v3.3c0,4.96,4.04,9,9,9ZM51.82,31.66c0-3.76,3.06-6.82,6.82-6.82s6.82,3.06,6.82,6.82v3.3c0,3.76-3.06,6.82-6.82,6.82s-6.82-3.06-6.82-6.82v-3.3Z"></path>
-        <path class="cls-1" d="M48.03,58.81c-.6,0-1.09.49-1.09,1.09v6.95c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-6.95c0-.6-.49-1.09-1.09-1.09Z"></path>
-        <path class="cls-1" d="M69.24,58.81c-.6,0-1.09.49-1.09,1.09v6.95c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-6.95c0-.6-.49-1.09-1.09-1.09Z"></path>
-        <path class="cls-1" d="M22.75,16.98c3.98,0,7.21-3.24,7.21-7.21v-2.55c0-3.98-3.24-7.21-7.21-7.21s-7.21,3.24-7.21,7.21v2.55c0,3.98,3.24,7.21,7.21,7.21ZM17.72,7.21c0-2.77,2.26-5.03,5.03-5.03s5.03,2.26,5.03,5.03v2.55c0,2.77-2.26,5.03-5.03,5.03s-5.03-2.26-5.03-5.03v-2.55Z"></path>
-        <path class="cls-1" d="M14.54,27.98c-.6,0-1.09.49-1.09,1.09v5.38c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-5.38c0-.6-.49-1.09-1.09-1.09Z"></path>
-        <path class="cls-1" d="M30.95,35.55c.6,0,1.09-.49,1.09-1.09v-5.38c0-.6-.49-1.09-1.09-1.09s-1.09.49-1.09,1.09v5.38c0,.6.49,1.09,1.09,1.09Z"></path>
-        <path class="cls-1" d="M94.53,16.98c3.98,0,7.21-3.24,7.21-7.21v-2.55c0-3.98-3.24-7.21-7.21-7.21s-7.21,3.24-7.21,7.21v2.55c0,3.98,3.24,7.21,7.21,7.21ZM89.5,7.21c0-2.77,2.26-5.03,5.03-5.03s5.03,2.26,5.03,5.03v2.55c0,2.77-2.26,5.03-5.03,5.03s-5.03-2.26-5.03-5.03v-2.55Z"></path>
-        <path class="cls-1" d="M86.32,27.98c-.6,0-1.09.49-1.09,1.09v5.38c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-5.38c0-.6-.49-1.09-1.09-1.09Z"></path>
-        <path class="cls-1" d="M102.74,35.55c.6,0,1.09-.49,1.09-1.09v-5.38c0-.6-.49-1.09-1.09-1.09s-1.09.49-1.09,1.09v5.38c0,.6.49,1.09,1.09,1.09Z"></path>
-        <path class="cls-1" d="M117.27,32.99c0-2.22-2.72-3.95-8.07-5.16v-.15c0-5.56-4.52-10.07-10.07-10.07h-9.2c-5.56,0-10.07,4.52-10.07,10.07v.15c-5.36,1.21-8.07,2.94-8.07,5.16,0,4.29,10.58,6.36,21.01,6.57l-11.51,20.08c-1.29-.43-2.67-.79-4-1.09v-.45c0-7-5.7-12.7-12.7-12.7h-11.89c-7,0-12.7,5.7-12.7,12.7v.45c-1.33.3-2.7.65-3.99,1.08l-11.27-20.08c10.35-.23,20.76-2.31,20.76-6.56,0-2.22-2.72-3.95-8.07-5.16v-.15c0-5.56-4.52-10.07-10.07-10.07h-9.2c-5.56,0-10.07,4.52-10.07,10.07v.15c-5.36,1.21-8.07,2.94-8.07,5.16,0,4.45,11.43,6.52,22.24,6.58l11.7,20.85c-2.52,1.11-4.37,2.59-4.37,4.54,0,5.38,14.62,8.19,29.07,8.19s29.07-2.81,29.07-8.19c0-1.94-1.85-3.42-4.36-4.53l11.95-20.86c10.73-.09,21.98-2.16,21.98-6.58ZM2.18,32.99c0-.61,1.63-1.88,5.89-2.92v4.38c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-5.74h0v-1.04c0-4.35,3.54-7.89,7.89-7.89h9.2c4.35,0,7.89,3.54,7.89,7.89v1.04h0v5.74c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-4.38c4.26,1.03,5.89,2.3,5.89,2.92,0,1.49-7.26,4.4-20.56,4.4s-20.56-2.91-20.56-4.4ZM85.52,64.96c0,2.45-10.47,6-26.88,6s-26.88-3.56-26.88-6c0-1.12,2.59-2.85,8.24-4.17v6.06c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-7.41h0v-1.34c0-5.8,4.72-10.51,10.51-10.51h11.89c5.8,0,10.51,4.72,10.51,10.51v1.34h0v7.42c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-6.06c5.65,1.32,8.24,3.05,8.24,4.17ZM73.96,32.99c0-.61,1.63-1.88,5.89-2.92v4.38c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-5.74h0v-1.04c0-4.35,3.54-7.89,7.89-7.89h9.2c4.35,0,7.89,3.54,7.89,7.89v1.04h0v5.74c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-4.38c4.26,1.03,5.89,2.3,5.89,2.92,0,1.49-7.26,4.4-20.56,4.4s-20.56-2.91-20.56-4.4Z"></path>
-      </svg>
-    header: '8. Notar'
-    text: 'Der Käufer wählt den Notar. Wir geben alle Informationen an den Notar weiter. Sie prüfen den Kaufvertragsentwurf. Der Notar erklärt und übersetzt Ihnen gern den Inhalt.'
-    type: new_set
-    enabled: true
-  -
-    id: lxud9cwb
-    svg: |-
-      <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 117.27 73.15" width="4rem" heigth="4rem">
-        <defs>
-          <style>
-            .cls-1 {
-              fill: #0067b1;
-              stroke-width: 0px;
-            }
-          </style>
-        </defs>
-        <path class="cls-1" d="M58.64,43.95c4.96,0,9-4.04,9-9v-3.3c0-4.96-4.04-9-9-9s-9,4.04-9,9v3.3c0,4.96,4.04,9,9,9ZM51.82,31.66c0-3.76,3.06-6.82,6.82-6.82s6.82,3.06,6.82,6.82v3.3c0,3.76-3.06,6.82-6.82,6.82s-6.82-3.06-6.82-6.82v-3.3Z"></path>
-        <path class="cls-1" d="M48.03,58.81c-.6,0-1.09.49-1.09,1.09v6.95c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-6.95c0-.6-.49-1.09-1.09-1.09Z"></path>
-        <path class="cls-1" d="M69.24,58.81c-.6,0-1.09.49-1.09,1.09v6.95c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-6.95c0-.6-.49-1.09-1.09-1.09Z"></path>
-        <path class="cls-1" d="M22.75,16.98c3.98,0,7.21-3.24,7.21-7.21v-2.55c0-3.98-3.24-7.21-7.21-7.21s-7.21,3.24-7.21,7.21v2.55c0,3.98,3.24,7.21,7.21,7.21ZM17.72,7.21c0-2.77,2.26-5.03,5.03-5.03s5.03,2.26,5.03,5.03v2.55c0,2.77-2.26,5.03-5.03,5.03s-5.03-2.26-5.03-5.03v-2.55Z"></path>
-        <path class="cls-1" d="M14.54,27.98c-.6,0-1.09.49-1.09,1.09v5.38c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-5.38c0-.6-.49-1.09-1.09-1.09Z"></path>
-        <path class="cls-1" d="M30.95,35.55c.6,0,1.09-.49,1.09-1.09v-5.38c0-.6-.49-1.09-1.09-1.09s-1.09.49-1.09,1.09v5.38c0,.6.49,1.09,1.09,1.09Z"></path>
-        <path class="cls-1" d="M94.53,16.98c3.98,0,7.21-3.24,7.21-7.21v-2.55c0-3.98-3.24-7.21-7.21-7.21s-7.21,3.24-7.21,7.21v2.55c0,3.98,3.24,7.21,7.21,7.21ZM89.5,7.21c0-2.77,2.26-5.03,5.03-5.03s5.03,2.26,5.03,5.03v2.55c0,2.77-2.26,5.03-5.03,5.03s-5.03-2.26-5.03-5.03v-2.55Z"></path>
-        <path class="cls-1" d="M86.32,27.98c-.6,0-1.09.49-1.09,1.09v5.38c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-5.38c0-.6-.49-1.09-1.09-1.09Z"></path>
-        <path class="cls-1" d="M102.74,35.55c.6,0,1.09-.49,1.09-1.09v-5.38c0-.6-.49-1.09-1.09-1.09s-1.09.49-1.09,1.09v5.38c0,.6.49,1.09,1.09,1.09Z"></path>
-        <path class="cls-1" d="M117.27,32.99c0-2.22-2.72-3.95-8.07-5.16v-.15c0-5.56-4.52-10.07-10.07-10.07h-9.2c-5.56,0-10.07,4.52-10.07,10.07v.15c-5.36,1.21-8.07,2.94-8.07,5.16,0,4.29,10.58,6.36,21.01,6.57l-11.51,20.08c-1.29-.43-2.67-.79-4-1.09v-.45c0-7-5.7-12.7-12.7-12.7h-11.89c-7,0-12.7,5.7-12.7,12.7v.45c-1.33.3-2.7.65-3.99,1.08l-11.27-20.08c10.35-.23,20.76-2.31,20.76-6.56,0-2.22-2.72-3.95-8.07-5.16v-.15c0-5.56-4.52-10.07-10.07-10.07h-9.2c-5.56,0-10.07,4.52-10.07,10.07v.15c-5.36,1.21-8.07,2.94-8.07,5.16,0,4.45,11.43,6.52,22.24,6.58l11.7,20.85c-2.52,1.11-4.37,2.59-4.37,4.54,0,5.38,14.62,8.19,29.07,8.19s29.07-2.81,29.07-8.19c0-1.94-1.85-3.42-4.36-4.53l11.95-20.86c10.73-.09,21.98-2.16,21.98-6.58ZM2.18,32.99c0-.61,1.63-1.88,5.89-2.92v4.38c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-5.74h0v-1.04c0-4.35,3.54-7.89,7.89-7.89h9.2c4.35,0,7.89,3.54,7.89,7.89v1.04h0v5.74c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-4.38c4.26,1.03,5.89,2.3,5.89,2.92,0,1.49-7.26,4.4-20.56,4.4s-20.56-2.91-20.56-4.4ZM85.52,64.96c0,2.45-10.47,6-26.88,6s-26.88-3.56-26.88-6c0-1.12,2.59-2.85,8.24-4.17v6.06c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-7.41h0v-1.34c0-5.8,4.72-10.51,10.51-10.51h11.89c5.8,0,10.51,4.72,10.51,10.51v1.34h0v7.42c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-6.06c5.65,1.32,8.24,3.05,8.24,4.17ZM73.96,32.99c0-.61,1.63-1.88,5.89-2.92v4.38c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-5.74h0v-1.04c0-4.35,3.54-7.89,7.89-7.89h9.2c4.35,0,7.89,3.54,7.89,7.89v1.04h0v5.74c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-4.38c4.26,1.03,5.89,2.3,5.89,2.92,0,1.49-7.26,4.4-20.56,4.4s-20.56-2.91-20.56-4.4Z"></path>
-      </svg>
-    header: '9. Beurkundung'
-    text: 'Wenn alle Punkte geregelt sind, vereinbaren wir den Notartermin für Sie und den Käufer.'
-    type: new_set
-    enabled: true
-  -
-    id: lxudb01j
-    svg: |-
-      <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 117.27 73.15" width="4rem" heigth="4rem">
-        <defs>
-          <style>
-            .cls-1 {
-              fill: #0067b1;
-              stroke-width: 0px;
-            }
-          </style>
-        </defs>
-        <path class="cls-1" d="M58.64,43.95c4.96,0,9-4.04,9-9v-3.3c0-4.96-4.04-9-9-9s-9,4.04-9,9v3.3c0,4.96,4.04,9,9,9ZM51.82,31.66c0-3.76,3.06-6.82,6.82-6.82s6.82,3.06,6.82,6.82v3.3c0,3.76-3.06,6.82-6.82,6.82s-6.82-3.06-6.82-6.82v-3.3Z"></path>
-        <path class="cls-1" d="M48.03,58.81c-.6,0-1.09.49-1.09,1.09v6.95c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-6.95c0-.6-.49-1.09-1.09-1.09Z"></path>
-        <path class="cls-1" d="M69.24,58.81c-.6,0-1.09.49-1.09,1.09v6.95c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-6.95c0-.6-.49-1.09-1.09-1.09Z"></path>
-        <path class="cls-1" d="M22.75,16.98c3.98,0,7.21-3.24,7.21-7.21v-2.55c0-3.98-3.24-7.21-7.21-7.21s-7.21,3.24-7.21,7.21v2.55c0,3.98,3.24,7.21,7.21,7.21ZM17.72,7.21c0-2.77,2.26-5.03,5.03-5.03s5.03,2.26,5.03,5.03v2.55c0,2.77-2.26,5.03-5.03,5.03s-5.03-2.26-5.03-5.03v-2.55Z"></path>
-        <path class="cls-1" d="M14.54,27.98c-.6,0-1.09.49-1.09,1.09v5.38c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-5.38c0-.6-.49-1.09-1.09-1.09Z"></path>
-        <path class="cls-1" d="M30.95,35.55c.6,0,1.09-.49,1.09-1.09v-5.38c0-.6-.49-1.09-1.09-1.09s-1.09.49-1.09,1.09v5.38c0,.6.49,1.09,1.09,1.09Z"></path>
-        <path class="cls-1" d="M94.53,16.98c3.98,0,7.21-3.24,7.21-7.21v-2.55c0-3.98-3.24-7.21-7.21-7.21s-7.21,3.24-7.21,7.21v2.55c0,3.98,3.24,7.21,7.21,7.21ZM89.5,7.21c0-2.77,2.26-5.03,5.03-5.03s5.03,2.26,5.03,5.03v2.55c0,2.77-2.26,5.03-5.03,5.03s-5.03-2.26-5.03-5.03v-2.55Z"></path>
-        <path class="cls-1" d="M86.32,27.98c-.6,0-1.09.49-1.09,1.09v5.38c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-5.38c0-.6-.49-1.09-1.09-1.09Z"></path>
-        <path class="cls-1" d="M102.74,35.55c.6,0,1.09-.49,1.09-1.09v-5.38c0-.6-.49-1.09-1.09-1.09s-1.09.49-1.09,1.09v5.38c0,.6.49,1.09,1.09,1.09Z"></path>
-        <path class="cls-1" d="M117.27,32.99c0-2.22-2.72-3.95-8.07-5.16v-.15c0-5.56-4.52-10.07-10.07-10.07h-9.2c-5.56,0-10.07,4.52-10.07,10.07v.15c-5.36,1.21-8.07,2.94-8.07,5.16,0,4.29,10.58,6.36,21.01,6.57l-11.51,20.08c-1.29-.43-2.67-.79-4-1.09v-.45c0-7-5.7-12.7-12.7-12.7h-11.89c-7,0-12.7,5.7-12.7,12.7v.45c-1.33.3-2.7.65-3.99,1.08l-11.27-20.08c10.35-.23,20.76-2.31,20.76-6.56,0-2.22-2.72-3.95-8.07-5.16v-.15c0-5.56-4.52-10.07-10.07-10.07h-9.2c-5.56,0-10.07,4.52-10.07,10.07v.15c-5.36,1.21-8.07,2.94-8.07,5.16,0,4.45,11.43,6.52,22.24,6.58l11.7,20.85c-2.52,1.11-4.37,2.59-4.37,4.54,0,5.38,14.62,8.19,29.07,8.19s29.07-2.81,29.07-8.19c0-1.94-1.85-3.42-4.36-4.53l11.95-20.86c10.73-.09,21.98-2.16,21.98-6.58ZM2.18,32.99c0-.61,1.63-1.88,5.89-2.92v4.38c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-5.74h0v-1.04c0-4.35,3.54-7.89,7.89-7.89h9.2c4.35,0,7.89,3.54,7.89,7.89v1.04h0v5.74c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-4.38c4.26,1.03,5.89,2.3,5.89,2.92,0,1.49-7.26,4.4-20.56,4.4s-20.56-2.91-20.56-4.4ZM85.52,64.96c0,2.45-10.47,6-26.88,6s-26.88-3.56-26.88-6c0-1.12,2.59-2.85,8.24-4.17v6.06c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-7.41h0v-1.34c0-5.8,4.72-10.51,10.51-10.51h11.89c5.8,0,10.51,4.72,10.51,10.51v1.34h0v7.42c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-6.06c5.65,1.32,8.24,3.05,8.24,4.17ZM73.96,32.99c0-.61,1.63-1.88,5.89-2.92v4.38c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-5.74h0v-1.04c0-4.35,3.54-7.89,7.89-7.89h9.2c4.35,0,7.89,3.54,7.89,7.89v1.04h0v5.74c0,.6.49,1.09,1.09,1.09s1.09-.49,1.09-1.09v-4.38c4.26,1.03,5.89,2.3,5.89,2.92,0,1.49-7.26,4.4-20.56,4.4s-20.56-2.91-20.56-4.4Z"></path>
-      </svg>
-    header: '10. Übergabe'
-    text: 'Wenn der Kaufpreis bezahlt ist, erfolgt die Übergabe. Wir erstellen ein Protokoll, lesen die Zähler ab. Sie übergeben Schlüssel und Unterlagen.'
-    type: new_set
-    enabled: true
+    link: /ueber-uns-team
 logo_header: 'Unsere Partner'
 columns: '5'
 logo_replikator:

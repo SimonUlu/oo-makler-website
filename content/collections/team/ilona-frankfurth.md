@@ -1,11 +1,11 @@
 ---
-id: de389149-18ad-4b95-b571-3b5cb2d8a34f
+id: 2d764090-e3c0-4e07-86ca-9a0edcb6f355
 blueprint: team
-title: 'Natascha Kolloff'
-first_name: Natascha
-last_name: Kolloff
-email: natascha.kolloff@bvbi.de
-function: Vertriebsassistenz
+title: 'Ilona Frankfurth'
+first_name: Ilona
+last_name: Frankfurth
+email: ilona.frankfurth@bvbi.de
+function: Immobilienmaklerin
 team_description:
   -
     type: paragraph
@@ -34,13 +34,13 @@ long_team_description:
         type: text
         text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. '
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1719310377
-duplicated_from: 05fbb994-8498-4d70-a230-60568f930634
-phone: '+49 (30) 56 55555 29'
-mobilnummer: '+49 (0)171 / 213 26 97'
-team: office
+updated_at: 1719310634
+duplicated_from: 783825fd-2386-43de-bb4c-18698089b9e1
+phone: '+49 (30) 56 55555 24'
+mobilnummer: '+49 (0)151 / 74 46 49 66'
+team: makler
 image_portrait:
-  - team/800x800-nataschakolloff-01.jpg
+  - team/800x800-ilonafrankfurth-01.jpg
 image_overview:
-  - team/800x800-nataschakolloff-01.jpg
+  - team/800x800-ilonafrankfurth-01.jpg
 ---
