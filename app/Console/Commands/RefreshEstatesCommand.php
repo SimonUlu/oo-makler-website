@@ -2,8 +2,7 @@
 
 namespace App\Console\Commands;
 
-use App\Jobs\ImportEstateData;
-use App\Models\Estate;
+use App\Jobs\ImportEstates;
 use Illuminate\Console\Command;
 
 class RefreshEstatesCommand extends Command
@@ -13,7 +12,7 @@ class RefreshEstatesCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'app:refresh-estates';
+    protected $signature = 'app:refresh-estates {importType}';
 
     /**
      * The console command description.
@@ -25,9 +24,13 @@ class RefreshEstatesCommand extends Command
     /**
      * Execute the console command.
      */
-    public function handle()
+    public function handle(): void
     {
-        Estate::destroy(Estate::all('id'));
-        dispatch_sync(new ImportEstateData());
+        $importType = $this->argument('importType');
+
+        // Dispatch the job
+        ImportEstates::dispatchSync($importType);
+
+        $this->info("ImportDataJob dispatched with import type: $importType");
     }
 }
