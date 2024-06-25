@@ -96,7 +96,7 @@ stadtteile:
     table_field_3: 'Lorem Ipsum'
     table_field_4: 'Lorem Ipsum'
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1719328213
+updated_at: 1719328464
 center_lng: '9.933333'
 center_lat: '49.783333'
 zoom: '11'
@@ -177,6 +177,12 @@ offices:
     latitude: '52.54806512761706'
     type: neues_set
     enabled: true
+    street: 'Berliner Allee 19-21'
+    ort: '13088 Berlin'
+    ansprechpartner: 'Holger Boening'
+    ansprechpartner_function: Immobilienmakler
+    phone: '+49 (30) 56 55555 20'
+    mail: holger.boening@bvbi.de
   -
     id: lxujci0v
     title: 'Büro Süd (Berlin-Rudow)'
@@ -185,6 +191,12 @@ offices:
     latitude: '52.41670666205342'
     type: neues_set
     enabled: true
+    street: 'Alt-Rudow 71'
+    ort: '12355 Berlin'
+    ansprechpartner: 'Raffael Meisel'
+    ansprechpartner_function: Immobilienmakler
+    phone: '+49 (30) 56 55555 14'
+    mail: raffael.meisel@bvbi.de
   -
     id: lxujdoqg
     title: 'Büro Süd-West (Berlin-Zehlendorf)'
@@ -193,4 +205,10 @@ offices:
     latitude: '52.431620542105314'
     type: neues_set
     enabled: true
+    street: 'Teltower Damm 26'
+    ort: '14169 Berlin'
+    ansprechpartner: 'Sandra Raschke/ Gülay Peter'
+    ansprechpartner_function: Immobilienmaklerin
+    phone: '+49 (30) 56 55555-25/ -36'
+    mail: 'sandra.raschke@bvbi.de; guelay.peter@bvbi.de'
 ---
