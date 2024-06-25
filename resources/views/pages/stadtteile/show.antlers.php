@@ -3,31 +3,26 @@
 </div>
 
 
-<section class="w-full bg-white md:px-10 lg:pt-10 max-w-7xl">
-    <div class="relative mx-auto">
-        <h2 class="mb-4 ml-8 leading-tight mr-4 text-4xl font-bold tracking-tight text-left text-gray-900 lg:text-5xl ">Unsere Immobilien in {{ title }} zum Verkauf</h2>
-        <p class="max-w-2xl mt-3 ml-8 text-xl text-gray-500 sm:mt-2">{{kaufen_text}}</p>
+<section class="w-full text-center bg-white pb-12 lg:pb-20">
+    <div class="relative max-w-7xl mx-auto lg:px-10">
+        <h2 class="text-4xl font-bold tracking-tight text-primary lg:text-5xl mb-8 max-w-5xl mx-auto">{{title}}</h2>
+        <div class="text-gray-700 sm:px-10 sm:text-xl dark:text-gray-400">{{description}}</div>
     </div>
-    {{partial:immo-slider/slider-outlined :estates="buyEstates"}}
 </section>
 
-
-<section class="w-full bg-white md:px-10 lg:pt-10 max-w-7xl">
-    <div class="relative mx-auto">
-        <h2 class="mb-4 ml-8 mr-4 leading-tight text-4xl font-bold tracking-tight text-left text-gray-900 lg:text-5xl ">Unsere Immobilien in {{ title }} zum Mieten</h2>
-        <p class="max-w-2xl mt-3 ml-8 text-xl text-gray-500 sm:mt-2">{{mieten_text}}</p>
+<section class="w-full bg-gray-100 py-26 lg:py-24">
+    <div class="relative max-w-7xl mx-auto lg:px-10">
+        <h2 class="text-4xl font-bold tracking-tight text-primary lg:text-5xl mb-8 max-w-5xl mx-auto text-center">Wir sind für Sie da</h2>
+        <div class="text-gray-700 sm:px-10 sm:text-xl dark:text-gray-400 text-center">
+            Weitere Informationen finden Sie zu unseren Standorten, indem Sie einfach auf die gewünschte Pin klicken.
+        </div>
     </div>
-    {{partial:immo-slider/slider-outlined :estates="rentEstates"}}
+    {{partial:stadtteile/index/location-map}}
 </section>
 
-<section class="w-full md:px-10 max-w-7xl bg-slate-50 py-10">
-    {{partial:stadtteile/feature-section}}
-</section>
 
-<section>
-    {{ if seo_content_type == 'type_1' }}
-    <div class="w-full bg-white">
-        {{ partial:content-section/content-section }}
-    </div>
-    {{ /if }}
-</section>
+<div class="w-full bg-white">
+    <section class="py-8 xl:py-12 mx-auto max-w-7xl w-full px-4 lg:px-10">
+        {{partial:cta-sections/contact/contact-team}}
+    </section>
+</div>

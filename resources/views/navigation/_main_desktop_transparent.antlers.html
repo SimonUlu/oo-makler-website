@@ -207,7 +207,11 @@
                 <a
                     href="/kontakt"
                     title=""
-                    class="inline-flex items-center justify-center px-8 py-2 text-base font-medium text-primary bg-white hover:bg-gray-50"
+                    class="inline-flex items-center justify-center px-8 py-2 text-base font-medium "
+                    :class="{ 
+                        'text-white bg-primary': scrolled || isSpecialPage , 
+                        'text-primary bg-white': !scrolled && !isSpecialPage,
+                     }"
                     role="button"
                 >
                     Kontakt

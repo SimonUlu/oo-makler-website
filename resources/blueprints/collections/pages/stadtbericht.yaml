@@ -3,7 +3,79 @@ tabs:
   main:
     display: Hauptteil
     sections:
-      - {  }
+      -
+        fields:
+          -
+            handle: offices
+            field:
+              collapse: false
+              previews: true
+              fullscreen: true
+              sets:
+                neue_set-gruppe:
+                  display: 'Neue Set-Gruppe'
+                  instructions: null
+                  icon: null
+                  sets:
+                    neues_set:
+                      display: 'Neues Set'
+                      instructions: null
+                      icon: null
+                      fields:
+                        -
+                          handle: title
+                          field:
+                            input_type: text
+                            antlers: false
+                            type: text
+                            display: title
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+                        -
+                          handle: description
+                          field:
+                            antlers: false
+                            type: textarea
+                            display: description
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+                        -
+                          handle: longitude
+                          field:
+                            input_type: text
+                            antlers: false
+                            type: text
+                            display: longitude
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+                        -
+                          handle: latitude
+                          field:
+                            input_type: text
+                            antlers: false
+                            type: text
+                            display: latitude
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+              type: replicator
+              display: bueros
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
   header_tab:
     display: Header
     sections:
@@ -21,7 +93,6 @@ tabs:
               show_set_alt: true
               type: assets
               display: header_image
-              icon: assets
               listable: hidden
               instructions_position: above
               visibility: visible
@@ -40,7 +111,6 @@ tabs:
               antlers: false
               type: text
               display: subtitle
-              icon: text
               listable: hidden
               instructions_position: above
               visibility: visible
@@ -52,7 +122,6 @@ tabs:
               antlers: false
               type: text
               display: company
-              icon: text
               listable: hidden
               instructions_position: above
               visibility: visible
@@ -69,7 +138,6 @@ tabs:
               antlers: false
               type: textarea
               display: einleitungstext
-              icon: textarea
               listable: hidden
               instructions_position: above
               visibility: visible
@@ -84,6 +152,7 @@ tabs:
             field:
               type: slug
               localizable: true
+              validate: 'max:200'
           -
             handle: parent
             field:
@@ -264,7 +333,6 @@ tabs:
                             hide_display: false
               type: replicator
               display: stadtteile
-              icon: replicator
               listable: hidden
               instructions_position: above
               visibility: visible
@@ -276,7 +344,6 @@ tabs:
               antlers: false
               type: text
               display: zoom
-              icon: text
               listable: hidden
               instructions_position: above
               visibility: visible
@@ -288,7 +355,6 @@ tabs:
               antlers: false
               type: text
               display: center_lat
-              icon: text
               listable: hidden
               instructions_position: above
               visibility: visible
@@ -300,7 +366,6 @@ tabs:
               antlers: false
               type: text
               display: center_lng
-              icon: text
               listable: hidden
               instructions_position: above
               visibility: visible
@@ -334,7 +399,6 @@ tabs:
               antlers: false
               type: text
               display: table_field_1
-              icon: text
               listable: hidden
               instructions_position: above
               visibility: visible
@@ -346,7 +410,6 @@ tabs:
               antlers: false
               type: text
               display: table_field_2
-              icon: text
               listable: hidden
               instructions_position: above
               visibility: visible
@@ -358,7 +421,6 @@ tabs:
               antlers: false
               type: text
               display: table_field_3
-              icon: text
               listable: hidden
               instructions_position: above
               visibility: visible
@@ -370,7 +432,6 @@ tabs:
               antlers: false
               type: text
               display: table_field_4
-              icon: text
               listable: hidden
               instructions_position: above
               visibility: visible
@@ -388,7 +449,6 @@ tabs:
               antlers: false
               type: text
               display: content_header
-              icon: text
               listable: hidden
               instructions_position: above
               visibility: visible
@@ -400,7 +460,6 @@ tabs:
               antlers: false
               type: text
               display: content_subheader
-              icon: text
               listable: hidden
               instructions_position: above
               visibility: visible
@@ -411,7 +470,6 @@ tabs:
               antlers: false
               type: textarea
               display: content_text
-              icon: textarea
               listable: hidden
               instructions_position: above
               visibility: visible
@@ -459,7 +517,6 @@ tabs:
                             hide_display: false
               type: replicator
               display: content_stats
-              icon: replicator
               listable: hidden
               instructions_position: above
               visibility: visible

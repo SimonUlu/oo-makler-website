@@ -96,7 +96,7 @@ stadtteile:
     table_field_3: 'Lorem Ipsum'
     table_field_4: 'Lorem Ipsum'
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1719307538
+updated_at: 1719322479
 center_lng: '9.933333'
 center_lat: '49.783333'
 zoom: '11'
@@ -140,4 +140,21 @@ content_stats:
     enabled: true
 header_image:
   - header_berlin.jpg
+offices:
+  -
+    id: lxufwccq
+    title: Charlottenburg
+    description: 'Lorem Ipsum'
+    longitude: '13.3218919'
+    latitude: '52.4753975'
+    type: neues_set
+    enabled: true
+  -
+    id: lxug5t5h
+    title: Charlottenburg
+    description: 'Lorem Ipsum'
+    longitude: '13.3018919'
+    latitude: '52.4353975'
+    type: neues_set
+    enabled: true
 ---
