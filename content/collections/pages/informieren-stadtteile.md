@@ -96,7 +96,7 @@ stadtteile:
     table_field_3: 'Lorem Ipsum'
     table_field_4: 'Lorem Ipsum'
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1719322479
+updated_at: 1719327561
 center_lng: '9.933333'
 center_lat: '49.783333'
 zoom: '11'
@@ -143,10 +143,10 @@ header_image:
 offices:
   -
     id: lxufwccq
-    title: Charlottenburg
+    title: Hauptbüro
     description: 'Lorem Ipsum'
-    longitude: '13.3218919'
-    latitude: '52.4753975'
+    longitude: '13.328140638394192'
+    latitude: '52.47680379353718'
     type: neues_set
     enabled: true
   -
