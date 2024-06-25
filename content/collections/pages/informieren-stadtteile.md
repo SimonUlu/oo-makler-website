@@ -96,7 +96,7 @@ stadtteile:
     table_field_3: 'Lorem Ipsum'
     table_field_4: 'Lorem Ipsum'
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1719328464
+updated_at: 1719328588
 center_lng: '9.933333'
 center_lat: '49.783333'
 zoom: '11'
@@ -211,4 +211,18 @@ offices:
     ansprechpartner_function: Immobilienmaklerin
     phone: '+49 (30) 56 55555-25/ -36'
     mail: 'sandra.raschke@bvbi.de; guelay.peter@bvbi.de'
+  -
+    id: lxujsl2y
+    title: 'Büro West (Berlin-Spandau)'
+    description: 'Lorem Ipsum'
+    longitude: '13.203756745049475'
+    latitude: '52.53723964873318'
+    type: neues_set
+    enabled: true
+    street: 'Markt 1'
+    ort: '13597 Berlin'
+    ansprechpartner: 'Andreas Richter'
+    ansprechpartner_function: Immobilienmakler
+    phone: '+49 (30) 56 55555 41'
+    mail: andreas.richter@bvbi.de
 ---
