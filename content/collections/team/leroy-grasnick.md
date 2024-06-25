@@ -1,12 +1,11 @@
 ---
 id: d1674711-1541-4f24-9d26-ae330fe0ec78
-published: false
 blueprint: team
-title: 'Ilona Frankfurth'
-first_name: Ilona
-last_name: Frankfurth
-email: ilona.frankfurth@bvbi.de
-function: Immobilienmaklerin
+title: 'Leroy Grasnick'
+first_name: Leroy
+last_name: Grasnick
+email: leroy.grasnick@bvbi.de
+function: Immobilienmakler
 team_description:
   -
     type: paragraph
@@ -35,13 +34,13 @@ long_team_description:
         type: text
         text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. '
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1719310634
+updated_at: 1719310726
 duplicated_from: 2d764090-e3c0-4e07-86ca-9a0edcb6f355
-phone: '+49 (30) 56 55555 24'
+phone: '+49 (30) 56 55555 45'
 mobilnummer: '+49 (0)151 / 74 46 49 66'
 team: makler
 image_portrait:
-  - team/800x800-ilonafrankfurth-01.jpg
+  - team/800x800-leroygrasnick-01-1.jpg
 image_overview:
-  - team/800x800-ilonafrankfurth-01.jpg
+  - team/800x800-leroygrasnick-01-1.jpg
 ---
