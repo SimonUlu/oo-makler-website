@@ -14,7 +14,16 @@ tree:
   -
     id: fd362109-c80b-4424-a78c-38d780d296f4
     title: 'Ueber uns'
-    url: /team
+    url: /ueber-uns
+    children:
+      -
+        id: 5a2a3d46-e238-481a-b66a-5793e554b2e9
+        title: Team
+        url: ueber-uns-team
+      -
+        id: 47773695-06d0-4c17-a252-f048ed636599
+        title: Standorte
+        url: ueber-uns-stadtteile
   -
     id: 8f42d1f8-9e44-4c0b-af89-38fc4ae6e9ec
     title: Informieren
