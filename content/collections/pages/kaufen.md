@@ -142,7 +142,7 @@ seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1719324372
+updated_at: 1719324402
 headerbild:
   - architecture-gef0672c68_1920.jpg
 stepsheader: 'UNSER VORGEHEN.'
@@ -513,7 +513,7 @@ advantages:
       - content_onlinebewertung.jpg
     description: 'Ermitteln Sie den Wert Ihrer Immobilie bequem von zu Hause aus – schnell, einfach und kostenfrei.'
     button_link: 'https://vb-berlin.inno-brain.de/suchauftrag'
-    button_text: 'https://vb-berlin.inno-brain.de/suchauftrag'
+    button_text: 'Suchauftrag anlegen'
     type: neues_set
     enabled: true
     header_outside: 'Suchprofil anlegen'
