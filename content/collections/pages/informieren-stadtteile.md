@@ -96,7 +96,7 @@ stadtteile:
     table_field_3: 'Lorem Ipsum'
     table_field_4: 'Lorem Ipsum'
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1719328097
+updated_at: 1719328113
 center_lng: '9.933333'
 center_lat: '49.783333'
 zoom: '11'
@@ -149,6 +149,8 @@ offices:
     latitude: '52.47680379353718'
     type: neues_set
     enabled: true
+    street: 'Bundesallee 61'
+    ort: '12161 Berlin'
     ansprechpartner: 'Sabine Baer'
     ansprechpartner_function: (Büroleitung)
     phone: '+49 (30) 56 55555 0'
