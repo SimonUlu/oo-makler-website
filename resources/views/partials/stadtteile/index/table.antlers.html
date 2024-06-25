@@ -1,62 +1,88 @@
-<div class="max-w-screen-md m-auto mb-8 text-center lg:mb-16">
-    <h2 class="mb-4 text-4xl font-bold tracking-tight text-gray-900">
-        Unsere Leistungen für Sie
-    </h2>
-    <div><p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. </p></div>
-</div>
-
-<div class="bg-gray-100">
-    <div class="mx-auto max-w-7xl">
-        <div class="bg-gray-100 py-10">
-            <div class="px-4 sm:px-6 lg:px-8">
-            <div class="sm:flex sm:items-center">
-                <div class="sm:flex-auto">
-                    <h1 class="text-base font-semibold leading-6 text-gray-900">Stadtteile und Wohnplatz</h1>
-                    <p class="mt-2 text-sm text-gray-700">Lorem Ipsum</p>
+<div class="">
+    <div class="sm:py-8 lg:max-w-7xl">
+        <!-- Charlottenburg -->
+        <h2 class="text-4xl font-bold tracking-tight text-primary lg:text-5xl mb-8 mx-auto text-center">
+            Charlottenburg
+        </h2>
+        <div class="grid grid-cols-1 gap-y-4 sm:grid-cols-2 sm:gap-x-6 sm:gap-y-10 lg:grid-cols-3 lg:gap-x-8">
+            {{collection:standorte office:is="charlottenburg"}}
+            <div class="group relative flex flex-col overflow-hidden border border-gray-200">
+                <div class="aspect-h-4 aspect-w-3 bg-gray-200 sm:aspect-none group-hover:opacity-75 sm:h-96">
+                    <img src="{{thumbnail_image.0.url}}" alt="platzhalter" class="h-full w-full object-cover object-center sm:h-full sm:w-full">
+                </div>
+                <div class="flex flex-1 flex-col space-y-2 p-4">
+                    <h3 class="text-xl lg:text-2xl font-bold text-primary">
+                    <a target="_blank" href="/standorte/{{slug}}">
+                        <span aria-hidden="true" class="absolute inset-0"></span>
+                        {{title}}
+                    </a>
+                    </h3>
+                    <div class="flex flex-1 flex-col justify-end">
+                        <a target="_blank" href="standort/{{slug}}" class="text-base text-secondary" target="_blank">
+                            Stadtteil {{ort}} ansehen <span aria-hidden="true"> →</span>
+                        </a>
+                    </div>
                 </div>
             </div>
-            <div class="mt-8 flow-root">
-                <div class="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
-                <div class="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
-                    <table class="min-w-full divide-y divide-gray-700">
-                        <thead>
-                            <tr>
-                                <th scope="col" class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-0">
-                                    {{table_field_1}}
-                                </th>
-                                <th scope="col" class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-0">
-                                    {{table_field_2}}
-                                </th>
-                                <th scope="col" class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-0">
-                                    {{table_field_3}}
-                                </th>
-                                <th scope="col" class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-0">
-                                    {{table_field_4}}
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody class="divide-y divide-gray-800">
-                            {{stadtteile}}
-                            <tr>
-                                <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-0">{{table_field_1}}</td>
-                                <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-700">{{table_field_2}}</td>
-                                <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-700">{{table_field_3}}</td>
-                                <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-700">{{table_field_4}}</td>
-                                <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-700 cursor-pointer">
-                                    <a href="{{associated_link}}" target="_blank">
-                                        Ansehen
-                                        <span aria-hidden="true">→</span>
-                                    </a>
-                                </td>
-                            </tr>
-                            {{/stadtteile}}
-                        </tbody>
-                    </table>
-                </div>
-                </div>
-            </div>
-            </div>
+            {{/collection:standorte}}
         </div>
+
+        <!-- Friedrichshain -->
+
+        <h2 class="pt-8 text-4xl font-bold tracking-tight text-primary lg:text-5xl mb-8 mx-auto text-center">
+            Friedrichshain
+        </h2>
+        <div class="grid grid-cols-1 gap-y-4 sm:grid-cols-2 sm:gap-x-6 sm:gap-y-10 lg:grid-cols-3 lg:gap-x-8">
+            {{collection:standorte office:is="friedrichshain"}}
+            <div class="group relative flex flex-col overflow-hidden border border-gray-200">
+                <div class="aspect-h-4 aspect-w-3 bg-gray-200 sm:aspect-none group-hover:opacity-75 sm:h-96">
+                    <img src="{{thumbnail_image.0.url}}" alt="platzhalter" class="h-full w-full object-cover object-center sm:h-full sm:w-full">
+                </div>
+                <div class="flex flex-1 flex-col space-y-2 p-4">
+                    <h3 class="text-xl lg:text-2xl font-bold text-primary">
+                    <a target="_blank" href="/standorte/{{slug}}">
+                        <span aria-hidden="true" class="absolute inset-0"></span>
+                        {{title}}
+                    </a>
+                    </h3>
+                    <div class="flex flex-1 flex-col justify-end">
+                        <a target="_blank" href="standort/{{slug}}" class="text-base text-secondary" target="_blank">
+                            Stadtteil {{ort}} ansehen <span aria-hidden="true"> →</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            {{/collection:standorte}}
+        </div>
+
+        <!-- Kreuzberg -->
+        <h2 class="pt-8 text-4xl font-bold tracking-tight text-primary lg:text-5xl mb-8 mx-auto text-center">
+            Kreuzberg
+        </h2>
+        <div class="grid grid-cols-1 gap-y-4 sm:grid-cols-2 sm:gap-x-6 sm:gap-y-10 lg:grid-cols-3 lg:gap-x-8">
+            {{collection:standorte office:is="kreuzberg"}}
+            <div class="group relative flex flex-col overflow-hidden border border-gray-200">
+                <div class="aspect-h-4 aspect-w-3 bg-gray-200 sm:aspect-none group-hover:opacity-75 sm:h-96">
+                    <img src="{{thumbnail_image.0.url}}" alt="platzhalter" class="h-full w-full object-cover object-center sm:h-full sm:w-full">
+                </div>
+                <div class="flex flex-1 flex-col space-y-2 p-4">
+                    <h3 class="text-xl lg:text-2xl font-bold text-primary">
+                    <a target="_blank" href="/standorte/{{slug}}">
+                        <span aria-hidden="true" class="absolute inset-0"></span>
+                        {{title}}
+                    </a>
+                    </h3>
+                    <div class="flex flex-1 flex-col justify-end">
+                        <a target="_blank" href="standort/{{slug}}" class="text-base text-secondary" target="_blank">
+                            Stadtteil {{ort}} ansehen <span aria-hidden="true"> →</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            {{/collection:standorte}}
+        </div>
+
     </div>
   </div>
+
 

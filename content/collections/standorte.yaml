@@ -1,0 +1,14 @@
+title: Standorte
+template: pages/stadtteile/show
+layout: layout
+revisions: false
+route: '/standorte/{{slug}}'
+sort_dir: asc
+date_behavior:
+  past: public
+  future: private
+preview_targets:
+  -
+    label: Entry
+    url: '{permalink}'
+    refresh: true

@@ -96,7 +96,7 @@ stadtteile:
     table_field_3: 'Lorem Ipsum'
     table_field_4: 'Lorem Ipsum'
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1719307538
+updated_at: 1719329272
 center_lng: '9.933333'
 center_lat: '49.783333'
 zoom: '11'
@@ -140,4 +140,159 @@ content_stats:
     enabled: true
 header_image:
   - header_berlin.jpg
+offices:
+  -
+    id: lxufwccq
+    title: Hauptbüro
+    description: 'Lorem Ipsum'
+    longitude: '13.328140638394192'
+    latitude: '52.47680379353718'
+    type: neues_set
+    enabled: true
+    street: 'Bundesallee 61'
+    ort: '12161 Berlin'
+    ansprechpartner: 'Sabine Baer'
+    ansprechpartner_function: Büroleitung
+    phone: '+49 (30) 56 55555 0'
+    mail: info@bvbi.de
+  -
+    id: lxug5t5h
+    title: 'Büro Nord (Berlin-Tegel)'
+    description: 'Lorem Ipsum'
+    longitude: '13.284518201319507'
+    latitude: '52.58923205345923'
+    type: neues_set
+    enabled: true
+    street: 'Berliner Straße 98'
+    ort: '13507 Berlin'
+    ansprechpartner: 'Ilona Frankfurth'
+    ansprechpartner_function: Immobilienmaklerin
+    phone: '+49 (30) 56 55555 24'
+    mail: ilona.frankfurth@bvbi.de
+  -
+    id: lxuja2o8
+    title: 'Büro Ost (Berlin-Weißensee)'
+    description: 'Lorem Ipsum'
+    longitude: '13.449796946357338'
+    latitude: '52.54806512761706'
+    type: neues_set
+    enabled: true
+    street: 'Berliner Allee 19-21'
+    ort: '13088 Berlin'
+    ansprechpartner: 'Holger Boening'
+    ansprechpartner_function: Immobilienmakler
+    phone: '+49 (30) 56 55555 20'
+    mail: holger.boening@bvbi.de
+  -
+    id: lxujci0v
+    title: 'Büro Süd (Berlin-Rudow)'
+    description: 'Lorem Ipsum'
+    longitude: '13.497200609441908'
+    latitude: '52.41670666205342'
+    type: neues_set
+    enabled: true
+    street: 'Alt-Rudow 71'
+    ort: '12355 Berlin'
+    ansprechpartner: 'Raffael Meisel'
+    ansprechpartner_function: Immobilienmakler
+    phone: '+49 (30) 56 55555 14'
+    mail: raffael.meisel@bvbi.de
+  -
+    id: lxujdoqg
+    title: 'Büro Süd-West (Berlin-Zehlendorf)'
+    description: 'Lorem Ipsum'
+    longitude: '13.259618269873721'
+    latitude: '52.431620542105314'
+    type: neues_set
+    enabled: true
+    street: 'Teltower Damm 26'
+    ort: '14169 Berlin'
+    ansprechpartner: 'Sandra Raschke/ Gülay Peter'
+    ansprechpartner_function: Immobilienmaklerin
+    phone: '+49 (30) 56 55555-25/ -36'
+    mail: 'sandra.raschke@bvbi.de; guelay.peter@bvbi.de'
+  -
+    id: lxujsl2y
+    title: 'Büro West (Berlin-Spandau)'
+    description: 'Lorem Ipsum'
+    longitude: '13.203756745049475'
+    latitude: '52.53723964873318'
+    type: neues_set
+    enabled: true
+    street: 'Markt 1'
+    ort: '13597 Berlin'
+    ansprechpartner: 'Andreas Richter'
+    ansprechpartner_function: Immobilienmakler
+    phone: '+49 (30) 56 55555 41'
+    mail: andreas.richter@bvbi.de
+  -
+    id: lxujuyrv
+    title: 'Büro KW (Königs-Wusterhausen)'
+    description: 'Lorem Ipsum'
+    longitude: '13.630203935727238'
+    latitude: '52.2964732958232'
+    type: neues_set
+    enabled: true
+    street: 'Bahnhofstraße 15a'
+    ort: '15711 Königs-Wusterhausen'
+    ansprechpartner: 'Peter Schlüter'
+    ansprechpartner_function: Immobilienmakler
+    phone: '+49 (30) 56 55555 30'
+    mail: peter.schlueter@bvbi.de
+  -
+    id: lxujy2db
+    title: 'Büro Bernau (Bernau)'
+    description: 'Lorem Ipsum'
+    longitude: '13.595410505921791'
+    latitude: '52.676490499808345'
+    type: neues_set
+    enabled: true
+    street: 'Börnicker Chaussee 1'
+    ort: '16321 Bernau'
+    ansprechpartner: 'Frank Weber'
+    ansprechpartner_function: Immobilienmakler
+    phone: '+49 (30) 56 55555 31'
+    mail: frank.weber@bvbi.de
+  -
+    id: lxuk3710
+    title: 'Büro Strausberg'
+    description: 'Lorem Ipsum'
+    longitude: '13.881434828324657'
+    latitude: '52.57774394148633'
+    type: neues_set
+    enabled: true
+    street: 'Große Str. 7'
+    ort: '15344 Strausberg'
+    ansprechpartner: 'Frank Weber'
+    ansprechpartner_function: Immobilienmakler
+    phone: '+49 (30) 56 55555 31'
+    mail: frank.weber@bvbi.de
+  -
+    id: lxuk4boe
+    title: 'Büro Potsdam'
+    description: 'Lorem Ipsum'
+    longitude: '13.05786446566432'
+    latitude: '52.397577492391044'
+    type: neues_set
+    enabled: true
+    street: 'Friedrich-Ebert-Straße 115'
+    ort: '14467 Potsdam'
+    ansprechpartner: 'Gülay Peter/ Sandra Raschke'
+    ansprechpartner_function: Immobilienmaklerin
+    phone: '+49 (30) 56 55555-36/ -25'
+    mail: 'guelay.peter@bvbi.de; sandra.raschke@bvbi.de'
+  -
+    id: lxuk7q1e
+    title: 'Büro Gransee'
+    description: 'Lorem Ipsum'
+    longitude: '13.153786791421318'
+    latitude: '53.007051549275126'
+    type: neues_set
+    enabled: true
+    street: 'R.-Breitscheid-Straße 48'
+    ort: '16775 Gransee'
+    ansprechpartner: 'Winfried Schultz'
+    ansprechpartner_function: Immobilienmakler
+    phone: '+49 (30) 56 55555 43'
+    mail: winfried.schultz@bvbi.de
 ---

@@ -189,41 +189,12 @@ tabs:
               listable: hidden
               instructions_position: above
               visibility: visible
-  services_tab:
-    display: Advantages
+  content_image:
+    display: 'Content Image'
     sections:
       -
+        display: 'Content Image Section'
         fields:
-          -
-            handle: services_variante
-            field:
-              options:
-                variante_1: Standard
-                variante_2: 'Kleiner + Farbe'
-                variante_3: "Dont't show"
-              taggable: false
-              push_tags: false
-              multiple: false
-              clearable: false
-              searchable: true
-              cast_booleans: false
-              type: select
-              display: services_variante
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              hide_display: false
-          -
-            handle: description
-            field:
-              input_type: text
-              antlers: false
-              display: Description
-              type: text
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              always_save: false
           -
             handle: advantages
             field:
@@ -331,6 +302,36 @@ tabs:
               instructions_position: above
               visibility: visible
               replicator_preview: true
+              hide_display: false
+          -
+            handle: description
+            field:
+              input_type: text
+              antlers: false
+              display: Description
+              type: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              always_save: false
+          -
+            handle: services_variante
+            field:
+              options:
+                variante_1: Standard
+                variante_2: 'Kleiner + Farbe'
+                variante_3: "Dont't show"
+              taggable: false
+              push_tags: false
+              multiple: false
+              clearable: false
+              searchable: true
+              cast_booleans: false
+              type: select
+              display: services_variante
+              listable: hidden
+              instructions_position: above
+              visibility: visible
               hide_display: false
   steps_section:
     display: Services
@@ -548,149 +549,6 @@ tabs:
               instructions_position: above
               visibility: visible
               replicator_preview: true
-              hide_display: false
-  content_image:
-    display: 'Content Image'
-    sections:
-      -
-        display: 'Content Image Section'
-        fields:
-          -
-            handle: content_with_image_replicator
-            field:
-              collapse: false
-              previews: true
-              fullscreen: true
-              sets:
-                neue_set-gruppe:
-                  display: 'Neue Set-Gruppe'
-                  instructions: null
-                  icon: null
-                  sets:
-                    neues_set:
-                      display: 'Neues Set'
-                      instructions: null
-                      icon: null
-                      fields:
-                        -
-                          handle: headline
-                          field:
-                            input_type: text
-                            antlers: false
-                            type: text
-                            display: headline
-                            icon: text
-                            listable: hidden
-                            instructions_position: above
-                            visibility: visible
-                            hide_display: false
-                        -
-                          handle: text
-                          field:
-                            buttons:
-                              - h2
-                              - h3
-                              - bold
-                              - italic
-                              - unorderedlist
-                              - orderedlist
-                              - removeformat
-                              - quote
-                              - anchor
-                              - image
-                              - table
-                            smart_typography: false
-                            save_html: false
-                            inline: false
-                            toolbar_mode: fixed
-                            reading_time: false
-                            word_count: false
-                            fullscreen: true
-                            allow_source: true
-                            enable_input_rules: true
-                            enable_paste_rules: true
-                            remove_empty_nodes: false
-                            antlers: false
-                            link_noopener: false
-                            link_noreferrer: false
-                            target_blank: false
-                            always_show_set_button: false
-                            collapse: false
-                            previews: true
-                            type: bard
-                            display: text
-                            icon: bard
-                            listable: hidden
-                            instructions_position: above
-                            visibility: visible
-                            hide_display: false
-                        -
-                          handle: image_section_list
-                          field:
-                            collapse: false
-                            previews: true
-                            fullscreen: true
-                            sets:
-                              neue_set-gruppe:
-                                display: 'Neue Set-Gruppe'
-                                instructions: null
-                                icon: null
-                                sets:
-                                  neues_set:
-                                    display: 'Neues Set'
-                                    instructions: null
-                                    icon: null
-                                    fields:
-                                      -
-                                        handle: listitem
-                                        field:
-                                          input_type: text
-                                          antlers: false
-                                          type: text
-                                          display: listitem
-                                          icon: text
-                                          listable: hidden
-                                          instructions_position: above
-                                          visibility: visible
-                                          hide_display: false
-                            type: replicator
-                            display: image_section_list
-                            icon: replicator
-                            listable: hidden
-                            instructions_position: above
-                            visibility: visible
-                            hide_display: false
-                        -
-                          handle: button_link
-                          field:
-                            type: link
-                            display: button_link
-                            icon: link
-                            listable: hidden
-                            instructions_position: above
-                            visibility: visible
-                            hide_display: false
-                        -
-                          handle: image
-                          field:
-                            mode: list
-                            container: images
-                            restrict: false
-                            allow_uploads: true
-                            show_filename: true
-                            show_set_alt: true
-                            type: assets
-                            display: image
-                            icon: assets
-                            listable: hidden
-                            instructions_position: above
-                            visibility: visible
-                            hide_display: false
-              type: replicator
-              display: content_with_image_replicator
-              listable: hidden
-              instructions_position: above
-              visibility: visible
               hide_display: false
   contact:
     display: Contact
