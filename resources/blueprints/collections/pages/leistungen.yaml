@@ -242,6 +242,29 @@ tabs:
                       icon: null
                       fields:
                         -
+                          handle: header_outside
+                          field:
+                            input_type: text
+                            antlers: false
+                            type: text
+                            display: header_outside
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+                        -
+                          handle: description_outside
+                          field:
+                            antlers: false
+                            type: textarea
+                            display: description_outside
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+                        -
                           handle: header
                           field:
                             input_type: text

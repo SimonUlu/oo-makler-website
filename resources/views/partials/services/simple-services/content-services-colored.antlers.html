@@ -1,24 +1,42 @@
-<div class="lg:mt-2">
-    <div class="grid grid-cols-1 gap-12 md:grid-cols-2">
-        {{advantages}}
-        <div class="pt-6">
-            <div class="aspect-h-4 aspect-w-3 bg-gray-200 sm:aspect-none group-hover:opacity-75 md:h-96">
-                <img src="{{image.0.url}}" alt="" class="h-full w-full object-cover object-center sm:h-full sm:w-full">
+<div class="py-4 md:py-8">
+    {{advantages}}
+        <div class="pt-2 lg:pt-4 grid grid-cols-1 gap-8 lg:gap-16 mb-12 lg:mb-24 lg:flex {{ index % 2 == 0 ? 'lg:flex-row-reverse' : 'lg:flex-row' }}">
+            <div class="pt-6 lg:flex-1">
+                <div class="aspect-h-4 aspect-w-3 bg-gray-200 sm:aspect-none group-hover:opacity-75 md:h-96">
+                    <img src="{{image.0.url}}" alt="" class="h-full w-full object-cover object-center sm:h-full sm:w-full">
+                </div>
+                <div class="flow-root bg-primary px-6 pb-8 relative">
+                    <div class="absolute top-0 left-0 bg-white px-4 py-2">
+                        <h3 class="leading-8">{{header}}</h3>
+                    </div>
+                    <div class="mt-20">
+                        <p class="mt-5 text-base leading-7 text-white">{{description}}</p>
+                    </div>
+                    <div class="flex items-center justify-center md:justify-start py-8">
+                        <a href="{{button_link}}" title="" class="text-white bg-secondary justify-center hover:bg-primary-800 inline-flex items-center focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium  text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800" role="button">
+                            {{button_text}}
+                        </a>
+                    </div>
+                </div>
             </div>
-            <div class="flow-root bg-primary px-6 pb-8 relative">
-                <div class="absolute top-0 left-0 bg-white px-4 py-2">
-                    <h3 class="leading-8">{{header}}</h3>
+            <div class="space-y-4 sm:space-y-6 lg:space-y-8 lg:flex-1">
+                <div>
+                    <h2
+                    class="text-3xl font-extrabold leading-tight text-primary underline decoration-custom sm:text-4xl"
+                    >
+                        {{header_outside}}
+                    </h2>
+
                 </div>
-                <div class="mt-20">
-                    <p class="mt-5 text-base leading-7 text-white">{{description}}</p>
+                <div class="leading-8"> 
+                    {{description_outside}}
                 </div>
-                <div class="flex items-center justify-center md:justify-start py-8">
-                    <a href="{{button_link}}" title="" class="text-white bg-secondary justify-center hover:bg-primary-800 inline-flex items-center focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium  text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800" role="button">
-                        {{button_text}}
-                    </a>
-                </div>
+
             </div>
         </div>
-        {{/advantages}}
-    </div>
-  </div>
+    {{/advantages}}
+
+
+</div>
+
+

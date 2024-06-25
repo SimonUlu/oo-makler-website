@@ -1,6 +1,13 @@
 <div class="w-full bg-white">
-    {{partial:headers/leistungen/leistungen-header}}
+    {{partial:headers/leistungen/verkaufen-header-full-width}}
 </div>
+
+<section class="w-full text-center bg-white">
+    <div class="relative max-w-7xl py-16 mx-auto sm:py-24 lg:px-10">
+        <h2 class="text-4xl font-bold tracking-tight text-primary lg:text-5xl mb-8 max-w-5xl mx-auto">{{title}}</h2>
+        <div class="text-gray-700 sm:px-10 sm:text-xl dark:text-gray-400">{{subtitle}}</div>
+    </div>
+</section>
 
 {{partial:stadtteile/index/district-map}}
 

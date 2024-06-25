@@ -1,7 +1,7 @@
 ---
 id: 96970172-3e5d-466d-926a-578db0c1b2b8
 blueprint: stadtbericht
-title: 'Ihre Gebietskarte'
+title: 'Berliner Volksbank Immobilien GmbH – Kompetente Unterstützung vom Immobilienmakler'
 view_model: App\ViewModels\DistrictViewModel
 template: pages/stadtteile/index
 einleitungstext: 'Test wo kommt das?'
@@ -96,7 +96,7 @@ stadtteile:
     table_field_3: 'Lorem Ipsum'
     table_field_4: 'Lorem Ipsum'
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1719306486
+updated_at: 1719307538
 center_lng: '9.933333'
 center_lat: '49.783333'
 zoom: '11'

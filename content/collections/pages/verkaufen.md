@@ -145,7 +145,7 @@ seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1719238180
+updated_at: 1719308309
 headerbild:
   - architecture-gef0672c68_1920.jpg
 stepsheader: 'UNSER VORGEHEN.'
@@ -519,6 +519,16 @@ advantages:
     button_text: 'Jetzt online bewerten'
     type: neues_set
     enabled: true
+    header_outside: 'Lorem Ipsum'
+    description_outside: |-
+      Wir vermitteln Immobilien in Berlin & Brandenburg. Als 100%ige Tochter der Berliner Volksbank eG und damit im VR-Banken-Verbund greifen wir dabei auf ein riesiges Netzwerk zum Thema Immobilien und deren Finanzierung und Versicherung zurück. Neben dem klassischen Verkauf von Wohnimmobilien und Grundstücken betreuen wir auch Bauträger und deren Neubauprojekte, Investoren sowie Zwangsversteigerungs- und Bieterverfahren. Der Verkauf oder Kauf einer Immobilie ist für die meisten Menschen eine der wichtigsten Entscheidungen im Leben. Wer dabei Zeit, Ärger und Geld sparen will, beauftragt einen professionellen Immobilienvermittler. Gleichzeitig ist das Zuhause immer Privatsphäre, ob für Eigennutzer oder für Mieter bei Kapitalanlagen. Wir begegnen dieser Verantwortung mit großem Respekt.
+      Gern unterstützen wir auch Sie dabei. Rufen Sie uns einfach an, wir kommen vorbei. Wir kennen nicht nur Ihren Kiez, wir sind auch dort.
+
+      Nach Vereinbarung finden Sie uns auch an diesen Filialstandorten der Berliner Volksbank:
+      Berlin: Tegel, Weißensee, Rudow, Zehlendorf und Spandau
+      Brandenburg: Königs Wusterhausen, Bernau, Strausberg, Potsdam und Gransee
+
+      Unser Büro in der Bundesallee hilft Ihnen gerne weiter und nennt Ihnen die passenden Ansprechpartner.
   -
     id: lww6kp2c
     header: 'Immobilienbewertung vor Ort'
@@ -529,6 +539,16 @@ advantages:
     button_text: 'Termin vereinbaren'
     type: neues_set
     enabled: true
+    header_outside: 'Lorem Ipsum'
+    description_outside: |-
+      Wir vermitteln Immobilien in Berlin & Brandenburg. Als 100%ige Tochter der Berliner Volksbank eG und damit im VR-Banken-Verbund greifen wir dabei auf ein riesiges Netzwerk zum Thema Immobilien und deren Finanzierung und Versicherung zurück. Neben dem klassischen Verkauf von Wohnimmobilien und Grundstücken betreuen wir auch Bauträger und deren Neubauprojekte, Investoren sowie Zwangsversteigerungs- und Bieterverfahren. Der Verkauf oder Kauf einer Immobilie ist für die meisten Menschen eine der wichtigsten Entscheidungen im Leben. Wer dabei Zeit, Ärger und Geld sparen will, beauftragt einen professionellen Immobilienvermittler. Gleichzeitig ist das Zuhause immer Privatsphäre, ob für Eigennutzer oder für Mieter bei Kapitalanlagen. Wir begegnen dieser Verantwortung mit großem Respekt.
+      Gern unterstützen wir auch Sie dabei. Rufen Sie uns einfach an, wir kommen vorbei. Wir kennen nicht nur Ihren Kiez, wir sind auch dort.
+
+      Nach Vereinbarung finden Sie uns auch an diesen Filialstandorten der Berliner Volksbank:
+      Berlin: Tegel, Weißensee, Rudow, Zehlendorf und Spandau
+      Brandenburg: Königs Wusterhausen, Bernau, Strausberg, Potsdam und Gransee
+
+      Unser Büro in der Bundesallee hilft Ihnen gerne weiter und nennt Ihnen die passenden Ansprechpartner.
 services_header_h2: 'Unsere Leistungen'
 services_text: 'Maßgeschneiderte Bewertungslösungen für jeden Bedarf.'
 services_replicator:
