@@ -34,9 +34,13 @@ long_team_description:
         type: text
         text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. '
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1719307089
+updated_at: 1719310347
 duplicated_from: 8b2e43f1-181d-4bf8-8293-76a5995bb74f
 phone: '+49 (30) 56 55555 18'
 mobilnummer: '+49 171718101'
-team: makler
+team: office
+image_portrait:
+  - team/800x800-mareenveit-01.jpg
+image_overview:
+  - team/800x800-mareenveit-01.jpg
 ---
