@@ -1,5 +1,6 @@
 ---
-id: 18d1f133-1a6c-471b-a8a4-e63fdd4f6608
+id: 73b2ff94-0728-4f71-9b1c-4f02b9203ecf
+published: false
 blueprint: team
 title: 'Peter Schlüter'
 first_name: Peter
@@ -35,7 +36,7 @@ long_team_description:
         text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. '
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
 updated_at: 1719314988
-duplicated_from: 6b313fcb-2a71-4a29-86e3-ec4e2c1edeea
+duplicated_from: 18d1f133-1a6c-471b-a8a4-e63fdd4f6608
 phone: '+49 (30) 56 55555 30'
 mobilnummer: '+49 (0)151 / 74 46 49 66'
 team: makler
