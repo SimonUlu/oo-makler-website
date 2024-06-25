@@ -1,7 +1,7 @@
 tree:
   -
     id: eab438ae-e3b9-492e-9278-2a27212b0ade
-    title: Immobilienportfolio
+    title: Immobilienangebot
     url: '/immobilien?filter[vermarktungsart][0]=Kauf'
   -
     id: 57c0b37f-ed4e-46d0-ae09-a4ddb921a654
@@ -43,5 +43,5 @@ tree:
         url: /informieren-aktuelles
       -
         id: 47773695-06d0-4c17-a252-f048ed636599
-        title: 'Lage, Lage, Lage'
-        url: /informieren-stadtteile
+        title: Standorte
+        url: ueber-uns-stadtteile
