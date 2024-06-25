@@ -96,7 +96,7 @@ stadtteile:
     table_field_3: 'Lorem Ipsum'
     table_field_4: 'Lorem Ipsum'
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1719327710
+updated_at: 1719327787
 center_lng: '9.933333'
 center_lat: '49.783333'
 zoom: '11'
@@ -163,6 +163,14 @@ offices:
     description: 'Lorem Ipsum'
     longitude: '13.449796946357338'
     latitude: '52.54806512761706'
+    type: neues_set
+    enabled: true
+  -
+    id: lxujci0v
+    title: 'Büro Süd (Berlin-Rudow)'
+    description: 'Lorem Ipsum'
+    longitude: '13.497200609441908'
+    latitude: '52.41670666205342'
     type: neues_set
     enabled: true
 ---
