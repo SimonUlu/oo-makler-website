@@ -96,7 +96,7 @@ stadtteile:
     table_field_3: 'Lorem Ipsum'
     table_field_4: 'Lorem Ipsum'
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1719328588
+updated_at: 1719328686
 center_lng: '9.933333'
 center_lat: '49.783333'
 zoom: '11'
@@ -225,4 +225,18 @@ offices:
     ansprechpartner_function: Immobilienmakler
     phone: '+49 (30) 56 55555 41'
     mail: andreas.richter@bvbi.de
+  -
+    id: lxujuyrv
+    title: 'Büro KW (Königs-Wusterhausen)'
+    description: 'Lorem Ipsum'
+    longitude: '13.630203935727238'
+    latitude: '52.2964732958232'
+    type: neues_set
+    enabled: true
+    street: 'Bahnhofstraße 15a'
+    ort: '15711 Königs-Wusterhausen'
+    ansprechpartner: 'Peter Schlüter'
+    ansprechpartner_function: Immobilienmakler
+    phone: '+49 (30) 56 55555 30'
+    mail: peter.schlueter@bvbi.de
 ---
