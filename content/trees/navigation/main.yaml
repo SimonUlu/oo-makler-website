@@ -3,11 +3,6 @@ tree:
     id: 57c0b37f-ed4e-46d0-ae09-a4ddb921a654
     title: Kaufen
     url: /kaufen
-    children:
-      -
-        id: 616811e2-b7db-4d8d-8f19-18fb9a815696
-        title: Immobilienangebot
-        url: /immobilien
   -
     id: eab438ae-e3b9-492e-9278-2a27212b0ade
     title: Immobilienangebot
