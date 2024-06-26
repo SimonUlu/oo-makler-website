@@ -7,7 +7,6 @@ use Statamic\Facades\Entry;
 
 class LocationTable extends Component
 {
-
     public $offices;
 
     public $locations;
@@ -23,7 +22,8 @@ class LocationTable extends Component
         return view('livewire.location-table');
     }
 
-    private function getAllOffices() {
+    private function getAllOffices()
+    {
         $offices = Entry::query()
             ->where('collection', 'standorte')
             ->where('published', true)
@@ -37,7 +37,8 @@ class LocationTable extends Component
         return $offices;
     }
 
-    private function getAllLocations() {
+    private function getAllLocations()
+    {
         $locations = Entry::query()
             ->where('collection', 'standorte')
             ->where('published', true)
@@ -48,9 +49,9 @@ class LocationTable extends Component
         foreach ($locations as $location) {
             // Angenommen, jede Location hat ein Feld `office_key`, das dem `key` eines Büros entspricht
             $officeKey = $location->get('office');
-    
+
             // Überprüfen, ob das Büro schon im Array existiert, wenn nicht, initialisieren
-            if (!array_key_exists($officeKey, $locationsByOffices)) {
+            if (! array_key_exists($officeKey, $locationsByOffices)) {
                 $locationsByOffices[$officeKey] = [];
             }
 
@@ -58,9 +59,9 @@ class LocationTable extends Component
 
             // Hinzufügen der extrahierten Daten zum entsprechenden Büro
             $locationsByOffices[$officeKey][] = $items;
-    
+
         }
-        
+
         $this->locations = $locationsByOffices;
 
     }
