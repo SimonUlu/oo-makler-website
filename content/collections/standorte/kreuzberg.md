@@ -3,7 +3,7 @@ id: 0cb621f7-b874-48e2-8733-8345d9c7140b
 blueprint: standorte
 title: Kreuzberg
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1719392323
+updated_at: 1719393117
 thumbnail_image:
   - content_bewertungvorort.jpg
 longitude: '13.3218919'
