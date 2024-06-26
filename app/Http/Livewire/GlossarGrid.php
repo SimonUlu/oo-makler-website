@@ -7,7 +7,6 @@ use Statamic\Facades\Entry;
 
 class GlossarGrid extends Component
 {
-
     public $entries;
 
     public $orderedEntries;
@@ -15,10 +14,12 @@ class GlossarGrid extends Component
     public function render()
     {
         $this->getAllGlossarArticles();
+
         return view('livewire.glossar-grid');
     }
 
-    private function getAllGlossarArticles() {
+    private function getAllGlossarArticles()
+    {
 
         $entries = Entry::query()
             ->where('collection', 'lexikon')
@@ -31,7 +32,8 @@ class GlossarGrid extends Component
 
     }
 
-    private function sortEntries() {
+    private function sortEntries()
+    {
         // Zuerst sortieren wir die Einträge nach dem Titel
         $sortedEntries = $this->entries->sortBy(function ($entry) {
             return $entry['title'];
@@ -39,7 +41,7 @@ class GlossarGrid extends Component
             // Konvertiere jedes Entry-Objekt in ein Array
             return $entry->toArray();
         });
-    
+
         // Dann gruppieren wir die sortierten Einträge nach dem ersten Buchstaben des Titels
         $this->orderedEntries = $sortedEntries->groupBy(function ($item) {
             return strtoupper(substr($item['title'], 0, 1));
