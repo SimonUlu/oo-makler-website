@@ -61,8 +61,6 @@ class LexikonController extends Component
                 // Zugriff auf die Kategorie-Daten des Eintrags
                 $categories = $entry->get('category', []);
 
-                dd($categories);
-
                 // Prüfen, ob die ausgewählte Kategorie in den Kategorien des Eintrags enthalten ist
                 return in_array($this->selectedCategory, $categories);
             });
