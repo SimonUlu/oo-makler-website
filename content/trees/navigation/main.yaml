@@ -1,12 +1,12 @@
 tree:
   -
-    id: eab438ae-e3b9-492e-9278-2a27212b0ade
-    title: Immobilienangebot
-    url: '/immobilien?filter[vermarktungsart][0]=Kauf'
-  -
     id: 57c0b37f-ed4e-46d0-ae09-a4ddb921a654
     title: Kaufen
     url: /kaufen
+  -
+    id: eab438ae-e3b9-492e-9278-2a27212b0ade
+    title: Immobilienangebot
+    url: '/immobilien?filter[vermarktungsart][0]=Kauf'
   -
     id: 3eba7819-a5a9-4caa-84c7-2a82a6ef44c4
     title: Verkaufen
