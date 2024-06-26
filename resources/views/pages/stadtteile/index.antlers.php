@@ -9,14 +9,16 @@
     </div>
 </section>
 
-
-<section class="w-full mx-auto py-12 lg:py-24 bg-gray-50">
-    <div class="max-w-7xl px-4 lg:px-10 mx-auto">
-        {{partial:stadtteile/index/table}}
-    </div>
+<section class="w-full">
+    {{partial:stadtteile/index/location-table}}
 </section>
 
 <section class="w-full">
+    <div class="relative max-w-7xl mx-auto lg:px-10">
+        <h2 class="text-4xl font-bold tracking-tight text-primary lg:text-5xl mb-8 max-w-5xl mx-auto text-center">
+            Hier sind wir zu finden!
+        </h2>
+    </div>
     {{partial:stadtteile/index/location-map}}
 </section>
 

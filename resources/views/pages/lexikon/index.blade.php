@@ -6,5 +6,5 @@
         @include('partials.headers.news.news-header')
     </div>
 
-    @livewire('lexikon-controller')
+    @livewire('glossar-grid')
 @endsection
