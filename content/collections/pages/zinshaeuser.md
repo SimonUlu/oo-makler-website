@@ -4,8 +4,8 @@ published: false
 blueprint: leistungen
 view_model: App\ViewModels\VerkaufenViewModel
 template: pages/leistungen/cta-page
-title: 'Gewerbeimmobilien (Dupliziert)'
-subtitle: 'Ob Einzelhandel, Büro oder Hotel – unsere Experten unterstützen Sie bei der Planung und Realisierung neuer Gewerbebauten ebenso wie bei der Optimierung oder beim Verkauf Ihres Bestandes'
+title: Zinshäuser
+subtitle: 'Renditeobjekte verkaufen oder kaufen - wir bieten die passenden Lösungen'
 description: 'Lorem Ipsum'
 subheaderheadline: Gewerbeimmobilien
 subheaderdescription: 'Lorem Ipsum'
@@ -143,7 +143,7 @@ seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1719496807
+updated_at: 1719496866
 headerbild:
   - architecture-gef0672c68_1920.jpg
 stepsheader: 'UNSER VORGEHEN.'
