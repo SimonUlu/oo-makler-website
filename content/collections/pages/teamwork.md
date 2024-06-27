@@ -4,11 +4,11 @@ published: false
 blueprint: leistungen
 view_model: App\ViewModels\VerkaufenViewModel
 template: pages/leistungen/cta-page
-title: 'Zinshäuser (Dupliziert)'
+title: 'Das sind wir'
 subtitle: 'Renditeobjekte verkaufen oder kaufen - wir bieten die passenden Lösungen'
 description: 'Lorem Ipsum'
-subheaderheadline: Zinshäuser
-subheaderdescription: 'Lorem Ipsum'
+subheaderheadline: 'Erfolg hat mit Menschen, Menschen und Menschen zu tun'
+subheaderdescription: 'Unsere Mitarbeiterinnen und Mitarbeiter sind unser größter Wettbewerbsvorteil. Mit offener Kommunikation, Wertschätzung und kontinuierlicher Weiterbildung sorgen wir für ein positives Arbeitsklima.'
 content_image_1:
   - architecture-gef0672c68_1920.jpg
 imagesectionheader: 'Lorem Ipsum'
@@ -143,7 +143,7 @@ seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1719497312
+updated_at: 1719501156
 headerbild:
   - architecture-gef0672c68_1920.jpg
 stepsheader: 'UNSER VORGEHEN.'
@@ -509,7 +509,7 @@ content_with_image_replicator_two:
 advantages:
   -
     id: lww6joov
-    header: Off-Market-Angebote
+    header: 'Voneinander lernen'
     image:
       - architecture-gef0672c68_1920.jpg
     description: 'Möchten auch Sie künftig passende Angebote zu Offmarket-Immobilien erhalten?'
@@ -517,19 +517,19 @@ advantages:
     button_text: 'Jetzt Ankaufsprofil senden'
     type: neues_set
     enabled: true
-    header_outside: Off-Market-Angebote
-    description_outside: "Der Verkauf von Wohn- und Geschäftshäusern, Mehrfamilienhäusern und Wohnungspaketen wird oft nicht 'an die große Glocke gehängt'. Die diskrete Vermarktung ist unser Geschäft. Mit einem großen Teil der in Berlin engagierten Immobilieninvestoren - vom privaten Bestandshalter über klassische Immobiliengesellschaften bis hin zu Family-Offices, Versicherungen, Fonds und Pensionskassen - stehen wir in regelmäßigem Austausch. Meist werden die Eckwerte für gewünschte Immobilieninvestments in Ankaufsprofilen zusammengefasst. So wird sichergestellt, dass immer nur die passenden Immobilien unseren Investoren vorgestellt werden, die dann schnell über einen Ankauf entscheiden."
+    header_outside: 'Voneinander lernen'
+    description_outside: 'Ein Dschungel von Gesetzen und ständige Änderungen im Immobilienmarkt sind eine Herausforderung für alle Beteiligten, ob Verkäufer, Käufer oder Makler. GEG, GWG, UWG? Über die gesetzliche Fortbildungspflicht hinaus, die für Immobilienmakler seit 2018 gilt, führen wir regelmäßig interne Schulungen durch, mit eigenen Experten oder mit externen Referenten. Erklären, diskutieren, verstehen.'
   -
     id: lww6kp2c
-    header: 'Marktgerechte Platzierung Ihrer Immobilie'
+    header: 'Miteinander handeln'
     image:
       - architecture-gef0672c68_1920.jpg
-    description: 'Unsere Experten bewerten Ihre Immobilie vor Ort mit höchster Genauigkeit für eine maßgeschneiderte Einschätzung.'
+    description: 'Wir schätzen die individuellen Fähigkeiten und Talente unser Mitarbeiterinnnen und Mitarbeiter. Mit ihnen erreichen wir große und ambitionierte Ziele und mit flachen Hierarchien ebnen wir kurze Entscheidungswege. Jeder Mensch zählt und sein Input ist wertvoll, um unsere internen Arbeitsprozesse zu hinterfragen und Lösungen vorzuschlagen.'
     button_link: /
     button_text: 'Jetzt Termin vereinbaren'
     type: neues_set
     enabled: true
-    header_outside: 'Marktgerechte Platzierung Ihrer Immobilie'
+    header_outside: 'Miteinander handeln'
     description_outside: |-
       Anders als bei Immobilien, die selbst bewohnt werden sollen, spielen Emotionen beim Ankauf von Zinshäusern eine deutlich kleinere Rolle. Sicherlich verliebt sich auch mal ein Investor in den schmuck sanierten Stuckaltbau und zahlt dafür ein paar Euro mehr. Auf jeden Fall soll und muss sich ein Immobilieninvestment auch finanziell rechnen. Wir wissen, wie Investoren rechnen (müssen) und ihre Ankaufsentscheidung vorbereiten - das sogenannte Due Dilligence.
 
@@ -538,11 +538,9 @@ advantages:
       Die BVBI unterstützt Verkäufer tatkräftig bei der Zusammenstellung aller relevanter Unterlagen und bereitet diese datenschutzkonform auf. So können potentielle Investoren zügig zu einer fundierten Ankaufsentscheidung kommen.
   -
     id: lxxc45b3
-    header_outside: Ferienimmobilien
-    description_outside: |-
-      Wer eine Ferienimmobilie für Family & Friends sucht, wird bei der BVBI ebenso fündig wie jene, die mit dem Urlaubsdomizil Geld verdienen wollen. Ferienwohnungen und -häuser aus zweiter Hand oder Objekte im Neubau runden das Angebot für ein Immobilieninvestment ab.
-      Die BVBI konzentriert sich hier traditionell auf die Region Brandenburg, Müritz und natürlich die Ostseeküste samt Inseln. Wir stehen sowohl Projektentwicklern bei der Schaffung neuer Feriendomizile ebenso zur Seite wie Verkäufern einzelner Objekte und natürlich allen Kaufinteressenten.
-    header: Ferienimmobilien
+    header_outside: 'Teamwork makes the dream work'
+    description_outside: 'Wir haben Spaß bei der Arbeit. Weil wir lieben, was wir tun. Und weil wir es können. Bei uns kommen die besten Köpfe zusammen. In unserem Team arbeiten gut ausgebildete Expertinnen und Experten mit kaufmännischer Ausbildung oder Studium im Immobilien- und Finanzsektor. Die Vernetzung von Kompetenzen schafft die hohe Qualität, von der Sie profitieren.'
+    header: 'Teamwork makes the dream work'
     image:
       - architecture-gef0672c68_1920.jpg
     type: neues_set
