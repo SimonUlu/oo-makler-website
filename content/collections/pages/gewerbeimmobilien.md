@@ -3,7 +3,7 @@ id: 029e42ef-e916-4f19-9a69-4cc641216a7c
 blueprint: leistungen
 view_model: App\ViewModels\VerkaufenViewModel
 template: pages/leistungen/cta-page
-title: Investieren
+title: Gewerbeimmobilien
 subtitle: 'Mit uns zügig und erfolgreich verkaufen'
 description: 'IHRE VORTEILE – UNSERE BESONDEREN LEISTUNGEN SPEZIELL FÜR SIE:'
 subheaderheadline: 'IHRE VORTEILE AUF EINEN BLICK.'
@@ -142,7 +142,7 @@ seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1719494863
+updated_at: 1719494989
 headerbild:
   - architecture-gef0672c68_1920.jpg
 stepsheader: 'UNSER VORGEHEN.'
