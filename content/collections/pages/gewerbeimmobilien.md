@@ -142,7 +142,7 @@ seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1719496807
+updated_at: 1719497122
 headerbild:
   - architecture-gef0672c68_1920.jpg
 stepsheader: 'UNSER VORGEHEN.'
@@ -533,6 +533,13 @@ advantages:
       Immobilieninvestments sind immer langfristige Entscheidungen für Unternehmen. Aber nicht nur der Markt entwickelt sich kontinuierlich, auch die Rahmenbedingungen sind ständigen Veränderungen unterworfen. Auch wenn die Immobilie gestern noch passte, kann es morgen schon günstigere Alternativen geben. 
 
       Für Immobilien, die nicht zum betriebsnotwendigen Vermögen gehören, entwickeln wir fundierte Handlungsstrategien, von der Analyse des Portfolios über Aufteilungs- und Restrukturierungspläne bis hin zu Sale-and-lease-back-Konzepten.
+  -
+    id: lxxc5ig4
+    header_outside: 'Gute Entscheidungen gut umsetzen'
+    description_outside: 'Gemeinsam mit Ihnen erstellen wir Ihr Anforderungsprofil und suchen gezielt und mit präziser Standortanalyse nach passenden Objekten, die den wirtschaftlichen Erfolg Ihres Unternehmens sichern. Sie möchten Ihre Gewerbeimmobilie verkaufen? Oder suchen einen dauerhaften Mieter?  Erst der richtige Branchenmix macht Gewerbeimmobilien erfolgreich. Große Kette, kleine Boutique, Dienstleister, Anwaltskanzlei oder Arztpraxis? Ankermieter oder Pächter einer Ergänzungsfläche? Mit unserem dicht geknüpften, lokalen Netzwerk und direktem Kontakt zu den Firmenkundenberatern der Berliner Volksbank finden wir die passenden Käufer oder langfristigen Mieter für Ihre Gewerbeimmobilie.'
+    header: 'Gute Entscheidungen gut umsetzen'
+    type: neues_set
+    enabled: true
 services_header_h2: 'Unsere Leistungen'
 services_text: 'Maßgeschneiderte Bewertungslösungen für jeden Bedarf.'
 services_replicator:
