@@ -1,13 +1,12 @@
 ---
 id: 67c00728-6f1e-4035-a76e-9f7de6b8e594
-published: false
 blueprint: leistungen
 view_model: App\ViewModels\VerkaufenViewModel
 template: pages/leistungen/cta-page
-title: 'Gewerbeimmobilien (Dupliziert)'
-subtitle: 'Ob Einzelhandel, Büro oder Hotel – unsere Experten unterstützen Sie bei der Planung und Realisierung neuer Gewerbebauten ebenso wie bei der Optimierung oder beim Verkauf Ihres Bestandes'
+title: Zinshäuser
+subtitle: 'Renditeobjekte verkaufen oder kaufen - wir bieten die passenden Lösungen'
 description: 'Lorem Ipsum'
-subheaderheadline: Gewerbeimmobilien
+subheaderheadline: Zinshäuser
 subheaderdescription: 'Lorem Ipsum'
 content_image_1:
   - architecture-gef0672c68_1920.jpg
@@ -143,7 +142,7 @@ seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1719496807
+updated_at: 1719497312
 headerbild:
   - architecture-gef0672c68_1920.jpg
 stepsheader: 'UNSER VORGEHEN.'
@@ -509,19 +508,19 @@ content_with_image_replicator_two:
 advantages:
   -
     id: lww6joov
-    header: 'Die BVBI für Unternehmen'
+    header: Off-Market-Angebote
     image:
       - architecture-gef0672c68_1920.jpg
-    description: 'Unsere Experten bewerten Ihre Immobilie vor Ort mit höchster Genauigkeit für eine maßgeschneiderte Einschätzung.'
-    button_link: /
-    button_text: 'Jetzt Termin vereinbaren'
+    description: 'Möchten auch Sie künftig passende Angebote zu Offmarket-Immobilien erhalten?'
+    button_link: investment@bvbi.de.
+    button_text: 'Jetzt Ankaufsprofil senden'
     type: neues_set
     enabled: true
-    header_outside: 'Die BVBI für Unternehmen'
-    description_outside: 'Unsere Muttergesellschaft, die Berliner Volksbank eG, ist aus Tradition eine Bank für den Mittelstand. Unser besonderes Leistungsangebot für Unternehmen fußt daher auf einem langjährigen Erfahrungsschatz.  In enger Kooperation mit den Kundenbetreuern der Berliner Volksbank erstellen wir auch für Ihr Unternehmen ein passgenaues Immobilienkonzept. Ob Miete, Pacht oder Eigentum für Ihr Unternehmen langfristig die richtige Wahl ist, analysieren wir gemeinsam mit Ihnen.'
+    header_outside: Off-Market-Angebote
+    description_outside: "Der Verkauf von Wohn- und Geschäftshäusern, Mehrfamilienhäusern und Wohnungspaketen wird oft nicht 'an die große Glocke gehängt'. Die diskrete Vermarktung ist unser Geschäft. Mit einem großen Teil der in Berlin engagierten Immobilieninvestoren - vom privaten Bestandshalter über klassische Immobiliengesellschaften bis hin zu Family-Offices, Versicherungen, Fonds und Pensionskassen - stehen wir in regelmäßigem Austausch. Meist werden die Eckwerte für gewünschte Immobilieninvestments in Ankaufsprofilen zusammengefasst. So wird sichergestellt, dass immer nur die passenden Immobilien unseren Investoren vorgestellt werden, die dann schnell über einen Ankauf entscheiden."
   -
     id: lww6kp2c
-    header: 'Immobilienbewertung online'
+    header: 'Marktgerechte Platzierung Ihrer Immobilie'
     image:
       - architecture-gef0672c68_1920.jpg
     description: 'Unsere Experten bewerten Ihre Immobilie vor Ort mit höchster Genauigkeit für eine maßgeschneiderte Einschätzung.'
@@ -529,11 +528,24 @@ advantages:
     button_text: 'Jetzt Termin vereinbaren'
     type: neues_set
     enabled: true
-    header_outside: 'Chancen erkennen'
+    header_outside: 'Marktgerechte Platzierung Ihrer Immobilie'
     description_outside: |-
-      Immobilieninvestments sind immer langfristige Entscheidungen für Unternehmen. Aber nicht nur der Markt entwickelt sich kontinuierlich, auch die Rahmenbedingungen sind ständigen Veränderungen unterworfen. Auch wenn die Immobilie gestern noch passte, kann es morgen schon günstigere Alternativen geben. 
+      Anders als bei Immobilien, die selbst bewohnt werden sollen, spielen Emotionen beim Ankauf von Zinshäusern eine deutlich kleinere Rolle. Sicherlich verliebt sich auch mal ein Investor in den schmuck sanierten Stuckaltbau und zahlt dafür ein paar Euro mehr. Auf jeden Fall soll und muss sich ein Immobilieninvestment auch finanziell rechnen. Wir wissen, wie Investoren rechnen (müssen) und ihre Ankaufsentscheidung vorbereiten - das sogenannte Due Dilligence.
 
-      Für Immobilien, die nicht zum betriebsnotwendigen Vermögen gehören, entwickeln wir fundierte Handlungsstrategien, von der Analyse des Portfolios über Aufteilungs- und Restrukturierungspläne bis hin zu Sale-and-lease-back-Konzepten.
+      Hier spielt der Zustand des Hauses eine wesentliche Rolle. Welche Maßnahmen müssen kurz-, mittel- und langfristig angegangen werden? Auch und gerade im Hinblick auf das GEG (Gebäudeenergiegesetz). Stecken im Grundstück noch baurechtliche Reserven, z. B. durch Aufstockung oder Anbau? Auch das prüfen wir zur Einschätzung des marktgerechten Wertes. Ganz besonderes Augenmerk wird natürlich auf die Mieteinkünfte gelegt. Insbesondere für Wohnungsmietverträge gibt es zahlreiche gesetzliche Regelungen, die für die Nachhaltigkeit der Mietrendite entscheidende Tragweite entfalten.
+
+      Die BVBI unterstützt Verkäufer tatkräftig bei der Zusammenstellung aller relevanter Unterlagen und bereitet diese datenschutzkonform auf. So können potentielle Investoren zügig zu einer fundierten Ankaufsentscheidung kommen.
+  -
+    id: lxxc45b3
+    header_outside: Ferienimmobilien
+    description_outside: |-
+      Wer eine Ferienimmobilie für Family & Friends sucht, wird bei der BVBI ebenso fündig wie jene, die mit dem Urlaubsdomizil Geld verdienen wollen. Ferienwohnungen und -häuser aus zweiter Hand oder Objekte im Neubau runden das Angebot für ein Immobilieninvestment ab.
+      Die BVBI konzentriert sich hier traditionell auf die Region Brandenburg, Müritz und natürlich die Ostseeküste samt Inseln. Wir stehen sowohl Projektentwicklern bei der Schaffung neuer Feriendomizile ebenso zur Seite wie Verkäufern einzelner Objekte und natürlich allen Kaufinteressenten.
+    header: Ferienimmobilien
+    image:
+      - architecture-gef0672c68_1920.jpg
+    type: neues_set
+    enabled: true
 services_header_h2: 'Unsere Leistungen'
 services_text: 'Maßgeschneiderte Bewertungslösungen für jeden Bedarf.'
 services_replicator:
