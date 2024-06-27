@@ -572,7 +572,7 @@ tabs:
               visibility: visible
               hide_display: false
   team_content:
-    display: 'Content Team'
+    display: Content
     sections:
       -
         display: 'Content Section 2'
