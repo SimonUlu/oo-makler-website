@@ -5,7 +5,7 @@ view_model: App\ViewModels\VerkaufenViewModel
 template: pages/leistungen/cta-page
 title: Gewerbeimmobilien
 subtitle: 'Ob Einzelhandel, Büro oder Hotel – unsere Experten unterstützen Sie bei der Planung und Realisierung neuer Gewerbebauten ebenso wie bei der Optimierung oder beim Verkauf Ihres Bestandes'
-description: 'IHRE VORTEILE – UNSERE BESONDEREN LEISTUNGEN SPEZIELL FÜR SIE:'
+description: 'Lorem Ipsum'
 subheaderheadline: Gewerbeimmobilien
 subheaderdescription: 'Unsere Besonderen Leistungen speziell für Sie:'
 content_image_1:
@@ -142,7 +142,7 @@ seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1719495255
+updated_at: 1719495330
 headerbild:
   - architecture-gef0672c68_1920.jpg
 stepsheader: 'UNSER VORGEHEN.'
@@ -525,9 +525,14 @@ advantages:
       - architecture-gef0672c68_1920.jpg
     description: 'Unsere Experten bewerten Ihre Immobilie vor Ort mit höchster Genauigkeit für eine maßgeschneiderte Einschätzung.'
     button_link: /
-    button_text: 'Jetzt online bewerten'
+    button_text: 'Jetzt Termin vereinbaren'
     type: neues_set
     enabled: true
+    header_outside: 'Chancen erkennen'
+    description_outside: |-
+      Immobilieninvestments sind immer langfristige Entscheidungen für Unternehmen. Aber nicht nur der Markt entwickelt sich kontinuierlich, auch die Rahmenbedingungen sind ständigen Veränderungen unterworfen. Auch wenn die Immobilie gestern noch passte, kann es morgen schon günstigere Alternativen geben. 
+
+      Für Immobilien, die nicht zum betriebsnotwendigen Vermögen gehören, entwickeln wir fundierte Handlungsstrategien, von der Analyse des Portfolios über Aufteilungs- und Restrukturierungspläne bis hin zu Sale-and-lease-back-Konzepten.
 services_header_h2: 'Unsere Leistungen'
 services_text: 'Maßgeschneiderte Bewertungslösungen für jeden Bedarf.'
 services_replicator:
