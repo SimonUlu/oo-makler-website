@@ -14,7 +14,15 @@ tree:
   -
     id: 9ea4bdb1-aef8-4379-9ce9-c9f9061d98a0
     title: Investieren
-    url: /investieren
+    children:
+      -
+        id: 49d3866d-ad94-4f1e-8b2d-7d2993e1f8cc
+        title: Gewerbeimmobilien
+        url: gewerbeimmobilien
+      -
+        id: 4007c1fe-77e6-4a4b-ba3e-7b19c38d3f40
+        title: Zinshäuser
+        url: /zinshäuser
   -
     id: 5a2a3d46-e238-481a-b66a-5793e554b2e9
     title: 'Über uns'
