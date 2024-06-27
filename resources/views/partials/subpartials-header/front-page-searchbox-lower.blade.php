@@ -1,7 +1,7 @@
 <div class="relative w-full">
     <h2
         class="mx-auto mt-4 mb-0 font-bold tracking-tight text-center sm:text-xl lg:pl-4 lg:mt-0 lg:mb-4 lg:text-3xl lg:text-left text-l text-secondary">
-        Traumimmobilie finden
+        Immobilie finden
     </h2>
     <form action="{{ route('immobilien.filtered') }}" method="POST"
         class="grid gap-y-4 p-4 mx-auto mt-2 w-full max-w-5xl rounded-lg sm:mt-8 md:max-w-5xl lg:grid-cols-12 lg:gap-x-4 lg:mt-4 lg:max-w-7xl">
