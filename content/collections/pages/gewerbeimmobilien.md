@@ -4,9 +4,9 @@ blueprint: leistungen
 view_model: App\ViewModels\VerkaufenViewModel
 template: pages/leistungen/cta-page
 title: Gewerbeimmobilien
-subtitle: 'Mit uns zügig und erfolgreich verkaufen'
+subtitle: 'Ob Einzelhandel, Büro oder Hotel – unsere Experten unterstützen Sie bei der Planung und Realisierung neuer Gewerbebauten ebenso wie bei der Optimierung oder beim Verkauf Ihres Bestandes'
 description: 'IHRE VORTEILE – UNSERE BESONDEREN LEISTUNGEN SPEZIELL FÜR SIE:'
-subheaderheadline: 'IHRE VORTEILE AUF EINEN BLICK.'
+subheaderheadline: Gewerbeimmobilien
 subheaderdescription: 'Unsere Besonderen Leistungen speziell für Sie:'
 content_image_1:
   - architecture-gef0672c68_1920.jpg
@@ -142,7 +142,7 @@ seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1719494989
+updated_at: 1719495207
 headerbild:
   - architecture-gef0672c68_1920.jpg
 stepsheader: 'UNSER VORGEHEN.'
@@ -508,12 +508,12 @@ content_with_image_replicator_two:
 advantages:
   -
     id: lww6joov
-    header: 'Immobilienbewertung online'
+    header: 'Die BVBI für Unternehmen'
     image:
       - architecture-gef0672c68_1920.jpg
-    description: 'Unsere Experten bewerten Ihre Immobilie vor Ort mit höchster Genauigkeit für eine maßgeschneiderte Einschätzung.'
+    description: 'Unsere Muttergesellschaft, die Berliner Volksbank eG, ist aus Tradition eine Bank für den Mittelstand. Unser besonderes Leistungsangebot für Unternehmen fußt daher auf einem langjährigen Erfahrungsschatz.  In enger Kooperation mit den Kundenbetreuern der Berliner Volksbank erstellen wir auch für Ihr Unternehmen ein passgenaues Immobilienkonzept. Ob Miete, Pacht oder Eigentum für Ihr Unternehmen langfristig die richtige Wahl ist, analysieren wir gemeinsam mit Ihnen.'
     button_link: /
-    button_text: 'Jetzt online bewerten'
+    button_text: 'Jetzt Termin vereinbaren'
     type: neues_set
     enabled: true
   -
