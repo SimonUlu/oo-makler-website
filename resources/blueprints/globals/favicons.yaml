@@ -50,6 +50,18 @@ tabs:
                             visibility: visible
                             replicator_preview: true
                             hide_display: false
+                        -
+                          handle: text
+                          field:
+                            input_type: text
+                            antlers: false
+                            type: text
+                            display: text
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
               type: replicator
               display: favicon
               listable: hidden

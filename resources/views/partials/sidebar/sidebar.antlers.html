@@ -1,19 +1,32 @@
-<div class="fixed top-1/2 transform -translate-y-1/2 right-0 z-50">
-    <div class="bg-primary overflow-y-auto z-50">
+<div 
+    class="fixed top-1/2 transform -translate-y-1/2 right-0 z-50"
+    x-data="{ hover: false }"
+>
+    <div 
+        class="bg-primary overflow-y-auto z-50 transition-all"
+        :class="hover ? 'right-10' : 'right-0'"
+        @mouseenter="hover = true"
+        @mouseleave="hover = false"
+    >
         <div class="flex grow flex-col gap-y-5 overflow-y-auto bg-primary">
             <nav class="flex flex-1 flex-col">
                 <ul role="list" class="flex flex-1 flex-col gap-y-7 px-4 overflow-hidden">
                     <li>
-                        <ul role="list" class="-mx-2"> <!-- Hier wurde die divide-y Klasse hinzugefügt -->
+                        <ul role="list" class="-mx-2 ">
                             {{favicons:favicon}}
-                            <li class="py-2 -mx-4 px-4 border-t-2 border-y-white hover:bg-white first:border-t-0">
-                            <!-- Current: "bg-indigo-700 text-white", Default: "text-indigo-200 hover:text-white hover:bg-indigo-700" -->
+                            <li class="py-2 -mx-4 px-4 border-t-2 border-y-white hover:bg-white first:border-t-0 flex justify-between text-white hover:text-primary items-center">
                                 <a 
                                     target="_blank" 
                                     href="{{ url }}" 
-                                    class="text-white group hover:bg-white hover:text-primary flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold"
+                                    class="group flex gap-x-3 items-center rounded-md p-2 text-sm leading-6 font-semibold "
                                 >
-                                    {{svg}}
+                                    {{ svg }}
+                                    <span 
+                                        class="transition-all px-12 text-center"
+                                        x-show="hover"
+                                    >
+                                        {{text}}
+                                    </span>
                                 </a>
                             </li>
                             {{/favicons:favicon}}
