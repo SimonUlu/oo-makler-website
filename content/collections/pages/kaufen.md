@@ -142,7 +142,7 @@ seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1719324626
+updated_at: 1719499816
 headerbild:
   - architecture-gef0672c68_1920.jpg
 stepsheader: 'UNSER VORGEHEN.'
@@ -678,4 +678,7 @@ accordeon_list:
     description: 'Die Kosten für die Bewertung Ihrer Immobilie können je nach Umfang und ARt der Bewertung variieren.'
     type: neues_set
     enabled: true
+show_logos: false
+only_image: false
+show_faq: true
 ---

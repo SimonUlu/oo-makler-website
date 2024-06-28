@@ -1,6 +1,37 @@
 <div class="py-4 md:py-8">
     {{advantages}}
         <div class="pt-2 lg:pt-4 grid grid-cols-1 gap-8 lg:gap-16 mb-12 lg:mb-24 lg:flex {{ index % 2 == 0 ? 'lg:flex-row-reverse' : 'lg:flex-row' }}">
+            {{if only_image}}
+            <div class="items-center justify-center flex lg:flex-1 relative">
+                <div class="spinner" style="display: flex">
+                    <svg
+                        class="absolute inset-0 w-5 h-5 m-auto animate-spin"
+                        viewBox="0 0 24 24"
+                    >
+                        <circle
+                            class="opacity-25"
+                            cx="12"
+                            cy="12"
+                            r="10"
+                            stroke="currentColor"
+                            stroke-width="4"
+                        ></circle>
+                        <path
+                            class="opacity-75"
+                            fill="currentColor"
+                            d="M4 12a8 8 0 008 8V12A4 4 0 004 8"
+                        ></path>
+                    </svg>
+                </div>
+                <img
+                    class="object-cover w-full -lg lazy"
+                    data-src="{{image.0.url}}"
+                    alt="{{image.0.alt}}"
+                    loading="lazy"
+                    onload="this.parentElement.querySelector('.spinner').style.display = 'none';"
+                />
+            </div>
+            {{else}}
             <div class="pt-6 lg:flex-1">
                 <div class="aspect-h-4 aspect-w-3 bg-gray-200 sm:aspect-none group-hover:opacity-75 md:h-96">
                     <img src="{{image.0.url}}" alt="" class="h-full w-full object-cover object-center sm:h-full sm:w-full">
@@ -19,6 +50,7 @@
                     </div>
                 </div>
             </div>
+            {{/if}}
             <div class="space-y-4 sm:space-y-6 lg:space-y-8 lg:flex-1">
                 <div>
                     <h2

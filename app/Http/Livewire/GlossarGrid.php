@@ -11,6 +11,8 @@ class GlossarGrid extends Component
 
     public $orderedEntries;
 
+    public $searchString = '';
+
     public function render()
     {
         $this->getAllGlossarArticles();
@@ -23,12 +25,34 @@ class GlossarGrid extends Component
 
         $entries = Entry::query()
             ->where('collection', 'lexikon')
-            ->where('published', true)
-            ->get();
+            ->where('published', true);
 
         $this->entries = $entries;
 
+        $this->filterEntries($entries);
+
         $this->sortEntries();
+
+    }
+
+    private function filterEntries($query)
+    {
+
+        if (! empty($this->searchString)) {
+            $query->where('title', 'like', '%'.$this->searchString.'%'); // Sucht nach Posts, deren Titel den Suchbegriff enthalten
+        }
+
+        $this->entries = $query->get();
+
+        if (! empty($this->selectedCategory)) {
+            $this->entries = $this->posts->filter(function ($entry) {
+                // Zugriff auf die Kategorie-Daten des Eintrags
+                $categories = $entry->get('category', []);
+
+                // Prüfen, ob die ausgewählte Kategorie in den Kategorien des Eintrags enthalten ist
+                return in_array($this->selectedCategory, $categories);
+            });
+        }
 
     }
 

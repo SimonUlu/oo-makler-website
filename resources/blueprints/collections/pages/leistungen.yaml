@@ -78,6 +78,28 @@ tabs:
               visibility: visible
               replicator_preview: true
               hide_display: false
+          -
+            handle: show_logos
+            field:
+              default: false
+              type: toggle
+              display: show_logos
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: show_faq
+            field:
+              default: false
+              type: toggle
+              display: show_faq
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
   header_section:
     display: Header
     sections:
@@ -195,6 +217,17 @@ tabs:
       -
         display: 'Content Image Section'
         fields:
+          -
+            handle: only_image
+            field:
+              default: false
+              type: toggle
+              display: only_image
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
           -
             handle: advantages
             field:
