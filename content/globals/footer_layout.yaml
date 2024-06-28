@@ -6,69 +6,45 @@ data:
       headline: Leistungen
       pages:
         -
+          id: lnbrjblt
+          url: kaufen
+          name: Kaufen
+          type: neues_set
+          enabled: true
+        -
           id: lnbrj21o
           url: verkaufen
           name: Verkaufen
           type: neues_set
           enabled: true
         -
-          id: lnbrjblt
-          url: bewerten
-          name: Bewerten
-          type: neues_set
-          enabled: true
-        -
           id: lnbrjilt
-          url: beraten
-          name: Beraten
-          type: neues_set
-          enabled: true
-        -
-          id: lnbrjzjw
-          url: finanzieren
-          name: Finanzieren
-          type: neues_set
-          enabled: true
-        -
-          id: lw54axro
-          url: projektentwicklung
-          name: Projektentwicklung
+          url: '#'
+          name: Bauträger
           type: neues_set
           enabled: true
       type: neues_set
       enabled: true
     -
       id: lnbrk4uy
-      headline: Immobilien
+      headline: Informationen
       pages:
         -
           id: lnbrk9t6
-          url: '/immobilien?filter[ort]=&filter[objektart]=&filter[kaufpreis]=&filter[anzahl_zimmer]=&filter[warmmiete]=&filter[vermarktungsart][0]=Kauf'
-          name: 'Immobilien kaufen'
+          url: '#'
+          name: Informationen
           type: neues_set
           enabled: true
         -
           id: lnbrkydx
-          url: '/immobilien?filter[ort]=&filter[objektart]=&filter[kaufpreis]=&filter[anzahl_zimmer]=&filter[warmmiete]=&filter[vermarktungsart][0]=Miete'
-          name: 'Immobilien mieten'
-          type: neues_set
-          enabled: true
-      type: neues_set
-      enabled: true
-    -
-      id: lw54bg2g
-      headline: 'Über uns'
-      pages:
-        -
-          id: lw54blf5
           url: team
-          name: Team
+          name: 'Über uns'
           type: neues_set
           enabled: true
         -
-          id: lw54bq7t
-          url: aktuelles
-          name: Aktuelles
+          id: lxxc8jsi
+          url: informieren-stadtteile
+          name: Standorte
           type: neues_set
           enabled: true
       type: neues_set

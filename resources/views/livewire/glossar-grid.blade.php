@@ -18,7 +18,6 @@
                             </dd>
                         </div>
                 
-                        <!-- More questions... -->
                     </dl>
                     
                 @endforeach

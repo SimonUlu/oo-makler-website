@@ -572,7 +572,7 @@ tabs:
               visibility: visible
               hide_display: false
   team_content:
-    display: 'Content Team'
+    display: Content
     sections:
       -
         display: 'Content Section 2'
@@ -1522,14 +1522,14 @@ tabs:
                 - alignjustify
               smart_typography: false
               save_html: false
-              inline: false
+              inline: break
               toolbar_mode: fixed
               reading_time: false
               fullscreen: true
               allow_source: true
               enable_input_rules: true
               enable_paste_rules: true
-              remove_empty_nodes: false
+              remove_empty_nodes: true
               antlers: false
               link_noopener: false
               link_noreferrer: false
@@ -1543,6 +1543,8 @@ tabs:
               instructions_position: above
               visibility: visible
               hide_display: false
+              replicator_preview: true
+              word_count: false
           -
             handle: seo_content_statistics
             field:
