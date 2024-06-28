@@ -131,7 +131,8 @@ class TerminFormController extends FormComponent
 
     }
 
-    public function selectTimeSlot($timeSlot) {
+    public function selectTimeSlot($timeSlot)
+    {
         $this->time = $timeSlot;
     }
 
@@ -197,4 +198,3 @@ class TerminFormController extends FormComponent
         }
     }
 }
-
