@@ -27,6 +27,8 @@ class ProjectController extends Controller
         // get estates
         $estates = EstateHelper::getEstatesWithImages($request, $onOfficeService, $filters);
 
+        dd($estates);
+
         $project_categories = GlobalSet::find('estate_filter_configuration')->in('default')->get('categories');
 
         $categorizedProjects = [];
