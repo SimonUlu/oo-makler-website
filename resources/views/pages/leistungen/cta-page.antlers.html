@@ -112,6 +112,28 @@
 </section>
 {{/if}}
 
+{{if show_current_estates}}
+<section class="relative w-full px-4 lg:px-10 bg-white max-w-7xl">
+    <div class="w-full py-8 mx-auto lg:py-16">
+        <div class="text-center text-gray-900">
+            <h2 class="mb-4 mt-8 text-4xl font-bold tracking-tight text-primary lg:text-5xl ">
+                Unsere aktuellen Immobilien
+            </h2>
+            <p class="text-gray-500 sm:text-xl dark:text-gray-400 mb-12">
+                Werfen Sie einen Blick auf unsere neuesten Immobilien in Berlin und Umgebung
+            </p>
+        </div>
+
+        {{ partial:pages/estate/estate-columns-3-slider :estates="estates" :estateFields="estateFields" }}
+        <div class="py-4 mt-12 text-center">
+            <a href="/immobilien" class="fade-in-animation items-center px-6 py-3 mx-2 text-center text-white lg:px-5 focus:ring-4 focus:outline-none bg-secondary">
+                Alle Immobilien ansehen
+            </a>
+        </div>
+    </div>
+</section>
+{{/if}}
+
 <section>
     <div class="py-8 bg-white sm:py-16">
         <div class="mx-auto max-w-7xl px-4 lg:px-10">

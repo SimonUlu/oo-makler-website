@@ -100,6 +100,17 @@ tabs:
               visibility: visible
               replicator_preview: true
               hide_display: false
+          -
+            handle: show_current_estates
+            field:
+              default: false
+              type: toggle
+              display: show_current_estates
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
   header_section:
     display: Header
     sections:

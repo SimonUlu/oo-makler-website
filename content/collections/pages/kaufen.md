@@ -1,7 +1,7 @@
 ---
 id: b1c67f09-ca7b-4f67-a0ae-f7a22c44559c
 blueprint: leistungen
-view_model: App\ViewModels\VerkaufenViewModel
+view_model: App\ViewModels\KaufenViewModel
 template: pages/leistungen/cta-page
 title: Kaufen
 subtitle: 'Immobilienkauf mit uns ganz leicht.'
@@ -142,7 +142,7 @@ seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1719499816
+updated_at: 1719566761
 headerbild:
   - architecture-gef0672c68_1920.jpg
 stepsheader: 'UNSER VORGEHEN.'
@@ -463,7 +463,7 @@ seo_text:
         text: 'Helfen Sie den Suchmaschinen dieser Welt zu verstehen, für welche Kunden diese Website gebaut ist! In dem SEO-Bereich Ihrer neuen Website können Sie Ihr Unternehmen nochmals in wenigen Zeilen zusammenfassen und damit auch Suchmaschinen wie Google helfen, Ihre Website besser zu verstehen. Eine bessere Sichtbarkeit führt zu mehr Kunden und somit zu höheren Gewinnen! Worauf warten Sie noch? Holen Sie sich das Website-Template von InnoBrain und bringen Sie Ihre Online-Präsenz auf das nächste Level.'
 seo_headline_two: 'Erhöhen Sie Ihre Online-Sichtbarkeit durch Suchmaschinenoptimierung'
 duplicated_from: 1914c0f1-52bf-4914-aab7-0adbea602f23
-show_reference_estates: true
+show_reference_estates: false
 content_with_image_replicator_two:
   -
     id: lwqk8oph
@@ -680,5 +680,6 @@ accordeon_list:
     enabled: true
 show_logos: false
 only_image: false
-show_faq: true
+show_faq: false
+show_current_estates: true
 ---
