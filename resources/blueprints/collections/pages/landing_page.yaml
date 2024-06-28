@@ -1149,6 +1149,22 @@ tabs:
               visibility: visible
               hide_display: false
           -
+            handle: lexikon_img
+            field:
+              mode: list
+              container: images
+              restrict: false
+              allow_uploads: true
+              show_filename: true
+              show_set_alt: true
+              type: assets
+              display: lexikon_img
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
             handle: posts_btn
             field:
               input_type: text
@@ -1167,6 +1183,22 @@ tabs:
               listable: hidden
               instructions_position: above
               visibility: visible
+              hide_display: false
+          -
+            handle: lage_image
+            field:
+              mode: list
+              container: images
+              restrict: false
+              allow_uploads: true
+              show_filename: true
+              show_set_alt: true
+              type: assets
+              display: lage_image
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
               hide_display: false
   services_section:
     display: Services
