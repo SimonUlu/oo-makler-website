@@ -5,9 +5,9 @@
         @mouseover="hover = true"
         @mouseout="hover = false"
         class="bg-cover bg-no-repeat bg-center w-full h-[28rem] relative cursor-pointer rounded-lg"
-        style='background-image: url( "{{ $projekt['elements']['images'][0]["url"] }}" )'
+        style='background-image: url( "{{ $projekt['estate_images'][0]["url"] }}" )'
     >
-        <a href="/neubauprojekte/details/{{$projekt['elements']['Id']}}" target="_blank">
+        <a href="/neubauprojekte/details/{{$projekt['Id']}}" target="_blank">
             <div
                 x-bind:class="{ 'h-1/3': !hover, 'h-2/3': hover }"
                 class="transition-all w-full bg-primary-800 flex flex-col justify-end p-4 absolute bottom-0 overflow-hidden rounded-b-lg"
@@ -23,12 +23,12 @@
                         src="/logo_images/logo_white.png"
                         class="h-12 mr-3 pb-4"
                     />
-                    <h3 class="text-white font-bold text-2xl">
-                        {{$projekt['elements']['objekttitel']}}
+                    <h3 class="text-white font-bold text-xl">
+                        {{ \Illuminate\Support\Str::limit($projekt['objekttitel'], 60, $end='...') }}
                     </h3>
-                    <p class="text-white text-md"> {{$projekt['elements']['plz']}}  {{$projekt['elements']['ort']}}</p>
-                    <p x-show="hover" class="text-white text-md pt-2">
-                        {{ \Illuminate\Support\Str::limit($projekt['elements']['objektbeschreibung'], 150, $end='...') }}
+                    <p class="text-white text-base"> {{$projekt['plz']}}  {{$projekt['ort']}}</p>
+                    <p x-show="hover" class="text-white text-sm pt-2">
+                        {{ \Illuminate\Support\Str::limit($projekt['objektbeschreibung'], 150, $end='...') }}
                     </p>
                 </div>
                 <div

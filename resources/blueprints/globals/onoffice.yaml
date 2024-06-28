@@ -213,10 +213,11 @@ tabs:
                               home: Startseite
                               verkaufen: Verkaufen
                               kaufen: Kaufen
-                              referenzen: 'Referenzen'
+                              referenzen: Referenzen
                               standort_gesamt: 'Standort Gesamt'
                               standort_einzel: 'Standort Einzel'
                               ueber_uns: 'Über uns'
+                              projects: 'Projekte (Neubau)'
                             taggable: false
                             push_tags: false
                             multiple: false

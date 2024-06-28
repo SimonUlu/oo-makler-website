@@ -224,6 +224,20 @@ data:
           enabled: true
       type: neues_set
       enabled: true
+    -
+      id: lxyswc2f
+      home_view_model_filter_name: projects
+      replicator_field_filter:
+        -
+          id: lxysweex
+          array_filter:
+            label_id: stammobjekt
+            operator: '='
+            value: '1'
+          type: neues_set
+          enabled: true
+      type: neues_set
+      enabled: true
   statistics_replicator:
     -
       id: lwf391bd

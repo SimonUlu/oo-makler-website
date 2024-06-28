@@ -111,15 +111,3 @@ data:
       onofficelabel: status2obj_aktiv
       type: neues_set
       enabled: true
-    -
-      id: loyk1irs
-      name: Vorankündigung
-      onofficelabel: ind_Schl_3107
-      type: neues_set
-      enabled: true
-    -
-      id: loyk1pwf
-      name: Referenzobjekte
-      onofficelabel: ind_Schl_3109
-      type: neues_set
-      enabled: true

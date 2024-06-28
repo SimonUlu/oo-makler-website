@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Helpers\Estates\EstateHelper;
-use App\Services\OnOfficeService;
+use Statamic\View\View;
 use Illuminate\Http\Request;
 use Statamic\Facades\GlobalSet;
-use Statamic\View\View;
+use App\Services\OnOfficeService;
+use App\Helpers\Estates\EstateHelper;
+use App\Services\EstateHandlers\EstateEntryService;
 
 class ProjectController extends Controller
 {
@@ -23,13 +24,23 @@ class ProjectController extends Controller
         $imageSectionDescription = GlobalSet::find('onoffice_projects')->in('default')->get('imagesectiondescription');
         $imageSectionList = GlobalSet::find('onoffice_projects')->in('default')->get('imagesectionlist');
 
-        $filters = EstateHelper::createProjectFilter();
-        // get estates
-        $estates = EstateHelper::getEstatesWithImages($request, $onOfficeService, $filters);
+        $collectionName = 'estate_entries';
+        // check if there is a filter active
+        $homeViewModelFilters = GlobalSet::find('onoffice')->in('default')->get('home_view_model_filter');
 
-        dd($estates);
+        // Filter the collection to find the entry with the specific "home_view_model_filter_name"
+        $filteredEntryProjects = EstateEntryService::getFilteredEntry($homeViewModelFilters, 'projects');
+
+
+        // get filters
+        $filtersProjects = OnOfficeService::transformFilterArray($filteredEntryProjects);
+        $estates = EstateEntryService::getEstatesUnpaginated($filtersProjects, 3, 'erstellt_am', 'desc', $collectionName);
+
+
+        // dd($estates);
 
         $project_categories = GlobalSet::find('estate_filter_configuration')->in('default')->get('categories');
+
 
         $categorizedProjects = [];
 
@@ -40,8 +51,8 @@ class ProjectController extends Controller
             foreach ($project_categories as $category) {
 
                 // Falls die 'onofficelabel' der Kategorie  mit 'status' des elements übereinstimmt, fügt das element zur Kategorie hinzu.
-                if ($category['onofficelabel'] === $item['elements']['status2']) {
-                    $categorizedProjects[$category['name']][] = $item;
+                if ($category['onofficelabel'] === $item->data()->all()['status2']) {
+                    $categorizedProjects[$category['name']][] = $item->data()->all();
                 }
             }
         }
@@ -75,11 +86,6 @@ class ProjectController extends Controller
         }
 
         $estate = $onOfficeService->getEstateById($estateId);
-
-        if (empty($estate) || $estate['elements']['veroeffentlichen'] == '0' || $estate['elements']['referenz'] == '1') {
-            // return page not found view
-            return self::estateNotFound();
-        }
 
         // get info from cp
         $neubautenGlobals = GlobalSet::find('neubauten')->in('default')->get('neubau');
@@ -143,9 +149,12 @@ class ProjectController extends Controller
     private function loadSubEstates(OnOfficeService $onOfficeService, $estateId)
     {
         $response = $onOfficeService->getSubEstates($estateId);
+
+        // dd($response);
         $elements = $response['data']['records'][0]['elements'];
 
         $subEstateIds = $this->getAllIds($elements);
+
         $filter = EstateHelper::createSubEstateFilter($subEstateIds);
 
         return $onOfficeService->getEstatesWithFloorImages($filter);
@@ -164,5 +173,21 @@ class ProjectController extends Controller
         }
 
         return $values;
+    }
+
+    public function estateNotFound()
+    {
+        return (new View)
+            ->template('errors.404-estate')
+            ->layout('layouts.layoutblade')
+            ->with(
+                [
+                    'title' => '😳',
+                    'title_sub' => 'Diese Immobile ist nicht mehr in der Vermarktung.',
+                    'cta_text' => 'Damit das in Zukunft nicht nochmal passiert, jetzt direkt Suchauftrag erstellen.',
+                    'cta_button_link' => '/suchauftrag',
+                    'cta_button_text' => 'Suchauftrag erstellen',
+                ]
+            );
     }
 }

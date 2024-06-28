@@ -262,7 +262,7 @@ class OnOfficeService
         $result = $this->read()->get(
             data: $this->performanceFieldEstates,
             module: 'estate',
-            filters: array_merge($filters, $this->defaultFilter),
+            filters: array_merge($filters),
             offset: $page * $perPage,
             limit: $perPage
         )['data']['records'] ?? [];
