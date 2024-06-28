@@ -5,7 +5,7 @@
         scrolled: false,
         showNavigation: true,
         currentPage: window.location.pathname,
-        isSpecialPage: window.location.pathname.startsWith('/immobilien') || window.location.pathname.startsWith('/suchauftrag') || window.location.pathname.startsWith('/kontakt') || window.location.pathname == '/standorte' || window.location.pathname.startsWith('/datenschutz') || window.location.pathname.startsWith('/impressum'),
+        isSpecialPage: window.location.pathname.startsWith('/immobilien') || window.location.pathname.startsWith('/termin-vereinbaren') || window.location.pathname.startsWith('/suchauftrag') || window.location.pathname.startsWith('/kontakt') || window.location.pathname == '/standorte' || window.location.pathname.startsWith('/datenschutz') || window.location.pathname.startsWith('/impressum'),
         isImmobilienPage: window.location.pathname.startsWith('/immobilien'),
     }"
     @scroll.window="
@@ -70,18 +70,6 @@
             <div
                 class="items-center justify-end hidden xl:flex lg:gap-x-12 lg:mr-4"
             >
-                <a
-                    href="/"
-                    class="font-bold leading-6 text-white text-lg"
-                    :class="{
-                        'text-primary': scrolled || isSpecialPage,
-                        'decoration-custom-white': currentPage == '/',
-                        'text-white': !scrolled && !isSpecialPage,
-
-                    }"
-                >
-                    Startseite
-                </a>
                 {{nav:main}} {{if depth == 1}}
                     <!-- if has no children -->
                     {{ if children == false}}
