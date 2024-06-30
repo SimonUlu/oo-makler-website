@@ -1,80 +1,44 @@
-@foreach($images as $image)
-<div class="overflow-hidden bg-white">
-    <div class="relative mx-auto max-w-7xl px-6 py-16 lg:px-8">
-      <div class="absolute bottom-0 left-3/4 top-0 hidden w-screen bg-gray-50 lg:block"></div>
-      <div class="mx-auto max-w-prose text-base lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-8">
-        <div>
-          <h2 class="text-lg font-semibold text-gray-600">Präsentation</h2>
-          <h3 class="mt-2 text-3xl font-bold leading-8 tracking-tight text-gray-900 sm:text-4xl">{{$image["title"]}}</h3>
+<div class="flex relative max-w-7xl mx-auto pb-12 lg:pb-24">
+  
+  <ul x-ref="slider" tabindex="0" role="listbox" aria-labelledby="carousel-content-label" class="flex w-full overflow-hidden snap-x snap-mandatory show-1">
+    <h2 class="mb-4 pl-6 text-4xl font-bold tracking-tight text-left text-primary px-4 lg:px-10 lg:text-5xl "> Lorem Ipsum </h2>
+      <li x-bind="disableNextAndPreviousButtons" class="grid items-center justify-center w-full pr-4  shrink-0 snap-start rounded-lg lg:grid-cols-2" role="option">
+
+        <div class="bg-cover bg-no-repeat bg-center w-full h-[28rem] relative cursor-pointer" style="background-image: url( &quot;https://image.onoffice.de/smart20/Objekte/BVBI/13917/f1aab8a8-991a-46fa-b8a1-52b31947dbaa.jpg&quot; )">
+          
         </div>
-      </div>
-      <div class="mt-8 lg:grid lg:grid-cols-2 lg:gap-8">
-        <div class="relative lg:col-start-2 lg:row-start-1">
-          <svg class="absolute right-0 top-0 -mr-20 -mt-20 hidden lg:block" width="404" height="384" fill="none" viewBox="0 0 404 384" aria-hidden="true">
-            <defs>
-              <pattern id="de316486-4a29-4312-bdfc-fbce2132a2c1" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-                <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
-              </pattern>
-            </defs>
-            <rect width="404" height="384" fill="url(#de316486-4a29-4312-bdfc-fbce2132a2c1)" />
-          </svg>
-          <div class="relative mx-auto max-w-prose text-base lg:max-w-none">
 
-            <figure>
-              <div class="aspect-h-7 aspect-w-12 lg:aspect-none">
-                    <div class="spinner" style="display: flex">
-                        <svg
-                            class="absolute inset-0 w-5 h-5 m-auto animate-spin"
-                            viewBox="0 0 24 24"
-                        >
-                            <circle
-                                class="opacity-25"
-                                cx="12"
-                                cy="12"
-                                r="10"
-                                stroke="currentColor"
-                                stroke-width="4"
-                            ></circle>
-                            <path
-                                class="opacity-75"
-                                fill="currentColor"
-                                d="M4 12a8 8 0 008 8V12A4 4 0 004 8"
-                            ></path>
-                        </svg>
-                    </div>
-                    <img
-                        class="rounded-lg object-cover object-center shadow-lg lazy"
-                        data-src="{{$image["url"]}}"
-                        alt="Whitney leaning against a railing on a downtown street"
-                        width="1184"
-                        height="1376"
-                        loading="lazy"
-                        onload="this.parentElement.querySelector('.spinner').style.display = 'none';"
-                    >
-              </div>
-            </figure>
-
+        <div class="py-4 px-8">
+          <div class="mb-8">
+            <h3 class="mt-2 text-xl lg:text-2xl font-semibold text-primary group-hover:text-gray-600 mb-4">
+              {{$estate["elements"]["objekttitel"]}}
+            </h3>
+            <p>
+              {{$estate["elements"]["objektbeschreibung"]}}
+            </p>
           </div>
+          <div class="my-2 border-t border-gray-300 pt-8">
+            <dl class="-mx-8 -mt-8 flex flex-wrap">
+              <div class="flex flex-col px-8 pt-8">
+                  <dt class="order-1 text-base font-medium text-gray-700">Gesamtflaeche</dt>
+                  <dd class="order-2 text-2xl font-bold text-primary sm:text-xl sm:tracking-tight">
+                    {{$estate["elements"]["gesamtflaeche"]}}
+                  </dd>
+              </div>
+                                  <div class="flex flex-col px-8 pt-8">
+                      <dt class="order-1 text-base font-medium text-gray-700">Energieklasse</dt>
+                      <dd class="order-2 text-2xl font-bold text-primary sm:text-xl sm:tracking-tight">
+                        {{$estate["elements"]["energyClass"]}}
+                      </dd>
+                  </div>
+                  
+                              <div class="flex flex-col px-8 pt-8">
+                  <dt class="order-1 text-base font-medium text-gray-700">Ort</dt>
+                  <dd class="order-2 text-2xl font-bold text-primary sm:text-xl sm:tracking-tight">{{$estate["elements"]["ort"]}}</dd>
+              </div>
+            </dl>
         </div>
-        <div class="mt-8 lg:mt-0">
-            <div class="mx-auto max-w-prose text-base lg:max-w-none">
-                <p class="text-lg text-gray-500">
-                    {{$estate["elements"]["objektbeschreibung"]}}
-                </p>
-            </div>
-            <div class="prose prose-indigo mx-auto mt-5 text-gray-500 lg:col-start-1 lg:row-start-1 lg:max-w-none">
-
-                <ul role="list">
-                <li>Die gesamte Wohnfläche des Objektes beträgt {{$estate["elements"]["wohnflaeche"]}} qm</li>
-                <li>Die Gesamtfläche des Objektes beträgt {{$estate["elements"]["gesamtflaeche"]}} qm</li>
-                </ul>
-                <h3>Beschreibung des Bildes</h3>
-                <p>
-                    {{$image["text"]}}
-                </p>
-            </div>
         </div>
-      </div>
-    </div>
-  </div>
-  @endforeach
+    </li>
+  </ul>
+</div>

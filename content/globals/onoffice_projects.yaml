@@ -1,47 +1,89 @@
 title: 'onOffice Projects'
 data:
-  image_second:
-    - search_for_estate.jpeg
-  imagesectionheader: 'Lorem Ipsum'
-  imagesectiondescription: 'In diesem Abschnitt haben Sie die Möglichkeit, Informationen bereitzustellen, die indirekt mit dem Service verbunden sind. Betonen Sie beispielsweise die Professionalität Ihres Teams und die umfangreiche Erfahrung in der Durchführung von Neubauprojekten. Nutzen Sie diesen Bereich auch, um auf bevorstehende Veranstaltungen hinzuweisen, die mit dem Service in Verbindung stehen. Egal, was Sie bewerben möchten, hier haben Sie ausreichend Platz und Designmöglichkeiten, um Ihre Informationen auf ansprechende und stilvolle Weise zu präsentieren und an Kunden zu vermitteln.'
-  imagesectionlist:
+  content_with_image_replicator:
     -
-      id: loww05n5
-      listitem: 'Lorem Ipsum'
+      id: ly1n5fan
+      image:
+        - blog.jpg
+      headline: 'Neubau in Berlin und Brandenburg'
+      text: |-
+        Berlin zählt zu den begehrtesten Immobilienmärkten – weltweit. Im Tauziehen um 1A-Lagen, Filetgrundstücke und erschwingliche Wertanlagen brauchen Sie einen verlässlichen Partner an Ihrer Seite, der sich nicht nur in dieser Stadt und dem Umland auskennt, sondern der auch neue Trends erkennt, noch ehe diese sich entfalten.
+        Wir kennen die heiß umkämpfte Metropolregion  Berlin-Brandenburg mit all ihren Besonderheiten und schätzen den Käufermarkt für Ihr Projekt zielgenau ein – nicht aus dem Bauch heraus, sondern anhand aussagekräftiger, stets aktueller Marktdaten, Analysen und Erhebungen. Alle verfügbaren Daten übersetzen wir in realistische Trends, um Ihnen adäquate Handlungsstrategien und -alternativen empfehlen zu können.
+        Profitieren auch Sie von unserer Erfahrung und unserem Know-how. Kontaktbutton
+      button_link: /kontakt
+      type: neues_set
+      enabled: true
+    -
+      id: ly1n61ke
+      image:
+        - blog.jpg
+      headline: 'Die BVBI als Ihr Partner'
+      text: |-
+        Zuhause ist mehr als nur ein Ort, an dem man lebt. Zuhause ist ein Gefühl. Wir sorgen für die zielgruppengenaue Vermarktung Ihres Projekts – auf allen Kanälen. Wir beraten Sie schon in der Projektierungsphase und spiegeln die aktuellen Marktanforderungen im Hinblick auf Design und Funktionalität von Wohngebäuden, Ausstattung, Grundrissen etc. wider. 
+        Wir erstellen eine ausführliche Markt- und Standortanalyse und geben qualifizierte Empfehlungen zu geforderten Baustandards und marktfähigen Verkaufspreisen. 
+
+        Ein umfangreiches Vertriebsnetz mit über 70 Filialen und Beratungscentern der Berliner Volksbank in Berlin und Brandenburg mit über 545.000 Kunden sowie der Verbund im deutschlandweiten Volks- und Raiffeisenbankennetz garantieren uns neben den üblichen Vertriebskanälen eine hohe Leistungsfähigkeit. 
+
+        Wir übernehmen für Sie die komplette Kundenbetreuung – von der ersten Kontaktaufnahme über die laufende Beratung, die Evaluation von Sonderwünschen und die Notartermine bis hin zur Übergabe. Für die gesetzeskonforme Beratung der Käufer vom  Geldwäschegesetz bis zum  Verbraucher-Widerrufsrecht sorgen wir selbstverständlich auch.
+      button_link: /kontakt
       type: neues_set
       enabled: true
   header_image:
-    - 1004_63743_realistic_photography_of_a_beautiful_white_house_sur_2dd38038-ee86-45c6-87d1-eaa723491226.png
-  estate_pages:
+    - header_bewerten.jpg
+  cta_headline: 'Wir sind Ihr Immobilienmakler in  Berlin und Umgebung'
+  cta_sub_header: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'
+  services_header: 'Meistern Sie den Vermietungsprozess: Ihr Weg zum Erfolg'
+  services_subheader: 'Entdecken Sie unseren bewährten Plan, um Ihre Neubauimmobilie schnell und effizient an den perfekten Mieter zu bringen.'
+  services:
     -
-      id: lowvyeyb
-      text: 'Lorem Ipsum'
-      headline: 'Aktuelle Projekte'
-      button_text: 'Aktuelle Projekte ansehen'
-      estate_page_img:
-        - praxen.jpg
+      id: ly1nd7tn
+      svg:
+        code: |-
+          <svg width="66" height="66" viewBox="0 0 66 66" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path opacity="0.2" d="M53 28.0001C53 32.9446 51.5338 37.7781 48.7867 41.8893C46.0397 46.0005 42.1353 49.2049 37.5671 51.0971C32.9989 52.9892 27.9723 53.4843 23.1228 52.5197C18.2732 51.5551 13.8187 49.174 10.3223 45.6777C6.82603 42.1814 4.44501 37.7268 3.48038 32.8773C2.51575 28.0278 3.01083 23.0011 4.90302 18.433C6.79521 13.8648 9.99953 9.96036 14.1108 7.21332C18.222 4.46628 23.0555 3.00006 28 3.00006C31.2831 3.00006 34.534 3.64671 37.5671 4.90307C40.6002 6.15944 43.3562 8.00093 45.6777 10.3224C47.9991 12.6439 49.8406 15.3998 51.097 18.433C52.3534 21.4661 53 24.717 53 28.0001Z" fill="#003064"/>
+          <path d="M64.7687 61.2313L49.125 45.5875C53.6681 40.1389 55.9356 33.1484 55.4558 26.0705C54.9761 18.9925 51.786 12.372 46.5492 7.58623C41.3124 2.80046 34.4321 0.217918 27.3396 0.375858C20.2472 0.533798 13.4887 3.42006 8.4701 8.4342C3.45153 13.4483 0.559297 20.2043 0.395089 27.2966C0.230881 34.3889 2.80734 41.2715 7.58848 46.5125C12.3696 51.7535 18.9873 54.9495 26.0648 55.4355C33.1424 55.9215 40.1348 53.6602 45.5875 49.1219L61.2312 64.7688C61.4635 65.0011 61.7393 65.1853 62.0428 65.311C62.3462 65.4367 62.6715 65.5014 63 65.5014C63.3285 65.5014 63.6538 65.4367 63.9572 65.311C64.2607 65.1853 64.5365 65.0011 64.7687 64.7688C65.001 64.5365 65.1853 64.2608 65.311 63.9573C65.4367 63.6538 65.5014 63.3285 65.5014 63C65.5014 62.6715 65.4367 62.3463 65.311 62.0428C65.1853 61.7393 65.001 61.4636 64.7687 61.2313ZM5.49999 28C5.49999 23.55 6.8196 19.1998 9.29193 15.4997C11.7643 11.7996 15.2783 8.91572 19.3896 7.21274C23.501 5.50977 28.025 5.0642 32.3895 5.93237C36.7541 6.80053 40.7632 8.94345 43.9099 12.0901C47.0566 15.2368 49.1995 19.2459 50.0677 23.6105C50.9358 27.9751 50.4903 32.4991 48.7873 36.6104C47.0843 40.7217 44.2004 44.2358 40.5003 46.7081C36.8002 49.1804 32.4501 50.5 28 50.5C22.0347 50.4934 16.3155 48.1208 12.0974 43.9026C7.87926 39.6845 5.50661 33.9654 5.49999 28Z" fill="#003064"/>
+          </svg>
+        mode: htmlmixed
+      header: Analyse
+      description: 'Wir beginnen mit einer umfassenden Marktanalyse, um den optimalen Mietpreis für Ihre Immobilie zu ermitteln und sie perfekt zu positionieren.'
       type: neues_set
       enabled: true
-      cta_estate_link: '#current-projects'
     -
-      id: lowvzgo7
-      text: 'Lorem Ipsum'
-      headline: 'Vergangene Projekte'
-      button_text: 'Aktuelle Projekte ansehen'
-      estate_page_img:
-        - wohnungen.jpg
+      id: ly1ndpuy
+      svg:
+        code: |-
+          <svg width="65" height="63" viewBox="0 0 65 63" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path opacity="0.2" d="M62.5 32.2406C62.5199 34.5721 62.2693 36.8981 61.7531 39.1719C61.3744 40.8279 60.4448 42.3063 59.1163 43.3651C57.7879 44.4238 56.1394 45.0003 54.4406 45H40C38.0109 45 36.1032 45.7902 34.6967 47.1967C33.2902 48.6032 32.5 50.5109 32.5 52.5C32.4991 53.6994 32.2106 54.8811 31.6587 55.9459C31.1067 57.0108 30.3075 57.9277 29.3279 58.6198C28.3484 59.312 27.2171 59.7591 26.029 59.9236C24.841 60.0882 23.6308 59.9654 22.5 59.5656C10.8531 55.45 2.5 45.5656 2.5 32.5C2.49957 24.5973 5.61734 17.0137 11.176 11.3965C16.7347 5.77932 24.2853 2.58231 32.1875 2.49999C48.7 2.33437 62.3594 15.7344 62.5 32.2406Z" fill="#003064"/>
+          <path d="M55.2406 9.34064C49.1897 3.34872 41.0157 -0.00871273 32.5 1.69811e-05H32.1656C23.6042 0.0881059 15.4233 3.55105 9.40051 9.63646C3.37771 15.7219 -0.000453116 23.9381 4.5586e-08 32.5C4.5586e-08 45.9375 8.30625 57.2063 21.675 61.9281C23.1828 62.4597 24.7962 62.6221 26.3797 62.4015C27.9632 62.1809 29.4708 61.5838 30.7759 60.6604C32.0811 59.7369 33.1458 58.514 33.8808 57.0941C34.6157 55.6742 34.9995 54.0988 35 52.5C35 51.1739 35.5268 49.9022 36.4645 48.9645C37.4021 48.0268 38.6739 47.5 40 47.5H54.4406C56.709 47.511 58.9129 46.7458 60.6864 45.3315C62.46 43.9173 63.6965 41.9389 64.1906 39.725C64.7494 37.2647 65.021 34.7479 65 32.225C64.9682 27.9546 64.0892 23.7329 62.4139 19.8047C60.7386 15.8765 58.3005 12.3197 55.2406 9.34064ZM59.3031 38.625C59.0548 39.728 58.4376 40.7132 57.5534 41.4178C56.6693 42.1224 55.5712 42.5041 54.4406 42.5H40C37.3478 42.5 34.8043 43.5536 32.9289 45.429C31.0536 47.3043 30 49.8479 30 52.5C29.9988 53.2987 29.8064 54.0854 29.4388 54.7944C29.0711 55.5034 28.539 56.114 27.887 56.5751C27.2349 57.0362 26.4819 57.3345 25.6909 57.4448C24.8999 57.5552 24.094 57.4744 23.3406 57.2094C12.0281 53.2188 5 43.75 5 32.5C4.99961 25.2556 7.85786 18.3036 12.9538 13.1544C18.0497 8.00528 24.9716 5.07493 32.2156 5.00002H32.4969C39.7412 5.02815 46.6843 7.90245 51.8287 13.003C56.9731 18.1036 59.9067 25.0218 59.9969 32.2656C60.0155 34.4046 59.7869 36.5385 59.3156 38.625H59.3031ZM36.25 16.25C36.25 16.9917 36.0301 17.7167 35.618 18.3334C35.206 18.9501 34.6203 19.4307 33.9351 19.7146C33.2498 19.9984 32.4958 20.0727 31.7684 19.928C31.041 19.7833 30.3728 19.4261 29.8483 18.9017C29.3239 18.3772 28.9667 17.709 28.8221 16.9816C28.6774 16.2542 28.7516 15.5002 29.0355 14.815C29.3193 14.1297 29.7999 13.5441 30.4166 13.132C31.0333 12.7199 31.7583 12.5 32.5 12.5C33.4946 12.5 34.4484 12.8951 35.1516 13.5984C35.8549 14.3016 36.25 15.2555 36.25 16.25ZM22.5 23.75C22.5 24.4917 22.2801 25.2167 21.868 25.8334C21.456 26.4501 20.8703 26.9307 20.1851 27.2146C19.4998 27.4984 18.7458 27.5727 18.0184 27.428C17.291 27.2833 16.6228 26.9261 16.0983 26.4017C15.5739 25.8772 15.2167 25.209 15.0721 24.4816C14.9274 23.7542 15.0016 23.0002 15.2855 22.315C15.5693 21.6297 16.0499 21.0441 16.6666 20.632C17.2833 20.2199 18.0083 20 18.75 20C19.7446 20 20.6984 20.3951 21.4017 21.0984C22.1049 21.8016 22.5 22.7555 22.5 23.75ZM22.5 41.25C22.5 41.9917 22.2801 42.7167 21.868 43.3334C21.456 43.9501 20.8703 44.4307 20.1851 44.7146C19.4998 44.9984 18.7458 45.0727 18.0184 44.928C17.291 44.7833 16.6228 44.4261 16.0983 43.9017C15.5739 43.3772 15.2167 42.709 15.0721 41.9816C14.9274 41.2542 15.0016 40.5002 15.2855 39.815C15.5693 39.1297 16.0499 38.5441 16.6666 38.132C17.2833 37.72 18.0083 37.5 18.75 37.5C19.7446 37.5 20.6984 37.8951 21.4017 38.5984C22.1049 39.3016 22.5 40.2555 22.5 41.25ZM50 23.75C50 24.4917 49.7801 25.2167 49.368 25.8334C48.956 26.4501 48.3703 26.9307 47.6851 27.2146C46.9998 27.4984 46.2458 27.5727 45.5184 27.428C44.791 27.2833 44.1228 26.9261 43.5984 26.4017C43.0739 25.8772 42.7168 25.209 42.5721 24.4816C42.4274 23.7542 42.5016 23.0002 42.7855 22.315C43.0693 21.6297 43.5499 21.0441 44.1666 20.632C44.7833 20.2199 45.5083 20 46.25 20C47.2446 20 48.1984 20.3951 48.9016 21.0984C49.6049 21.8016 50 22.7555 50 23.75Z" fill="#003064"/>
+          </svg>
+        mode: htmlmixed
+      header: Aufbereitung
+      description: 'Eine ansprechende Präsentation ist der Schlüssel. Wir sorgen dafür, dass Ihre Immobilie in bestem Licht erscheint, sowohl online als auch vor Ort.'
       type: neues_set
       enabled: true
-      cta_estate_link: '#past-projects'
     -
-      id: lowvzfez
-      text: 'Lorem Ipsum'
-      headline: 'Zukünftige Projekte'
-      button_text: 'Aktuelle Projekte ansehen'
-      estate_page_img:
-        - hauser.jpg
+      id: ly1ndxu3
+      svg:
+        code: |-
+          <svg width="68" height="63" viewBox="0 0 68 63" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path opacity="0.2" d="M65 29.9962C65 33.3114 63.683 36.4908 61.3388 38.8351C58.9946 41.1793 55.8152 42.4962 52.5 42.4962H40V17.4962H52.5C55.8152 17.4962 58.9946 18.8132 61.3388 21.1574C63.683 23.5016 65 26.681 65 29.9962Z" fill="#003064"/>
+          <path d="M67.5 29.9962C67.4959 26.0192 65.9142 22.2063 63.102 19.3942C60.2899 16.582 56.477 15.0003 52.5 14.9962H40.0625C39.1531 14.9431 23.3063 13.8274 8.21563 1.1712C7.4869 0.559175 6.59864 0.167825 5.65521 0.0431193C4.71178 -0.081586 3.75235 0.0655333 2.88963 0.467195C2.02691 0.868857 1.29673 1.50838 0.784872 2.31063C0.27301 3.11289 0.000724168 4.04456 0 4.9962V54.9962C0.000129654 55.9481 0.271984 56.8802 0.783613 57.6829C1.29524 58.4856 2.02538 59.1256 2.88822 59.5277C3.75105 59.9297 4.71072 60.0771 5.65444 59.9525C6.59815 59.8279 7.48669 59.4365 8.21563 58.8243C20.0188 48.9243 32.2781 46.0868 37.5 45.2931V55.2056C37.499 56.0295 37.7015 56.8409 38.0897 57.5676C38.4779 58.2944 39.0396 58.9139 39.725 59.3712L43.1625 61.6618C43.8269 62.1053 44.5879 62.3831 45.3818 62.472C46.1757 62.5609 46.9793 62.4583 47.7253 62.1728C48.4714 61.8873 49.1382 61.4272 49.6699 60.831C50.2015 60.2348 50.5826 59.5199 50.7812 58.7462L54.4594 44.8837C58.0679 44.4036 61.3793 42.6294 63.7779 39.8911C66.1766 37.1527 67.4992 33.6365 67.5 29.9962ZM5 54.9743V4.9962C18.3781 16.2181 32.0719 19.0587 37.5 19.7587V40.2212C32.0781 40.9337 18.3875 43.7681 5 54.9743ZM45.9375 57.4743V57.5087L42.5 55.2181V44.9962H49.25L45.9375 57.4743ZM52.5 39.9962H42.5V19.9962H52.5C55.1522 19.9962 57.6957 21.0498 59.5711 22.9251C61.4464 24.8005 62.5 27.344 62.5 29.9962C62.5 32.6484 61.4464 35.1919 59.5711 37.0673C57.6957 38.9426 55.1522 39.9962 52.5 39.9962Z" fill="#003064"/>
+          </svg>
+        mode: htmlmixed
+      header: Marketing
+      description: 'Mit zielgerichteten Marketingstrategien erreichen wir die passende Zielgruppe und maximieren die Sichtbarkeit Ihrer Immobilie.'
       type: neues_set
       enabled: true
-      cta_estate_link: '#future-projects'
-  cta_headline: 'Kompetenz trifft Innovation'
-  cta_sub_header: 'Lernen Sie unsere Neubauprojekte kennen.'
+    -
+      id: ly1ndzyx
+      svg:
+        code: |-
+          <svg width="70" height="60" viewBox="0 0 70 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path opacity="0.2" d="M60 45H30C30 45 32.5 46.875 32.5 50C32.5 51.9891 31.7098 53.8968 30.3033 55.3033C28.8968 56.7098 26.9891 57.5 25 57.5C23.0109 57.5 21.1032 56.7098 19.6967 55.3033C18.2902 53.8968 17.5 51.9891 17.5 50V10C17.5 8.01088 16.7098 6.10322 15.3033 4.6967C13.8968 3.29018 11.9891 2.5 10 2.5H52.5C54.4891 2.5 56.3968 3.29018 57.8033 4.6967C59.2098 6.10322 60 8.01088 60 10V45Z" fill="#003064"/>
+          <path d="M27.5 22.5C27.5 21.837 27.7634 21.2011 28.2322 20.7322C28.7011 20.2634 29.337 20 30 20H50C50.663 20 51.2989 20.2634 51.7678 20.7322C52.2366 21.2011 52.5 21.837 52.5 22.5C52.5 23.163 52.2366 23.7989 51.7678 24.2678C51.2989 24.7366 50.663 25 50 25H30C29.337 25 28.7011 24.7366 28.2322 24.2678C27.7634 23.7989 27.5 23.163 27.5 22.5ZM30 35H50C50.663 35 51.2989 34.7366 51.7678 34.2678C52.2366 33.7989 52.5 33.163 52.5 32.5C52.5 31.837 52.2366 31.2011 51.7678 30.7322C51.2989 30.2634 50.663 30 50 30H30C29.337 30 28.7011 30.2634 28.2322 30.7322C27.7634 31.2011 27.5 31.837 27.5 32.5C27.5 33.163 27.7634 33.7989 28.2322 34.2678C28.7011 34.7366 29.337 35 30 35ZM70 50C70 52.6522 68.9464 55.1957 67.0711 57.0711C65.1957 58.9464 62.6522 60 60 60H25C22.3478 60 19.8043 58.9464 17.9289 57.0711C16.0536 55.1957 15 52.6522 15 50V10C15 8.67392 14.4732 7.40215 13.5355 6.46447C12.5979 5.52678 11.3261 5 10 5C8.67392 5 7.40215 5.52678 6.46447 6.46447C5.52678 7.40215 5 8.67392 5 10C5 11.7937 6.50937 13.0063 6.525 13.0188C6.93875 13.3372 7.24244 13.7771 7.39346 14.2769C7.54447 14.7766 7.53523 15.3112 7.36703 15.8054C7.19883 16.2997 6.88012 16.7289 6.45561 17.0328C6.0311 17.3367 5.52209 17.5001 5 17.5C4.45938 17.5009 3.93343 17.3242 3.50312 16.9969C3.14062 16.7312 0 14.2531 0 10C0 7.34784 1.05357 4.8043 2.92893 2.92893C4.8043 1.05357 7.34784 0 10 0H52.5C55.1522 0 57.6957 1.05357 59.5711 2.92893C61.4464 4.8043 62.5 7.34784 62.5 10V42.5H65C65.5409 42.5 66.0673 42.6754 66.5 43C66.875 43.2688 70 45.7469 70 50ZM27.5813 44.2125C27.7521 43.7083 28.0781 43.2711 28.5125 42.9635C28.947 42.6559 29.4677 42.4936 30 42.5H57.5V10C57.5 8.67392 56.9732 7.40215 56.0355 6.46447C55.0979 5.52678 53.8261 5 52.5 5H18.6531C19.5373 6.51783 20.0021 8.24342 20 10V50C20 51.3261 20.5268 52.5979 21.4645 53.5355C22.4021 54.4732 23.6739 55 25 55C26.3261 55 27.5979 54.4732 28.5355 53.5355C29.4732 52.5979 30 51.3261 30 50C30 48.2062 28.4906 46.9937 28.475 46.9812C28.049 46.6765 27.7321 46.2429 27.5712 45.7444C27.4103 45.2459 27.4138 44.7088 27.5813 44.2125ZM65 50C64.9688 49.0737 64.6113 48.1883 63.9906 47.5H34.6156C34.8669 48.3095 34.9944 49.1524 34.9938 50C34.9961 51.7558 34.5336 53.4809 33.6531 55H60C61.3261 55 62.5979 54.4732 63.5355 53.5355C64.4732 52.5979 65 51.3261 65 50Z" fill="#003064"/>
+          </svg>
+        mode: htmlmixed
+      header: Abschluss
+      description: 'Wir begleiten Sie durch den gesamten Vermietungsprozess bis zum Vertragsabschluss, um einen nahtlosen und sicheren Übergang zu gewährleisten.'
+      type: neues_set
+      enabled: true

@@ -1,88 +1,100 @@
-<section class="py-20 bg-white sm:py-24">
-    <div class="px-4 lg:px-0 grid grid-cols-1 gap-8 lg:gap-16 lg:grid-cols-2">
-        <div class="items-center justify-center hidden sm:flex">
-            <img
-                class="object-cover w-full rounded-lg"
-                src="images/{{image_second.0}}"
-                alt="{{image_second.0}}"
-            />
-        </div>
-
-        <div class="space-y-4 sm:space-y-6 lg:space-y-8">
-            <div>
-                <h2
-                    class="text-3xl font-extrabold leading-tight text-gray-900 sm:text-4xl"
-                >
-                    {{imagesectionheader}}
-                </h2>
-                <p
-                    class="mt-4 text-base font-normal text-gray-500 dark:text-gray-400 sm:text-xl"
-                >
-                    {{imagesectiondescription}}
-                </p>
+<div class="py-4 md:py-8">
+    {{content_with_image_replicator}}
+        <div class="pt-2 lg:pt-4 grid grid-cols-1 gap-8 lg:gap-16 mb-12 lg:mb-24 lg:flex {{ index % 2 == 0 ? 'lg:flex-row-reverse' : 'lg:flex-row' }}">
+            <div class="items-center justify-center flex lg:flex-1 relative">
+                <div class="spinner" style="display: flex">
+                    <svg
+                        class="absolute inset-0 w-5 h-5 m-auto animate-spin"
+                        viewBox="0 0 24 24"
+                    >
+                        <circle
+                            class="opacity-25"
+                            cx="12"
+                            cy="12"
+                            r="10"
+                            stroke="currentColor"
+                            stroke-width="4"
+                        ></circle>
+                        <path
+                            class="opacity-75"
+                            fill="currentColor"
+                            d="M4 12a8 8 0 008 8V12A4 4 0 004 8"
+                        ></path>
+                    </svg>
+                </div>
+                <img
+                    class="object-cover w-full  lazy"
+                    data-src="images/{{image[0]}}"
+                    alt="{{image[0]}}"
+                    loading="lazy"
+                    onload="this.parentElement.querySelector('.spinner').style.display = 'none';"
+                />
             </div>
+            <div class="space-y-4 sm:space-y-6 lg:space-y-8 lg:flex-1">
+                <div>
+                    <h2
+                    class="text-3xl font-extrabold leading-tight text-primary underline decoration-custom sm:text-4xl"
+                    >
+                        {{headline}}
+                    </h2>
 
-            <div
-                class="pt-4 border-t border-gray-200 sm:pt-6 lg:pt-8 dark:border-gray-800"
-            >
-                {{if content_before_section_list}}
+                </div>
+                <div class="leading-8">
+                    {{text}}
+                </div>
+                {{if image_section_list}}
                 <div
-                    class="pb-4 ml-2 text-base font-bold tracking-tight text-gray-900 sm:text-base"
+                    class="pb-4  sm:pb-6 lg:pb-8"
                 >
-                    {{content_before_section_list}}
+
+                    <ul class="space-y-4">
+                        {{image_section_list}}
+                        <li class="flex items-center gap-2.5">
+                            <div
+                                class="inline-flex items-center justify-center w-5 h-5  bg-primary-100 text-primary-600 shrink-0 dark:bg-primary-900 dark:text-primary-500"
+                            >
+                                <svg
+                                    aria-hidden="true"
+                                    class="w-6 h-6 text-secondary"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 20 20"
+                                    fill="currentColor"
+                                >
+                                    <path
+                                        fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"
+                                    />
+                                </svg>
+                            </div>
+                            <span class="text-base font-bold text-gray-900">
+                                {{listitem}}
+                            </span>
+                        </li>
+                        {{/image_section_list}}
+                    </ul>
                 </div>
                 {{/if}}
-                <ul class="space-y-4">
-                    {{imagesectionlist}}
-                    <li class="flex items-center gap-2.5">
-                        <div
-                            class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-primary-100 text-primary-600 shrink-0 dark:bg-primary-900 dark:text-primary-500"
-                        >
-                            <svg
-                                aria-hidden="true"
-                                class="w-3.5 h-3.5"
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                            >
-                                <path
-                                    fill-rule="evenodd"
-                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                    clip-rule="evenodd"
-                                />
-                            </svg>
-                        </div>
-                        <span class="text-base font-medium text-gray-900">
-                            {{listitem}}
-                        </span>
-                    </li>
-                    {{/imagesectionlist}}
-                </ul>
-            </div>
 
-            <div class="flex items-center gap-4">
-                <a
-                    href="/kontakt"
-                    title=""
-                    class="text-white bg-primary-700 justify-center hover:bg-primary-800 inline-flex items-center focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
-                    role="button"
-                >
-                    Jetzt Termin vereinbaren
-                    <svg
-                        aria-hidden="true"
-                        class="w-5 h-5 ml-2 -mr-1"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
+
+                {{if button_link}}
+                <div class="flex items-center justify-center md:justify-start gap-4">
+                    <a
+                        href="{{button_link}}"
+                        title=""
+                        class="text-white px-4 py-2 justify-center bg-primary inline-flex items-center text-center0"
+                        role="button"
                     >
-                        <path
-                            fill-rule="evenodd"
-                            d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                            clip-rule="evenodd"
-                        />
-                    </svg>
-                </a>
+                        Mehr erfahren
+                        
+                    </a>
+                </div>
+                {{/if}}
             </div>
         </div>
-    </div>
-</section>
+    {{/content_with_image_replicator}}
+
+
+</div>
+
+

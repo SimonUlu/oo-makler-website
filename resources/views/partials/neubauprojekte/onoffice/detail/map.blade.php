@@ -1,4 +1,4 @@
-<div class="justify-center items-center gap-x-8 max-w-7xl mx-auto py-16 lg:py-32 px-4 lg:px-10">
+<div class="justify-center items-center gap-x-8 max-w-7xl mx-auto py-6 lg:py-12 px-4 lg:px-10">
     <h2 class="mx-4 mb-4 text-4xl font-bold tracking-tight text-gray-900 lg:text-5xl text-center pb-12">
         Lage
     </h2>

@@ -6,46 +6,7 @@ tabs:
         display: 'Neuer Abschnitt'
         fields:
           -
-            handle: image_second
-            field:
-              mode: list
-              container: images
-              restrict: false
-              allow_uploads: true
-              show_filename: true
-              show_set_alt: true
-              type: assets
-              display: image_second
-              icon: assets
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              hide_display: false
-          -
-            handle: imagesectionheader
-            field:
-              input_type: text
-              antlers: false
-              type: text
-              display: imageSectionHeader
-              icon: text
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              hide_display: false
-          -
-            handle: imagesectiondescription
-            field:
-              antlers: false
-              type: textarea
-              display: imageSectionDescription
-              icon: textarea
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              hide_display: false
-          -
-            handle: imagesectionlist
+            handle: content_with_image_replicator
             field:
               collapse: false
               previews: true
@@ -62,23 +23,96 @@ tabs:
                       icon: null
                       fields:
                         -
-                          handle: listitem
+                          handle: image
+                          field:
+                            mode: list
+                            container: images
+                            restrict: false
+                            allow_uploads: true
+                            show_filename: true
+                            show_set_alt: true
+                            type: assets
+                            display: image
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+                        -
+                          handle: headline
                           field:
                             input_type: text
                             antlers: false
                             type: text
-                            display: listitem
-                            icon: text
+                            display: headline
                             listable: hidden
                             instructions_position: above
                             visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+                        -
+                          handle: text
+                          field:
+                            antlers: false
+                            type: textarea
+                            display: text
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+                        -
+                          handle: image_section_list
+                          field:
+                            collapse: false
+                            previews: true
+                            fullscreen: true
+                            sets:
+                              neue_set-gruppe:
+                                display: 'Neue Set-Gruppe'
+                                instructions: null
+                                icon: null
+                                sets:
+                                  neues_set:
+                                    display: 'Neues Set'
+                                    instructions: null
+                                    icon: null
+                                    fields:
+                                      -
+                                        handle: listitem
+                                        field:
+                                          input_type: text
+                                          antlers: false
+                                          type: text
+                                          display: listitem
+                                          listable: hidden
+                                          instructions_position: above
+                                          visibility: visible
+                                          replicator_preview: true
+                                          hide_display: false
+                            type: replicator
+                            display: image_section_list
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+                        -
+                          handle: button_link
+                          field:
+                            type: link
+                            display: button_link
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
                             hide_display: false
               type: replicator
-              display: imageSectionList
-              icon: replicator
+              display: content_with_image_replicator
               listable: hidden
               instructions_position: above
               visibility: visible
+              replicator_preview: true
               hide_display: false
       -
         fields:
@@ -93,7 +127,6 @@ tabs:
               show_set_alt: true
               type: assets
               display: header_image
-              icon: assets
               listable: hidden
               instructions_position: above
               visibility: visible
@@ -179,7 +212,6 @@ tabs:
                             hide_display: false
               type: replicator
               display: estate_pages
-              icon: replicator
               listable: hidden
               instructions_position: above
               visibility: visible
@@ -191,7 +223,6 @@ tabs:
               antlers: false
               type: text
               display: cta_headline
-              icon: text
               listable: hidden
               instructions_position: above
               visibility: visible
@@ -202,11 +233,101 @@ tabs:
               antlers: false
               type: textarea
               display: cta_sub_header
-              icon: textarea
               listable: hidden
               instructions_position: above
               visibility: visible
               hide_display: false
-  image_content:
-    display: 'Content Image'
-    sections: {  }
+  services:
+    display: Services
+    sections:
+      -
+        fields:
+          -
+            handle: services_header
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: services_header
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: services_subheader
+            field:
+              antlers: false
+              type: textarea
+              display: services_subheader
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: services
+            field:
+              collapse: false
+              previews: true
+              fullscreen: true
+              sets:
+                neue_set-gruppe:
+                  display: 'Neue Set-Gruppe'
+                  instructions: null
+                  icon: null
+                  sets:
+                    neues_set:
+                      display: 'Neues Set'
+                      instructions: null
+                      icon: null
+                      fields:
+                        -
+                          handle: svg
+                          field:
+                            theme: material
+                            mode: htmlmixed
+                            mode_selectable: true
+                            indent_type: tabs
+                            indent_size: 4
+                            key_map: default
+                            line_numbers: true
+                            line_wrapping: true
+                            antlers: false
+                            type: code
+                            display: svg
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+                        -
+                          handle: header
+                          field:
+                            input_type: text
+                            antlers: false
+                            type: text
+                            display: header
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+                        -
+                          handle: description
+                          field:
+                            antlers: false
+                            type: textarea
+                            display: description
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+              type: replicator
+              display: services
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false

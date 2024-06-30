@@ -8,6 +8,7 @@ use Statamic\Facades\GlobalSet;
 use App\Services\OnOfficeService;
 use App\Helpers\Estates\EstateHelper;
 use App\Services\EstateHandlers\EstateEntryService;
+use Statamic\Facades\Collection;
 
 class ProjectController extends Controller
 {
@@ -24,6 +25,18 @@ class ProjectController extends Controller
         $imageSectionDescription = GlobalSet::find('onoffice_projects')->in('default')->get('imagesectiondescription');
         $imageSectionList = GlobalSet::find('onoffice_projects')->in('default')->get('imagesectionlist');
 
+        $content_with_image_replicator = GlobalSet::find('onoffice_projects')->in('default')->get('content_with_image_replicator');
+
+
+        // Services import
+
+        $services_header = GlobalSet::find('onoffice_projects')->in('default')->get('services_header');
+        $services_text = GlobalSet::find('onoffice_projects')->in('default')->get('services_subheader');
+        $services_replicator = GlobalSet::find('onoffice_projects')->in('default')->get('services');
+
+
+
+
         $collectionName = 'estate_entries';
         // check if there is a filter active
         $homeViewModelFilters = GlobalSet::find('onoffice')->in('default')->get('home_view_model_filter');
@@ -37,9 +50,10 @@ class ProjectController extends Controller
         $estates = EstateEntryService::getEstatesUnpaginated($filtersProjects, 3, 'erstellt_am', 'desc', $collectionName);
 
 
-        // dd($estates);
 
         $project_categories = GlobalSet::find('estate_filter_configuration')->in('default')->get('categories');
+
+        $reference_projects = Collection::findByHandle('referenzprojekte')->queryEntries()->get()->toArray();
 
 
         $categorizedProjects = [];
@@ -56,6 +70,8 @@ class ProjectController extends Controller
                 }
             }
         }
+
+        // dd($services_replicator);
 
         return (new View)
             ->template('neubauprojekte.onoffice.index')
@@ -74,6 +90,11 @@ class ProjectController extends Controller
                 'cta_sub_header' => $cta_sub_header,
                 'cta_headline' => $cta_headline,
                 'categorizedProjects' => $categorizedProjects,
+                'content_with_image_replicator' => $content_with_image_replicator,
+                'services_header' => $services_header,
+                'services_text' => $services_text,
+                'services_replicator' => $services_replicator,
+                'reference_projects' => $reference_projects,
             ]);
     }
 

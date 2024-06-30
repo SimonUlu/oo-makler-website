@@ -106,11 +106,8 @@
         @livewire('estate-relation-controller', ['subEstates' => $subEstatesData])
     </section>
     <section class="mx-auto w-full mb-12" id="units">
-        @include('partials.neubauprojekte.onoffice.detail.services', ['four_grid_text_with_icons' => $services])
+        @include('partials.neubauprojekte.onoffice.detail.images', ['estate' => $estate])
 
-        <div class="max-w-7xl mx-auto pt-12 lg:pt-20">
-        @include('partials.neubauprojekte.onoffice.detail.finance')
-        </div>
         <div class="max-w-7xl mx-auto pt-12 lg:pt-20">
             @include('partials.neubauprojekte.onoffice.detail.user', ["user" => $onOfficeUser, "userPhoto" => $userPhoto])
         </div>
@@ -119,24 +116,9 @@
 
 
 
-
-<section id="panorama">
-    @include('partials.neubauprojekte.onoffice.detail.content-two',
-    [
-            "images" => $fotoImages,
-            "title" => $estate["elements"]["objekttitel"],
-            "ausstattung" => $estate["elements"]["ausstatt_beschr"]
-    ])
-</section>
-
-
 <section class="w-full  mt-24 lg:mt-32" id="location">
     <section class="bg-gray-100 w-full  mb-12">
         @include('partials.neubauprojekte.onoffice.detail.map', ["lage" => $estate["elements"]["lage"]])
-    </section>
-
-    <section class="px-4 bg-white w-full mt-6 lg:mt-12 mb-12">
-        @include('partials.neubauprojekte.onoffice.detail.locationImages', ["images" => $panoramaImages])
     </section>
 </section>
 
@@ -152,7 +134,7 @@
 </section>
 
 <section class="px-4 mx-auto w-full max-w-screen-xl mb-12" id="contact">
-    <div class="bg-white py-32">
+    <div class="bg-white pb-6 lg:pb-12">
         <div class="mx-auto max-w-7xl px-6 text-center lg:px-8">
           <div class="mx-auto max-w-2xl">
             <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Ihr Ansprechpartner</h2>
