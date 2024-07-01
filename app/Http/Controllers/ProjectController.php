@@ -148,7 +148,6 @@ class ProjectController extends Controller
             ->where('immobilien_id', $estateId)
             ->toArray();
 
-
         // return view
         return (new View)
             ->template('neubauprojekte.onoffice.show')
@@ -165,7 +164,7 @@ class ProjectController extends Controller
                 'userPhoto' => $photo['elements']['photo'],
                 'subEstatesData' => $subEstatesData,
                 'services' => $services,
-                'statamic_project_info' => $statamic_project_info
+                'statamic_project_info' => $statamic_project_info,
             ]);
     }
 
