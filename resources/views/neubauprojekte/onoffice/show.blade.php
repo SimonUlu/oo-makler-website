@@ -105,15 +105,23 @@
     <section class="bg-gray-100 w-full">
         @livewire('estate-relation-controller', ['subEstates' => $subEstatesData])
     </section>
+
+    @if(!empty($statamic_project_info))
+    <section class="mx-auto w-full mb-12" id="units">
+        @include('partials.neubauprojekte.onoffice.detail.content-image-replicator', ['info' => $statamic_project_info])
+    </section>
+    @endif
+
     <section class="mx-auto w-full mb-12" id="units">
         @include('partials.neubauprojekte.onoffice.detail.images', ['estate' => $estate])
-
-        <div class="max-w-7xl mx-auto pt-12 lg:pt-20">
-            @include('partials.neubauprojekte.onoffice.detail.user', ["user" => $onOfficeUser, "userPhoto" => $userPhoto])
-        </div>
     </section>
 </section>
 
+@if(!empty($statamic_project_info))
+<section class="w-full ">
+    @include('partials.neubauprojekte.onoffice.detail.lage', ["lage" => $estate["elements"]["lage"], "info" => $statamic_project_info])
+</section>
+@endif
 
 
 <section class="w-full  mt-24 lg:mt-32" id="location">

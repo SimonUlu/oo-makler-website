@@ -3,7 +3,7 @@
         <div class="grid grid-cols-3 gap-2">
             <a 
                 href="#" 
-                class="p-8 col-span-3 text-left h-[600px] bg-no-repeat bg-cover bg-center bg-gray-500 bg-blend-multiply hover:bg-blend-normal"
+                class="p-8 col-span-3 text-left h-[600px] bg-no-repeat bg-cover  bg-opacity-20 bg-center bg-gray-500 bg-blend-multiply hover:bg-blend-normal"
                 style="background-image: url('{{$estate["elements"]["images"][0]["url"]}}');"
             >
                 <!-- Entfernen Sie das <img>, wenn Sie das Bild nur als Hintergrund anzeigen möchten -->
@@ -12,16 +12,16 @@
                 <a 
                     href="#" 
                     style="background-image: url('{{$estate["elements"]["images"][1]["url"]}}');"
-                    class="p-8 col-span-2 md:col-span-1 text-left h-96  bg-no-repeat bg-cover bg-center bg-gray-500 bg-blend-multiply hover:bg-blend-normal">
+                    class="p-8 col-span-2 md:col-span-1  bg-opacity-20 text-left h-96  bg-no-repeat bg-cover bg-center bg-gray-500 bg-blend-multiply hover:bg-blend-normal">
                 </a> 
                 <div 
                     style="background-image: url('{{$estate["elements"]["images"][2]["url"]}}');"
-                    class="p-8 col-span-2 md:col-span-1 text-left h-96  bg-no-repeat bg-cover bg-center bg-gray-500 bg-blend-multiply hover:bg-blend-normal">
+                    class="p-8 col-span-2 md:col-span-1 bg-opacity-20 text-left h-96  bg-no-repeat bg-cover bg-center bg-gray-500 bg-blend-multiply hover:bg-blend-normal">
                 </div>               
                 <a 
                     href="#" 
                     style="background-image: url('{{$estate["elements"]["images"][3]["url"]}}');"
-                    class="p-8 col-span-2 md:col-span-1 text-left h-96 bg-no-repeat bg-cover bg-center bg-gray-500 bg-blend-multiply hover:bg-blend-normal">
+                    class="p-8 col-span-2 md:col-span-1  bg-opacity-20 text-left h-96 bg-no-repeat bg-cover bg-center bg-gray-500 bg-blend-multiply hover:bg-blend-normal">
                 </a>
             @endif
         </div>

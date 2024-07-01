@@ -146,7 +146,16 @@ class ProjectController extends Controller
         $user = $onOfficeService->getOnOfficeUserById($estate['elements']['benutzer']);
         $photo = $onOfficeService->getUserPhotoById($estate['elements']['benutzer']);
 
+        // dd($estateId);
+
         $subEstatesData = $this->loadSubEstates($onOfficeService, [$estateId]);
+
+        $statamic_project_info = Collection::findByHandle('immobilienprojekte')
+            ->queryEntries()
+            ->get()
+            ->where('immobilien_id', $estateId)
+            ->toArray();
+
 
         // return view
         return (new View)
@@ -164,6 +173,7 @@ class ProjectController extends Controller
                 'userPhoto' => $photo['elements']['photo'],
                 'subEstatesData' => $subEstatesData,
                 'services' => $services,
+                'statamic_project_info' => $statamic_project_info
             ]);
     }
 

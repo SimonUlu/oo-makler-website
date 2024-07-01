@@ -216,7 +216,8 @@ tabs:
                       instructions: null
                       icon: null
                       fields:
-                        - handle: title
+                        -
+                          handle: title
                           field:
                             input_type: text
                             antlers: false
@@ -227,7 +228,8 @@ tabs:
                             visibility: visible
                             replicator_preview: true
                             hide_display: false
-                        - handle: url
+                        -
+                          handle: url
                           field:
                             type: text
                             validate: required|url
@@ -239,7 +241,8 @@ tabs:
                             input_type: text
                             antlers: false
                             hide_display: false
-                        - handle: type
+                        -
+                          handle: type
                           field:
                             input_type: text
                             antlers: false
@@ -250,7 +253,8 @@ tabs:
                             visibility: visible
                             replicator_preview: true
                             hide_display: false
-                        - handle: originalname
+                        -
+                          handle: originalname
                           field:
                             input_type: text
                             antlers: false
@@ -261,7 +265,8 @@ tabs:
                             visibility: visible
                             replicator_preview: true
                             hide_display: false
-                        - handle: modified
+                        -
+                          handle: modified
                           field:
                             mode: single
                             inline: false
@@ -277,7 +282,8 @@ tabs:
                             visibility: visible
                             replicator_preview: true
                             hide_display: false
-                        - handle: text
+                        -
+                          handle: text
                           field:
                             input_type: text
                             antlers: false
@@ -297,7 +303,8 @@ tabs:
               previews: true
               fullscreen: true
               hide_display: false
-          - handle: erstellt_am
+          -
+            handle: erstellt_am
             field:
               mode: single
               inline: false

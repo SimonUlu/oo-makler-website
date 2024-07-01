@@ -10,6 +10,7 @@ tree:
   -
     id: 9ea4bdb1-aef8-4379-9ce9-c9f9061d98a0
     title: Investieren
+    url: /investieren
     children:
       -
         id: 49d3866d-ad94-4f1e-8b2d-7d2993e1f8cc
