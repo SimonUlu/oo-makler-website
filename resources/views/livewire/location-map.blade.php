@@ -107,12 +107,24 @@
                             modal.style.left = '20%';
                             modal.style.maxWidth = "60%";
                         } else {
-                            // Für größere Bildschirme, positioniere das Modal basierend auf der Position des Mausklicks
-                            // Da `e` hier nicht direkt die Klickposition liefert, müssen wir einen anderen Ansatz wählen
+                            // Für größere Bildschirme, positioniere das Modal direkt über der Klickposition
                             var modalRect = modal.getBoundingClientRect();
                             console.log(modalRect);
-                            modal.style.top = (e.clientY - modalRect.height) + 'px';
-                            modal.style.left = (e.clientX - modalRect.width) + 'px';
+
+                            // Stelle sicher, dass das Modal oben und links von der Klickposition erscheint
+                            var topPosition = e.clientY - modalRect.height;
+                            var leftPosition = e.clientX - modalRect.width;
+
+                            // Verhindere, dass das Modal außerhalb des sichtbaren Bereichs platziert wird
+                            if (topPosition < 0) {
+                                topPosition = e.clientY; // Falls oben kein Platz ist, positioniere es unter dem Klick
+                            }
+                            if (leftPosition < 0) {
+                                leftPosition = e.clientX; // Falls links kein Platz ist, positioniere es rechts vom Klick
+                            }
+
+                            modal.style.top = topPosition + 'px';
+                            modal.style.left = leftPosition - 150 + 'px';
                         }
                     });
                 }
