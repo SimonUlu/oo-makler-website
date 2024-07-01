@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use Statamic\View\View;
-use Illuminate\Http\Request;
-use Statamic\Facades\GlobalSet;
-use App\Services\OnOfficeService;
 use App\Helpers\Estates\EstateHelper;
 use App\Services\EstateHandlers\EstateEntryService;
+use App\Services\OnOfficeService;
+use Illuminate\Http\Request;
 use Statamic\Facades\Collection;
+use Statamic\Facades\GlobalSet;
+use Statamic\View\View;
 
 class ProjectController extends Controller
 {
@@ -27,15 +27,11 @@ class ProjectController extends Controller
 
         $content_with_image_replicator = GlobalSet::find('onoffice_projects')->in('default')->get('content_with_image_replicator');
 
-
         // Services import
 
         $services_header = GlobalSet::find('onoffice_projects')->in('default')->get('services_header');
         $services_text = GlobalSet::find('onoffice_projects')->in('default')->get('services_subheader');
         $services_replicator = GlobalSet::find('onoffice_projects')->in('default')->get('services');
-
-
-
 
         $collectionName = 'estate_entries';
         // check if there is a filter active
@@ -44,17 +40,13 @@ class ProjectController extends Controller
         // Filter the collection to find the entry with the specific "home_view_model_filter_name"
         $filteredEntryProjects = EstateEntryService::getFilteredEntry($homeViewModelFilters, 'projects');
 
-
         // get filters
         $filtersProjects = OnOfficeService::transformFilterArray($filteredEntryProjects);
         $estates = EstateEntryService::getEstatesUnpaginated($filtersProjects, 3, 'erstellt_am', 'desc', $collectionName);
 
-
-
         $project_categories = GlobalSet::find('estate_filter_configuration')->in('default')->get('categories');
 
         $reference_projects = Collection::findByHandle('referenzprojekte')->queryEntries()->get()->toArray();
-
 
         $categorizedProjects = [];
 

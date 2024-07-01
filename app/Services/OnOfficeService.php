@@ -270,7 +270,7 @@ class OnOfficeService
             $estateIds = array_map(function ($item) {
                 return $item['id'];
             }, $result);
-            $images = self::getEstateImagesByIds($estateIds, ['Titelbild', 'Foto' ,'Grundriss']);
+            $images = self::getEstateImagesByIds($estateIds, ['Titelbild', 'Foto', 'Grundriss']);
             foreach ($result as $key => $estate) {
                 $result[$key]['elements']['images'] = collect($images)->where('estateId', $estate['id'])->first()['elements'] ?? [];
             }
