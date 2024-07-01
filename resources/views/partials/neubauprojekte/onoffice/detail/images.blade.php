@@ -1,6 +1,7 @@
 <section class="bg-white dark:bg-gray-900">
     <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
         <div class="grid grid-cols-3 gap-2">
+            @if(isset($estate["elements"]["images"][0]))
             <a 
                 href="#" 
                 class="p-8 col-span-3 text-left h-[600px] bg-no-repeat bg-cover  bg-opacity-20 bg-center bg-gray-500 bg-blend-multiply hover:bg-blend-normal"
@@ -8,6 +9,7 @@
             >
                 <!-- Entfernen Sie das <img>, wenn Sie das Bild nur als Hintergrund anzeigen möchten -->
             </a>
+            @endif
             @if(isset($estate["elements"]["images"][3]))
                 <a 
                     href="#" 
