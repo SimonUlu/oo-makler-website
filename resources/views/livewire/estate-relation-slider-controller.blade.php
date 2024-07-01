@@ -90,11 +90,13 @@
                         <div class="grid w-full max-w-lg grid-cols-1 mx-auto md:flex-col md:mb-0 md:space-x-0 md:max-w-none">
                             <a href="{{ url('immobilien/details/' . strval($estate['id'])) }}" alt="zur Immobilie" target="_blank">
                                 <div class="relative" wire:key="estate-img-container-{{ $estate['id'] }}">
+                                    @if(isset($estate['elements']['images'][0]['url']))
                                     <img class="object-cover w-full shadow-none  sm:shadow-t-lg sm:shadow-r-lg sm:shadow-l-lg h-72 lazy"
                                         target="_blank"
                                         data-src="{{ isset($estate['elements']['images'][0]['url']) ? $estate['elements']['images'][0]['url'] . '@800x600' : asset('img/300x200.png')}}"
                                         alt="{{ isset($estate['elements']['images'][0]['title']) ? $estate['elements']['images'][0]['title'] : 'Platzhalter Objekttitel' }}"
                                         loading="lazy" />
+                                    @endif
                                     <div class="absolute transform -translate-x-1/2 -translate-y-1/2 spinner top-1/2 left-1/2">
                                         <svg class="w-5 h-5 animate-spin" viewBox="0 0 24 24">
                                             <circle class="opacity-25" cx="12" cy="12" r="10"
