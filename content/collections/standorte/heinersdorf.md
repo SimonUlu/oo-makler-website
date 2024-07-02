@@ -1,10 +1,9 @@
 ---
 id: 6f82f2a4-b1e6-429a-b4f8-f84d10cc143a
-published: false
 blueprint: standorte
 title: Heinersdorf
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1719926460
+updated_at: 1719926618
 thumbnail_image:
   - content_bewertungvorort.jpg
 longitude: '13.441308209904921'
