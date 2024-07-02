@@ -1,10 +1,9 @@
 ---
 id: 34dd4d9a-079b-4c65-85c4-8382eccc6b73
-published: false
 blueprint: standorte
 title: Pankow
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1719926597
+updated_at: 1719926608
 thumbnail_image:
   - content_bewertungvorort.jpg
 longitude: '13.413045803786135'
