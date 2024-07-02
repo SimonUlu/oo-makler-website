@@ -1,10 +1,9 @@
 ---
 id: 08c62b79-39ca-4a4b-b295-48764f38a233
-published: false
 blueprint: standorte
 title: Bohnsdorf
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1719928677
+updated_at: 1719928686
 thumbnail_image:
   - content_bewertungvorort.jpg
 longitude: '13.565987536533644'
