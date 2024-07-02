@@ -106,10 +106,19 @@ tabs:
             handle: office
             field:
               options:
-                charlottenburg: Charlottenburg
-                friedrichshain: Friedrichshain
-                kreuzberg: Kreuzberg
-                spandau: Spandau
+                Charlottenburg-Wilmersdorf: Charlottenburg-Wilmersdorf
+                Friedrichshain-Kreuzberg: Friedrichshain-Kreuzberg
+                Lichtenberg: Lichtenberg
+                Marzahn-Hellersdorf: Marzahn-Hellersdorf
+                Mitte: Mitte
+                Neukölln: Neukölln
+                Pankow: Pankow
+                Reinickendorf: Reinickendorf
+                Spandau: Spandau
+                Steglitz-Zehlendorf: Steglitz-Zehlendorf
+                Tempelhof-Schöneberg: Tempelhof-Schöneberg
+                Treptow-Köpenick: Treptow-Köpenick
+                'Brandenburger Landkreise': null
               taggable: false
               push_tags: false
               multiple: false
