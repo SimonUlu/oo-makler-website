@@ -1,5 +1,6 @@
 ---
 id: 88d184da-02e6-4556-829b-f13889d4ded1
+published: false
 blueprint: standorte
 title: 'Biesdorf (Dupliziert) (Dupliziert)'
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
