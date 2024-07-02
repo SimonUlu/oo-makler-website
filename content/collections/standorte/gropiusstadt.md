@@ -1,10 +1,9 @@
 ---
 id: 4c0cffd5-63ae-4a8c-be77-2fb6fb78d05a
-published: false
 blueprint: standorte
 title: Gropiusstadt
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1719925910
+updated_at: 1719926056
 thumbnail_image:
   - content_bewertungvorort.jpg
 longitude: '13.461634883700107'
