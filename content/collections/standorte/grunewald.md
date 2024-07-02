@@ -3,7 +3,7 @@ id: 73bd3237-1877-41cc-86b3-b27fb19e019b
 blueprint: standorte
 title: Grunewald
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1719923327
+updated_at: 1719923335
 thumbnail_image:
   - content_bewertungvorort.jpg
 longitude: '13.24101732827364'
