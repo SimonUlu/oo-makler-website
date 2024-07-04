@@ -6,8 +6,8 @@ template: pages/leistungen/cta-page
 title: Renditeobjekte
 subtitle: 'Ihr Investment in die Zukunft'
 description: 'Lorem Ipsum'
-subheaderheadline: Zinshäuser
-subheaderdescription: 'Lorem Ipsum'
+subheaderheadline: 'Zins- und Renditeobjekte'
+subheaderdescription: 'Legen Sie Ihr Geld sicher und gewinnbringend an'
 content_image_1:
   - architecture-gef0672c68_1920.jpg
 imagesectionheader: 'Lorem Ipsum'
@@ -142,7 +142,7 @@ seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1720096407
+updated_at: 1720096468
 headerbild:
   - architecture-gef0672c68_1920.jpg
 stepsheader: 'UNSER VORGEHEN.'
