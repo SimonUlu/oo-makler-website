@@ -142,7 +142,7 @@ seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1720102100
+updated_at: 1720102182
 headerbild:
   - architecture-gef0672c68_1920.jpg
 stepsheader: 'UNSER VORGEHEN.'
@@ -518,16 +518,10 @@ advantages:
     id: lww6kp2c
     image:
       - architecture-gef0672c68_1920.jpg
-    description: 'Wir schätzen die individuellen Fähigkeiten und Talente unser Mitarbeiterinnnen und Mitarbeiter. Mit ihnen erreichen wir große und ambitionierte Ziele und mit flachen Hierarchien ebnen wir kurze Entscheidungswege. Jeder Mensch zählt und sein Input ist wertvoll, um unsere internen Arbeitsprozesse zu hinterfragen und Lösungen vorzuschlagen.'
     type: neues_set
     enabled: true
     header_outside: 'Miteinander handeln'
-    description_outside: |-
-      Anders als bei Immobilien, die selbst bewohnt werden sollen, spielen Emotionen beim Ankauf von Zinshäusern eine deutlich kleinere Rolle. Sicherlich verliebt sich auch mal ein Investor in den schmuck sanierten Stuckaltbau und zahlt dafür ein paar Euro mehr. Auf jeden Fall soll und muss sich ein Immobilieninvestment auch finanziell rechnen. Wir wissen, wie Investoren rechnen (müssen) und ihre Ankaufsentscheidung vorbereiten - das sogenannte Due Dilligence.
-
-      Hier spielt der Zustand des Hauses eine wesentliche Rolle. Welche Maßnahmen müssen kurz-, mittel- und langfristig angegangen werden? Auch und gerade im Hinblick auf das GEG (Gebäudeenergiegesetz). Stecken im Grundstück noch baurechtliche Reserven, z. B. durch Aufstockung oder Anbau? Auch das prüfen wir zur Einschätzung des marktgerechten Wertes. Ganz besonderes Augenmerk wird natürlich auf die Mieteinkünfte gelegt. Insbesondere für Wohnungsmietverträge gibt es zahlreiche gesetzliche Regelungen, die für die Nachhaltigkeit der Mietrendite entscheidende Tragweite entfalten.
-
-      Die BVBI unterstützt Verkäufer tatkräftig bei der Zusammenstellung aller relevanter Unterlagen und bereitet diese datenschutzkonform auf. So können potentielle Investoren zügig zu einer fundierten Ankaufsentscheidung kommen.
+    description_outside: 'Wir schätzen die individuellen Fähigkeiten und Talente unser Mitarbeiterinnnen und Mitarbeiter. Mit ihnen erreichen wir große und ambitionierte Ziele und mit flachen Hierarchien ebnen wir kurze Entscheidungswege. Jeder Mensch zählt und sein Input ist wertvoll, um unsere internen Arbeitsprozesse zu hinterfragen und Lösungen vorzuschlagen.'
   -
     id: lxxc45b3
     header_outside: "You'll never walk alone"
