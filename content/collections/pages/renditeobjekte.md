@@ -142,7 +142,7 @@ seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1720096468
+updated_at: 1720096552
 headerbild:
   - architecture-gef0672c68_1920.jpg
 stepsheader: 'UNSER VORGEHEN.'
@@ -528,7 +528,7 @@ advantages:
     button_text: 'Jetzt Termin vereinbaren'
     type: neues_set
     enabled: true
-    header_outside: 'Marktgerechte Platzierung Ihrer Immobilie'
+    header_outside: 'Marktgerechte Platzierung'
     description_outside: |-
       Anders als bei Immobilien, die selbst bewohnt werden sollen, spielen Emotionen beim Ankauf von Zinshäusern eine deutlich kleinere Rolle. Sicherlich verliebt sich auch mal ein Investor in den schmuck sanierten Stuckaltbau und zahlt dafür ein paar Euro mehr. Auf jeden Fall soll und muss sich ein Immobilieninvestment auch finanziell rechnen. Wir wissen, wie Investoren rechnen (müssen) und ihre Ankaufsentscheidung vorbereiten - das sogenannte Due Dilligence.
 
