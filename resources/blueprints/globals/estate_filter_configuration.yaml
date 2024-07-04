@@ -2,41 +2,45 @@ tabs:
   main:
     display: Main
     sections:
-      - display: "Estate Field List"
+      -
+        display: 'Estate Field List'
         fields:
-          - handle: estate_field_list
+          -
+            handle: estate_field_list
             field:
               collapse: false
               previews: true
               fullscreen: true
               sets:
                 new_set_group:
-                  display: "New Set Group"
+                  display: 'New Set Group'
                   instructions: null
                   icon: null
                   sets:
                     new_set:
-                      display: "New Set"
+                      display: 'New Set'
                       instructions: null
                       icon: null
                       fields:
-                        - handle: onoffice_label_id
+                        -
+                          handle: onoffice_label_id
                           field:
                             input_type: text
                             antlers: false
                             type: text
-                            display: "onOffice Label Id"
+                            display: 'onOffice Label Id'
                             icon: text
                             listable: hidden
                             instructions_position: above
                             visibility: visible
                             hide_display: false
                             width: 75
-                        - handle: onoffice_label_id_is_active
+                        -
+                          handle: onoffice_label_id_is_active
                           field:
                             default: true
                             type: toggle
-                            display: "onOffice Label Id is Active"
+                            display: 'onOffice Label Id is Active'
                             icon: toggle
                             listable: hidden
                             instructions_position: above
@@ -44,64 +48,69 @@ tabs:
                             hide_display: false
                             width: 25
               type: replicator
-              display: "Estate Field List"
-              icon: replicator
+              display: 'Estate Field List'
               listable: hidden
               instructions_position: above
               visibility: visible
               hide_display: false
-      - display: "Filter Options"
+      -
+        display: 'Filter Options'
         fields:
-          - handle: filter_options
+          -
+            handle: filter_options
             field:
               collapse: false
               previews: true
               fullscreen: true
               sets:
                 new_set_group:
-                  display: "New Set Group"
+                  display: 'New Set Group'
                   instructions: null
                   icon: null
                   sets:
                     new_set:
-                      display: "New Set"
+                      display: 'New Set'
                       instructions: null
                       icon: null
                       fields:
-                        - handle: onoffice_label_id
+                        -
+                          handle: onoffice_label_id
                           field:
                             input_type: text
                             antlers: false
                             type: text
-                            display: "OnOffice Label Id"
+                            display: 'OnOffice Label Id'
                             icon: text
                             listable: hidden
                             instructions_position: above
                             visibility: visible
                             hide_display: false
-                        - handle: filter_enabled_buy_case
+                        -
+                          handle: filter_enabled_buy_case
                           field:
                             default: true
                             type: toggle
-                            display: "Filter aktiv Kauf"
+                            display: 'Filter aktiv Kauf'
                             icon: toggle
                             listable: hidden
                             instructions_position: above
                             visibility: visible
                             hide_display: false
                             width: 50
-                        - handle: filter_enabled_rent_case
+                        -
+                          handle: filter_enabled_rent_case
                           field:
                             default: false
                             type: toggle
-                            display: "Filter Aktiv Miete"
+                            display: 'Filter Aktiv Miete'
                             icon: toggle
                             width: 50
                             listable: hidden
                             instructions_position: above
                             visibility: visible
                             hide_display: false
-                        - handle: values_included
+                        -
+                          handle: values_included
                           field:
                             taggable: true
                             push_tags: true
@@ -110,15 +119,16 @@ tabs:
                             searchable: true
                             cast_booleans: false
                             type: select
-                            display: "Werte einschließen"
+                            display: 'Werte einschließen'
                             icon: select
-                            instructions: "Sobald hier Werte definiert werden, sind ausschließlich diese Werte im Filter sichtbar. Die Werte müssen genau mit der Bezeichnung in onOffice übereinstimmen."
+                            instructions: 'Sobald hier Werte definiert werden, sind ausschließlich diese Werte im Filter sichtbar. Die Werte müssen genau mit der Bezeichnung in onOffice übereinstimmen.'
                             width: 50
                             listable: hidden
                             instructions_position: above
                             visibility: visible
                             hide_display: false
-                        - handle: values_excluded
+                        -
+                          handle: values_excluded
                           field:
                             taggable: true
                             push_tags: true
@@ -127,75 +137,98 @@ tabs:
                             searchable: true
                             cast_booleans: false
                             type: select
-                            display: "Werte ausschließen"
+                            display: 'Werte ausschließen'
                             icon: select
-                            instructions: "Sobald hier Werte definiert werden, sind diese Werte ausgeschlossen. Alle anderen Werte, die in onOffice konfiguriert sind, werden dann im Filter angezeigt."
+                            instructions: 'Sobald hier Werte definiert werden, sind diese Werte ausgeschlossen. Alle anderen Werte, die in onOffice konfiguriert sind, werden dann im Filter angezeigt.'
                             width: 50
                             listable: hidden
                             instructions_position: above
                             visibility: visible
                             hide_display: false
-                        - handle: label_filter
+                        -
+                          handle: label_filter
                           field:
                             input_type: text
                             antlers: false
                             type: text
-                            display: "Anzeigename des Filters"
+                            display: 'Anzeigename des Filters'
                             icon: text
                             listable: hidden
                             instructions_position: above
                             visibility: visible
                             hide_display: false
               type: replicator
-              display: "Filter Optionen"
-              icon: replicator
+              display: 'Filter Optionen'
               listable: hidden
               instructions_position: above
               visibility: visible
               hide_display: false
-      - display: "Static Filter Options Reference Estates"
+          -
+            handle: estate_search_by_radius
+            field:
+              options:
+                'yes': Ja
+                'no': Nein
+              taggable: false
+              push_tags: false
+              multiple: false
+              clearable: false
+              searchable: true
+              cast_booleans: false
+              type: select
+              display: 'Umkreissuche aktiv'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+      -
+        display: 'Static Filter Options Reference Estates'
         fields:
-          - handle: references_filter_options
+          -
+            handle: references_filter_options
             field:
               collapse: false
               previews: true
               fullscreen: true
               sets:
                 new_set_group:
-                  display: "New Set Group"
+                  display: 'New Set Group'
                   instructions: null
                   icon: null
                   sets:
                     new_set:
-                      display: "New Set"
+                      display: 'New Set'
                       instructions: null
                       icon: null
                       fields:
-                        - handle: onoffice_label_id
+                        -
+                          handle: onoffice_label_id
                           field:
                             input_type: text
                             antlers: false
                             type: text
-                            display: "OnOffice Label Id"
+                            display: 'OnOffice Label Id'
                             icon: text
                             listable: hidden
                             instructions_position: above
                             visibility: visible
                             hide_display: false
-                        - handle: operator
+                        -
+                          handle: operator
                           field:
                             options:
-                              "=": "="
-                              "!=": "!="
+                              '=': '='
+                              '!=': '!='
                               in: in
-                              "not in": "not in"
-                              ">=": ">="
-                              ">": ">"
-                              "<": "<"
-                              "<=": "<="
+                              'not in': 'not in'
+                              '>=': '>='
+                              '>': '>'
+                              '<': '<'
+                              '<=': '<='
                               like: like
                               between: between
-                              "not like": "not like"
+                              'not like': 'not like'
                             taggable: false
                             push_tags: false
                             multiple: false
@@ -203,86 +236,93 @@ tabs:
                             searchable: true
                             cast_booleans: false
                             type: select
-                            display: "References Operator"
+                            display: 'References Operator'
                             icon: select
                             listable: hidden
                             instructions_position: above
                             visibility: visible
                             hide_display: false
-                        - handle: references_value_is_active
+                        -
+                          handle: references_value_is_active
                           field:
                             default: true
                             type: toggle
-                            display: "References Value is active"
+                            display: 'References Value is active'
                             icon: toggle
                             width: 50
                             listable: hidden
                             instructions_position: above
                             visibility: visible
                             hide_display: false
-                        - handle: references_value
+                        -
+                          handle: references_value
                           field:
                             input_type: text
                             antlers: false
                             type: text
-                            display: "References Value"
+                            display: 'References Value'
                             icon: text
                             width: 50
                             listable: hidden
                             instructions_position: above
                             visibility: visible
                             hide_display: false
-                        - handle: references_range_is_active
+                        -
+                          handle: references_range_is_active
                           field:
                             default: false
                             type: toggle
-                            display: "References Range is active"
+                            display: 'References Range is active'
                             icon: toggle
                             width: 33
                             listable: hidden
                             instructions_position: above
                             visibility: visible
                             hide_display: false
-                        - handle: references_range_min
+                        -
+                          handle: references_range_min
                           field:
                             input_type: text
                             antlers: false
                             type: text
-                            display: "References Range min"
+                            display: 'References Range min'
                             icon: text
                             width: 33
                             listable: hidden
                             instructions_position: above
                             visibility: visible
                             hide_display: false
-                        - handle: references_range_max
+                        -
+                          handle: references_range_max
                           field:
                             input_type: text
                             antlers: false
                             type: text
-                            display: "References Range max"
+                            display: 'References Range max'
                             icon: text
                             width: 33
                             listable: hidden
                             instructions_position: above
                             visibility: visible
                             hide_display: false
-                        - handle: references_in_is_active
+                        -
+                          handle: references_in_is_active
                           field:
                             default: false
                             type: toggle
-                            display: "References In is active"
+                            display: 'References In is active'
                             icon: toggle
                             width: 50
                             listable: hidden
                             instructions_position: above
                             visibility: visible
                             hide_display: false
-                        - handle: references_in_values_as_array
+                        -
+                          handle: references_in_values_as_array
                           field:
                             mode: dynamic
                             type: array
-                            display: "References In Values as Array"
+                            display: 'References In Values as Array'
                             icon: array
                             width: 50
                             listable: hidden
@@ -290,31 +330,33 @@ tabs:
                             visibility: visible
                             hide_display: false
               type: replicator
-              display: "References Filter Options"
-              icon: replicator
+              display: 'References Filter Options'
               listable: hidden
               instructions_position: above
               visibility: visible
               hide_display: false
-      - display: "Static Filter Options Projects"
+      -
+        display: 'Static Filter Options Projects'
         fields:
-          - handle: categories
+          -
+            handle: categories
             field:
               collapse: false
               previews: true
               fullscreen: true
               sets:
                 neue_set-gruppe:
-                  display: "Neue Set-Gruppe"
+                  display: 'Neue Set-Gruppe'
                   instructions: null
                   icon: null
                   sets:
                     neues_set:
-                      display: "Neues Set"
+                      display: 'Neues Set'
                       instructions: null
                       icon: null
                       fields:
-                        - handle: name
+                        -
+                          handle: name
                           field:
                             input_type: text
                             antlers: false
@@ -325,7 +367,8 @@ tabs:
                             instructions_position: above
                             visibility: visible
                             hide_display: false
-                        - handle: onofficelabel
+                        -
+                          handle: onofficelabel
                           field:
                             input_type: text
                             antlers: false
@@ -338,7 +381,6 @@ tabs:
                             hide_display: false
               type: replicator
               display: categories
-              icon: replicator
               listable: hidden
               instructions_position: above
               visibility: visible
