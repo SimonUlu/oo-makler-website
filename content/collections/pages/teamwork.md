@@ -142,7 +142,7 @@ seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1720101988
+updated_at: 1720102100
 headerbild:
   - architecture-gef0672c68_1920.jpg
 stepsheader: 'UNSER VORGEHEN.'
@@ -508,24 +508,17 @@ content_with_image_replicator_two:
 advantages:
   -
     id: lww6joov
-    header: 'Voneinander lernen'
     image:
       - architecture-gef0672c68_1920.jpg
-    description: 'Möchten auch Sie künftig passende Angebote zu Offmarket-Immobilien erhalten?'
-    button_link: investment@bvbi.de.
-    button_text: 'Jetzt Ankaufsprofil senden'
     type: neues_set
     enabled: true
     header_outside: 'Voneinander lernen'
     description_outside: 'Ein Dschungel von Gesetzen und ständige Änderungen im Immobilienmarkt sind eine Herausforderung für alle Beteiligten, ob Verkäufer, Käufer oder Makler. GEG, GWG, UWG? Über die gesetzliche Fortbildungspflicht hinaus, die für Immobilienmakler seit 2018 gilt, führen wir regelmäßig interne Schulungen durch, mit eigenen Experten oder mit externen Referenten. Erklären, diskutieren, verstehen.'
   -
     id: lww6kp2c
-    header: 'Miteinander handeln'
     image:
       - architecture-gef0672c68_1920.jpg
     description: 'Wir schätzen die individuellen Fähigkeiten und Talente unser Mitarbeiterinnnen und Mitarbeiter. Mit ihnen erreichen wir große und ambitionierte Ziele und mit flachen Hierarchien ebnen wir kurze Entscheidungswege. Jeder Mensch zählt und sein Input ist wertvoll, um unsere internen Arbeitsprozesse zu hinterfragen und Lösungen vorzuschlagen.'
-    button_link: /
-    button_text: 'Jetzt Termin vereinbaren'
     type: neues_set
     enabled: true
     header_outside: 'Miteinander handeln'
@@ -539,7 +532,6 @@ advantages:
     id: lxxc45b3
     header_outside: "You'll never walk alone"
     description_outside: 'Wir haben Spaß bei der Arbeit. Weil wir lieben, was wir tun. Und weil wir es können. Bei uns kommen die besten Köpfe zusammen. In unserem Team arbeiten gut ausgebildete Expertinnen und Experten mit kaufmännischer Ausbildung oder Studium im Immobilien- und Finanzsektor. Die Vernetzung von Kompetenzen schafft die hohe Qualität, von der Sie profitieren.'
-    header: 'Teamwork makes the dream work'
     image:
       - architecture-gef0672c68_1920.jpg
     type: neues_set
