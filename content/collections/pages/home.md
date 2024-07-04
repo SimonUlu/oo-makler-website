@@ -4,7 +4,7 @@ blueprint: landing_page
 template: pages/home
 title: 'Ihr Immobilienmakler<br>in Berlin & Brandenburg'
 view_model: App\ViewModels\HomeViewModel
-subtitle: 'Jetzt erfolgreich vermieten, kaufen oder verkaufen!'
+subtitle: 'Kaufen und Verkaufen mit regionaler Expertise'
 header_seller_content: true
 seo_noindex: false
 seo_nofollow: false
@@ -12,7 +12,7 @@ seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1719565801
+updated_at: 1720095291
 header_type: type_6
 content_heading_h2: '<span style="color: #EB690B;">B</span><span style="color: #EB690B;">V</span><span style="color: #EB690B;">B</span><span style="color: #EB690B;">I</span> – <span style="color: #EB690B;">B</span>erlin-<span style="color: #EB690B;">V</span>ersteher und <span style="color: #EB690B;">B</span>randenburg-<span style="color: #EB690B;">I</span>nsider'
 content_text:
