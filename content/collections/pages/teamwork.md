@@ -142,7 +142,7 @@ seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1720101962
+updated_at: 1720101988
 headerbild:
   - architecture-gef0672c68_1920.jpg
 stepsheader: 'UNSER VORGEHEN.'
@@ -537,7 +537,7 @@ advantages:
       Die BVBI unterstützt Verkäufer tatkräftig bei der Zusammenstellung aller relevanter Unterlagen und bereitet diese datenschutzkonform auf. So können potentielle Investoren zügig zu einer fundierten Ankaufsentscheidung kommen.
   -
     id: lxxc45b3
-    header_outside: "You'll never walk allone"
+    header_outside: "You'll never walk alone"
     description_outside: 'Wir haben Spaß bei der Arbeit. Weil wir lieben, was wir tun. Und weil wir es können. Bei uns kommen die besten Köpfe zusammen. In unserem Team arbeiten gut ausgebildete Expertinnen und Experten mit kaufmännischer Ausbildung oder Studium im Immobilien- und Finanzsektor. Die Vernetzung von Kompetenzen schafft die hohe Qualität, von der Sie profitieren.'
     header: 'Teamwork makes the dream work'
     image:
