@@ -3,8 +3,8 @@ id: 98d8fa82-35da-44ef-be89-b3484511dfe9
 blueprint: leistungen
 view_model: App\ViewModels\VerkaufenViewModel
 template: pages/leistungen/cta-page
-title: 'Das sind wir'
-subtitle: 'Renditeobjekte verkaufen oder kaufen - wir bieten die passenden Lösungen'
+title: 'Team BVBI'
+subtitle: 'Teamwork makes the dream work'
 description: 'Lorem Ipsum'
 subheaderheadline: 'Erfolg hat mit Menschen, Menschen und Menschen zu tun'
 subheaderdescription: 'Unsere Mitarbeiterinnen und Mitarbeiter sind unser größter Wettbewerbsvorteil. Mit offener Kommunikation, Wertschätzung und kontinuierlicher Weiterbildung sorgen wir für ein positives Arbeitsklima.'
@@ -142,7 +142,7 @@ seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1719501234
+updated_at: 1720101940
 headerbild:
   - architecture-gef0672c68_1920.jpg
 stepsheader: 'UNSER VORGEHEN.'
@@ -678,4 +678,8 @@ accordeon_list:
     description: 'Die Kosten für die Bewertung Ihrer Immobilie können je nach Umfang und ARt der Bewertung variieren.'
     type: neues_set
     enabled: true
+show_logos: false
+show_faq: false
+show_current_estates: false
+only_image: false
 ---
