@@ -109,7 +109,7 @@ data:
             operator: '='
             value: status2obj_aktiv
           type: neues_set
-          enabled: true
+          enabled: false
         -
           id: lwmflz8u
           array_filter:
@@ -117,7 +117,7 @@ data:
             operator: '='
             value: '1'
           type: neues_set
-          enabled: false
+          enabled: true
       type: neues_set
       enabled: true
     -
