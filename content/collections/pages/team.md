@@ -18,7 +18,7 @@ seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1720171146
+updated_at: 1720172126
 imagesectionheader: 'ÜBER UNS.'
 imagesectiondescription: 'Volksbank am Württemberg – Ihr Immobilienpartner in Stuttgart und Fellbach. Individuell, zuverlässig, sicher: Ihre Immobilie liegt uns am Herzen. Mit Erfahrung, Know-How und Leidenschaft begleiten wir Sie bei jedem Schritt.'
 ctatext1header: 'Unsere Vision'
