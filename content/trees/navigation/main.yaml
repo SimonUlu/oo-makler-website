@@ -34,13 +34,13 @@ tree:
     url: /informieren
     children:
       -
-        id: 115dc6aa-e2b8-4079-8401-77e07c11aa85
-        title: Lexikon
-        url: /informieren-lexikon
-      -
         id: afa8ba16-1bf9-47c6-ada4-4d7840a0487e
         title: Blog
         url: /informieren-aktuelles
+      -
+        id: 115dc6aa-e2b8-4079-8401-77e07c11aa85
+        title: Lexikon
+        url: /informieren-lexikon
       -
         id: 47773695-06d0-4c17-a252-f048ed636599
         title: 'Lage, Lage, Lage'
