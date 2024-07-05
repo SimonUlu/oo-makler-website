@@ -70,11 +70,37 @@
                                     <span class="absolute inset-0 text-xl">
                                         
                                     </span>
-                                    Aktuelle Themen aus BVBI-Sicht
+                                    Immobilien-Blog
                                 </a>
                             </h2>
                             <p class="mt-4 text-sm leading-6 text-gray-600">
-                                Lesen - Wissen - Meinen
+                                Aktuelle Themen aus der BVBI - Sicht
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="">
+                    <div class="grid grid-cols-4 py-4 gap-x-2">
+                        <div class="col-span-1">
+                            <img
+                                src="{{lage_image.0.url}}"
+                                alt="{{lage_image.0.url}}"
+                                class="min-h-[7rem] object-cover object-center w-full h-full"
+                            />
+                        </div>
+                        <div class="relative max-w-xl col-span-3 group">
+                            
+                            <h2
+                                class="mt-2 text-lg font-semibold text-primary group-hover:text-gray-600"
+                            >
+                                <a class="text-xl" href="/aktuelles" target="_blank">
+                                    <span class="absolute inset-0"></span>
+                                    Lage, Lage, Lage
+                                </a>
+                            </h2>
+                            <p class="mt-4 text-sm leading-6 text-gray-600">
+                                Berliner Bezirke und Brandenburger Landkreise
                             </p>
                         </div>
                     </div>
@@ -108,31 +134,7 @@
                 </article>
 
 
-                <article class="">
-                    <div class="grid grid-cols-4 py-4 gap-x-2">
-                        <div class="col-span-1">
-                            <img
-                                src="{{lage_image.0.url}}"
-                                alt="{{lage_image.0.url}}"
-                                class="min-h-[7rem] object-cover object-center w-full h-full"
-                            />
-                        </div>
-                        <div class="relative max-w-xl col-span-3 group">
-                            
-                            <h2
-                                class="mt-2 text-lg font-semibold text-primary group-hover:text-gray-600"
-                            >
-                                <a class="text-xl" href="/aktuelles" target="_blank">
-                                    <span class="absolute inset-0"></span>
-                                    Lage, Lage, Lage
-                                </a>
-                            </h2>
-                            <p class="mt-4 text-sm leading-6 text-gray-600">
-                                Berliner Bezirke und Brandenburger Landkreise
-                            </p>
-                        </div>
-                    </div>
-                </article>
+                
             </div>
         </div>
      {{/collection:news}}
