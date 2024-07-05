@@ -142,7 +142,7 @@ seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1720102776
+updated_at: 1720164943
 headerbild:
   - architecture-gef0672c68_1920.jpg
 stepsheader: 'UNSER VORGEHEN.'
@@ -667,5 +667,5 @@ accordeon_list:
 show_logos: false
 show_faq: false
 show_current_estates: false
-only_image: false
+only_image: true
 ---
