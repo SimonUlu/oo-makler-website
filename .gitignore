@@ -24,4 +24,4 @@ yarn-error.log
 public/build
 
 tests/
-/content/collections/estate_entries_references/
+/users/
