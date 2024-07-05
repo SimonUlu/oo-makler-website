@@ -6,3 +6,5 @@ preferences:
   collections:
     pages:
       after_save: continue_editing
+    estate_entries_references:
+      per_page: 500
