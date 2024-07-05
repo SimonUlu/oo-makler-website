@@ -1,13 +1,13 @@
 ---
-id: 98d8fa82-35da-44ef-be89-b3484511dfe9
+id: 67c00728-6f1e-4035-a76e-9f7de6b8e594
 blueprint: leistungen
 view_model: App\ViewModels\VerkaufenViewModel
 template: pages/leistungen/cta-page
-title: 'Das sind wir'
-subtitle: 'Renditeobjekte verkaufen oder kaufen - wir bieten die passenden Lösungen'
+title: Renditeobjekte
+subtitle: 'Ihr Investment in die Zukunft'
 description: 'Lorem Ipsum'
-subheaderheadline: 'Erfolg hat mit Menschen, Menschen und Menschen zu tun'
-subheaderdescription: 'Unsere Mitarbeiterinnen und Mitarbeiter sind unser größter Wettbewerbsvorteil. Mit offener Kommunikation, Wertschätzung und kontinuierlicher Weiterbildung sorgen wir für ein positives Arbeitsklima.'
+subheaderheadline: 'Zins- und Renditeobjekte'
+subheaderdescription: 'Legen Sie Ihr Geld sicher und gewinnbringend an'
 content_image_1:
   - architecture-gef0672c68_1920.jpg
 imagesectionheader: 'Lorem Ipsum'
@@ -142,7 +142,7 @@ seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1719501234
+updated_at: 1720102839
 headerbild:
   - architecture-gef0672c68_1920.jpg
 stepsheader: 'UNSER VORGEHEN.'
@@ -462,7 +462,7 @@ seo_text:
         type: text
         text: 'Helfen Sie den Suchmaschinen dieser Welt zu verstehen, für welche Kunden diese Website gebaut ist! In dem SEO-Bereich Ihrer neuen Website können Sie Ihr Unternehmen nochmals in wenigen Zeilen zusammenfassen und damit auch Suchmaschinen wie Google helfen, Ihre Website besser zu verstehen. Eine bessere Sichtbarkeit führt zu mehr Kunden und somit zu höheren Gewinnen! Worauf warten Sie noch? Holen Sie sich das Website-Template von InnoBrain und bringen Sie Ihre Online-Präsenz auf das nächste Level.'
 seo_headline_two: 'Erhöhen Sie Ihre Online-Sichtbarkeit durch Suchmaschinenoptimierung'
-duplicated_from: 67c00728-6f1e-4035-a76e-9f7de6b8e594
+duplicated_from: 029e42ef-e916-4f19-9a69-4cc641216a7c
 show_reference_estates: true
 content_with_image_replicator_two:
   -
@@ -508,7 +508,7 @@ content_with_image_replicator_two:
 advantages:
   -
     id: lww6joov
-    header: 'Voneinander lernen'
+    header: Off-Market-Angebote
     image:
       - architecture-gef0672c68_1920.jpg
     description: 'Möchten auch Sie künftig passende Angebote zu Offmarket-Immobilien erhalten?'
@@ -516,19 +516,19 @@ advantages:
     button_text: 'Jetzt Ankaufsprofil senden'
     type: neues_set
     enabled: true
-    header_outside: 'Voneinander lernen'
-    description_outside: 'Ein Dschungel von Gesetzen und ständige Änderungen im Immobilienmarkt sind eine Herausforderung für alle Beteiligten, ob Verkäufer, Käufer oder Makler. GEG, GWG, UWG? Über die gesetzliche Fortbildungspflicht hinaus, die für Immobilienmakler seit 2018 gilt, führen wir regelmäßig interne Schulungen durch, mit eigenen Experten oder mit externen Referenten. Erklären, diskutieren, verstehen.'
+    header_outside: Off-Market-Angebote
+    description_outside: "Der Verkauf von Wohn- und Geschäftshäusern, Mehrfamilienhäusern und Wohnungspaketen wird oft nicht 'an die große Glocke gehängt'. Die diskrete Vermarktung ist unser Geschäft. Mit einem großen Teil der in Berlin engagierten Immobilieninvestoren - vom privaten Bestandshalter über klassische Immobiliengesellschaften bis hin zu Family-Offices, Versicherungen, Fonds und Pensionskassen - stehen wir in regelmäßigem Austausch. Meist werden die Eckwerte für gewünschte Immobilieninvestments in Ankaufsprofilen zusammengefasst. So wird sichergestellt, dass immer nur die passenden Immobilien unseren Investoren vorgestellt werden, die dann schnell über einen Ankauf entscheiden."
   -
     id: lww6kp2c
-    header: 'Miteinander handeln'
+    header: 'Marktgerechte Platzierung Ihrer Immobilie'
     image:
       - architecture-gef0672c68_1920.jpg
-    description: 'Wir schätzen die individuellen Fähigkeiten und Talente unser Mitarbeiterinnnen und Mitarbeiter. Mit ihnen erreichen wir große und ambitionierte Ziele und mit flachen Hierarchien ebnen wir kurze Entscheidungswege. Jeder Mensch zählt und sein Input ist wertvoll, um unsere internen Arbeitsprozesse zu hinterfragen und Lösungen vorzuschlagen.'
+    description: 'Unsere Experten bewerten Ihre Immobilie vor Ort mit höchster Genauigkeit für eine maßgeschneiderte Einschätzung.'
     button_link: /
     button_text: 'Jetzt Termin vereinbaren'
     type: neues_set
     enabled: true
-    header_outside: 'Miteinander handeln'
+    header_outside: 'Marktgerechte Platzierung'
     description_outside: |-
       Anders als bei Immobilien, die selbst bewohnt werden sollen, spielen Emotionen beim Ankauf von Zinshäusern eine deutlich kleinere Rolle. Sicherlich verliebt sich auch mal ein Investor in den schmuck sanierten Stuckaltbau und zahlt dafür ein paar Euro mehr. Auf jeden Fall soll und muss sich ein Immobilieninvestment auch finanziell rechnen. Wir wissen, wie Investoren rechnen (müssen) und ihre Ankaufsentscheidung vorbereiten - das sogenannte Due Dilligence.
 
@@ -537,13 +537,17 @@ advantages:
       Die BVBI unterstützt Verkäufer tatkräftig bei der Zusammenstellung aller relevanter Unterlagen und bereitet diese datenschutzkonform auf. So können potentielle Investoren zügig zu einer fundierten Ankaufsentscheidung kommen.
   -
     id: lxxc45b3
-    header_outside: 'Teamwork makes the dream work'
-    description_outside: 'Wir haben Spaß bei der Arbeit. Weil wir lieben, was wir tun. Und weil wir es können. Bei uns kommen die besten Köpfe zusammen. In unserem Team arbeiten gut ausgebildete Expertinnen und Experten mit kaufmännischer Ausbildung oder Studium im Immobilien- und Finanzsektor. Die Vernetzung von Kompetenzen schafft die hohe Qualität, von der Sie profitieren.'
-    header: 'Teamwork makes the dream work'
+    header_outside: Ferienimmobilien
+    description_outside: |-
+      Wer eine Ferienimmobilie für Family & Friends sucht, wird bei der BVBI ebenso fündig wie jene, die mit dem Urlaubsdomizil Geld verdienen wollen. Ferienwohnungen und -häuser aus zweiter Hand oder Objekte im Neubau runden das Angebot für ein Immobilieninvestment ab.
+      Die BVBI konzentriert sich hier traditionell auf die Region Brandenburg, Müritz und natürlich die Ostseeküste samt Inseln. Wir stehen sowohl Projektentwicklern bei der Schaffung neuer Feriendomizile ebenso zur Seite wie Verkäufern einzelner Objekte und natürlich allen Kaufinteressenten.
+    header: Ferienimmobilien
     image:
       - architecture-gef0672c68_1920.jpg
     type: neues_set
     enabled: true
+    description: 'Unsere Experten bewerten Ihre Immobilie vor Ort mit höchster Genauigkeit für eine maßgeschneiderte Einschätzung.'
+    button_text: 'Jetzt Termin vereinbaren'
 services_header_h2: 'Unsere Leistungen'
 services_text: 'Maßgeschneiderte Bewertungslösungen für jeden Bedarf.'
 services_replicator:
@@ -678,4 +682,8 @@ accordeon_list:
     description: 'Die Kosten für die Bewertung Ihrer Immobilie können je nach Umfang und ARt der Bewertung variieren.'
     type: neues_set
     enabled: true
+show_logos: false
+show_faq: false
+show_current_estates: false
+only_image: false
 ---

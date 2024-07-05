@@ -3,8 +3,8 @@ id: 1914c0f1-52bf-4914-aab7-0adbea602f23
 blueprint: leistungen
 view_model: App\ViewModels\VerkaufenViewModel
 template: pages/leistungen/cta-page
-title: Verkaufen
-subtitle: 'Mit uns zügig und erfolgreich verkaufen.'
+title: 'Immobilie verkaufen'
+subtitle: 'Das Kundenziel entscheidet'
 description: 'Immobilie verkaufen'
 subheaderheadline: 'Erst der Mensch, dann die Immobilie'
 subheaderdescription: |-
@@ -145,7 +145,7 @@ seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1719498528
+updated_at: 1720099801
 headerbild:
   - architecture-gef0672c68_1920.jpg
 stepsheader: 'UNSER VORGEHEN.'
@@ -866,4 +866,7 @@ accordeon_list:
     type: neues_set
     enabled: true
 show_logos: false
+show_faq: false
+show_current_estates: false
+only_image: false
 ---
