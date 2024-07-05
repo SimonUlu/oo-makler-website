@@ -62,7 +62,7 @@ data:
             operator: '='
             value: '1'
           type: neues_set
-          enabled: false
+          enabled: true
         -
           id: lwpgb9sh
           array_filter:
@@ -70,7 +70,7 @@ data:
             operator: '='
             value: '1'
           type: neues_set
-          enabled: true
+          enabled: false
         -
           id: lwpgbdvw
           array_filter:
