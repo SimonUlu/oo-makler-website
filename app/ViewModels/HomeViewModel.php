@@ -25,7 +25,7 @@ class HomeViewModel extends ViewModel
         $filteredEntryReference = EstateEntryService::getFilteredEntry($homeViewModelFilters, 'referenzen');
 
         $filtersReference = OnOfficeService::transformFilterArray($filteredEntryReference);
-        $estatesReference = EstateEntryService::getEstatesUnpaginated($filtersReference, 3, 'kaufpreis', 'desc', 'estate_entries_full', 30);
+        $estatesReference = EstateEntryService::getEstatesUnpaginated($filtersReference, 3, 'kaufpreis', 'desc', 'estate_entries_references', 30);
         $estatesReference = OnOfficeService::removeFieldsFromEstate($estatesReference);
 
         $estateLocations = EstateEntryService::getLocationsOfAllEstates();

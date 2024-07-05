@@ -132,7 +132,7 @@
                             </div>
                         </template>
                         <h3 class="flex justify-between text-lg font-bold text-gray-900 mt-8">
-                            <span class="capitalize mb-2 text-primary" x-text="estate.objektart"></span>
+                            <span class="capitalize mb-2 text-primary" x-text="getTranslation(estate.objektart)"></span>
                             <template x-if="estate.vermarktungsart === 'miete'">
                                 <div class="inline-flex items-center bg-white px-2.5 py-0.5 text-sm font-bold text-primary">
                                     <template x-if="estate.warmmiete > 0">

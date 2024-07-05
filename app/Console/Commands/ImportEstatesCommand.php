@@ -11,6 +11,7 @@ class ImportEstatesCommand extends Command
      * The name and signature of the console command.
      *
      * @var string
+     *             possibles values: 'estate_entries', 'estate_entries_full'
      */
     protected $signature = 'import:estates {type}';
 
