@@ -12,9 +12,9 @@
                 >
             </div>
             <div>
-                <label for="category" class="block text-gray-700">Kategorie wählen</label>
+                <label for="category" class="block text-gray-700">Von A bis Z</label>
                 <select id="category" name="category" class="capitalize mt-1 p-2 min-w-[200px] border border-gray-300 ">
-                    <option value="">Alle Kategorien</option>
+                    <option value="">Anfangsbuchstabe auswählen</option>
                     @foreach ($orderedEntries as $key => $value)
                         <option class="capitalize" value="{{ $key }}">{{ $key }}</option>
                     @endforeach

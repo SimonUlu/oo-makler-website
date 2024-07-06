@@ -154,10 +154,10 @@
 <section class="relative w-full 0 bg-gray-50 py-16">
     <div class="w-full py-8 mx-auto lg:py-16 max-w-7xl px-4 lg:px-10">
         <div class="text-center text-gray-900">
-            <h2 class="mb-4 text-4xl font-bold tracking-tight text-primary lg:text-5xl ">Unsere aktuellsten Referenzen</h2>
+            <h2 class="mb-4 text-4xl font-bold tracking-tight text-primary lg:text-5xl ">Aktuelle Referenzen</h2>
 
             <p class="text-gray-500 sm:text-xl dark:text-gray-400">
-                Erhalten Sie einen Einblick in unsere realisierten Projekte und unserer Arbeit als Immobilienberater.
+                Erfolgreich vermittelte Immobilien
             </p>
         </div>
         <!-- Section Einleitung & Statistics -->
@@ -177,7 +177,7 @@
 
 {{if show_posts == "yes"}}
     <section class="w-full max-w-7xl md:px-10 pt-10 lg:pt-20">
-        <h2 class="mb-4 text-4xl font-bold tracking-tight text-center text-primary lg:text-5xl "> Unsere Neuigkeiten </h2>
+        <h2 class="mb-4 text-4xl font-bold tracking-tight text-center text-primary lg:text-5xl "> Lesen - Wissen - Meinen </h2>
         <div class=" mt-3 text-xl text-gray-500 sm:mt-2 text-center">{{posts_text}}</div>
         {{partial:posts/new-list}}
     </section>

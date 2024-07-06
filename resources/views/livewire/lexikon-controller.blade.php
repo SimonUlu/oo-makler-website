@@ -13,9 +13,9 @@
                 >
             </div>
             <div>
-                <label for="category" class="block text-gray-700">Kategorie wählen</label>
+                <label for="category" class="block text-gray-700">Von A bis Z</label>
                 <select wire:model="selectedCategory" id="category" name="category" class="mt-1 p-2 min-w-[200px] border border-gray-300 ">
-                    <option value="">Alle Kategorien</option>
+                    <option value="">Alle Anfangsbuchstaben</option>
                     @foreach($categories as $category)
                         <option class="capitalize" value="{{ $category["value"] }}">{{ $category["value"] }}</option>
                     @endforeach

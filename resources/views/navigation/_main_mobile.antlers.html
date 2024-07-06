@@ -4,7 +4,7 @@ on each page. It's 2 levels deep by default and uses AlpineJS for interactivity.
 
 <!-- /navigation/_main_mobile.antlers.html -->
 <nav
-    class="lg:hidden"
+    class="xl:hidden"
     aria-label="{{ trans:strings.main_navigation }}"
     x-trap.inert.noscroll="mobileNav"
     @keyup.escape.stop.prevent="mobileNav = false"
@@ -12,7 +12,7 @@ on each page. It's 2 levels deep by default and uses AlpineJS for interactivity.
 >
     <!-- Mobile menu, show/hide based on menu open state. -->
     <div
-        class="lg:hidden"
+        class="xl:hidden"
         role="dialog"
         aria-modal="true"
         x-show="mobileNav"
@@ -57,6 +57,14 @@ on each page. It's 2 levels deep by default and uses AlpineJS for interactivity.
                 <div class="flow-root mt-6">
                     <div class="-my-6 divide-y divide-gray-500/10">
                         <!-- Mobile navigation items with subnavigation -->
+                        <div class="py-6 space-y-2">
+                            <a
+                                href="{{url}}"
+                                class="block px-3 py-2 ml-[-3] text-base font-semibold leading-7 rounded-lg hover:bg-gray-50"
+                            >
+                                Immobiliensuche
+                            </a>
+                        </div>
                         {{nav:main}} {{if depth == 1}}
                         <div class="py-6 space-y-2" x-data="{ subnav: false }">
                             {{ if children }}
