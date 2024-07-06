@@ -10,6 +10,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
 use Psr\Container\ContainerExceptionInterface;
@@ -53,6 +54,7 @@ class ImportEstates implements ShouldQueue
             ->where('onoffice_filter_name', $this->importType)
             ->first();
 
+
         if (empty($filter['replicator_field_filter'])) {
             return;
         }
@@ -73,6 +75,7 @@ class ImportEstates implements ShouldQueue
         // get existing entries in this collection
         $collectionName = match ($this->importType) {
             'estates_references' => 'estate_entries_references',
+            'estates_references_rent' => 'estate_entries_references_rent',
             'estates_full' => 'estate_entries_full',
             default => 'estate_entries',
         };
@@ -141,12 +144,20 @@ class ImportEstates implements ShouldQueue
             return false;
         }
 
-        // get last change date from api
-        $lastChangeFromAPI = new DateTime($estate['elements']['geaendert_am']);
-        // get last change date from existing entry
-        $lastChangeFromEntry = new DateTime($existingEstate->get('geaendert_am'));
+        // explicitly set the timezone to UTC when parsing the API date
+        $lastChangeFromAPI = Carbon::parse($estate['elements']['geaendert_am'], 'UTC');
+        // convert to European time
+        $lastChangeFromAPI->setTimezone('Europe/Berlin');
 
-        // if date from api is more recent than date from entry, return true
+        if(empty($existingEstate->get('geaendert_am'))) {
+            return true;
+        }
+        // explicitly set the timezone to UTC when parsing the existing entry date
+        $lastChangeFromEntry = Carbon::parse($existingEstate->get('geaendert_am'), 'UTC');
+        // convert to European time
+        $lastChangeFromEntry->setTimezone('Europe/Berlin');
+
+        // if change from api is more recent than the change from the entry, update the entry
         if ($lastChangeFromAPI > $lastChangeFromEntry) {
             return true;
         }
@@ -240,7 +251,7 @@ class ImportEstates implements ShouldQueue
 
         $existingEntries = Entry::query()->where('collection', $collectionName)->get();
 
-        $entryData = self::getEntryData($entry, $fields, $entry['elements']['images']);
+        $entryData = self::getEntryData($entry, $fields, $entry['elements']['images'] ?? null);
 
         $entryToUpdate = $existingEntries->firstWhere('id_internal', $entryData['id_internal']);
 

@@ -45,3 +45,4 @@ defaultFieldsEstate:
   - preisreduktion: boolean
   - courtage_frei: boolean
   - objekt_des_tages: boolean
+  - geaendert_am: date
