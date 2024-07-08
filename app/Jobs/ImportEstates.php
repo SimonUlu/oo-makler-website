@@ -233,7 +233,7 @@ class ImportEstates implements ShouldQueue
             Log::error($e->getMessage());
         }
 
-        ImportEstateImages::dispatch($apiConnection, $entryCreated['id_internal'], app('defaultFieldsImages'))->onQueue('sync');
+        ImportEstateImages::dispatch($apiConnection, $entryCreated['id_internal'], app('defaultFieldsImages'))->onQueue('sync-onoffice');
     }
 
     public function updateEntry(array $apiConnection, $entry, $fields, string $collectionName): void
@@ -261,6 +261,6 @@ class ImportEstates implements ShouldQueue
             Log::error($e->getMessage());
         }
 
-        ImportEstateImages::dispatch($apiConnection, $entryToUpdate['id_internal'], app('defaultFieldsImages'))->onQueue('sync');
+        ImportEstateImages::dispatch($apiConnection, $entryToUpdate['id_internal'], app('defaultFieldsImages'))->onQueue('sync-onoffice');
     }
 }
