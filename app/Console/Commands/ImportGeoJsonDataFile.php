@@ -2,61 +2,82 @@
 
 namespace App\Console\Commands;
 
-use App\Models\GeoData;
 use Illuminate\Console\Command;
-use Illuminate\Support\Facades\Http; // Importiere den HTTP Client
-
-//php artisan import:geodata https://statamic-template.inno-brain.de/georef-germany-postleitzahl.geojson
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\File;
 
 class ImportGeoJsonDataFile extends Command
 {
-    /**
-     * The name and signature of the console command.
-     *
-     * @var string
-     */
-    protected $signature = 'import:geodata {url}';
+    protected $signature = 'import:geo-data {file}';
 
-    /**
-     * The console command description.
-     *
-     * @var string
-     */
-    protected $description = 'Import geodata from a GeoJSON file located at a given URL';
+    protected $description = 'Import geo data from a GeoJSON file into a Statamic collection';
 
-    /**
-     * Execute the console command.
-     */
+    public function __construct()
+    {
+        parent::__construct();
+    }
+
     public function handle()
     {
-        $url = $this->argument('url');
+        $file = $this->argument('file');
 
-        // Verwende den HTTP Client von Laravel, um die Daten zu bekommen
-        $response = Http::withBasicAuth('innobrain', 'innobrain')->get($url);
-
-        if (! $response->successful()) {
-            $this->error('Failed to fetch data from URL.');
+        if (! File::exists($file)) {
+            $this->error("File not found: $file");
 
             return;
         }
 
-        $data = json_decode($response->body(), true);
+        $json = File::get($file);
+        $data = json_decode($json, true);
 
-        foreach ($data['features'] as $feature) {
-            GeoData::create([
-                'name' => $feature['properties']['name'],
-                'plz_name' => $feature['properties']['plz_name'],
-                'plz_name_long' => $feature['properties']['plz_name_long'],
-                'plz_code' => $feature['properties']['plz_code'],
-                'krs_code' => $feature['properties']['krs_code'],
-                'lan_name' => $feature['properties']['lan_name'],
-                'lan_code' => $feature['properties']['lan_code'],
-                'krs_name' => $feature['properties']['krs_name'],
-                'geo_point_2d' => $feature['properties']['geo_point_2d'],
-                'geometry' => $feature['geometry'],
-            ]);
+        if (json_last_error() !== JSON_ERROR_NONE) {
+            $this->error("Invalid JSON file: $file");
+
+            return;
         }
 
-        $this->info('Data imported successfully!');
+        if (! isset($data['features'])) {
+            $this->error("Invalid GeoJSON structure: 'features' key not found.");
+
+            return;
+        }
+
+        $chunkSize = 100; // Number of features to process at a time
+        $chunks = array_chunk($data['features'], $chunkSize);
+
+        foreach ($chunks as $chunk) {
+            $insertData = [];
+            foreach ($chunk as $feature) {
+                $properties = $feature['properties'];
+                $geometry = $feature['geometry'];
+
+                $insertData[] = [
+                    'name' => $properties['name'],
+                    'plz_name' => $properties['plz_name'],
+                    'plz_name_long' => $properties['plz_name_long'],
+                    'plz_code' => $properties['plz_code'],
+                    'krs_code' => $properties['krs_code'],
+                    'lan_name' => $properties['lan_name'],
+                    'lan_code' => $properties['lan_code'],
+                    'krs_name' => $properties['krs_name'],
+                    'geo_point_2d' => json_encode([
+                        'lon' => $properties['geo_point_2d']['lon'],
+                        'lat' => $properties['geo_point_2d']['lat'],
+                    ]),
+                    'geometry' => json_encode($geometry),
+                    'created_at' => now(),
+                    'updated_at' => now(),
+                ];
+            }
+
+            DB::table('geo_data')->insert($insertData);
+
+            // Clear memory after processing each chunk
+            unset($chunk);
+            gc_collect_cycles();
+        }
+
+        $this->info('Geo data imported successfully.');
+
     }
 }

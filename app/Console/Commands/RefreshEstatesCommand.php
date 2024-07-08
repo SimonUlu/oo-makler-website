@@ -11,6 +11,8 @@ class RefreshEstatesCommand extends Command
      * The name and signature of the console command.
      *
      * @var string
+     *
+     *              possibles values: 'estates_on_market', 'estate_entries', 'estate_entries_full'
      */
     protected $signature = 'app:refresh-estates {importType}';
 
