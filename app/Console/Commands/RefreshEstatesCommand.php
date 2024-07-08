@@ -31,7 +31,7 @@ class RefreshEstatesCommand extends Command
         $importType = $this->argument('importType');
 
         // Dispatch the job
-        ImportEstates::dispatchSync($importType);
+        ImportEstates::dispatch($importType)->onQueue('sync-onoffice');
 
         $this->info("ImportDataJob dispatched with import type: $importType");
     }

@@ -27,7 +27,7 @@ class ImportEstateFieldsCommand extends Command
     public function handle(): void
     {
         // Dispatch the job
-        ImportEstateFields::dispatchSync();
+        ImportEstateFields::dispatch()->onQueue('sync-onoffice');
 
         $this->info('ImportEstateFieldsSync dispatched');
     }

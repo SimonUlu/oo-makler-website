@@ -27,7 +27,7 @@ class ImportOnOfficeUsersCommand extends Command
     public function handle(): void
     {
         // Dispatch the job
-        ImportOnOfficeUser::dispatchSync();
+        ImportOnOfficeUser::dispatch()->onQueue('sync-onoffice');
 
         $this->info('ImportOnOfficeUsers dispatched');
     }

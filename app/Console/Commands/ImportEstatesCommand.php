@@ -30,7 +30,7 @@ class ImportEstatesCommand extends Command
         $type = $this->argument('type');
 
         // Dispatch the job synchronously
-        ImportEstates::dispatchSync($type);
+        ImportEstates::dispatch($type)->onQueue('sync-onoffice');
 
         $this->info("The ImportEstates job has been dispatched synchronously for type: {$type}");
 
