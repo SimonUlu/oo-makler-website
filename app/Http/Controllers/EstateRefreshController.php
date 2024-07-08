@@ -17,7 +17,7 @@ class EstateRefreshController extends Controller
         //        $jobFull = new ImportEstates('estates_full');
         //        $jobFull->handle();
 
-        ImportEstates::dispatchSync('estates_on_market');
+        ImportEstates::dispatch('estates_on_market')->onQueue('sync-onoffice');
         //        $jobReferences = new ImportEstates('estates_references');
         //        $jobReferences->handle();
 
