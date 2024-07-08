@@ -51,8 +51,11 @@ tabs:
             handle: wohnflaeche
             field:
               type: text
-          -
-            handle: vermarktungsart
+          - handle: grundstuecksflaeche
+            field:
+              type: text
+              validate: ''
+          - handle: vermarktungsart
             field:
               type: text
           -

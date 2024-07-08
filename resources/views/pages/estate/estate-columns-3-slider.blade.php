@@ -132,7 +132,7 @@
                             </div>
                         </template>
                         <h3 class="flex justify-between text-lg font-bold text-gray-900 mt-8">
-                            <span class="capitalize mb-2 text-primary" x-text="getTranslation(estate.objektart)"></span>
+                            <span class="capitalize mb-2 text-primary" x-text="getTranslation(estate.objekttyp)"></span>
                             <template x-if="estate.vermarktungsart === 'miete'">
                                 <div class="inline-flex items-center bg-white px-2.5 py-0.5 text-sm font-bold text-primary">
                                     <template x-if="estate.warmmiete > 0">
@@ -162,9 +162,15 @@
                             </template>
                         </h3>
                         <div class="space-y-2 text-md mb-4">
+                            <template x-data="">
+
+                            </template>
                             <div class="flex text-primary text-sm">
+                                <template x-if="estate.objektart == 'grundstueck'">
+                                    <span><strong x-text="Math.round(estate.grundstuecksflaeche)"></strong> m&sup2; Grundstücksfläche </span>
+                                </template>
                                 <template x-if="estate.wohnflaeche">
-                                    <span><strong x-text="Math.round(estate.wohnflaeche)"></strong> m&sup2; Wohnflaeche</span>
+                                    <span><strong x-text="Math.round(estate.wohnflaeche)"></strong> m&sup2; Wohnfläche</span>
                                 </template>
                                 <template x-if="estate.anzahl_zimmer">
                                     <span class="mx-2"> · <strong x-text="Math.round(estate.anzahl_zimmer)"></strong> Zimmer</span>
@@ -214,8 +220,8 @@
                 });
             },
 
-            getTranslation(objektart) {
-                return this.estateFields.objektart.permittedvalues[objektart] || (objektart.charAt(0).toUpperCase() + objektart.slice(1));
+            getTranslation(objekttyp) {
+                return this.estateFields.objekttyp.permittedvalues[objekttyp] || (objekttyp.charAt(0).toUpperCase() + objekttyp.slice(1));
             },
 
             updateButtonCount() {

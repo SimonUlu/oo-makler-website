@@ -51,6 +51,10 @@ tabs:
             handle: wohnflaeche
             field:
               type: text
+          - handle: grundstuecksflaeche
+            field:
+              type: text
+              validate: ''
           -
             handle: verkauft
             field:

@@ -164,8 +164,11 @@ tabs:
             field:
               type: text
               validate: ''
-          -
-            handle: energieausweistyp
+          - handle: grundstuecksflaeche
+            field:
+              type: text
+              validate: ''
+          - handle: energieausweistyp
             field:
               type: text
               validate: ''

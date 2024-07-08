@@ -48,3 +48,4 @@ defaultFieldsEstate:
   - objekt_des_tages: boolean
   - vermietet: boolean
   - geaendert_am: date
+  - grundstuecksflaeche: string

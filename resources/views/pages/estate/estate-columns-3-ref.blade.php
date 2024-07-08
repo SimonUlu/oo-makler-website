@@ -32,7 +32,7 @@
                 <div class="relative px-5 pt-2 pb-2 border w-full md:pt-0 flex">
                     <div class="flex-2">
                         <h3 class="flex justify-between text-lg font-bold text-gray-900 mt-8">
-                            <span class="capitalize mb-2 text-primary" x-text="getTranslation(estate.objektart)">
+                            <span class="capitalize mb-2 text-primary" x-text="getTranslation(estate.objekttyp)">
                             </span>
                         </h3>
                         <div class="space-y-2 text-md mb-4">
@@ -76,8 +76,8 @@
                 });
             },
 
-            getTranslation(objektart) {
-                return this.estateFields.objektart.permittedvalues[objektart] || (objektart.charAt(0).toUpperCase() + objektart.slice(1));
+            getTranslation(objekttyp) {
+                return this.estateFields.objekttyp.permittedvalues[objekttyp] || (objekttyp.charAt(0).toUpperCase() + objekttyp.slice(1));
             },
 
             updateSlidesToShow() {
