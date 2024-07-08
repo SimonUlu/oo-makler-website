@@ -29,7 +29,7 @@ class ImportEstates implements ShouldQueue
     public function __construct(
         public string $importType
     ) {
-        //
+        $this->queue = 'sync-onoffice';
     }
 
     /**

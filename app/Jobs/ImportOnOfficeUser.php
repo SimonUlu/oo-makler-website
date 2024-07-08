@@ -48,7 +48,7 @@ class ImportOnOfficeUser implements ShouldQueue
      */
     public function __construct()
     {
-        //
+        $this->queue = 'sync-onoffice';
     }
 
     /**

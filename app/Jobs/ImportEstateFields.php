@@ -25,7 +25,7 @@ class ImportEstateFields implements ShouldQueue
      */
     public function __construct()
     {
-        //
+        $this->queue = 'sync-onoffice';
     }
 
     /**

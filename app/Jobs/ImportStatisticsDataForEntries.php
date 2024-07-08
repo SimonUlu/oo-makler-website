@@ -21,7 +21,7 @@ class ImportStatisticsDataForEntries implements ShouldQueue
     public function __construct(
         public ?string $identifier = null
     ) {
-        //
+        $this->queue = 'sync-onoffice';
     }
 
     public function handle(): void

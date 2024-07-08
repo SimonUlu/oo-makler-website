@@ -21,7 +21,7 @@ class ImportEstateImages implements ShouldQueue
         public int $estateId,
         public array $categories
     ) {
-        //
+        $this->queue = 'sync-onoffice';
     }
 
     /**
