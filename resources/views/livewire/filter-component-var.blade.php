@@ -49,11 +49,11 @@
                                     </x-multi-select>
                                 </div>
 
+                                @if($this->isRadiusFilterActive)
                                 <div class="space-y-2">
                                     <h3 class="text-sm text-gray-500 ml-4">
                                         Filtern nach&nbsp;<span class="text-sm font-semibold leading-5 text-gray-900">Umkreis:</span>
                                     </h3>
-                                    @if($this->isRadiusFilterActive)
                                         <div class="min-h-[65px] hidden md:flex flex-col space-y-2 px-6" x-data="{
         sliderValue: @entangle('filter.radius').defer,
         radiusZipCode: @entangle('filter.radiusZipCode').defer,
@@ -104,8 +104,8 @@
                                             <div x-show="showSliderError" class="text-red-500 text-sm mt-1">Bitte wählen Sie einen Umkreis.</div>
                                             <div wire:loading class="text-gray-500 text-sm mt-1">Laden...</div>
                                         </div>
-                                    @endif
                                 </div>
+                                @endif
 
                                 @foreach ($filterOptions ?? [] as $label_id => $item)
                                     @if ($label_id == 'ort')
@@ -300,16 +300,6 @@
                         <div wire:loading class="text-gray-500 text-sm mt-1">Laden...</div>
                     </div>
                 @endif
-                <div class="min-h-[65px] hidden md:flex space-x-4">
-                    <x-multi-select
-                        wire:model="filter.vermarktungsart"
-                        x-cloak
-                        type="search"
-                        :multiple="true"
-                        :placeholder="'Vermarktungsart wählen...'"
-                        :options="$this->getSelectOptionsFromLabelId('vermarktungsart')">
-                    </x-multi-select>
-                </div>
 
                 <div class="min-h-[65px] hidden md:flex space-x-4">
                     <x-multi-select

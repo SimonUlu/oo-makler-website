@@ -35,7 +35,7 @@ data:
       onoffice_label_id: vermarktungsart
       filter_enabled: true
       type: new_set
-      enabled: true
+      enabled: false
       filter_enabled_buy_case: true
       filter_enabled_rent_case: true
       values_included:
@@ -83,6 +83,7 @@ data:
       label_filter: Mietpreis
       type: new_set
       enabled: true
+  estate_search_by_radius: 'no'
   references_filter_options:
     -
       id: ljfvalx4

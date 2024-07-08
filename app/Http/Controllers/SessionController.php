@@ -176,6 +176,9 @@ class SessionController extends Controller
 
         if (! empty($filterOptions)) {
             $filterOptions = collect($filterOptions)
+                ->filter(function ($filterOption) {
+                    return $filterOption['enabled'];
+                })
                 ->map(function ($filterOption) {
                     return $filterOption['onoffice_label_id'];
                 })
