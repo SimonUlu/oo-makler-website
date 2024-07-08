@@ -22,6 +22,8 @@ yarn-error.log
 /content/collections/estate_fields/
 /content/collections/on_office_users/
 
+/content/globals/onoffice.yaml
+
 public/build
 
 tests/
