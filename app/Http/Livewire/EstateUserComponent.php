@@ -2,8 +2,9 @@
 
 namespace App\Http\Livewire;
 
-use App\Services\OnOfficeService;
+use Illuminate\View\View;
 use Livewire\Component;
+use Statamic\Facades\Entry;
 use Statamic\Facades\GlobalSet;
 
 class EstateUserComponent extends Component
@@ -12,25 +13,27 @@ class EstateUserComponent extends Component
 
     public $logoUrl;
 
-    public $userName = '';
+    public string $userName = '';
 
-    public $userUrl = '';
+    public string $userImage = '';
 
-    public $loaded = false;
+    public bool $loaded = false;
 
-    public $userId = 21;
+    public int $userId = 21;
 
-    public $loadedImage = false;
+    public bool $loadedImage = false;
 
-    public $showUser = false;
+    public bool $showUser = false;
 
-    public $email = '';
+    public string $email = '';
 
-    public $userHrefUrl = '';
+    public string $userHrefUrl = '';
+
+    public string $userPhoneNumber = '';
 
     public $source;
 
-    public function mount($estateId, $logoUrl, $userId, $source)
+    public function mount($estateId, $logoUrl, $userId, $source): void
     {
         $this->estateId = $estateId;
         $this->logoUrl = $logoUrl;
@@ -38,7 +41,7 @@ class EstateUserComponent extends Component
         $this->source = $source;
     }
 
-    public function render()
+    public function render(): View
     {
         $this->showUser = GlobalSet::find('estate_appearance_configuration')->in('default')->get('ansprechpartner');
 
@@ -47,26 +50,29 @@ class EstateUserComponent extends Component
         ]);
     }
 
-    public function loadUser($userId)
+    public function loadUser($userId): void
     {
         $this->userId = $userId;
         $this->load();
     }
 
-    public function load()
+    public function load(): void
     {
-        $onOfficeService = new OnOfficeService();
-        $userDetails = $onOfficeService->getOnOfficeUserById($this->userId);
+        $userDetails = Entry::query()->where('collection', 'on_office_users')
+            ->where('Nr', $this->userId)
+            ->get()
+            ->first();
 
         if ($userDetails) {
-            $this->userName = $userDetails->vorname.' '.$userDetails->nachname;
-            $this->userUrl = $userDetails->picUrl;
-            $this->userHrefUrl = $userDetails->userHrefUrl;
+            $this->userName = $userDetails->Vorname.' '.$userDetails->Nachname;
+            $this->userImage = $userDetails->photo ?? '';  // Ensure it's a string
+            $this->userPhoneNumber = $userDetails->Telefon;
             $this->email = $userDetails->email;
-            $this->loadedImage = true; // Stellen Sie sicher, dass dies korrekt gesetzt wird, basierend auf ob ein Bild vorhanden ist oder nicht.
+            $this->loadedImage = true;
         } else {
             $this->userName = '';
         }
+
         $this->loaded = true;
     }
 }

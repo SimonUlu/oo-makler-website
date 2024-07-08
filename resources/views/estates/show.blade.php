@@ -27,22 +27,18 @@
                                             !empty($estate->get('wohnflaeche')) && $estate->get('wohnflaeche') != 0.00,
                                             !empty($estate->get('vermarktungsart')) && ($estate->get('warmmiete') > 0.0 || $estate->get('kaltmiete') > 0.0 || $estate->get('kaufpreis') > 0.0)
                                         ];
-                                    $boxesCount = count(array_filter($boxes));
+                                        $boxesCount = count(array_filter($boxes));
                                     @endphp
 
                                     @if($boxesCount > 0)
-
                                         <div class="hidden top-28 items-center mt-4 mr-4 mb-12 bg-white md:grid md:grid-cols-{{$boxesCount}}">
-
-
-                                        <x-estate-detail.subheader :estate="$estate" />
-                                    </div>
-
+                                            <x-estate-detail.subheader :estate="$estate" />
+                                        </div>
                                     @endif
 
-                                    <h2
-                                        class="py-8 mb-4 w-full text-3xl font-extrabold tracking-tight md:text-4xl xl:text-5xl">
-                                        {{ $estate->get('objekttitel') }}</h2>
+                                    <h2 class="py-8 mb-4 w-full text-3xl font-extrabold tracking-tight md:text-4xl xl:text-5xl">
+                                        {{ $estate->get('objekttitel') }}
+                                    </h2>
                                     <div class="my-8 sm:mr-7">
                                         <!-- Details -->
                                         <x-estate-detail.details :estate="$estate" />
@@ -51,9 +47,7 @@
                                     <div>
                                         <!-- Description -->
                                         <div class="grid grid-cols-3 mr-0 space-x-0 sm:mr-8 sm:space-x-5">
-                                            <div
-                                                class="col-span-3 gap-y-4 gap-x-16 p-8 space-y-5 bg-gray-50 rounded-2xl">
-
+                                            <div class="col-span-3 gap-y-4 gap-x-16 p-8 space-y-5 bg-gray-50 rounded-2xl">
                                                 <div>
                                                     <h2 class="text-xl font-bold tracking-tight text-gray-900 md:text-3xl">
                                                         Lagebeschreibung
@@ -84,10 +78,8 @@
                                             </div>
                                         </div>
 
-
                                         @if(isset($estate->get('energiebedarf')['url']))
-                                        <x-estate-detail.energy :estate="$estate" />
-
+                                            <x-estate-detail.energy :estate="$estate" />
                                             <x-estate-detail.energy-svg :estate="$estate" :pfeilposition="$pfeilposition" />
                                         @endif
                                     </div>
@@ -100,45 +92,34 @@
                                         </aside>
                                     </div>
                                 </aside>
-
                             </div>
-
                         </div>
 
                         <div class="px-4 pt-4 pb-20 mx-auto w-full sm:px-6 lg:gap-x-4 lg:px-12">
-
                             <h2 class="pl-2 text-3xl font-bold tracking-tight text-gray-900">
                                 @if ($estate->get('wohnflaeche') !== null && $estate->get('wohnflaeche') > 0 && (int) $anzahlZimmerWort > 0)
-                                    Wohlfühlen auf {{ round($estate->get('wohnflaeche')) }} m² und
-                                    {{ $anzahlZimmerWort }} Zimmern
+                                    Wohlfühlen auf {{ round($estate->get('wohnflaeche')) }} m² und {{ $anzahlZimmerWort }} Zimmern
                                 @elseif($estate->get('objektart') != 'grundstueck')
                                     Einziehen und wohlfühlen
                                 @endif
                             </h2>
 
                             @php
-                                $numImages = sizeof($estate->get('estate_images')) - 4;
+                                $numImages = sizeof($estate->get('estate_images') ?? []) - 4;
                                 $columns = max(min((int) ($numImages / 2), 12), 4);
                             @endphp
-                            <div
-                                class="grid max-w-2xl grid-cols-3 mx-auto mt-16 gap-x-2 gap-y-8 lg:mx-0 lg:max-w-none lg:grid-cols-{{ $columns }}">
-
+                            <div class="grid max-w-2xl grid-cols-3 mx-auto mt-16 gap-x-2 gap-y-8 lg:mx-0 lg:max-w-none lg:grid-cols-{{ $columns }}">
                                 @foreach (array_slice($estate->get('estate_images') ?? [], 4) as $key => $image)
                                     <div class="flex flex-col justify-between items-start">
                                         <div class="relative w-full rounded-lg">
                                             <img @click="showSlide({{ $key + 4 }}); openImgSlideShow = !openImgSlideShow"
-                                                src="{{ $image['url'] }}"
-                                                class="object-cover w-full bg-gray-100 cursor-pointer aspect-[16/9] sm:aspect-[2/1] lg:aspect-[3/2]"
-                                                alt="{{ $image['title'] ?? '' }}">
+                                                 src="{{ $image['url'] }}"
+                                                 class="object-cover w-full bg-gray-100 cursor-pointer aspect-[16/9] sm:aspect-[2/1] lg:aspect-[3/2]"
+                                                 alt="{{ $image['title'] ?? '' }}">
                                         </div>
                                     </div>
                                 @endforeach
                             </div>
-                            <!-- Features -->
-                            {{-- @if ($features)
-                            <x-estate-detail.features :estate="$estate" :features="$features" />
-                        @endif --}}
-
 
                             <div class="grid grid-cols-2 py-12 md:space-x-4">
                                 <div class="col-span-2 md:col-span-1 min-h-[300px]">
@@ -147,15 +128,13 @@
                                 </div>
                                 <div class="block col-span-2 mt-4 ml-0 md:col-span-1 md:mt-0">
                                     <livewire:estate-contact-controller :estate="$estate" :estateId="$estateId"
-                                        :defaultMessage="'Ich bin an dieser Immobilie interessiert. Bitte nehmen Sie Kontakt mit mir auf.'" :title="'Fragen Sie diese Immobilie jetzt an!'" />
-                                    {{-- <x-contact-form-simple :user="$onOfficeUser" /> --}}
+                                                                        :defaultMessage="'Ich bin an dieser Immobilie interessiert. Bitte nehmen Sie Kontakt mit mir auf.'" :title="'Fragen Sie diese Immobilie jetzt an!'" />
                                 </div>
                             </div>
 
                             @if ($epassSkalaImage)
                                 <div class="lg:col-span-3">
-                                    <section aria-labelledby="reviews-heading"
-                                        class="pt-5 mt-6 border-t border-gray-200 lg:pt-8 lg:mt-10">
+                                    <section aria-labelledby="reviews-heading" class="pt-5 mt-6 border-t border-gray-200 lg:pt-8 lg:mt-10">
                                         <h2 class="text-3xl font-bold tracking-tight text-gray-900">Energiepass - Skala</h2>
                                         @include('components.estate-detail.energieausweis', [
                                             'epassSkalaImage' => $epassSkalaImage,
@@ -164,23 +143,29 @@
                                 </div>
                             @endif
 
-                            <div class="lg:col-span-3">
-                                <section aria-labelledby="reviews-heading"
-                                    class="pt-5 mt-6 border-t border-gray-200 lg:pt-8 lg:mt-10">
-                                    <h2 class="text-3xl font-bold tracking-tight text-gray-900">Das könnte Ihnen
-                                        auch gefallen</h2>
-                                    @include('pages.estate.estate-columns-3-slider', [
-                                        'estates' => $estateRecommendations,
-                                        'estateFields' => $estateFields,
-                                    ])
-                                </section>
-                            </div>
+                            @if ($showIframe == 'yes')
+                                <div class="w-full text-center">
+                                    <div class="w-full sm:max-w-7xl mx-auto py-16 lg:py-32 px-4 lg:px-10">
+                                        <h2 class="text-4xl lg:text-5xl font-bold tracking-tight text-gray-900 mb-12">
+                                            {!! $iframeTitle !!}
+                                        </h2>
+                                        {!! $iframe !!}
+                                    </div>
+                                </div>
+                            @endif
                         </div>
 
+                        <div class="lg:col-span-3">
+                            <section aria-labelledby="reviews-heading" class="pt-5 mt-6 border-t border-gray-200 lg:pt-8 lg:mt-10">
+                                <h2 class="text-3xl font-bold tracking-tight text-gray-900">Das könnte Ihnen auch gefallen</h2>
+                                @include('pages.estate.estate-columns-3-slider', [
+                                    'estates' => $estateRecommendations,
+                                    'estateFields' => $estateFields,
+                                ])
+                            </section>
+                        </div>
                     </div>
                 </div>
-
-
             </div>
         @else
             <div class="container mx-auto">
@@ -191,4 +176,55 @@
             </div>
         @endif
     </div>
+
+    <script type="application/ld+json">
+    @php
+            // Prepare the opening hours data
+            $openingHours = [];
+            $daysMap = [
+                'monday' => 'Mo',
+                'tuesday' => 'Tu',
+                'wednesday' => 'We',
+                'thursday' => 'Th',
+                'friday' => 'Fr',
+                'saturday' => 'Sa',
+                'sunday' => 'Su'
+            ];
+            foreach ($businessInformation['business_hours'] as $day) {
+                if ($day['open']) {
+                    $openingHours[] = [
+                        '@type' => 'OpeningHoursSpecification',
+                        'dayOfWeek' => $daysMap[$day['weekday']],
+                        'opens' => $day['start_time'],
+                        'closes' => $day['end_time']
+                    ];
+                }
+            }
+        @endphp
+        {
+            "@context": "https://schema.org",
+            "@type": "RealEstateAgent",
+            "name": "{{ config('app.name') }}",
+            "url": "{{ config('app.url') }}",
+            "logo": "{{ asset('/logo_images/logo.png') }}",
+            "currenciesAccepted": "EUR",
+            "openingHoursSpecification": {!! json_encode($openingHours) !!},
+            "paymentAccepted": "Wire Transfer",
+            "priceRange": "$$$",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "{{$estate->get('ort')}}",
+                "addressRegion": "{{ $estate->get('bundesland') }}",
+                "postalCode": "{{ $estate->get('plz') }}",
+                "addressCountry": "DE"
+            },
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "{{ $businessInformation['business_phone'] }}",
+                "contactType": "Customer Service"
+                "email": "{{ $businessInformation['business_email'] }}"
+                "telephone": "{{ $businessInformation['business_phone'] }}"
+        }
+    }
+    </script>
 @endsection

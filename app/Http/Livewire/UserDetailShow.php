@@ -2,41 +2,44 @@
 
 namespace App\Http\Livewire;
 
-use App\Services\OnOfficeService;
+use Illuminate\View\View;
 use Livewire\Component;
+use Statamic\Facades\Entry;
 use Statamic\Facades\GlobalSet;
 
 class UserDetailShow extends Component
 {
-    public $estateId;
+    public int $estateId;
 
-    public $userId;
+    public int $userId;
 
-    public $showUser;
+    public bool $showUser;
 
-    public $userName;
+    public string $userName;
 
-    public $userUrl;
+    public string $userImage;
 
-    public $loaded;
+    public bool $loaded;
 
-    public $loadedImage = false;
+    public bool $loadedImage = false;
 
-    public $businessName = '';
+    public string $businessName = '';
 
-    public $userExists = false;
+    public bool $userExists = false;
 
-    public $userEmail = '';
+    public string $userEmail = '';
 
-    public $userPhoneNumber = '';
+    public string $userPhoneNumber = '';
 
-    public function mount($estateId, $userId)
+    public string $email;
+
+    public function mount($estateId, $userId): void
     {
         $this->estateId = $estateId;
         $this->userId = $userId;
     }
 
-    public function render()
+    public function render(): View
     {
         $this->showUser = GlobalSet::find('estate_appearance_configuration')->in('default')->get('ansprechpartner');
 
@@ -45,29 +48,29 @@ class UserDetailShow extends Component
         ]);
     }
 
-    public function loadUser($userId)
+    public function loadUser($userId): void
     {
         $this->userId = $userId;
         $this->load();
     }
 
-    public function load()
+    public function load(): void
     {
-        $onOfficeService = new OnOfficeService();
-        $userDetails = $onOfficeService->getOnOfficeUserById($this->userId);
+        $userDetails = Entry::query()->where('collection', 'on_office_users')
+            ->where('Nr', $this->userId)
+            ->get()
+            ->first();
 
         if ($userDetails) {
-            $this->userName = $userDetails->vorname.' '.$userDetails->nachname;
-            $this->userEmail = $userDetails->email;
-            $this->userUrl = $userDetails->picUrl;
-            $this->userPhoneNumber = $userDetails->userPhoneNumber;
+            $this->userName = $userDetails->Vorname.' '.$userDetails->Nachname;
+            $this->userImage = $userDetails->photo ?? '';
+            $this->userPhoneNumber = $userDetails->Telefon;
+            $this->email = $userDetails->email;
             $this->loadedImage = true;
-            $this->loaded = true;
         } else {
             $vorname = '';
             $nachname = '';
             $this->userName = $vorname.' '.$nachname;
-            $this->loaded = true;
         }
         $this->loaded = true;
     }

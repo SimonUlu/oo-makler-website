@@ -3,7 +3,10 @@
 namespace App\Console;
 
 use App\Console\Commands\ImportGeoJsonDataFile;
+use App\Jobs\ImportEstateFields;
 use App\Jobs\ImportEstates;
+use App\Jobs\ImportOnOfficeUser;
+use App\Jobs\ImportStatisticsDataForEntries;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 
@@ -30,6 +33,10 @@ class Kernel extends ConsoleKernel
         $schedule->job(new ImportEstates('estates_full'), 'sync')->everyFifteenMinutes();
         $schedule->job(new ImportEstates('estates_on_market'), 'sync')->everyFifteenMinutes();
         $schedule->job(new ImportEstates('estates_references'), 'sync')->everyFifteenMinutes();
+        $schedule->job(new ImportEstates('estates_references_rent'), 'sync')->everyFifteenMinutes();
+        $schedule->job(new ImportStatisticsDataForEntries())->hourly();
+        $schedule->job(new ImportEstateFields(), 'sync')->dailyAt('04:12');
+        $schedule->job(new ImportOnOfficeUser(), 'sync')->dailyAt('04:15');
         // $schedule->command('cache:clear')->daily();
         // $schedule->command('config:cache')->daily();
         // $schedule->command('route:cache')->daily();

@@ -18,6 +18,16 @@ class UserConnector extends AbstractApiConnector
         return [];
     }
 
+    public function getProfilePhoto($recordId): ?string
+    {
+        $request = (new OnOffice\Requests\Read\UserPhoto());
+        $request->setResourceId($recordId);
+        //$request->setParams(["photosAsLinks"=> true]);
+        $response = $this->getApi()->send([$request]);
+
+        return $response['response']['results'][0]['data']['records'][0]['elements']['photo'] ?? null;
+    }
+
     public function prepareFilterForOnOffice(array $values, $operator): array
     {
         return [
@@ -31,7 +41,7 @@ class UserConnector extends AbstractApiConnector
         return null;
     }
 
-    public function multiArrayKeyExists($key, $array)
+    public function multiArrayKeyExists($key, $array): bool
     {
         // is in base array?
         if (array_key_exists($key, $array)) {
@@ -330,11 +340,9 @@ class UserConnector extends AbstractApiConnector
 
     private function getApi(): OnOffice\Api
     {
-        $config = $this->connector;
-
         return new OnOffice\Api(
-            token: $config->token,
-            secret: $config->secret
+            token: $this->connector['token'],
+            secret: $this->connector['secret']
         );
     }
 }

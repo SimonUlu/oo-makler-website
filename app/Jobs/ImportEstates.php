@@ -3,7 +3,6 @@
 namespace App\Jobs;
 
 use App\Services\OnOfficeService;
-use DateTime;
 use Exception;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
@@ -53,7 +52,6 @@ class ImportEstates implements ShouldQueue
         $filter = collect($globalSet->get('onoffice_default_filter'))
             ->where('onoffice_filter_name', $this->importType)
             ->first();
-
 
         if (empty($filter['replicator_field_filter'])) {
             return;
@@ -149,7 +147,7 @@ class ImportEstates implements ShouldQueue
         // convert to European time
         $lastChangeFromAPI->setTimezone('Europe/Berlin');
 
-        if(empty($existingEstate->get('geaendert_am'))) {
+        if (empty($existingEstate->get('geaendert_am'))) {
             return true;
         }
         // explicitly set the timezone to UTC when parsing the existing entry date

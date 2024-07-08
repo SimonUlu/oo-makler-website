@@ -26,6 +26,7 @@ defaultFieldsEstate:
   - kaltmiete: float
   - stammobjekt: boolean
   - status2: string
+  - status: string
   - etagen_zahl: integer
   - ausstatt_beschr: string
   - gesamtflaeche: float
@@ -45,4 +46,5 @@ defaultFieldsEstate:
   - preisreduktion: boolean
   - courtage_frei: boolean
   - objekt_des_tages: boolean
+  - vermietet: boolean
   - geaendert_am: date

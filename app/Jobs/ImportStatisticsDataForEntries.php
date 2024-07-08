@@ -19,15 +19,39 @@ class ImportStatisticsDataForEntries implements ShouldQueue
      * Create a new job instance.
      */
     public function __construct(
-        public string $identifier
+        public ?string $identifier = null
     ) {
         //
     }
 
     public function handle(): void
     {
+        // TODO @Imgrund hier den loop aus dem Kernel testen
+        if ($this->identifier) {
+            $this->loadStat($this->identifier);
+        } else {
+            // check if statistics are filled in entries
+            $entries = Entry::query()->where('collection', 'statistic_entries')->get();
+
+            if (! $entries->isEmpty()) {
+                $statistics = $entries->toArray();
+            } else {
+                return;
+            }
+
+            foreach ($statistics as $statistic) {
+                if (! isset($statistic['identifier'])) {
+                    continue;
+                }
+                $this->loadStat($statistic['identifier']);
+            }
+        }
+    }
+
+    public function loadStat($identifier): void
+    {
         $onOfficeService = new OnOfficeService();
-        $statistics = $onOfficeService->getStatistics($this->identifier);
+        $statistics = $onOfficeService->getStatistics($identifier);
 
         $yamlPath = public_path('statistic_fields/statistic_fields.yaml');
         $yamlContents = Yaml::parseFile($yamlPath);
@@ -67,6 +91,5 @@ class ImportStatisticsDataForEntries implements ShouldQueue
                 ->data($entryData)
                 ->save();
         }
-
     }
 }

@@ -128,10 +128,7 @@ class FilterComponentVar extends Component
 
     private function initializeEstateFields(): void
     {
-        if (! request()->session()->has('estateFieldsFull')) {
-            SessionController::getAllEstateFields();
-        }
-        $this->estateFields = request()->session()->get('estateFieldsFull');
+        $this->estateFields = EstateHelper::getEstateFields();
     }
 
     private function initializeFilterOptions(): void
@@ -312,7 +309,7 @@ class FilterComponentVar extends Component
         // Replace comma with dot for decimal separation
         $value = str_replace(',', '.', $value);
 
-        // Remove any dots used as thousand separators
+        // Remove any dots used as thousands separators
         $value = str_replace('.', '', substr($value, 0, -3)).substr($value, -3);
 
         // Convert to float

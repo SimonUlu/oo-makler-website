@@ -26,10 +26,62 @@ tabs:
               cast_booleans: false
               type: select
               display: 'Header Image Appearance'
-              icon: select
               listable: hidden
               instructions_position: above
               visibility: visible
+              hide_display: false
+      -
+        display: iFrame
+        fields:
+          -
+            handle: iframe_show
+            field:
+              options:
+                'no': nein
+                'yes': ja
+              taggable: false
+              push_tags: false
+              multiple: false
+              clearable: false
+              searchable: true
+              cast_booleans: false
+              type: select
+              display: 'iFrame anzeigen'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: iframe_title
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'iFrame Überschrift'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: iframe
+            field:
+              theme: material
+              mode: htmlmixed
+              mode_selectable: true
+              indent_type: tabs
+              indent_size: 4
+              key_map: default
+              line_numbers: true
+              line_wrapping: true
+              antlers: false
+              type: code
+              display: iFrame
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
               hide_display: false
   sidebar:
     display: Sidebar
@@ -41,6 +93,7 @@ tabs:
             field:
               type: slug
               localizable: true
+              validate: 'max:200'
           -
             handle: date
             field:

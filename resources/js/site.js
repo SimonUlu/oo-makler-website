@@ -10,14 +10,21 @@ import "flowbite";
 import Choices from "choices.js";
 import 'tailwindcss/tailwind.css'
 import 'tailwindcss-animated';
-import { lazyloadImages, lazyloadUsers } from "./lazyload.js";
+import { lazyloadImages } from "./lazyload.js";
 import { addFadeInAnimation } from "./animation.js";
 
 
-// import * as Sentry from "@sentry/browser";
-// Sentry.init({
-//     dsn: import.meta.env.VITE_SENTRY_DSN_PUBLIC,
-// });
+const appUrl = import.meta.env.VITE_APP_URL;
+
+const style = document.createElement('style');
+style.textContent = `
+@font-face {
+    font-family: 'GenosGFG';
+    src: url('${appUrl}/fonts/GenosGFG-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}`;
+document.head.appendChild(style);
 
 // Call Alpine.
 window.Alpine = Alpine;
@@ -26,8 +33,6 @@ Alpine.start();
 
 window.axios = axios;
 window.Choices = Choices;
-// add lazyloadImages to the window object so it can be called from the DOM.
-window.lazyloadImages = lazyloadImages;
 
 document.addEventListener('click', function(event) {
     if (event.target.matches('.pagination button')) {
@@ -39,16 +44,16 @@ document.addEventListener('click', function(event) {
 });
 
 // add lazyloadImages to the window object so it can be called from the DOM.
+window.lazyloadImages = lazyloadImages;
+
 document.addEventListener("DOMContentLoaded", function () {
     // initial load
     lazyloadImages();
-    lazyloadUsers();
     addFadeInAnimation();
 });
 // Listen to dataUpdated event emitted from livewire and rerun lazyloadImages
 document.addEventListener("dataUpdated", function () {
     lazyloadImages();
-    lazyloadUsers();
 });
 
 
@@ -110,11 +115,33 @@ window.addEventListener("DOMContentLoaded", (event) => {
 });
 
 function scrollToTop() {
-    console.log("Hallo");
     window.scrollTo({
         top: 0,
-        behavior: 'smooth' // Mit "smooth" wird ein animiertes Scrollen aktiviert
+        behavior: 'smooth'
     });
-     // Den Fokus vom Button entfernen
-     this.blur();
 }
+
+function setupLivewireListeners() {
+    console.log('Setting up Livewire listeners');
+    Livewire.hook('message.processed', (message, component) => {
+        console.log('Livewire message processed, running lazy load functions');
+        lazyloadImages();
+    });
+}
+
+// Check if Livewire is already loaded
+if (window.Livewire) {
+    console.log('Livewire already loaded, setting up listeners immediately');
+    setupLivewireListeners();
+} else {
+    // If not, wait for it to load
+    console.log('Waiting for Livewire to load');
+    document.addEventListener('livewire:load', setupLivewireListeners);
+}
+
+// Also run the lazy load functions on initial page load
+document.addEventListener('DOMContentLoaded', () => {
+    console.log('DOM content loaded, running initial lazy load');
+    lazyloadImages();
+});
+

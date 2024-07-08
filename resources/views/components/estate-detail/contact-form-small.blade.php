@@ -29,10 +29,16 @@
                       @endif
                   @else
                       <p class="text-base font-medium leading-6 text-gray-400"> Kaufpreis </p>
-                      <p class="text-3xl font-bold xl:text-4xl">
+                      @if($estate['kaufpreis'] > 0.0)
+                          <p class="text-3xl font-bold xl:text-4xl">
                         {{ number_format($estate['kaufpreis'], 0, ',', '.') }}
                         €
                     </p>
+                      @else
+                          <p class="text-xl font-bold xl:text-2xl">
+                            Preis auf Anfrage
+                        </p>
+                      @endif
                   @endif
               </span>
             </p>

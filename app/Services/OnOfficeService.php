@@ -10,6 +10,7 @@ use App\Services\OnOfficeApiHandlerService\ModifyHandler;
 use App\Services\OnOfficeApiHandlerService\ReadHandler;
 use App\Services\OnOfficeApiService\Api;
 use Exception;
+use Statamic\Facades\Entry;
 use Statamic\Facades\GlobalSet;
 
 class OnOfficeService
@@ -262,7 +263,7 @@ class OnOfficeService
         $result = $this->read()->get(
             data: $this->performanceFieldEstates,
             module: 'estate',
-            filters: array_merge($filters),
+            filters: array_merge($filters, $this->defaultFilter),
             offset: $page * $perPage,
             limit: $perPage
         )['data']['records'] ?? [];
@@ -270,7 +271,7 @@ class OnOfficeService
             $estateIds = array_map(function ($item) {
                 return $item['id'];
             }, $result);
-            $images = self::getEstateImagesByIds($estateIds, ['Titelbild', 'Foto', 'Grundriss']);
+            $images = self::getEstateImagesByIds($estateIds, ['Grundriss']);
             foreach ($result as $key => $estate) {
                 $result[$key]['elements']['images'] = collect($images)->where('estateId', $estate['id'])->first()['elements'] ?? [];
             }
@@ -395,10 +396,11 @@ class OnOfficeService
 
     public function getOnOfficeUserById(int $userId): UserDetails
     {
-        $user = $this->read()->userById(
-            data: $this->defaultFieldsUser,
-            resourceId: $userId,
-        )['data']['records'][0] ?? [];
+        $user = Entry::query()->where('collection', 'on_office_users')
+            ->where('Nr', $userId)
+            ->get();
+
+        dd($user);
 
         $photo = $this->getUserPhotoById($userId);
 

@@ -17,14 +17,14 @@
         class="absolute w-full max-w-screen-xl px-4 mx-auto -translate-x-1/2 pt-28 sm:pt-24 top-20 left-1/2 xl:top-1/2 xl:-translate-y-1/2 lg:px-10"
     >
         {{if before_title}}
-        <span class="block mb-4 font-bold text-gray-900">{{before_title}}</span>
+            <span class="block mb-4 font-bold text-gray-900">{{before_title}}</span>
         {{/if}}
         <h1
             class="max-w-4xl mb-4 text-2xl font-extrabold leading-none text-gray sm:text-3xl lg:text-4xl"
         >
             {{if vermarktungsart == "kauf"}} {{title}} kaufen {{elseif
             vermarktungsart == "miete"}} {{title}} mieten {{else}} Unsere
-            Immobilien {{/if}}
+                Immobilien {{/if}}
         </h1>
         <p class="text-lg font-bold text-gray max-w-xl">{{after_title}}</p>
         <!-- Bewertungstext -->

@@ -224,13 +224,14 @@
     <div class="bg-gray-100">
 
         <div
+            {{--showNavigation defined in layout--}}
             class="sticky top-0 z-20 px-4 py-2 bg-white grid grid-cols-12"
             :class="{
                 'backdrop-blur-md bg-white/90 border-t-[5px] border-primary': !showNavigation
             }"
             aria-labelledby="sidebar-label">
 
-            <div class="divide-x space-x-4 flex items-center justify-between md:justify-start col-span-6 md:col-span-10">
+            <div class="divide-x space-x-4 flex items-center justify-between md:justify-start col-span-6 md:col-span-9">
                 <div class="min-h-[65px]">
                     <h2 class="text-base font-semibold leading-6 text-gray-900" id="sidebar-label">Wählen Sie Ihren Immobilienfilter</h2>
                     <span class="text-sm text-gray-500">
@@ -322,7 +323,56 @@
                 </div>
             </div>
 
-            <div class="min-h-[65px] flex items-center justify-start col-span-6 md:col-span-2">
+            <div class="min-h-[65px] flex items-center justify-start col-span-6 md:col-span-3">
+                <div x-data="{ openSort: false, selected: $wire.currentSortText }" @click.away="openSort = false"
+                     class="hidden relative md:col-span-3 w-full lg:block">
+                    <!-- Trigger -->
+                    <button @click="openSort = !openSort" type="button"
+                            class="relative py-1.5 pr-10 pl-3 w-full text-left text-gray-900 bg-white rounded-md ring-1 ring-inset ring-gray-300 shadow-sm cursor-default cursor-pointer sm:text-sm sm:leading-6 focus:ring-2 focus:ring-indigo-600 focus:outline-none"
+                            aria-haspopup="listbox" aria-expanded="true"
+                            aria-labelledby="listbox-label">
+                        <span x-text="selected"></span>
+                        <span
+                            class="flex absolute inset-y-0 right-0 items-center pr-2 pointer-events-none">
+                                                <svg class="w-5 h-5 text-gray-400" viewBox="0 0 20 20"
+                                                     fill="currentColor" aria-hidden="true">
+                                                    <path fill-rule="evenodd"
+                                                          d="M10 3a.75.75 0 01.55.24l3.25 3.5a.75.75 0 11-1.1 1.02L10 4.852 7.3 7.76a.75.75 0 01-1.1-1.02l3.25-3.5A.75.75 0 0110 3zm-3.76 9.2a.75.75 0 011.06.04l2.7 2.908 2.7-2.908a.75.75 0 111.1 1.02l-3.25 3.5a.75.75 0 01-1.1 0l-3.25-3.5a.75.75 0 01.04-1.06z"
+                                                          clip-rule="evenodd" />
+                                                </svg>
+                                            </span>
+                    </button>
+
+                    <!-- Dropdown -->
+                    <div x-show="openSort" x-cloak
+                         x-transition:enter="transition ease-out duration-200"
+                         x-transition:enter-start="opacity-0 translate-y-1"
+                         x-transition:enter-end="opacity-100 translate-y-0"
+                         x-transition:leave="transition ease-in duration-150"
+                         x-transition:leave-start="opacity-100 translate-y-0"
+                         x-transition:leave-end="opacity-0 translate-y-1"
+                         class="absolute left-0 mt-2 w-full rounded-md shadow-lg origin-top-left">
+                        <div class="bg-white rounded-md shadow-xs">
+                            <div class="py-1" role="menu" aria-orientation="vertical"
+                                 aria-labelledby="options-menu">
+                                <template x-for="option in $wire.sortOptions"
+                                          :key="option.id">
+                                    <a href="#"
+                                       @click.prevent="selected = option.optionText; openSort = false; $wire.call('setSortOption', option.optionText, true);"
+                                       class="block py-2 px-4 text-sm leading-5 text-gray-700 hover:text-gray-900 hover:bg-gray-100 focus:text-gray-900 focus:bg-gray-100 focus:outline-none"
+                                       x-text="option.optionText"
+                                       :class="{
+                                                                'font-semibold': selected === option
+                                                                    .id,
+                                                                'font-normal': selected !== option.id
+                                                            }"
+                                       role="menuitem">
+                                    </a>
+                                </template>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="space-x-4 ml-2">
                     <button @click="openPanel = true"
                             class="z-30 flex justify-center items-center rounded-md bg-black px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-neutral-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
@@ -367,7 +417,7 @@
                             @endif
                             {{-- Recommendation estates when no estates available --}}
                             @if (!empty($estateRecommendation) && $estateRecommendation->count() > 0 && $estatesPaginator->count() == 0)
-                                <x-estates.list-estates-recommendation :estates="$estateRecommendation"/>
+                                <x-estates.list-estates-recommendation :estates="$estateRecommendation" :estateFields="$estateFields"/>
                             @endif
                         </div>
                     </div>

@@ -9,156 +9,146 @@ tabs:
             field:
               type: text
               required: true
-              input_type: text
-              antlers: false
-              display: Titel
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              replicator_preview: true
-              hide_display: false
-              validate:
-                - required
+          -
+            handle: id
+            field:
+              type: integer
+              validate: required|integer
+          -
+            handle: objektnr_extern
+            field:
+              type: text
+              validate: ''
           -
             handle: benutzer
             field:
               type: text
+              validate: ''
           -
             handle: referenz
             field:
               type: text
+              validate: ''
           -
             handle: breitengrad
             field:
               type: text
+              validate: ''
           -
             handle: laengengrad
             field:
               type: text
+              validate: ''
           -
             handle: kaufpreis
             field:
               type: text
+              validate: ''
           -
             handle: lage
             field:
               type: text
+              validate: ''
           -
             handle: objekttitel
             field:
               type: text
+              validate: ''
           -
             handle: wohnflaeche
             field:
               type: text
+              validate: ''
           -
             handle: vermarktungsart
             field:
               type: text
+              validate: ''
           -
             handle: strasse
             field:
               type: text
+              validate: ''
           -
             handle: hausnummer
             field:
               type: text
+              validate: ''
           -
             handle: plz
             field:
               type: text
+              validate: ''
           -
             handle: ort
             field:
               type: text
+              validate: ''
           -
             handle: objekttyp
             field:
               type: text
+              validate: ''
           -
             handle: objektart
             field:
               type: text
+              validate: ''
           -
             handle: baujahr
             field:
               type: integer
-              validate: integer
+              validate: required|integer
           -
             handle: anzahl_zimmer
             field:
               type: integer
-              validate: integer
+              validate: required|integer
           -
             handle: warmmiete
             field:
               type: text
+              validate: ''
           -
             handle: objektbeschreibung
             field:
               type: text
+              validate: ''
           -
             handle: anzahl_badezimmer
             field:
               type: integer
-              validate: integer
+              validate: required|integer
           -
             handle: anzahl_schlafzimmer
             field:
               type: integer
-              validate: integer
+              validate: required|integer
           -
             handle: veroeffentlichen
             field:
               type: toggle
-          -
-            handle: reserviert
-            field:
-              type: toggle
-          -
-            handle: verkauft
-            field:
-              type: toggle
-          -
-            handle: exclusive
-            field:
-              type: toggle
-          -
-            handle: neu
-            field:
-              type: toggle
-          -
-            handle: top_angebot
-            field:
-              type: toggle
-          -
-            handle: preisreduktion
-            field:
-              type: toggle
-          -
-            handle: courtage_frei
-            field:
-              type: toggle
-          -
-            handle: objekt_des_tages
-            field:
-              type: toggle
+              validate: ''
           -
             handle: kaltmiete
             field:
               type: text
+              validate: ''
           -
             handle: stammobjekt
             field:
               type: toggle
+              validate: ''
           -
             handle: status2
             field:
               type: text
+              validate: ''
           -
             handle: status
             field:
               type: text
+              validate: ''
           -
             handle: etagen_zahl
             field:
@@ -168,193 +158,116 @@ tabs:
             handle: ausstatt_beschr
             field:
               type: text
+              validate: ''
           -
             handle: gesamtflaeche
             field:
               type: text
+              validate: ''
           -
             handle: energieausweistyp
             field:
               type: text
+              validate: ''
           -
             handle: energieverbrauchskennwert
             field:
               type: text
+              validate: ''
           -
             handle: energieausweis_gueltig_bis
             field:
               type: date
+              validate: ''
           -
             handle: energietraeger
             field:
               type: text
+              validate: ''
           -
             handle: energyclass
             field:
               type: text
+              validate: ''
           -
             handle: energieausweisbaujahr
             field:
               type: integer
-              validate: integer
+              validate: required|integer
           -
             handle: endenergiebedarf
             field:
               type: text
+              validate: ''
+          -
+            handle: erstellt_am
+            field:
+              type: date
+              validate: ''
+          -
+            handle: reserviert
+            field:
+              type: toggle
+              validate: ''
+          -
+            handle: verkauft
+            field:
+              type: toggle
+              validate: ''
+          -
+            handle: exclusive
+            field:
+              type: toggle
+              validate: ''
+          -
+            handle: neu
+            field:
+              type: toggle
+              validate: ''
+          -
+            handle: top_angebot
+            field:
+              type: toggle
+              validate: ''
+          -
+            handle: preisreduktion
+            field:
+              type: toggle
+              validate: ''
+          -
+            handle: courtage_frei
+            field:
+              type: toggle
+              validate: ''
+          -
+            handle: objekt_des_tages
+            field:
+              type: toggle
+              validate: ''
+          -
+            handle: vermietet
+            field:
+              type: toggle
+              validate: ''
+          -
+            handle: geaendert_am
+            field:
+              type: date
+              validate: ''
           -
             handle: estate_images
             field:
               type: replicator
               sets:
-                main:
-                  display: Hauptteil
-                  instructions: null
-                  icon: null
-                  sets:
-                    image:
-                      display: Image
-                      instructions: null
-                      icon: null
-                      fields:
-                        -
-                          handle: title
-                          field:
-                            input_type: text
-                            antlers: false
-                            type: text
-                            display: Titel
-                            listable: hidden
-                            instructions_position: above
-                            visibility: visible
-                            replicator_preview: true
-                            hide_display: false
-                        -
-                          handle: url
-                          field:
-                            type: text
-                            validate: required|url
-                            display: URL
-                            instructions_position: above
-                            listable: hidden
-                            visibility: visible
-                            replicator_preview: true
-                            input_type: text
-                            antlers: false
-                            hide_display: false
-                        -
-                          handle: type
-                          field:
-                            input_type: text
-                            antlers: false
-                            type: text
-                            display: Typ
-                            listable: hidden
-                            instructions_position: above
-                            visibility: visible
-                            replicator_preview: true
-                            hide_display: false
-                        -
-                          handle: originalname
-                          field:
-                            input_type: text
-                            antlers: false
-                            type: text
-                            display: Originalname
-                            listable: hidden
-                            instructions_position: above
-                            visibility: visible
-                            replicator_preview: true
-                            hide_display: false
-                        -
-                          handle: modified
-                          field:
-                            mode: single
-                            inline: false
-                            full_width: false
-                            columns: 1
-                            rows: 1
-                            time_enabled: false
-                            time_seconds_enabled: false
-                            type: date
-                            display: modified
-                            listable: hidden
-                            instructions_position: above
-                            visibility: visible
-                            replicator_preview: true
-                            hide_display: false
-                        -
-                          handle: text
-                          field:
-                            input_type: text
-                            antlers: false
-                            type: text
-                            display: Text
-                            listable: hidden
-                            instructions_position: above
-                            visibility: visible
-                            replicator_preview: true
-                            hide_display: false
-              display: 'Immobilien Bilder'
-              instructions_position: above
-              listable: hidden
-              visibility: visible
-              replicator_preview: true
-              collapse: false
-              previews: true
-              fullscreen: true
-              hide_display: false
-          -
-            handle: erstellt_am
-            field:
-              mode: single
-              inline: false
-              full_width: false
-              columns: 1
-              rows: 1
-              time_enabled: false
-              time_seconds_enabled: false
-              type: date
-              display: erstellt_am
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              replicator_preview: true
-              hide_display: false
-  seo:
-    display: SEO
-    sections:
-      -
-        display: Basic
-        instructions: 'Basic SEO settings.'
-        fields:
-          -
-            import: 'statamic-peak-seo::seo_basic'
-      -
-        display: Advanced
-        instructions: 'Advanced SEO settings.'
-        fields:
-          -
-            import: 'statamic-peak-seo::seo_advanced'
-      -
-        display: 'Open Graph'
-        instructions: 'Open Graph meta tags for social sharing.'
-        fields:
-          -
-            import: 'statamic-peak-seo::seo_open_graph'
-      -
-        display: Sitemap
-        instructions: 'Sitemap configuration.'
-        fields:
-          -
-            import: 'statamic-peak-seo::seo_sitemap'
-      -
-        display: 'JSON-ld Schema'
-        instructions: 'Custom JSON-ld schema objects.'
-        fields:
-          -
-            import: 'statamic-peak-seo::seo_jsonld'
+                image:
+                  display: Image
+                  fields:
+                    -
+                      handle: url
+                      field:
+                        type: text
+                        validate: required|url
   sidebar:
-    display: Sidebar
     sections:
       -
         fields:
@@ -364,15 +277,3 @@ tabs:
               type: slug
               localizable: true
               validate: 'max:200'
-          -
-            handle: id_internal
-            field:
-              type: integer
-              localizable: true
-              validate: required|integer
-          -
-            handle: objektnr_extern
-            field:
-              localizable: true
-              type: text
-title: 'Estate entry'

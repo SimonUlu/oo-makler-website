@@ -4,9 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Enums\NumberWord;
 use App\Helpers\Estates\EnergyScale;
+use App\Helpers\Estates\EstateHelper;
 use App\Services\EstateHandlers\EstateEntryService;
-use App\Services\OnOfficeService;
 use Statamic\Facades\Collection;
+use Statamic\Facades\GlobalSet;
 use Statamic\View\View;
 
 class EstateController extends Controller
@@ -16,6 +17,13 @@ class EstateController extends Controller
         // Fetch the Collection
         $collectionEntries = Collection::findByHandle('estates')->queryEntries()->where('blueprint', 'estatelist')->get();
         $data = $collectionEntries->get(0);
+        // if estateFields not in session, get them from the collection
+        if (! request()->session()->has('estateFieldsFull')) {
+            $estateFields = $data->get('estate_fields');
+            request()->session()->put('estateFieldsFull', $estateFields);
+        } else {
+            $estateFields = EstateHelper::getEstateFields();
+        }
 
         return (new View)
             ->template('estates.index')
@@ -25,10 +33,11 @@ class EstateController extends Controller
                 'before_title' => $data['before_title'] ?? null,
                 'after_title' => $data['after_title'] ?? null,
                 'title' => 'Immobilien',
+                'estateFields' => $estateFields,
             ]);
     }
 
-    public function show(OnOfficeService $onOfficeService, $estateId)
+    public function show($estateId)
     {
 
         if (! is_numeric($estateId)) {
@@ -58,6 +67,10 @@ class EstateController extends Controller
         $collectionEntries = Collection::findByHandle('estates')->queryEntries()->where('blueprint', 'estatedetail')->get();
         // get the header_image_appearance from the global
         $collectionData = $collectionEntries->get(0);
+        // get the iframe if present
+        $showIframe = $collectionData->get('iframe_show') ?? null;
+        $iframeTitle = $collectionData->get('iframe_title') ?? null;
+        $iframe = $collectionData->get('iframe')['code'] ?? null;
 
         // get estate recommendations
         if ($estate->get('veroeffentlichen') == 'kauf') {
@@ -123,6 +136,18 @@ class EstateController extends Controller
             }
         }
 
+        // get business hours from global set
+        $businessInformation = [
+            'business_hours' => GlobalSet::find('business_hours')->in('default')->get('dates'),
+            'business_name' => GlobalSet::find('business_information')->in('default')->get('company_name'),
+            'business_street' => GlobalSet::find('business_information')->in('default')->get('company_street'),
+            'business_house_number' => GlobalSet::find('business_information')->in('default')->get('company_house_number'),
+            'business_zip_code' => GlobalSet::find('business_information')->in('default')->get('company_zip'),
+            'business_email' => GlobalSet::find('business_information')->in('default')->get('company_email'),
+            'business_phone' => GlobalSet::find('business_information')->in('default')->get('company_phone'),
+            'business_description' => GlobalSet::find('business_information')->in('default')->get('company_description'),
+        ];
+
         // return view
         return (new View)
             ->template('estates.show')
@@ -132,29 +157,35 @@ class EstateController extends Controller
                 'estate' => $estate,
                 'estateId' => $estate['id_internal'],
                 'headerImageAppearance' => $collectionData->header_image_appearance,
-                'estateFields' => request()->session()->get('estateFieldsFull'),
+                'estateFields' => EstateHelper::getEstateFields(),
                 'estateRecommendations' => $estateRecommendations->toArray(),
                 'epassSkalaImage' => $epassSkalaImage,
                 'pfeilposition' => $energyScale->getPfeilPosition(),
                 'anzahlZimmerWort' => $anzahlZimmerWort,
                 'titelbild' => $titelbild,
+                'showIframe' => $showIframe,
+                'iframeTitle' => $iframeTitle,
+                'iframe' => $iframe,
+                'businessInformation' => $businessInformation,
             ]);
     }
 
     public function estateNotFound()
     {
-        return (new View)
-            ->template('errors.404-estate')
-            ->layout('layouts.layoutblade')
-            ->with(
-                [
-                    'title' => '😳',
-                    'title_sub' => 'Diese Immobile ist nicht mehr in der Vermarktung.',
-                    'cta_text' => 'Damit das in Zukunft nicht nochmal passiert, jetzt direkt Suchauftrag erstellen.',
-                    'cta_button_link' => '/suchauftrag',
-                    'cta_button_text' => 'Suchauftrag erstellen',
-                ]
-            );
+        // Render the view
+        $view = View::make('errors.404-estate')
+            ->with([
+                'title' => '😳',
+                'title_sub' => 'Diese Immobile ist nicht mehr in der Vermarktung.',
+                'cta_text' => 'Damit das in Zukunft nicht nochmal passiert, jetzt direkt Suchauftrag erstellen.',
+                'cta_button_link' => '/suchauftrag',
+                'cta_button_text' => 'Suchauftrag erstellen',
+            ])
+            ->render();
+
+        // Return the response with a 410 status code
+        return response($view, 410)
+            ->header('Content-Type', 'text/html');
     }
 
     public function numberToWord($number)

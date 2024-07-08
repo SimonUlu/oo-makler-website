@@ -120,6 +120,10 @@ tabs:
             field:
               type: toggle
           -
+            handle: vermietet
+            field:
+              type: toggle
+          -
             handle: exclusive
             field:
               type: toggle

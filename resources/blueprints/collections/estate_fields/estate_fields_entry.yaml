@@ -9,287 +9,123 @@ tabs:
             field:
               type: text
               required: true
-              input_type: text
-              antlers: false
-              display: Titel
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              replicator_preview: true
-              hide_display: false
               validate:
                 - required
           -
-            handle: benutzer
+            handle: label_id
             field:
+              input_type: text
+              antlers: false
               type: text
-          -
-            handle: referenz
-            field:
-              type: text
-          -
-            handle: breitengrad
-            field:
-              type: text
-          -
-            handle: laengengrad
-            field:
-              type: text
-          -
-            handle: kaufpreis
-            field:
-              type: text
-          -
-            handle: lage
-            field:
-              type: text
-          -
-            handle: objekttitel
-            field:
-              type: text
-          -
-            handle: wohnflaeche
-            field:
-              type: text
-          -
-            handle: verkauft
-            field:
-              type: toggle
-          - handle: vermietet
-            field:
-              type: toggle
-          -
-            handle: vermarktungsart
-            field:
-              type: text
-          -
-            handle: strasse
-            field:
-              type: text
-          -
-            handle: hausnummer
-            field:
-              type: text
-          -
-            handle: plz
-            field:
-              type: text
-          -
-            handle: ort
-            field:
-              type: text
-          -
-            handle: objekttyp
-            field:
-              type: text
-          -
-            handle: objektart
-            field:
-              type: text
-          -
-            handle: baujahr
-            field:
-              type: integer
-              validate: required|integer
-          -
-            handle: anzahl_zimmer
-            field:
-              type: integer
-              validate: required|integer
-          -
-            handle: warmmiete
-            field:
-              type: text
-          -
-            handle: objektbeschreibung
-            field:
-              type: text
-          -
-            handle: anzahl_badezimmer
-            field:
-              type: integer
-              validate: required|integer
-          -
-            handle: anzahl_schlafzimmer
-            field:
-              type: integer
-              validate: required|integer
-          -
-            handle: veroeffentlichen
-            field:
-              type: toggle
-          -
-            handle: kaltmiete
-            field:
-              type: text
-          -
-            handle: stammobjekt
-            field:
-              type: toggle
-          -
-            handle: status2
-            field:
-              type: text
-          -
-            handle: status
-            field:
-              type: text
-          -
-            handle: etagen_zahl
-            field:
-              type: integer
-              validate: required|integer
-          -
-            handle: ausstatt_beschr
-            field:
-              type: text
-          -
-            handle: gesamtflaeche
-            field:
-              type: text
-          -
-            handle: energieausweistyp
-            field:
-              type: text
-          -
-            handle: energieverbrauchskennwert
-            field:
-              type: text
-          -
-            handle: energieausweis_gueltig_bis
-            field:
-              type: date
-          -
-            handle: energietraeger
-            field:
-              type: text
-          -
-            handle: energyclass
-            field:
-              type: text
-          -
-            handle: energieausweisbaujahr
-            field:
-              type: integer
-              validate: required|integer
-          -
-            handle: endenergiebedarf
-            field:
-              type: text
-          -
-            handle: estate_images
-            field:
-              type: replicator
-              sets:
-                main:
-                  display: Hauptteil
-                  instructions: null
-                  icon: null
-                  sets:
-                    image:
-                      display: Image
-                      instructions: null
-                      icon: null
-                      fields:
-                        -
-                          handle: title
-                          field:
-                            input_type: text
-                            antlers: false
-                            type: text
-                            display: Titel
-                            listable: hidden
-                            instructions_position: above
-                            visibility: visible
-                            replicator_preview: true
-                            hide_display: false
-                        -
-                          handle: url
-                          field:
-                            type: text
-                            validate: required|url
-                            display: URL
-                            instructions_position: above
-                            listable: hidden
-                            visibility: visible
-                            replicator_preview: true
-                            input_type: text
-                            antlers: false
-                            hide_display: false
-                        -
-                          handle: type
-                          field:
-                            input_type: text
-                            antlers: false
-                            type: text
-                            display: Typ
-                            listable: hidden
-                            instructions_position: above
-                            visibility: visible
-                            replicator_preview: true
-                            hide_display: false
-                        -
-                          handle: originalname
-                          field:
-                            input_type: text
-                            antlers: false
-                            type: text
-                            display: Originalname
-                            listable: hidden
-                            instructions_position: above
-                            visibility: visible
-                            replicator_preview: true
-                            hide_display: false
-                        -
-                          handle: text
-                          field:
-                            input_type: text
-                            antlers: false
-                            type: text
-                            display: Text
-                            listable: hidden
-                            instructions_position: above
-                            visibility: visible
-                            replicator_preview: true
-                            hide_display: false
-                        -
-                          handle: modified
-                          field:
-                            mode: single
-                            inline: false
-                            full_width: false
-                            columns: 1
-                            rows: 1
-                            time_enabled: false
-                            time_seconds_enabled: false
-                            type: date
-                            display: modified
-                            listable: hidden
-                            instructions_position: above
-                            visibility: visible
-                            replicator_preview: true
-                            hide_display: false
-              display: 'Immobilien Bilder'
-              instructions_position: above
+              display: label_id
               listable: hidden
+              instructions_position: above
               visibility: visible
               replicator_preview: true
-              collapse: false
-              previews: true
-              fullscreen: true
               hide_display: false
           -
-            handle: erstellt_am
+            handle: type
             field:
-              mode: single
-              inline: false
-              full_width: false
-              columns: 1
-              rows: 1
-              time_enabled: false
-              time_seconds_enabled: false
-              type: date
-              display: erstellt_am
+              input_type: text
+              antlers: false
+              type: text
+              display: Type
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: length_field
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: Länge
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: permittedvalues
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: Permittedvalues
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: default
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: Default
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: filters
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: Filters
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: field_measure_format
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: fieldMeasureFormat
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: dependencies
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: Dependencies
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: compound_fields
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'Compound Fields'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: label
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: Label
               listable: hidden
               instructions_position: above
               visibility: visible
@@ -487,12 +323,4 @@ tabs:
             field:
               type: integer
               validate: required|integer
-          -
-            handle: objektnr_extern
-            field:
-              type: text
-          -
-            handle: permalink
-            field:
-              type: text
 title: 'Estate entry'

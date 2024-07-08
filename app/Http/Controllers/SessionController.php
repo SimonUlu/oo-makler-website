@@ -188,14 +188,8 @@ class SessionController extends Controller
     public static function fillFilterOptions(array $filterOptions)
     {
 
-        // put full list in session if not set
-        if (! request()->session()->has('estateFieldsFull')) {
-            $estateFields = (new OnOfficeService())->getAllEstateFields();
-            request()->session()->put('estateFieldsFull', $estateFields);
+        $estateFields = EstateHelper::getEstateFields();
 
-        } else {
-            $estateFields = request()->session()->get('estateFieldsFull');
-        }
         foreach ($filterOptions as $key => $filterOption) {
 
             if (! array_key_exists($filterOption, $estateFields)) {

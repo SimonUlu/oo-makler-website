@@ -6,6 +6,7 @@ use App\Http\Controllers\SessionController;
 use App\Modifiers\EuropeanNumber;
 use App\Services\OnOfficeService;
 use Illuminate\Http\Request;
+use Statamic\Entries\Entry;
 use Statamic\Facades\GlobalSet;
 
 class EstateHelper
@@ -82,12 +83,7 @@ class EstateHelper
     public static function convertFilter($request, $filters): array
     {
         $filterValidated = [];
-        // get all estateFields from Session
-        if (! $request->session()->has('estateFieldsFull')) {
-            SessionController::getAllEstateFields();
-        }
-
-        $estateFields = $request->session()->get('estateFieldsFull');
+        $estateFields = EstateHelper::getEstateFields();
 
         foreach ($filters as $key => $value) {
             // if value is empty, continue
@@ -270,25 +266,37 @@ class EstateHelper
         return $estates ?? [];
     }
 
-    public static function getEstateFields()
+    public static function getEstateFields(): array
     {
-        if (! request()->session()->has('estateFieldsFull')) {
-            SessionController::getAllEstateFields(request(), new OnOfficeService());
+        $entries = Entry::query()->where('collection', 'estate_fields')->get();
+
+        $activeFields = app('defaultFieldsEstate');
+
+        $entries = $entries->filter(function (Entry $entry) use ($activeFields) {
+            return in_array($entry->data()->get('label_id'), $activeFields);
+        });
+
+        $transformedEntries = [];
+        foreach ($entries as $entry) {
+            $data = $entry->data();
+            $transformedEntries[$data->get('label_id')] = [
+                'label' => $data->get('label'),
+                'label_id' => $data->get('label_id'),
+                'permittedvalues' => json_decode($data->get('permittedvalues'), true),
+                'fieldMeasureFormat' => json_decode($data->get('field_measure_format'), true),
+                'type' => $data->get('type'),
+            ];
         }
 
-        return request()->session()->get('estateFieldsFull');
+        return $transformedEntries;
+
     }
 
     public static function getFilterInfo($filters, $filterOptions, $filterKey = null, $recursive = false)
     {
         $filter_info = [];
 
-        if (request()->session()->has('estateFieldsFull')) {
-            $estateFields = request()->session()->get('estateFieldsFull');
-        } else {
-            SessionController::getAllEstateFields(request(), new OnOfficeService());
-            $estateFields = request()->session()->get('estateFieldsFull');
-        }
+        $estateFields = EstateHelper::getEstateFields();
 
         foreach ($filters as $key => $value) {
 

@@ -17,24 +17,24 @@
             @foreach ($estates->random($numItems) as $index => $estate)
                 <div class="grid max-w-lg grid-cols-1 shadow-lg md:flex-col md:mb-0 md:space-x-0 md:max-w-none"
                      x-data="{
-                            image: {
-                                src: '{{ isset($estate->get('estate_images')[0]['url']) ? $estate->get('estate_images')[0]['url'] : 'https://via.placeholder.com/300x200' }}',
-                                alt: '{{ isset($estate->get('estate_images')[0]['title']) ? $estate->get('estate_images')[0]['title'] : 'Platzhalter Objekttitel' }}',
-                            },
-                            setImageSrcAsync: (el, src, alt) => {
-                                let img = new Image();
-                                let $spinner = el.nextElementSibling;
-                                img.onload = () => {
-                                    el.src = src;
-                                    el.alt = alt;
-                                    if ($spinner) $spinner.style.display = 'none';
-                                };
-                                img.src = src;
-                            }
-                        }" x-init="setImageSrcAsync($refs.image, '{{ isset($estate->get('estate_images')[0]['url']) ? $estate->get('estate_images')[0]['url'] : 'https://via.placeholder.com/300x200' }}', '{{ isset($estate->get('estate_images')[0]['title']) ? $estate->get('estate_images')[0]['title'] : 'Platzhalter Objekttitel' }}')">
+                        estate: @json($estate),
+                        image: {
+                            src: '{{ isset($estate->get('estate_images')[0]['url']) ? $estate->get('estate_images')[0]['url'] : 'https://via.placeholder.com/300x200' }}',
+                            alt: '{{ isset($estate->get('estate_images')[0]['title']) ? $estate->get('estate_images')[0]['title'] : 'Platzhalter Objekttitel' }}',
+                        },
+                        setImageSrcAsync: (el, src, alt) => {
+                            let img = new Image();
+                            let $spinner = el.nextElementSibling;
+                            img.onload = () => {
+                                el.src = src;
+                                el.alt = alt;
+                                if ($spinner) $spinner.style.display = 'none';
+                            };
+                            img.src = src;
+                        }
+                    }" x-init="setImageSrcAsync($refs.image, '{{ isset($estate->get('estate_images')[0]['url']) ? $estate->get('estate_images')[0]['url'] : 'https://via.placeholder.com/300x200' }}', '{{ isset($estate->get('estate_images')[0]['title']) ? $estate->get('estate_images')[0]['title'] : 'Platzhalter Objekttitel' }}')">
                     <div class="relative w-full">
-                        <div
-                            class="relative flex items-center justify-center w-auto overflow-hidden rounded-t-lg h-80 min-w-64">
+                        <div class="relative flex items-center justify-center w-auto overflow-hidden rounded-t-lg h-80 min-w-64">
                             <!-- Items -->
                             <div class="spinner"
                                  style="position: absolute; inset: 0; display: flex; justify-content: center; align-items: center;">
@@ -51,53 +51,65 @@
                             </a>
                         </div>
                     </div>
-                    <!-- End IMage Slider -->
+                    <!-- End Image Slider -->
 
                     <!-- Neue Section -->
                     <div class="relative px-5 pt-2 pb-2 bg-white border rounded-b-lg shadow-lg md:pt-0">
-                        <h3 class="flex justify-between mb-2.5 text-lg font-bold text-gray-900 md:mt-4 ">
-                                <span>
-                                    @if ($estate->get('vermarktungsart') == 'miete')
-                                        {{ number_format($estate->get('warmmiete'), 0, ',', '.') }} €
-                                    @else
-                                        {{ number_format($estate->get('kaufpreis'), 0, ',', '.') }} €
-                                    @endif
-                                </span>
+                        <h3 class="flex justify-between mb-2.5 text-lg font-bold text-gray-900 md:mt-4">
+                            <span>
+                                @if ($estate->get('vermarktungsart') == 'miete' && $estate->get('warmmiete') !== null)
+                                    {{ number_format($estate->get('warmmiete'), 0, ',', '.') }} €
+                                @elseif ($estate->get('vermarktungsart') != 'miete' && $estate->get('kaufpreis') !== null)
+                                    {{ number_format($estate->get('kaufpreis'), 0, ',', '.') }} €
+                                @endif
+                            </span>
                             @if ($estate->get('vermarktungsart') == 'miete')
-                                <span
-                                    class="capitalize inline-flex items-center rounded-full bg-primary-900 px-2.5 py-0.5 text-sm font-medium text-white">
-                                        {{ $estate->get('vermarktungsart') }}
-                                    </span>
+                                <span class="capitalize inline-flex items-center rounded-full bg-primary-900 px-2.5 py-0.5 text-sm font-medium text-white">
+                                    {{ $estate->get('vermarktungsart') }}
+                                </span>
                             @else
-                                <span
-                                    class="capitalize inline-flex items-center rounded-full border border-primary text-primary px-2.5 py-0.5 text-sm font-medium">
-                                        {{ $estate->get('vermarktungsart') }}
-                                    </span>
+                                <span class="capitalize inline-flex items-center rounded-full border border-primary text-primary px-2.5 py-0.5 text-sm font-medium">
+                                    {{ $estate->get('vermarktungsart') }}
+                                </span>
                             @endif
                         </h3>
                         <div class="space-y-2 text-md">
                             <div class="flex space-x-2 text-gray-700 dark:text-gray-400">
-                                @if ($estate->get('wohnflaeche') !== null)
-                                    <span>{{ $estate->get('wohnflaeche') }} m&sup2;</span>
-                                    <span class="ml-2"> · {{ round($estate->get('anzahl_zimmer')) }}
-                                            Zimmer </span>
-                                    <span class="ml-2"> · {{ $estate->get('baujahr') }} </span>
-                                @endif
+                                @php
+                                    $details = [];
+
+                                    if ($estate->get('wohnflaeche') !== null && $estate->get('wohnflaeche') !== 0.00) {
+                                        $details[] = $estate->get('wohnflaeche') . ' m&sup2;';
+                                    }
+
+                                    if ($estate->get('anzahl_zimmer') !== null && $estate->get('anzahl_zimmer') !== 0) {
+                                        $details[] = round($estate->get('anzahl_zimmer')) . ' Zimmer';
+                                    }
+
+                                    if ($estate->get('baujahr') !== null && $estate->get('baujahr') !== 0) {
+                                        $details[] = $estate->get('baujahr');
+                                    }
+                                @endphp
+
+                                @foreach ($details as $index => $detail)
+                                    @if ($index > 0)
+                                        <span class="ml-2"> · </span>
+                                    @endif
+                                    <span>{!! $detail !!}</span>
+                                @endforeach
                             </div>
-                            <div class="flex space-x-2 text-gray-500 dark:text-gray-400">
-                                    <span class="capitalize">
-                                        {{ ucfirst($estate->get('objektart')) }}
-                                    </span>
+                            <div class="text-left" x-data="estateRecommendationComponent()">
+                                <span class="capitalize">
+                                    <span x-text="getTranslation('{{$estate->get('objektart')}}')"></span>
+                                </span>
                                 <span class="ml-1">
-                                        {{ Str::limit($estate->get('ort'), 45, '...') }}
-                                    </span>
+                                    {{ Str::limit($estate->get('ort'), 45, '...') }}
+                                </span>
                             </div>
                         </div>
                         <div class="my-4 border-t border-gray-300"></div>
-                        <!-- BEGIN: ed8c6549bwf9 -->
                         <div class="flex flex-col items-center justify-center">
                             <div class="flex items-center justify-between w-full">
-                                <!-- Add 'items-center' class here -->
                                 <img class="max-w-[100px]" src="/logo_images/logo.png" alt="Ihr Kontakt">
                                 <a href="/immobilien/details/{{ $estate->get('id_internal') }}"
                                    class="inline-flex justify-center items-center py-2.5 px-5 text-sm font-medium text-center md:w-auto lg:col-span-12 focus:ring-4 focus:outline-none"
@@ -108,9 +120,21 @@
                     <!-- Ende Neue Section -->
                 </div>
             @endforeach
-
         </div>
-
     </div>
 
+    <script>
+        function estateRecommendationComponent() {
+            return {
+                estate: {},
+                estateFields: @json($estateFields),
+
+                getTranslation(objektart) {
+                    console.log(objektart)
+                    if (!objektart) return '';
+                    return this.estateFields.objektart.permittedvalues[objektart] || (objektart.charAt(0).toUpperCase() + objektart.slice(1));
+                },
+            };
+        }
+    </script>
 </div>

@@ -9,287 +9,286 @@ tabs:
             field:
               type: text
               required: true
+              validate:
+                - required
+          -
+            handle: Anrede
+            field:
               input_type: text
               antlers: false
+              type: text
+              display: Anrede
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: Titel
+            field:
+              input_type: text
+              antlers: false
+              type: text
               display: Titel
               listable: hidden
               instructions_position: above
               visibility: visible
               replicator_preview: true
               hide_display: false
-              validate:
-                - required
           -
-            handle: benutzer
+            handle: Kuerzel
             field:
+              input_type: text
+              antlers: false
               type: text
-          -
-            handle: referenz
-            field:
-              type: text
-          -
-            handle: breitengrad
-            field:
-              type: text
-          -
-            handle: laengengrad
-            field:
-              type: text
-          -
-            handle: kaufpreis
-            field:
-              type: text
-          -
-            handle: lage
-            field:
-              type: text
-          -
-            handle: objekttitel
-            field:
-              type: text
-          -
-            handle: wohnflaeche
-            field:
-              type: text
-          -
-            handle: verkauft
-            field:
-              type: toggle
-          - handle: vermietet
-            field:
-              type: toggle
-          -
-            handle: vermarktungsart
-            field:
-              type: text
-          -
-            handle: strasse
-            field:
-              type: text
-          -
-            handle: hausnummer
-            field:
-              type: text
-          -
-            handle: plz
-            field:
-              type: text
-          -
-            handle: ort
-            field:
-              type: text
-          -
-            handle: objekttyp
-            field:
-              type: text
-          -
-            handle: objektart
-            field:
-              type: text
-          -
-            handle: baujahr
-            field:
-              type: integer
-              validate: required|integer
-          -
-            handle: anzahl_zimmer
-            field:
-              type: integer
-              validate: required|integer
-          -
-            handle: warmmiete
-            field:
-              type: text
-          -
-            handle: objektbeschreibung
-            field:
-              type: text
-          -
-            handle: anzahl_badezimmer
-            field:
-              type: integer
-              validate: required|integer
-          -
-            handle: anzahl_schlafzimmer
-            field:
-              type: integer
-              validate: required|integer
-          -
-            handle: veroeffentlichen
-            field:
-              type: toggle
-          -
-            handle: kaltmiete
-            field:
-              type: text
-          -
-            handle: stammobjekt
-            field:
-              type: toggle
-          -
-            handle: status2
-            field:
-              type: text
-          -
-            handle: status
-            field:
-              type: text
-          -
-            handle: etagen_zahl
-            field:
-              type: integer
-              validate: required|integer
-          -
-            handle: ausstatt_beschr
-            field:
-              type: text
-          -
-            handle: gesamtflaeche
-            field:
-              type: text
-          -
-            handle: energieausweistyp
-            field:
-              type: text
-          -
-            handle: energieverbrauchskennwert
-            field:
-              type: text
-          -
-            handle: energieausweis_gueltig_bis
-            field:
-              type: date
-          -
-            handle: energietraeger
-            field:
-              type: text
-          -
-            handle: energyclass
-            field:
-              type: text
-          -
-            handle: energieausweisbaujahr
-            field:
-              type: integer
-              validate: required|integer
-          -
-            handle: endenergiebedarf
-            field:
-              type: text
-          -
-            handle: estate_images
-            field:
-              type: replicator
-              sets:
-                main:
-                  display: Hauptteil
-                  instructions: null
-                  icon: null
-                  sets:
-                    image:
-                      display: Image
-                      instructions: null
-                      icon: null
-                      fields:
-                        -
-                          handle: title
-                          field:
-                            input_type: text
-                            antlers: false
-                            type: text
-                            display: Titel
-                            listable: hidden
-                            instructions_position: above
-                            visibility: visible
-                            replicator_preview: true
-                            hide_display: false
-                        -
-                          handle: url
-                          field:
-                            type: text
-                            validate: required|url
-                            display: URL
-                            instructions_position: above
-                            listable: hidden
-                            visibility: visible
-                            replicator_preview: true
-                            input_type: text
-                            antlers: false
-                            hide_display: false
-                        -
-                          handle: type
-                          field:
-                            input_type: text
-                            antlers: false
-                            type: text
-                            display: Typ
-                            listable: hidden
-                            instructions_position: above
-                            visibility: visible
-                            replicator_preview: true
-                            hide_display: false
-                        -
-                          handle: originalname
-                          field:
-                            input_type: text
-                            antlers: false
-                            type: text
-                            display: Originalname
-                            listable: hidden
-                            instructions_position: above
-                            visibility: visible
-                            replicator_preview: true
-                            hide_display: false
-                        -
-                          handle: text
-                          field:
-                            input_type: text
-                            antlers: false
-                            type: text
-                            display: Text
-                            listable: hidden
-                            instructions_position: above
-                            visibility: visible
-                            replicator_preview: true
-                            hide_display: false
-                        -
-                          handle: modified
-                          field:
-                            mode: single
-                            inline: false
-                            full_width: false
-                            columns: 1
-                            rows: 1
-                            time_enabled: false
-                            time_seconds_enabled: false
-                            type: date
-                            display: modified
-                            listable: hidden
-                            instructions_position: above
-                            visibility: visible
-                            replicator_preview: true
-                            hide_display: false
-              display: 'Immobilien Bilder'
-              instructions_position: above
+              display: Kuerzel
               listable: hidden
+              instructions_position: above
               visibility: visible
               replicator_preview: true
-              collapse: false
-              previews: true
-              fullscreen: true
               hide_display: false
           -
-            handle: erstellt_am
+            handle: vorname
             field:
-              mode: single
-              inline: false
-              full_width: false
-              columns: 1
-              rows: 1
-              time_enabled: false
-              time_seconds_enabled: false
-              type: date
-              display: erstellt_am
+              input_type: text
+              antlers: false
+              type: text
+              display: Vorname
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: Nachname
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: Nachname
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: Firma
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: Firma
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: PLZ
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: PLZ
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: Ort
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: Ort
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: Strasse
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: Straße
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: Hausnummer
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: Hausnummer
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: Land
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: Land
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: Province
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: Province
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: Mobil
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: Mobil
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: Telefon
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: Telefon
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: Url
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: Url
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: Firmazusatz1
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: Firmazusatz1
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: PositionUnternehmen
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: PositionUnternehmen
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: Nr
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: Nr
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: Name
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: Name
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: email
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: email
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: Emailname
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: Emailname
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: meetingUrl
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: meetingUrl
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: photo
+            field:
+              theme: material
+              mode: htmlmixed
+              mode_selectable: true
+              indent_type: tabs
+              indent_size: 4
+              key_map: default
+              line_numbers: true
+              line_wrapping: true
+              antlers: false
+              type: code
+              display: Photo
               listable: hidden
               instructions_position: above
               visibility: visible
@@ -487,12 +486,4 @@ tabs:
             field:
               type: integer
               validate: required|integer
-          -
-            handle: objektnr_extern
-            field:
-              type: text
-          -
-            handle: permalink
-            field:
-              type: text
 title: 'Estate entry'

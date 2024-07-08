@@ -1,5 +1,5 @@
 export function lazyloadImages() {
-    let lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
+    let lazyImages = [].slice.call(document.querySelectorAll("img.lazy:not([data-observed])"));
     let imagesToLoad = lazyImages.length;
 
     if (
@@ -23,13 +23,13 @@ export function lazyloadImages() {
 
                         if (spinner) {
                             spinner.style.display = "none";
-                            spinner.classList.remove("animate-spin"); // Entferne die animate-spin Klasse
+                            spinner.classList.remove("animate-spin");
                         }
 
-                        // Reduziere die Anzahl der zu ladenden Bilder
+                        // Reduce the number of images to load
                         imagesToLoad--;
 
-                        // Wenn alle Bilder geladen sind, entferne alle Spinner
+                        // If all images are loaded, remove all spinners
                         if (imagesToLoad === 0) {
                             document
                                 .querySelectorAll(".spinner")
@@ -40,6 +40,7 @@ export function lazyloadImages() {
                         }
                     };
                     lazyImage.removeAttribute("loading");
+                    lazyImage.dataset.observed = 'true';
                     lazyImageObserver.unobserve(lazyImage);
                 }
             });
@@ -48,28 +49,44 @@ export function lazyloadImages() {
         lazyImages.forEach(function (lazyImage) {
             lazyImageObserver.observe(lazyImage);
         });
+    } else {
+        // Fallback for browsers that don't support IntersectionObserver
+        let lazyImageScrollHandler = function() {
+            if (imagesToLoad === 0) {
+                document.removeEventListener("scroll", lazyImageScrollHandler);
+                window.removeEventListener("resize", lazyImageScrollHandler);
+                window.removeEventListener("orientationchange", lazyImageScrollHandler);
+                return;
+            }
+
+            lazyImages.forEach(function(lazyImage) {
+                if ((lazyImage.getBoundingClientRect().top <= window.innerHeight && lazyImage.getBoundingClientRect().bottom >= 0) && getComputedStyle(lazyImage).display !== "none") {
+                    lazyImage.src = lazyImage.dataset.src;
+                    lazyImage.onload = function() {
+                        var spinner = this.parentElement.parentElement.querySelector(".spinner");
+                        if (spinner) {
+                            spinner.style.display = "none";
+                            spinner.classList.remove("animate-spin");
+                        }
+                        imagesToLoad--;
+                        if (imagesToLoad === 0) {
+                            document.querySelectorAll(".spinner").forEach((spinner) => {
+                                spinner.style.display = "none";
+                                spinner.classList.remove("animate-spin");
+                            });
+                        }
+                    };
+                    lazyImage.removeAttribute("loading");
+                    lazyImage.dataset.observed = 'true';
+                    lazyImages = lazyImages.filter(function(image) { return image !== lazyImage; });
+                }
+            });
+        };
+
+        document.addEventListener("scroll", lazyImageScrollHandler);
+        window.addEventListener("resize", lazyImageScrollHandler);
+        window.addEventListener("orientationchange", lazyImageScrollHandler);
+        lazyImageScrollHandler();
     }
 }
 
-export function lazyloadUsers() {
-    // site.js
-    const options = {
-        root: null,
-        rootMargin: "0px",
-        threshold: 0.1,
-    };
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                let userid = entry.target.getAttribute("data-user-id");
-                let estateid = entry.target.getAttribute("data-estate-id");
-                Livewire.emit("loadUser", userid);
-                observer.unobserve(entry.target);
-                console.log("User is loaded");
-            }
-        });
-    }, options);
-
-    const targets = document.querySelectorAll(".lazy-user");
-    targets.forEach((target) => observer.observe(target));
-}

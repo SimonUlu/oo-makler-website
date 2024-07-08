@@ -19,7 +19,8 @@ yarn-error.log
 /content/collections/estate_entries_full/
 /content/collections/statistic_entries/
 /content/collections/estate_entries_references/
-
+/content/collections/estate_fields/
+/content/collections/on_office_users/
 
 public/build
 

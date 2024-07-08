@@ -1,7 +1,7 @@
 title: onOffice
 data:
-  onoffice_token: c836a3a96f8f6961affe866b1d06a570
-  onoffice_secret: a602bbc9e01d8600dcdb3479b781ed852a5a7a2f807584de3f3bf347cdfb6bf7
+  onoffice_token: 91502d22b648c95bef7860324e8b66f6
+  onoffice_secret: d6576a7f379ccedf25b7f9715410f831431d01f00a14de36de62d5415957ccaf
   e-mail_inbox_expose-mails: florian.imgrund@inno-brain.de
   e-mail_betreff_expose_mails: 'Neue Exposé-Anfrage von Ihrer Website'
   e-mail_inbox_formulare: florian.imgrund@inno-brain.de
@@ -18,14 +18,6 @@ data:
             operator: '='
             value: '1'
           type: neues_set
-          enabled: false
-        -
-          id: lxlhqb3c
-          array_filter:
-            label_id: status2
-            operator: '='
-            value: status2obj_aktiv
-          type: neues_set
           enabled: true
       type: neues_set
       enabled: true
@@ -40,13 +32,13 @@ data:
             operator: '='
             value: '1'
           type: neues_set
-          enabled: false
+          enabled: true
         -
           id: lwpg7rwc
           array_filter:
-            label_id: status2
+            label_id: status
             operator: '='
-            value: status2obj_aktiv
+            value: '1'
           type: neues_set
           enabled: true
       type: neues_set
@@ -58,9 +50,9 @@ data:
         -
           id: lwpg8b6q
           array_filter:
-            label_id: referenz
-            operator: '='
-            value: '1'
+            label_id: status2
+            operator: IN
+            value: 'status2obj_archiviert,ind_Schl_3019'
           type: neues_set
           enabled: true
         -
@@ -70,7 +62,7 @@ data:
             operator: '='
             value: '1'
           type: neues_set
-          enabled: false
+          enabled: true
         -
           id: lwpgbdvw
           array_filter:
@@ -78,7 +70,45 @@ data:
             operator: '='
             value: kauf
           type: neues_set
+          enabled: true
+        -
+          id: lwph85m1
+          array_filter:
+            label_id: veroeffentlichen
+            operator: '='
+            value: '1'
+          type: neues_set
+          enabled: true
+      type: neues_set
+      enabled: true
+    -
+      id: lxvj0pmh
+      onoffice_filter_name: estates_references_rent
+      replicator_field_filter:
+        -
+          id: lwpg8b6q
+          array_filter:
+            label_id: status2
+            operator: IN
+            value: status2obj_archiviert
+          type: neues_set
+          enabled: true
+        -
+          id: lwpgb9sh
+          array_filter:
+            label_id: vermietet
+            operator: '='
+            value: '1'
+          type: neues_set
           enabled: false
+        -
+          id: lwpgbdvw
+          array_filter:
+            label_id: vermarktungsart
+            operator: '='
+            value: miete
+          type: neues_set
+          enabled: true
         -
           id: lwph85m1
           array_filter:
@@ -101,7 +131,7 @@ data:
             operator: '='
             value: '1'
           type: neues_set
-          enabled: false
+          enabled: true
         -
           id: lwmer9jb
           array_filter:
@@ -109,7 +139,7 @@ data:
             operator: '='
             value: status2obj_aktiv
           type: neues_set
-          enabled: false
+          enabled: true
         -
           id: lwmflz8u
           array_filter:
@@ -122,12 +152,12 @@ data:
       enabled: true
     -
       id: lwmi8ow0
-      home_view_model_filter_name: referenzen
+      home_view_model_filter_name: kaufen
       replicator_field_filter:
         -
           id: lwme7via
           array_filter:
-            label_id: referenz
+            label_id: veroeffentlichen
             operator: '='
             value: '1'
           type: neues_set
@@ -139,12 +169,50 @@ data:
             operator: '='
             value: status2obj_aktiv
           type: neues_set
-          enabled: false
+          enabled: true
       type: neues_set
       enabled: true
     -
       id: lwmi2ndp
       home_view_model_filter_name: verkaufen
+      replicator_field_filter:
+        -
+          id: lwme7via
+          array_filter:
+            label_id: veroeffentlichen
+            operator: '='
+            value: '1'
+          type: neues_set
+          enabled: true
+        -
+          id: lwmer9jb
+          array_filter:
+            label_id: status2
+            operator: IN
+            value: 'reserviert,status2obj_archiviert'
+          type: neues_set
+          enabled: true
+        -
+          id: lwmflz8u
+          array_filter:
+            label_id: referenz
+            operator: '='
+            value: '1'
+          type: neues_set
+          enabled: true
+        -
+          id: lwmi6qpw
+          array_filter:
+            label_id: verkauft
+            operator: '='
+            value: '1'
+          type: neues_set
+          enabled: true
+      type: neues_set
+      enabled: true
+    -
+      id: lxviok56
+      home_view_model_filter_name: vermieten
       replicator_field_filter:
         -
           id: lwme7via
@@ -161,7 +229,7 @@ data:
             operator: IN
             value: 'reserviert,status2obj_archiviert'
           type: neues_set
-          enabled: false
+          enabled: true
         -
           id: lwmflz8u
           array_filter:
@@ -171,11 +239,19 @@ data:
           type: neues_set
           enabled: false
         -
-          id: lxuwnv0y
+          id: lwmi6qpw
           array_filter:
-            label_id: verkauft
+            label_id: vermietet
             operator: '='
             value: '1'
+          type: neues_set
+          enabled: false
+        -
+          id: lxvmfq3n
+          array_filter:
+            label_id: vermarktungsart
+            operator: '='
+            value: miete
           type: neues_set
           enabled: true
       type: neues_set
@@ -224,20 +300,6 @@ data:
           enabled: true
       type: neues_set
       enabled: true
-    -
-      id: lxyswc2f
-      home_view_model_filter_name: projects
-      replicator_field_filter:
-        -
-          id: lxysweex
-          array_filter:
-            label_id: stammobjekt
-            operator: '='
-            value: '1'
-          type: neues_set
-          enabled: true
-      type: neues_set
-      enabled: true
   statistics_replicator:
     -
       id: lwf391bd
@@ -259,7 +321,7 @@ data:
       aggregation_function: count
       field_for_aggregation_function: Id
       added_time_filter: year_over_year
-      field_for_added_time_filter: letzte_aktion
+      field_for_added_time_filter: ind_1930_Feld_ObjZusatzportale68
       formatting_statistics: number
     -
       id: lwxtpi0b
@@ -279,9 +341,9 @@ data:
       enabled: true
       statistic_identifier: estates_sold_sum
       aggregation_function: sum
-      field_for_aggregation_function: kaufpreis
+      field_for_aggregation_function: ind_1770_Feld_ObjZusatz17
       added_time_filter: year_over_year
-      field_for_added_time_filter: letzte_aktion
+      field_for_added_time_filter: ind_1930_Feld_ObjZusatzportale68
       formatting_statistics: currency_euro
     -
       id: lwxtc0qf
