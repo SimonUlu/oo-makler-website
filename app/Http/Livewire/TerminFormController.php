@@ -123,13 +123,13 @@ class TerminFormController extends FormComponent
                 estateId: null,
                 actionKind: 'System',
                 actionType: 'Kontakt zugeführt',
-                note: 'Terminanfrage: ' . ($this->onofficeNote ?? '') . ($this->defaultMessage ?? '') . ' '.
-                "\nVorname: ". ($addressData['vorname'] ?? '') .
-                "\nName: ". ($addressData['name'] ?? '') .
-                "\nTelefon: ". ($addressData['phone'] ?? '') .
-                "\nEmail: ". ($addressData['email'] ?? '') .
-                "\nErreichbar: ". ($addressData['reachable'] ?? '').
-                "\nNachricht: ". ($addressData['message'] ?? ''),
+                note: 'Terminanfrage: '.($this->onofficeNote ?? '').($this->defaultMessage ?? '').' '.
+                "\nVorname: ".($addressData['vorname'] ?? '').
+                "\nName: ".($addressData['name'] ?? '').
+                "\nTelefon: ".($addressData['phone'] ?? '').
+                "\nEmail: ".($addressData['email'] ?? '').
+                "\nErreichbar: ".($addressData['reachable'] ?? '').
+                "\nNachricht: ".($addressData['message'] ?? ''),
             );
 
             // get addressId
