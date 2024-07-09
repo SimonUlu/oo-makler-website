@@ -60,9 +60,7 @@ class TerminFormController extends FormComponent
 
     public function submitForm()
     {
-        dump($this);
         $this->validate();
-        dump($this);
 
         //check for potential spam
         if ($this->form['honey']) {
