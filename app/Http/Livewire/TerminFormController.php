@@ -115,7 +115,9 @@ class TerminFormController extends FormComponent
                 "\nVorname: ". ($addressData['vorname'] ?? '') .
                 "\nName: ". ($addressData['name'] ?? '') .
                 "\nTelefon: ". ($addressData['phone'] ?? '') .
-                "\nErreichbar: ". ($addressData['reachable'] ?? ''),
+                "\nEmail: ". ($addressData['email'] ?? '') .
+                "\nErreichbar: ". ($addressData['reachable'] ?? '').
+                "\nNachricht: ". ($addressData['message'] ?? ''),
             );
 
             // get addressId
