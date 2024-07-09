@@ -16,15 +16,17 @@ class ContactFormMailable extends Mailable implements ShouldQueue
     use Queueable, SerializesModels;
 
     public $data;
+    public $view;
 
     /**
      * Create a new message instance.
      */
-    public function __construct($data)
+    public function __construct($data, $view = 'emails.default-contact')
     {
         $this->data = [
             'formData' => $data['formData'],
         ];
+        $this->view=$view;
     }
 
     public function build()
@@ -36,14 +38,14 @@ class ContactFormMailable extends Mailable implements ShouldQueue
             $xml = new SimpleXMLElement($xmlString);
 
             return $this->from(GlobalSet::find('onoffice')->in('default')->get('e-mail_formulare_send_from_e-mail') ?? 'noreply@inno-brain.de')
-                ->view('emails.default-contact')
+                ->view($this->view)
                 ->with(['formData' => $formData])
                 ->attachData($xml->asXML(), 'openimmo.xml', [
                     'mime' => 'application/xml',
                 ]);
         } else {
             return $this->from(GlobalSet::find('onoffice')->in('default')->get('e-mail_formulare_send_from_e-mail') ?? 'noreply@inno-brain.de')
-                ->view('emails.default-contact')
+                ->view($this->view)
                 ->with(['formData' => $formData]);
         }
     }
