@@ -16,6 +16,7 @@ class ContactFormMailable extends Mailable implements ShouldQueue
     use Queueable, SerializesModels;
 
     public $data;
+
     public $view;
 
     /**
@@ -26,7 +27,7 @@ class ContactFormMailable extends Mailable implements ShouldQueue
         $this->data = [
             'formData' => $data['formData'],
         ];
-        $this->view=$view;
+        $this->view = $view;
     }
 
     public function build()

@@ -67,14 +67,14 @@ class TerminFormController extends FormComponent
                     // Leiten Sie den Nutzer auf die Erfolgsseite weiter
                     redirect()->route('contact.success');
                 } catch (\Exception $e) {
-                    session()->flash('error', 'Ein Fehler ist aufgetreten: ' . $e->getMessage());
+                    session()->flash('error', 'Ein Fehler ist aufgetreten: '.$e->getMessage());
                     redirect()->route('searchcriteria.error');
                 }
             }
 
             $formData = [];
 
-            if (!empty($this->form['address'])) {
+            if (! empty($this->form['address'])) {
                 $formData = LibPostal::parseAddress($this->form['address'])->toArray();
             }
 
@@ -86,7 +86,7 @@ class TerminFormController extends FormComponent
             ]);
 
             $addressData = array_filter([
-                'title_request' => !empty($this->title) ? $this->title : 'Kein Seitentitel',
+                'title_request' => ! empty($this->title) ? $this->title : 'Kein Seitentitel',
                 'anrede' => $formData['anrede'] ?? null,
                 'vorname' => $formData['vorname'] ?? null,
                 'name' => $formData['name'] ?? null,
@@ -97,7 +97,7 @@ class TerminFormController extends FormComponent
                 'ort' => $formData['city'] ?? null,
                 'message' => $formData['message'] ?? null,
                 'phone' => $formData['phone'] ?? null,
-                'reachable'=>$this->time??null,
+                'reachable' => $this->time ?? null,
             ]);
 
             // create or update address user
@@ -111,11 +111,11 @@ class TerminFormController extends FormComponent
                 estateId: null,
                 actionKind: 'System',
                 actionType: 'Kontakt zugeführt',
-                note: 'Terminanfrage: ' . ($this->onofficeNote ?? '') . ($this->defaultMessage ?? '') . ' '.
-                "\nVorname: ". ($addressData['vorname'] ?? '') .
-                "\nName: ". ($addressData['name'] ?? '') .
-                "\nTelefon: ". ($addressData['phone'] ?? '') .
-                "\nErreichbar: ". ($addressData['reachable'] ?? ''),
+                note: 'Terminanfrage: '.($this->onofficeNote ?? '').($this->defaultMessage ?? '').' '.
+                "\nVorname: ".($addressData['vorname'] ?? '').
+                "\nName: ".($addressData['name'] ?? '').
+                "\nTelefon: ".($addressData['phone'] ?? '').
+                "\nErreichbar: ".($addressData['reachable'] ?? ''),
             );
 
             // get addressId
@@ -126,7 +126,7 @@ class TerminFormController extends FormComponent
                     [
                         'formData' => $addressData,
                     ],
-                    view:'emails.termin-contact'
+                    view: 'emails.termin-contact'
                 ));
 
             $this->reset();
