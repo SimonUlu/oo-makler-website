@@ -40,7 +40,7 @@
                     <div class="grid grid-cols-2 mt-4 gap-x-2">
                         <div>
                             <select wire:model.defer='form.vermarktungsart'
-                                class='block w-full py-3 pl-3 pr-10 mt-1 text-base border-gray-300 rounded-md sm:text-sm focus:border-indigo-500 focus:ring-indigo-500 focus:outline-none'>
+                                class='block w-full py-3 pl-3 pr-10 mt-1 text-base border-gray-300 -md sm:text-sm focus:border-indigo-500 focus:ring-indigo-500 focus:outline-none'>
                                 <option value="">-- Vermarktungsart wählen --</option>
                                 <option value="kauf">Kauf</option>
                                 <option value="miete">Miete</option>
@@ -52,7 +52,7 @@
                         </div>
                         <div>
                             <select wire:model.derfer='form.objektart'
-                                class='block w-full py-3 pl-3 pr-10 mt-1 text-base border-gray-300 rounded-md sm:text-sm focus:border-indigo-500 focus:ring-indigo-500 focus:outline-none'>
+                                class='block w-full py-3 pl-3 pr-10 mt-1 text-base border-gray-300 -md sm:text-sm focus:border-indigo-500 focus:ring-indigo-500 focus:outline-none'>
                                 <option value="">-- Objektart wählen --</option>
                                 <option value="haus">Haus</option>
                                 <option value="wohnung">Wohnung</option>
@@ -117,7 +117,7 @@
 
                     <div class="grid grid-cols-2 mt-4 gap-x-2">
                         <button
-                            class="flex items-center justify-center w-full px-5 py-1 text-sm font-medium text-center text-gray-900 bg-white border border-gray-200 rounded-lg cursor-no-drop focus:outline-none focus:ring-4 focus:ring-primary-300 sm:py-2 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+                            class="flex items-center justify-center w-full px-5 py-1 text-sm font-medium text-center text-gray-900 bg-white border border-gray-200 -lg cursor-no-drop focus:outline-none focus:ring-4 focus:ring-primary-300 sm:py-2 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
                             disabled>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                 stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -127,7 +127,7 @@
                             Zurück
                         </button>
                         <button type="submit"
-                            class="flex items-center justify-center w-full px-5 py-1 text-sm font-medium text-center text-white rounded-lg bg-primary-600 hover:bg-primary-700 focus:ring-4 sm:py-- focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
+                            class="flex items-center justify-center w-full px-5 py-1 text-sm font-medium text-center text-white bg-primary hover:bg-primary-700 focus:ring-4 sm:py-- focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
                             <span class="mr-2">Ihre Kontaktdetails</span>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                 stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -160,7 +160,7 @@
 
                     <div class="grid grid-cols-2 mt-4 gap-x-2">
                         <button
-                            class="flex items-center justify-center w-full px-5 py-1 text-sm font-medium text-center text-gray-900 bg-white border border-gray-200 rounded-lg cursor-no-drop focus:outline-none focus:ring-4 focus:ring-primary-300 sm:py-2 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+                            class="flex items-center justify-center w-full px-5 py-1 text-sm font-medium text-center text-gray-900 bg-white border border-gray-200 -lg cursor-no-drop focus:outline-none focus:ring-4 focus:ring-primary-300 sm:py-2 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
                             disabled>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                 stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -170,7 +170,7 @@
                             Zurück
                         </button>
                         <button type="submit"
-                            class="flex items-center justify-center w-full px-5 py-1 text-sm font-medium text-center text-white rounded-lg bg-primary-600 hover:bg-primary-700 focus:ring-4 sm:py-- focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
+                            class="flex items-center justify-center w-full px-5 py-1 text-sm font-medium text-center text-white -lg bg-primary hover:bg-primary-700 focus:ring-4 sm:py-- focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
                             <span class="mr-2">Ihre Nachricht</span>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                 stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -196,7 +196,7 @@
 
                     <div class="grid grid-cols-2 mt-4 gap-x-2">
                         <button
-                            class="flex items-center justify-center w-full px-5 py-1 text-sm font-medium text-center text-gray-900 bg-white border border-gray-200 rounded-lg cursor-no-drop focus:outline-none focus:ring-4 focus:ring-primary-300 sm:py-2 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+                            class="flex items-center justify-center w-full px-5 py-1 text-sm font-medium text-center text-gray-900 bg-white border border-gray-200 -lg cursor-no-drop focus:outline-none focus:ring-4 focus:ring-primary-300 sm:py-2 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
                             disabled>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                 stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -206,7 +206,7 @@
                             Zurück
                         </button>
                         <button type="submit" wire:click="submit"
-                            class="flex items-center justify-center w-full px-5 py-1 text-sm font-medium text-center text-white rounded-lg bg-primary-600 hover:bg-primary-700 focus:ring-4 sm:py-- focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
+                            class="flex items-center justify-center w-full px-5 py-1 text-sm font-medium text-center text-white -lg bg-primary hover:bg-primary-700 focus:ring-4 sm:py-- focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
                             <span class="mr-2">Absenden</span>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                 stroke-width="1.5" stroke="currentColor" class="w-6 h-6">

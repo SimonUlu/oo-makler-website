@@ -35,8 +35,8 @@
                             </span>
                         </div>
                     </div>
-                    <div class="w-full h-0.5 mt-1 rounded-full dark:bg-gray-700">
-                        <div class="h-0.5 rounded-full bg-primary-600" style="width: 100%"></div>
+                    <div class="w-full h-0.5 mt-1 -full dark:bg-gray-700">
+                        <div class="h-0.5 -full bg-primary-600" style="width: 100%"></div>
                     </div>
                     <div class="grid grid-cols-2">
                         <div class="flex items-center">
@@ -62,12 +62,12 @@
                             <div class="flex justify-end space-x-2">
                                 @if (strtolower($estate['vermarktungsart']) == 'kauf')
                                     <span
-                                        class="capitalize inline-flex items-center rounded-full bg-primary-900 px-2.5 py-0.5 text-sm font-medium text-white">
+                                        class="capitalize inline-flex items-center -full bg-primary-900 px-2.5 py-0.5 text-sm font-medium text-white">
                                         {{ $estate['vermarktungsart'] }}
                                     </span>
                                 @elseif(strtolower($estate['vermarktungsart']) == 'miete')
                                     <span
-                                        class="capitalize inline-flex items-center rounded-full border border-primary text-primary px-2.5 py-0.5 text-sm font-medium">
+                                        class="capitalize inline-flex items-center -full border border-primary text-primary px-2.5 py-0.5 text-sm font-medium">
                                         {{ $estate['vermarktungsart'] }}
                                     </span>
                                 @endif
@@ -135,13 +135,13 @@
                     <div class="flex flex-col justify-end w-full gap-4 mt-4 md:mt-2 col-span-full lg:justify-center sm:col-span-2 sm:flex-row md:flex-col lg:flex-row lg:items-center lg:col-span-3">
                         <a href="{{ url('immobilien/details/' . strval($estate['id_internal'])) }}" target="_blank"
                            title="Sehen Sie sich diese Immobilie an"
-                           class="text-white w-full bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+                           class="text-white w-full bg-primary hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium -lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
                            role="button">
                             Jetzt ansehen
                         </a>
 
                         <a wire:click="openModal({{ $estate['id_internal'] }})"
-                           class="inline-flex items-center justify-center w-full px-5 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg focus:outline-none hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+                           class="inline-flex items-center justify-center w-full px-5 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 -lg focus:outline-none hover:bg-gray-100 hover:text-primary focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
                            role="button">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                  stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mr-2">
