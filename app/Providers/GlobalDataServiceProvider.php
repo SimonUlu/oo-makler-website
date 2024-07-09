@@ -19,7 +19,7 @@ class GlobalDataServiceProvider extends ServiceProvider
                 'etagen_zahl', 'ausstatt_beschr', 'gesamtflaeche', 'energieausweistyp', 'energieverbrauchskennwert',
                 'energieausweis_gueltig_bis', 'energietraeger', 'energyClass', 'energieausweisBaujahr', 'endenergiebedarf',
                 'reserviert', 'verkauft', 'exclusive', 'neu', 'top_angebot', 'preisreduktion', 'courtage_frei', 'objekt_des_tages', 'status',
-                'vermietet', 'kaltmiete', 'warmmiete', 'grundstuecksflaeche'
+                'vermietet', 'kaltmiete', 'warmmiete', 'grundstuecksflaeche',
             ];
         });
 
@@ -28,7 +28,7 @@ class GlobalDataServiceProvider extends ServiceProvider
                 'Id', 'benutzer', 'referenz', 'breitengrad', 'laengengrad', 'kaufpreis', 'objekttitel', 'wohnflaeche', 'vermarktungsart', 'geaendert_am', 'erstellt_am',
                 'plz', 'ort', 'objektart', 'baujahr', 'anzahl_zimmer', 'warmmiete', 'veroeffentlichen', 'kaltmiete', 'stammobjekt', 'status', 'status2', 'objektbeschreibung', 'etagen_zahl', 'gesamtflaeche',
                 'reserviert', 'verkauft', 'exclusive', 'neu', 'top_angebot', 'preisreduktion', 'courtage_frei', 'objekt_des_tages', 'status', 'endenergiebedarf',
-                'vermietet', 'kaltmiete', 'warmmiete', 'grundstuecksflaeche'
+                'vermietet', 'kaltmiete', 'warmmiete', 'grundstuecksflaeche',
             ];
         });
 
@@ -37,7 +37,7 @@ class GlobalDataServiceProvider extends ServiceProvider
                 'Id', 'benutzer', 'breitengrad', 'laengengrad', 'kaufpreis', 'objekttitel', 'wohnflaeche', 'vermarktungsart', 'geaendert_am', 'erstellt_am',
                 'plz', 'ort', 'objektart', 'baujahr', 'anzahl_zimmer', 'warmmiete', 'veroeffentlichen', 'kaltmiete', 'stammobjekt', 'status', 'status2', 'etagen_zahl', 'gesamtflaeche',
                 'reserviert', 'verkauft', 'exclusive', 'neu', 'top_angebot', 'preisreduktion', 'courtage_frei', 'objekt_des_tages', 'estate_images', 'status', 'endenergiebedarf',
-                'vermietet', 'kaltmiete', 'warmmiete', 'grundstuecksflaeche'
+                'vermietet', 'kaltmiete', 'warmmiete', 'grundstuecksflaeche',
             ];
         });
 
