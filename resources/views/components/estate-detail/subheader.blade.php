@@ -84,6 +84,7 @@
                     €
                 </p>
             @endif
+            <p class="font-normal text-sm">zzgl. Provision</p>
         </div>
     </div>
 @endif

@@ -4,12 +4,12 @@
         <ul role="list" class="mx-auto mt-4 max-w-2xl gap-x-8 gap-y-16 text-center"
             data-estate-id="{{ $estateId }}"
             data-user-id="{{ $userId }}"
-            x-data="{ loaded: @entangle('loaded'), userUrl: @entangle('userUrl'), loadedImage: @entangle('loadedImage') }"
+            x-data="{ loaded: @entangle('loaded'), userImage: @entangle('userImage'), loadedImage: @entangle('loadedImage') }"
         >
             @if($ansprechpartner)
             <li wire:init="load">
                 <span x-show="loadedImage">
-                    <img class="mx-auto h-24 w-24 rounded-full object-cover" :src="'data:image/png;base64,'+userUrl" alt="Profilbild Immobilienansprechpartner">
+                    <img class="mx-auto h-48 w-48 rounded-full object-cover" :src="'data:image/png;base64,'+ userImage" alt="Profilbild Immobilienansprechpartner">
                 </span>
                 {{-- Spinner to show while loading process --}}
                 <svg x-show="!loaded" class="w-6 h-6 animate-spin" viewBox="0 0 24 24">
@@ -50,6 +50,6 @@
         </a>
       </div>
     </div>
-   
+
 </div>
 
