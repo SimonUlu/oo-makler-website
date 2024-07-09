@@ -29,13 +29,15 @@ class TerminFormController extends FormComponent
 
     public $onofficeNote;
 
-    public function __construct(){
+    public function __construct()
+    {
         parent::__construct();
-        $this->rules = array_merge($this->rules,['form.phone'=>'required|regex:/^\+?\d{4,20}$/']);
+        $this->rules = array_merge($this->rules, ['form.phone' => 'required|regex:/^\+?\d{4,20}$/']);
     }
+
     public function messages()
     {
-        return array_merge(parent::messages(),[
+        return array_merge(parent::messages(), [
             'form.phone.regex' => 'Bitte geben Sie eine gültige Telefonnummer ein.',
         ]);
     }
