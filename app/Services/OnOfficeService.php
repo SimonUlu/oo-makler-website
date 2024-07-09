@@ -51,9 +51,18 @@ class OnOfficeService
 
     public function __construct()
     {
+        $globalSet = GlobalSet::find('onoffice')->in('default');
+
+        $token = $globalSet->get('onoffice_token');
+        $secret = $globalSet->get('onoffice_secret');
+
+        if (empty($token) || empty($secret)) {
+            throw new Exception('Onoffice token or secret parameters missing');
+        }
+
         $this->api = new Api(
-            config('api.onoffice.sandbox.token'),
-            config('api.onoffice.sandbox.secret')
+            $token,
+            $secret
         );
 
         $this->estateFields =
