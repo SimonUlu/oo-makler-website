@@ -66,27 +66,27 @@
         <div class="grid gap-y-2 py-4 lg:grid-cols-2 px-4">
             <div class="col-span-2">
                 <x-elements.input type="name" id="nameInput" wire:model.defer="form.name" name="name"
-                    label="Vor- und Nachname" required />
+                    label="Vor- und Nachname*" required />
             </div>
             <div class="hidden">
                 <x-elements.input type="honey" id="honey" wire:model.defer="form.honey" name="honey"
                     label="Feld" />
             </div>
             <div class="mr-2">
-                <x-elements.input type="email" wire:model.defer="form.email" name="email" label="Email" />
+                <x-elements.input type="email" wire:model.defer="form.email" name="email" label="Email*" />
             </div>
             <div>
-                <x-elements.input type="tel" wire:model.defer="form.phone" name="phone" label="Telefonnummer"
-                    placeholder="(optional)" />
+                <x-elements.input type="tel" wire:model.defer="form.phone" name="phone"
+                                  label="Telefonnummer*" required />
             </div>
             <div class="lg:col-span-2  py-8" x-data="{selectedTimeSlot: ''}">
-                <h4 class="font-bold mb-2"> Wann ist der beste Zeitpunkt für Sie für einen Termin? </h4>
-                <div class="grid lg:grid-cols-3 lg:space-x-2">
-                    @foreach(['Morgens' => '9 - 12 Uhr', 'Nachmittags' => '12 - 16 Uhr', 'Abends' => '16 - 20 Uhr'] as $timeSlot => $hours)
-                        <div 
+                <h4 class="font-bold mb-2"> Wann ist der beste Zeitpunkt für Sie für einen Rückruf? </h4>
+                <div class="grid lg:grid-cols-4 lg:space-x-2">
+                    @foreach(['Morgens' => '9 - 12 Uhr', 'Nachmittags' => '12 - 16 Uhr', 'Abends' => '16 - 18 Uhr', 'Jederzeit'=>'9 - 18 Uhr'] as $timeSlot => $hours)
+                        <div
                             wire:click="selectTimeSlot('{{ $timeSlot }}')"
-                            @click="selectedTimeSlot = '{{ $timeSlot }}'" 
-                            class="relative cursor-pointer rounded-2xl p-10 text-center items-center justify-center flex flex-col shadow-md border-2"
+                            @click="selectedTimeSlot = '{{ $timeSlot }}'"
+                            class="relative cursor-pointer rounded-2xl p-8 text-center items-center justify-center flex flex-col shadow-md border-2"
                             :class="{ 'border-primary': selectedTimeSlot === '{{ $timeSlot }}', 'border-transparent': selectedTimeSlot !== '{{ $timeSlot }}' }"
                         >
                             <div x-show="selectedTimeSlot === '{{ $timeSlot }}'" class="absolute top-2 right-2">
@@ -98,12 +98,12 @@
                                 <svg class="h-5 w-5 text-primary" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M18.364 18.364A9 9 0 0 0 5.636 5.636m12.728 12.728A9 9 0 0 1 5.636 5.636m12.728 12.728L5.636 5.636" />
                                   </svg>
-                                  
+
                             </div>
                             <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />
                             </svg>
-                            
+
                             <dl class="mt-3 space-y-1 text-sm leading-6 text-gray-600">
                             <div>
                                 <dd>
@@ -118,7 +118,7 @@
                             </dl>
                         </div>
                     @endforeach
-                    
+
                 </div>
             </div>
             <div class="lg:col-span-2">

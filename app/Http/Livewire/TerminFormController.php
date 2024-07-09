@@ -31,6 +31,7 @@ class TerminFormController extends FormComponent
 
     public function mount()
     {
+        $this->rules['phone']=['required|regex:/^\+?\d{4,20}$/'];
         if ($this->defaultMessage != null) {
             $this->form['message'] = $this->defaultMessage;
         }
