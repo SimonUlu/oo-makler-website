@@ -29,9 +29,19 @@ class TerminFormController extends FormComponent
 
     public $onofficeNote;
 
+    public function __construct(){
+        parent::__construct();
+        $this->rules = array_merge($this->rules,['form.phone'=>'required|regex:/^\+?\d{4,20}$/']);
+    }
+    public function messages()
+    {
+        return array_merge(parent::messages(),[
+            'form.phone.regex' => 'Bitte geben Sie eine gültige Telefonnummer ein.',
+        ]);
+    }
+
     public function mount()
     {
-        $this->rules['phone'] = ['required|regex:/^\+?\d{4,20}$/'];
         if ($this->defaultMessage != null) {
             $this->form['message'] = $this->defaultMessage;
         }
@@ -50,7 +60,9 @@ class TerminFormController extends FormComponent
 
     public function submitForm()
     {
+        dump($this);
         $this->validate();
+        dump($this);
 
         //check for potential spam
         if ($this->form['honey']) {
