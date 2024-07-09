@@ -2,12 +2,12 @@
     $logoUrl = asset('logo_images/logo.png');
 @endphp
 
-<div class="pt-3 pr-3 pl-3 rounded-lg border border-gray-200 border-t-none">
+<div class="pt-3 pr-3 pl-3 -lg border border-gray-200 border-t-none">
     <div class="flex flex-col justify-center items-center sm:flex sm:col-span-2" x-data="{ logoUrl: '{{ $logoUrl }}' }">
         <!-- Display user photo if it exists -->
         <div class="mt-4">
             @if (isset($estate['userPhoto']))
-                <img class="rounded-full max-w-[120px]" src="data:image/jpeg;base64, {{ $estate['userPhoto'] }}"
+                <img class="-full max-w-[120px]" src="data:image/jpeg;base64, {{ $estate['userPhoto'] }}"
                     alt="Ihr Kontakt">
             @else
                 <!-- Display default photo if user photo does not exist -->
@@ -24,7 +24,7 @@
 
             <a href="tel:{{ Statamic\Facades\GlobalSet::find('business_information')->in('default')->get('company_phone') }}"
                 title="Rufen Sie uns jetzt an!"
-                class="inline-flex justify-center items-center py-2 px-5 my-4 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 dark:text-gray-400 dark:border-gray-600 hover:bg-gray-100 focus:z-10 focus:ring-4 focus:ring-gray-200 focus:outline-none dark:focus:ring-gray-700 dark:hover:text-white dark:hover:bg-gray-700 hover:text-primary-700"
+                class="inline-flex justify-center items-center py-2 px-5 my-4 text-sm font-medium text-gray-900 bg-white -lg border border-gray-200 dark:text-gray-400 dark:border-gray-600 hover:bg-gray-100 focus:z-10 focus:ring-4 focus:ring-gray-200 focus:outline-none dark:focus:ring-gray-700 dark:hover:text-white dark:hover:bg-gray-700 hover:text-primary-700"
                 role="button">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor" class="mr-2 w-6 h-6">
@@ -41,7 +41,7 @@
 
             <a href="tel:{{ Statamic\Facades\GlobalSet::find('business_information')->in('default')->get('company_phone') }}"
                 title="Rufen Sie uns jetzt an!"
-                class="inline-flex justify-center items-center py-2 px-5 my-4 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 dark:text-gray-400 dark:border-gray-600 hover:bg-gray-100 focus:z-10 focus:ring-4 focus:ring-gray-200 focus:outline-none dark:focus:ring-gray-700 dark:hover:text-white dark:hover:bg-gray-700 hover:text-primary-700"
+                class="inline-flex justify-center items-center py-2 px-5 my-4 text-sm font-medium text-gray-900 bg-white -lg border border-gray-200 dark:text-gray-400 dark:border-gray-600 hover:bg-gray-100 focus:z-10 focus:ring-4 focus:ring-gray-200 focus:outline-none dark:focus:ring-gray-700 dark:hover:text-white dark:hover:bg-gray-700 hover:text-primary-700"
                 role="button">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor" class="mr-2 w-6 h-6">
@@ -55,7 +55,7 @@
 
 
     @if (session('success'))
-        <div class="relative py-3 px-4 text-green-700 bg-green-100 rounded border border-green-400" role="alert">
+        <div class="relative py-3 px-4 text-green-700 bg-green-100  border border-green-400" role="alert">
             <strong class="font-bold">Vielen Dank für Ihre Einsendung!</strong>
             <span class="block sm:inline">{{ session('success') }}</span>
         </div>
@@ -89,7 +89,7 @@
             </div>
 
             <button id="sendContact" name="contactSender" type="submit"
-                class="py-2 px-4 text-white rounded focus:outline-none bg-primary-600" wire:loading.attr="disabled">
+                class="py-2 px-4 text-white focus:outline-none bg-primary" wire:loading.attr="disabled">
                 Absenden
             </button>
             <div class="text-sm font-medium text-gray-700">
