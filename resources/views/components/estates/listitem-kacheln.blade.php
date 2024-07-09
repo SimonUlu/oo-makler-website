@@ -41,71 +41,74 @@
                     <div class="grid grid-cols-2">
                         <div class="flex items-center">
                             <h3 class="text-lg font-bold leading-tight text-gray-900">
-                                @if (strtolower($estate['vermarktungsart']) == 'kauf')
-                                    @if ($estate['kaufpreis'] == 0.0)
-                                        Preis auf Anfrage
-                                    @else
-                                        {{ number_format(round($estate['kaufpreis']), 0, ',', '.') }} €
-                                    @endif
-                                @else
-                                    @if ($estate['warmmiete'] > 0.0)
-                                        {{ number_format(round($estate['warmmiete']), 0, ',', '.') }} € <span class="text-gray-500 dark:text-gray-400"> (Warmmiete) </span>
-                                    @elseif ($estate['kaltmiete'] > 0.0)
-                                        {{ number_format(round($estate['kaltmiete']), 0, ',', '.') }} €
-                                    @else
-                                        Preis auf Anfrage
-                                    @endif
-                                @endif
+                                <div>
+                                    <span >
+                                    @if (strtolower($estate['vermarktungsart']) == 'kauf')
+                                            @if ($estate['kaufpreis'] == 0.0)
+                                                Preis auf Anfrage
+                                            @else
+                                                {{ number_format(round($estate['kaufpreis']), 0, ',', '.') }} €
+                                            @endif
+                                        @else
+                                            @if ($estate['warmmiete'] > 0.0)
+                                                {{ number_format(round($estate['warmmiete']), 0, ',', '.') }} € <span class="text-gray-500 dark:text-gray-400"> (Warmmiete) </span>
+                                            @elseif ($estate['kaltmiete'] > 0.0)
+                                                {{ number_format(round($estate['kaltmiete']), 0, ',', '.') }} €
+                                            @else
+                                                Preis auf Anfrage
+                                            @endif
+                                        @endif
+                                    </span>
+                                    <br>
+                                    <p class="font-normal text-sm">zzgl. Provision</p>
+                                </div>
                             </h3>
                         </div>
-                        <span>
-                            <div class="flex justify-end space-x-2">
-                                @if (strtolower($estate['vermarktungsart']) == 'kauf')
-                                    <span
-                                        class="capitalize inline-flex items-center -full bg-primary-900 px-2.5 py-0.5 text-sm font-medium text-white">
-                                        {{ $estate['vermarktungsart'] }}
-                                    </span>
-                                @elseif(strtolower($estate['vermarktungsart']) == 'miete')
-                                    <span
-                                        class="capitalize inline-flex items-center -full border border-primary text-primary px-2.5 py-0.5 text-sm font-medium">
-                                        {{ $estate['vermarktungsart'] }}
-                                    </span>
-                                @endif
-                            </div>
-                        </span>
                     </div>
 
                     <div class="grid grid-cols-6">
                         <div class="col-span-6">
                             <div class="grid lg:grid-cols-2 min-h-24">
-                                @if (!empty($estate['objektart']))
+                                @if (!empty($estate['objekttyp']))
                                     <div class="my-2">
                                         <div class="flex space-x-2 items-center text-gray-500 dark:text-gray-400">
                                             <span>Typ</span>
                                             <span class="font-bold">·</span>
                                             <span class="block font-bold text-sm text-black capitalize">
                                                 @if(!empty($estateFields))
-                                                    {{ str_replace('/', '/ ', $estateFields['objektart']['permittedvalues'][$estate['objektart']]) }}
+                                                    {{ str_replace('/', '/ ', $estateFields['objekttyp']['permittedvalues'][$estate['objekttyp']]) }}
                                                 @else
-                                                    {{ $estate['objektart'] }}
+                                                    {{ $estate['objekttyp'] }}
                                                 @endif
                                             </span>
                                         </div>
                                     </div>
                                 @endif
-
-                                @if (floatval($estate['wohnflaeche']) > 0)
-                                    <div class="my-2">
-                                        <div class="flex space-x-2 items-center text-gray-500 dark:text-gray-400">
-                                            <span class="">Wohnfläche</span>
-                                            <span class="font-bold">·</span>
-                                            <span class="block text-sm font-bold text-black">
-                                                {{ round($estate['wohnflaeche']) }} m&sup2;
-                                            </span>
+                                @if($estate['objektart']=='grundstueck')
+                                    @if (floatval($estate['grundstuecksflaeche']) > 0)
+                                        <div class="my-2">
+                                            <div class="flex space-x-2 items-center text-gray-500 dark:text-gray-400">
+                                                <span class="">Grundstücksfläche</span>
+                                                <span class="font-bold">·</span>
+                                                <span class="block text-sm font-bold text-black">
+                                                    {{ round($estate['grundstuecksflaeche']) }} m&sup2;
+                                                </span>
+                                            </div>
                                         </div>
-                                    </div>
+                                    @endif
+                                @else
+                                    @if (floatval($estate['wohnflaeche']) > 0)
+                                        <div class="my-2">
+                                            <div class="flex space-x-2 items-center text-gray-500 dark:text-gray-400">
+                                                <span class="">Wohnfläche</span>
+                                                <span class="font-bold">·</span>
+                                                <span class="block text-sm font-bold text-black">
+                                                    {{ round($estate['wohnflaeche']) }} m&sup2;
+                                                </span>
+                                            </div>
+                                        </div>
+                                    @endif
                                 @endif
-
                                 @if (floatval($estate['anzahl_zimmer']) > 0)
                                     <div class="my-2">
                                         <div class="flex space-x-2 items-center text-gray-500 dark:text-gray-400">
@@ -152,7 +155,7 @@
                         </a>
                     </div>
                 </div>
-                @livewire('estate-user-component', ['estateId' => $estate['id_internal'], 'logoUrl' => $logoUrl, 'userId' => $estate['benutzer'], "source" => "small_boxes"], key($estate['id_internal']))
+                @livewire('estate-user-component', ['estateId' => $estate['id_internal'], 'logoUrl' => null, 'userId' => $estate['benutzer'], "source" => "small_boxes"], key($estate['id_internal']))
             </div>
         </div>
     </div>

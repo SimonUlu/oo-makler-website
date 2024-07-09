@@ -109,8 +109,8 @@
                                                 <div class="font-normal text-sm">zzgl. Provision</div>
                                             </template>
                                         </span>
-                                                                    </template>
-                                                                    <template x-if="estate.vermarktungsart !== 'miete'">
+                                    </template>
+                                    <template x-if="estate.vermarktungsart !== 'miete'">
                                         <span>
                                             <span x-text="estate.kaufpreis > 0 ? `${estate.kaufpreis.toLocaleString()} €` : 'Preis auf Anfrage'"></span>
                                             <template x-if="estate.kaufpreis > 0">

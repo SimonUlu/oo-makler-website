@@ -51,7 +51,6 @@ data:
       type: new_set
       enabled: true
       values_excluded:
-        - Grundstück
         - Land/Forstwirtschaft
         - Zimmer
         - 'Freizeitimmobilie (gewerblich)'

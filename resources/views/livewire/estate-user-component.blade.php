@@ -1,8 +1,10 @@
 <div class="border-t-[1px] border-gray-300 mt-6 mb-2 flex justify-between items-center lazy-user" data-estate-id="{{ $estateId }}" data-user-id="{{ $userId }}" x-data="{ loaded: @entangle('loaded'), userImage: @entangle('userImage'), loadedImage: @entangle('loadedImage') }">
 
-    <div class="order-1 mt-4 flex items-center" x-data="{ logoUrl: '{{ $logoUrl }}' }">
-        <img class="max-h-[42x] max-w-[120px]" x-bind:src="logoUrl" alt="Logo">
-    </div>
+    @if($logoUrl)
+        <div class="order-1 mt-4 flex items-center" x-data="{ logoUrl: '{{ $logoUrl }}' }">
+            <img class="max-h-[42x] max-w-[120px]" x-bind:src="logoUrl" alt="Logo">
+        </div>
+    @endif
 
     @if($ansprechpartner)
         <div x-data="{open: false}" wire:init="load" class="order-2 mt-4 flex items-center lazy-user-spinner relative">
