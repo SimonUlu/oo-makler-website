@@ -2,7 +2,6 @@
 
 namespace App\Console\Commands;
 
-use App\Jobs\ImportEstateFields;
 use App\Jobs\ImportStatisticsDataForEntries;
 use Illuminate\Console\Command;
 
