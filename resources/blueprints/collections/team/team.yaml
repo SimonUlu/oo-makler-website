@@ -148,6 +148,17 @@ tabs:
               visibility: visible
               replicator_preview: true
               hide_display: false
+          -
+            handle: description
+            field:
+              antlers: false
+              type: textarea
+              display: description
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
       -
         display: Images
         fields:
@@ -199,23 +210,6 @@ tabs:
               instructions_position: above
               visibility: visible
               hide_display: false
-      -
-        display: 'Kurzbeschreibung Übersichtsseite'
-        fields:
-          -
-            import: team_description
-      -
-        display: 'Kurzbeschreibung Detailseite'
-        fields:
-          -
-            import: team_description
-            prefix: short_
-      -
-        display: 'Langbeschreibung Detailseite'
-        fields:
-          -
-            import: team_description
-            prefix: long_
   sidebar:
     display: Sidebar
     sections:

@@ -340,6 +340,18 @@ tabs:
                             visibility: visible
                             replicator_preview: true
                             hide_display: false
+                        -
+                          handle: section_id
+                          field:
+                            input_type: text
+                            antlers: false
+                            type: text
+                            display: section_id
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
               type: replicator
               display: advantages
               listable: hidden

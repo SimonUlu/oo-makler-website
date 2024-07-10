@@ -1,22 +1,33 @@
 <ul role="list" class="mx-auto mt-20 grid max-w-2xl lg:px-0 grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-4">
     {{collection:team sort="order:asc"}}
     {{if team == "makler"}}
-        <li>
-            <div class="group relative flex flex-col overflow-hidden">
-                <div class="aspect-h-2 aspect-w-2 bg-gray-200 group-hover:opacity-75">
-                    <img
-                        src="{{image_overview.0.url}}"
-                        alt="{{image_overview.0.alt}}"
-                        class="h-full w-full object-cover object-center sm:h-full sm:w-full"
-                    >
+        <li x-data="{ isOpen: false }">
+            <div @click="isOpen = !isOpen" class="cursor-pointer group relative flex flex-col overflow-hidden">
+             
+                <div  class="relative">
+                    <div  class="cursor-pointer aspect-h-2 aspect-w-2 bg-gray-200 group-hover:opacity-75">
+                        <img
+                            src="{{ image_overview.0.url }}"
+                            alt="{{ image_overview.0.alt }}"
+                            class="h-full w-full object-cover object-center sm:h-full sm:w-full"
+                            
+                        >
+                        <!-- Overlay, das beim Klicken angezeigt wird -->
+                        <div
+                            x-show="isOpen"
+                            class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center"
+                        >
+                            <p class="text-white text-center p-4">
+                                {{team_description}}
+                            </p>
+                        </div>
+                    </div>
                 </div>
                 <div class="flex flex-wrap py-6">
                     <div class="flex flex-1 flex-col space-y-2">
                         <h3 class="text-xl font-medium text-primary">
-                            <a href="#">
                             <span aria-hidden="true" class="absolute inset-0"></span>
                             {{first_name}} {{last_name}}
-                            </a>
                         </h3>
                         <div class="flex flex-1 flex-col justify-end">
                             <p class="text-base text-secondary">{{function}}</p>

@@ -25,27 +25,3 @@ data:
           enabled: true
       type: neues_set
       enabled: true
-    -
-      id: lnbrk4uy
-      headline: Informationen
-      pages:
-        -
-          id: lnbrk9t6
-          url: '#'
-          name: Informationen
-          type: neues_set
-          enabled: true
-        -
-          id: lnbrkydx
-          url: team
-          name: 'Über uns'
-          type: neues_set
-          enabled: true
-        -
-          id: lxxc8jsi
-          url: informieren-stadtteile
-          name: Standorte
-          type: neues_set
-          enabled: true
-      type: neues_set
-      enabled: true

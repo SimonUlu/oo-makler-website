@@ -1,6 +1,6 @@
 <div class="py-4 md:py-8">
     {{advantages}}
-        <div class="pt-2 lg:pt-4 grid grid-cols-1 gap-8 lg:gap-16 mb-12 lg:mb-24 lg:flex {{ index % 2 == 0 ? 'lg:flex-row-reverse' : 'lg:flex-row' }}">
+        <div id="{{section_id}}" class="pt-2 lg:pt-4 grid grid-cols-1 gap-8 lg:gap-16 mb-12 lg:mb-24 lg:flex {{ index % 2 == 0 ? 'lg:flex-row-reverse' : 'lg:flex-row' }}">
             {{if only_image}}
             <div class="items-center justify-center flex lg:flex-1 relative">
                 <div class="spinner" style="display: flex">
