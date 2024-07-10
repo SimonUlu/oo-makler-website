@@ -26,7 +26,7 @@ class GlobalDataServiceProvider extends ServiceProvider
         $this->app->singleton('performanceFieldEstates', function ($app) {
             return [
                 'Id', 'benutzer', 'referenz', 'breitengrad', 'laengengrad', 'kaufpreis', 'objekttitel', 'wohnflaeche', 'vermarktungsart', 'geaendert_am', 'erstellt_am',
-                'plz', 'ort', 'objektart', 'baujahr', 'anzahl_zimmer', 'warmmiete', 'veroeffentlichen', 'kaltmiete', 'stammobjekt', 'status', 'status2', 'objektbeschreibung', 'etagen_zahl', 'gesamtflaeche',
+                'plz', 'ort', 'objekttyp', 'objektart', 'baujahr', 'anzahl_zimmer', 'warmmiete', 'veroeffentlichen', 'kaltmiete', 'stammobjekt', 'status', 'status2', 'objektbeschreibung', 'etagen_zahl', 'gesamtflaeche',
                 'reserviert', 'verkauft', 'exclusive', 'neu', 'top_angebot', 'preisreduktion', 'courtage_frei', 'objekt_des_tages', 'status', 'endenergiebedarf',
                 'vermietet', 'kaltmiete', 'warmmiete', 'grundstuecksflaeche',
             ];
@@ -35,7 +35,7 @@ class GlobalDataServiceProvider extends ServiceProvider
         $this->app->singleton('estateListFieldEstate', function ($app) {
             return [
                 'Id', 'benutzer', 'breitengrad', 'laengengrad', 'kaufpreis', 'objekttitel', 'wohnflaeche', 'vermarktungsart', 'geaendert_am', 'erstellt_am',
-                'plz', 'ort', 'objektart', 'baujahr', 'anzahl_zimmer', 'warmmiete', 'veroeffentlichen', 'kaltmiete', 'stammobjekt', 'status', 'status2', 'etagen_zahl', 'gesamtflaeche',
+                'plz', 'ort', 'objekttyp', 'objektart', 'baujahr', 'anzahl_zimmer', 'warmmiete', 'veroeffentlichen', 'kaltmiete', 'stammobjekt', 'status', 'status2', 'etagen_zahl', 'gesamtflaeche',
                 'reserviert', 'verkauft', 'exclusive', 'neu', 'top_angebot', 'preisreduktion', 'courtage_frei', 'objekt_des_tages', 'estate_images', 'status', 'endenergiebedarf',
                 'vermietet', 'kaltmiete', 'warmmiete', 'grundstuecksflaeche',
             ];

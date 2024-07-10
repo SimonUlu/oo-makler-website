@@ -84,17 +84,17 @@
                 <div class="grid lg:grid-cols-4 lg:space-x-2">
                     @foreach(['Morgens' => '9 - 12 Uhr', 'Nachmittags' => '12 - 16 Uhr', 'Abends' => '16 - 18 Uhr', 'Jederzeit'=>'9 - 18 Uhr'] as $timeSlot => $hours)
                         <div
-                            wire:click="selectTimeSlot('{{ $timeSlot }}')"
-                            @click="selectedTimeSlot = '{{ $timeSlot }}'"
+                            wire:click="selectTimeSlot('{{ $hours }}')"
+                            @click="selectedTimeSlot = '{{ $hours }}'"
                             class="relative cursor-pointer -2xl p-8 text-center items-center justify-center flex flex-col shadow-md border-2"
-                            :class="{ 'border-primary': selectedTimeSlot === '{{ $timeSlot }}', 'border-transparent': selectedTimeSlot !== '{{ $timeSlot }}' }"
+                            :class="{ 'border-primary': selectedTimeSlot === '{{ $hours }}', 'border-transparent': selectedTimeSlot !== '{{ $hours }}' }"
                         >
-                            <div x-show="selectedTimeSlot === '{{ $timeSlot }}'" class="absolute top-2 right-2">
+                            <div x-show="selectedTimeSlot === '{{ $hours }}'" class="absolute top-2 right-2">
                                 <svg class="h-5 w-5 text-primary" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                                     <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
                                 </svg>
                             </div>
-                            <div x-show="selectedTimeSlot != '{{ $timeSlot }}'" class="absolute top-2 right-2">
+                            <div x-show="selectedTimeSlot != '{{ $hours }}'" class="absolute top-2 right-2">
                                 <svg class="h-5 w-5 text-primary" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M18.364 18.364A9 9 0 0 0 5.636 5.636m12.728 12.728A9 9 0 0 1 5.636 5.636m12.728 12.728L5.636 5.636" />
                                   </svg>

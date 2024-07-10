@@ -1,5 +1,5 @@
 <div x-data="sliderRef()" class="relative mt-8">
-    <div class="w-full grid grid-cols-3 lg:gap-6 lg:mt-6 lg:space-y-0 lg:space-x-2 space-y-10">
+    <div class="w-full grid grid-cols-1 lg:gap-6 lg:mt-6 lg:space-y-0 lg:space-x-2 space-y-10 md:grid-cols-3">
         <button @click="prev()" type="button" class="absolute left-[-60px] z-15 flex items-center justify-center h-full px-4 cursor-pointer focus:outline-none group">
             <span class="inline-flex items-center justify-center w-12 h-12 sm:w-10 sm:h-10 group-focus:ring-4 group-focus:ring-white group-focus:outline-none bg-white/30 dark:group-hover:bg-gray-800/60 dark:group-focus:ring-gray-800/70 group-hover:bg-white/50 rounded-full">
                 <svg aria-hidden="true" class="w-12 h-12 sm:w-10 sm:h-10 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -12,13 +12,13 @@
             <li
                 class="flex flex-col items-center justify-center w-full p-2 shrink-0 snap-start"
                 role="option"
-                x-show="activeSlides.includes(Number(index))"
+                x-show="index >= activeSlides[0] && index < activeSlides[0] + slidesToShow"
             >
                 <div class="relative w-full" data-carousel="static">
                     <!-- Carousel wrapper -->
-                    <div class="relative w-auto overflow-hidden h-72 min-w-64">
+                    <div class="relative w-auto overflow-hidden h-72">
                         <div>
-                            <div class="absolute inset-0 transition-transform transform translate-x-0 z-20">
+                            <div class="absolute inset-0 overflow-hidden transition-transform transform translate-x-0 z-20">
                                 <img
                                     x-ref="img"
                                     class="object-cover w-full h-full"
@@ -68,7 +68,7 @@
 
 
             init() {
-            console.log(this.estates);
+                // console.log(this.estates);
                 this.updateSlidesToShow();
                 window.addEventListener('resize', () => {
                     this.updateSlidesToShow();
