@@ -26,7 +26,6 @@ class ImportStatisticsDataForEntries implements ShouldQueue
 
     public function handle(): void
     {
-        // TODO @Imgrund hier den loop aus dem Kernel testen
         if ($this->identifier) {
             $this->loadStat($this->identifier);
         } else {
@@ -40,10 +39,10 @@ class ImportStatisticsDataForEntries implements ShouldQueue
             }
 
             foreach ($statistics as $statistic) {
-                if (! isset($statistic['identifier'])) {
+                if (! isset($statistic['title'])) {
                     continue;
                 }
-                $this->loadStat($statistic['identifier']);
+                $this->loadStat($statistic['title']);
             }
         }
     }
