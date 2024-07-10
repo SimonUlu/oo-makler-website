@@ -3,10 +3,10 @@
 @section('blade_content')
     <section class="relative w-full mt-16 bg-white lg:mt-0 dark:bg-gray-900" x-data="{ showSlide: 1 }">
         <div class="lg:flex">
-            <div class="hidden w-full h-screen max-w-md p-12 lg:block bg-primary-600 ">
-                <div class="block p-8 text-white rounded-lg bg-primary-500">
+            <div class="hidden w-full h-screen max-w-md p-12 lg:block bg-primary">
+                <div class="block p-8 text-white rounded-lg bg-primary">
                     <h3 class="mb-1 text-2xl font-semibold">Ihre exklusiver Zugang zu unseren neuesten Immobilien</h3>
-                    <p class="mb-4 font-light text-primary-100 sm:text-lg">Melden Sie sich jetzt unverbindlich und kostenfrei
+                    <p class="mb-4 font-light text-primary sm:text-lg">Melden Sie sich jetzt unverbindlich und kostenfrei
                         zu unserem Suchauftrag an!</p>
                     <!-- List -->
                     <ul role="list" class="space-y-4 text-left">

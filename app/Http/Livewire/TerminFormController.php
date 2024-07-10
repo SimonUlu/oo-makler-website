@@ -29,9 +29,21 @@ class TerminFormController extends FormComponent
 
     public $onofficeNote;
 
+    public function __construct()
+    {
+        parent::__construct();
+        $this->rules = array_merge($this->rules, ['form.phone' => 'required|regex:/^\+?\d{4,20}$/']);
+    }
+
+    public function messages()
+    {
+        return array_merge(parent::messages(), [
+            'form.phone.regex' => 'Bitte geben Sie eine gültige Telefonnummer ein.',
+        ]);
+    }
+
     public function mount()
     {
-        $this->rules['phone']=['required|regex:/^\+?\d{4,20}$/'];
         if ($this->defaultMessage != null) {
             $this->form['message'] = $this->defaultMessage;
         }
@@ -70,64 +82,69 @@ class TerminFormController extends FormComponent
                     session()->flash('error', 'Ein Fehler ist aufgetreten: '.$e->getMessage());
                     redirect()->route('searchcriteria.error');
                 }
-            } else {
-                $address = [];
-
-                if (! empty($this->form['address'])) {
-                    $address = LibPostal::parseAddress($this->form['address'])->toArray();
-                }
-
-                $formData = array_filter([
-                    ...NameParser::parseName($this->form['name']),
-                    'email' => $this->form['email'],
-                    'phone' => $this->form['phone'] ?? '',
-                    'message' => $this->form['message'] ?? '',
-                ]);
-
-                if (! empty($address)) {
-                    $formData = array_merge($formData, $address);
-                }
-
-                $addressData = array_filter([
-                    'title_request' => ! empty($this->title) ? $this->title : 'Kein Seitentitel',
-                    'anrede' => $formData['anrede'] ?? null,
-                    'vorname' => $formData['vorname'] ?? null,
-                    'name' => $formData['name'] ?? null,
-                    'email' => $formData['email'] ?? null,
-                    'strasse' => $formData['street'] ?? null,
-                    'hausnummer' => $formData['house_number'] ?? null,
-                    'plz' => $formData['zip_code'] ?? null,
-                    'ort' => $formData['city'] ?? null,
-                    'message' => $formData['message'] ?? null,
-                    'phone' => $formData['phone'] ?? null,
-                ]);
-
-                // create or update address user
-                $addressId = $this->createOrUpdateAddress($addressData);
-
-                // write activity in onOffice
-                $activityHandler = new AgentslogHelper();
-
-                $activityHandler->createAgentslogEntry(
-                    addressIds: [$addressId],
-                    estateId: null,
-                    actionKind: 'System',
-                    actionType: 'Kontakt zugeführt',
-                    note: 'Terminanfrage '.($this->onofficeNote ?? '').($this->defaultMessage ?? '').' ',
-                );
-
-                // get addressId
-                $addressData['addressId'] = $addressId;
-
-                Mail::to(GlobalSet::find('onoffice')->in('default')->get('e-mail_inbox_expose-mails'))->queue(
-                    new ContactFormMailable([
-                        'formData' => $addressData,
-                    ])
-                );
-
-                $this->reset();
-                session()->flash('success', 'Wir werden uns in Kürze persönlich bei Ihnen melden!');
             }
+
+            $formData = [];
+
+            if (! empty($this->form['address'])) {
+                $formData = LibPostal::parseAddress($this->form['address'])->toArray();
+            }
+
+            $formData = array_filter([
+                ...NameParser::parseName($this->form['name']),
+                'email' => $this->form['email'],
+                'phone' => $this->form['phone'] ?? '',
+                'message' => $this->form['message'] ?? '',
+            ]);
+
+            $addressData = array_filter([
+                'title_request' => ! empty($this->title) ? $this->title : 'Kein Seitentitel',
+                'anrede' => $formData['anrede'] ?? null,
+                'vorname' => $formData['vorname'] ?? null,
+                'name' => $formData['name'] ?? null,
+                'email' => $formData['email'] ?? null,
+                'strasse' => $formData['street'] ?? null,
+                'hausnummer' => $formData['house_number'] ?? null,
+                'plz' => $formData['zip_code'] ?? null,
+                'ort' => $formData['city'] ?? null,
+                'message' => $formData['message'] ?? null,
+                'phone' => $formData['phone'] ?? null,
+                'reachable' => $this->time ?? null,
+            ]);
+
+            // create or update address user
+            $addressId = $this->createOrUpdateAddress($addressData);
+
+            // write activity in onOffice
+            $activityHandler = new AgentslogHelper();
+
+            $activityHandler->createAgentslogEntry(
+                addressIds: [$addressId],
+                estateId: null,
+                actionKind: 'System',
+                actionType: 'Kontakt zugeführt',
+                note: 'Terminanfrage: '.($this->onofficeNote ?? '').($this->defaultMessage ?? '').' '.
+                "\nVorname: ".($addressData['vorname'] ?? '').
+                "\nName: ".($addressData['name'] ?? '').
+                "\nTelefon: ".($addressData['phone'] ?? '').
+                "\nEmail: ".($addressData['email'] ?? '').
+                "\nErreichbar: ".($addressData['reachable'] ?? '').
+                "\nNachricht: ".($addressData['message'] ?? ''),
+            );
+
+            // get addressId
+            $addressData['addressId'] = $addressId;
+
+            Mail::to(GlobalSet::find('onoffice')->in('default')->get('e-mail_inbox_expose-mails'))->queue(
+                new ContactFormMailable(
+                    [
+                        'formData' => $addressData,
+                    ],
+                    view: 'emails.termin-contact'
+                ));
+
+            $this->reset();
+            session()->flash('success', 'Wir werden uns in Kürze persönlich bei Ihnen melden!');
         }
 
     }

@@ -2,12 +2,12 @@
     $logoUrl = asset('logo_images/logo.png');
 @endphp
 
-<div class="pt-3 pr-3 pl-3 rounded-lg border border-gray-200 border-t-none">
+<div class="pt-3 pr-3 pl-3 -lg border border-gray-200 border-t-none">
     <div class="flex flex-col justify-center items-center sm:flex sm:col-span-2" x-data="{ logoUrl: '{{ $logoUrl }}' }">
         <!-- Display user photo if it exists -->
         <div class="mt-4">
             @if (isset($estate['userPhoto']))
-                <img class="rounded-full max-w-[120px]" src="data:image/jpeg;base64, {{ $estate['userPhoto'] }}"
+                <img class="-full max-w-[120px]" src="data:image/jpeg;base64, {{ $estate['userPhoto'] }}"
                     alt="Ihr Kontakt">
             @else
                 <!-- Display default photo if user photo does not exist -->
@@ -24,7 +24,7 @@
 
             <a href="tel:{{ Statamic\Facades\GlobalSet::find('business_information')->in('default')->get('company_phone') }}"
                 title="Rufen Sie uns jetzt an!"
-                class="inline-flex justify-center items-center py-2 px-5 my-4 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 dark:text-gray-400 dark:border-gray-600 hover:bg-gray-100 focus:z-10 focus:ring-4 focus:ring-gray-200 focus:outline-none dark:focus:ring-gray-700 dark:hover:text-white dark:hover:bg-gray-700 hover:text-primary-700"
+                class="inline-flex justify-center items-center py-2 px-5 my-4 text-sm font-medium text-gray-900 bg-white -lg border border-gray-200 dark:text-gray-400 dark:border-gray-600 hover:bg-gray-100 focus:z-10 focus:ring-4 focus:ring-gray-200 focus:outline-none dark:focus:ring-gray-700 dark:hover:text-white dark:hover:bg-gray-700 hover:text-primary-700"
                 role="button">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor" class="mr-2 w-6 h-6">
@@ -41,7 +41,7 @@
 
             <a href="tel:{{ Statamic\Facades\GlobalSet::find('business_information')->in('default')->get('company_phone') }}"
                 title="Rufen Sie uns jetzt an!"
-                class="inline-flex justify-center items-center py-2 px-5 my-4 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 dark:text-gray-400 dark:border-gray-600 hover:bg-gray-100 focus:z-10 focus:ring-4 focus:ring-gray-200 focus:outline-none dark:focus:ring-gray-700 dark:hover:text-white dark:hover:bg-gray-700 hover:text-primary-700"
+                class="inline-flex justify-center items-center py-2 px-5 my-4 text-sm font-medium text-gray-900 bg-white -lg border border-gray-200 dark:text-gray-400 dark:border-gray-600 hover:bg-gray-100 focus:z-10 focus:ring-4 focus:ring-gray-200 focus:outline-none dark:focus:ring-gray-700 dark:hover:text-white dark:hover:bg-gray-700 hover:text-primary-700"
                 role="button">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor" class="mr-2 w-6 h-6">
@@ -55,7 +55,7 @@
 
 
     @if (session('success'))
-        <div class="relative py-3 px-4 text-green-700 bg-green-100 rounded border border-green-400" role="alert">
+        <div class="relative py-3 px-4 text-green-700 bg-green-100  border border-green-400" role="alert">
             <strong class="font-bold">Vielen Dank für Ihre Einsendung!</strong>
             <span class="block sm:inline">{{ session('success') }}</span>
         </div>
@@ -84,17 +84,17 @@
                 <div class="grid lg:grid-cols-4 lg:space-x-2">
                     @foreach(['Morgens' => '9 - 12 Uhr', 'Nachmittags' => '12 - 16 Uhr', 'Abends' => '16 - 18 Uhr', 'Jederzeit'=>'9 - 18 Uhr'] as $timeSlot => $hours)
                         <div
-                            wire:click="selectTimeSlot('{{ $timeSlot }}')"
-                            @click="selectedTimeSlot = '{{ $timeSlot }}'"
-                            class="relative cursor-pointer rounded-2xl p-8 text-center items-center justify-center flex flex-col shadow-md border-2"
-                            :class="{ 'border-primary': selectedTimeSlot === '{{ $timeSlot }}', 'border-transparent': selectedTimeSlot !== '{{ $timeSlot }}' }"
+                            wire:click="selectTimeSlot('{{ $hours }}')"
+                            @click="selectedTimeSlot = '{{ $hours }}'"
+                            class="relative cursor-pointer -2xl p-8 text-center items-center justify-center flex flex-col shadow-md border-2"
+                            :class="{ 'border-primary': selectedTimeSlot === '{{ $hours }}', 'border-transparent': selectedTimeSlot !== '{{ $hours }}' }"
                         >
-                            <div x-show="selectedTimeSlot === '{{ $timeSlot }}'" class="absolute top-2 right-2">
+                            <div x-show="selectedTimeSlot === '{{ $hours }}'" class="absolute top-2 right-2">
                                 <svg class="h-5 w-5 text-primary" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                                     <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
                                 </svg>
                             </div>
-                            <div x-show="selectedTimeSlot != '{{ $timeSlot }}'" class="absolute top-2 right-2">
+                            <div x-show="selectedTimeSlot != '{{ $hours }}'" class="absolute top-2 right-2">
                                 <svg class="h-5 w-5 text-primary" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M18.364 18.364A9 9 0 0 0 5.636 5.636m12.728 12.728A9 9 0 0 1 5.636 5.636m12.728 12.728L5.636 5.636" />
                                   </svg>
@@ -127,7 +127,7 @@
             </div>
 
             <button id="sendContact" name="contactSender" type="submit"
-                class="py-2 px-4 text-white rounded focus:outline-none bg-primary-600 lg:col-span-2" wire:loading.attr="disabled">
+                class="py-2 px-4 text-white  focus:outline-none bg-primary lg:col-span-2" wire:loading.attr="disabled">
                 Absenden
             </button>
             <div class="text-sm font-medium text-gray-700">

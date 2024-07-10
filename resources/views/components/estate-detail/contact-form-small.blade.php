@@ -40,6 +40,7 @@
                         </p>
                       @endif
                   @endif
+                <p class="font-normal text-sm">zzgl. Provision</p>
               </span>
             </p>
         </div>
