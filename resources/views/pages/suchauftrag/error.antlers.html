@@ -1,0 +1,43 @@
+<section
+    class="flex items-center justify-center h-screen bg-white dark:bg-gray-900"
+>
+    <div
+        class="items-center max-w-screen-xl gap-8 px-4 py-8 mx-auto lg:grid lg:grid-cols-2 xl:gap-16 lg:py-16 lg:px-6"
+    >
+        <div class="text-gray-500 sm:text-lg">
+            <img
+                class="max-w-[200px] py-4"
+                src="/logo_images/logo.png"
+                alt="Ihr Kontakt"
+            />
+
+            <h2
+                class="mb-4 text-3xl font-extrabold tracking-tight text-gray-900 md:text-4xl dark:text-white"
+            >
+                Fehler! <br />
+                Beim Versenden Ihrer Anfrage ist ein Fehler aufgetreten.
+
+            </h2>
+            <h3
+                class="mb-4 text-xl font-extrabold tracking-tight text-gray-900 md:text-xl dark:text-white"
+            >
+                Vielen Dank für Ihr Interesse.
+                Bitte versuchen Sie es später erneut
+            </h3>
+        </div>
+
+        {{if header_image}}
+        <img
+            class="hidden mx-auto mb-4 sm:flex"
+            src="{{header_image.0.url}}"
+            alt="{{header_image.0.alt}}"
+        />
+        {{else}}
+        <img
+            class="hidden mx-auto mb-4 sm:flex"
+            src="{{teambild.image.0.url}}"
+            alt="{{teambild.image.0.alt}}"
+        />
+        {{/if}}
+    </div>
+</section>
