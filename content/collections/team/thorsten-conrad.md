@@ -34,7 +34,7 @@ long_team_description:
         type: text
         text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. '
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1719306374
+updated_at: 1720526800
 duplicated_from: 00840db0-fc71-40f9-9e66-b38a2c2452c6
 phone: '+49 (30) 56 55555 10'
 social_profiles:
@@ -52,4 +52,5 @@ image_portrait:
   - team/800x800px-thorsten-conrad.jpg
 image_overview:
   - team/800x800px-thorsten-conrad.jpg
+description: 'Lorem Ipsum dolor sit amet numquam maloricum'
 ---
