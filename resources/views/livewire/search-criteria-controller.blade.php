@@ -35,7 +35,7 @@
 
         <div>
             @if ($currentStep == 1)
-                <form wire:submit.prevent="incrementStep">
+                <form wire:submit.prevent>
                     <div class="grid grid-cols-2 mt-4 gap-x-2">
                         <div>
                             <select
@@ -55,12 +55,12 @@
 
                     @if($form['objektart'])
                         <div class="grid grid-cols-2 mt-4 gap-x-2">
-                            <div>
+                            <div class="mt-auto">
                                 <x-elements.input wire:model.defer="form.plz_start_from" value="plz_start_from"
                                                   name="plz_start_from" label="Postleitzahl in der Sie suchen"
                                                   placeholder="Postleitzahl" />
                             </div>
-                            <div>
+                            <div class="mt-auto">
                                 <x-elements.input wire:model.defer="form.plz_range" value="plz_range" name="plz_range"
                                                   label="Umkreis Ihrer Suche in km (ausgehend von der Plz)" placeholder="z.B. 35" />
                             </div>
@@ -119,8 +119,9 @@
 
                         <div class="grid grid-cols-2 mt-4 gap-x-2">
                             <button
+                                disabled
                                 class="flex items-center justify-center w-full px-5 py-1 text-sm font-medium text-center text-gray-900 bg-white border border-gray-200 -lg cursor-no-drop focus:outline-none focus:ring-4 focus:ring-primary-300 sm:py-2 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
-                                disabled>
+                                >
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                      stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -129,6 +130,7 @@
                                 Zurück
                             </button>
                             <button type="submit"
+                                    wire:click="incrementStep"
                                     class="flex items-center justify-center w-full px-5 py-1 text-sm font-medium text-center text-white bg-primary hover:bg-primary-700 focus:ring-4 sm:py-- focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
                                 <span class="mr-2">Ihre Kontaktdetails</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -143,7 +145,7 @@
             @endif
 
             @if ($currentStep == 2)
-                <form wire:submit.prevent="incrementStep">
+                <form wire:submit.prevent>
                     <div class="grid grid-cols-2 mt-4 gap-x-2">
                         <div>
                             <x-elements.input wire:model.defer="form.firstname" value="firstname" name="firstname"
@@ -164,7 +166,7 @@
                     <div class="grid grid-cols-2 mt-4 gap-x-2">
                         <button
                             class="flex items-center justify-center w-full px-5 py-1 text-sm font-medium text-center text-gray-900 bg-white border border-gray-200 -lg cursor-no-drop focus:outline-none focus:ring-4 focus:ring-primary-300 sm:py-2 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
-                            disabled>
+                            wire:click="back">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                 stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -173,6 +175,7 @@
                             Zurück
                         </button>
                         <button type="submit"
+                                wire:click="incrementStep"
                             class="flex items-center justify-center w-full px-5 py-1 text-sm font-medium text-center text-white -lg bg-primary hover:bg-primary-700 focus:ring-4 sm:py-- focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
                             <span class="mr-2">Ihre Nachricht</span>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -186,7 +189,7 @@
             @endif
 
             @if ($currentStep == 3)
-                <form wire:submit.prevent="submit">
+                <form wire:submit.prevent>
                     <div class="sm:col-span-2">
                         <x-elements.textarea name="message" label="Ihre Nachricht" />
                     </div>
@@ -200,7 +203,8 @@
                     <div class="grid grid-cols-2 mt-4 gap-x-2">
                         <button
                             class="flex items-center justify-center w-full px-5 py-1 text-sm font-medium text-center text-gray-900 bg-white border border-gray-200 -lg cursor-no-drop focus:outline-none focus:ring-4 focus:ring-primary-300 sm:py-2 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
-                            disabled>
+                            wire:click="back"
+                        >
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                 stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                 <path stroke-linecap="round" stroke-linejoin="round"

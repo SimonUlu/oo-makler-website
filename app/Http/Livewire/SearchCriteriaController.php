@@ -131,6 +131,15 @@ class SearchCriteriaController extends Component
         $this->form['anzahl_zimmer__bis'] = null;
     }
 
+    public function back(): void
+    {
+        if ($this->currentStep <= 1) {
+            return;
+        }
+        $this->currentStep -= 1;
+
+    }
+
     public function submit(OnOfficeService $onofficeService): void
     {
         $this->validate($this->rulesStep3);
