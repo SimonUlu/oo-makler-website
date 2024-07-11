@@ -562,4 +562,20 @@ class EstateConnector extends AbstractApiConnector
             secret: $this->connector['secret']
         );
     }
+
+    public function getOnOfficeRegions(): array
+    {
+        $api = $this->getApi();
+
+        $request = (new OnOffice\Requests\Get\Region());
+        $response = $api->send([$request]);
+
+        $regions = [];
+        foreach ($response['response']['results'][0]['data']['records'] as $key => $field) {
+            // add the key to the field
+            $regions[] = array_merge(['id_internal' => $field['id']], $field['elements']);
+        }
+
+        return $regions;
+    }
 }
