@@ -13,6 +13,7 @@ use Statamic\Facades\GlobalSet;
 class SearchCriteriaController extends Component
 {
     public $currentStep = 1;
+
     public $region;
 
     public $form = [
@@ -107,6 +108,7 @@ class SearchCriteriaController extends Component
             'Süd' => 'Süd',
             'West' => 'West',
         ];
+
         return view('livewire.search-criteria-controller',
             [
                 'regionOptions' => $regionOptions,
