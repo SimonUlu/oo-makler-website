@@ -267,8 +267,8 @@ class SearchCriteriaController extends Component
             'vermarktungsart' => $this->vermarktungsart ?? $form['vermarktungsart'] ?? 'kauf',
             //            'regionaler_zusatz' => '10811011000034',
             'regionaler_zusatz' => implode(',', array_values($this->region)),
-//            'range_plz' => $form['plz_start_from'],
-//            'range' => $form['plz_range'],
+            //            'range_plz' => $form['plz_start_from'],
+            //            'range' => $form['plz_range'],
             'krit_bemerkung_oeffentlich' => $form['message'],
             'advisor' => 23,
         ];
