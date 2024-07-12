@@ -95,7 +95,7 @@
             @endif
             <div class="flex items-center mx-auto md:w-[42rem] px-4 md:px-8 xl:px-0">
                 <div class="w-full ">
-                    <livewire:search-criteria-controller />
+                    <livewire:search-criteria-controller vermarktungsart="kauf" :plz_disable="true" :region_enabled="true"/>
                 </div>
             </div>
         </div>
