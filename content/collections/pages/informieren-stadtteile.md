@@ -6,7 +6,7 @@ view_model: App\ViewModels\DistrictViewModel
 template: pages/stadtteile/index
 einleitungstext: 'Test wo kommt das?'
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1721055703
+updated_at: 1721057594
 center_lng: '13.2595857'
 center_lat: '52.5069381'
 zoom: '9'
@@ -220,6 +220,7 @@ stadtteile:
     plz: '12435'
     type: neues_set
     enabled: true
+    associated_link: treptow
   -
     id: lyn3msom
     polygon_id: Köpenick
@@ -234,6 +235,7 @@ stadtteile:
     plz: '12559'
     type: neues_set
     enabled: true
+    associated_link: treptow
   -
     id: lyn3og1t
     polygon_id: Bohnsdorf
@@ -248,6 +250,7 @@ stadtteile:
     plz: '12526'
     type: neues_set
     enabled: true
+    associated_link: treptow
   -
     id: lyn3rrjx
     polygon_id: Glienicke
@@ -262,6 +265,7 @@ stadtteile:
     plz: '12524'
     type: neues_set
     enabled: true
+    associated_link: treptow
   -
     id: lyn3szck
     polygon_id: Baumschulenweg
@@ -276,6 +280,7 @@ stadtteile:
     plz: '12436'
     type: neues_set
     enabled: true
+    associated_link: treptow
   -
     id: lyn3ulyx
     polygon_id: Baumschulenweg
@@ -290,6 +295,7 @@ stadtteile:
     plz: '12436'
     type: neues_set
     enabled: true
+    associated_link: treptow
   -
     id: lyn3uvkj
     polygon_id: Niederschöneweide
@@ -304,6 +310,7 @@ stadtteile:
     plz: '12439'
     type: neues_set
     enabled: true
+    associated_link: treptow
   -
     id: lyn3vswk
     polygon_id: Oberschöneweide
@@ -318,6 +325,7 @@ stadtteile:
     plz: '12459'
     type: neues_set
     enabled: true
+    associated_link: treptow
   -
     id: lyn3wl1n
     polygon_id: Rahnsdorf
@@ -332,6 +340,7 @@ stadtteile:
     plz: '12589'
     type: neues_set
     enabled: true
+    associated_link: treptow
   -
     id: lyn3x0ti
     polygon_id: Schmöckwitz
@@ -346,6 +355,7 @@ stadtteile:
     plz: '12527'
     type: neues_set
     enabled: true
+    associated_link: treptow
   -
     id: lyn3yvc9
     polygon_id: Adlershof
@@ -360,6 +370,7 @@ stadtteile:
     plz: '12489'
     type: neues_set
     enabled: true
+    associated_link: treptow
   -
     id: lyn3ztt6
     polygon_id: Spindlersfeld
@@ -374,6 +385,7 @@ stadtteile:
     plz: '12555'
     type: neues_set
     enabled: true
+    associated_link: treptow
   -
     id: lyn40mgf
     polygon_id: Lidl
@@ -388,6 +400,7 @@ stadtteile:
     plz: '12557'
     type: neues_set
     enabled: true
+    associated_link: treptow
   -
     id: lyn42zf8
     polygon_id: Friedrichshagen
@@ -402,6 +415,7 @@ stadtteile:
     plz: '12587'
     type: neues_set
     enabled: true
+    associated_link: treptow
   -
     id: lyn43mm9
     polygon_id: Johannisthal
@@ -416,6 +430,7 @@ stadtteile:
     plz: '12487'
     type: neues_set
     enabled: true
+    associated_link: treptow
   -
     id: lyn44dcg
     polygon_id: Baumschulenweg
@@ -430,4 +445,230 @@ stadtteile:
     plz: '12437'
     type: neues_set
     enabled: true
+    associated_link: treptow
+  -
+    id: lyn4whck
+    polygon_id: friedrichsfelde
+    fill_color: 'rgba(0,0, 255, 0.5)'
+    fill_outline_color: 'rgba(0 0, 255, 1)'
+    polygoncoordinates:
+      code: null
+      mode: htmlmixed
+    description:
+      code: null
+      mode: htmlmixed
+    plz: '10315'
+    type: neues_set
+    enabled: true
+    associated_link: lichtenberg
+  -
+    id: lyn4yp1o
+    polygon_id: lichtenberg
+    fill_color: 'rgba(0,0, 255, 0.5)'
+    fill_outline_color: 'rgba(0 0, 255, 1)'
+    polygoncoordinates:
+      code: null
+      mode: htmlmixed
+    description:
+      code: null
+      mode: htmlmixed
+    plz: '10365'
+    type: neues_set
+    enabled: true
+    associated_link: lichtenberg
+  -
+    id: lyn4zsbq
+    polygon_id: lichtenberge
+    fill_color: 'rgba(0,0, 255, 0.5)'
+    fill_outline_color: 'rgba(0 0, 255, 1)'
+    polygoncoordinates:
+      code: null
+      mode: htmlmixed
+    description:
+      code: null
+      mode: htmlmixed
+    plz: '10367'
+    type: neues_set
+    enabled: true
+    associated_link: lichtenberg
+  -
+    id: lyn50j8i
+    polygon_id: lichtenberg-nord
+    fill_color: 'rgba(0,0, 255, 0.5)'
+    fill_outline_color: 'rgba(0 0, 255, 1)'
+    polygoncoordinates:
+      code: null
+      mode: htmlmixed
+    description:
+      code: null
+      mode: htmlmixed
+    plz: '13055'
+    type: neues_set
+    enabled: true
+    associated_link: lichtenberg
+  -
+    id: lyn520n0
+    polygon_id: friedrichsfelde
+    fill_color: 'rgba(0,0, 255, 0.5)'
+    fill_outline_color: 'rgba(0 0, 255, 1)'
+    polygoncoordinates:
+      code: null
+      mode: htmlmixed
+    description:
+      code: null
+      mode: htmlmixed
+    plz: '10315'
+    type: neues_set
+    enabled: true
+    associated_link: lichtenberg
+  -
+    id: lyn52qq2
+    polygon_id: friedrichsfelde-zwei
+    fill_color: 'rgba(0,0, 255, 0.5)'
+    fill_outline_color: 'rgba(0 0, 255, 1)'
+    polygoncoordinates:
+      code: null
+      mode: htmlmixed
+    description:
+      code: null
+      mode: htmlmixed
+    plz: '10319'
+    type: neues_set
+    enabled: true
+    associated_link: lichtenberg
+  -
+    id: lyn53apf
+    polygon_id: karlshorst
+    fill_color: 'rgba(0,0, 255, 0.5)'
+    fill_outline_color: 'rgba(0 0, 255, 1)'
+    polygoncoordinates:
+      code: null
+      mode: htmlmixed
+    description:
+      code: null
+      mode: htmlmixed
+    plz: '10318'
+    type: neues_set
+    enabled: true
+    associated_link: lichtenfelde
+  -
+    id: lyn54fk7
+    polygon_id: hohenschönhausen
+    fill_color: 'rgba(0,0, 255, 0.5)'
+    fill_outline_color: 'rgba(0 0, 255, 1)'
+    polygoncoordinates:
+      code: null
+      mode: htmlmixed
+    description:
+      code: null
+      mode: htmlmixed
+    plz: '13051'
+    type: neues_set
+    enabled: true
+    associated_link: lichtenfelde
+  -
+    id: lyn54oyv
+    polygon_id: hohenschönhausen-zwei
+    fill_color: 'rgba(0,0, 255, 0.5)'
+    fill_outline_color: 'rgba(0 0, 255, 1)'
+    polygoncoordinates:
+      code: null
+      mode: htmlmixed
+    description:
+      code: null
+      mode: htmlmixed
+    plz: '13053'
+    type: neues_set
+    enabled: true
+    associated_link: lichtenfelde
+  -
+    id: lyn550t2
+    polygon_id: hohenschönhausen-drei
+    fill_color: 'rgba(0,0, 255, 0.5)'
+    fill_outline_color: 'rgba(0 0, 255, 1)'
+    polygoncoordinates:
+      code: null
+      mode: htmlmixed
+    description:
+      code: null
+      mode: htmlmixed
+    plz: '13057'
+    type: neues_set
+    enabled: true
+    associated_link: lichtenfelde
+  -
+    id: lyn55aud
+    polygon_id: hohenschönhausen-vier
+    fill_color: 'rgba(0,0, 255, 0.5)'
+    fill_outline_color: 'rgba(0 0, 255, 1)'
+    polygoncoordinates:
+      code: null
+      mode: htmlmixed
+    description:
+      code: null
+      mode: htmlmixed
+    plz: '13059'
+    type: neues_set
+    enabled: true
+    associated_link: lichtenfelde
+  -
+    id: lyn56b2r
+    polygon_id: hohenschönhausen-alt
+    fill_color: 'rgba(0,0, 255, 0.5)'
+    fill_outline_color: 'rgba(0 0, 255, 1)'
+    polygoncoordinates:
+      code: null
+      mode: htmlmixed
+    description:
+      code: null
+      mode: htmlmixed
+    plz: '13055'
+    type: neues_set
+    enabled: true
+    associated_link: lichtenfelde
+  -
+    id: lyn56yqo
+    polygon_id: fennpfuhl
+    fill_color: 'rgba(0,0, 255, 0.5)'
+    fill_outline_color: 'rgba(0 0, 255, 1)'
+    polygoncoordinates:
+      code: null
+      mode: htmlmixed
+    description:
+      code: null
+      mode: htmlmixed
+    plz: '10367'
+    type: neues_set
+    enabled: true
+    associated_link: lichtenfelde
+  -
+    id: lyn576ny
+    polygon_id: fennpfuhl-zwei
+    fill_color: 'rgba(0,0, 255, 0.5)'
+    fill_outline_color: 'rgba(0 0, 255, 1)'
+    polygoncoordinates:
+      code: null
+      mode: htmlmixed
+    description:
+      code: null
+      mode: htmlmixed
+    plz: '10369'
+    type: neues_set
+    enabled: true
+    associated_link: lichtenfelde
+  -
+    id: lyn57zct
+    polygon_id: rummelsburg
+    fill_color: 'rgba(0,0, 255, 0.5)'
+    fill_outline_color: 'rgba(0 0, 255, 1)'
+    polygoncoordinates:
+      code: null
+      mode: htmlmixed
+    description:
+      code: null
+      mode: htmlmixed
+    plz: '10317'
+    type: neues_set
+    enabled: true
+    associated_link: lichtenfelde
 ---

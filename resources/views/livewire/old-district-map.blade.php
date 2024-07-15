@@ -79,6 +79,18 @@
             return 'Das ist die Standard Description';
         }
 
+        function get_associated_link(plz) {
+            // Durchlaufe das districtJson-Array, um die Farbe basierend auf der Postleitzahl zu finden
+            for (var i = 0; i < districtJsonObj.length; i++) {
+                var entry = districtJsonObj[i];
+                if (entry.plz === plz) {
+                    return entry.associated_link;
+                }
+            }
+            // Rückgabe einer Standardfarbe, falls keine Übereinstimmung gefunden wurde
+            return 'link';
+        }
+
 
         // Filtere die GeoJSON-Features basierend auf der Übereinstimmung der Postleitzahlen
         var filteredFeatures = geoJsonObj.filter(function(feature) {
@@ -100,10 +112,10 @@
                 feature.properties = {};
             }
             feature.properties.color = getColor(plz_code);
+            feature.properties.associated_link = get_associated_link(plz_code);
             feature.properties.description = getDescription(plz_code);
             feature.properties.plz_code = plz_code;
         });
-        console.log(filteredGeoJson);
 
         map.on('load', function() {
             map.addSource('postalCodes', {
@@ -132,7 +144,6 @@
                 },
             });
             districtJsonObj.forEach(function(entry) {
-                console.log(entry.plz);
                 // Mache cursor pointer wenn reingeht
                 map.on('mousemove', 'postalCodeAreas', function(e) {
                     var featuresUnderMouse = map.queryRenderedFeatures(e.point, { layers: ['postalCodeAreas'] });
@@ -180,23 +191,16 @@
                     }
                 });
                 map.on('click', 'postalCodeAreas', function (e) {
-                    var modal = document.getElementById("modal");
-                    var modalDescription = document.getElementById("modal-description");
+                    // Entfernen Sie den Code, der das Modal öffnet
+                    // var modal = document.getElementById("modal");
+                    // var modalDescription = document.getElementById("modal-description");
                     var featuresUnderMouse = map.queryRenderedFeatures(e.point, { layers: ['postalCodeAreas'] });
-                    modal.classList.remove("hidden"); // Shows the modal
-                    if (window.matchMedia("(max-width: 860px)").matches) {
-                        // Wenn der Bildschirm kleiner oder gleich 760px ist, ändern Sie die Modal-Position
-                        modal.style.top = '20%';
-                        modal.style.left = '20%';
-                        modal.style.maxWidth = "60%";
-                        var description = featuresUnderMouse[0].properties.description;
-                    } else {
-                        modal.style.top = (e.point.y) + 'px'; // Set modal position to mouse y
-                        modal.style.left = (e.point.x) + 'px'; // Set modal position to mouse x
-                        var description = featuresUnderMouse[0].properties.description;
-                    }
+                    // modal.classList.remove("hidden"); // Zeigt das Modal
+
                     if (featuresUnderMouse.length > 0) {
-                        modalDescription.innerHTML = description;
+                        var plz_code = featuresUnderMouse[0].properties.associated_link;
+                        // Aktualisieren Sie die URL mit dem angehängten Hash und der Postleitzahl des angeklickten Features
+                        window.location.hash = plz_code;
                     }
                 });
                 map.on('mouseenter', 'postalCodeAreas', function(e) {
