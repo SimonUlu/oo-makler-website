@@ -6,7 +6,7 @@ view_model: App\ViewModels\DistrictViewModel
 template: pages/stadtteile/index
 einleitungstext: 'Test wo kommt das?'
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1721057783
+updated_at: 1721057964
 center_lng: '13.2595857'
 center_lat: '52.5069381'
 zoom: '9'
