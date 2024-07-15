@@ -181,12 +181,21 @@ class SearchCriteriaController extends Component
     {
         $estate_fields = Collection::find('estate_regions')->queryEntries()->get();
         foreach ($estate_fields as $estate_field) {
-            //            array_push($this->regionOptions, ['value' => $estate_field['id'], 'label' => $estate_field['name']]);
+            array_push($this->regionOptions, [
+                'value' => $estate_field['id'],
+                'label' => $estate_field['name'],
+                'city' => $estate_field['name'],
+            ]);
             $neighborhoods = json_decode($estate_field['children']);
             foreach ($neighborhoods as $neighborhood) {
                 array_push(
                     $this->regionOptions,
-                    ['value' => $neighborhood->id, 'label' => $estate_field['name'].'>>'.$neighborhood->name]);
+                    [
+                        'value' => $neighborhood->id,
+                        'label' => $neighborhood->name,
+                        'city' => $estate_field['name'],
+                    ],
+                );
             }
         }
 

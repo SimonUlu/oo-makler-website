@@ -16,7 +16,10 @@
     placeholder: @js($placeholder),
     init() {
         this.$nextTick(() => {
-            let choices = new Choices(this.$refs.select)
+            let choices = new Choices(this.$refs.select,{
+                removeItemButton: true,
+                duplicateItemsAllowed:false,
+            })
 
             let refreshChoices = () => {
                 let selection = this.multiple ? this.value ?? [] : [this.value]
