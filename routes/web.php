@@ -60,7 +60,7 @@ Route::statamic('suchauftrag-erfolgreich-angemeldet', 'pages/suchauftrag/success
     'title' => 'Suchauftrag erfolgreich angemeldet',
 ])->name('searchcriteria.success');
 
-Route::statamic('suchauftrag/{vermarktungsart?}', 'pages/suchauftrag/new')->name('suchauftrag');
+Route::statamic('suchauftrag/{vermarktungsart?}', 'pages/suchauftrag/index')->name('suchauftrag');
 
 // Newsletter
 Route::post('newsletter/subscribe', [NewsletterController::class, 'store'])->name('newsletter.subscribe');

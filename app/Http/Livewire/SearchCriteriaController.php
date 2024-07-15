@@ -6,21 +6,39 @@ use App\Mail\SearchCriteriaMailable;
 use App\Services\OnOfficeApiHelpers\UpdateOrCreateAddressHelper;
 use App\Services\OnOfficeService;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\View\View;
 use Livewire\Component;
+use Statamic\Entries\Collection;
 use Statamic\Facades\GlobalSet;
 
 class SearchCriteriaController extends Component
 {
     public $currentStep = 1;
 
+    public $region = [];
+
+    public $vermarktungsart = null;
+
+    public $plz_disable = false;
+
+    public $region_enabled = false;
+
+    public $vermarktungsOptions = ['haus' => 'Haus', 'wohnung' => 'Wohnung', 'grundstueck' => 'Grundstück'];
+
+    private $regionOptions = [
+        //        ['value' => 'Nord', 'label' => 'Nord'],
+        //        ['value' => 'West', 'label' => 'West'],
+        //        ['value' => 'Ost', 'label' => 'Ost'],
+    ];
+
     public $form = [
         'objektart' => null,
-        'von' => null,
-        'bis' => null,
         'wohnflaeche__von' => null,
         'wohnflaeche__bis' => null,
         'kaufpreis__von' => null,
         'kaufpreis__bis' => null,
+        'grundstuecksflaeche__von' => null,
+        'grundstuecksflaeche__bis' => null,
         'vermarktungsart' => null,
         'plz_range' => null,
         'plz_start_from' => null,
@@ -44,16 +62,19 @@ class SearchCriteriaController extends Component
     ];
 
     protected $rulesStep1 = [
-        'form.vermarktungsart' => 'required|string|in:kauf,miete',
-        'form.objektart' => 'required|string|in:haus,wohnung',
-        'form.plz_range' => 'required|numeric',
-        'form.plz_start_from' => 'required|numeric',
+        'form.vermarktungsart' => 'nullable|string|in:kauf,miete',
+        'form.objektart' => 'required|string|in:haus,wohnung,grundstueck',
+        'form.plz_range' => 'nullable|numeric',
+        'form.plz_start_from' => 'nullable|numeric',
         'form.kaufpreis__von' => 'required|numeric',
         'form.kaufpreis__bis' => 'required|numeric',
-        'form.wohnflaeche__von' => 'required|numeric',
-        'form.wohnflaeche__bis' => 'required|numeric',
-        'form.anzahl_zimmer__von' => 'required|numeric',
-        'form.anzahl_zimmer__bis' => 'required|numeric',
+        'form.wohnflaeche__von' => 'nullable|numeric',
+        'form.wohnflaeche__bis' => 'nullable|numeric',
+        'form.anzahl_zimmer__von' => 'nullable|numeric',
+        'form.anzahl_zimmer__bis' => 'nullable|numeric',
+        'form.grundstuecksflache__von' => 'nullable|numeric',
+        'form.grundstuecksflache__bis' => 'nullable|numeric',
+
     ];
 
     protected $rulesStep3 = [
@@ -77,23 +98,19 @@ class SearchCriteriaController extends Component
             'form.phone.numeric' => 'Ihre Telefonnummer darf nur Zahlen enthalten.',
             'form.objektart.required' => 'Bitte geben Sie die Objektart an.',
             'form.objektart.string' => 'Die Objektart darf keine Zahlen enthalten.',
-            'form.vermarktungsart.required' => 'Bitte geben Sie die Vermarktungsart an.',
-            'form.vermarktungsart.string' => 'Die Vermarktungsart darf keine Zahlen enthalten.',
             'form.plz_start_from.required' => 'Bitte geben Sie die Postleitzahl an.',
             'form.plz_start_from.numeric' => 'Die Postleitzahl darf nur Zahlen enthalten.',
             'form.plz_range.required' => 'Bitte geben Sie den Umkreis an.',
             'form.plz_range.numeric' => 'Der Umkreis darf nur Zahlen enthalten.',
-            'form.anzahl_zimmer__von.required' => 'Bitte geben Sie die minimale Anzahl der Zimmer an.',
-            'form.anzahl_zimmer__bis.required' => 'Bitte geben Sie die maximale Anzahl der Zimmer an.',
             'form.anzahl_zimmer__von.numeric' => 'Die Anzahl der Zimmer darf nur Zahlen enthalten.',
             'form.anzahl_zimmer__bis.numeric' => 'Die Anzahl der Zimmer darf nur Zahlen enthalten.',
-            'form.kaufpreis__von.required' => 'Bitte geben Sie einen minamalen Kaufpreis an.',
+            'form.kaufpreis__von.required' => 'Bitte geben Sie einen minimalen Kaufpreis an.',
             'form.kaufpreis__von.numeric' => 'Der Kaufpreis darf nur Zahlen enthalten.',
             'form.kaufpreis__bis.numeric' => 'Der Kaufpreis darf nur Zahlen enthalten.',
-            'form.wohnflaeche__von.required' => 'Bitte geben Sie eine minamale Wohnflaeche an.',
-            'form.wohnflaeche__von.numeric' => 'Die Wohnfläche darf nur Zahlen enthalten.',
             'form.kaufpreis__bis.required' => 'Bitte geben Sie einen maximalen Kaufpreis an.',
-            'form.wohnflaeche__bis.required' => 'Bitte geben Sie eine maximale Wohnflaeche an.',
+            'form.grundstuecksflaeche__von.numeric' => 'Die Grundstücksfläche darf nur Zahlen enthalten.',
+            'form.grundstuecksflaeche__bis.numeric' => 'Die Grundstücksfläche darf nur Zahlen enthalten.',
+            'form.wohnflaeche__von.numeric' => 'Die Wohnfläche darf nur Zahlen enthalten.',
             'form.wohnflaech__bis.numeric' => 'Die Wohnfläche darf nur Zahlen enthalten.',
             'form.message.max' => 'Ihre Nachricht darf nicht länger als 255 Zeichen sein.',
             'form.kontaktaufnahme.required' => 'Damit wir Ihre Anfrage verarbeiten können, benötigen wir Ihre Einwilligung zur Kontaktaufnahme.',
@@ -116,6 +133,30 @@ class SearchCriteriaController extends Component
         $this->currentStep++;
     }
 
+    public function setObjektart(string $value): void
+    {
+        $this->form['objektart'] = $value;
+        $this->form['plz_range'] = null;
+        $this->form['plz_start_from'] = null;
+        $this->form['kaufpreis__von'] = null;
+        $this->form['kaufpreis__bis'] = null;
+        $this->form['wohnflaeche__von'] = null;
+        $this->form['wohnflaeche__bis'] = null;
+        $this->form['anzahl_zimmer__von'] = null;
+        $this->form['anzahl_zimmer__bis'] = null;
+        $this->form['grundstuecksflaeche__von'] = null;
+        $this->form['grundstuecksflaeche__bis'] = null;
+    }
+
+    public function decrementStep(): void
+    {
+        if ($this->currentStep <= 1) {
+            return;
+        }
+        $this->currentStep -= 1;
+
+    }
+
     public function submit(OnOfficeService $onofficeService): void
     {
         $this->validate($this->rulesStep3);
@@ -123,10 +164,8 @@ class SearchCriteriaController extends Component
 
         // create or update address user
         $addressId = $this->createOrUpdateAddress($this->form);
-
         // add search criteria
         $result = $this->createSearchCriteria($addressId, $this->form, $onofficeService);
-
         if (isset($result[0]['status']['errorcode']) && $result[0]['status']['errorcode'] != 0) {
             // send user to site creation error site
             redirect()->route('searchcriteria.error');
@@ -138,9 +177,34 @@ class SearchCriteriaController extends Component
         // If validation was successful, then process the data
     }
 
-    public function render()
+    private function getRegions()
     {
-        return view('livewire.search-criteria-controller');
+        $estate_fields = Collection::find('estate_regions')->queryEntries()->get();
+        foreach ($estate_fields as $estate_field) {
+            //            array_push($this->regionOptions, ['value' => $estate_field['id'], 'label' => $estate_field['name']]);
+            $neighborhoods = json_decode($estate_field['children']);
+            foreach ($neighborhoods as $neighborhood) {
+                array_push(
+                    $this->regionOptions,
+                    ['value' => $neighborhood->id, 'label' => $estate_field['name'].'>>'.$neighborhood->name]);
+            }
+        }
+
+    }
+
+    public function render(): View
+    {
+        if ($this->region_enabled) {
+            $this->getRegions();
+        }
+
+        return view('livewire.search-criteria-controller',
+            [
+                'vermarktungsart' => $this->vermarktungsart,
+                'vermarktungsOptions' => $this->vermarktungsOptions,
+                'regionOptions' => $this->regionOptions,
+                'currentStep' => $this->currentStep,
+            ]);
     }
 
     public function createOrUpdateAddress(array $form)
@@ -198,11 +262,14 @@ class SearchCriteriaController extends Component
             'wohnflaeche__bis' => $form['wohnflaeche__bis'],
             'kaufpreis__von' => $form['kaufpreis__von'],
             'kaufpreis__bis' => $form['kaufpreis__bis'],
-            'vermarktungsart' => $form['vermarktungsart'],
-            'range_plz' => $form['plz_start_from'],
-            'range' => $form['plz_range'],
+            'grundstuecksflaeche__von' => $form['grundstuecksflaeche__von'],
+            'grundstuecksflaeche__bis' => $form['grundstuecksflaeche__bis'],
+            'vermarktungsart' => $this->vermarktungsart ?? $form['vermarktungsart'] ?? 'kauf',
+            //            'regionaler_zusatz' => '10811011000034',
+            'regionaler_zusatz' => implode(',', array_values($this->region)),
+            //            'range_plz' => $form['plz_start_from'],
+            //            'range' => $form['plz_range'],
             'krit_bemerkung_oeffentlich' => $form['message'],
-            // TODO: make advisor configurable
             'advisor' => 23,
         ];
 
@@ -224,11 +291,9 @@ class SearchCriteriaController extends Component
             'kontaktaufnahme' => $form['kontaktaufnahme'] ?? null,
             'message' => $form['message'] ?? null,
         ];
-
         // create or update address user
         $addressId = $this->createOrUpdateAddress($form);
         $formData = array_merge($criteria, $person);
-
         try {
             $result = $onofficeService->create()->searchCriteria($criteria, $addressId);
         } catch (\Exception $e) {

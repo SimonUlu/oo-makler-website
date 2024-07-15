@@ -527,15 +527,18 @@ class EstateConnector extends AbstractApiConnector
         return $params;
     }
 
-    public static function getEstateFields(OnOffice\Api $api)
+    public static function getEstateFields(OnOffice\Api $api): array
     {
         $request = (new OnOffice\Requests\Get\Fields());
+
         $request->setModules(['estate']);
         $request->setLabels(true);
         $request->setLanguage('DEU');
         $request->setRealDataTypes(true);
         $request->setShowFieldMeasureFormat(true);
         $request->setShowFieldFilters(true);
+        $request->setShowFieldDependencies(true);
+
         $response = $api->send([$request]);
         $fields = [];
         foreach ($response['response']['results'][0]['data']['records'][0]['elements'] as $key => $field) {
@@ -561,5 +564,21 @@ class EstateConnector extends AbstractApiConnector
             token: $this->connector['token'],
             secret: $this->connector['secret']
         );
+    }
+
+    public function getOnOfficeRegions(): array
+    {
+        $api = $this->getApi();
+
+        $request = (new OnOffice\Requests\Get\Region());
+        $response = $api->send([$request]);
+
+        $regions = [];
+        foreach ($response['response']['results'][0]['data']['records'] as $key => $field) {
+            // add the key to the field
+            $regions[] = array_merge(['id_internal' => $field['id']], $field['elements']);
+        }
+
+        return $regions;
     }
 }
