@@ -1,7 +1,7 @@
-<div 
-    class="relative z-50" 
-    aria-labelledby="modal-title" 
-    x-show="openImgSlideShow" 
+<div
+    class="relative z-50"
+    aria-labelledby="modal-title"
+    x-show="openImgSlideShow"
     x-cloak
     x-data='{
         imgSrc: "",
@@ -40,6 +40,12 @@
                     break;
                 case "ArrowRight":
                     this.nextImg();
+                    break;
+                case "Escape":
+                    if(modalOpen){
+                        return;
+                    }
+                    openImgSlideShow=false;
                     break;
             }
         }
