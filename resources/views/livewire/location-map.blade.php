@@ -2,7 +2,7 @@
     <div class="relative w-full bg-primary-100 mt-10 mb-12">
         <div class="grid grid-cols-2 pt-12 m-auto md:space-x-4 w-full">
             <div class="relative col-span-2 min-h-[450px] sm:min-h-[500px] md:min-h-[550px] lg:min-h-[600px] w-full min-w-[400px] md:min-w-[700px] lg:min-w-[950px] lg:w-full">
-                <div id='map' class="relative w-full h-full">
+                <div id='map-two' class="relative w-full h-full">
                     
                 </div>
                 <div id="modal" class="hidden absolute bg-white p-5 rounded-2 max-w-md z-10"
@@ -39,14 +39,14 @@
         var lat = '52.50';
         var zoom = '8';
 
-        var map = new mapboxgl.Map({
-            container: 'map',
+        var map_two = new mapboxgl.Map({
+            container: 'map-two',
             style: 'mapbox://styles/mapbox/light-v10',
             center: [lng, lat],
             zoom: zoom
         });
 
-        map.on('load', function() {
+        map_two.on('load', function() {
             // Durchlaufe jedes Objekt in der 'locations'-Liste
             locations.forEach(function(location) {
                 // Überprüfe, ob sowohl 'longitude' als auch 'latitude' vorhanden sind
@@ -57,7 +57,7 @@
                         color: "#003064"
                     })
                     .setLngLat([location.longitude, location.latitude]) // Setze die Position des Markers
-                    .addTo(map); // Füge den Marker zur Karte hinzu
+                    .addTo(map_two); // Füge den Marker zur Karte hinzu
 
                     // Füge dem Marker ein 'click'-Ereignis hinzu, um das Modal anzuzeigen
                     marker.getElement().addEventListener('click', (e) => {
