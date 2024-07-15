@@ -26,7 +26,7 @@
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
 
     <script>
-        // Mapbox Javascript Stuff
+        // Mapbox Javascript Stuff shhs
         mapboxgl.accessToken = 'pk.eyJ1Ijoic2ltb251bHUxOTAxIiwiYSI6ImNsa3Y4Nno1NTBoMW0zZXJ6aXB6YTk3ZGcifQ.vtgWJm98vfUJ28j8ewL8Gg';
 
         var locationData = @json($locations);
