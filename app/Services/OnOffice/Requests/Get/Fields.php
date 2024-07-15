@@ -58,7 +58,14 @@ class Fields extends AbstractRequest
 
     public function setShowFieldFilters(bool $showFieldFilters): Fields
     {
-        $this->parameters['showFieldFilters'] = $showFieldFilters;
+        $this->parameters['showfieldfilters'] = $showFieldFilters;
+
+        return $this;
+    }
+
+    public function setShowFieldDependencies(bool $showFieldDependencies): Fields
+    {
+        $this->parameters['showfielddependencies'] = $showFieldDependencies;
 
         return $this;
     }
