@@ -62,6 +62,7 @@ class Fields extends AbstractRequest
 
         return $this;
     }
+
     public function setShowFieldDependencies(bool $showFieldDependencies): Fields
     {
         $this->parameters['showfielddependencies'] = $showFieldDependencies;
