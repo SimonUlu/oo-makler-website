@@ -265,13 +265,16 @@ class SearchCriteriaController extends Component
             'grundstuecksflaeche__von' => $form['grundstuecksflaeche__von'],
             'grundstuecksflaeche__bis' => $form['grundstuecksflaeche__bis'],
             'vermarktungsart' => $this->vermarktungsart ?? $form['vermarktungsart'] ?? 'kauf',
-            //            'regionaler_zusatz' => '10811011000034',
-            'regionaler_zusatz' => implode(',', array_values($this->region)),
-            //            'range_plz' => $form['plz_start_from'],
-            //            'range' => $form['plz_range'],
             'krit_bemerkung_oeffentlich' => $form['message'],
             'advisor' => 23,
         ];
+        if ($this->region_enabled) {
+            $criteria['regionaler_zusatz'] = implode(',', array_values($this->region));
+        }
+        if (! $this->plz_disable) {
+            $criteria['plz'] = $form['plz_start_from'];
+            $criteria['plz_range'] = $form['plz_range'];
+        }
 
         $criteriaEmail['title_request'] = 'Suchauftrag';
 
