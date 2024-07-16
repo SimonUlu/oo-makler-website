@@ -14,7 +14,7 @@
                 @php
                     $counter++;
                 @endphp
-                @if ($counter % 7 == 0)
+                @if ($counter % 5 == 0)
                     <div class="col-span-2 mx-2">
                         <x-estates.suchauftrag-banner />
                     </div>
