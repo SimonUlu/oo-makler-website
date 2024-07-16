@@ -409,8 +409,6 @@ class OnOfficeService
             ->where('Nr', $userId)
             ->get();
 
-        dd($user);
-
         $photo = $this->getUserPhotoById($userId);
 
         return $this->createUserDetailsFromData($user, $photo);
