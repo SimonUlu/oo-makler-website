@@ -1,7 +1,7 @@
 ---
 id: 460cb414-d06c-4ae3-9193-95cb6eb2fa95
 blueprint: immobilienprojekte
-title: 'Root am Meer: Ihr Domizil in Rügen'
+title: 'Reet am Meer: Ihr Domizil in Rügen'
 content_with_image_replicator:
   -
     id: ly30tgd0
@@ -59,6 +59,6 @@ infos:
     enabled: true
 immobilien_id: '13917'
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1719841954
+updated_at: 1721120218
 duplicated_from: 6ea3817e-cf84-421f-bc6c-e0bf1b08b3bb
 ---

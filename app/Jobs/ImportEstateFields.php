@@ -47,6 +47,8 @@ class ImportEstateFields implements ShouldQueue
         $entries = self::getOnOfficeEstateFields($apiConnection);
 
         if (empty($entries)) {
+            Log::error('No entries found in the OnOffice API.');
+
             return;
         }
 
@@ -80,9 +82,10 @@ class ImportEstateFields implements ShouldQueue
         $apiHandler = new \App\Services\OnOffice\Connectors\EstateConnector();
 
         // get total records count
-        return $apiHandler
-            ->setConnector($apiConnection)
-            ->getOnOfficeFields();
+        $queryBuilder = $apiHandler
+            ->setConnector($apiConnection);
+
+        return $queryBuilder->getOnOfficeFields();
     }
 
     public function getEntryData($entry, $fields): array
