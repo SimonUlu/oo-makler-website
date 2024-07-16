@@ -75,6 +75,12 @@
                                                         {{ $estate->get('objektbeschreibung') }}
                                                     </div>
                                                 </div>
+                                                <div>
+                                                    <h2 class="text-xl font-bold tracking-tight text-gray-900 md:text-3xl">
+                                                        Ausstattung
+                                                    </h2>
+                                                    <pre class="col-span-full text-sm bg-gray-50 rounded-2xl md:text-md">{{ $estate->get('ausstatt_beschr') }}</pre>
+                                                </div>
                                             </div>
                                         </div>
 
