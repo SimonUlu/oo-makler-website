@@ -414,14 +414,16 @@ class OnOfficeService
         return $this->createUserDetailsFromData($user, $photo);
     }
 
-    protected function createUserDetailsFromData(array $user, array $photo): UserDetails
+    protected function createUserDetailsFromData($user, array $photo): UserDetails
     {
-        if ($user && isset($user['elements']['Vorname']) && isset($user['elements']['Nachname'])) {
-            $vorname = $user['elements']['Vorname'];
-            $nachname = $user['elements']['Nachname'];
-            $email = $user['elements']['email'];
-            $picUrl = $photo['elements']['photo'] ?? '';
-            $phoneNumber = $user['elements']['Telefon'];
+        $userDetails = $user->first();
+
+        if ($userDetails) {
+            $vorname = $userDetails->vorname;
+            $nachname = $userDetails->nachname;
+            $email = $userDetails->email;
+            $picUrl = $userDetails->picUrl;
+            $phoneNumber = $userDetails->Telefon;
 
             return new UserDetails($vorname, $nachname, $email, $picUrl, $phoneNumber);
         } else {
