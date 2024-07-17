@@ -1,14 +1,19 @@
-@props(['multiple' => true, 'options' => [], 'key' => null, 'placeholder' => 'Select an option'])
+@props(['multiple' => true, 'options' => [], 'key' => null, 'placeholder' => 'Select an option','searchfields'=>['label','value']])
 
 <div x-data="{
     multiple: @js($multiple),
     value: @entangle($attributes->wire('model')),
     options: @js($options),
     placeholder: @js($placeholder),
+    searchfields:@js($searchfields),
     init() {
         this.$nextTick(() => {
             let choices = new Choices(this.$refs.select, {
                 noChoicesText: @js($noChoicesText ?? 'Keine Optionen vorhanden'),
+                removeItemButton: true,
+                duplicateItemsAllowed:false,
+                searchFields:this.searchfields??['label','value'],
+                searchResultLimit:100,
             });
 
             let refreshChoices = () => {

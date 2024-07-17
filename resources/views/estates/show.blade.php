@@ -61,18 +61,17 @@
                                                     <h2 class="text-xl font-bold tracking-tight text-gray-900 md:text-3xl">
                                                         Objektbeschreibung
                                                     </h2>
-                                                    @php
-                                                        $sentences = preg_split(
-                                                            '/(?<=[.!?])\s+(?=[a-zA-Z])/i',
-                                                            $estate->get('objektbeschreibung'),
-                                                        );
-                                                        $randomSentence = $sentences[array_rand($sentences)];
-                                                    @endphp
-                                                    <p class="mt-2 text-sm italic leading-7 text-gray-600">
-                                                        {{ '„' . $randomSentence . '“' }}
-                                                    </p>
                                                     <div class="col-span-full text-sm bg-gray-50 rounded-2xl md:text-md">
                                                         {{ $estate->get('objektbeschreibung') }}
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <h2 class="text-xl font-bold tracking-tight text-gray-900 md:text-3xl">
+                                                        Ausstattung
+                                                    </h2>
+                                                    <div class="col-span-full text-sm bg-gray-50 rounded-2xl md:text-md">
+                                                        <pre class="text-sm md:text-md font-sans"
+                                                        >{{ $estate->get('ausstatt_beschr') }}</pre>
                                                     </div>
                                                 </div>
                                             </div>

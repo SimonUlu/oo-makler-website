@@ -23,6 +23,7 @@
                                 type="search"
                                 :multiple="true"
                                 class="p-0 border-none"
+                                :searchfields="['label','value','city']"
                                 :placeholder="'Region'"
                                 :options="$regionOptions"
                                 :noChoicesText="'Keine Orte bei dem derzeitigen Filter vorhanden'">

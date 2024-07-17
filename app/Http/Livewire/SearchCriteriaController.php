@@ -181,12 +181,21 @@ class SearchCriteriaController extends Component
     {
         $estate_fields = Collection::find('estate_regions')->queryEntries()->get();
         foreach ($estate_fields as $estate_field) {
-            //            array_push($this->regionOptions, ['value' => $estate_field['id'], 'label' => $estate_field['name']]);
+            array_push($this->regionOptions, [
+                'value' => $estate_field['id'],
+                'label' => $estate_field['name'],
+                'city' => $estate_field['name'],
+            ]);
             $neighborhoods = json_decode($estate_field['children']);
             foreach ($neighborhoods as $neighborhood) {
                 array_push(
                     $this->regionOptions,
-                    ['value' => $neighborhood->id, 'label' => $estate_field['name'].'>>'.$neighborhood->name]);
+                    [
+                        'value' => $neighborhood->id,
+                        'label' => $neighborhood->name,
+                        'city' => $estate_field['name'],
+                    ],
+                );
             }
         }
 
@@ -265,13 +274,16 @@ class SearchCriteriaController extends Component
             'grundstuecksflaeche__von' => $form['grundstuecksflaeche__von'],
             'grundstuecksflaeche__bis' => $form['grundstuecksflaeche__bis'],
             'vermarktungsart' => $this->vermarktungsart ?? $form['vermarktungsart'] ?? 'kauf',
-            //            'regionaler_zusatz' => '10811011000034',
-            'regionaler_zusatz' => implode(',', array_values($this->region)),
-            //            'range_plz' => $form['plz_start_from'],
-            //            'range' => $form['plz_range'],
             'krit_bemerkung_oeffentlich' => $form['message'],
             'advisor' => 23,
         ];
+        if ($this->region_enabled) {
+            $criteria['regionaler_zusatz'] = implode(',', array_values($this->region));
+        }
+        if (! $this->plz_disable) {
+            $criteria['plz'] = $form['plz_start_from'];
+            $criteria['plz_range'] = $form['plz_range'];
+        }
 
         $criteriaEmail['title_request'] = 'Suchauftrag';
 

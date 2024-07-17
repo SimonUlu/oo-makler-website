@@ -59,6 +59,6 @@ infos:
     enabled: true
 immobilien_id: '13917'
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1721119784
+updated_at: 1721120218
 duplicated_from: 6ea3817e-cf84-421f-bc6c-e0bf1b08b3bb
 ---
