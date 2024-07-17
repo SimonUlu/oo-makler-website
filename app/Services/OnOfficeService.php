@@ -414,11 +414,7 @@ class OnOfficeService
         return $this->createUserDetailsFromData($user->all(), $photo);
     }
 
-<<<<<<< HEAD
-    protected function createUserDetailsFromData(array $user = [], array $photo): UserDetails
-=======
     protected function createUserDetailsFromData($user, array $photo): UserDetails
->>>>>>> de8bc18bc2c3087e7330eab85b4839419f8881f2
     {
         $userDetails = $user->first();
 
