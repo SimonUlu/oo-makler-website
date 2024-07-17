@@ -6,7 +6,7 @@ view_model: App\ViewModels\DistrictViewModel
 template: pages/stadtteile/index
 einleitungstext: 'Test wo kommt das?'
 updated_by: 95e99389-87ef-46dc-89fe-516fc22e966e
-updated_at: 1721057964
+updated_at: 1721199407
 center_lng: '13.2595857'
 center_lat: '52.5069381'
 zoom: '9'
@@ -209,8 +209,8 @@ stadtteile:
   -
     id: lyn3h8a9
     polygon_id: Treptow
-    fill_color: 'rgba(255, 0, 0, 0.5)'
-    fill_outline_color: 'rgba(255, 0, 0, 1)'
+    fill_color: 'rgba(0, 48, 100, 0.7)'
+    fill_outline_color: 'rgba(0, 48, 100, 0.5)'
     polygoncoordinates:
       code: null
       mode: htmlmixed
@@ -220,12 +220,12 @@ stadtteile:
     plz: '12435'
     type: neues_set
     enabled: true
-    associated_link: treptow
+    associated_link: treptow-köpenick
   -
     id: lyn3msom
     polygon_id: Köpenick
-    fill_color: 'rgba(255, 0, 0, 0.5)'
-    fill_outline_color: 'rgba(255, 0, 0, 1)'
+    fill_color: 'rgba(0, 48, 100, 0.7)'
+    fill_outline_color: 'rgba(0, 48, 100, 1)'
     polygoncoordinates:
       code: null
       mode: htmlmixed
@@ -235,11 +235,11 @@ stadtteile:
     plz: '12559'
     type: neues_set
     enabled: true
-    associated_link: treptow
+    associated_link: treptow-köpenick
   -
     id: lyn3og1t
     polygon_id: Bohnsdorf
-    fill_color: 'rgba(255, 0, 0, 0.5)'
+    fill_color: 'rgba(0, 48, 100, 0.7)'
     fill_outline_color: 'rgba(255, 0, 0, 1)'
     polygoncoordinates:
       code: null
@@ -250,11 +250,11 @@ stadtteile:
     plz: '12526'
     type: neues_set
     enabled: true
-    associated_link: treptow
+    associated_link: treptow-köpenick
   -
     id: lyn3rrjx
     polygon_id: Glienicke
-    fill_color: 'rgba(255, 0, 0, 0.5)'
+    fill_color: 'rgba(0, 48, 100, 0.7)'
     fill_outline_color: 'rgba(255, 0, 0, 1)'
     polygoncoordinates:
       code: null
@@ -265,11 +265,11 @@ stadtteile:
     plz: '12524'
     type: neues_set
     enabled: true
-    associated_link: treptow
+    associated_link: treptow-köpenick
   -
     id: lyn3szck
     polygon_id: Baumschulenweg
-    fill_color: 'rgba(255, 0, 0, 0.5)'
+    fill_color: 'rgba(0, 48, 100, 0.7)'
     fill_outline_color: 'rgba(255, 0, 0, 1)'
     polygoncoordinates:
       code: null
@@ -280,11 +280,11 @@ stadtteile:
     plz: '12436'
     type: neues_set
     enabled: true
-    associated_link: treptow
+    associated_link: treptow-köpenick
   -
     id: lyn3ulyx
     polygon_id: Baumschulenweg
-    fill_color: 'rgba(255, 0, 0, 0.5)'
+    fill_color: 'rgba(0, 48, 100, 0.7)'
     fill_outline_color: 'rgba(255, 0, 0, 1)'
     polygoncoordinates:
       code: null
@@ -295,11 +295,11 @@ stadtteile:
     plz: '12436'
     type: neues_set
     enabled: true
-    associated_link: treptow
+    associated_link: treptow-köpenick
   -
     id: lyn3uvkj
     polygon_id: Niederschöneweide
-    fill_color: 'rgba(255, 0, 0, 0.5)'
+    fill_color: 'rgba(0, 48, 100, 0.7)'
     fill_outline_color: 'rgba(255, 0, 0, 1)'
     polygoncoordinates:
       code: null
@@ -310,11 +310,11 @@ stadtteile:
     plz: '12439'
     type: neues_set
     enabled: true
-    associated_link: treptow
+    associated_link: treptow-köpenick
   -
     id: lyn3vswk
     polygon_id: Oberschöneweide
-    fill_color: 'rgba(255, 0, 0, 0.5)'
+    fill_color: 'rgba(0, 48, 100, 0.7)'
     fill_outline_color: 'rgba(255, 0, 0, 1)'
     polygoncoordinates:
       code: null
@@ -325,11 +325,11 @@ stadtteile:
     plz: '12459'
     type: neues_set
     enabled: true
-    associated_link: treptow
+    associated_link: treptow-köpenick
   -
     id: lyn3wl1n
     polygon_id: Rahnsdorf
-    fill_color: 'rgba(255, 0, 0, 0.5)'
+    fill_color: 'rgba(0, 48, 100, 0.7)'
     fill_outline_color: 'rgba(255, 0, 0, 1)'
     polygoncoordinates:
       code: null
@@ -340,11 +340,11 @@ stadtteile:
     plz: '12589'
     type: neues_set
     enabled: true
-    associated_link: treptow
+    associated_link: treptow-köpenick
   -
     id: lyn3x0ti
     polygon_id: Schmöckwitz
-    fill_color: 'rgba(255, 0, 0, 0.5)'
+    fill_color: 'rgba(0, 48, 100, 0.7)'
     fill_outline_color: 'rgba(255, 0, 0, 1)'
     polygoncoordinates:
       code: null
@@ -355,11 +355,11 @@ stadtteile:
     plz: '12527'
     type: neues_set
     enabled: true
-    associated_link: treptow
+    associated_link: treptow-köpenick
   -
     id: lyn3yvc9
     polygon_id: Adlershof
-    fill_color: 'rgba(255, 0, 0, 0.5)'
+    fill_color: 'rgba(0, 48, 100, 0.7)'
     fill_outline_color: 'rgba(255, 0, 0, 1)'
     polygoncoordinates:
       code: null
@@ -370,11 +370,11 @@ stadtteile:
     plz: '12489'
     type: neues_set
     enabled: true
-    associated_link: treptow
+    associated_link: treptow-köpenick
   -
     id: lyn3ztt6
     polygon_id: Spindlersfeld
-    fill_color: 'rgba(255, 0, 0, 0.5)'
+    fill_color: 'rgba(0, 48, 100, 0.7)'
     fill_outline_color: 'rgba(255, 0, 0, 1)'
     polygoncoordinates:
       code: null
@@ -385,11 +385,11 @@ stadtteile:
     plz: '12555'
     type: neues_set
     enabled: true
-    associated_link: treptow
+    associated_link: treptow-köpenick
   -
     id: lyn40mgf
     polygon_id: Lidl
-    fill_color: 'rgba(255, 0, 0, 0.5)'
+    fill_color: 'rgba(0, 48, 100, 0.7)'
     fill_outline_color: 'rgba(255, 0, 0, 1)'
     polygoncoordinates:
       code: null
@@ -400,11 +400,11 @@ stadtteile:
     plz: '12557'
     type: neues_set
     enabled: true
-    associated_link: treptow
+    associated_link: treptow-köpenick
   -
     id: lyn42zf8
     polygon_id: Friedrichshagen
-    fill_color: 'rgba(255, 0, 0, 0.5)'
+    fill_color: 'rgba(0, 48, 100, 0.7)'
     fill_outline_color: 'rgba(255, 0, 0, 1)'
     polygoncoordinates:
       code: null
@@ -415,11 +415,11 @@ stadtteile:
     plz: '12587'
     type: neues_set
     enabled: true
-    associated_link: treptow
+    associated_link: treptow-köpenick
   -
     id: lyn43mm9
     polygon_id: Johannisthal
-    fill_color: 'rgba(255, 0, 0, 0.5)'
+    fill_color: 'rgba(0, 48, 100, 0.7)'
     fill_outline_color: 'rgba(255, 0, 0, 1)'
     polygoncoordinates:
       code: null
@@ -430,11 +430,11 @@ stadtteile:
     plz: '12487'
     type: neues_set
     enabled: true
-    associated_link: treptow
+    associated_link: treptow-köpenick
   -
     id: lyn44dcg
     polygon_id: Baumschulenweg
-    fill_color: 'rgba(255, 0, 0, 0.5)'
+    fill_color: 'rgba(0, 48, 100, 0.7)'
     fill_outline_color: 'rgba(255, 0, 0, 1)'
     polygoncoordinates:
       code: null
@@ -445,11 +445,11 @@ stadtteile:
     plz: '12437'
     type: neues_set
     enabled: true
-    associated_link: treptow
+    associated_link: treptow-köpenick
   -
     id: lyn4whck
     polygon_id: friedrichsfelde
-    fill_color: 'rgba(0,0, 255, 0.5)'
+    fill_color: 'rgba(0, 48, 100, 0.7)'
     fill_outline_color: 'rgba(0 0, 255, 1)'
     polygoncoordinates:
       code: null
@@ -464,7 +464,7 @@ stadtteile:
   -
     id: lyn4yp1o
     polygon_id: lichtenberg
-    fill_color: 'rgba(0,0, 255, 0.5)'
+    fill_color: 'rgba(0, 48, 100, 0.7)'
     fill_outline_color: 'rgba(0 0, 255, 1)'
     polygoncoordinates:
       code: null
@@ -479,7 +479,7 @@ stadtteile:
   -
     id: lyn4zsbq
     polygon_id: lichtenberge
-    fill_color: 'rgba(0,0, 255, 0.5)'
+    fill_color: 'rgba(0, 48, 100, 0.7)'
     fill_outline_color: 'rgba(0 0, 255, 1)'
     polygoncoordinates:
       code: null
@@ -494,7 +494,7 @@ stadtteile:
   -
     id: lyn50j8i
     polygon_id: lichtenberg-nord
-    fill_color: 'rgba(0,0, 255, 0.5)'
+    fill_color: 'rgba(0, 48, 100, 0.7)'
     fill_outline_color: 'rgba(0 0, 255, 1)'
     polygoncoordinates:
       code: null
@@ -509,7 +509,7 @@ stadtteile:
   -
     id: lyn520n0
     polygon_id: friedrichsfelde
-    fill_color: 'rgba(0,0, 255, 0.5)'
+    fill_color: 'rgba(0, 48, 100, 0.7)'
     fill_outline_color: 'rgba(0 0, 255, 1)'
     polygoncoordinates:
       code: null
@@ -524,7 +524,7 @@ stadtteile:
   -
     id: lyn52qq2
     polygon_id: friedrichsfelde-zwei
-    fill_color: 'rgba(0,0, 255, 0.5)'
+    fill_color: 'rgba(0, 48, 100, 0.7)'
     fill_outline_color: 'rgba(0 0, 255, 1)'
     polygoncoordinates:
       code: null
@@ -539,7 +539,7 @@ stadtteile:
   -
     id: lyn53apf
     polygon_id: karlshorst
-    fill_color: 'rgba(0,0, 255, 0.5)'
+    fill_color: 'rgba(0, 48, 100, 0.7)'
     fill_outline_color: 'rgba(0 0, 255, 1)'
     polygoncoordinates:
       code: null
@@ -550,11 +550,11 @@ stadtteile:
     plz: '10318'
     type: neues_set
     enabled: true
-    associated_link: lichtenfelde
+    associated_link: lichtenberg
   -
     id: lyn54fk7
     polygon_id: hohenschönhausen
-    fill_color: 'rgba(0,0, 255, 0.5)'
+    fill_color: 'rgba(0, 48, 100, 0.7)'
     fill_outline_color: 'rgba(0 0, 255, 1)'
     polygoncoordinates:
       code: null
@@ -565,11 +565,11 @@ stadtteile:
     plz: '13051'
     type: neues_set
     enabled: true
-    associated_link: lichtenfelde
+    associated_link: lichtenberg
   -
     id: lyn54oyv
     polygon_id: hohenschönhausen-zwei
-    fill_color: 'rgba(0,0, 255, 0.5)'
+    fill_color: 'rgba(0, 48, 100, 0.7)'
     fill_outline_color: 'rgba(0 0, 255, 1)'
     polygoncoordinates:
       code: null
@@ -580,11 +580,11 @@ stadtteile:
     plz: '13053'
     type: neues_set
     enabled: true
-    associated_link: lichtenfelde
+    associated_link: lichtenberg
   -
     id: lyn550t2
     polygon_id: hohenschönhausen-drei
-    fill_color: 'rgba(0,0, 255, 0.5)'
+    fill_color: 'rgba(0, 48, 100, 0.7)'
     fill_outline_color: 'rgba(0 0, 255, 1)'
     polygoncoordinates:
       code: null
@@ -595,11 +595,11 @@ stadtteile:
     plz: '13057'
     type: neues_set
     enabled: true
-    associated_link: lichtenfelde
+    associated_link: lichtenberg
   -
     id: lyn55aud
     polygon_id: hohenschönhausen-vier
-    fill_color: 'rgba(0,0, 255, 0.5)'
+    fill_color: 'rgba(0, 48, 100, 0.7)'
     fill_outline_color: 'rgba(0 0, 255, 1)'
     polygoncoordinates:
       code: null
@@ -610,11 +610,11 @@ stadtteile:
     plz: '13059'
     type: neues_set
     enabled: true
-    associated_link: lichtenfelde
+    associated_link: lichtenberg
   -
     id: lyn56b2r
     polygon_id: hohenschönhausen-alt
-    fill_color: 'rgba(0,0, 255, 0.5)'
+    fill_color: 'rgba(0, 48, 100, 0.7)'
     fill_outline_color: 'rgba(0 0, 255, 1)'
     polygoncoordinates:
       code: null
@@ -625,11 +625,11 @@ stadtteile:
     plz: '13055'
     type: neues_set
     enabled: true
-    associated_link: lichtenfelde
+    associated_link: lichtenberg
   -
     id: lyn56yqo
     polygon_id: fennpfuhl
-    fill_color: 'rgba(0,0, 255, 0.5)'
+    fill_color: 'rgba(0, 48, 100, 0.7)'
     fill_outline_color: 'rgba(0 0, 255, 1)'
     polygoncoordinates:
       code: null
@@ -640,11 +640,11 @@ stadtteile:
     plz: '10367'
     type: neues_set
     enabled: true
-    associated_link: lichtenfelde
+    associated_link: lichtenberg
   -
     id: lyn576ny
     polygon_id: fennpfuhl-zwei
-    fill_color: 'rgba(0,0, 255, 0.5)'
+    fill_color: 'rgba(0, 48, 100, 0.7)'
     fill_outline_color: 'rgba(0 0, 255, 1)'
     polygoncoordinates:
       code: null
@@ -655,11 +655,11 @@ stadtteile:
     plz: '10369'
     type: neues_set
     enabled: true
-    associated_link: lichtenfelde
+    associated_link: lichtenberg
   -
     id: lyn57zct
     polygon_id: rummelsburg
-    fill_color: 'rgba(0,0, 255, 0.5)'
+    fill_color: 'rgba(0, 48, 100, 0.7)'
     fill_outline_color: 'rgba(0 0, 255, 1)'
     polygoncoordinates:
       code: null
@@ -670,5 +670,5 @@ stadtteile:
     plz: '10317'
     type: neues_set
     enabled: true
-    associated_link: lichtenfelde
+    associated_link: lichtenberg
 ---

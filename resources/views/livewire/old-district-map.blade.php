@@ -143,52 +143,42 @@
                     'fill-outline-color': '#000000',
                 },
             });
+            let lastHoveredAssociatedLink = null; 
             districtJsonObj.forEach(function(entry) {
                 // Mache cursor pointer wenn reingeht
                 map.on('mousemove', 'postalCodeAreas', function(e) {
                     var featuresUnderMouse = map.queryRenderedFeatures(e.point, { layers: ['postalCodeAreas'] });
                     if (featuresUnderMouse.length > 0) {
-                        var featurePlzId = featuresUnderMouse[0].properties.plz_code;
-                        // Überprüfen, ob die ID des Features einer der ausgewählten ist
-                        if (plzArray.includes(featurePlzId)) {
-                            map.getCanvas().style.cursor = 'pointer';
-                            if (lastHoveredFeatureId !== featurePlzId) {
-                                // Setzen Sie den hover state des vorherigen Features zurück, falls vorhanden
-                                if (lastHoveredFeatureId !== null) {
-                                    map.setFeatureState(
-                                        {source: 'postalCodes', id: lastHoveredFeatureId},
-                                        { hover: false }
-                                    );
-                                }
-                                // Aktualisieren der lastHoveredFeatureId mit der neuesten featurePlzId
-                                lastHoveredFeatureId = featurePlzId;
+                        var associatedLink = featuresUnderMouse[0].properties.associated_link;
+
+                        // Überprüfen, ob der Hover-Status für eine neue Gruppe von Features gesetzt werden soll
+                        if (lastHoveredAssociatedLink !== associatedLink) {
+                            // Setzen Sie den Hover-Status für alle Features zurück
+                            resetHoverStateExcept(associatedLink);
+
+                            // Finden Sie alle Features mit dem gleichen associated_link
+                            var relatedFeatures = filteredGeoJson.features.filter(feature => feature.properties.associated_link === associatedLink);
+
+                            // Setzen Sie den Hover-Status für alle gefundenen Features
+                            relatedFeatures.forEach(feature => {
                                 map.setFeatureState(
-                                    {source: 'postalCodes', id: featurePlzId},
+                                    {source: 'postalCodes', id: feature.id},
                                     { hover: true }
                                 );
-                            }
+                            });
+
+                            lastHoveredAssociatedLink = associatedLink; // Aktualisieren Sie die globale Variable
                         }
+
+                        map.getCanvas().style.cursor = 'pointer';
                     } else {
-                        // Wenn keine Features unter dem Mauszeiger sind, setzen Sie den Hover-State des letzten gehoverten Features zurück
-                        if (lastHoveredFeatureId !== null) {
-                            map.setFeatureState(
-                                {source: 'postalCodes', id: lastHoveredFeatureId},
-                                { hover: false }
-                            );
-                            lastHoveredFeatureId = null;
-                        }
-                        map.getCanvas().style.cursor = '';
+                        resetHoverState();
+                        lastHoveredAssociatedLink = null; // Zurücksetzen der globalen Variable, wenn keine Features unter dem Mauszeiger sind
                     }
                 });
                 map.on('mouseleave', 'postalCodeAreas', function() {
-                    map.getCanvas().style.cursor = '';
-                    if (lastHoveredFeatureId) {
-                        map.setFeatureState(
-                            {source: 'postalCodes', id: lastHoveredFeatureId},
-                            { hover: false }
-                        );
-                        lastHoveredFeatureId = null; // Zurücksetzen der lastHoveredFeatureId
-                    }
+                    resetHoverState();
+                    lastHoveredAssociatedLink = null; // Zurücksetzen der globalen Variable, wenn der Mauszeiger die Karte verlässt
                 });
                 map.on('click', 'postalCodeAreas', function (e) {
                     // Entfernen Sie den Code, der das Modal öffnet
@@ -240,9 +230,33 @@
                 modal.classList.add("hidden");
             }
 
+            
+
             // Event-Handler für Klicken des Schließen-Symbols
             closeModalButton.addEventListener("click", closeModal);
         });
+
+        function resetHoverState() {
+            // Setzen Sie den Hover-Status für alle Features zurück
+            filteredGeoJson.features.forEach(feature => {
+                map.setFeatureState(
+                    {source: 'postalCodes', id: feature.id},
+                    { hover: false }
+                );
+            });
+        }
+
+        function resetHoverStateExcept(associatedLink) {
+            // Setzen Sie den Hover-Status für alle Features zurück, außer denen mit dem gegebenen `associated_link`
+            filteredGeoJson.features.forEach(feature => {
+                if (feature.properties.associated_link !== associatedLink) {
+                    map.setFeatureState(
+                        {source: 'postalCodes', id: feature.id},
+                        { hover: false }
+                    );
+                }
+            });
+        }
 
     </script>
 

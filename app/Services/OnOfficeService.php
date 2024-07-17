@@ -411,10 +411,10 @@ class OnOfficeService
 
         $photo = $this->getUserPhotoById($userId);
 
-        return $this->createUserDetailsFromData($user, $photo);
+        return $this->createUserDetailsFromData($user->all(), $photo);
     }
 
-    protected function createUserDetailsFromData(array $user, array $photo): UserDetails
+    protected function createUserDetailsFromData(array $user = [], array $photo): UserDetails
     {
         if ($user && isset($user['elements']['Vorname']) && isset($user['elements']['Nachname'])) {
             $vorname = $user['elements']['Vorname'];
