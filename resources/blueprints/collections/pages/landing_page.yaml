@@ -830,48 +830,6 @@ tabs:
               instructions_position: above
               visibility: visible
               hide_display: false
-  contact:
-    display: Contact
-    sections:
-      -
-        display: 'Neuer Abschnitt'
-        fields:
-          -
-            handle: show_contact
-            field:
-              options:
-                'yes': null
-                'no': null
-              taggable: false
-              push_tags: false
-              multiple: false
-              clearable: false
-              searchable: true
-              cast_booleans: false
-              type: select
-              display: show_contact
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              hide_display: false
-          -
-            handle: contact_variante
-            field:
-              options:
-                variante_1: Einzelperson
-                variante_2: 'Auf Büros'
-              taggable: false
-              push_tags: false
-              multiple: false
-              clearable: false
-              searchable: true
-              cast_booleans: false
-              type: select
-              display: contact_variante
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              hide_display: false
   reviews:
     display: Reviews
     sections:
@@ -957,6 +915,48 @@ tabs:
               antlers: false
               type: text
               display: 'Heading H2'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+  contact:
+    display: Contact
+    sections:
+      -
+        display: 'Neuer Abschnitt'
+        fields:
+          -
+            handle: show_contact
+            field:
+              options:
+                'yes': null
+                'no': null
+              taggable: false
+              push_tags: false
+              multiple: false
+              clearable: false
+              searchable: true
+              cast_booleans: false
+              type: select
+              display: show_contact
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: contact_variante
+            field:
+              options:
+                variante_1: Einzelperson
+                variante_2: 'Auf Büros'
+              taggable: false
+              push_tags: false
+              multiple: false
+              clearable: false
+              searchable: true
+              cast_booleans: false
+              type: select
+              display: contact_variante
               listable: hidden
               instructions_position: above
               visibility: visible
